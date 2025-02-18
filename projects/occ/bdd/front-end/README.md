@@ -1,4 +1,9 @@
-* Général
+## BDD front-end
+
+### Liste
+
+Structure de https://aema.huma-num.fr/front/objets/list
+
 
 | Key                | Value                               |
 |--------------------|-------------------------------------|
@@ -15,7 +20,10 @@
 | Autorité émettrice | C. Annius, L. Fabius Hispaniensis   |
 | Matériaux          | Argent et alliages associés         |
 
-Et, https://aema.huma-num.fr/front/objets/view/3091: 
+
+### Visualiser
+
+Structure de https://aema.huma-num.fr/front/objets/view/3091
 
 * Identification
 
@@ -33,8 +41,8 @@ Et, https://aema.huma-num.fr/front/objets/view/3091:
 | Zone d'émission    | -                                          |
 | Atelier d'émission | Nord de l'Italie                          |
 | Commentaire        | -                                          |
-| N° Ark             | ark:/12148/btv1b104536783                  |
-| N° catalogue Ark   | =                                          |
+| N° Ark             | ark:/12148/btv1b104536783[^1]                  |
+| N° catalogue Ark   | -                                          |
 
 * Lieu de conservation
 
@@ -98,3 +106,7 @@ Et, https://aema.huma-num.fr/front/objets/view/3091:
 |-------------|-----------------------------------------------------------------------|
 | Références typologiques | RRC 366/2a |
 | Références bibliographiques     |                                                   |
+
+---
+
+[^1]: Identifiant Ark de la BnF (complet): https://gallica.bnf.fr/ark:/12148/btv1b104536783. Voir si en utilisqnt l'API de la BnF on peut récupérer des informations.
