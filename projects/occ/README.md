@@ -5,11 +5,11 @@
 ```mermaid
 
 graph TD;
-    image---archéo;
+    image---archeo;
     image---source;
     image---analyse;
-    archéo---source;
-    archéo---analyse;
+    archeo---source;
+    archeo---analyse;
     source---analyse;
 
 ```
