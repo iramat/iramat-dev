@@ -5,7 +5,7 @@
 ### AeMA
 
 <p align="center">
-  <img src="img/bdd-aema-landing-page.png" width="600">
+  <img src="../../img/bdd-aema-landing-page.png" width="600">
   <br>
     <em>AeMA le 18/02/25</em>
 </p>
