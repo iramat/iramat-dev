@@ -109,4 +109,4 @@ Structure de https://aema.huma-num.fr/front/objets/view/3091
 
 ---
 
-[^1]: Identifiant Ark de la BnF (complet): https://gallica.bnf.fr/ark:/12148/btv1b104536783. Voir si en utilisqnt l'API de la BnF on peut récupérer des informations.
+[^1]: Identifiant Ark de la BnF (complet): https://gallica.bnf.fr/ark:/12148/btv1b104536783. 
