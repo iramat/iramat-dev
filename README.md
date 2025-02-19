@@ -1,6 +1,6 @@
 # iramat-test
 
-Test repository for development purpose
+Test repository for development purpose. Back-end functions are hosted on the repo [iramat-test-functions](https://github.com/zoometh/iramat-test-functions)
 
 | databases          | description                               |
 |--------------------|-------------------------------------|
