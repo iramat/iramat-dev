@@ -11,7 +11,7 @@
 			{
 			  "@type": "dctypes:Text",
 			  "format": "text/html",
-			  "chars": "<p>Hello World</p>"
+			  "chars": "<p>Hello World again!</p>"
 			}
 		  ],
 		  "on": [
