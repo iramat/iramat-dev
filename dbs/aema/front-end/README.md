@@ -13,7 +13,6 @@ Structure de https://aema.huma-num.fr/front/objets/list et alignement sur l'[ont
 | N° d'inventaire    | REP-21623                           |
 | Code typologique   | -                                   |
 | Catégorie          | Monnaie                             |
-<<<<<<< HEAD
 | [Dénomination](http://nomisma.org/ontology#Denomination)       | Denier                              |
 | Série monétaire    | RRC 366/2a                          |
 | Période historique | République romaine                  |
@@ -22,16 +21,7 @@ Structure de https://aema.huma-num.fr/front/objets/list et alignement sur l'[ont
 | N° catalogue Ark   | -                                   |
 | [Autorité émettrice](http://nomisma.org/ontology#hasAuthority) | C. Annius, L. Fabius Hispaniensis   |
 | [Matériaux](http://nomisma.org/ontology#hasMaterial)          | Argent et alliages associés         |
-=======
-| [Dénomination](http://nomisma.org/ontology#Denomination)      | Denier                              |
-| Série monétaire    | RRC 366/2a                          |
-| Période historique | République romaine                  |
-| [Datation début](http://www.nomisma.org/ontology#hasOpeningDate)     | -82                                 |
-| [Datation fin](http://www.nomisma.org/ontology#hasClosingDate)       | -81                                 |
-| N° catalogue Ark   | -                                   |
-| [Autorité émettrice](http://www.nomisma.org/ontology#hasAuthority) | C. Annius, L. Fabius Hispaniensis   |
-| [Matériaux](http://www.nomisma.org/ontology#hasMaterial)          | Argent et alliages associés         |
->>>>>>> e25ea186f19aaeba5e4c4729dcb83d13a95c5697
+
 
 
 ### Visualiser
