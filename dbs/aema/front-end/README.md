@@ -1,24 +1,26 @@
 ## BDD front-end
 
+Les liens des Champs renvoient à l'[ontologie Nomisma](http://nomisma.org/ontology). Il s'agit de propositions.
+
 ### Liste
 
 Structure de https://aema.huma-num.fr/front/objets/list
 
 
-| Key                | Value                               |
+| Champs                | Valeurs                               |
 |--------------------|-------------------------------------|
 | Id                 | 3091                                |
 | N° d'inventaire    | REP-21623                           |
 | Code typologique   | -                                   |
 | Catégorie          | Monnaie                             |
-| Dénomination       | Denier                              |
+| [Dénomination](http://nomisma.org/ontology#Denomination)       | Denier                              |
 | Série monétaire    | RRC 366/2a                          |
 | Période historique | République romaine                  |
-| Datation début     | -82                                 |
-| Datation fin       | -81                                 |
+| [Datation début](http://nomisma.org/ontology#hasNumismaticOpeningDate)   | -82                                 |
+| [Datation fin](http://nomisma.org/ontology#hasNumismaticClosingDate)       | -81                                 |
 | N° catalogue Ark   | -                                   |
-| Autorité émettrice | C. Annius, L. Fabius Hispaniensis   |
-| Matériaux          | Argent et alliages associés         |
+| [Autorité émettrice](http://nomisma.org/ontology#hasAuthority) | C. Annius, L. Fabius Hispaniensis   |
+| [Matériaux](http://nomisma.org/ontology#hasMaterial)          | Argent et alliages associés         |
 
 
 ### Visualiser
@@ -27,7 +29,7 @@ Structure de https://aema.huma-num.fr/front/objets/view/3091
 
 * Identification
 
-| Key                  | Value                                      |
+| Champs                  | Valeurs                                      |
 |----------------------|--------------------------------------------|
 | Catégorie           | Monnaie                                    |
 | Sous-catégorie      | Romaine                                    |
@@ -46,7 +48,7 @@ Structure de https://aema.huma-num.fr/front/objets/view/3091
 
 * Lieu de conservation
 
-| Key               | Value                                      |
+| Champs               | Valeurs                                      |
 |-------------------|--------------------------------------------|
 | Lieu de dépôt    | Cabinet des médailles - BNF Richelieu      |
 | Collection       | Luynes                                     |
@@ -55,7 +57,7 @@ Structure de https://aema.huma-num.fr/front/objets/view/3091
 
 * Lieu de découverte
 
-| Key                     | Value                    |
+| Champs                     | Valeurs                    |
 |-------------------------|--------------------------|
 | Type de découverte     | Autre                    |
 | Trésor                 | Trésor d'Arbanats        |
@@ -73,7 +75,7 @@ Structure de https://aema.huma-num.fr/front/objets/view/3091
 
 * Description
 
-| Key                        | Value                        |
+| Champs                        | Valeurs                        |
 |----------------------------|------------------------------|
 | Matériaux                  | Argent et alliages associés |
 | Technique de fabrication   | Monnaie frappée             |
@@ -86,7 +88,7 @@ Structure de https://aema.huma-num.fr/front/objets/view/3091
 
 * Descriptif droit
 
-| Key          | Value                                                    |
+| Champs          | Valeurs                                                    |
 |-------------|----------------------------------------------------------|
 | Description | Female bust, right, draped and wearing diadem. Bead and reel border. |
 | Légende     | C·ANNI·T·F·T·N·PRO·COS·EX·S·C                           |
@@ -94,7 +96,7 @@ Structure de https://aema.huma-num.fr/front/objets/view/3091
 
 * Descriptif revers
 
-| Key          | Value                                                                 |
+| Champs          | Valeurs                                                                 |
 |-------------|-----------------------------------------------------------------------|
 | Description | Victory in quadriga, right, holding reins in left hand and palm-branch in right hand. Border of dots. |
 | Légende     | L·FABI·L·F·HISP                                                       |
@@ -102,7 +104,7 @@ Structure de https://aema.huma-num.fr/front/objets/view/3091
 
 * Références
 
-| Key          | Value                                                                 |
+| Champs          | Valeurs                                                                 |
 |-------------|-----------------------------------------------------------------------|
 | Références typologiques | RRC 366/2a |
 | Références bibliographiques     |                                                   |
