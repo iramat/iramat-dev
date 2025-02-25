@@ -1,0 +1,42 @@
+{
+	"https://gallica.bnf.fr/iiif/ark:/12148/btv1b104536783/manifest.json": {
+	  "https://gallica.bnf.fr/iiif/ark:/12148/btv1b104536783/canvas/f1": [
+		{
+		  "@context": "http://iiif.io/api/presentation/2/context.json",
+		  "@type": "oa:Annotation",
+		  "motivation": [
+			"oa:commenting"
+		  ],
+		  "resource": [
+			{
+			  "@type": "dctypes:Text",
+			  "format": "text/html",
+			  "chars": "<p>Hello World again!</p>"
+			}
+		  ],
+		  "on": [
+			{
+			  "@type": "oa:SpecificResource",
+			  "full": "https://gallica.bnf.fr/iiif/ark:/12148/btv1b104536783/canvas/f1",
+			  "selector": {
+				"@type": "oa:Choice",
+				"default": {
+				  "@type": "oa:FragmentSelector",
+				  "value": "xywh=1319,486,254,223"
+				},
+				"item": {
+				  "@type": "oa:SvgSelector",
+				  "value": "<svg xmlns='http://www.w3.org/2000/svg'><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M1319.02143,486.43742h127.23698v0h127.23698v111.70012v111.70012h-127.23698h-127.23698v-111.70012z\" data-paper-data=\"{&quot;strokeWidth&quot;:1,&quot;rotation&quot;:0,&quot;deleteIcon&quot;:null,&quot;rotationIcon&quot;:null,&quot;group&quot;:null,&quot;editable&quot;:true,&quot;annotation&quot;:null}\" id=\"rectangle_c63d99a6-3eda-46f3-a64c-187e7038b110\" fill-opacity=\"0\" fill=\"#00bfff\" fill-rule=\"nonzero\" stroke=\"#00bfff\" stroke-width=\"1\" stroke-linecap=\"butt\" stroke-linejoin=\"miter\" stroke-miterlimit=\"10\" stroke-dasharray=\"\" stroke-dashoffset=\"0\" font-family=\"none\" font-weight=\"none\" font-size=\"none\" text-anchor=\"none\" style=\"mix-blend-mode: normal\"/></svg>"
+				}
+			  },
+			  "within": {
+				"@id": "https://gallica.bnf.fr/iiif/ark:/12148/btv1b104536783/manifest.json",
+				"@type": "sc:Manifest"
+			  }
+			}
+		  ],
+		  "@id": "284cfc91-bb34-4ed0-8b5e-b39c1f0c5175"
+		}
+	  ]
+	}
+  }

@@ -4,7 +4,7 @@ Les liens des Champs renvoient à l'[ontologie Nomisma](http://nomisma.org/ontol
 
 ### Liste
 
-Structure de https://aema.huma-num.fr/front/objets/list
+Structure de https://aema.huma-num.fr/front/objets/list et alignement sur l'[ontologie Nomisma](http://www.nomisma.org/ontology) (hyperliens)
 
 
 | Champs                | Valeurs                               |
@@ -13,6 +13,7 @@ Structure de https://aema.huma-num.fr/front/objets/list
 | N° d'inventaire    | REP-21623                           |
 | Code typologique   | -                                   |
 | Catégorie          | Monnaie                             |
+<<<<<<< HEAD
 | [Dénomination](http://nomisma.org/ontology#Denomination)       | Denier                              |
 | Série monétaire    | RRC 366/2a                          |
 | Période historique | République romaine                  |
@@ -21,6 +22,16 @@ Structure de https://aema.huma-num.fr/front/objets/list
 | N° catalogue Ark   | -                                   |
 | [Autorité émettrice](http://nomisma.org/ontology#hasAuthority) | C. Annius, L. Fabius Hispaniensis   |
 | [Matériaux](http://nomisma.org/ontology#hasMaterial)          | Argent et alliages associés         |
+=======
+| [Dénomination](http://nomisma.org/ontology#Denomination)      | Denier                              |
+| Série monétaire    | RRC 366/2a                          |
+| Période historique | République romaine                  |
+| [Datation début](http://www.nomisma.org/ontology#hasOpeningDate)     | -82                                 |
+| [Datation fin](http://www.nomisma.org/ontology#hasClosingDate)       | -81                                 |
+| N° catalogue Ark   | -                                   |
+| [Autorité émettrice](http://www.nomisma.org/ontology#hasAuthority) | C. Annius, L. Fabius Hispaniensis   |
+| [Matériaux](http://www.nomisma.org/ontology#hasMaterial)          | Argent et alliages associés         |
+>>>>>>> e25ea186f19aaeba5e4c4729dcb83d13a95c5697
 
 
 ### Visualiser
@@ -33,13 +44,13 @@ Structure de https://aema.huma-num.fr/front/objets/view/3091
 |----------------------|--------------------------------------------|
 | Catégorie           | Monnaie                                    |
 | Sous-catégorie      | Romaine                                    |
-| Dénomination       | Denier                                     |
+| [Dénomination](http://www.nomisma.org/ontology#Denomination)       | Denier                                     |
 | Période historique | République romaine                        |
-| Datation début     | -82                                        |
-| Datation fin       | -81                                        |
+| [Datation début](http://www.nomisma.org/ontology#hasOpeningDate)     | -82                                        |
+| [Datation fin](http://www.nomisma.org/ontology#hasClosingDate)       | -81                                        |
 | Série monétaire    | RRC 366/2a                                 |
 | Type               | -                                          |
-| Emetteur/Autorité  | C. Annius, L. Fabius Hispaniensis         |
+| [Emetteur/Autorité](http://www.nomisma.org/ontology#hasAuthority)  | C. Annius, L. Fabius Hispaniensis         |
 | Zone d'émission    | -                                          |
 | Atelier d'émission | Nord de l'Italie                          |
 | Commentaire        | -                                          |
@@ -60,8 +71,8 @@ Structure de https://aema.huma-num.fr/front/objets/view/3091
 | Champs                     | Valeurs                    |
 |-------------------------|--------------------------|
 | Type de découverte     | Autre                    |
-| Trésor                 | Trésor d'Arbanats        |
-| Nature du contexte     | -                        |
+| [Trésor](http://www.nomisma.org/ontology#Hoard)                 | Trésor d'Arbanats        |
+| [Nature du contexte](http://www.nomisma.org/ontology#hasContext)    | -                        |
 | Datation du contexte   | -                        |
 | Nature de la découverte | Découverte ancienne     |
 | Pays                   | France                   |
@@ -77,37 +88,37 @@ Structure de https://aema.huma-num.fr/front/objets/view/3091
 
 | Champs                        | Valeurs                        |
 |----------------------------|------------------------------|
-| Matériaux                  | Argent et alliages associés |
-| Technique de fabrication   | Monnaie frappée             |
-| Contremarque               | -                            |
-| Masse (g)                  | 3.81                         |
-| Module (mm)                | 20                           |
-| Epaisseur (mm)             | -                            |
-| Axe (h)                    | 12                           |
+| [Matériaux](http://www.nomisma.org/ontology#Material)                  | Argent et alliages associés |
+| [Technique de fabrication](http://www.nomisma.org/ontology#Manufacture)  | Monnaie frappée             |
+| [Contremarque](http://www.nomisma.org/ontology#hasCountermark)               | -                            |
+| [Masse (g)](http://www.nomisma.org/ontology#hasWeight)                  | 3.81                         |
+| [Module (mm)](http://www.nomisma.org/ontology#hasMaxDiameter)                | 20                           |
+| [Epaisseur (mm)](http://www.nomisma.org/ontology#hasMaxWidth)             | -                            |
+| [Axe (h)](http://www.nomisma.org/ontology#hasAxis)                    | 12                           |
 
 
-* Descriptif droit
+* Descriptif [droit](http://www.nomisma.org/ontology#hasObverse)
 
 | Champs          | Valeurs                                                    |
 |-------------|----------------------------------------------------------|
 | Description | Female bust, right, draped and wearing diadem. Bead and reel border. |
-| Légende     | C·ANNI·T·F·T·N·PRO·COS·EX·S·C                           |
-| Marque      | R                                                        |
+| [Légende](http://www.nomisma.org/ontology#hasLegend)     | C·ANNI·T·F·T·N·PRO·COS·EX·S·C                           |
+| [Marque](http://www.nomisma.org/ontology#hasMark)      | R                                                        |
 
-* Descriptif revers
+* Descriptif [revers]9http://www.nomisma.org/ontology#hasReverse
 
 | Champs          | Valeurs                                                                 |
 |-------------|-----------------------------------------------------------------------|
 | Description | Victory in quadriga, right, holding reins in left hand and palm-branch in right hand. Border of dots. |
-| Légende     | L·FABI·L·F·HISP                                                       |
-| Marque      | L·FABI·L·F·HISP                                                       |
+| [Légende](http://www.nomisma.org/ontology#hasLegend)     | L·FABI·L·F·HISP                                                       |
+| [Marque](http://www.nomisma.org/ontology#hasMark)      | L·FABI·L·F·HISP                                                       |
 
 * Références
 
 | Champs          | Valeurs                                                                 |
 |-------------|-----------------------------------------------------------------------|
 | Références typologiques | RRC 366/2a |
-| Références bibliographiques     |                                                   |
+| [Références bibliographiques](http://www.nomisma.org/ontology#hasReferenceWork)     |                                                   |
 
 ---
 

@@ -4,8 +4,8 @@ Test repository for development purpose. Back-end functions are hosted on the re
 
 | databases          | description                               |
 |--------------------|-------------------------------------|
-| [AeMA](https://github.com/zoometh/iramat-test/tree/main/dbs/aema)               |                               |
-| [CHIPS](https://github.com/zoometh/iramat-test/tree/main/dbs/chips)    |                            |
+| [AeMA](dbs/aema)               |                               |
+| [CHIPS](dbs/chips)    |                            |
 
 | projects           | description                               |
 |--------------------|-------------------------------------|
