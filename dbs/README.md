@@ -21,7 +21,7 @@ flowchart LR
 | id_machine          | integer   |                     |   Identifiant machine               |
 | ag                  | numeric   |                     | Silver (Ag)       |
 | al                  | numeric   |                     | Aluminum (Al)     |
-| arsenic             | numeric   |                     | Arsenic (As)     |
+| as             | numeric   |                     | Arsenic (As)     |
 | ba                  | numeric   |                     | Barium (Ba)      |
 | be                  | numeric   |                     | Beryllium (Be)   |
 | bi                  | numeric   |                     | Bismuth (Bi)     |
