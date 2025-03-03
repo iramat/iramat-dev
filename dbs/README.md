@@ -1,12 +1,12 @@
-
-
-## Analyses physico-chimiques
+# Analyses physico-chimiques
 
 ```mermaid
 flowchart LR
 subgraph Serveur
     subgraph GitLab
-        A@{ shape: docs, label: "Analyses physico-chimiques" }
+        subgraph données de travail
+            A@{ shape: docs, label: "Analyses<br>physico-chimiques" }
+        end
         subgraph Python
             Z@{ procs: docs, label: "Python-BDD" }
             ZZ@{ procs: docs, label: "Python-Zenodo" }
@@ -39,17 +39,17 @@ style E fill:#FF8D1B
 ![#FF8D1B](https://placehold.co/15x15/FF8D1B/FF8D1B.png): numismatique (lié à la)  
 ![#02fa02](https://placehold.co/15x15/02fa02/02fa02.png): code informatique 
 
-### Explications
+## Explications
 
-#### données
+### données
 
-##### Analyses physico-chimiques
+#### Analyses physico-chimiques (fichier)
 
-Un fichier tabulaire avec l'ensemble des champs possibles pour les résultats des analyses MEB-EDS, Raman, XRF, etc. En anglais et par exemple (voir aussi [analysis_results.tsv](https://github.com/zoometh/iramat-test/blob/main/dbs/analysis_results.tsv)).
+Données de travail (≠ données de référence) hebergées sur GitLab. Un fichier tabulaire CSV avec l'ensemble des champs possibles[^1] pour les résultats des analyses MEB-EDS, Raman, XRF, etc. En anglais et par exemple (voir aussi [analysis_results.tsv](https://github.com/zoometh/iramat-test/blob/main/dbs/analysis_results.tsv)).
 
 | nom colonne             | type de donées | description |
 |--------------------------|----------|----------|
-| Iramat_ID               | STRING   | Identifiant laboratoire, suggestion: IRAMAT-XXXX (sur *n*-digit) |
+| Iramat_ID               | STRING   | Identifiant laboratoire, suggestion: IRAMAT-XXXX (sur *n*-digit), auto-incrémenation |
 | Sample_ID               | STRING   | Identifiant analyse |
 | Analysis_Type           | STRING   | MEB-EDS, Gamma Spectroscopy, Raman, etc. |
 | Element/Isotope         | STRING   | Élément (pour MEB-EDS) ou isotope (pour spectroscopie gamma) analysé |
@@ -62,12 +62,15 @@ Un fichier tabulaire avec l'ensemble des champs possibles pour les résultats de
 | Comments                | STRING   | Observations ou métadonnées supplémentaires |
 | ...                | ...   | ... |
 
-##### Pull et Push
+
+##### Push/Pull
+> lire/écrire
 
 Gérés par des scripts Python (fonctions, Jupyter NB, packages) qui effectuent:
 
-1. mappage des données
-2. vérifications des types et de la cohérence des données 
+1. Connection aux BDD ([exemple](https://colab.research.google.com/drive/1EHUO9JaBNLIyNdiHLCTtPAODgFhEvgcq?usp=sharing))
+2. mappage des données (i.e. alignement des données BDD et )
+3. vérifications des types et de la cohérence des données 
 
-##### Pull et Push
 
+[^1] Possiblement de très nombreuses lignes et colonnes avec beaucoup de données manquantes, champs vides, etc. N'est pas destiné à être lu par des humains mais par des scripts informatiques (filtrage, tri, aggrégation) et restitué à la volée
