@@ -12,11 +12,11 @@ flowchart LR
     end
     subgraph GitHub
         subgraph données de référence
-            W@{ shape: docs, label: "Modèles" }
+            Mod@{ shape: docs, label: "Modèles" }
         end
     end
     subgraph Python
-        Z@{ procs: docs, label: "Python-BDD" }
+        PDB@{ procs: docs, label: "Python-BDD" }
         P2Z@{ procs: docs, label: "Python-to-Zenodo" }
         PfZ@{ procs: docs, label: "Python-from-Zenodo" }
     end
@@ -26,8 +26,8 @@ flowchart LR
         C[(BDD<br>CHIPS)]
         D[(BDD<br>...)]
     end
-    Z <-- lit/écrit --> A;
-    Z <-- lit/écrit --> W;
+    PDB <-- lit/écrit --> A;
+    P2Z -- lit --> WMod;
     P2Z -- lit --> GitLab;
     subgraph Zenodo
         subgraph IRAMAT_community
@@ -36,7 +36,7 @@ flowchart LR
             P2Z -- écrit --> G@{ shape: doc, label: "DOI<br>xyxx" }
         end
     end
-    Z <-- lit/écrit --> BDDs;
+    PDB <-- lit --> BDDs;
     PfZ -- lit --> IRAMAT_community
 
 
