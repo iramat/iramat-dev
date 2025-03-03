@@ -11,6 +11,11 @@ flowchart LR
             ZZ@{ procs: docs, label: "Python-Zenodo" }
         end
     end
+    subgraph GitHub
+        subgraph données de référence
+            W@{ shape: docs, label: "Modèles" }
+        end
+    end
     Z <-- lit/écrit --> A;
     Z <-- lit/écrit --> B[(BDD<br>AeMa)];
     Z <-- lit/écrit --> H[(BDD<br>ALMACIR)];
