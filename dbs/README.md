@@ -94,16 +94,14 @@ flowchart LR
 | bibreference        | integer   |                     |                  |
 
 
-
-
-
----
+## Flux de travail
 
 ```mermaid
 flowchart LR
     subgraph GitLab
         subgraph données de travail
-            A@{ shape: docs, label: "Analyses" }
+            T1@{ shape: docs, label: "table_teneurs" }
+            T2@{ shape: docs, label: "table_proportions" }
         end
     end
     subgraph GitHub
@@ -123,7 +121,7 @@ flowchart LR
     end
     Z <-- lit/écrit --> A;
     Z <-- lit/écrit --> W;
-    A <-- lit/écrit --> ZZ;
+    GitLab -- lit --> ZZ;
     subgraph Zenodo
         subgraph IRAMAT_community
             ZZ -- écrit --> E@{ shape: doc, label: "DOI<br>xxxy" }
@@ -135,7 +133,7 @@ flowchart LR
     ZZ -- lit --> IRAMAT_community
 
 
-click A "https://github.com/zoometh/iramat-test/blob/main/dbs/analysis_results.tsv" _blank
+click T1 "https://github.com/zoometh/iramat-test/blob/main/dbs/analysis_results.tsv" _blank
 style Z fill:#02fa02
 style ZZ fill:#02fa02
 style B fill:#FF8D1B
