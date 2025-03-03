@@ -31,11 +31,14 @@ subgraph Zenodo
 end
 
 click A "https://github.com/zoometh/iramat-test/blob/main/dbs/analysis_results.tsv" _blank
+style Z fill:#008000
+style ZZ fill:#008000
 style B fill:#FF8D1B
 style H fill:#FF8D1B
 ```
 
 ![#FF8D1B](https://placehold.co/15x15/FF8D1B/FF8D1B.png): numismatique 
+![#008000](https://placehold.co/15x15/FF8D1B/008000.png): code informatique 
 
 ### Explications
 
