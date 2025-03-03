@@ -30,3 +30,9 @@ VALUES ('instrument_incertitude','@techreport{Doe2024TechReport,
   note        = {Available online at \url{https://example.com/techreport}},
 }');
 ```
+
+### notes
+
+| id_machinei         | integer   |                     |  analytical setup used to acquire isotopic amounts                |
+| id_machinem         | integer   |                     |  analytical setup used to measure major elements                |
+| id_machinet         | integer   |                     |  analytical setup used to measure trace elements                |
