@@ -4,7 +4,7 @@
 flowchart LR
     subgraph GitLab
         subgraph données de travail
-            A@{ shape: docs, label: "Analyses<br>physico-chimiques" }
+            A@{ shape: docs, label: "Analyses" }
         end
     end
     subgraph GitHub
@@ -51,9 +51,14 @@ style E fill:#FF8D1B
 
 ### données
 
-#### Analyses physico-chimiques (fichier)
+#### Modéles
 
-Données de travail (≠ données de référence) hebergées sur GitLab. Un fichier tabulaire CSV avec l'ensemble des champs possibles[^1] pour les résultats des analyses MEB-EDS, Raman, XRF, etc. En anglais et par exemple (voir aussi [analysis_results.tsv](https://github.com/zoometh/iramat-test/blob/main/dbs/analysis_results.tsv)).
+Plusieurs fichiers des données de référence (≠ données de travail) hebergés sur GitHub (publiques). Format mixte (CSV, RDF, JSON, etc.) aligné sur les standards et isostandards (ex: CRMsci).
+
+#### Analyses
+> Analyses physico-chimiques
+
+Un seul fichier des données de travail (≠ données de référence), hebergé sur GitLab (privées). Format tabulaire CSV avec l'ensemble des champs possibles[^1] pour les résultats des analyses MEB-EDS, Raman, XRF, etc. En anglais et par exemple (voir aussi [analysis_results.tsv](https://github.com/zoometh/iramat-test/blob/main/dbs/analysis_results.tsv)).
 
 | nom colonne             | type de donées | description |
 |--------------------------|----------|----------|
