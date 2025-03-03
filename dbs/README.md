@@ -2,6 +2,21 @@
 
 ```mermaid
 flowchart LR
+    A[spectro tabulé] -- composition chimique --> table_teneurs;
+    A -- composition structurale --> E[proportions minéraux];
+    subgraph table_teneurs
+        F[teneurs isotopiques];
+        D[teneurs élémentaires];
+    end
+    subgraph table_proportions
+        E;
+    end
+```
+
+---
+
+```mermaid
+flowchart LR
     subgraph GitLab
         subgraph données de travail
             A@{ shape: docs, label: "Analyses" }
@@ -63,7 +78,8 @@ Un seul fichier des données de travail (≠ données de référence), hebergé 
 | nom colonne             | type de donées | description |
 |--------------------------|----------|----------|
 | Iramat_ID               | STRING   | Identifiant laboratoire, suggestion: IRAMAT-XXXX (sur *n*-digit), auto-incrémenation |
-| Sample_ID               | STRING   | Identifiant analyse |
+| Analysis_ID             | STRING   | Identifiant analyse |
+| Sample_ID               | STRING   | Identifiant échantillon |
 | Analysis_Type           | STRING   | MEB-EDS, Gamma Spectroscopy, Raman, etc. |
 | Element/Isotope         | STRING   | Élément (pour MEB-EDS) ou isotope (pour spectroscopie gamma) analysé |
 | Concentration/Activity  | FLOAT    | Valeur mesurée (par exemple, concentration élémentaire ou activité radioactive) |
