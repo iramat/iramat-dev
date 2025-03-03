@@ -26,18 +26,19 @@ flowchart LR
         C[(BDD<br>CHIPS)]
         D[(BDD<br>...)]
     end
-    PDB -- ajoute --> données_travail;
+    PDB -- ajoute dans --> données_travail;
     P2Z -- lit --> Mod;
     P2Z -- lit --> données_travail;
     subgraph Zenodo
         subgraph IRAMAT_community
-            P2Z -- écrit --> E@{ shape: doc, label: "DOI<br>xxxy" }
-            P2Z -- écrit --> F@{ shape: doc, label: "DOI<br>xxyx" }
-            P2Z -- écrit --> G@{ shape: doc, label: "DOI<br>xyxx" }
+            E@{ shape: doc, label: "DOI<br>xxxy" }
+            F@{ shape: doc, label: "DOI<br>xxyx" }
+            G@{ shape: doc, label: "DOI<br>xyxx" }
         end
     end
-    PDB <-- lit --> BDDs;
+    PDB -- lit --> BDDs;
     PfZ -- lit --> IRAMAT_community
+    P2Z -- créer dans --> IRAMAT_community 
 
 
 click T1 "https://github.com/zoometh/iramat-test/blob/main/dbs/analysis_results.tsv" _blank
