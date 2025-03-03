@@ -1,0 +1,2 @@
+Iramat_ID	Sample_ID	Analysis_Type	Element/Isotope	Concentration/Activity	Unit	Wavelength (cm^-1)	Intensity	Uncertainty	Date_Analyzed	Comments
+STRING	STRING	STRING	STRING	FLOAT	STRING	FLOAT	FLOAT	FLOAT	DATE	STRING
