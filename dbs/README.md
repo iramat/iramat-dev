@@ -16,12 +16,9 @@ subgraph Serveur
     A -- push --> Z;
     A -- push --> ZZ;
     Z <-- push/pull --> B[(BDD<br>AeMa)];
-    Z -- pull --> H[(BDD<br>ALMACIR)];
-    Z -- pull --> C[(BDD<br>CHIPS)];
-    Z -- pull --> D[(BDD<br>...)];
-    B -- push --> Z;
-    C -- push --> Z;
-    D -- push --> Z;
+    Z <-- push/pull --> H[(BDD<br>ALMACIR)];
+    Z <-- push/pull --> C[(BDD<br>CHIPS)];
+    Z <-- push/pull --> D[(BDD<br>...)];
 end
 subgraph Zenodo
     subgraph IRAMAT community
@@ -38,8 +35,8 @@ style B fill:#FF8D1B
 style H fill:#FF8D1B
 ```
 
-![#FF8D1B](https://placehold.co/15x15/FF8D1B/FF8D1B.png): numismatique 
-![#02fa02](https://placehold.co/15x15/FF8D1B/02fa02.png): code informatique 
+![#FF8D1B](https://placehold.co/15x15/FF8D1B/FF8D1B.png): numismatique   
+![#02fa02](https://placehold.co/15x15/02fa02/02fa02.png): code informatique 
 
 ### Explications
 
