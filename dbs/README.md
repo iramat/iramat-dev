@@ -42,7 +42,8 @@ flowchart LR
 
 click T1 "https://github.com/zoometh/iramat-test/blob/main/dbs/analysis_results.tsv" _blank
 style Z fill:#02fa02
-style ZZ fill:#02fa02
+style P2Z fill:#02fa02
+style PfZ fill:#02fa02
 style B fill:#FF8D1B
 style H fill:#FF8D1B
 style E fill:#FF8D1B
