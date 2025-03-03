@@ -15,7 +15,7 @@ subgraph Serveur
     Z -- pull --> A;
     A -- push --> Z;
     A -- push --> ZZ;
-    Z <-- pull --> B[(BDD<br>AeMa)];
+    Z <-- push/pull --> B[(BDD<br>AeMa)];
     Z -- pull --> H[(BDD<br>ALMACIR)];
     Z -- pull --> C[(BDD<br>CHIPS)];
     Z -- pull --> D[(BDD<br>...)];
