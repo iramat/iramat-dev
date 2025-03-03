@@ -1,99 +1,5 @@
 # Analyses physico-chimiques
 
-```mermaid
-flowchart LR
-    A[spectro tabulé] -- composition chimique --> table_teneurs;
-    A -- composition structurale --> E[proportions minéraux];
-    subgraph table_teneurs
-        F[teneurs isotopiques];
-        D[teneurs élémentaires];
-    end
-    subgraph table_proportions
-        E;
-    end
-```
-
-## table_teneurs
-
-
-| Column Name         | Data Type | Constraints         | Description       |
-|---------------------|-----------|---------------------|-------------------|
-| id_labo              | string   |                     |   Identifiant laboratoire, suggestion: IRAMAT-XXXX (sur *n*-digit), auto-incrémenation               |
-| id_ech              | integer   |                     |   Identifiant échantillon               |
-| id_analyse          | integer   |                     |   Identifiant analyse               |
-| id_machine          | integer   |                     |   Identifiant machine               |
-| ag                  | numeric   |                     | Silver (Ag)       |
-| al                  | numeric   |                     | Aluminum (Al)     |
-| as             | numeric   |                     | Arsenic (As)     |
-| ba                  | numeric   |                     | Barium (Ba)      |
-| be                  | numeric   |                     | Beryllium (Be)   |
-| bi                  | numeric   |                     | Bismuth (Bi)     |
-| c                   | numeric   |                     | Carbon (C)       |
-| cd                  | numeric   |                     | Cadmium (Cd)     |
-| ce                  | numeric   |                     | Cerium (Ce)      |
-| co                  | numeric   |                     | Cobalt (Co)      |
-| cr                  | numeric   |                     | Chromium (Cr)    |
-| cs                  | numeric   |                     | Cesium (Cs)      |
-| cu                  | numeric   |                     | Copper (Cu)      |
-| dy                  | numeric   |                     | Dysprosium (Dy)  |
-| er                  | numeric   |                     | Erbium (Er)      |
-| eu                  | numeric   |                     | Europium (Eu)    |
-| fe                  | numeric   |                     | Iron (Fe)        |
-| fe56delta           | numeric   |                     | Delta Fe-56      |
-| fe57delta           | numeric   |                     | Delta Fe-57      |
-| ga                  | numeric   |                     | Gallium (Ga)     |
-| gd                  | numeric   |                     | Gadolinium (Gd)  |
-| ge                  | numeric   |                     | Germanium (Ge)   |
-| hf                  | numeric   |                     | Hafnium (Hf)     |
-| ho                  | numeric   |                     | Holmium (Ho)     |
-| in                  | numeric   |                     | Indium (In)      |
-| k                   | numeric   |                     | Potassium (K)    |
-| la                  | numeric   |                     | Lanthanum (La)   |
-| li                  | numeric   |                     | Lithium (Li)     |
-| lu                  | numeric   |                     | Lutetium (Lu)    |
-| mg                  | numeric   |                     | Magnesium (Mg)   |
-| mn                  | numeric   |                     | Manganese (Mn)   |
-| mo                  | numeric   |                     | Molybdenum (Mo)  |
-| na                  | numeric   |                     | Sodium (Na)      |
-| nb                  | numeric   |                     | Niobium (Nb)     |
-| nd                  | numeric   |                     | Neodymium (Nd)   |
-| ni                  | numeric   |                     | Nickel (Ni)      |
-| os                  | numeric   |                     | Osmium (Os), by ppt    |
-| os187_os188         | numeric   |                     | Osmium Isotope Ratio (Os-187/Os-188) |
-| os187_os186         | numeric   |                     | Osmium Isotope Ratio (Os-187/Os-186) |
-| pb                  | numeric   |                     | Lead (Pb)        |
-| pd                  | numeric   |                     | Palladium (Pd)   |
-| pr                  | numeric   |                     | Praseodymium (Pr)|
-| rb                  | numeric   |                     | Rubidium (Rb)    |
-| ru                  | numeric   |                     | Ruthenium (Ru)   |
-| sb                  | numeric   |                     | Antimony (Sb)    |
-| sc                  | numeric   |                     | Scandium (Sc)    |
-| se                  | numeric   |                     | Selenium (Se)    |
-| si                  | numeric   |                     | Silicon (Si)     |
-| sm                  | numeric   |                     | Samarium (Sm)    |
-| sn                  | numeric   |                     | Tin (Sn)         |
-| sr                  | numeric   |                     | Strontium (Sr)   |
-| sr87_sr86           | numeric   |                     | Strontium Isotope Ratio (Sr-87/Sr-86) |
-| ta                  | numeric   |                     | Tantalum (Ta)    |
-| tb                  | numeric   |                     | Terbium (Tb)     |
-| te                  | numeric   |                     | Tellurium (Te)   |
-| th                  | numeric   |                     | Thorium (Th)     |
-| ti                  | numeric   |                     | Titanium (Ti)    |
-| tl                  | numeric   |                     | Thallium (Tl)    |
-| tm                  | numeric   |                     | Thulium (Tm)     |
-| u                   | numeric   |                     | Uranium (U)      |
-| v                   | numeric   |                     | Vanadium (V)     |
-| w                   | numeric   |                     | Tungsten (W)     |
-| y                   | numeric   |                     | Yttrium (Y)      |
-| yb                  | numeric   |                     | Ytterbium (Yb)   |
-| zn                  | numeric   |                     | Zinc (Zn)        |
-| zr                  | numeric   |                     | Zirconium (Zr)   |
-| ...                  | ...   |                     | other elements   |
-| ...                  | ...   |                     | other isotope ratio   |
-| perte_feu           | numeric   |                     |  loss on ignition                |
-| bibreference        | integer   |                     |                  |
-
-
 ## Flux de travail
 
 ```mermaid
@@ -193,5 +99,97 @@ Gérés par des scripts Python (fonctions, Jupyter NB, packages) qui effectuent:
 2. mappage des données (i.e. alignement des données BDD et )
 3. vérifications des types et de la cohérence des données 
 
+```mermaid
+flowchart LR
+    A[spectro tabulé] -- composition chimique --> table_teneurs;
+    A -- composition structurale --> E[proportions minéraux];
+    subgraph table_teneurs
+        F[teneurs isotopiques];
+        D[teneurs élémentaires];
+    end
+    subgraph table_proportions
+        E;
+    end
+```
+
+## table_teneurs
+
+
+| Column Name         | Data Type | Constraints         | Description       |
+|---------------------|-----------|---------------------|-------------------|
+| id_labo              | string   |                     |   Identifiant laboratoire, suggestion: IRAMAT-XXXX (sur *n*-digit), auto-incrémenation               |
+| id_ech              | integer   |                     |   Identifiant échantillon               |
+| id_analyse          | integer   |                     |   Identifiant analyse               |
+| id_machine          | integer   |                     |   Identifiant machine               |
+| ag                  | numeric   |                     | Silver (Ag)       |
+| al                  | numeric   |                     | Aluminum (Al)     |
+| as             | numeric   |                     | Arsenic (As)     |
+| ba                  | numeric   |                     | Barium (Ba)      |
+| be                  | numeric   |                     | Beryllium (Be)   |
+| bi                  | numeric   |                     | Bismuth (Bi)     |
+| c                   | numeric   |                     | Carbon (C)       |
+| cd                  | numeric   |                     | Cadmium (Cd)     |
+| ce                  | numeric   |                     | Cerium (Ce)      |
+| co                  | numeric   |                     | Cobalt (Co)      |
+| cr                  | numeric   |                     | Chromium (Cr)    |
+| cs                  | numeric   |                     | Cesium (Cs)      |
+| cu                  | numeric   |                     | Copper (Cu)      |
+| dy                  | numeric   |                     | Dysprosium (Dy)  |
+| er                  | numeric   |                     | Erbium (Er)      |
+| eu                  | numeric   |                     | Europium (Eu)    |
+| fe                  | numeric   |                     | Iron (Fe)        |
+| fe56delta           | numeric   |                     | Delta Fe-56      |
+| fe57delta           | numeric   |                     | Delta Fe-57      |
+| ga                  | numeric   |                     | Gallium (Ga)     |
+| gd                  | numeric   |                     | Gadolinium (Gd)  |
+| ge                  | numeric   |                     | Germanium (Ge)   |
+| hf                  | numeric   |                     | Hafnium (Hf)     |
+| ho                  | numeric   |                     | Holmium (Ho)     |
+| in                  | numeric   |                     | Indium (In)      |
+| k                   | numeric   |                     | Potassium (K)    |
+| la                  | numeric   |                     | Lanthanum (La)   |
+| li                  | numeric   |                     | Lithium (Li)     |
+| lu                  | numeric   |                     | Lutetium (Lu)    |
+| mg                  | numeric   |                     | Magnesium (Mg)   |
+| mn                  | numeric   |                     | Manganese (Mn)   |
+| mo                  | numeric   |                     | Molybdenum (Mo)  |
+| na                  | numeric   |                     | Sodium (Na)      |
+| nb                  | numeric   |                     | Niobium (Nb)     |
+| nd                  | numeric   |                     | Neodymium (Nd)   |
+| ni                  | numeric   |                     | Nickel (Ni)      |
+| os                  | numeric   |                     | Osmium (Os), by ppt    |
+| os187_os188         | numeric   |                     | Osmium Isotope Ratio (Os-187/Os-188) |
+| os187_os186         | numeric   |                     | Osmium Isotope Ratio (Os-187/Os-186) |
+| pb                  | numeric   |                     | Lead (Pb)        |
+| pd                  | numeric   |                     | Palladium (Pd)   |
+| pr                  | numeric   |                     | Praseodymium (Pr)|
+| rb                  | numeric   |                     | Rubidium (Rb)    |
+| ru                  | numeric   |                     | Ruthenium (Ru)   |
+| sb                  | numeric   |                     | Antimony (Sb)    |
+| sc                  | numeric   |                     | Scandium (Sc)    |
+| se                  | numeric   |                     | Selenium (Se)    |
+| si                  | numeric   |                     | Silicon (Si)     |
+| sm                  | numeric   |                     | Samarium (Sm)    |
+| sn                  | numeric   |                     | Tin (Sn)         |
+| sr                  | numeric   |                     | Strontium (Sr)   |
+| sr87_sr86           | numeric   |                     | Strontium Isotope Ratio (Sr-87/Sr-86) |
+| ta                  | numeric   |                     | Tantalum (Ta)    |
+| tb                  | numeric   |                     | Terbium (Tb)     |
+| te                  | numeric   |                     | Tellurium (Te)   |
+| th                  | numeric   |                     | Thorium (Th)     |
+| ti                  | numeric   |                     | Titanium (Ti)    |
+| tl                  | numeric   |                     | Thallium (Tl)    |
+| tm                  | numeric   |                     | Thulium (Tm)     |
+| u                   | numeric   |                     | Uranium (U)      |
+| v                   | numeric   |                     | Vanadium (V)     |
+| w                   | numeric   |                     | Tungsten (W)     |
+| y                   | numeric   |                     | Yttrium (Y)      |
+| yb                  | numeric   |                     | Ytterbium (Yb)   |
+| zn                  | numeric   |                     | Zinc (Zn)        |
+| zr                  | numeric   |                     | Zirconium (Zr)   |
+| ...                  | ...   |                     | other elements   |
+| ...                  | ...   |                     | other isotope ratio   |
+| perte_feu           | numeric   |                     |  loss on ignition                |
+| bibreference        | integer   |                     |                  |
 
 [^1] Possiblement de très nombreuses lignes et colonnes avec beaucoup de données manquantes, champs vides, etc. N'est pas destiné à être lu par des humains mais par des scripts informatiques (filtrage, tri, aggrégation) et restitué à la volée
