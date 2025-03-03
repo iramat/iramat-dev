@@ -27,7 +27,7 @@ flowchart LR
         D[(BDD<br>...)]
     end
     PDB <-- lit/écrit --> A;
-    P2Z -- lit --> WMod;
+    P2Z -- lit --> Mod;
     P2Z -- lit --> GitLab;
     subgraph Zenodo
         subgraph IRAMAT_community
@@ -41,7 +41,7 @@ flowchart LR
 
 
 click T1 "https://github.com/zoometh/iramat-test/blob/main/dbs/analysis_results.tsv" _blank
-style Z fill:#02fa02
+style PDB fill:#02fa02
 style P2Z fill:#02fa02
 style PfZ fill:#02fa02
 style B fill:#FF8D1B
