@@ -13,6 +13,84 @@ flowchart LR
     end
 ```
 
+| Column Name         | Data Type | Constraints         | Description       |
+|---------------------|-----------|---------------------|-------------------|
+| ag                  | numeric   |                     | Silver (Ag)       |
+| al                  | numeric   |                     | Aluminum (Al)     |
+| arsenic             | numeric   |                     | Arsenic (As)     |
+| ba                  | numeric   |                     | Barium (Ba)      |
+| be                  | numeric   |                     | Beryllium (Be)   |
+| bi                  | numeric   |                     | Bismuth (Bi)     |
+| c                   | numeric   |                     | Carbon (C)       |
+| cd                  | numeric   |                     | Cadmium (Cd)     |
+| ce                  | numeric   |                     | Cerium (Ce)      |
+| co                  | numeric   |                     | Cobalt (Co)      |
+| cr                  | numeric   |                     | Chromium (Cr)    |
+| cs                  | numeric   |                     | Cesium (Cs)      |
+| cu                  | numeric   |                     | Copper (Cu)      |
+| dy                  | numeric   |                     | Dysprosium (Dy)  |
+| er                  | numeric   |                     | Erbium (Er)      |
+| eu                  | numeric   |                     | Europium (Eu)    |
+| fe                  | numeric   |                     | Iron (Fe)        |
+| fe56delta           | numeric   |                     | Delta Fe-56      |
+| fe57delta           | numeric   |                     | Delta Fe-57      |
+| ga                  | numeric   |                     | Gallium (Ga)     |
+| gd                  | numeric   |                     | Gadolinium (Gd)  |
+| ge                  | numeric   |                     | Germanium (Ge)   |
+| hf                  | numeric   |                     | Hafnium (Hf)     |
+| ho                  | numeric   |                     | Holmium (Ho)     |
+| in                  | numeric   |                     | Indium (In)      |
+| k                   | numeric   |                     | Potassium (K)    |
+| la                  | numeric   |                     | Lanthanum (La)   |
+| li                  | numeric   |                     | Lithium (Li)     |
+| lu                  | numeric   |                     | Lutetium (Lu)    |
+| mg                  | numeric   |                     | Magnesium (Mg)   |
+| mn                  | numeric   |                     | Manganese (Mn)   |
+| mo                  | numeric   |                     | Molybdenum (Mo)  |
+| na                  | numeric   |                     | Sodium (Na)      |
+| nb                  | numeric   |                     | Niobium (Nb)     |
+| nd                  | numeric   |                     | Neodymium (Nd)   |
+| ni                  | numeric   |                     | Nickel (Ni)      |
+| os                  | numeric   |                     | Osmium (Os), by ppt    |
+| os187_os188         | numeric   |                     | Osmium Isotope Ratio (Os-187/Os-188) |
+| os187_os186         | numeric   |                     | Osmium Isotope Ratio (Os-187/Os-186) |
+| pb                  | numeric   |                     | Lead (Pb)        |
+| pd                  | numeric   |                     | Palladium (Pd)   |
+| pr                  | numeric   |                     | Praseodymium (Pr)|
+| rb                  | numeric   |                     | Rubidium (Rb)    |
+| ru                  | numeric   |                     | Ruthenium (Ru)   |
+| sb                  | numeric   |                     | Antimony (Sb)    |
+| sc                  | numeric   |                     | Scandium (Sc)    |
+| se                  | numeric   |                     | Selenium (Se)    |
+| si                  | numeric   |                     | Silicon (Si)     |
+| sm                  | numeric   |                     | Samarium (Sm)    |
+| sn                  | numeric   |                     | Tin (Sn)         |
+| sr                  | numeric   |                     | Strontium (Sr)   |
+| sr87_sr86           | numeric   |                     | Strontium Isotope Ratio (Sr-87/Sr-86) |
+| ta                  | numeric   |                     | Tantalum (Ta)    |
+| tb                  | numeric   |                     | Terbium (Tb)     |
+| te                  | numeric   |                     | Tellurium (Te)   |
+| th                  | numeric   |                     | Thorium (Th)     |
+| ti                  | numeric   |                     | Titanium (Ti)    |
+| tl                  | numeric   |                     | Thallium (Tl)    |
+| tm                  | numeric   |                     | Thulium (Tm)     |
+| u                   | numeric   |                     | Uranium (U)      |
+| v                   | numeric   |                     | Vanadium (V)     |
+| w                   | numeric   |                     | Tungsten (W)     |
+| y                   | numeric   |                     | Yttrium (Y)      |
+| yb                  | numeric   |                     | Ytterbium (Yb)   |
+| zn                  | numeric   |                     | Zinc (Zn)        |
+| zr                  | numeric   |                     | Zirconium (Zr)   |
+| id_ech              | integer   |                     |                  |
+| n_crpg              | integer   |                     |                  |
+| open                | boolean   | DEFAULT false       |                  |
+| perte_feu           | numeric   |                     |                  |
+| bibreference        | integer   |                     |                  |
+
+
+
+
+
 ---
 
 ```mermaid
