@@ -6,21 +6,22 @@ flowchart LR
         subgraph données de travail
             A@{ shape: docs, label: "Analyses<br>physico-chimiques" }
         end
-        subgraph Python
-            Z@{ procs: docs, label: "Python-BDD" }
-            ZZ@{ procs: docs, label: "Python-Zenodo" }
-        end
     end
     subgraph GitHub
         subgraph données de référence
             W@{ shape: docs, label: "Modèles" }
         end
     end
+    subgraph Python
+        Z@{ procs: docs, label: "Python-BDD" }
+        ZZ@{ procs: docs, label: "Python-Zenodo" }
+    end
     Z <-- lit/écrit --> A;
     Z <-- lit/écrit --> B[(BDD<br>AeMa)];
     Z <-- lit/écrit --> H[(BDD<br>ALMACIR)];
     Z <-- lit/écrit --> C[(BDD<br>CHIPS)];
     Z <-- lit/écrit --> D[(BDD<br>...)];
+    Z <-- lit/écrit --> W;
     A <-- lit/écrit --> ZZ;
     subgraph Zenodo
         subgraph IRAMAT_community
