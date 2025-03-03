@@ -33,9 +33,10 @@ style Z fill:#02fa02
 style ZZ fill:#02fa02
 style B fill:#FF8D1B
 style H fill:#FF8D1B
+style E fill:#FF8D1B
 ```
 
-![#FF8D1B](https://placehold.co/15x15/FF8D1B/FF8D1B.png): numismatique   
+![#FF8D1B](https://placehold.co/15x15/FF8D1B/FF8D1B.png): numismatique (lié à la)  
 ![#02fa02](https://placehold.co/15x15/02fa02/02fa02.png): code informatique 
 
 ### Explications
