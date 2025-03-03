@@ -85,6 +85,8 @@ flowchart LR
 | yb                  | numeric   |                     | Ytterbium (Yb)   |
 | zn                  | numeric   |                     | Zinc (Zn)        |
 | zr                  | numeric   |                     | Zirconium (Zr)   |
+| ...                  | ...   |                     | other elements   |
+| ...                  | ...   |                     | other isotope ratio   |
 | perte_feu           | numeric   |                     |                  |
 | bibreference        | integer   |                     |                  |
 
