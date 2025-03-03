@@ -111,7 +111,8 @@ flowchart LR
     end
     subgraph Python
         Z@{ procs: docs, label: "Python-BDD" }
-        ZZ@{ procs: docs, label: "Python-Zenodo" }
+        P2Z@{ procs: docs, label: "Python-to-Zenodo" }
+        PfZ@{ procs: docs, label: "Python-from-Zenodo" }
     end
     subgraph BDDs
         B[(BDD<br>AeMa)]
@@ -121,16 +122,16 @@ flowchart LR
     end
     Z <-- lit/écrit --> A;
     Z <-- lit/écrit --> W;
-    GitLab -- lit --> ZZ;
+    P2Z -- lit --> GitLab;
     subgraph Zenodo
         subgraph IRAMAT_community
-            ZZ -- écrit --> E@{ shape: doc, label: "DOI<br>xxxy" }
-            ZZ -- écrit --> F@{ shape: doc, label: "DOI<br>xxyx" }
-            ZZ -- écrit --> G@{ shape: doc, label: "DOI<br>xyxx" }
+            P2Z -- écrit --> E@{ shape: doc, label: "DOI<br>xxxy" }
+            P2Z -- écrit --> F@{ shape: doc, label: "DOI<br>xxyx" }
+            P2Z -- écrit --> G@{ shape: doc, label: "DOI<br>xyxx" }
         end
     end
     Z <-- lit/écrit --> BDDs;
-    ZZ -- lit --> IRAMAT_community
+    PfZ -- lit --> IRAMAT_community
 
 
 click T1 "https://github.com/zoometh/iramat-test/blob/main/dbs/analysis_results.tsv" _blank
