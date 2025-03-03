@@ -16,11 +16,13 @@ flowchart LR
         Z@{ procs: docs, label: "Python-BDD" }
         ZZ@{ procs: docs, label: "Python-Zenodo" }
     end
+    subgraph BDDs
+        B[(BDD<br>AeMa)]
+        H[(BDD<br>ALMACIR)]
+        C[(BDD<br>CHIPS)]
+        D[(BDD<br>...)]
+    end
     Z <-- lit/écrit --> A;
-    Z <-- lit/écrit --> B[(BDD<br>AeMa)];
-    Z <-- lit/écrit --> H[(BDD<br>ALMACIR)];
-    Z <-- lit/écrit --> C[(BDD<br>CHIPS)];
-    Z <-- lit/écrit --> D[(BDD<br>...)];
     Z <-- lit/écrit --> W;
     A <-- lit/écrit --> ZZ;
     subgraph Zenodo
@@ -30,6 +32,7 @@ flowchart LR
             ZZ -- écrit --> G@{ shape: doc, label: "DOI<br>xyxx" }
         end
     end
+    Z <-- lit/écrit --> BDDs;
     ZZ -- lit --> IRAMAT_community
 
 
