@@ -9,6 +9,7 @@ subgraph Serveur
         A@{ shape: docs, label: "Analyses physico-chimiques" }
     end
     A -- pull --> B[(BDD<br>AeMa)];
+    A -- pull --> H[(BDD<br>ALMACIR)];
     A -- pull --> C[(BDD<br>CHIPS)];
     A -- pull --> D[(BDD<br>...)];
     B -- push --> A;
@@ -24,7 +25,11 @@ subgraph Zenodo
 end
 
 click A "https://github.com/zoometh/iramat-test/blob/main/dbs/analysis_results.tsv" _blank
+style B fill:#FF8D1B
+style H fill:#FF8D1B
 ```
+
+![#FF8D1B](https://placehold.co/15x15/FF8D1B/FF8D1B.png): numismatique 
 
 ### Explications
 
@@ -54,5 +59,7 @@ Un fichier tabulaire avec l'ensemble des champs possibles pour les résultats de
 Gérés par des scripts Python (fonctions, Jupyter NB, packages) qui effectuent:
 
 1. mappage des données
-2. vérifications des types et de la cohérence des données
+2. vérifications des types et de la cohérence des données 
+
+##### Pull et Push
 
