@@ -7,20 +7,26 @@ flowchart LR
 subgraph Serveur
     subgraph GitLab
         A@{ shape: docs, label: "Analyses physico-chimiques" }
+        subgraph Python
+            Z@{ procs: docs, label: "Python-BDD" }
+            ZZ@{ procs: docs, label: "Python-Zenodo" }
+        end
     end
-    A -- pull --> B[(BDD<br>AeMa)];
-    A -- pull --> H[(BDD<br>ALMACIR)];
-    A -- pull --> C[(BDD<br>CHIPS)];
-    A -- pull --> D[(BDD<br>...)];
-    B -- push --> A;
-    C -- push --> A;
-    D -- push --> A;
+    Z -- pull --> A;
+    A -- push --> Z;
+    Z -- pull --> B[(BDD<br>AeMa)];
+    Z -- pull --> H[(BDD<br>ALMACIR)];
+    Z -- pull --> C[(BDD<br>CHIPS)];
+    Z -- pull --> D[(BDD<br>...)];
+    B -- push --> ZZ;
+    C -- push --> ZZ;
+    D -- push --> ZZ;
 end
 subgraph Zenodo
     subgraph IRAMAT community
-        A -- push --> E@{ shape: doc, label: "DOI<br>xxxy" }
-        A -- push --> F@{ shape: doc, label: "DOI<br>xxyx" }
-        A -- push --> G@{ shape: doc, label: "DOI<br>xyxx" }
+        ZZ -- push --> E@{ shape: doc, label: "DOI<br>xxxy" }
+        ZZ -- push --> F@{ shape: doc, label: "DOI<br>xxyx" }
+        ZZ -- push --> G@{ shape: doc, label: "DOI<br>xyxx" }
     end
 end
 
