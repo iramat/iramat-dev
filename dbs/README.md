@@ -41,7 +41,7 @@ flowchart LR
     P2Z -- créer dans --> IRAMAT_community 
 
 
-click T1 "https://github.com/zoometh/iramat-test/blob/main/dbs/analysis_results.tsv" _blank
+click T1 "https://github.com/zoometh/iramat-test/tree/main/dbs#table_teneurs"
 style PDB fill:#02fa02
 style P2Z fill:#02fa02
 style PfZ fill:#02fa02
@@ -123,6 +123,7 @@ flowchart LR
 | id_ech              | integer   |                     |   Identifiant échantillon               |
 | id_analyse          | integer   |                     |   Identifiant analyse               |
 | id_machine          | integer   |                     |   Identifiant machine               |
+| **perc_ppm**         |  binomial  |                       | indique si les valeurs des colonnes suivantes sont en pourcentage (perc) ou en ppm   |
 | ag                  | numeric   |                     | Silver (Ag)       |
 | al                  | numeric   |                     | Aluminum (Al)     |
 | as             | numeric   |                     | Arsenic (As)     |
