@@ -31,9 +31,16 @@ flowchart LR
     P2Z -- lit --> données_travail;
     subgraph Zenodo
         subgraph IRAMAT_community
-            E@{ shape: doc, label: "DOI<br>xxxy" }
-            F@{ shape: doc, label: "DOI<br>xxyx" }
-            G@{ shape: doc, label: "DOI<br>xyxx" }
+            subgraph jeux_de_données
+                E@{ shape: doc, label: "DOI<br>xxxy" }
+                F@{ shape: doc, label: "DOI<br>xxyx" }
+                G@{ shape: doc, label: "DOI<br>xyxx" }
+            end
+            subgraph données_de_référence
+                dataref1@{ shape: doc, label: "DOI<br>yxxx" }
+                dataref2@{ shape: doc, label: "DOI<br>yyxx" }
+                dataref3@{ shape: doc, label: "DOI<br>yyyx" }
+            end
         end
     end
     PDB -- lit --> BDDs;
@@ -48,6 +55,7 @@ style PfZ fill:#02fa02
 style B fill:#FF8D1B
 style H fill:#FF8D1B
 style E fill:#FF8D1B
+style dataref3 fill:#FF8D1B
 ```
 
 ![#FF8D1B](https://placehold.co/15x15/FF8D1B/FF8D1B.png): numismatique (lié à la)  
@@ -57,30 +65,20 @@ style E fill:#FF8D1B
 
 ### données
 
-#### Modéles
+#### Modèles
 
-Plusieurs fichiers des données de référence (≠ données de travail) hebergés sur GitHub (publiques). Format mixte (CSV, RDF, JSON, etc.) aligné sur les standards et isostandards (ex: CRMsci).
+Plusieurs fichiers des données de référence (≠ données de travail) hebergés sur GitHub et sur le site de l'IRAMAT (publiques). Format mixte (CSV, RDF, JSON, etc.) aligné sur les standards et isostandards (ex: CRMsci).
 
 #### Analyses
 > Analyses physico-chimiques
 
-Un seul fichier des données de travail (≠ données de référence), hebergé sur GitLab (privées). Format tabulaire CSV avec l'ensemble des champs possibles[^1] pour les résultats des analyses MEB-EDS, Raman, XRF, etc. En anglais et par exemple (voir aussi [analysis_results.tsv](https://github.com/zoometh/iramat-test/blob/main/dbs/analysis_results.tsv)).
+Deux fichier des données de travail (≠ données de référence), hebergés sur GitLab (privées). Format tabulaire CSV avec l'ensemble des champs possibles[^1]:
+    * pour les teneurs. 
+    * pour les proportions.
 
-| nom colonne             | type de donées | description |
-|--------------------------|----------|----------|
-| Iramat_ID               | STRING   | Identifiant laboratoire, suggestion: IRAMAT-XXXX (sur *n*-digit), auto-incrémenation |
-| Analysis_ID             | STRING   | Identifiant analyse |
-| Sample_ID               | STRING   | Identifiant échantillon |
-| Analysis_Type           | STRING   | MEB-EDS, Gamma Spectroscopy, Raman, etc. |
-| Element/Isotope         | STRING   | Élément (pour MEB-EDS) ou isotope (pour spectroscopie gamma) analysé |
-| Concentration/Activity  | FLOAT    | Valeur mesurée (par exemple, concentration élémentaire ou activité radioactive) |
-| Unit                    | STRING   | Unité de mesure (par exemple, %, ppm, Bq, keV) |
-| Wavelength (cm⁻¹)       | FLOAT    | Uniquement pour l'analyse Raman, la position du pic dans le décalage Raman |
-| Intensity               | FLOAT    | Intensité du pic Raman ou autres caractéristiques spectrales |
-| Uncertainty             | FLOAT    | Incertitude de mesure |
-| Date_Analyzed           | DATE     | Date à laquelle l'analyse a été réalisée |
-| Comments                | STRING   | Observations ou métadonnées supplémentaires |
-| ...                | ...   | ... |
+* table_teneurs
+
+https://docs.google.com/spreadsheets/d/1MIQXiTlG1sYuCDRdMnEYfGmDcEa6tot5KfJeWaTQYZo/edit?usp=sharing
 
 #### Python
 
