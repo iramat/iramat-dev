@@ -15,6 +15,10 @@ flowchart LR
 
 | Column Name         | Data Type | Constraints         | Description       |
 |---------------------|-----------|---------------------|-------------------|
+| id_labo              | string   |                     |   Identifiant laboratoire, suggestion: IRAMAT-XXXX (sur *n*-digit), auto-incrémenation               |
+| id_ech              | integer   |                     |   Identifiant échantillon               |
+| id_analyse          | integer   |                     |   Identifiant analyse               |
+| id_machine          | integer   |                     |   Identifiant machine               |
 | ag                  | numeric   |                     | Silver (Ag)       |
 | al                  | numeric   |                     | Aluminum (Al)     |
 | arsenic             | numeric   |                     | Arsenic (As)     |
@@ -81,9 +85,6 @@ flowchart LR
 | yb                  | numeric   |                     | Ytterbium (Yb)   |
 | zn                  | numeric   |                     | Zinc (Zn)        |
 | zr                  | numeric   |                     | Zirconium (Zr)   |
-| id_ech              | integer   |                     |                  |
-| n_crpg              | integer   |                     |                  |
-| open                | boolean   | DEFAULT false       |                  |
 | perte_feu           | numeric   |                     |                  |
 | bibreference        | integer   |                     |                  |
 
