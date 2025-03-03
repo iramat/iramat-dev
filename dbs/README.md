@@ -18,9 +18,9 @@ subgraph Serveur
     Z -- pull --> H[(BDD<br>ALMACIR)];
     Z -- pull --> C[(BDD<br>CHIPS)];
     Z -- pull --> D[(BDD<br>...)];
-    B -- push --> ZZ;
-    C -- push --> ZZ;
-    D -- push --> ZZ;
+    B -- push --> Z;
+    C -- push --> Z;
+    D -- push --> Z;
 end
 subgraph Zenodo
     subgraph IRAMAT community
