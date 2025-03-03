@@ -2,7 +2,6 @@
 
 ```mermaid
 flowchart LR
-subgraph Serveur
     subgraph GitLab
         subgraph données de travail
             A@{ shape: docs, label: "Analyses<br>physico-chimiques" }
@@ -18,15 +17,14 @@ subgraph Serveur
     Z <-- lit/écrit --> C[(BDD<br>CHIPS)];
     Z <-- lit/écrit --> D[(BDD<br>...)];
     A <-- lit/écrit --> ZZ;
-end
-subgraph Zenodo
-    subgraph IRAMAT community
-        ZZ -- écrit --> E@{ shape: doc, label: "DOI<br>xxxy" }
-        ZZ -- écrit --> F@{ shape: doc, label: "DOI<br>xxyx" }
-        ZZ -- écrit --> G@{ shape: doc, label: "DOI<br>xyxx" }
+    subgraph Zenodo
+        subgraph IRAMAT_community
+            ZZ -- écrit --> E@{ shape: doc, label: "DOI<br>xxxy" }
+            ZZ -- écrit --> F@{ shape: doc, label: "DOI<br>xxyx" }
+            ZZ -- écrit --> G@{ shape: doc, label: "DOI<br>xyxx" }
+        end
     end
-end
-ZZ -- lit --> Zenodo
+    ZZ -- lit --> IRAMAT_community
 
 
 click A "https://github.com/zoometh/iramat-test/blob/main/dbs/analysis_results.tsv" _blank
