@@ -5,13 +5,13 @@
 ```mermaid
 flowchart LR
     subgraph GitLab
-        subgraph données de travail
+        subgraph données_travail
             T1@{ shape: docs, label: "table_teneurs" }
             T2@{ shape: docs, label: "table_proportions" }
         end
     end
     subgraph GitHub
-        subgraph données de référence
+        subgraph données_référence
             Mod@{ shape: docs, label: "Modèles" }
         end
     end
@@ -26,9 +26,9 @@ flowchart LR
         C[(BDD<br>CHIPS)]
         D[(BDD<br>...)]
     end
-    PDB <-- lit/écrit --> A;
+    PDB -- ajoute --> données_travail;
     P2Z -- lit --> Mod;
-    P2Z -- lit --> GitLab;
+    P2Z -- lit --> données_travail;
     subgraph Zenodo
         subgraph IRAMAT_community
             P2Z -- écrit --> E@{ shape: doc, label: "DOI<br>xxxy" }
