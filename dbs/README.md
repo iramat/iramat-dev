@@ -87,7 +87,7 @@ flowchart LR
 | zr                  | numeric   |                     | Zirconium (Zr)   |
 | ...                  | ...   |                     | other elements   |
 | ...                  | ...   |                     | other isotope ratio   |
-| perte_feu           | numeric   |                     |                  |
+| perte_feu           | numeric   |                     |  loss on ignition                |
 | bibreference        | integer   |                     |                  |
 
 
