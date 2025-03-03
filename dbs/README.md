@@ -12,21 +12,22 @@ subgraph Serveur
             ZZ@{ procs: docs, label: "Python-Zenodo" }
         end
     end
-    Z -- pull --> A;
-    A -- push --> Z;
-    A -- push --> ZZ;
-    Z <-- push/pull --> B[(BDD<br>AeMa)];
-    Z <-- push/pull --> H[(BDD<br>ALMACIR)];
-    Z <-- push/pull --> C[(BDD<br>CHIPS)];
-    Z <-- push/pull --> D[(BDD<br>...)];
+    Z <-- lit/écrit --> A;
+    Z <-- lit/écrit --> B[(BDD<br>AeMa)];
+    Z <-- lit/écrit --> H[(BDD<br>ALMACIR)];
+    Z <-- lit/écrit --> C[(BDD<br>CHIPS)];
+    Z <-- lit/écrit --> D[(BDD<br>...)];
+    A <-- lit/écrit --> ZZ;
 end
 subgraph Zenodo
     subgraph IRAMAT community
-        ZZ -- push --> E@{ shape: doc, label: "DOI<br>xxxy" }
-        ZZ -- push --> F@{ shape: doc, label: "DOI<br>xxyx" }
-        ZZ -- push --> G@{ shape: doc, label: "DOI<br>xyxx" }
+        ZZ -- écrit --> E@{ shape: doc, label: "DOI<br>xxxy" }
+        ZZ -- écrit --> F@{ shape: doc, label: "DOI<br>xxyx" }
+        ZZ -- écrit --> G@{ shape: doc, label: "DOI<br>xyxx" }
     end
 end
+ZZ -- lit --> Zenodo
+
 
 click A "https://github.com/zoometh/iramat-test/blob/main/dbs/analysis_results.tsv" _blank
 style Z fill:#02fa02
@@ -62,8 +63,17 @@ Données de travail (≠ données de référence) hebergées sur GitLab. Un fich
 | Comments                | STRING   | Observations ou métadonnées supplémentaires |
 | ...                | ...   | ... |
 
+#### Python
 
-##### Push/Pull
+* Python-BDD:
+
+Lit dans les différentes BDD
+
+* Python-Zenodo
+
+Lit le fichier Analyses physico-chimiques (filtrage, tri, aggrégation) et écrit dans la communauté IRAMAT de Zenodo
+
+##### lit/écrit
 > lire/écrire
 
 Gérés par des scripts Python (fonctions, Jupyter NB, packages) qui effectuent:
