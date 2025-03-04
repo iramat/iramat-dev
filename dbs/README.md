@@ -72,7 +72,7 @@ style dataref3 fill:#FF8D1B
 
 ### Données de référence
 
-Plusieurs fichiers des données de référence (≠ données de travail) hebergés sur GitHub et sur le site de l'IRAMAT (publiques). Format mixte (CSV, RDF, JSON, etc.) aligné sur les standards et isostandards (ex: CRMsci). Modèles, *templates*, tableau de calibration, etc., qui à moyen terme peuvent fournir des standards de référence qui seront réutilisés par la communauté des archéomètres. 
+Plusieurs fichiers des données de référence (≠ données de travail) hebergés sur GitHub et sur le site de l'IRAMAT (publiques). Format mixte (CSV, RDF, JSON, etc.) aligné sur les standards et isostandards (ex: CRMsci). Modèles, *templates*, tableau de calibration, matériaux de référence (obsidienne, verre) etc., qui à moyen terme peuvent fournir des standards de référence qui seront réutilisés par la communauté des archéomètres. 
 
 ### Données de travail
 
