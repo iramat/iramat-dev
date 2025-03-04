@@ -1,19 +1,6 @@
 # Analyses physico-chimiques
 
 
-```mermaid
-flowchart LR
-    A[spectro tabulé] -- composition chimique --> table_teneurs;
-    A -- composition structurale --> E[proportions minéraux];
-    subgraph table_teneurs
-        F[teneurs isotopiques];
-        D[teneurs élémentaires];
-    end
-    subgraph table_proportions
-        E;
-    end
-```
-
 ## Flux de travail
 
 ```mermaid
@@ -81,54 +68,30 @@ style dataref3 fill:#FF8D1B
 ![#FF8D1B](https://placehold.co/15x15/FF8D1B/FF8D1B.png): numismatique (lié à la)  
 ![#02fa02](https://placehold.co/15x15/02fa02/02fa02.png): code informatique 
 
-## Explications
+## Données
 
-### données
+### Données de référence
 
-#### Modèles
+Plusieurs fichiers des données de référence (≠ données de travail) hebergés sur GitHub et sur le site de l'IRAMAT (publiques). Format mixte (CSV, RDF, JSON, etc.) aligné sur les standards et isostandards (ex: CRMsci). Modèles, *templates*, tableau de calibration, etc., qui à moyen terme peuvent fournir des standards de référence qui seront réutilisés par la communauté des archéomètres. 
 
-Plusieurs fichiers des données de référence (≠ données de travail) hebergés sur GitHub et sur le site de l'IRAMAT (publiques). Format mixte (CSV, RDF, JSON, etc.) aligné sur les standards et isostandards (ex: CRMsci).
-
-#### Analyses
-> Analyses physico-chimiques
-
-Deux fichiers des données de travail (≠ données de référence), hebergés sur GitLab (privées). Format tabulaire CSV avec l'ensemble des champs possibles[^1]:
-
-* pour les teneurs: [table_teneurs](https://github.com/zoometh/iramat-test/tree/main/dbs#table_teneurs)
-
-* pour les proportions.
-
-#### Code
-
-Le code en back-end, et jusqu'à l'export de CSV, se fait en Python (fonctions, Jupyter NB, packages). Le traitement statistique des donées exportées en CSV se fait avec un package R.
-Le code permet: la connection aux BDD ([exemple](https://colab.research.google.com/drive/1EHUO9JaBNLIyNdiHLCTtPAODgFhEvgcq?usp=sharing)), mappage des données, vérifications des types et de la cohérence des données, etc. 
-
-##### Python-BDD:
-
-Lit dans les différentes BDD. Effectue un 'mappage' des données BDD (i.e. alignement des données BDD) et ajoute à un fichier commun, [table_teneurs](https://github.com/zoometh/iramat-test/tree/main/dbs#table_teneurs) ou table_proportions, conservé dans le GitLab de l'IRAMAT.
-
-##### Python-from-Zenodo
-
-Parcours la communauté IRAMAT (IRAMAT community) et relève toutes les metadata des fichiers. Met à jour les identifiants des fichiers sur GitLab.
-
-##### Python-to-Zenodo
-
-Lit les données de référence herbergées sur GitHub et les données de travail hebergées sur GitLab. Ecrit dans la communauté IRAMAT de Zenodo. A la demande des chercheurs, pour exporter leur données dans Zenodo, communauté IRAMAT, afin d'avoir des DOI intéropérables attachés à leurs données supplémentaires. Lit le fichier [table_teneurs](https://github.com/zoometh/iramat-test/tree/main/dbs#table_teneurs) ou table_proportions, effectue des filtrages, tris, aggrégations (paramètres de la fonction Python) sur ces tables. Des données en texte libre (titre du jeu de données, description, affiliation de l'auteur, contributeurs, etc.) sont à saisir par le chercheur. 
-
-
-#### Données
-
-##### Données de référence
-
-Modèles, *templates*, tableau de calibration, etc., qui à moyen terme peuvent fournir des standards de référence qui seront réutilisés par la communauté des archéomètres. 
-
-##### Données de travail
+### Données de travail
 
 Les données brutes, données agrégées, etc., qui sont issues d'outils de mesure et qui serviront à l'analyse statistique.
 
+```mermaid
+flowchart LR
+    A[spectro tabulé] -- composition chimique --> table_teneurs;
+    A -- composition structurale --> E[proportions minéraux];
+    subgraph table_teneurs
+        F[teneurs isotopiques];
+        D[teneurs élémentaires];
+    end
+    subgraph table_proportions
+        E;
+    end
+```
 
-
-## table_teneurs
+#### table_teneurs
 
 Ci-dessous le modèle à discuter et [**ici** son aspect tableur (Google Sheet)](https://docs.google.com/spreadsheets/d/1MIQXiTlG1sYuCDRdMnEYfGmDcEa6tot5KfJeWaTQYZo/edit?usp=sharing)
 
@@ -209,5 +172,37 @@ Ci-dessous le modèle à discuter et [**ici** son aspect tableur (Google Sheet)]
 | ...                  | ...   |                     | other isotope ratio   |
 | perte_feu           | numeric   |                     |  loss on ignition                |
 | bibreference        | integer   |                     |                  |
+
+
+## Analyses
+> Analyses physico-chimiques
+
+Deux fichiers des données de travail (≠ données de référence), hebergés sur GitLab (privées). Format tabulaire CSV avec l'ensemble des champs possibles[^1]:
+
+* pour les teneurs: [table_teneurs](https://github.com/zoometh/iramat-test/tree/main/dbs#table_teneurs)
+
+* pour les proportions: table_proportions
+
+## Code
+
+Le code en back-end, et jusqu'à l'export des données de travail en CSV, se fait en Python (fonctions, Jupyter NB, packages). Le traitement statistique des données de travail exportées en CSV se fait avec un package R.
+Le code Python permet: la connection aux BDD ([exemple](https://colab.research.google.com/drive/1EHUO9JaBNLIyNdiHLCTtPAODgFhEvgcq?usp=sharing)), mappage des données, vérifications des types et de la cohérence des données, ajout dans des fichiers ou des BDDs, etc. 
+
+##### Python-BDD:
+
+Lit dans les différentes BDD. Effectue un 'mappage' des données BDD (i.e. alignement des données BDD) et ajoute à un fichier commun, [table_teneurs](https://github.com/zoometh/iramat-test/tree/main/dbs#table_teneurs) ou table_proportions, conservé dans le GitLab de l'IRAMAT.
+
+##### Python-from-Zenodo
+
+Parcours la communauté IRAMAT (IRAMAT community) de Zeondo et relève toutes les metadata des fichiers (OAI-PMH). Met à jour les identifiants des fichiers sur GitLab.
+
+##### Python-to-Zenodo
+
+Lit les données de référence herbergées sur GitHub et les données de travail hebergées sur GitLab. Ecrit dans la communauté IRAMAT de Zenodo. A la demande des chercheurs, pour exporter leur données depuis le GitLab du laboratoir vers Zenodo, communauté IRAMAT, afin d'avoir des DOI intéropérables attachés à leurs données supplémentaires. Lit le fichier [table_teneurs](https://github.com/zoometh/iramat-test/tree/main/dbs#table_teneurs) ou table_proportions, effectue des filtrages, tris, aggrégations (paramètres de la fonction Python) sur ces tables. Des données en texte libre (titre du jeu de données, description, affiliation de l'auteur, contributeurs, etc.) sont à saisir par le chercheur. 
+
+
+
+
+
 
 [^1]: Possiblement de très nombreuses lignes et colonnes avec beaucoup de données manquantes, champs vides, etc. N'est pas destiné à être lu par des humains mais par des scripts informatiques (filtrage, tri, aggrégation) et restitué à la volée
