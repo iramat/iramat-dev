@@ -8,8 +8,8 @@ flowchart LR
     subgraph GitLab
         subgraph Analyses
             subgraph données_travail[données de travail]
-                T1@{ shape: docs, label: "table_teneurs" }
-                T2@{ shape: docs, label: "table_proportions" }
+                T1@{ shape: docs, label: "table_chimie" }
+                T2@{ shape: docs, label: "table_mineralogie" }
             end
         end
     end
@@ -50,7 +50,7 @@ flowchart LR
     PtZ -- créer dans --> IRAMAT_community 
 
 
-click T1 "https://github.com/zoometh/iramat-test/tree/main/dbs#table_teneurs"
+click T1 "https://github.com/zoometh/iramat-test/tree/main/dbs#table_chimie"
 click Mod "https://github.com/zoometh/iramat-test/tree/main/dbs#mod%C3%A8les"
 click données_de_référence "https://github.com/zoometh/iramat-test/tree/main/dbs#mod%C3%A8les"
 click PDB "https://github.com/zoometh/iramat-test/tree/main/dbs#python-bdd"
@@ -72,7 +72,7 @@ style dataref3 fill:#FF8D1B
 
 ### Données de référence
 
-Plusieurs fichiers des données de référence (≠ données de travail) hebergés sur GitHub et sur le site de l'IRAMAT (publiques). Format mixte (CSV, RDF, JSON, etc.) aligné sur les standards et isostandards (ex: CRMsci). Modèles, *templates*, tableau de calibration, etc., qui à moyen terme peuvent fournir des standards de référence qui seront réutilisés par la communauté des archéomètres. 
+Plusieurs fichiers des données de référence (≠ données de travail) hebergés sur GitHub et sur le site de l'IRAMAT (publiques). Format mixte (CSV, RDF, JSON, etc.) aligné sur les standards et isostandards (ex: CRMsci). Modèles, *templates*, tableau de calibration, matériaux de référence (obsidienne, verre) etc., qui à moyen terme peuvent fournir des standards de référence qui seront réutilisés par la communauté des archéomètres. 
 
 ### Données de travail
 
@@ -80,18 +80,18 @@ Les données brutes, données agrégées, etc., qui sont issues d'outils de mesu
 
 ```mermaid
 flowchart LR
-    A[spectro tabulé] -- composition chimique --> table_teneurs;
+    A[spectro tabulé] -- composition chimique --> table_chimie;
     A -- composition structurale --> E[proportions minéraux];
-    subgraph table_teneurs
+    subgraph table_chimie
         F[teneurs isotopiques];
         D[teneurs élémentaires];
     end
-    subgraph table_proportions
+    subgraph table_mineralogie
         E;
     end
 ```
 
-#### table_teneurs
+#### table_chimie
 
 Ci-dessous le modèle à discuter et [**ici** son aspect tableur (Google Sheet)](https://docs.google.com/spreadsheets/d/1MIQXiTlG1sYuCDRdMnEYfGmDcEa6tot5KfJeWaTQYZo/edit?usp=sharing)
 
@@ -179,9 +179,9 @@ Ci-dessous le modèle à discuter et [**ici** son aspect tableur (Google Sheet)]
 
 Deux fichiers des données de travail (≠ données de référence), hebergés sur GitLab (privées). Format tabulaire CSV avec l'ensemble des champs possibles[^1]:
 
-* pour les teneurs: [table_teneurs](https://github.com/zoometh/iramat-test/tree/main/dbs#table_teneurs)
+* pour les teneurs: [table_chimie](https://github.com/zoometh/iramat-test/tree/main/dbs#table_chimie)
 
-* pour les proportions: table_proportions
+* pour les proportions: table_mineralogie
 
 ## Code
 
@@ -190,7 +190,7 @@ Le code Python permet: la connection aux BDD ([exemple](https://colab.research.g
 
 ##### Python-BDD:
 
-Lit dans les différentes BDD. Effectue un 'mappage' des données BDD (i.e. alignement des données BDD) et ajoute à un fichier commun, [table_teneurs](https://github.com/zoometh/iramat-test/tree/main/dbs#table_teneurs) ou table_proportions, conservé dans le GitLab de l'IRAMAT.
+Lit dans les différentes BDD. Effectue un 'mappage' des données BDD (i.e. alignement des données BDD) et ajoute à un fichier commun, [table_chimie](https://github.com/zoometh/iramat-test/tree/main/dbs#table_chimie) ou table_mineralogie, conservé dans le GitLab de l'IRAMAT.
 
 ##### Python-from-Zenodo
 
