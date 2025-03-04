@@ -6,7 +6,7 @@
 flowchart LR
     subgraph GitLab
         subgraph Analyses
-            subgraph données_travail
+            subgraph données_travail[données de travail]
                 T1@{ shape: docs, label: "table_teneurs" }
                 T2@{ shape: docs, label: "table_proportions" }
             end
@@ -51,6 +51,7 @@ flowchart LR
 
 click T1 "https://github.com/zoometh/iramat-test/tree/main/dbs#table_teneurs"
 click Mod "https://github.com/zoometh/iramat-test/tree/main/dbs#mod%C3%A8les"
+click données_de_référence "https://github.com/zoometh/iramat-test/tree/main/dbs#mod%C3%A8les"
 style PDB fill:#02fa02
 style P2Z fill:#02fa02
 style PfZ fill:#02fa02
