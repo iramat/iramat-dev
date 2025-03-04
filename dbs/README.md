@@ -27,6 +27,7 @@ flowchart LR
     PDB -- ajoute dans --> données_travail;
     P2Z -- lit --> Mod;
     P2Z -- lit --> données_travail;
+    PfZ -- met à jour<br>référence bibliographiques--> données_travail
     subgraph Zenodo
         subgraph IRAMAT_community
             subgraph jeux_de_données
