@@ -15,11 +15,9 @@ flowchart LR
             Mod@{ shape: docs, label: "Modèles" }
         end
     end
-    subgraph Python
-        PDB@{ procs: docs, label: "Python-BDD" }
-        P2Z@{ procs: docs, label: "Python-to-Zenodo" }
-        PfZ@{ procs: docs, label: "Python-from-Zenodo" }
-    end
+    PDB@{ procs: docs, label: "Python-BDD" }
+    P2Z@{ procs: docs, label: "Python-to-Zenodo" }
+    PfZ@{ procs: docs, label: "Python-from-Zenodo" }
     subgraph BDDs
         B[(BDD<br>AeMa)]
         H[(BDD<br>ALMACIR)]
