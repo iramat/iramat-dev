@@ -5,13 +5,15 @@
 ```mermaid
 flowchart LR
     subgraph GitLab
-        subgraph données_travail
-            T1@{ shape: docs, label: "table_teneurs" }
-            T2@{ shape: docs, label: "table_proportions" }
+        subgraph Analyses
+            subgraph données_travail
+                T1@{ shape: docs, label: "table_teneurs" }
+                T2@{ shape: docs, label: "table_proportions" }
+            end
         end
     end
     subgraph GitHub
-        subgraph données_référence
+        subgraph données_référence[données de référence]
             Mod@{ shape: docs, label: "Modèles" }
         end
     end
@@ -26,12 +28,12 @@ flowchart LR
     end
     subgraph Zenodo
         subgraph IRAMAT_community
-            subgraph jeux_de_données
+            subgraph jeux_de_données[jeux de données]
                 E@{ shape: doc, label: "DOI<br>xxxy" }
                 F@{ shape: doc, label: "DOI<br>xxyx" }
                 G@{ shape: doc, label: "DOI<br>xyxx" }
             end
-            subgraph données_de_référence
+            subgraph données_de_référence[données de référence]
                 dataref1@{ shape: doc, label: "DOI<br>yxxx" }
                 dataref2@{ shape: doc, label: "DOI<br>yyxx" }
                 dataref3@{ shape: doc, label: "DOI<br>yyyx" }
@@ -48,6 +50,7 @@ flowchart LR
 
 
 click T1 "https://github.com/zoometh/iramat-test/tree/main/dbs#table_teneurs"
+click Mod "https://github.com/zoometh/iramat-test/tree/main/dbs#mod%C3%A8les"
 style PDB fill:#02fa02
 style P2Z fill:#02fa02
 style PfZ fill:#02fa02
