@@ -32,7 +32,7 @@ flowchart LR
         end
     end
     PDB@{ procs: docs, label: "Python-BDD" }
-    P2Z@{ procs: docs, label: "Python-to-Zenodo" }
+    PtZ@{ procs: docs, label: "Python-to-Zenodo" }
     PfZ@{ procs: docs, label: "Python-from-Zenodo" }
     subgraph BDDs
         B[(BDD<br>AeMa)]
@@ -54,20 +54,23 @@ flowchart LR
             end
         end
     end
-    P2Z -- lit --> Mod;
-    P2Z -- lit --> données_travail;
+    PtZ -- lit --> Mod;
+    PtZ -- lit --> données_travail;
     PfZ -- met à jour<br>référence bibliographiques--> données_travail
     PDB -- lit --> BDDs;
     PDB -- ajoute dans --> données_travail;
     PfZ -- lit --> IRAMAT_community
-    P2Z -- créer dans --> IRAMAT_community 
+    PtZ -- créer dans --> IRAMAT_community 
 
 
 click T1 "https://github.com/zoometh/iramat-test/tree/main/dbs#table_teneurs"
 click Mod "https://github.com/zoometh/iramat-test/tree/main/dbs#mod%C3%A8les"
 click données_de_référence "https://github.com/zoometh/iramat-test/tree/main/dbs#mod%C3%A8les"
+click PDB "https://github.com/zoometh/iramat-test/tree/main/dbs#python-bdd"
+click PfZ "https://github.com/zoometh/iramat-test/tree/main/dbs#python-from-zenodo"
+click PtZ "https://github.com/zoometh/iramat-test/tree/main/dbs#python-to-zenodo"
 style PDB fill:#02fa02
-style P2Z fill:#02fa02
+style PtZ fill:#02fa02
 style PfZ fill:#02fa02
 style B fill:#FF8D1B
 style H fill:#FF8D1B
@@ -89,14 +92,11 @@ Plusieurs fichiers des données de référence (≠ données de travail) heberg�
 #### Analyses
 > Analyses physico-chimiques
 
-Deux fichier des données de travail (≠ données de référence), hebergés sur GitLab (privées). Format tabulaire CSV avec l'ensemble des champs possibles[^1]:
+Deux fichiers des données de travail (≠ données de référence), hebergés sur GitLab (privées). Format tabulaire CSV avec l'ensemble des champs possibles[^1]:
 
-    * pour les teneurs. 
-    * pour les proportions.
+* pour les teneurs: [table_teneurs](https://github.com/zoometh/iramat-test/tree/main/dbs#table_teneurs)
 
-* table_teneurs
-
-https://docs.google.com/spreadsheets/d/1MIQXiTlG1sYuCDRdMnEYfGmDcEa6tot5KfJeWaTQYZo/edit?usp=sharing
+* pour les proportions.
 
 #### Code
 
@@ -130,6 +130,7 @@ Les données brutes, données agrégées, etc., qui sont issues d'outils de mesu
 
 ## table_teneurs
 
+Ci-dessous le modèle à discuter et [**ici** son aspect tableur (Google Sheet)](https://docs.google.com/spreadsheets/d/1MIQXiTlG1sYuCDRdMnEYfGmDcEa6tot5KfJeWaTQYZo/edit?usp=sharing)
 
 | Column Name         | Data Type | Constraints         | Description       |
 |---------------------|-----------|---------------------|-------------------|
@@ -209,4 +210,4 @@ Les données brutes, données agrégées, etc., qui sont issues d'outils de mesu
 | perte_feu           | numeric   |                     |  loss on ignition                |
 | bibreference        | integer   |                     |                  |
 
-[^1] Possiblement de très nombreuses lignes et colonnes avec beaucoup de données manquantes, champs vides, etc. N'est pas destiné à être lu par des humains mais par des scripts informatiques (filtrage, tri, aggrégation) et restitué à la volée
+[^1]: Possiblement de très nombreuses lignes et colonnes avec beaucoup de données manquantes, champs vides, etc. N'est pas destiné à être lu par des humains mais par des scripts informatiques (filtrage, tri, aggrégation) et restitué à la volée
