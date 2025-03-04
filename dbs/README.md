@@ -8,8 +8,8 @@ flowchart LR
     subgraph GitLab
         subgraph Analyses
             subgraph données_travail[données de travail]
-                T1@{ shape: docs, label: "table_teneurs" }
-                T2@{ shape: docs, label: "table_proportions" }
+                T1@{ shape: docs, label: "table_chimie" }
+                T2@{ shape: docs, label: "table_mineralogie" }
             end
         end
     end
@@ -50,7 +50,7 @@ flowchart LR
     PtZ -- créer dans --> IRAMAT_community 
 
 
-click T1 "https://github.com/zoometh/iramat-test/tree/main/dbs#table_teneurs"
+click T1 "https://github.com/zoometh/iramat-test/tree/main/dbs#table_chimie"
 click Mod "https://github.com/zoometh/iramat-test/tree/main/dbs#mod%C3%A8les"
 click données_de_référence "https://github.com/zoometh/iramat-test/tree/main/dbs#mod%C3%A8les"
 click PDB "https://github.com/zoometh/iramat-test/tree/main/dbs#python-bdd"
@@ -80,18 +80,18 @@ Les données brutes, données agrégées, etc., qui sont issues d'outils de mesu
 
 ```mermaid
 flowchart LR
-    A[spectro tabulé] -- composition chimique --> table_teneurs;
+    A[spectro tabulé] -- composition chimique --> table_chimie;
     A -- composition structurale --> E[proportions minéraux];
-    subgraph table_teneurs
+    subgraph table_chimie
         F[teneurs isotopiques];
         D[teneurs élémentaires];
     end
-    subgraph table_proportions
+    subgraph table_mineralogie
         E;
     end
 ```
 
-#### table_teneurs
+#### table_chimie
 
 Ci-dessous le modèle à discuter et [**ici** son aspect tableur (Google Sheet)](https://docs.google.com/spreadsheets/d/1MIQXiTlG1sYuCDRdMnEYfGmDcEa6tot5KfJeWaTQYZo/edit?usp=sharing)
 
@@ -179,9 +179,9 @@ Ci-dessous le modèle à discuter et [**ici** son aspect tableur (Google Sheet)]
 
 Deux fichiers des données de travail (≠ données de référence), hebergés sur GitLab (privées). Format tabulaire CSV avec l'ensemble des champs possibles[^1]:
 
-* pour les teneurs: [table_teneurs](https://github.com/zoometh/iramat-test/tree/main/dbs#table_teneurs)
+* pour les teneurs: [table_chimie](https://github.com/zoometh/iramat-test/tree/main/dbs#table_chimie)
 
-* pour les proportions: table_proportions
+* pour les proportions: table_mineralogie
 
 ## Code
 
@@ -190,7 +190,7 @@ Le code Python permet: la connection aux BDD ([exemple](https://colab.research.g
 
 ##### Python-BDD:
 
-Lit dans les différentes BDD. Effectue un 'mappage' des données BDD (i.e. alignement des données BDD) et ajoute à un fichier commun, [table_teneurs](https://github.com/zoometh/iramat-test/tree/main/dbs#table_teneurs) ou table_proportions, conservé dans le GitLab de l'IRAMAT.
+Lit dans les différentes BDD. Effectue un 'mappage' des données BDD (i.e. alignement des données BDD) et ajoute à un fichier commun, [table_chimie](https://github.com/zoometh/iramat-test/tree/main/dbs#table_chimie) ou table_mineralogie, conservé dans le GitLab de l'IRAMAT.
 
 ##### Python-from-Zenodo
 
@@ -198,7 +198,7 @@ Parcours la communauté IRAMAT (IRAMAT community) de Zeondo et relève toutes le
 
 ##### Python-to-Zenodo
 
-Lit les données de référence herbergées sur GitHub et les données de travail hebergées sur GitLab. Ecrit dans la communauté IRAMAT de Zenodo. A la demande des chercheurs, pour exporter leur données depuis le GitLab du laboratoir vers Zenodo, communauté IRAMAT, afin d'avoir des DOI intéropérables attachés à leurs données supplémentaires. Lit le fichier [table_teneurs](https://github.com/zoometh/iramat-test/tree/main/dbs#table_teneurs) ou table_proportions, effectue des filtrages, tris, aggrégations (paramètres de la fonction Python) sur ces tables. Des données en texte libre (titre du jeu de données, description, affiliation de l'auteur, contributeurs, etc.) sont à saisir par le chercheur. 
+Lit les données de référence herbergées sur GitHub et les données de travail hebergées sur GitLab. Ecrit dans la communauté IRAMAT de Zenodo. A la demande des chercheurs, pour exporter leur données depuis le GitLab du laboratoir vers Zenodo, communauté IRAMAT, afin d'avoir des DOI intéropérables attachés à leurs données supplémentaires. Lit le fichier [table_chimie](https://github.com/zoometh/iramat-test/tree/main/dbs#table_chimie) ou table_mineralogie, effectue des filtrages, tris, aggrégations (paramètres de la fonction Python) sur ces tables. Des données en texte libre (titre du jeu de données, description, affiliation de l'auteur, contributeurs, etc.) sont à saisir par le chercheur. 
 
 
 
