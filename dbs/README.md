@@ -24,10 +24,6 @@ flowchart LR
         C[(BDD<br>CHIPS)]
         D[(BDD<br>...)]
     end
-    PDB -- ajoute dans --> données_travail;
-    P2Z -- lit --> Mod;
-    P2Z -- lit --> données_travail;
-    PfZ -- met à jour<br>référence bibliographiques--> données_travail
     subgraph Zenodo
         subgraph IRAMAT_community
             subgraph jeux_de_données
@@ -42,7 +38,11 @@ flowchart LR
             end
         end
     end
+    P2Z -- lit --> Mod;
+    P2Z -- lit --> données_travail;
+    PfZ -- met à jour<br>référence bibliographiques--> données_travail
     PDB -- lit --> BDDs;
+    PDB -- ajoute dans --> données_travail;
     PfZ -- lit --> IRAMAT_community
     P2Z -- créer dans --> IRAMAT_community 
 
