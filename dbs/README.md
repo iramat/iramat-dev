@@ -194,11 +194,11 @@ Lit dans les différentes BDD. Effectue un 'mappage' des données BDD (i.e. alig
 
 ##### Python-from-Zenodo
 
-Parcours la communauté IRAMAT (IRAMAT community) de Zeondo et relève toutes les metadata des fichiers (OAI-PMH). Met à jour les identifiants des fichiers sur GitLab.
+Parcours la communauté IRAMAT (IRAMAT community) de Zenodo et relève toutes les metadata des fichiers (OAI-PMH). Met à jour les identifiants des fichiers sur GitLab.
 
 ##### Python-to-Zenodo
 
-Lit les données de référence herbergées sur GitHub et les données de travail hebergées sur GitLab. Ecrit dans la communauté IRAMAT de Zenodo. A la demande des chercheurs, pour exporter leur données depuis le GitLab du laboratoir vers Zenodo, communauté IRAMAT, afin d'avoir des DOI intéropérables attachés à leurs données supplémentaires. Lit le fichier [table_teneurs](https://github.com/zoometh/iramat-test/tree/main/dbs#table_teneurs) ou table_proportions, effectue des filtrages, tris, aggrégations (paramètres de la fonction Python) sur ces tables. Des données en texte libre (titre du jeu de données, description, affiliation de l'auteur, contributeurs, etc.) sont à saisir par le chercheur. 
+Lit les données de référence herbergées sur GitHub et les données de travail hebergées sur GitLab. Ecrit dans la communauté IRAMAT de Zenodo (exemple dans la [sandbox](https://sandbox.zenodo.org/records/177235)). A la demande des chercheurs, pour exporter leur données depuis le GitLab du laboratoir vers Zenodo, communauté IRAMAT, afin d'avoir des DOI intéropérables attachés à leurs données supplémentaires. Lit le fichier [table_teneurs](https://github.com/zoometh/iramat-test/tree/main/dbs#table_teneurs) ou table_proportions, effectue des filtrages, tris, aggrégations (paramètres de la fonction Python) sur ces tables. Des données en texte libre (titre du jeu de données, description, affiliation de l'auteur, contributeurs, etc.) sont à saisir par le chercheur. 
 
 
 
