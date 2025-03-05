@@ -1,42 +1,42 @@
-BibTeX;Description;Zenodo eq.
-abstract;R‚sum‚ de la publication;description
+ï»¿BibTeX;Description;Zenodo eq.
+abstract;RÃ©sumÃ© de la publication;description
 address;Lieu de publication (ville ou institution);
 afterword;Postface de la publication;
-annotation;Notes ou commentaires suppl‚mentaires;
-author;Nom(s) de l?auteur ou des auteurs;creators
-booktitle;Titre du livre contenant le chapitre ou l?article;
-chapter;Num‚ro du chapitre dans un livre;
-comment;Remarques ou annotations sur l?entr‚e;
-crossref;R‚f‚rence crois‚e vers une autre entr‚e BibTeX;
-date;Date de publication complŠte (AAAA-MM-JJ);
-doi;Identifiant num‚rique de l?article (DOI);doi
-edition;dition du livre (ex: 2Šme ‚dition);
-editor;Nom du ou des ‚diteurs scientifiques;
-entryset;Groupe d?entr‚es BibTeX associ‚es;
-eprint;Identifiant d?archive ‚lectronique (ex: arXiv);
-file;Lien vers le fichier PDF ou document associ‚;
-howpublished;Mode de publication (ex: en ligne, pr‚publication);
+annotation;Notes ou commentaires supplÃ©mentaires;
+author;Nom(s) de lâ€™auteur ou des auteurs;creators
+booktitle;Titre du livre contenant le chapitre ou lâ€™article;
+chapter;NumÃ©ro du chapitre dans un livre;
+comment;Remarques ou annotations sur lâ€™entrÃ©e;
+crossref;RÃ©fÃ©rence croisÃ©e vers une autre entrÃ©e BibTeX;
+date;Date de publication complÃ¨te (AAAA-MM-JJ);
+doi;Identifiant numÃ©rique de lâ€™article (DOI);doi
+edition;Ã‰dition du livre (ex: 2Ã¨me Ã©dition);
+editor;Nom du ou des Ã©diteurs scientifiques;
+entryset;Groupe dâ€™entrÃ©es BibTeX associÃ©es;
+eprint;Identifiant dâ€™archive Ã©lectronique (ex: arXiv);
+file;Lien vers le fichier PDF ou document associÃ©;
+howpublished;Mode de publication (ex: en ligne, prÃ©publication);
 institution;Institution responsable du document;
-isbn;Num‚ro ISBN du livre;
-issn;Num‚ro ISSN de la revue;
-issue;Num‚ro du volume ou de la revue;
+isbn;NumÃ©ro ISBN du livre;
+issn;NumÃ©ro ISSN de la revue;
+issue;NumÃ©ro du volume ou de la revue;
 journal;Nom de la revue scientifique;
-keywords;Mots-cl‚s d‚crivant la publication;keywords
+keywords;Mots-clÃ©s dÃ©crivant la publication;keywords
 language;Langue du document;
-location;Lieu de la conf‚rence ou de l?‚diteur;
+location;Lieu de la confÃ©rence ou de lâ€™Ã©diteur;
 month;Mois de publication;
-note;Informations compl‚mentaires;
-number;Num‚ro du journal, du rapport ou de la s‚rie;
-organization;Organisme responsable d?un acte de conf‚rence;
-pages;Plages de pages de l?article ou du chapitre;
-part;Partie sp‚cifique du document;
-publisher;Maison d?‚dition du livre ou de l?acte de conf‚rence;
-school;Institution universitaire o— a ‚t‚ soutenue une thŠse;
-series;Nom de la s‚rie dans laquelle le livre est publi‚;
-title;Titre de l?ouvrage, article ou document;title
+note;Informations complÃ©mentaires;
+number;NumÃ©ro du journal, du rapport ou de la sÃ©rie;
+organization;Organisme responsable dâ€™un acte de confÃ©rence;
+pages;Plages de pages de lâ€™article ou du chapitre;
+part;Partie spÃ©cifique du document;
+publisher;Maison dâ€™Ã©dition du livre ou de lâ€™acte de confÃ©rence;
+school;Institution universitaire oÃ¹ a Ã©tÃ© soutenue une thÃ¨se;
+series;Nom de la sÃ©rie dans laquelle le livre est publiÃ©;
+title;Titre de lâ€™ouvrage, article ou document;title
 translator;Nom du traducteur;
-type;Type de document (ex: m‚moire, rapport technique);
+type;Type de document (ex: mÃ©moire, rapport technique);
 url;Lien vers le document en ligne;
-version;Num‚ro de version du document ou du logiciel;
+version;NumÃ©ro de version du document ou du logiciel;
 volume;Volume du journal ou de la collection;
-year;Ann‚e de publication;dates
+year;AnnÃ©e de publication;dates
