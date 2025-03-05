@@ -35,7 +35,7 @@ school;Institution universitaire où a été soutenue une thèse;
 series;Nom de la série dans laquelle le livre est publié;
 title;Titre de l’ouvrage ou de l'article ou du document;title
 translator;Nom du traducteur;
-type;Type de document (ex: mémoire, rapport technique);
+type;Type de document (ex: mémoire ou rapport technique);
 url;Lien vers le document en ligne;
 version;Numéro de version du document ou du logiciel;
 volume;Volume du journal ou de la collection;
