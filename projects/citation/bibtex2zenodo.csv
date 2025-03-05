@@ -26,14 +26,14 @@ language;Langue du document;
 location;Lieu de la conférence ou de l’éditeur;
 month;Mois de publication;
 note;Informations complémentaires;
-number;Numéro du journal, du rapport ou de la série;
+number;Numéro du journal ou du rapport ou de la série;
 organization;Organisme responsable d’un acte de conférence;
 pages;Plages de pages de l’article ou du chapitre;
 part;Partie spécifique du document;
 publisher;Maison d’édition du livre ou de l’acte de conférence;
 school;Institution universitaire où a été soutenue une thèse;
 series;Nom de la série dans laquelle le livre est publié;
-title;Titre de l’ouvrage, article ou document;title
+title;Titre de l’ouvrage ou de l'article ou du document;title
 translator;Nom du traducteur;
 type;Type de document (ex: mémoire, rapport technique);
 url;Lien vers le document en ligne;
