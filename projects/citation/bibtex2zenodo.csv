@@ -15,7 +15,7 @@ editor;Nom du ou des éditeurs scientifiques;
 entryset;Groupe d’entrées BibTeX associées;
 eprint;Identifiant d’archive électronique (ex: arXiv);
 file;Lien vers le fichier PDF ou document associé;
-howpublished;Mode de publication (ex: en ligne, prépublication);
+howpublished;Mode de publication (ex: en ligne ou prépublication);
 institution;Institution responsable du document;
 isbn;Numéro ISBN du livre;
 issn;Numéro ISSN de la revue;
