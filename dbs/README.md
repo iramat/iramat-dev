@@ -199,19 +199,25 @@ Deux fichiers des données de travail (≠ données de référence), hebergés s
 Le code en back-end, et jusqu'à l'export des données de travail en CSV, se fait en Python (fonctions, Jupyter NB, packages). Le traitement statistique des données de travail exportées en CSV se fait avec un package R.
 Le code Python permet: la connection aux BDD ([exemple](https://colab.research.google.com/drive/1EHUO9JaBNLIyNdiHLCTtPAODgFhEvgcq?usp=sharing)), mappage des données, vérifications des types et de la cohérence des données, ajout dans des fichiers ou des BDDs, etc. 
 
-##### Python-BDD:
+### Python-BDD:
 
 Lit dans les différentes BDD. Effectue un 'mappage' des données BDD (i.e. alignement des données BDD) et ajoute à un fichier commun, [table_chimie](https://github.com/zoometh/iramat-test/tree/main/dbs#table_chimie) ou table_mineralogie, conservé dans le GitLab de l'IRAMAT.
 
-##### Python-from-Zenodo
+### Python-from-Zenodo
 
 Parcours la communauté IRAMAT (IRAMAT community) de Zenodo et relève toutes les metadata des fichiers (OAI-PMH). Met à jour les identifiants des fichiers sur GitLab.
 
-##### Python-to-Zenodo
+### Python-to-Zenodo
 
-Lit les données de référence herbergées sur GitHub et les données de travail hebergées sur GitLab. Ecrit dans la communauté IRAMAT de Zenodo (exemple dans la [sandbox](https://sandbox.zenodo.org/records/177235)). A la demande des chercheurs, pour exporter leur données depuis le GitLab du laboratoir vers Zenodo, communauté IRAMAT, afin d'avoir des DOI intéropérables attachés à leurs données supplémentaires. Lit le fichier [table_teneurs](https://github.com/zoometh/iramat-test/tree/main/dbs#table_teneurs) ou table_proportions, effectue des filtrages, tris, aggrégations (paramètres de la fonction Python) sur ces tables. Des données en texte libre (titre du jeu de données, description, affiliation de l'auteur, contributeurs, etc.) sont à saisir par le chercheur. 
+Lit les données de référence herbergées sur GitHub et les données de travail hebergées sur GitLab. Ecrit dans la communauté IRAMAT de Zenodo (exemple dans la [sandbox](https://sandbox.zenodo.org/records/177235)). A la demande des chercheurs, pour exporter leur données depuis le GitLab du laboratoire vers Zenodo, communauté IRAMAT, afin d'avoir des DOI intéropérables attachés à leurs données supplémentaires. Lit le fichier [table_teneurs](https://github.com/zoometh/iramat-test/tree/main/dbs#table_teneurs) ou table_proportions, effectue des filtrages, tris, aggrégations (paramètres de la fonction Python) sur ces tables. Des données en texte libre (titre du jeu de données, description, affiliation de l'auteur, contributeurs, etc.) sont à saisir par le chercheur. 
 
+#### Alignement des références BibTeX sur les entrées Zenodo
 
+voir: 
+
+1. table d'alignement [bibtex2zenodo.tsv](https://github.com/zoometh/iramat-test/blob/main/projects/citation/bibtex2zenodo.tsv)
+2. [Zenodo documentation](https://developers.zenodo.org/#depositions)
+3. fonction [zn_metadata()](https://github.com/zoometh/iramat-test-functions/blob/2444bd1ee1519904da4fd621be3561396a284a73/chips.py#L104)
 
 
 
