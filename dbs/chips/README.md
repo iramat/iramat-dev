@@ -15,6 +15,8 @@ Postgres
 
 ### Références bibliographiques
 
+La table `_refbib` regroupe les références bibliographiques des différentes vues (*views*). Ces références sont au format BibTeX et seront mappées pour correspondre aux champs de Zenodo (table de correspondance [bibtex2zenodo.csv])
+
 * ajouter
 
 ```sql
