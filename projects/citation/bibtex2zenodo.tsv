@@ -21,7 +21,7 @@ isbn	Numéro ISBN du livre
 issn	Numéro ISSN de la revue		
 issue	Numéro du volume ou de la revue		
 journal	Nom de la revue scientifique		
-keywords	Mots-clés décrivant la publication	keywords	{Keyword 1, Keyword 2} → ["Keyword 1","Keyword 2"]
+keywords	Mots-clés décrivant la publication	keywords	{Keyword 1, Keyword 2} → ['Keyword 1','Keyword 2']
 language	Langue du document		
 location	Lieu de la conférence ou de l’éditeur		
 month	Mois de publication		
