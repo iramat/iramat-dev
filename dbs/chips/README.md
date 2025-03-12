@@ -46,7 +46,10 @@ style P2 fill:#02fa02
 
 ![#02fa02](https://placehold.co/15x15/02fa02/02fa02.png): fichiers Python
 
-
+* `ajoute à`:
+  1. vérification des données saisies dans l'XLSX (types attendus, etc.)
+  2. effectue un `INSERT INTO` dans la table chips avec auto-incrémentation des indenfiants ❓updates
+  3. retourne un rapport: identifiants, etc. ❓Zenodo
 
 #### _refbib
 
