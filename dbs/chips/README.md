@@ -26,14 +26,18 @@ La table `chips` est la table principale pour le stockage des données brutes et
 ```mermaid
 flowchart LR
     subgraph BDD_CHIPS
-      A[vue ICP-MS] -- lit --> tC[table chips]
-      A -- lit --> tI[table instrument]
+      tC[table chips] -- est lue par --> A[vue ICP-MS]
+      tI[table instrument] -- est lue par --> A[vue ICP-MS]
+    end
+    subgraph local
+      Xt[template XLSX];
+      U[un utilsateur];
     end
     A -- est lue par --> P1[script Python];
-    P1 -- export vers --> Xt[template XLSX];
-    Xt -- est rempli par --> U[un utilsateur]
-    U -- enregistre et soumet a --> P2[script Python]
-    P2 -- ajoute a --> tC
+    P1 -- export vers --> Xt;
+    Xt -- est rempli par --> U;
+    U -- enregistre et soumet a --> P2[script Python];
+    P2 -- ajoute a --> tC;
 
 click A "https://github.com/zoometh/iramat-test/tree/main/dbs#table_chimie"
 style P1 fill:#02fa02
