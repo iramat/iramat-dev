@@ -36,8 +36,8 @@ flowchart LR
     A -- est lue par --> P1[script Python];
     P1 -- export vers --> Xt;
     Xt -- est rempli par --> U;
-    U -- enregistre et soumet a --> P2[script Python];
-    P2 -- ajoute a --> tC;
+    U -- enregistre et soumet à --> P2[script Python];
+    P2 -- ajoute à --> tC;
 
 click A "https://github.com/zoometh/iramat-test/tree/main/dbs#table_chimie"
 style P1 fill:#02fa02
@@ -45,6 +45,8 @@ style P2 fill:#02fa02
 ```
 
 ![#02fa02](https://placehold.co/15x15/02fa02/02fa02.png): fichiers Python
+
+
 
 #### _refbib
 
