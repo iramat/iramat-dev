@@ -27,7 +27,7 @@ La table `chips` est la table principale pour le stockage des données brutes et
 flowchart LR
     subgraph BDD_CHIPS
       A[vue ICP-MS] -- lit --> tC[table chips]
-      A -- lit --> tC[table instrument]
+      A -- lit --> tI[table instrument]
     end
     A -- est lue par --> P1[script Python];
     P1 -- export vers --> Xt[template XLSX];
@@ -36,10 +36,11 @@ flowchart LR
     P2 -- ajoute a --> tC
 
 click A "https://github.com/zoometh/iramat-test/tree/main/dbs#table_chimie"
-style A fill:#FF8D1B
+style P1 fill:#02fa02
+style P2 fill:#02fa02
 ```
 
-![#FF8D1B](https://placehold.co/15x15/FF8D1B/FF8D1B.png): ma légende  
+![#02fa02](https://placehold.co/15x15/02fa02/02fa02.png): fichiers Python
 
 #### _refbib
 
