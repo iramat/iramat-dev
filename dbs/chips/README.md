@@ -33,18 +33,21 @@ flowchart LR
       Xt[template XLSX];
       U[un utilsateur];
     end
-    A -- est lue par --> P1[script Python];
+    subgraph Python
+      P1[fonction_1()];
+      P2[fonction_2()];
+    end
+    A -- est lue par --> P1;
     P1 -- export vers --> Xt;
     Xt -- est rempli par --> U;
-    U -- enregistre et soumet à --> P2[script Python];
+    U -- enregistre et soumet à --> P2;
     P2 -- ajoute à --> tC;
 
 click A "https://github.com/zoometh/iramat-test/tree/main/dbs#table_chimie"
-style P1 fill:#02fa02
-style P2 fill:#02fa02
+style Python fill:#02fa02
 ```
 
-![#02fa02](https://placehold.co/15x15/02fa02/02fa02.png): fichiers Python
+![#02fa02](https://placehold.co/15x15/02fa02/02fa02.png): fichiers/fonctions Python
 
 * `ajoute à`:
   1. vérification des données saisies dans l'XLSX (types attendus, etc.)
