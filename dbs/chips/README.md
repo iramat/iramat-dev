@@ -37,10 +37,17 @@ flowchart LR
       P1[fonction_1];
       P2[fonction_2];
     end
+    subgraph Plateforme
+      Pl1;
+      Pl2;
+    end
     A -- est lue par --> P1;
-    P1 -- export vers --> Xt;
+    P1 -- export vers --> Pl1;
+    Xt -- télécharge --> Pl1;
     Xt -- est rempli par --> U;
-    U -- enregistre et soumet à --> P2;
+    U -- enregistre et soumet à --> Pl2;
+    Pl2 --  est lue par --> P2;
+    P2 -- contrôle --> P2
     P2 -- ajoute à --> tC;
 
 click A "https://github.com/zoometh/iramat-test/tree/main/dbs#table_chimie"
