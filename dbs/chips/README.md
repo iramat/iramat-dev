@@ -34,8 +34,8 @@ flowchart LR
       U[un utilsateur];
     end
     subgraph Python
-      P1[fonction_1()];
-      P2[fonction_2()];
+      P1[fonction_1];
+      P2[fonction_2];
     end
     A -- est lue par --> P1;
     P1 -- export vers --> Xt;
