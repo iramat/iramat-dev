@@ -13,7 +13,7 @@ Deux possibilités: (1) une BDD ou (2) plusieurs BDDs
 ### Une seule BDD
 
 <p align="center">
-  <img src="_erd\bdd_uni.png" width="700">
+  <img src="_erd\bdd_uni.png" width="800">
   <br>
     MCD avec une seule BDD
 </p>
@@ -21,7 +21,7 @@ Deux possibilités: (1) une BDD ou (2) plusieurs BDDs
 ### Plusieurs BDDs
 
 <p align="center">
-  <img src="_erd\bdd_pluri.png" width="700">
+  <img src="_erd\bdd_pluri.png" width="800">
   <br>
     MCD avec une plusieurs BDDs
 </p>
