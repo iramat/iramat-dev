@@ -709,7 +709,7 @@ projet-période<y:LabelModel><y:ErdAttributesNodeLabelModel/></y:LabelModel><y:M
     <node id="n45">
       <data key="d6">
         <y:GenericNode configuration="com.yworks.sbgn.UnitOfInformation">
-          <y:Geometry height="177.71875" width="409.0" x="-103.25" y="219.26171250000033"/>
+          <y:Geometry height="177.71875" width="409.0" x="-165.69655000000125" y="249.26171250000033"/>
           <y:Fill hasColor="false" transparent="false"/>
           <y:BorderStyle color="#999999" type="line" width="1.0"/>
           <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="10" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" hasText="false" height="4.0" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="center" visible="true" width="4.0" x="202.5" y="86.859375">
@@ -726,7 +726,7 @@ projet-période<y:LabelModel><y:ErdAttributesNodeLabelModel/></y:LabelModel><y:M
     <node id="n46">
       <data key="d6">
         <y:GenericNode configuration="com.yworks.sbgn.UnitOfInformation">
-          <y:Geometry height="149.97108750000038" width="307.0" x="-1.25" y="51.16679375000015"/>
+          <y:Geometry height="149.97108750000038" width="307.0" x="-1.25" y="88.00937499999989"/>
           <y:Fill hasColor="false" transparent="false"/>
           <y:BorderStyle color="#999999" type="line" width="1.0"/>
           <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="10" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" hasText="false" height="4.0" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="center" visible="true" width="4.0" x="151.5" y="72.98554375000018">
