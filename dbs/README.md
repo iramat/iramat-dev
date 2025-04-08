@@ -1,7 +1,7 @@
 # Analyses physico-chimiques
 
 
-## Flux de travail
+## ~~Flux de travail~~
 
 ```mermaid
 flowchart LR
