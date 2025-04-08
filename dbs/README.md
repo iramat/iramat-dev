@@ -4,7 +4,7 @@
 Deux possibilités: (1) une BDD ou (2) plusieurs BDDs
 
 <p align="center">
-  <img src="_erd\legend.png" width="300">
+  <img src="_erd\legend.png" width="500">
   <br>
     Légende
 </p>
@@ -13,7 +13,7 @@ Deux possibilités: (1) une BDD ou (2) plusieurs BDDs
 ### Une seule BDD
 
 <p align="center">
-  <img src="_erd\bdd_uni.png" width="300">
+  <img src="_erd\bdd_uni.png" width="700">
   <br>
     MCD avec une seule BDD
 </p>
@@ -21,7 +21,7 @@ Deux possibilités: (1) une BDD ou (2) plusieurs BDDs
 ### Plusieurs BDDs
 
 <p align="center">
-  <img src="_erd\bdd_pluri.png" width="300">
+  <img src="_erd\bdd_pluri.png" width="700">
   <br>
     MCD avec une plusieurs BDDs
 </p>
