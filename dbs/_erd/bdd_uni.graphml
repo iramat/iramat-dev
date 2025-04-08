@@ -17,10 +17,10 @@
     <node id="n0">
       <data key="d6">
         <y:GenericNode configuration="com.yworks.sbgn.UnitOfInformation">
-          <y:Geometry height="366.75" width="511.2072838179279" x="-177.6723909329736" y="37.12225625000056"/>
+          <y:Geometry height="366.75" width="499.8322838179279" x="-177.6723909329736" y="37.12225625000056"/>
           <y:Fill hasColor="false" transparent="false"/>
           <y:BorderStyle color="#000000" type="line" width="1.0"/>
-          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="10" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" hasText="false" height="4.0" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="center" visible="true" width="4.0" x="253.60364190896394" y="181.375">
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="10" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" hasText="false" height="4.0" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="center" visible="true" width="4.0" x="247.91614190896394" y="181.375">
             <y:LabelModel>
               <y:SmartNodeLabelModel distance="4.0"/>
             </y:LabelModel>
@@ -34,7 +34,7 @@
     <node id="n1">
       <data key="d6">
         <y:GenericNode configuration="com.yworks.entityRelationship.big_entity">
-          <y:Geometry height="142.5" width="68.75" x="226.48720097598874" y="237.98046250000027"/>
+          <y:Geometry height="142.5" width="68.75" x="210.1722009759904" y="237.98046250000027"/>
           <y:Fill color="#E8EEF7" color2="#B7C9E3" transparent="false"/>
           <y:BorderStyle color="#000000" type="line" width="1.0"/>
           <y:NodeLabel alignment="center" autoSizePolicy="content" backgroundColor="#B7C9E3" configuration="com.yworks.entityRelationship.label.name" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasLineColor="false" height="18.701171875" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="t" textColor="#000000" verticalTextPosition="bottom" visible="true" width="67.36328125" x="0.693359375" xml:space="preserve" y="4.0">ANALYSES</y:NodeLabel>
@@ -54,7 +54,7 @@ Fe
     <node id="n2">
       <data key="d6">
         <y:GenericNode configuration="com.yworks.entityRelationship.big_entity">
-          <y:Geometry height="159.5" width="107.32030097599016" x="43.41689999999869" y="229.48046250000027"/>
+          <y:Geometry height="159.5" width="107.32030097599016" x="47.58984951200492" y="229.48046250000027"/>
           <y:Fill color="#E8EEF7" color2="#B7C9E3" transparent="false"/>
           <y:BorderStyle color="#000000" type="line" width="1.0"/>
           <y:NodeLabel alignment="center" autoSizePolicy="content" backgroundColor="#B7C9E3" configuration="com.yworks.entityRelationship.label.name" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasLineColor="false" height="18.701171875" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="t" textColor="#000000" verticalTextPosition="bottom" visible="true" width="50.67578125" x="28.322259862995082" xml:space="preserve" y="4.0">OBJETS</y:NodeLabel>
@@ -201,7 +201,7 @@ Fe
     <node id="n11">
       <data key="d6">
         <y:GenericNode configuration="com.yworks.sbgn.Tag">
-          <y:Geometry height="30.0" width="27.360000000000014" x="6.82999999999879" y="229.48046250000027"/>
+          <y:Geometry height="30.0" width="27.360000000000014" x="13.82999999999879" y="244.48046250000027"/>
           <y:Fill color="#FFFFFF" transparent="false"/>
           <y:BorderStyle color="#000000" type="line" width="1.0"/>
           <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="18.701171875" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="center" visible="true" width="13.333984375" x="7.013007812500007" xml:space="preserve" y="5.6494140625">O<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel><y:ModelParameter><y:SmartNodeLabelModelParameter labelRatioX="0.0" labelRatioY="0.0" nodeRatioX="0.0" nodeRatioY="0.0" offsetX="0.0" offsetY="0.0" upX="0.0" upY="-1.0"/></y:ModelParameter></y:NodeLabel>
@@ -214,7 +214,7 @@ Fe
     <node id="n12">
       <data key="d6">
         <y:GenericNode configuration="com.yworks.sbgn.Tag">
-          <y:Geometry height="30.0" width="27.360000000000014" x="190.7972009759904" y="229.48046250000027"/>
+          <y:Geometry height="30.0" width="27.360000000000014" x="177.0186757319919" y="243.48046250000027"/>
           <y:Fill color="#FFFFFF" transparent="false"/>
           <y:BorderStyle color="#000000" type="line" width="1.0"/>
           <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="18.701171875" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="center" visible="true" width="12.00390625" x="7.678046875000007" xml:space="preserve" y="5.6494140625">A<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel><y:ModelParameter><y:SmartNodeLabelModelParameter labelRatioX="0.0" labelRatioY="0.0" nodeRatioX="0.0" nodeRatioY="0.0" offsetX="0.0" offsetY="0.0" upX="0.0" upY="-1.0"/></y:ModelParameter></y:NodeLabel>
@@ -709,7 +709,7 @@ projet-période<y:LabelModel><y:ErdAttributesNodeLabelModel/></y:LabelModel><y:M
     <node id="n45">
       <data key="d6">
         <y:GenericNode configuration="com.yworks.sbgn.UnitOfInformation">
-          <y:Geometry height="177.71875" width="409.0" x="-165.69655000000125" y="249.26171250000033"/>
+          <y:Geometry height="177.71875" width="409.0" x="-103.25" y="219.26171250000033"/>
           <y:Fill hasColor="false" transparent="false"/>
           <y:BorderStyle color="#999999" type="line" width="1.0"/>
           <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="10" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" hasText="false" height="4.0" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="center" visible="true" width="4.0" x="202.5" y="86.859375">
@@ -726,7 +726,7 @@ projet-période<y:LabelModel><y:ErdAttributesNodeLabelModel/></y:LabelModel><y:M
     <node id="n46">
       <data key="d6">
         <y:GenericNode configuration="com.yworks.sbgn.UnitOfInformation">
-          <y:Geometry height="149.97108750000038" width="307.0" x="-1.25" y="88.00937499999989"/>
+          <y:Geometry height="149.97108750000038" width="307.0" x="-1.25" y="50.27616875000015"/>
           <y:Fill hasColor="false" transparent="false"/>
           <y:BorderStyle color="#999999" type="line" width="1.0"/>
           <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="10" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" hasText="false" height="4.0" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="center" visible="true" width="4.0" x="151.5" y="72.98554375000018">
@@ -854,7 +854,9 @@ projet-période<y:LabelModel><y:ErdAttributesNodeLabelModel/></y:LabelModel><y:M
     <edge id="e2" source="n2" target="n43">
       <data key="d10">
         <y:PolyLineEdge>
-          <y:Path sx="-5.464849512004633" sy="-69.0" tx="-23.71840097598954" ty="29.24149600000018"/>
+          <y:Path sx="-5.464849512004633" sy="-69.0" tx="-23.71840097598954" ty="29.24149600000018">
+            <y:Point x="-117.70279902400921" y="240.23046250000027"/>
+          </y:Path>
           <y:LineStyle color="#000000" type="line" width="1.0"/>
           <y:Arrows source="none" target="standard"/>
           <y:BendStyle smoothed="false"/>
