@@ -4,7 +4,7 @@
 Deux possibilités: (1) une BDD ou (2) plusieurs BDDs
 
 <p align="center">
-  <img src="_erd\legend.png" width="500">
+  <img src="_erd\legend.png" width="800">
   <br>
     Légende
 </p>
