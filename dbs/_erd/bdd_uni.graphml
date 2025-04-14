@@ -355,7 +355,7 @@ Fe
     <node id="n21">
       <data key="d6">
         <y:GenericNode configuration="com.yworks.sbgn.UnitOfInformation">
-          <y:Geometry height="151.36187500000003" width="445.0" x="210.1722009759904" y="-194.50875000000005"/>
+          <y:Geometry height="151.36187500000003" width="445.0" x="210.17220097599034" y="-197.76531250000005"/>
           <y:Fill hasColor="false" transparent="false"/>
           <y:BorderStyle color="#000000" type="line" width="1.0"/>
           <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="10" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" hasText="false" height="4.0" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="center" visible="true" width="4.0" x="220.5" y="73.68093750000001">
@@ -729,7 +729,7 @@ projet-période<y:LabelModel><y:ErdAttributesNodeLabelModel/></y:LabelModel><y:M
           <y:Geometry height="149.97108750000038" width="307.0" x="-1.25" y="50.27616875000015"/>
           <y:Fill hasColor="false" transparent="false"/>
           <y:BorderStyle color="#999999" type="line" width="1.0"/>
-          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="10" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" hasText="false" height="4.0" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="center" visible="true" width="4.0" x="151.5" y="72.98554375000018">
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="10" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" hasText="false" height="4.0" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="center" visible="true" width="4.0" x="151.5" y="72.98554375000019">
             <y:LabelModel>
               <y:SmartNodeLabelModel distance="4.0"/>
             </y:LabelModel>
@@ -741,7 +741,6 @@ projet-période<y:LabelModel><y:ErdAttributesNodeLabelModel/></y:LabelModel><y:M
       </data>
     </node>
     <node id="n47">
-      <data key="d5"/>
       <data key="d6">
         <y:GenericNode configuration="com.yworks.sbgn.Operator">
           <y:Geometry height="30.0" width="30.0" x="57.72690000000034" y="-147.00875000000005"/>
@@ -752,7 +751,6 @@ projet-période<y:LabelModel><y:ErdAttributesNodeLabelModel/></y:LabelModel><y:M
       </data>
     </node>
     <node id="n48">
-      <data key="d5"/>
       <data key="d6">
         <y:GenericNode configuration="com.yworks.sbgn.Operator">
           <y:Geometry height="30.0" width="30.0" x="251.64179288495416" y="-147.00875000000005"/>
@@ -763,7 +761,6 @@ projet-période<y:LabelModel><y:ErdAttributesNodeLabelModel/></y:LabelModel><y:M
       </data>
     </node>
     <node id="n49">
-      <data key="d5"/>
       <data key="d6">
         <y:GenericNode configuration="com.yworks.sbgn.Operator">
           <y:Geometry height="30.0" width="30.0" x="507.62912524909996" y="-147.00875000000005"/>
@@ -774,7 +771,6 @@ projet-période<y:LabelModel><y:ErdAttributesNodeLabelModel/></y:LabelModel><y:M
       </data>
     </node>
     <node id="n50">
-      <data key="d5"/>
       <data key="d6">
         <y:GenericNode configuration="com.yworks.sbgn.Operator">
           <y:Geometry height="30.0" width="30.0" x="536.4538267028815" y="79.9824999999999"/>
@@ -785,7 +781,6 @@ projet-période<y:LabelModel><y:ErdAttributesNodeLabelModel/></y:LabelModel><y:M
       </data>
     </node>
     <node id="n51">
-      <data key="d5"/>
       <data key="d6">
         <y:GenericNode configuration="com.yworks.sbgn.Operator">
           <y:Geometry height="30.0" width="30.0" x="615.8014562500005" y="79.9649999999998"/>
@@ -796,7 +791,6 @@ projet-période<y:LabelModel><y:ErdAttributesNodeLabelModel/></y:LabelModel><y:M
       </data>
     </node>
     <node id="n52">
-      <data key="d5"/>
       <data key="d6">
         <y:GenericNode configuration="com.yworks.sbgn.Operator">
           <y:Geometry height="30.0" width="30.0" x="741.1445819112148" y="79.9474999999997"/>
@@ -820,7 +814,6 @@ projet-période<y:LabelModel><y:ErdAttributesNodeLabelModel/></y:LabelModel><y:M
       </data>
     </node>
     <node id="n54">
-      <data key="d5"/>
       <data key="d6">
         <y:ShapeNode>
           <y:Geometry height="40.0" width="58.50005340576172" x="746.618213351441" y="287.3710875000003"/>
@@ -991,7 +984,6 @@ projet-période<y:LabelModel><y:ErdAttributesNodeLabelModel/></y:LabelModel><y:M
       </data>
     </edge>
     <edge id="e15" source="n30" target="n53">
-      <data key="d9"/>
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
@@ -1002,7 +994,6 @@ projet-période<y:LabelModel><y:ErdAttributesNodeLabelModel/></y:LabelModel><y:M
       </data>
     </edge>
     <edge id="e16" source="n53" target="n54">
-      <data key="d9"/>
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
