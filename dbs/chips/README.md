@@ -10,6 +10,7 @@
 voir [Python Jupyter NB](https://colab.research.google.com/drive/1EHUO9JaBNLIyNdiHLCTtPAODgFhEvgcq#scrollTo=umLAT9DA2efl)
 
 ## BBD
+> Postgres 11, PostGis v2.5
 
 BDD Postgres hebergée sur les serveurs d'Huma-Num
 
@@ -20,6 +21,7 @@ BDD Postgres hebergée sur les serveurs d'Huma-Num
 La table `chips` est la table principale pour le stockage des données brutes et traitées des analyses physico-chimiques.
 
 * ajouter
+
 
 ## Flux de travail
 
