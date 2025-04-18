@@ -42,7 +42,7 @@ df
 # %%
 import pandas
 
-df.to_csv(root + 'dbs/chips/data/reference_data/chips_template_fields.csv', sep='\t', index=False)
+df.to_csv(root + 'dbs/chips/data/reference_data/chips_template_fields.tsv', sep='\t', index=False)
 
 
 

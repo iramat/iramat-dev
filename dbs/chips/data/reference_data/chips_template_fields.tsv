@@ -1,98 +1,98 @@
-,column_name,data_type
-0,id_chips,integer
-1,id_ech,integer
-2,id_machinem,integer
-3,id_machinet,integer
-4,o,numeric
-5,na,numeric
-6,mg,numeric
-7,al,numeric
-8,si,numeric
-9,p,numeric
-10,s,numeric
-11,cl,numeric
-12,k,numeric
-13,ca,numeric
-14,mn,numeric
-15,fe,numeric
-16,perte_feu,numeric
-17,arsenic,numeric
-18,ba,numeric
-19,be,numeric
-20,bi,numeric
-21,cd,numeric
-22,ce,numeric
-23,co,numeric
-24,cr,numeric
-25,cs,numeric
-26,cu,numeric
-27,dy,numeric
-28,er,numeric
-29,eu,numeric
-30,ga,numeric
-31,gd,numeric
-32,ge,numeric
-33,hf,numeric
-34,ho,numeric
-35,indium,numeric
-36,la,numeric
-37,lu,numeric
-38,mo,numeric
-39,nb,numeric
-40,nd,numeric
-41,ni,numeric
-42,pb,numeric
-43,pd,numeric
-44,pr,numeric
-45,rb,numeric
-46,sb,numeric
-47,sc,numeric
-48,sm,numeric
-49,sn,numeric
-50,sr,numeric
-51,ta,numeric
-52,tb,numeric
-53,th,numeric
-54,ti,numeric
-55,tm,numeric
-56,u,numeric
-57,v,numeric
-58,w,numeric
-59,y,numeric
-60,yb,numeric
-61,zn,numeric
-62,zr,numeric
-63,os187_os188,numeric
-64,open,boolean
-65,delta57fe,numeric
-66,delta56fe,numeric
-67,id_machinei,integer
-68,n_crpg,integer
-69,bibreference,integer
-70,os187_os186,numeric
-71,os_ppt,numeric
-72,ag,numeric
-73,sr87_sr86,numeric
-74,li,numeric
-75,tl,numeric
-76,ru,numeric
-77,re,numeric
-78,se,numeric
-79,te,numeric
-80,carbon,numeric
-81,h,numeric
-82,he,numeric
-83,b,numeric
-84,n,numeric
-85,f,numeric
-86,ar,numeric
-87,br,numeric
-88,kr,numeric
-89,tc,numeric
-90,rh,numeric
-91,i,numeric
-92,xe,numeric
-93,ir,numeric
-94,pt,numeric
-95,au,numeric
-96,hg,numeric
+column_name	data_type
+id_chips	integer
+id_ech	integer
+id_machinem	integer
+id_machinet	integer
+o	numeric
+na	numeric
+mg	numeric
+al	numeric
+si	numeric
+p	numeric
+s	numeric
+cl	numeric
+k	numeric
+ca	numeric
+mn	numeric
+fe	numeric
+perte_feu	numeric
+arsenic	numeric
+ba	numeric
+be	numeric
+bi	numeric
+cd	numeric
+ce	numeric
+co	numeric
+cr	numeric
+cs	numeric
+cu	numeric
+dy	numeric
+er	numeric
+eu	numeric
+ga	numeric
+gd	numeric
+ge	numeric
+hf	numeric
+ho	numeric
+indium	numeric
+la	numeric
+lu	numeric
+mo	numeric
+nb	numeric
+nd	numeric
+ni	numeric
+pb	numeric
+pd	numeric
+pr	numeric
+rb	numeric
+sb	numeric
+sc	numeric
+sm	numeric
+sn	numeric
+sr	numeric
+ta	numeric
+tb	numeric
+th	numeric
+ti	numeric
+tm	numeric
+u	numeric
+v	numeric
+w	numeric
+y	numeric
+yb	numeric
+zn	numeric
+zr	numeric
+os187_os188	numeric
+open	boolean
+delta57fe	numeric
+delta56fe	numeric
+id_machinei	integer
+n_crpg	integer
+bibreference	integer
+os187_os186	numeric
+os_ppt	numeric
+ag	numeric
+sr87_sr86	numeric
+li	numeric
+tl	numeric
+ru	numeric
+re	numeric
+se	numeric
+te	numeric
+carbon	numeric
+h	numeric
+he	numeric
+b	numeric
+n	numeric
+f	numeric
+ar	numeric
+br	numeric
+kr	numeric
+tc	numeric
+rh	numeric
+i	numeric
+xe	numeric
+ir	numeric
+pt	numeric
+au	numeric
+hg	numeric
