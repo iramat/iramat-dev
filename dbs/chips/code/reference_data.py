@@ -3,12 +3,14 @@
 # %%
 
 import requests 
-import tempfile
-import importlib.util
+# import tempfile
+# import importlib.util
 import os
 
 url = 'https://raw.githubusercontent.com/zoometh/iramat-test-functions/main/chips.py'
 response = requests.get(url)
+
+# %%
 
 # with open('bdd.py', 'w', encoding='utf-8') as f:
 #     f.write(response.text)
@@ -18,19 +20,21 @@ with tempfile.NamedTemporaryFile(suffix=".py", delete=False) as tmp_file:
     tmp_file_path = tmp_file.name
 
 # Import the module
-module_name = "bdd"
+module_name = "ch"
 spec = importlib.util.spec_from_file_location(module_name, tmp_file_path)
 module = importlib.util.module_from_spec(spec)
 spec.loader.exec_module(module)
 
-
 # %%
 
-import bdd
+import ch
 
 # Call a function from it
-bdd.db_connect()
+engine = ch.db_connect("C:/Users/TH282424/Rprojects/iramat-test/credentials/pg_credentials.json")
 
 # %%
-
-engine = ch.db_connect("pg_credentials.json")
+my_table = 'dataset_gzabinski1'
+query = f"SELECT * FROM {my_table}"
+df = ch.db_query(query=query, engine=engine)
+# head
+df.head(10)
