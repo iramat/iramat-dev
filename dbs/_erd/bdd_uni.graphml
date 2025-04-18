@@ -870,7 +870,7 @@ projet-période<y:LabelModel><y:ErdAttributesNodeLabelModel/></y:LabelModel><y:M
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
-          <y:LineStyle color="#000000" type="line" width="1.0"/>
+          <y:LineStyle color="#000000" type="line" width="2.0"/>
           <y:Arrows source="none" target="standard"/>
           <y:BendStyle smoothed="false"/>
         </y:PolyLineEdge>
@@ -934,7 +934,7 @@ projet-période<y:LabelModel><y:ErdAttributesNodeLabelModel/></y:LabelModel><y:M
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
-          <y:LineStyle color="#000000" type="line" width="1.0"/>
+          <y:LineStyle color="#000000" type="line" width="2.0"/>
           <y:Arrows source="none" target="standard"/>
           <y:BendStyle smoothed="false"/>
         </y:PolyLineEdge>
@@ -944,7 +944,7 @@ projet-période<y:LabelModel><y:ErdAttributesNodeLabelModel/></y:LabelModel><y:M
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
-          <y:LineStyle color="#000000" type="line" width="1.0"/>
+          <y:LineStyle color="#000000" type="line" width="2.0"/>
           <y:Arrows source="none" target="standard"/>
           <y:BendStyle smoothed="false"/>
         </y:PolyLineEdge>
@@ -957,7 +957,7 @@ projet-période<y:LabelModel><y:ErdAttributesNodeLabelModel/></y:LabelModel><y:M
             <y:Point x="366.866" y="4.120562759400229"/>
             <y:Point x="366.866" y="249.99725625000053"/>
           </y:Path>
-          <y:LineStyle color="#000000" type="line" width="1.0"/>
+          <y:LineStyle color="#000000" type="line" width="2.0"/>
           <y:Arrows source="none" target="standard"/>
           <y:BendStyle smoothed="false"/>
         </y:PolyLineEdge>
@@ -977,7 +977,7 @@ projet-période<y:LabelModel><y:ErdAttributesNodeLabelModel/></y:LabelModel><y:M
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="-69.62999999999954" sy="-52.28177474060011" tx="0.0" ty="0.0"/>
-          <y:LineStyle color="#000000" type="line" width="1.0"/>
+          <y:LineStyle color="#000000" type="line" width="2.0"/>
           <y:Arrows source="none" target="standard"/>
           <y:BendStyle smoothed="false"/>
         </y:PolyLineEdge>
