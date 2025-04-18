@@ -3,18 +3,16 @@
 # %%
 
 import requests 
-# import tempfile
-# import importlib.util
+import tempfile
+import importlib.util
 import os
+
+root = 'C:/Users/TH282424/Rprojects/iramat-test/'
 
 url = 'https://raw.githubusercontent.com/zoometh/iramat-test-functions/main/chips.py'
 response = requests.get(url)
 
 # %%
-
-# with open('bdd.py', 'w', encoding='utf-8') as f:
-#     f.write(response.text)
-# Save to a temporary file
 with tempfile.NamedTemporaryFile(suffix=".py", delete=False) as tmp_file:
     tmp_file.write(response.content)
     tmp_file_path = tmp_file.name
@@ -22,19 +20,30 @@ with tempfile.NamedTemporaryFile(suffix=".py", delete=False) as tmp_file:
 # Import the module
 module_name = "ch"
 spec = importlib.util.spec_from_file_location(module_name, tmp_file_path)
-module = importlib.util.module_from_spec(spec)
-spec.loader.exec_module(module)
+ch = importlib.util.module_from_spec(spec)
+spec.loader.exec_module(ch)
 
 # %%
-
-import ch
-
 # Call a function from it
-engine = ch.db_connect("C:/Users/TH282424/Rprojects/iramat-test/credentials/pg_credentials.json")
+engine = ch.db_connect(root + "credentials/pg_credentials.json")
 
 # %%
-my_table = 'dataset_gzabinski1'
-query = f"SELECT * FROM {my_table}"
+my_schema = 'public'
+my_table = 'chips'
+query = f"""
+SELECT column_name, data_type
+  FROM information_schema.columns
+ WHERE table_schema = '{my_schema}'
+   AND table_name   = '{my_table}'
+     ;
+"""
 df = ch.db_query(query=query, engine=engine)
-# head
-df.head(10)
+df
+# %%
+import pandas
+
+df.to_csv(root + 'dbs/chips/data/reference_data/chips_template_fields.csv', sep='\t', index=False)
+
+
+
+# %%
