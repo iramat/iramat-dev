@@ -138,7 +138,34 @@ def db_upsert(data_entry=None, engine=None, verbose = True):
   import pandas as pd
 
   query = """
-        My SQL Query
+ CREATE TABLE i as
+TABLE echantillons with no data
+;
+\copy i from /Users/Public/import_tableEchantillons250308.csv DELIMITER ';' ENCODING 'UTF-8' CSV HEADER
+;
+INSERT INTO echantillons
+SELECT * FROM i
+ON CONFLICT (id_ech) DO UPDATE 
+	SET (id_site, id_typo, nom_ech, referent, type_metal, bibreference, bibreference2, commentaire) = (excluded.id_site, excluded.id_typo, excluded.nom_ech, excluded.referent, excluded.type_metal, excluded.bibreference, excluded.bibreference2, excluded.commentaire)
+	WHERE echantillons.id_site IS DISTINCT FROM excluded.id_site
+	OR echantillons.id_site IS NULL 
+	OR echantillons.id_typo IS DISTINCT FROM excluded.id_typo
+	OR echantillons.id_typo IS NULL
+	OR echantillons.nom_ech IS DISTINCT FROM excluded.nom_ech
+	OR echantillons.nom_ech IS NULL 
+	OR echantillons.referent IS DISTINCT FROM excluded.referent
+	OR echantillons.referent IS NULL 
+	OR echantillons.type_metal IS DISTINCT FROM excluded.type_metal
+	OR echantillons.type_metal IS NULL
+	OR echantillons.bibreference IS DISTINCT FROM excluded.bibreference
+	OR echantillons.bibreference IS NULL
+	OR echantillons.bibreference2 IS DISTINCT FROM excluded.bibreference2
+	OR echantillons.bibreference2 IS NULL
+	OR echantillons.commentaire IS DISTINCT FROM excluded.commentaire
+	OR echantillons.commentaire IS NULL
+;
+DROP TABLE i
+;
   """
 
   df = pd.read_sql(query, engine)
