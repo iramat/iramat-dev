@@ -26,7 +26,12 @@ Deux possibilités: (1) une BDD ou (2) plusieurs BDDs
     MCD avec une plusieurs BDDs
 </p>
 
+## Développement
 
+```mermaid
+flowchart LR
+    A[BDD-Excel flux] ---> B[Interface Utilisateur] ---> C[Executable];
+```
 
 ## Lexique
 
