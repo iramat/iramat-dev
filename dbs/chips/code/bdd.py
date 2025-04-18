@@ -171,7 +171,7 @@ def db_upsert(data_entry=None, table=None, engine=None, verbose = True):
       DROP TABLE i
       ;
       """
-  df = pd.read_sql(query, engine)
 
-  
+
+  df = pd.read_sql(query, engine)
   return(df)
