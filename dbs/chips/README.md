@@ -20,7 +20,7 @@ BDD Postgres hebergée sur les serveurs d'Huma-Num
 
 La table `chips` est la table principale pour le stockage des données brutes et traitées des analyses physico-chimiques.
 
-* ajouter
+* description des champs: [chips_template_fields.tsv](https://github.com/zoometh/iramat-test/blob/main/dbs/chips/data/reference_data/chips_template_fields.tsv)
 
 
 ## Flux de travail

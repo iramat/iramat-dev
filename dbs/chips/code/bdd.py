@@ -126,3 +126,20 @@ def zn_metadata(meta_data = None, verbose = True):
       }
   }
   return(metadata)
+
+def db_upsert(data_entry=None, engine=None, verbose = True):
+  """
+  Read a CSV file and Insert or Update (Upsert) data into the 'chips' table
+
+  :param data_entry: a CSV file
+  :param engine: a Postgres connector created with the db_connect function
+  :param verbose: verbose
+  """
+  import pandas as pd
+
+  query = """
+        My SQL Query
+  """
+
+  df = pd.read_sql(query, engine)
+  return(df)
