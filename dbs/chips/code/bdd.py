@@ -131,6 +131,8 @@ def db_upsert(data_entry=None, engine=None, verbose = True):
   """
   Read a CSV file and Insert or Update (Upsert) data into the 'chips' table
 
+  Lorem ispum (doc SQL)
+
   :param data_entry: a CSV file
   :param engine: a Postgres connector created with the db_connect function
   :param verbose: verbose
