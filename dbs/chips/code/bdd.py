@@ -140,6 +140,48 @@ def db_upsert(data_entry=None, table=None, engine=None, verbose = True):
   """
   import pandas as pd
 
+  if table == "sites":
+      query = """
+      CREATE TABLE i as
+      TABLE sites with no data
+      ;
+      \copy i from /Users/Public/import_tableSites241021.csv DELIMITER ';' ENCODING 'WIN1252' CSV HEADER
+      ;
+      INSERT INTO sites 
+      SELECT * FROM i
+      ON CONFLICT (id_site) DO UPDATE 
+        SET (id_localite, nom_site, centroid, srid, longitude, latitude, date_debut, date_fin, doute_date, key_periodo, key_periodo2) = (excluded.id_localite, excluded.nom_site, excluded.centroid, excluded.srid, excluded.longitude, excluded.latitude, excluded.date_debut, excluded.date_fin, excluded.doute_date, excluded.key_periodo, excluded.key_periodo2)
+        WHERE sites.id_localite IS DISTINCT FROM excluded.id_localite
+        OR sites.id_localite IS NULL
+        OR sites.nom_site IS DISTINCT FROM excluded.nom_site
+        OR sites.nom_site IS NULL
+        OR sites.centroid IS DISTINCT FROM excluded.centroid 
+        OR sites.centroid IS NULL 
+        OR sites.srid IS DISTINCT FROM excluded.srid
+        OR sites.srid IS NULL
+        OR sites.longitude IS DISTINCT FROM excluded.longitude
+        OR sites.longitude IS NULL 
+        OR sites.latitude IS DISTINCT FROM excluded.latitude 	
+        OR sites.latitude IS NULL
+        OR sites.date_debut IS DISTINCT FROM excluded.date_debut
+        OR sites.date_debut IS NULL
+        OR sites.date_fin IS DISTINCT FROM excluded.date_fin
+        OR sites.date_fin IS NULL
+        OR sites.doute_date IS DISTINCT FROM excluded.doute_date
+        OR sites.doute_date IS NULL
+        OR sites.key_periodo IS DISTINCT FROM excluded.key_periodo
+        OR sites.key_periodo IS NULL
+        OR sites.key_periodo2 IS DISTINCT FROM excluded.key_periodo2
+        OR sites.key_periodo2 IS NULL
+      ;
+      ;
+      UPDATE sites
+      SET points = ST_SetSRID(ST_MakePoint(longitude, latitude),4326)
+      WHERE srid = '4326'
+      ;
+      DROP TABLE i
+      ;
+      """
   if table == "echantillons":
       query = """
       CREATE TABLE i as
@@ -171,7 +213,333 @@ def db_upsert(data_entry=None, table=None, engine=None, verbose = True):
       DROP TABLE i
       ;
       """
-
+  if table == "chips":
+      query = """
+      CREATE TABLE i as
+      TABLE chips with no data
+      ;
+      \copy i from /Users/Public/import_tableChips241021.csv DELIMITER ';' ENCODING 'WIN1252' CSV HEADER
+      ;
+      INSERT INTO chips 
+      SELECT * FROM i
+      ON CONFLICT (id_chips) DO UPDATE 
+        SET (id_ech, id_machinem, id_machinet, o, na, mg, al, si, p, s, cl, k, ca, mn, fe, perte_feu, arsenic, ba, be, bi, cd, ce, co, cr, cs, cu, dy, er, eu, ga, gd, ge, hf, ho, indium, la, lu, mo, nb, nd, ni, pb, pd, pr, rb, sb, sc, sm, sn, sr, ta, tb, th, ti, tm, u, v, w, y, yb, zn, zr, os187_os188, open, delta57fe, delta56fe, id_machinei, n_crpg, bibreference, os187_os186, os_ppt, ag, sr87_sr86, li, tl, ru, re, se, te, carbon, h, he, b, n, f, ar, br, kr, tc, rh, i, xe, ir, pt, au, hg) = (excluded.id_ech, excluded.id_machinem, excluded.id_machinet, excluded.o, excluded.na, excluded.mg, excluded.al, excluded.si, excluded.p, excluded.s, excluded.cl, excluded.k, excluded.ca, excluded.mn, excluded.fe, excluded.perte_feu, excluded.arsenic, excluded.ba, excluded.be, excluded.bi, excluded.cd, excluded.ce, excluded.co, excluded.cr, excluded.cs, excluded.cu, excluded.dy, excluded.er, excluded.eu, excluded.ga, excluded.gd, excluded.ge, excluded.hf, excluded.ho, excluded.indium, excluded.la, excluded.lu, excluded.mo, excluded.nb, excluded.nd, excluded.ni, excluded.pb, excluded.pd, excluded.pr, excluded.rb, excluded.sb, excluded.sc, excluded.sm, excluded.sn, excluded.sr, excluded.ta, excluded.tb, excluded.th, excluded.ti, excluded.tm, excluded.u, excluded.v, excluded.w, excluded.y, excluded.yb, excluded.zn, excluded.zr, excluded.os187_os188, excluded.open, excluded.delta57fe, excluded.delta56fe, excluded.id_machinei, excluded.n_crpg, excluded.bibreference, excluded.os187_os186, excluded.os_ppt, excluded.ag, excluded.sr87_sr86, excluded.li, excluded.tl, excluded.ru, excluded.re, excluded.se, excluded.te, excluded.carbon, excluded.h, excluded.he, excluded.b, excluded.n, excluded.f, excluded.ar, excluded.br, excluded.kr, excluded.tc, excluded.rh, excluded.i, excluded.xe, excluded.ir, excluded.pt, excluded.au, excluded.hg)
+        WHERE chips.id_ech IS DISTINCT FROM excluded.id_ech
+        OR chips.id_ech IS NULL 
+        OR chips.id_machinem IS DISTINCT FROM excluded.id_machinem
+        OR chips.id_machinem IS NULL
+        OR chips.id_machinet IS DISTINCT FROM excluded.id_machinet
+        OR chips.id_machinet IS NULL 
+        OR chips.o IS DISTINCT FROM excluded.o 	
+        OR chips.o IS NULL
+        OR chips.na IS DISTINCT FROM excluded.na
+        OR chips.na IS NULL
+        OR chips.mg IS DISTINCT FROM excluded.mg
+        OR chips.mg IS NULL
+        OR chips.al IS DISTINCT FROM excluded.al
+        OR chips.al IS NULL
+        OR chips.si IS DISTINCT FROM excluded.si
+        OR chips.si IS NULL
+        OR chips.p IS DISTINCT FROM excluded.p
+        OR chips.p IS NULL
+        OR chips.s IS DISTINCT FROM excluded.s
+        OR chips.s IS NULL
+        OR chips.cl IS DISTINCT FROM excluded.cl
+        OR chips.cl IS NULL
+        OR chips.k IS DISTINCT FROM excluded.k
+        OR chips.k IS NULL
+        OR chips.ca IS DISTINCT FROM excluded.ca
+        OR chips.ca IS NULL
+        OR chips.mn IS DISTINCT FROM excluded.mn
+        OR chips.mn IS NULL
+        OR chips.fe IS DISTINCT FROM excluded.fe
+        OR chips.fe IS NULL
+        OR chips.perte_feu IS DISTINCT FROM excluded.perte_feu
+        OR chips.perte_feu IS NULL
+        OR chips.arsenic IS DISTINCT FROM excluded.arsenic
+        OR chips.arsenic IS NULL
+        OR chips.ba IS DISTINCT FROM excluded.ba
+        OR chips.ba IS NULL
+        OR chips.be IS DISTINCT FROM excluded.be
+        OR chips.be IS NULL
+        OR chips.bi IS DISTINCT FROM excluded.bi
+        OR chips.bi IS NULL
+        OR chips.cd IS DISTINCT FROM excluded.cd
+        OR chips.cd IS NULL
+        OR chips.ce IS DISTINCT FROM excluded.ce
+        OR chips.ce IS NULL
+        OR chips.co IS DISTINCT FROM excluded.co
+        OR chips.co IS NULL
+        OR chips.cr IS DISTINCT FROM excluded.cr
+        OR chips.cr IS NULL
+        OR chips.cs IS DISTINCT FROM excluded.cs
+        OR chips.cs IS NULL
+        OR chips.cu IS DISTINCT FROM excluded.cu
+        OR chips.cu IS NULL
+        OR chips.dy IS DISTINCT FROM excluded.dy
+        OR chips.dy IS NULL
+        OR chips.er IS DISTINCT FROM excluded.er
+        OR chips.er IS NULL
+        OR chips.eu IS DISTINCT FROM excluded.eu
+        OR chips.eu IS NULL
+        OR chips.ga IS DISTINCT FROM excluded.ga
+        OR chips.ga IS NULL
+        OR chips.gd IS DISTINCT FROM excluded.gd
+        OR chips.gd IS NULL
+        OR chips.ge IS DISTINCT FROM excluded.ge
+        OR chips.ge IS NULL
+        OR chips.hf IS DISTINCT FROM excluded.hf
+        OR chips.hf IS NULL
+        OR chips.ho IS DISTINCT FROM excluded.ho
+        OR chips.ho IS NULL
+        OR chips.indium IS DISTINCT FROM excluded.indium
+        OR chips.indium IS NULL
+        OR chips.la IS DISTINCT FROM excluded.la
+        OR chips.la IS NULL
+        OR chips.lu IS DISTINCT FROM excluded.lu
+        OR chips.lu IS NULL
+        OR chips.mo IS DISTINCT FROM excluded.mo
+        OR chips.mo IS NULL
+        OR chips.nb IS DISTINCT FROM excluded.nb
+        OR chips.nb IS NULL
+        OR chips.nd IS DISTINCT FROM excluded.nd
+        OR chips.nd IS NULL
+        OR chips.ni IS DISTINCT FROM excluded.ni
+        OR chips.ni IS NULL
+        OR chips.pb IS DISTINCT FROM excluded.pb
+        OR chips.pb IS NULL
+        OR chips.pd IS DISTINCT FROM excluded.pd
+        OR chips.pd IS NULL
+        OR chips.pr IS DISTINCT FROM excluded.pr
+        OR chips.pr IS NULL
+        OR chips.rb IS DISTINCT FROM excluded.rb
+        OR chips.rb IS NULL
+        OR chips.sb IS DISTINCT FROM excluded.sb
+        OR chips.sb IS NULL
+        OR chips.sc IS DISTINCT FROM excluded.sc
+        OR chips.sc IS NULL
+        OR chips.sm IS DISTINCT FROM excluded.sm
+        OR chips.sm IS NULL
+        OR chips.sn IS DISTINCT FROM excluded.sn
+        OR chips.sn IS NULL
+        OR chips.sr IS DISTINCT FROM excluded.sr
+        OR chips.sr IS NULL
+        OR chips.ta IS DISTINCT FROM excluded.ta
+        OR chips.ta IS NULL
+        OR chips.tb IS DISTINCT FROM excluded.tb
+        OR chips.tb IS NULL
+        OR chips.th IS DISTINCT FROM excluded.th
+        OR chips.th IS NULL
+        OR chips.ti IS DISTINCT FROM excluded.ti
+        OR chips.ti IS NULL
+        OR chips.tm IS DISTINCT FROM excluded.tm
+        OR chips.tm IS NULL
+        OR chips.u IS DISTINCT FROM excluded.u
+        OR chips.u IS NULL
+        OR chips.v IS DISTINCT FROM excluded.v
+        OR chips.v IS NULL
+        OR chips.w IS DISTINCT FROM excluded.w
+        OR chips.w IS NULL
+        OR chips.y IS DISTINCT FROM excluded.y
+        OR chips.y IS NULL
+        OR chips.yb IS DISTINCT FROM excluded.yb
+        OR chips.yb IS NULL
+        OR chips.zn IS DISTINCT FROM excluded.zn
+        OR chips.zn IS NULL
+        OR chips.zr IS DISTINCT FROM excluded.zr
+        OR chips.zr IS NULL
+        OR chips.os187_os188 IS DISTINCT FROM excluded.os187_os188
+        OR chips.os187_os188 IS NULL
+        OR chips.open IS DISTINCT FROM excluded.open
+        OR chips.open IS NULL
+        OR chips.delta57fe IS DISTINCT FROM excluded.delta57fe
+        OR chips.delta57fe IS NULL
+        OR chips.delta56fe IS DISTINCT FROM excluded.delta56fe
+        OR chips.delta56fe IS NULL
+        OR chips.id_machinei IS DISTINCT FROM excluded.id_machinei
+        OR chips.id_machinei IS NULL
+        OR chips.n_crpg IS DISTINCT FROM excluded.n_crpg
+        OR chips.n_crpg IS NULL
+        OR chips.bibreference IS DISTINCT FROM excluded.bibreference
+        OR chips.bibreference IS NULL
+        OR chips.os187_os186 IS DISTINCT FROM excluded.os187_os186
+        OR chips.os187_os186 IS NULL
+        OR chips.os_ppt IS DISTINCT FROM excluded.os_ppt
+        OR chips.os_ppt IS NULL
+        OR chips.ag IS DISTINCT FROM excluded.ag
+        OR chips.ag IS NULL
+        OR chips.sr87_sr86 IS DISTINCT FROM excluded.sr87_sr86
+        OR chips.sr87_sr86 IS NULL
+        OR chips.li IS DISTINCT FROM excluded.li
+        OR chips.li IS NULL
+        OR chips.tl IS DISTINCT FROM excluded.tl
+        OR chips.tl IS NULL
+        OR chips.ru IS DISTINCT FROM excluded.ru
+        OR chips.ru IS NULL
+        OR chips.re IS DISTINCT FROM excluded.re
+        OR chips.re IS NULL
+        OR chips.se IS DISTINCT FROM excluded.se
+        OR chips.se IS NULL
+        OR chips.te IS DISTINCT FROM excluded.te
+        OR chips.te IS NULL
+        OR chips.carbon IS DISTINCT FROM excluded.carbon
+        OR chips.carbon IS NULL
+        OR chips.h IS DISTINCT FROM excluded.h
+        OR chips.h IS NULL
+        OR chips.he IS DISTINCT FROM excluded.he
+        OR chips.he IS NULL
+        OR chips.b IS DISTINCT FROM excluded.b
+        OR chips.b IS NULL
+        OR chips.n IS DISTINCT FROM excluded.n
+        OR chips.n IS NULL
+        OR chips.f IS DISTINCT FROM excluded.f
+        OR chips.f IS NULL
+        OR chips.ar IS DISTINCT FROM excluded.ar
+        OR chips.ar IS NULL
+        OR chips.br IS DISTINCT FROM excluded.br
+        OR chips.br IS NULL
+        OR chips.kr IS DISTINCT FROM excluded.kr
+        OR chips.kr IS NULL
+        OR chips.tc IS DISTINCT FROM excluded.tc
+        OR chips.tc IS NULL
+        OR chips.rh IS DISTINCT FROM excluded.rh
+        OR chips.y IS NULL
+        OR chips.i IS DISTINCT FROM excluded.i
+        OR chips.i IS NULL
+        OR chips.xe IS DISTINCT FROM excluded.xe
+        OR chips.xe IS NULL
+        OR chips.ir IS DISTINCT FROM excluded.ir
+        OR chips.ir IS NULL
+        OR chips.pt IS DISTINCT FROM excluded.pt
+        OR chips.pt IS NULL
+        OR chips.au IS DISTINCT FROM excluded.au
+        OR chips.au IS NULL
+        OR chips.hg IS DISTINCT FROM excluded.hg
+        OR chips.hg IS NULL
+      ;
+      DROP TABLE i
+      ;
+      """
+  if table == "literature":
+      query = """
+      CREATE TABLE i as
+      TABLE literature with no data
+      ;
+      \copy i from /Users/Public/your_file.csv DELIMITER ';' ENCODING 'UTF-8' CSV HEADER
+      ;
+      INSERT INTO literature
+      SELECT * FROM i
+      ON CONFLICT (id_lit) DO UPDATE 
+        SET (authors, title, journal_book, volume, issue, pub_year, pages, url, doi, pub_type) = (excluded.authors, excluded.title, excluded.journal_book, excluded.volume, excluded.issue, excluded.pub_year, excluded.pages, excluded.url, excluded.doi, excluded.pub_type)
+        WHERE literature.authors IS DISTINCT FROM excluded.authors
+        OR literature.authors IS NULL 
+        OR literature.title IS DISTINCT FROM excluded.title
+        OR literature.title IS NULL
+        OR literature.journal_book IS DISTINCT FROM excluded.journal_book
+        OR literature.journal_book IS NULL 
+        OR literature.volume IS DISTINCT FROM excluded.volume
+        OR literature.volume IS NULL
+        OR literature.issue IS DISTINCT FROM excluded.issue
+        OR literature.issue IS NULL
+        OR literature.pub_year IS DISTINCT FROM excluded.pub_year
+        OR literature.pub_year IS NULL
+        OR literature.pages IS DISTINCT FROM excluded.pages
+        OR literature.pages IS NULL
+        OR literature.url IS DISTINCT FROM excluded.url
+        OR literature.url IS NULL
+        OR literature.doi IS DISTINCT FROM excluded.doi
+        OR literature.doi IS NULL 
+        OR literature.pub_type IS DISTINCT FROM excluded.pub_type
+        OR literature.pub_type IS NULL
+      ;
+      DROP TABLE i
+      ;
+      """
+  if table == "machines":
+      query = """
+      CREATE TABLE i as
+      TABLE machines with no data
+      ;
+      \copy i from /Users/Public/your_file.csv DELIMITER ';' ENCODING 'UTF-8' CSV HEADER
+      ;
+      INSERT INTO machines
+      SELECT * FROM i
+      ON CONFLICT (id_dispositif) DO UPDATE 
+        SET (laboratoire, methode_analyse, marque, modele) = (excluded.laboratoire, excluded.methode_analyse, excluded.marque, excluded.modele)
+        WHERE machines.laboratoire IS DISTINCT FROM excluded.laboratoire
+        OR machines.laboratoire IS NULL 
+        OR machines.methode_analyse IS DISTINCT FROM excluded.methode_analyse
+        OR machines.methode_analyse IS NULL 
+        OR machines.marque IS DISTINCT FROM excluded.marque
+        OR machines.marque IS NULL 
+        OR machines.modele IS DISTINCT FROM excluded.modele
+        OR machines.modele IS NULL
+      ;
+      DROP TABLE i
+      ;
+      """
+  if table == "typo":
+      query = """
+      CREATE TABLE i as
+      TABLE typo with no data
+      ;
+      \copy i from /Users/Public/your_file.csv DELIMITER ';' ENCODING 'UTF-8' CSV HEADER
+      ;
+      INSERT INTO typo
+      SELECT * FROM i
+      ON CONFLICT (id_typo) DO UPDATE 
+        SET (filiere, contexte, materiau, categorie, sous_categorie, filiere_en, contexte_en, materiau_en, categorie_en, sous_categorie_en, ark_frantic) = (excluded.filiere, excluded.contexte, excluded.materiau, excluded.categorie, excluded.sous_categorie, excluded.filiere_en, excluded.contexte_en, excluded.materiau_en, excluded.categorie_en, excluded.sous_categorie_en, excluded.ark_frantic)
+        WHERE typo.filiere IS DISTINCT FROM excluded.filiere
+        OR typo.filiere IS NULL 
+        OR typo.contexte IS DISTINCT FROM excluded.contexte
+        OR typo.contexte IS NULL  
+        OR typo.materiau IS DISTINCT FROM excluded.materiau
+        OR typo.materiau IS NULL 
+        OR typo.categorie IS DISTINCT FROM excluded.categorie
+        OR typo.categorie IS NULL
+        OR typo.sous_categorie IS DISTINCT FROM excluded.sous_categorie
+        OR typo.sous_categorie IS NULL 	
+        OR typo.filiere_en IS DISTINCT FROM excluded.filiere_en
+        OR typo.filiere_en IS NULL  
+        OR typo.contexte_en IS DISTINCT FROM excluded.contexte_en
+        OR typo.contexte_en IS NULL  
+        OR typo.materiau_en IS DISTINCT FROM excluded.materiau_en
+        OR typo.materiau_en IS NULL 
+        OR typo.categorie_en IS DISTINCT FROM excluded.categorie_en
+        OR typo.categorie_en IS NULL
+        OR typo.sous_categorie_en IS DISTINCT FROM excluded.sous_categorie_en
+        OR typo.sous_categorie_en IS NULL 
+        OR typo.ark_frantic IS DISTINCT FROM excluded.ark_frantic
+        OR typo.ark_frantic IS NULL 
+      ;
+      DROP TABLE i
+      ;
+      """
+   if table == "incertitudes":
+      query = """
+      CREATE TABLE i as
+      TABLE incertitudes with no data
+      ;
+      \copy i from /Users/Public/your_file.csv DELIMITER ';' ENCODING 'UTF-8' CSV HEADER
+      ;
+      INSERT INTO incertitudes
+      SELECT * FROM i
+      ON CONFLICT (id_incertitude) DO UPDATE 
+        SET (id_machine, id_element, int_min, int_max, val_incertitude) = (excluded.id_machine, excluded.id_element, excluded.int_min, excluded.int_max, excluded.val_incertitude)
+        WHERE incertitudes.id_machine IS DISTINCT FROM excluded.id_machine
+        OR incertitudes.id_machine IS NULL 
+        OR incertitudes.id_element IS DISTINCT FROM excluded.id_element
+        OR incertitudes.id_element IS NULL 
+        OR incertitudes.int_min IS DISTINCT FROM excluded.int_min
+        OR incertitudes.int_min IS NULL 
+        OR incertitudes.int_max IS DISTINCT FROM excluded.int_max
+        OR incertitudes.int_max IS NULL 
+        OR incertitudes.val_incertitude IS DISTINCT FROM excluded.val.incertitudes
+        OR incertitudes.val_incertitude IS NULL 
+      ;
+      DROP TABLE i
+      ;
+      """
 
   df = pd.read_sql(query, engine)
   return(df)
