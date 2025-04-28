@@ -127,6 +127,9 @@ def zn_metadata(meta_data = None, verbose = True):
   }
   return(metadata)
 
+
+
+
 def db_upsert(data_entry=None, table=None, engine=None, verbose = True):
   """
   Read a CSV file and Insert or Update (Upsert) data into the 'chips' table
@@ -140,13 +143,12 @@ def db_upsert(data_entry=None, table=None, engine=None, verbose = True):
   """
   import pandas as pd
 
-
   if table == "sites":
       query = """
       CREATE TABLE i as
       TABLE sites with no data
       ;
-      \copy i from /Users/Public/import_tableSites241021.csv DELIMITER ';' ENCODING 'WIN1252' CSV HEADER
+      \\copy i from /Users/Public/import_tableSites241021.csv DELIMITER ';' ENCODING 'WIN1252' CSV HEADER
       ;
       INSERT INTO sites 
       SELECT * FROM i
@@ -184,12 +186,42 @@ def db_upsert(data_entry=None, table=None, engine=None, verbose = True):
       ;
       """
   if table == "echantillons":
+      # query_d = """
+      # CREATE TABLE i as
+      # TABLE echantillons with no data
+      # ;
+      # \\copy i from /Users/Public/import_tableEchantillons250308.csv DELIMITER ';' ENCODING 'UTF-8' CSV HEADER
+      # ;
+      # """
+#       import psycopg2
+#       conn = psycopg2.connect(**DB_CONFIG)
+# cur = conn.cursor()
+#       with open(data_entry, 'r', encoding='utf-8') as f:
+#           # Use psycopg2's copy_expert to run a COPY command
+#           cur.copy_expert("""
+#               COPY i FROM STDIN WITH (FORMAT csv, DELIMITER ';', HEADER TRUE)
+#           """, f)
+      # with engine.raw_connection() as conn:
+      #     with conn.cursor() as cur:
+      #         with open(data_entry, 'r', encoding='utf-8') as f:
+      #             cur.copy_expert("""
+      #                 COPY i FROM STDIN WITH (FORMAT csv, DELIMITER ';', HEADER TRUE)
+      #             """, f)
+      #         conn.commit()
+      conn = engine.raw_connection()
+      cur = conn.cursor()
+      df = pd.read_sql("SELECT * FROM echantillons LIMIT 3", engine)
+      # cur.execute()
+      print(df)
+      try:
+          with open(data_entry, 'r', encoding='utf-8') as f:
+              cur.copy_expert(f"COPY i FROM STDIN WITH (FORMAT csv, DELIMITER ';', HEADER TRUE)", f)
+          conn.commit()
+          cur.close()
+          print("temporary table i has been created")
+      finally:
+          conn.close()
       query = """
-      CREATE TABLE i as
-      TABLE echantillons with no data
-      ;
-      \copy i from /Users/Public/import_tableEchantillons250308.csv DELIMITER ';' ENCODING 'UTF-8' CSV HEADER
-      ;
       INSERT INTO echantillons
       SELECT * FROM i
       ON CONFLICT (id_ech) DO UPDATE 
@@ -214,12 +246,15 @@ def db_upsert(data_entry=None, table=None, engine=None, verbose = True):
       DROP TABLE i
       ;
       """
+      df = pd.read_sql(query, engine)
+      return(df)
+
   if table == "chips":
       query = """
       CREATE TABLE i as
       TABLE chips with no data
       ;
-      \copy i from /Users/Public/import_tableChips241021.csv DELIMITER ';' ENCODING 'WIN1252' CSV HEADER
+      \\copy i from /Users/Public/import_tableChips241021.csv DELIMITER ';' ENCODING 'WIN1252' CSV HEADER
       ;
       INSERT INTO chips 
       SELECT * FROM i
@@ -426,7 +461,7 @@ def db_upsert(data_entry=None, table=None, engine=None, verbose = True):
       CREATE TABLE i as
       TABLE literature with no data
       ;
-      \copy i from /Users/Public/your_file.csv DELIMITER ';' ENCODING 'UTF-8' CSV HEADER
+      \\copy i from /Users/Public/your_file.csv DELIMITER ';' ENCODING 'UTF-8' CSV HEADER
       ;
       INSERT INTO literature
       SELECT * FROM i
@@ -461,7 +496,7 @@ def db_upsert(data_entry=None, table=None, engine=None, verbose = True):
       CREATE TABLE i as
       TABLE machines with no data
       ;
-      \copy i from /Users/Public/your_file.csv DELIMITER ';' ENCODING 'UTF-8' CSV HEADER
+      \\copy i from /Users/Public/your_file.csv DELIMITER ';' ENCODING 'UTF-8' CSV HEADER
       ;
       INSERT INTO machines
       SELECT * FROM i
@@ -484,7 +519,7 @@ def db_upsert(data_entry=None, table=None, engine=None, verbose = True):
       CREATE TABLE i as
       TABLE typo with no data
       ;
-      \copy i from /Users/Public/your_file.csv DELIMITER ';' ENCODING 'UTF-8' CSV HEADER
+      \\copy i from /Users/Public/your_file.csv DELIMITER ';' ENCODING 'UTF-8' CSV HEADER
       ;
       INSERT INTO typo
       SELECT * FROM i
@@ -516,12 +551,12 @@ def db_upsert(data_entry=None, table=None, engine=None, verbose = True):
       DROP TABLE i
       ;
       """
-   if table == "incertitudes":
+  if table == "incertitudes":
       query = """
       CREATE TABLE i as
       TABLE incertitudes with no data
       ;
-      \copy i from /Users/Public/your_file.csv DELIMITER ';' ENCODING 'UTF-8' CSV HEADER
+      \\copy i from /Users/Public/your_file.csv DELIMITER ';' ENCODING 'UTF-8' CSV HEADER
       ;
       INSERT INTO incertitudes
       SELECT * FROM i
@@ -542,5 +577,9 @@ def db_upsert(data_entry=None, table=None, engine=None, verbose = True):
       ;
       """
 
-  df = pd.read_sql(query, engine)
-  return(df)
+  # df = pd.read_sql(query, engine)
+  # return(df)
+
+engine = db_connect("C:/Users/TH282424/Rprojects/iramat-test/credentials/pg_dev_credentials.json")
+db_upsert(data_entry="C:/Users/TH282424/Rprojects/iramat-test/dbs/chips/data/import_tableEchantillons_test.csv",
+                table="echantillons", engine=engine, verbose = True)
