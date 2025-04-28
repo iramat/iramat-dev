@@ -140,6 +140,7 @@ def db_upsert(data_entry=None, table=None, engine=None, verbose = True):
   """
   import pandas as pd
 
+
   if table == "sites":
       query = """
       CREATE TABLE i as
