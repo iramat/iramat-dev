@@ -1,6 +1,6 @@
-id_ech;id_site;id_typo;nom_ech;referent;type_metal;bibreference;bibreference2;commentaire
-1;180;28;Cacadoie1;80;Fe;9;;test dUpsert - mise a jour
-2;180;28;Cacadoie2;80;Fe;9;;test dUpsert - mise a jour
-7200;179;1;nouveau1;68;Fe;9;;test dUpsert - insertion
-7201;179;1;nouveau2;68;Fe;9;;test dUpsert - insertion
-7202;179;1;nouveauXX;68;Fe;10;;test dUpsert - insertion
+id_ech,id_site,id_typo,nom_ech,referent,type_metal,bibreference,bibreference2,commentaire
+1,180,28,Cacadoie1,80,Fe,9,,test dUpsert - mise a jour
+2,180,28,Cacadoie2,80,Fe,9,,test dUpsert - mise a jour
+7200,179,1,nouveau1,68,Fe,9,,test dUpsert - insertion
+7201,179,1,nouveau2,68,Fe,9,,test dUpsert - insertion
+7202,179,1,nouveauXX,68,Fe,10,,test dUpsert - insertion

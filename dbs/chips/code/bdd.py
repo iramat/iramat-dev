@@ -127,7 +127,7 @@ def zn_metadata(meta_data = None, verbose = True):
   }
   return(metadata)
 
-def db_tabi(data_entry=None, table=None, engine=None, verbose = True):
+def db_tabi(data_entry=None, table=None, separator=';', engine=None, verbose = True):
   """
   Manage the temporary table i
 
@@ -175,7 +175,7 @@ def db_tabi(data_entry=None, table=None, engine=None, verbose = True):
       if verbose:
            print(f.readline())  # Try reading first line to test access
       cur.copy_expert(
-          f"COPY i FROM STDIN WITH (FORMAT csv, DELIMITER ';', HEADER TRUE)", f
+          f"COPY i FROM STDIN WITH (FORMAT csv, DELIMITER '{separator}', HEADER TRUE)", f
       )
       conn.commit()
     if verbose:
