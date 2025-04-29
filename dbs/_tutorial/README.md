@@ -79,7 +79,7 @@ unset PGPASSWORD
 ### Upsert
 > Update & Insert, Mettre à jour et/ou Insérer dans la BDD
 
-Lancer:
+Lancer the fichier [run.py]():
 
 ```py
 root_path = "C:/Users/TH282424/Rprojects/iramat-test/"
