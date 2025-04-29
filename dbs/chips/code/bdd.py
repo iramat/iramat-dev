@@ -127,29 +127,133 @@ def zn_metadata(meta_data = None, verbose = True):
   }
   return(metadata)
 
-
-
-
-def db_upsert(data_entry=None, table=None, engine=None, verbose = True):
+def db_tabi(data_entry=None, table=None, engine=None, verbose = True):
   """
-  Read a CSV file and Insert or Update (Upsert) data into the 'chips' table
+  Manage the temporary table i
 
   Lorem ispum (doc SQL)
 
   :param data_entry: a CSV file
-  :param echantillons: the name of a table
   :param engine: a Postgres connector created with the db_connect function
   :param verbose: verbose
   """
   import pandas as pd
 
+  conn = engine.raw_connection()
+  cur = conn.cursor()
+  query = """
+  DROP TABLE IF EXISTS i;
+  ;
+  """
+  cur.execute(query)
+  conn.commit()
+  query = f"""
+  CREATE TABLE i as
+  TABLE {table} with no data
+  ;
+  """
+  if verbose:
+     print(query)
+  cur.execute(query)
+  conn.commit()
+  # compare structures
+  query = f"""
+  SELECT column_name
+  FROM information_schema.columns
+ WHERE table_schema = 'public'
+   AND table_name   = '{table}'
+     ;"""
+  table__i = cur.execute(query)
+  conn.commit()
+  if verbose:
+     print(query)
+  data_to_i = pd.read_csv(data_entry, sep=';').columns
+  print(f"table   i: {table__i}")
+  print(f"data to i: {data_to_i}")
+  try:
+    with open(data_entry, 'r', encoding='utf-8') as f:
+      if verbose:
+           print(f.readline())  # Try reading first line to test access
+      cur.copy_expert(
+          f"COPY i FROM STDIN WITH (FORMAT csv, DELIMITER ';', HEADER TRUE)", f
+      )
+      conn.commit()
+    if verbose:
+      print("... temporary table i has been created (sample):")
+      df = pd.read_sql("SELECT * FROM i LIMIT 3", engine)
+      print(df)
+  except Exception as e:
+      print("❌ ERROR during CSV import:", e)
+  cur.close()
+  conn.close()
+
+def db_upsert(data_entry=None, table=None, engine=None, verbose = True):
+  """
+  Read a CSV file and Insert or Update (Upsert) data into a specific tables
+
+  Lorem ispum (doc SQL)
+
+  :param data_entry: a CSV file
+  :param table: the name of a table
+  :param engine: a Postgres connector created with the db_connect function
+  :param verbose: verbose
+  """
+  import pandas as pd
+
+  conn = engine.raw_connection()
+  cur = conn.cursor()
+  if verbose:
+    print(f"Add or Update the {data_entry} dataset to the table '{table}'")
+  if table == "echantillons":
+      # conn = engine.raw_connection()
+      # cur = conn.cursor()
+      # query = """
+      # DROP TABLE IF EXISTS i;
+      # ;
+      # """
+      # cur.execute(query)
+      # conn.commit()
+      # query = """
+      # CREATE TABLE i as
+      # TABLE echantillons with no data
+      # ;
+      # """
+      # cur.execute(query)
+      # conn.commit()
+    db_tabi(data_entry=data_entry, table=table, engine=engine, verbose=verbose)
+    query = """
+    INSERT INTO echantillons
+    SELECT * FROM i
+    ON CONFLICT (id_ech) DO UPDATE 
+      SET (id_site, id_typo, nom_ech, referent, type_metal, bibreference, bibreference2, commentaire) = (excluded.id_site, excluded.id_typo, excluded.nom_ech, excluded.referent, excluded.type_metal, excluded.bibreference, excluded.bibreference2, excluded.commentaire)
+      WHERE echantillons.id_site IS DISTINCT FROM excluded.id_site
+      OR echantillons.id_site IS NULL 
+      OR echantillons.id_typo IS DISTINCT FROM excluded.id_typo
+      OR echantillons.id_typo IS NULL
+      OR echantillons.nom_ech IS DISTINCT FROM excluded.nom_ech
+      OR echantillons.nom_ech IS NULL 
+      OR echantillons.referent IS DISTINCT FROM excluded.referent
+      OR echantillons.referent IS NULL 
+      OR echantillons.type_metal IS DISTINCT FROM excluded.type_metal
+      OR echantillons.type_metal IS NULL
+      OR echantillons.bibreference IS DISTINCT FROM excluded.bibreference
+      OR echantillons.bibreference IS NULL
+      OR echantillons.bibreference2 IS DISTINCT FROM excluded.bibreference2
+      OR echantillons.bibreference2 IS NULL
+      OR echantillons.commentaire IS DISTINCT FROM excluded.commentaire
+      OR echantillons.commentaire IS NULL
+    ;
+    -- DROP TABLE i
+    ;
+    """
+    cur.execute(query)
+    conn.commit()
+    cur.close()
+    conn.close()
+
   if table == "sites":
-      query = """
-      CREATE TABLE i as
-      TABLE sites with no data
-      ;
-      \\copy i from /Users/Public/import_tableSites241021.csv DELIMITER ';' ENCODING 'WIN1252' CSV HEADER
-      ;
+    db_tabi(data_entry=data_entry, table=table, engine=engine, verbose=verbose)
+    query = """
       INSERT INTO sites 
       SELECT * FROM i
       ON CONFLICT (id_site) DO UPDATE 
@@ -182,80 +286,17 @@ def db_upsert(data_entry=None, table=None, engine=None, verbose = True):
       SET points = ST_SetSRID(ST_MakePoint(longitude, latitude),4326)
       WHERE srid = '4326'
       ;
-      DROP TABLE i
+      -- DROP TABLE i
       ;
       """
-  if table == "echantillons":
-      # query_d = """
-      # CREATE TABLE i as
-      # TABLE echantillons with no data
-      # ;
-      # \\copy i from /Users/Public/import_tableEchantillons250308.csv DELIMITER ';' ENCODING 'UTF-8' CSV HEADER
-      # ;
-      # """
-#       import psycopg2
-#       conn = psycopg2.connect(**DB_CONFIG)
-# cur = conn.cursor()
-#       with open(data_entry, 'r', encoding='utf-8') as f:
-#           # Use psycopg2's copy_expert to run a COPY command
-#           cur.copy_expert("""
-#               COPY i FROM STDIN WITH (FORMAT csv, DELIMITER ';', HEADER TRUE)
-#           """, f)
-      # with engine.raw_connection() as conn:
-      #     with conn.cursor() as cur:
-      #         with open(data_entry, 'r', encoding='utf-8') as f:
-      #             cur.copy_expert("""
-      #                 COPY i FROM STDIN WITH (FORMAT csv, DELIMITER ';', HEADER TRUE)
-      #             """, f)
-      #         conn.commit()
-      conn = engine.raw_connection()
-      cur = conn.cursor()
-      df = pd.read_sql("SELECT * FROM echantillons LIMIT 3", engine)
-      # cur.execute()
-      print(df)
-      try:
-          with open(data_entry, 'r', encoding='utf-8') as f:
-              cur.copy_expert(f"COPY i FROM STDIN WITH (FORMAT csv, DELIMITER ';', HEADER TRUE)", f)
-          conn.commit()
-          cur.close()
-          print("temporary table i has been created")
-      finally:
-          conn.close()
-      query = """
-      INSERT INTO echantillons
-      SELECT * FROM i
-      ON CONFLICT (id_ech) DO UPDATE 
-        SET (id_site, id_typo, nom_ech, referent, type_metal, bibreference, bibreference2, commentaire) = (excluded.id_site, excluded.id_typo, excluded.nom_ech, excluded.referent, excluded.type_metal, excluded.bibreference, excluded.bibreference2, excluded.commentaire)
-        WHERE echantillons.id_site IS DISTINCT FROM excluded.id_site
-        OR echantillons.id_site IS NULL 
-        OR echantillons.id_typo IS DISTINCT FROM excluded.id_typo
-        OR echantillons.id_typo IS NULL
-        OR echantillons.nom_ech IS DISTINCT FROM excluded.nom_ech
-        OR echantillons.nom_ech IS NULL 
-        OR echantillons.referent IS DISTINCT FROM excluded.referent
-        OR echantillons.referent IS NULL 
-        OR echantillons.type_metal IS DISTINCT FROM excluded.type_metal
-        OR echantillons.type_metal IS NULL
-        OR echantillons.bibreference IS DISTINCT FROM excluded.bibreference
-        OR echantillons.bibreference IS NULL
-        OR echantillons.bibreference2 IS DISTINCT FROM excluded.bibreference2
-        OR echantillons.bibreference2 IS NULL
-        OR echantillons.commentaire IS DISTINCT FROM excluded.commentaire
-        OR echantillons.commentaire IS NULL
-      ;
-      DROP TABLE i
-      ;
-      """
-      df = pd.read_sql(query, engine)
-      return(df)
+    cur.execute(query)
+    conn.commit()
+    cur.close()
+    conn.close()
 
   if table == "chips":
+      db_tabi(data_entry=data_entry, table=table, engine=engine, verbose=verbose)
       query = """
-      CREATE TABLE i as
-      TABLE chips with no data
-      ;
-      \\copy i from /Users/Public/import_tableChips241021.csv DELIMITER ';' ENCODING 'WIN1252' CSV HEADER
-      ;
       INSERT INTO chips 
       SELECT * FROM i
       ON CONFLICT (id_chips) DO UPDATE 
@@ -453,16 +494,17 @@ def db_upsert(data_entry=None, table=None, engine=None, verbose = True):
         OR chips.hg IS DISTINCT FROM excluded.hg
         OR chips.hg IS NULL
       ;
-      DROP TABLE i
+      -- DROP TABLE i
       ;
       """
+      cur.execute(query)
+      conn.commit()
+      cur.close()
+      conn.close()
+  
   if table == "literature":
+      db_tabi(data_entry=data_entry, table=table, engine=engine, verbose=verbose)
       query = """
-      CREATE TABLE i as
-      TABLE literature with no data
-      ;
-      \\copy i from /Users/Public/your_file.csv DELIMITER ';' ENCODING 'UTF-8' CSV HEADER
-      ;
       INSERT INTO literature
       SELECT * FROM i
       ON CONFLICT (id_lit) DO UPDATE 
@@ -488,16 +530,17 @@ def db_upsert(data_entry=None, table=None, engine=None, verbose = True):
         OR literature.pub_type IS DISTINCT FROM excluded.pub_type
         OR literature.pub_type IS NULL
       ;
-      DROP TABLE i
+      -- DROP TABLE i
       ;
       """
+      cur.execute(query)
+      conn.commit()
+      cur.close()
+      conn.close()
+
   if table == "machines":
+      db_tabi(data_entry=data_entry, table=table, engine=engine, verbose=verbose)
       query = """
-      CREATE TABLE i as
-      TABLE machines with no data
-      ;
-      \\copy i from /Users/Public/your_file.csv DELIMITER ';' ENCODING 'UTF-8' CSV HEADER
-      ;
       INSERT INTO machines
       SELECT * FROM i
       ON CONFLICT (id_dispositif) DO UPDATE 
@@ -514,13 +557,14 @@ def db_upsert(data_entry=None, table=None, engine=None, verbose = True):
       DROP TABLE i
       ;
       """
+      cur.execute(query)
+      conn.commit()
+      cur.close()
+      conn.close()
+
   if table == "typo":
+      db_tabi(data_entry=data_entry, table=table, engine=engine, verbose=verbose)
       query = """
-      CREATE TABLE i as
-      TABLE typo with no data
-      ;
-      \\copy i from /Users/Public/your_file.csv DELIMITER ';' ENCODING 'UTF-8' CSV HEADER
-      ;
       INSERT INTO typo
       SELECT * FROM i
       ON CONFLICT (id_typo) DO UPDATE 
@@ -548,16 +592,17 @@ def db_upsert(data_entry=None, table=None, engine=None, verbose = True):
         OR typo.ark_frantic IS DISTINCT FROM excluded.ark_frantic
         OR typo.ark_frantic IS NULL 
       ;
-      DROP TABLE i
+      -- DROP TABLE i
       ;
       """
+      cur.execute(query)
+      conn.commit()
+      cur.close()
+      conn.close()
+
   if table == "incertitudes":
+      db_tabi(data_entry=data_entry, table=table, engine=engine, verbose=verbose)
       query = """
-      CREATE TABLE i as
-      TABLE incertitudes with no data
-      ;
-      \\copy i from /Users/Public/your_file.csv DELIMITER ';' ENCODING 'UTF-8' CSV HEADER
-      ;
       INSERT INTO incertitudes
       SELECT * FROM i
       ON CONFLICT (id_incertitude) DO UPDATE 
@@ -573,13 +618,18 @@ def db_upsert(data_entry=None, table=None, engine=None, verbose = True):
         OR incertitudes.val_incertitude IS DISTINCT FROM excluded.val.incertitudes
         OR incertitudes.val_incertitude IS NULL 
       ;
-      DROP TABLE i
+      -- DROP TABLE i
       ;
       """
+      cur.execute(query)
+      conn.commit()
+      cur.close()
+      conn.close()
 
   # df = pd.read_sql(query, engine)
   # return(df)
 
-engine = db_connect("C:/Users/TH282424/Rprojects/iramat-test/credentials/pg_dev_credentials.json")
-db_upsert(data_entry="C:/Users/TH282424/Rprojects/iramat-test/dbs/chips/data/import_tableEchantillons_test.csv",
-                table="echantillons", engine=engine, verbose = True)
+# root_path = "C:/Users/TH282424/Rprojects/iramat-test/"
+# engine = db_connect(root_path + "credentials/pg_dev_credentials.json")
+# db_upsert(data_entry= root_path + "dbs/chips/data/import_tableEchantillons_test.csv",
+#                 table="echantillons", engine=engine, verbose = True)

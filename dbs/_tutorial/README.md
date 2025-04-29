@@ -39,7 +39,7 @@ postgres@vm:~$ psql
 ### Sauvegardes
 > Sauvegardres automatisées
 
-Avec le daemon cron:
+Avec le daemon `cron`:
 
 
 ```sh
@@ -76,3 +76,18 @@ find "$BACKUP_DIR" -name "*.sql.gz" -type f -mtime +7 -exec rm {} \;
 unset PGPASSWORD
 ```
 
+### Upsert
+> Update & Insert, Mettre à jour et/ou Insérer dans la BDD
+
+Lancer:
+
+```py
+root_path = "C:/Users/TH282424/Rprojects/iramat-test/"
+engine = db_connect(root_path + "credentials/pg_dev_credentials.json")
+db_upsert(data_entry= root_path + "dbs/chips/data/import_tableEchantillons_test.csv",
+                table="echantillons", engine=engine, verbose = True)
+```
+
+- `"pg_dev_credentials.json"`: le fichier de paramètres de connection (_username_, _password_, etc.)
+- `"import_tableEchantillons_test.csv"`: le CSV qui servira a l'upsert 
+- `"echantillons"`: le nom de la table dans laquelle sera upserté le CSV
