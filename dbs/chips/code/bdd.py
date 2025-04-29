@@ -611,11 +611,3 @@ def db_upsert(data_entry=None, table=None, separator=';', engine=None, verbose =
       conn.commit()
       cur.close()
       conn.close()
-
-  # df = pd.read_sql(query, engine)
-  # return(df)
-
-root_path = "C:/Users/TH282424/Rprojects/iramat-test/"
-engine = db_connect(root_path + "credentials/pg_dev_credentials.json")
-db_upsert(data_entry= root_path + "dbs/chips/data/import_tableEchantillons_test.csv",
-                table="echantillons", separator = ',', engine=engine, verbose = True)
