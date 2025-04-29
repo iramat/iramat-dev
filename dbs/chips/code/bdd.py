@@ -187,7 +187,7 @@ def db_tabi(data_entry=None, table=None, separator=';', engine=None, verbose = T
   cur.close()
   conn.close()
 
-def db_upsert(data_entry=None, table=None, engine=None, verbose = True):
+def db_upsert(data_entry=None, table=None, separator=';', engine=None, verbose = True):
   """
   Read a CSV file and Insert or Update (Upsert) data into a specific tables
 
@@ -195,6 +195,7 @@ def db_upsert(data_entry=None, table=None, engine=None, verbose = True):
 
   :param data_entry: a CSV file
   :param table: the name of a table
+  :param separator: the field separator in the CSV, default: ";"
   :param engine: a Postgres connector created with the db_connect function
   :param verbose: verbose
   """
@@ -205,22 +206,7 @@ def db_upsert(data_entry=None, table=None, engine=None, verbose = True):
   if verbose:
     print(f"Add or Update the {data_entry} dataset to the table '{table}'")
   if table == "echantillons":
-      # conn = engine.raw_connection()
-      # cur = conn.cursor()
-      # query = """
-      # DROP TABLE IF EXISTS i;
-      # ;
-      # """
-      # cur.execute(query)
-      # conn.commit()
-      # query = """
-      # CREATE TABLE i as
-      # TABLE echantillons with no data
-      # ;
-      # """
-      # cur.execute(query)
-      # conn.commit()
-    db_tabi(data_entry=data_entry, table=table, engine=engine, verbose=verbose)
+    db_tabi(data_entry=data_entry, table=table, separator=separator, engine=engine, verbose=verbose)
     query = """
     INSERT INTO echantillons
     SELECT * FROM i
@@ -252,7 +238,7 @@ def db_upsert(data_entry=None, table=None, engine=None, verbose = True):
     conn.close()
 
   if table == "sites":
-    db_tabi(data_entry=data_entry, table=table, engine=engine, verbose=verbose)
+    db_tabi(data_entry=data_entry, table=table, separator=separator, engine=engine, verbose=verbose)
     query = """
       INSERT INTO sites 
       SELECT * FROM i
@@ -295,7 +281,7 @@ def db_upsert(data_entry=None, table=None, engine=None, verbose = True):
     conn.close()
 
   if table == "chips":
-      db_tabi(data_entry=data_entry, table=table, engine=engine, verbose=verbose)
+      db_tabi(data_entry=data_entry, table=table, separator=separator, engine=engine, verbose=verbose)
       query = """
       INSERT INTO chips 
       SELECT * FROM i
@@ -503,7 +489,7 @@ def db_upsert(data_entry=None, table=None, engine=None, verbose = True):
       conn.close()
   
   if table == "literature":
-      db_tabi(data_entry=data_entry, table=table, engine=engine, verbose=verbose)
+      db_tabi(data_entry=data_entry, table=table, separator=separator, engine=engine, verbose=verbose)
       query = """
       INSERT INTO literature
       SELECT * FROM i
@@ -539,7 +525,7 @@ def db_upsert(data_entry=None, table=None, engine=None, verbose = True):
       conn.close()
 
   if table == "machines":
-      db_tabi(data_entry=data_entry, table=table, engine=engine, verbose=verbose)
+      db_tabi(data_entry=data_entry, table=table, separator=separator, engine=engine, verbose=verbose)
       query = """
       INSERT INTO machines
       SELECT * FROM i
@@ -563,7 +549,7 @@ def db_upsert(data_entry=None, table=None, engine=None, verbose = True):
       conn.close()
 
   if table == "typo":
-      db_tabi(data_entry=data_entry, table=table, engine=engine, verbose=verbose)
+      db_tabi(data_entry=data_entry, table=table, separator=separator, engine=engine, verbose=verbose)
       query = """
       INSERT INTO typo
       SELECT * FROM i
@@ -601,7 +587,7 @@ def db_upsert(data_entry=None, table=None, engine=None, verbose = True):
       conn.close()
 
   if table == "incertitudes":
-      db_tabi(data_entry=data_entry, table=table, engine=engine, verbose=verbose)
+      db_tabi(data_entry=data_entry, table=table, separator=separator, engine=engine, verbose=verbose)
       query = """
       INSERT INTO incertitudes
       SELECT * FROM i
@@ -629,7 +615,7 @@ def db_upsert(data_entry=None, table=None, engine=None, verbose = True):
   # df = pd.read_sql(query, engine)
   # return(df)
 
-# root_path = "C:/Users/TH282424/Rprojects/iramat-test/"
-# engine = db_connect(root_path + "credentials/pg_dev_credentials.json")
-# db_upsert(data_entry= root_path + "dbs/chips/data/import_tableEchantillons_test.csv",
-#                 table="echantillons", engine=engine, verbose = True)
+root_path = "C:/Users/TH282424/Rprojects/iramat-test/"
+engine = db_connect(root_path + "credentials/pg_dev_credentials.json")
+db_upsert(data_entry= root_path + "dbs/chips/data/import_tableEchantillons_test.csv",
+                table="echantillons", separator = ',', engine=engine, verbose = True)

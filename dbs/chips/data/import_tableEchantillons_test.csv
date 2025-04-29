@@ -4,3 +4,4 @@ id_ech,id_site,id_typo,nom_ech,referent,type_metal,bibreference,bibreference2,co
 7200,179,1,nouveau1,68,Fe,9,,test dUpsert - insertion
 7201,179,1,nouveau2,68,Fe,9,,test dUpsert - insertion
 7202,179,1,nouveauXX,68,Fe,10,,test dUpsert - insertion
+7203,179,1,nouveauYY,68,Fe,,,test dUpsert - insertion

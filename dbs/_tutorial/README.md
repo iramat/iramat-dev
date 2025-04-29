@@ -89,5 +89,5 @@ db_upsert(data_entry= root_path + "dbs/chips/data/import_tableEchantillons_test.
 ```
 
 - `"pg_dev_credentials.json"`: le fichier de paramètres de connection (_username_, _password_, etc.)
-- `"import_tableEchantillons_test.csv"`: le CSV qui servira a l'upsert 
+- `"import_tableEchantillons_test.csv"`: le CSV qui servira a l'upsert, par exemple: [import_tableEchantillons_test.csv](https://github.com/zoometh/iramat-test/blob/main/dbs/chips/data/import_tableEchantillons_test.csv)
 - `"echantillons"`: le nom de la table dans laquelle sera upserté le CSV
