@@ -11,6 +11,7 @@ db_upsert(data_entry= root_path + "dbs/chips/data/import_tableEchantillons_test.
 from bdd import db_connect, db_query
 
 root_path = "C:/Users/TH282424/Rprojects/iramat-test/"
+out_file = root_path + "dbs/chips/data/reference_data/machines.tsv"
 engine = db_connect(root_path + "credentials/pg_dev_credentials.json")
 conn = engine.raw_connection()
 cur = conn.cursor
@@ -20,6 +21,8 @@ excl_field="id_dispositif"
 
 df=db_query(query = f"SELECT * FROM {table};", engine=engine)
 df = df.drop(excl_field, axis=1)
+df.to_csv(out_file, sep="\t") 
+
 # df.head()
 sub = dt.Frame(df)
 
