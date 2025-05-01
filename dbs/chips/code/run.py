@@ -7,7 +7,7 @@ db_upsert(data_entry= root_path + "dbs/chips/data/import_tableEchantillons_test.
 
 
 # %%
-
+# TODO: install conda and then datatable
 from bdd import db_connect, db_query
 
 root_path = "C:/Users/TH282424/Rprojects/iramat-test/"
