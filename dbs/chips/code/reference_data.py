@@ -1,4 +1,5 @@
 # This file is useful to manage reference data from the Postgres DB
+# TODO: move this code to bdd.py
 
 # %%
 

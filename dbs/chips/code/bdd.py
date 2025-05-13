@@ -1,3 +1,5 @@
+# TODO: move everything to the function repository
+
 def db_connect(pg_creds = 'C:/Rprojects/iramat-test/credentials/pg_credentials.json', verbose = True):
   """
   Connect a database connection (engine)
