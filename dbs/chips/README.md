@@ -18,12 +18,16 @@ BDD Postgres hebergée sur les serveurs d'Huma-Num
 
 PostgREST est une extension pour créer une API
 
-* Dans la BD elle-même, en SQL, créer un nouveau rôle (`web_anon`) et exposer la vue `instrument_incertitude` (API)
+* Dans la BD elle-même, en SQL
+  - créer un nouveau rôle (`web_anon`)
+  - exposer la vue `instrument_incertitude` (API)
+  - accorder les droits de `web_anon` a `mon_utilisateur` (ex: utilisateur `postgres`)
 
 ```sql
 CREATE ROLE web_anon NOLOGIN;
 GRANT USAGE ON SCHEMA public TO web_anon;
 GRANT SELECT ON instrument_incertitude TO web_anon;
+GRANT web_anon TO mon_utilisateur;
 ```
 
 * créer le fichier de configuration
@@ -59,10 +63,10 @@ postgrest --version
 
 => PostgREST 11.2.0
 
-Lancer l'extension
+Lancer l'extension en arrière-plan
 
 ```sh
-postgrest postgrest.conf
+sudo nohup postgrest postgrest.conf &
 ```
 
 L'URL de la vue `instrument_incertitude` est ici (par défaut sur le port `3000`): http://157.136.252.188:3000/instrument_incertitude
