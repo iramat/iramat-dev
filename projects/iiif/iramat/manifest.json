@@ -26,6 +26,8 @@
                 "type": "Image",
                 "id": "http://157.136.252.188:8182/iiif/2/Seax_sample_process.tif/full/full/0/default.jpg",
                 "format": "image/jpeg",
+                "width": 4272,
+                "height": 1620,
                 "service": [
                   {
                     "@context": "http://iiif.io/api/image/2/context.json",
