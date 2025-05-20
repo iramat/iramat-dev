@@ -28,6 +28,7 @@
                 "format": "image/jpeg",
                 "service": [
                   {
+                    "@context": "http://iiif.io/api/image/2/context.json",
                     "id": "http://157.136.252.188:8182/iiif/2/Seax_sample_process.tif",
                     "type": "ImageService2",
                     "profile": "http://iiif.io/api/image/2/level2.json"
