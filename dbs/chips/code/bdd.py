@@ -188,6 +188,9 @@ def db_tabi(data_entry=None, table=None, separator=';', engine=None, verbose = T
   if verbose:
      print(query)
   data_to_i = pd.read_csv(data_entry, sep=';').columns
+  # TODO: error checks
+  df= pd.read_csv(data_entry, sep=';')
+  print(df.dtypes)
   print(f"table   i: {table__i}")
   print(f"data to i: {data_to_i}")
   try:
