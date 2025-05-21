@@ -218,6 +218,12 @@ def db_upsert(data_entry=None, table=None, separator=';', engine=None, verbose =
   :param separator: the field separator in the CSV, default: ";"
   :param engine: a Postgres connector created with the db_connect function
   :param verbose: verbose
+
+  :Example:
+  >>> root_path = "C:/Users/TH282424/Rprojects/iramat-test/"
+  >>> engine = db_connect(root_path + "credentials/pg_dev_credentials.json")
+  >>> db_upsert(data_entry= root_path + "dbs/chips/data/import_tableEchantillons_test.csv",
+                table="echantillons", separator = ',', engine=engine, verbose = True)
   """
   import pandas as pd
 
