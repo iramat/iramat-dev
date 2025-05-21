@@ -3,7 +3,9 @@
 ## Meeting 'BDD IRAMAT - discussion/choix du MCD'
 > 3 heures à choisir entre le 19/05 et le 30/05/25
 
+### Introduction
 
+Aller du plus simple au plus complexe
 
 ### Groupes de travail
 

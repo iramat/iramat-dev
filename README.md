@@ -1,13 +1,15 @@
 # iramat-test
 
-Test repository for development purpose. Back-end functions are hosted on the repo [iramat-test-functions](https://github.com/zoometh/iramat-test-functions)
+*Test repository* pour le développement. Les fonctions back-end sont hébergées dans le dépôt [iramat-test-functions](https://github.com/zoometh/iramat-test-functions).
 
-| databases          | description                               |
+| [BDDs](https://github.com/zoometh/iramat-test/tree/main/dbs)       | description                               |
 |--------------------|-------------------------------------|
-| [AeMA](dbs/aema)               |                               |
-| [CHIPS](dbs/chips)    |                            |
+| [AeMA](dbs/aema)   |   numismatique                            |
+| [CHIPS](dbs/chips) |   analyses physico-chimiques              |
 
-| projects           | description                               |
+
+
+| projets           | description                               |
 |--------------------|-------------------------------------|
 | [OCC](https://github.com/zoometh/iramat-test/tree/main/projects/occ)          |                              |
 

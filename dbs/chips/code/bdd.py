@@ -1,3 +1,5 @@
+# TODO: move everything to the function repository
+
 def db_connect(pg_creds = 'C:/Rprojects/iramat-test/credentials/pg_credentials.json', verbose = True):
   """
   Connect a database connection (engine)
@@ -19,7 +21,7 @@ def db_connect(pg_creds = 'C:/Rprojects/iramat-test/credentials/pg_credentials.j
 
 def db_query(query = "SELECT * FROM instrument_incertitude;", engine=None, verbose = True):
   """
-  Query a database
+  Query a database. Returns a pandas
 
   :param query: a SQL query, default: View 'instrument_incertitude'
   :param engine: a sqlalchemy.engine
@@ -127,9 +129,27 @@ def zn_metadata(meta_data = None, verbose = True):
   }
   return(metadata)
 
+def ref_dyntab(table=None, engine=None, excl_field=None, verbose = True):
+  """
+  Create a dynamic table from a Postgres table or view
+
+  :param table: the name of a table
+  :param engine: a Postgres connector created with the db_connect function
+  :param excl_field: the name of the fields that have to be excluded from the final output
+  :param verbose: verbose
+  """
+  import pandas as pd
+
+  conn = engine.raw_connection()
+  cur = conn.cursor()
+  if verbose:
+     pass
+  return None
+
+
 def db_tabi(data_entry=None, table=None, separator=';', engine=None, verbose = True):
   """
-  Manage the temporary table i
+  Manage the temporary table i. Used in the db_upsert() function.
 
   Lorem ispum (doc SQL)
 

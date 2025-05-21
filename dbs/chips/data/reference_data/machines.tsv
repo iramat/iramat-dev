@@ -1,0 +1,46 @@
+	laboratoire	methode_analyse	marque	modele
+0	LPS	MEB-EDS	Cambridge	Stereoscan 120
+1	LAPA	MEB-EDS	Jeol	7001-F
+2	CEB	MEB-EDS	Philips	ESEM XL40
+3	CEB	LA-ICP-MS	VG	Plasma Quad PQXS2
+4	CRPG	ICP-OES	Thermo Fisher Scientific	Icap 6500
+5	CRPG	ICP-MS	Science Perkin Elmer	ELAN 6000
+6	CEZ	MC-ICP-MS	VG	Axiom
+7	CEZ	NTIMS	Finnigan	MAT 261
+8	CEZ	INAA		Indéterminé
+9	LPS	INAA		
+10	GET	MC-ICP-MS	Thermofinningan	Neptune
+11	Centre d analyse minérale université Lausanne	WD-XRF	Philips	PW 1400
+12	University of Leicester - Geology Departement	WD-XRF	Rigaku	Primus IV
+13	School of Earth Ocean and Planetary Science - Cardiff University	ICP-OES		
+14	LPS	ICP-MS	Thermo Fisher Scientific	Electron X7
+15	CEB	LA-ICP-MS	Thermo Fisher Scientific	Element XR
+16	LMC	pXRF	Thermo Fisher Scientific	Niton XLt3 Goldd+
+17	LMC	pXRF	Thermo Fisher Scientific	Niton XLt 700
+18	University of Leicester - Geology Departement	ICP-MS	Thermo Fisher Scientific	iCAP-Qc
+19	ChemoStrat Ltd	ICP-MS	Thermo Fisher Scientific	XSERIES2
+20	ChemoStrat Ltd	WD-XRF	Bruker	S4
+21	ChemoStrat Ltd	ICP-OES	Thermo Fisher Scientific	Icap 7000 Series
+22	School of Earth Ocean and Planetary Science - Cardiff University	"ICP-MS
+"	Science Perkin Elmer	Elan 5000A
+23	School of Earth Ocean and Planetary Science - Cardiff University	MEB-EDS	Cambridge	S360
+24	Open University Earth Science Department	WD-XRF	Cameca	SX100
+25	CRPG	ICP-AES	Jobin-Yvon	70 T II
+26	CRPG	ICP-MS	Science Perkin Elmer	ELAN 5000
+27		wet chemical analysis	not specified	not specified
+28	Freie Universität Berlin	pXRF	Thermo Fisher Scientific	Niton XL3t
+29	Technical University of Denmark, Department of Metallurgy	MEB-EDS		EDAX9000
+30	School of Earth Ocean and Planetary Science - Cardiff University	ICP-MS	Thermo Fisher Scientific	X-Series
+31	School of Earth Ocean and Planetary Science - Cardiff University	WD-XRF	Philips	PW 1400
+32	MSA Labs Langley	ICP-MS	undetermined	undetermined
+33	MSA Labs Langley	ICP-MS and/or ICP-AES	undetermined	undetermined
+34	Unknown	Unknown	Unknown	Unknown
+35	ALS Chemex	ICP-MS	Unknown	ME-MS61
+36	ALS Chemex	ICP-MS 	Unknown	ME-MS81
+37	ALS Chemex	pXRF	Unknown	pXRF-30
+38	McMaster University	INAA	N/A	N/A
+39	Actlabs	ICP-MS	Unknown	Unknown
+40	Actlabs	ICP & INAA	Unknown	Unknown
+41	Department of Geoscience - University of Tübingen	WD-XRF	Bruker	AXS S4 Pioneer
+42	CEZ	MEB-EDS	Bruker	XFlash
+43	Dipartimento di Scienze della Terra - Università Pisa	ICP-MS	VG	PQII Plus
