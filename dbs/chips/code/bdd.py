@@ -180,8 +180,8 @@ def db_tabi(data_entry=None, table=None, separator=';', engine=None, verbose = T
   query = f"""
   SELECT column_name
   FROM information_schema.columns
- WHERE table_schema = 'public'
-   AND table_name   = '{table}'
+  WHERE table_schema = 'public'
+  AND table_name   = '{table}'
      ;"""
   table__i = cur.execute(query)
   conn.commit()
@@ -189,7 +189,7 @@ def db_tabi(data_entry=None, table=None, separator=';', engine=None, verbose = T
      print(query)
   data_to_i = pd.read_csv(data_entry, sep=';').columns
   # TODO: error checks
-  df= pd.read_csv(data_entry, sep=';')
+  # df= pd.read_csv(data_entry, sep=';')
   print(df.dtypes)
   print(f"table   i: {table__i}")
   print(f"data to i: {data_to_i}")

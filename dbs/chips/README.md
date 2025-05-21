@@ -68,8 +68,37 @@ Lancer l'extension en arrière-plan
 ```sh
 sudo nohup postgrest postgrest.conf &
 ```
-
 L'URL de la vue `instrument_incertitude` est ici (par défaut sur le port `3000`): http://157.136.252.188:3000/instrument_incertitude
+
+#### Lancer plusieurs PostgresREST
+> sur les BDD chips, chips_d, etc. 
+
+Créer un deuxième fichier de configuration
+
+```sh
+cd /etc/postgresql/11/main
+sudo nano postgrest_chips.conf
+```
+
+Dans `postgrest_chips.conf`, changer de port (`3000` -> `3001`):
+
+```
+db-uri = "postgres://mon_autre_utilisateur:mon_autre_password@localhost:5432/chips"
+db-schema = "public"
+db-anon-role = "web_anon"
+server-port = 3001
+```
+
+Lancer
+
+```sh
+sudo nohup postgrest postgrest_chips.conf &
+```
+
+Accéder: 
+
+[postgresql11.db.huma-num.fr:3001/instrument_incertitude](http://postgresql11.db.huma-num.fr:3001/instrument_incertitude)
+
 
 ### Tables
 
