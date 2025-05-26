@@ -1,3 +1,15 @@
+## Système d'information
+
+```mermaid
+flowchart TD
+    A[User Upload] --> B[ResourceSpace DAM]
+    B --> C[Object Storage (MinIO)]
+    C --> D[Cantaloupe IIIF Server]
+    C --> E[Metadata Extractor / Sync Service]
+    E --> F[IIIF Manifest Generator]
+    F --> G[Viewer (Mirador/UV)]
+```
+
 
 ## Modèle conceptuel
 
