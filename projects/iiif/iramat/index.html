@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Mirador Viewer</title>
+    <script src="dist/mirador.min.js"></script>
+  </head>
+  <body>
+    <div id="viewer" style="height: 100vh;"></div>
+    <script>
+      Mirador.viewer({
+        id: "viewer",
+        windows: [{
+          manifestId: "http://157.136.252.188/manifest.json", // <-- your IIIF manifest
+          thumbnailNavigationPosition: 'far-bottom',
+        }]
+      });
+    </script>
+  </body>
+</html>
