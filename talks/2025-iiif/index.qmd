@@ -1,6 +1,6 @@
 ---
-title: "IIIF"
-# subtitle: "in Central and Western Mediterranean, 6000-5000 BC"
+title: "Interopérabilité des données archéométriques"
+subtitle: "Développement informatique"
 author:
   - name: Thomas Huet
     affiliation: 
