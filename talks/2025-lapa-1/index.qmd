@@ -5,11 +5,11 @@ author:
   - name: Thomas Huet
     affiliation: 
       - id: cnrs
-        name: <span style="font-size:16pt">CNRS</span>
+        name: <span style="font-size:16pt">IRAMAT-CNRS</span>
 title-slide-attributes:
     data-background-image: "https://raw.githubusercontent.com/iramat/iramat-dev/master/img/met-bles-henri-copper-mines.jpg"
     data-background-size: "110%"
-    data-background-opacity: "0.3"
+    data-background-opacity: "0.5"
     data-notes: Lorem
 format:
   revealjs: 
@@ -85,7 +85,7 @@ Exemples de IIIF (_International Image Interoperability Framework_) disponibles 
 ![](https://raw.githubusercontent.com/zoometh/thomashuet/master/img/app-github-4.png){width="75" style="horizontal-align: middle;"}
 <small>
 
-L'IRAMAT a une organisation GitHub https://github.com/iramat avec plusieurs _repositories_: 
+L'IRAMAT a une organisation GitHub <https://github.com/iramat> avec différents _repositories_: 
 
 - [iramat-dev](https://github.com/iramat/iramat-dev) pour le développement informatique
 - [iramat-functions](https://github.com/iramat/iramat-functions) pour les fonctions Python (infrastructure)
@@ -99,7 +99,7 @@ L'IRAMAT a une organisation GitHub https://github.com/iramat avec plusieurs _rep
 
 :::
 
-## Juputer/Python
+## Jupyter/Python
 
 ::: columns
 
