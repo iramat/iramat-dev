@@ -1,0 +1,37 @@
+[
+  {
+    "objectID": "index.html#iiif",
+    "href": "index.html#iiif",
+    "title": "Développement informatique à l’IRAMAT",
+    "section": "IIIF",
+    "text": "IIIF\n\n\n\n\n\n\n \nExemples de IIIF (International Image Interoperability Framework) disponibles ici:\n\nhttp://157.136.252.188/iiif/seax.html\nhttp://157.136.252.188/iiif/puddled.html\nhttp://157.136.252.188/iiif/puddled_a.html\nhttp://157.136.252.188/iiif/corrosion.html"
+  },
+  {
+    "objectID": "index.html#github",
+    "href": "index.html#github",
+    "title": "Développement informatique à l’IRAMAT",
+    "section": "GitHub",
+    "text": "GitHub\n\n\n\n\n\n\n \nL’IRAMAT a une organisation GitHub https://github.com/iramat avec plusieurs repositories:\n\niramat-dev pour le développement informatique\niramat-functions pour les fonctions Python (infrastructure)\niRamat pour les fonctions R (analyse de données)\n\n⚠️ Attention: notre GitHub est public, ne pas partager des mots de passe, données personnelles, données confidentielles ou sous embargo, etc."
+  },
+  {
+    "objectID": "index.html#juputerpython",
+    "href": "index.html#juputerpython",
+    "title": "Développement informatique à l’IRAMAT",
+    "section": "Juputer/Python",
+    "text": "Juputer/Python\n\n\n\n\n\n\n  \nUn notebook Jupyter est accessible ici : IRAMAT BDDs.ipynb"
+  },
+  {
+    "objectID": "index.html#api",
+    "href": "index.html#api",
+    "title": "Développement informatique à l’IRAMAT",
+    "section": "API",
+    "text": "API\n\n\n\n\n\n\n \nLes BDDs CHIPS et AeMA ont des API RESTfull, par exemple:\n\nhttp://157.136.252.188:3000/instrument_incertitude\nhttps://aema.huma-num.fr/back/public/api/denominations"
+  },
+  {
+    "objectID": "index.html#zenodo",
+    "href": "index.html#zenodo",
+    "title": "Développement informatique à l’IRAMAT",
+    "section": "Zenodo",
+    "text": "Zenodo\n\n\n\n\n\n\n \nL’IRAMAT a une communauté Zenodo: https://zenodo.org/communities/iramat"
+  }
+]

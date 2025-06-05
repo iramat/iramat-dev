@@ -29,13 +29,13 @@ format:
     # self-contained: true
     # embed-resources: true
     # logo: https://raw.githubusercontent.com/zoometh/neonet/master/doc/img/neonet.png
-    footer: "Thomas Huet - <img src='https://raw.githubusercontent.com/iramat/iramat-dev/master/img/logo.png' style='height: 25px;vertical-align: middle;'> - Juin, 2025, LAPA, Saclay"
+    footer: "Thomas Huet - <img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/inst-cnrs-iramat.png' style='height: 25px;vertical-align: middle;'> - Juin, 2025, LAPA, Saclay"
     margin: 0
     width: 1200
 ---
 
 
-# L'ouverture des données sur le web {background-image="https://raw.githubusercontent.com/iramat/iramat-dev/master/img/met-bles-henri-copper-mines.jpg"}
+# L'ouverture des données sur le web 
 
 ::: notes
 Data: radiocarbon dates and palaeoclimatic data.
@@ -45,26 +45,24 @@ Data: radiocarbon dates and palaeoclimatic data.
 
 ::: columns
 
-::: {.column width="60%"}
+::: {.column width="50%"}
 ![](https://raw.githubusercontent.com/iramat/iramat-dev/master/img/iiif-puddled-info.png){width="550" style="horizontal-align: middle;"}
 \
 \
 
 :::
 
-::: {.column width="40%"}
-![](https://raw.githubusercontent.com/zoometh/thomashuet/master/img/lod-iso-iiif.png){width="50" style="horizontal-align: middle;"}
+::: {.column width="50%"}
+![](https://raw.githubusercontent.com/zoometh/thomashuet/master/img/lod-iso-iiif.png){width="75" style="horizontal-align: middle;"}
 <small>
 
 Exemples de IIIF (_International Image Interoperability Framework_) disponibles ici: 
 
-- http://157.136.252.188/iiif/seax.html
-- http://157.136.252.188/iiif/puddled.html
-- http://157.136.252.188/iiif/puddled_a.html
-- http://157.136.252.188/iiif/corrosion.html
+- <http://157.136.252.188/iiif/seax.html>
+- <http://157.136.252.188/iiif/puddled.html>
+- <http://157.136.252.188/iiif/puddled_a.html>
+- <http://157.136.252.188/iiif/corrosion.html>
 
-📌 **TODO**: activer les annotations, définir un système de gestion des images
-  
 </small>
 
 :::
@@ -76,15 +74,15 @@ Exemples de IIIF (_International Image Interoperability Framework_) disponibles 
 
 ::: columns
 
-::: {.column width="60%"}
+::: {.column width="50%"}
 ![](https://raw.githubusercontent.com/iramat/iramat-dev/master/img/github-iramat-org.png){width="550" style="horizontal-align: middle;"}
 \
 \
 
 :::
 
-::: {.column width="40%"}
-![](https://raw.githubusercontent.com/zoometh/thomashuet/master/img/app-github-4.png){width="50" style="horizontal-align: middle;"}
+::: {.column width="50%"}
+![](https://raw.githubusercontent.com/zoometh/thomashuet/master/img/app-github-4.png){width="75" style="horizontal-align: middle;"}
 <small>
 
 L'IRAMAT a une organisation GitHub https://github.com/iramat avec plusieurs _repositories_: 
@@ -105,19 +103,19 @@ L'IRAMAT a une organisation GitHub https://github.com/iramat avec plusieurs _rep
 
 ::: columns
 
-::: {.column width="60%"}
+::: {.column width="50%"}
 ![](https://raw.githubusercontent.com/iramat/iramat-dev/master/img/python-jupyter-ex1.png){width="550" style="horizontal-align: middle;"}
 \
 \
 
 :::
 
-::: {.column width="40%"}
-![](https://raw.githubusercontent.com/zoometh/thomashuet/master/img/app-prg-python-1.png){width="50" style="horizontal-align: middle;"}
-![](https://raw.githubusercontent.com/zoometh/thomashuet/master/img/app-prg-python-jupyter.png){width="50" style="horizontal-align: middle;"}
+::: {.column width="50%"}
+![](https://raw.githubusercontent.com/zoometh/thomashuet/master/img/app-prg-python-1.png){width="75" style="horizontal-align: middle;"}
+![](https://raw.githubusercontent.com/zoometh/thomashuet/master/img/app-prg-python-jupyter.png){width="75" style="horizontal-align: middle;"}
 <small>
 
-Un notebook Jupyter est accessible ici: https://colab.research.google.com/drive/1EHUO9JaBNLIyNdiHLCTtPAODgFhEvgcq
+Un notebook Jupyter est accessible ici : [IRAMAT BDDs.ipynb](https://colab.research.google.com/drive/1EHUO9JaBNLIyNdiHLCTtPAODgFhEvgcq)
 
 </small>
 
@@ -129,21 +127,21 @@ Un notebook Jupyter est accessible ici: https://colab.research.google.com/drive/
 
 ::: columns
 
-::: {.column width="60%"}
+::: {.column width="50%"}
 ![](https://raw.githubusercontent.com/iramat/iramat-dev/master/img/bdd-chips-api-ex1.png){width="550" style="horizontal-align: middle;"}
 \
 \
 
 :::
 
-::: {.column width="40%"}
-![](https://raw.githubusercontent.com/zoometh/thomashuet/master/img/web-api.jpeg){width="50" style="horizontal-align: middle;"}
+::: {.column width="50%"}
+![](https://raw.githubusercontent.com/zoometh/thomashuet/master/img/web-api.jpeg){width="75" style="horizontal-align: middle;"}
 <small>
 
 Les BDDs CHIPS et AeMA ont des API RESTfull, par exemple:
 
-- http://157.136.252.188:3000/instrument_incertitude
-- https://aema.huma-num.fr/back/public/api/denominations
+- <http://157.136.252.188:3000/instrument_incertitude>
+- <https://aema.huma-num.fr/back/public/api/denominations>
 
 </small>
 
@@ -155,18 +153,18 @@ Les BDDs CHIPS et AeMA ont des API RESTfull, par exemple:
 
 ::: columns
 
-::: {.column width="60%"}
+::: {.column width="50%"}
 ![](https://raw.githubusercontent.com/iramat/iramat-dev/master/img/zenodo-community-iramat.png){width="550" style="horizontal-align: middle;"}
 \
 \
 
 :::
 
-::: {.column width="40%"}
-![](https://raw.githubusercontent.com/zoometh/thomashuet/master/img/app-zenodo.png){width="50" style="horizontal-align: middle;"}
+::: {.column width="50%"}
+![](https://raw.githubusercontent.com/zoometh/thomashuet/master/img/app-zenodo.png){width="75" style="horizontal-align: middle;"}
 <small>
 
-L'IRAMAT a une communauté Zenodo: https://zenodo.org/communities/iramat
+L'IRAMAT a une communauté Zenodo: <https://zenodo.org/communities/iramat>
 
 
 </small>
