@@ -3,8 +3,12 @@
   "id": "http://157.136.252.188/iiif/manifest_puddled.json",
   "type": "Manifest",
   "label": {
-    "fr": ["Fer puddlé"],
-    "en": ["Puddled iron"]
+    "fr": [
+      "Fer puddlé"
+    ],
+    "en": [
+      "Puddled iron"
+    ]
   },
   "items": [
     {
@@ -39,32 +43,14 @@
               "target": "http://157.136.252.188/canvas/1"
             }
           ]
-        },
+        }
+      ],
+      "annotations": [
         {
           "id": "http://157.136.252.188/page/annotations/1",
-          "type": "AnnotationPage",
-          "items": [
-            {
-              "id": "http://157.136.252.188/annotation/user-note-1",
-              "type": "Annotation",
-              "motivation": "commenting",
-              "body": {
-                "type": "TextualBody",
-                "value": "This area shows corrosion patterns",
-                "format": "text/plain",
-                "language": "en"
-              },
-              "target": "http://157.136.252.188/canvas/1#xywh=1000,1000,500,500"
-            }
-          ]
+          "type": "AnnotationPage"
         }
       ]
-    }
-  ],
-  "annotations": [
-    {
-      "id": "http://157.136.252.188/page/annotations/1",
-      "type": "AnnotationPage"
     }
   ]
 }
