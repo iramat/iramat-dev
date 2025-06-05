@@ -11,14 +11,14 @@
     "href": "index.html#github",
     "title": "Développement informatique à l’IRAMAT",
     "section": "GitHub",
-    "text": "GitHub\n\n\n\n\n\n\n \nL’IRAMAT a une organisation GitHub https://github.com/iramat avec plusieurs repositories:\n\niramat-dev pour le développement informatique\niramat-functions pour les fonctions Python (infrastructure)\niRamat pour les fonctions R (analyse de données)\n\n⚠️ Attention: notre GitHub est public, ne pas partager des mots de passe, données personnelles, données confidentielles ou sous embargo, etc."
+    "text": "GitHub\n\n\n\n\n\n\n \nL’IRAMAT a une organisation GitHub https://github.com/iramat avec différents repositories:\n\niramat-dev pour le développement informatique\niramat-functions pour les fonctions Python (infrastructure)\niRamat pour les fonctions R (analyse de données)\n\n⚠️ Attention: notre GitHub est public, ne pas partager des mots de passe, données personnelles, données confidentielles ou sous embargo, etc."
   },
   {
-    "objectID": "index.html#juputerpython",
-    "href": "index.html#juputerpython",
+    "objectID": "index.html#jupyterpython",
+    "href": "index.html#jupyterpython",
     "title": "Développement informatique à l’IRAMAT",
-    "section": "Juputer/Python",
-    "text": "Juputer/Python\n\n\n\n\n\n\n  \nUn notebook Jupyter est accessible ici : IRAMAT BDDs.ipynb"
+    "section": "Jupyter/Python",
+    "text": "Jupyter/Python\n\n\n\n\n\n\n  \nUn notebook Jupyter est accessible ici : IRAMAT BDDs.ipynb"
   },
   {
     "objectID": "index.html#api",
