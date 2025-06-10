@@ -120,7 +120,7 @@ Le GitHub a été pensé pour être public: ne pas partager de mots de passe, do
 ![](https://raw.githubusercontent.com/zoometh/thomashuet/master/img/app-prg-python-jupyter.png){width="75" style="horizontal-align: middle;"}
 <small>
 
-Un notebook Jupyter est accessible ici : [IRAMAT BDDs.ipynb](https://colab.research.google.com/drive/1EHUO9JaBNLIyNdiHLCTtPAODgFhEvgcq)
+Un notebook Jupyter pour le développement du code informatique est accessible ici : [IRAMAT BDDs.ipynb](https://colab.research.google.com/drive/1EHUO9JaBNLIyNdiHLCTtPAODgFhEvgcq)
 
 </small>
 
@@ -143,7 +143,7 @@ Un notebook Jupyter est accessible ici : [IRAMAT BDDs.ipynb](https://colab.resea
 ![](https://raw.githubusercontent.com/zoometh/thomashuet/master/img/web-api.jpeg){width="75" style="horizontal-align: middle;"}
 <small>
 
-Les BDDs CHIPS et AeMA ont des API RESTfull, par exemple:
+Les BDDs [CHIPS](https://github.com/iramat/iramat-dev/tree/main/dbs/chips) et [AeMA](https://github.com/iramat/iramat-dev/tree/main/dbs/aema) ont des API RESTfull, par exemple:
 
 - <http://157.136.252.188:3000/instrument_incertitude>
 - <https://aema.huma-num.fr/back/public/api/denominations>
