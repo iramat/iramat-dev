@@ -13,3 +13,6 @@
 |--------------------|-------------------------------------|
 | [OCC](https://github.com/zoometh/iramat-test/tree/main/projects/occ)          |                              |
 
+## Présentation
+
+* 2025-06: [développements informatiques en cours](https://iramat.github.io/iramat-dev/talks/2025-lapa-1/pres/#/title-slide)
