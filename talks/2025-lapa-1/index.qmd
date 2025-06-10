@@ -177,3 +177,7 @@ L'IRAMAT a une communauté Zenodo: <https://zenodo.org/communities/iramat>
 :::
 
 :::
+
+# Contact
+
+<thomas.huet@cnrs.fr>
