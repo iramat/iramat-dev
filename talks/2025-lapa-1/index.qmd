@@ -75,14 +75,14 @@ Exemples de IIIF (_International Image Interoperability Framework_) disponibles 
 ::: columns
 
 ::: {.column width="50%"}
-![](https://raw.githubusercontent.com/iramat/iramat-dev/master/img/github-iramat-org.png){width="750" style="horizontal-align: middle;"}
+![](https://raw.githubusercontent.com/iramat/iramat-dev/master/img/github-iramat-org.png){width="550" style="horizontal-align: middle;"}
 \
 \
 
 :::
 
 ::: {.column width="50%"}
-![](https://raw.githubusercontent.com/zoometh/thomashuet/master/img/app-github-4.png){width="75" style="horizontal-align: middle;"}
+![](https://raw.githubusercontent.com/zoometh/thomashuet/master/img/app-github-4.png){width="100" style="horizontal-align: middle;"}
 <small>
 
 L'IRAMAT a une organisation GitHub <https://github.com/iramat> avec différents _repositories_: 
@@ -91,13 +91,18 @@ L'IRAMAT a une organisation GitHub <https://github.com/iramat> avec différents 
 - [iramat-functions](https://github.com/iramat/iramat-functions) pour les fonctions Python (infrastructure)
 - [iRamat](https://github.com/iramat/iRamat) pour les fonctions R (analyse de données)
 
-⚠️ **Attention**: notre GitHub est public, ne pas partager des mots de passe, données personnelles, données confidentielles ou sous embargo, etc.
+::: {.callout-warning}
+Le GitHub a été pensé pour être public: ne pas partager de mots de passe, données personnelles, confidentielles, sous embargo, etc.
+:::
   
 </small>
 
 :::
 
 :::
+
+
+
 
 ## Jupyter/Python
 
