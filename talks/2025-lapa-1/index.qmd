@@ -7,7 +7,7 @@ author:
       - id: cnrs
         name: <span style="font-size:16pt">IRAMAT-CNRS</span>
 title-slide-attributes:
-    data-background-image: "https://raw.githubusercontent.com/iramat/iramat-dev/master/img/met-bles-henri-copper-mines.jpg"
+    data-background-image: "https://raw.githubusercontent.com/iramat/iramat-dev/master/img/met-bles-henri-copper-mines-clipped.jpg"
     data-background-size: "110%"
     data-background-opacity: "0.5"
     data-notes: Lorem
