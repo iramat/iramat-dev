@@ -1,6 +1,6 @@
 ---
 title: "Développement informatique à l'IRAMAT"
-subtitle: "L'ouverture des données sur le web"
+subtitle: "Ouverture des données sur le web"
 author:
   - name: Thomas Huet
     affiliation: 
@@ -8,7 +8,7 @@ author:
         name: <span style="font-size:16pt">IRAMAT-CNRS</span>
 title-slide-attributes:
     data-background-image: "https://raw.githubusercontent.com/iramat/iramat-dev/master/img/met-bles-henri-copper-mines-clipped.jpg"
-    data-background-size: "110%"
+    data-background-size: "90%"
     data-background-opacity: "0.5"
     data-notes: Lorem
 format:
@@ -35,7 +35,7 @@ format:
 ---
 
 
-# L'ouverture des données sur le web 
+# Ouverture des données sur le web 
 
 ::: notes
 Data: radiocarbon dates and palaeoclimatic data.
@@ -75,7 +75,7 @@ Exemples de IIIF (_International Image Interoperability Framework_) disponibles 
 ::: columns
 
 ::: {.column width="50%"}
-![](https://raw.githubusercontent.com/iramat/iramat-dev/master/img/github-iramat-org.png){width="550" style="horizontal-align: middle;"}
+![](https://raw.githubusercontent.com/iramat/iramat-dev/master/img/github-iramat-org.png){width="750" style="horizontal-align: middle;"}
 \
 \
 
