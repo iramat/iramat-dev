@@ -109,6 +109,16 @@ La table `chips` est la table principale pour le stockage des données brutes et
 * description des champs: [chips_template_fields.tsv](https://github.com/zoometh/iramat-test/blob/main/dbs/chips/data/reference_data/chips_template_fields.tsv)
 
 
+### Vues
+> *Views*
+
+| préfixes    | description                         |
+|-------------|-------------------------------------|
+| dataset_*   |   jeux de données originaux         |
+| figarticle_*   |   données pour la création de graphiques         |
+| instrument_*   |   données sur le parc instrumental du labo         |
+
+
 ## Flux de travail
 
 ```mermaid

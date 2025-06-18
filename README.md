@@ -15,4 +15,4 @@
 
 ## Présentation
 
-* 2025-06: [développements informatiques en cours](https://iramat.github.io/iramat-dev/talks/2025-lapa-1/pres/#/title-slide)
+* 2025-06: [développements informatiques en cours](https://iramat.github.io/iramat-dev/talks/2025-lapa-1/pres)
