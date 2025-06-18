@@ -94,9 +94,97 @@ db_upsert(data_entry= root_path + "dbs/chips/data/import_tableEchantillons_test.
 
 ### PostgREST
 
+
+#### Installation
+> Installation de PostgREST
+
+PostgREST est une extension pour créer une API
+
+* Dans la BD elle-même, en SQL
+  - créer un nouveau rôle (`web_anon`)
+  - exposer la vue `instrument_incertitude` (API)
+  - accorder les droits de `web_anon` a `mon_utilisateur` (ex: utilisateur `postgres`)
+
+```sql
+CREATE ROLE web_anon NOLOGIN;
+GRANT USAGE ON SCHEMA public TO web_anon;
+GRANT SELECT ON instrument_incertitude TO web_anon;
+GRANT web_anon TO mon_utilisateur;
+```
+
+* créer le fichier de configuration
+
+```sh
+cd /etc/postgresql/11/main
+sudo nano postgrest.conf
+```
+
+Dans `postgrest.conf`:
+
+```
+db-uri = "postgres://mon_utilisateur:mon_password@localhost:5432/chips_d"
+db-schema = "public"
+db-anon-role = "web_anon"
+server-port = 3000
+```
+
+Importer et installer PostgREST v11.2 (pour PostgreSQL v11)
+
+```sh
+cd /usr/local/bin
+sudo wget https://github.com/PostgREST/postgrest/releases/download/v11.2.0/postgrest-v11.2.0-linux-static-x64.tar.xz
+sudo tar -xvf postgrest-v11.2.0-linux-static-x64.tar.xz 
+sudo chmod +x /usr/local/bin/postgrest
+```
+
+Tester la version:
+
+```sh
+postgrest --version
+```
+
+=> PostgREST 11.2.0
+
+Lancer l'extension en arrière-plan
+
+```sh
+sudo nohup postgrest postgrest.conf &
+```
+L'URL de la vue `instrument_incertitude` est ici (par défaut sur le port `3000`): http://157.136.252.188:3000/instrument_incertitude
+
+#### Lancer plusieurs instances
+> Lancer plusieurs PostgresREST sur les BDD chips, chips_d, etc. 
+
+Créer un deuxième fichier de configuration
+
+```sh
+cd /etc/postgresql/11/main
+sudo nano postgrest_chips.conf
+```
+
+Dans `postgrest_chips.conf`, changer de port (`3000` -> `3001`):
+
+```
+db-uri = "postgres://mon_autre_utilisateur:mon_autre_password@localhost:5432/chips"
+db-schema = "public"
+db-anon-role = "web_anon"
+server-port = 3001
+```
+
+Lancer
+
+```sh
+sudo nohup postgrest postgrest_chips.conf &
+```
+
+Accéder: 
+
+[postgresql11.db.huma-num.fr:3001/instrument_incertitude](http://postgresql11.db.huma-num.fr:3001/instrument_incertitude)
+
+
 #### Faire sortir une vue
 
-Soit `dataset_nom` le nom de la vue, faire Postgres:
+Soit `dataset_nom` le nom de la vue, dans Postgres faire:
 
 ```sql
 GRANT SELECT ON dataset_nom TO web_anon;
