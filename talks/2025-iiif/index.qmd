@@ -1,0 +1,62 @@
+---
+title: "Interopérabilité des données archéométriques"
+subtitle: "Développement informatique"
+author:
+  - name: Thomas Huet
+    affiliation: 
+      - id: cnrs
+        name: <span style="font-size:16pt">CNRS</span>
+# title-slide-attributes:
+#     data-background-image: "https://raw.githubusercontent.com/zoometh/neonet/master/doc/talks/2024-simep/img/bck-img-2.png"
+#     data-background-size: "110%"
+#     data-background-opacity: "0.3"
+#     data-notes: This presentation examines the spread of farming across the Central and Western North Mediterranean (from Italy to Portugal) between 6000 and 5000 BC using quantitative methods. Specifically, it employs the R neonet framework to analyze over 2,500 curated radiocarbon dates from the latest phases of the Mesolithic and the earliest phases of the Neolithic (Huet et al., 2022 and 2024), calculating the isochrones of the farming pioneer front and incorporating palaeoclimate reconstructions (via the R pastclim package). Although the granularity of our modeling does not allow for precise mapping of subregional ecozones (e.g., wetlands), the diffusion model clearly demonstrates that ecological barriers, such as latitudes and mountain ranges, significantly slowed the neolithization process. Furthermore, our framework offers substantial potential for reproducibility and enhances comparisons with previous models (e.g., Binder et al., 2019). The early farmer colonization of Southern Italy, around 6000 BC, aligns with the PPN (Pre-Pottery Neolithic) core model of neolithization, which posits early farming settlements in temperate climates with dry, hot summers ('Csa' in the Köppen Climate Classification). Once early farmers reached the Tyrrhenian Sea, between 5800 and 5600 BC, the process of 'leapfrog' colonization began, marked by Neolithic settlements established along the Mediterranean shore via seafaring, without prior continental continuity. From 5600 to 5000 BC, we observe the resilience of the latest foragers (Late Mesolithic), who became 'cornered' in the northwest of the Iberian Peninsula, particularly in regions such as Galicia, Asturias, and Cantabria.
+format:
+  revealjs: 
+    css: https://zoometh.github.io/thomashuet/css/quarto.css
+    controls: true
+    auto-stretch: false
+    code-fold: false
+    code-summary: "<small>Code</small>"
+    slide-number: true
+    chalkboard:
+      theme: "whiteboard"
+      color: ['rgba(255, 0, 0, 0.3)'] # red
+    scrollable: true
+    preview-links: auto
+    reference-location: document
+    footnotes-hover: true
+    # self-contained: true
+    # embed-resources: true
+    # logo: https://raw.githubusercontent.com/zoometh/neonet/master/doc/img/neonet.png
+    footer: "Thomas Huet - <img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/inst-cnrs-iramat.png' style='height: 25px;vertical-align: middle;'> -  May-June 2025"
+    margin: 0
+    width: 1200
+---
+
+
+# IIIF
+
+
+
+## Corrosion
+
+```{=html}
+<iframe width="1100" height="600" src="http://157.136.252.188/iiif/corrosion.html"></iframe>
+```
+
+## Fer puddlé
+
+```{=html}
+<iframe width="1100" height="600" src="http://157.136.252.188/iiif/puddled.html"></iframe>
+```
+
+## Motif soudé
+
+```{=html}
+<iframe width="1100" height="600" src="http://157.136.252.188/iiif/seax.html"></iframe>
+```
+
+
+
+

@@ -158,6 +158,7 @@ def db_tabi(data_entry=None, table=None, separator=';', engine=None, verbose = T
   :param verbose: verbose
   """
   import pandas as pd
+  import csv
 
   conn = engine.raw_connection()
   cur = conn.cursor()
@@ -180,14 +181,37 @@ def db_tabi(data_entry=None, table=None, separator=';', engine=None, verbose = T
   query = f"""
   SELECT column_name
   FROM information_schema.columns
- WHERE table_schema = 'public'
-   AND table_name   = '{table}'
+  WHERE table_schema = 'public'
+  AND table_name   = '{table}'
      ;"""
   table__i = cur.execute(query)
   conn.commit()
   if verbose:
      print(query)
-  data_to_i = pd.read_csv(data_entry, sep=';').columns
+  with open(data_entry, 'r', encoding='utf-8') as f:
+    # Read a sample of the file
+    # sample = f.read(2048)
+    # Use csv.Sniffer to detect the dialect (including delimiter)
+    sample = f.read(2048)  # Read sample as string
+    f.seek(0)  # Rewind so pandas can read from the beginning
+    sniffer = csv.Sniffer()
+    try:
+        dialect = sniffer.sniff(sample)
+        separator = dialect.delimiter
+    except csv.Error:
+        raise ValueError("Could not auto-detect the CSV delimiter.")
+  if verbose:
+    print(f"Auto-detected separator: '{separator}'")
+  data_to_i = pd.read_csv(data_entry, sep=separator).columns
+  # try:
+  #   data_to_i = pd.read_csv(data_entry, sep=separator).columns
+  #   if data_to_i.shape[1] == 1:
+  #     raise ValueError("CSV appears to have only one column. The separator may be incorrect.")
+  # except Exception as e:
+  #   print(f"Error reading CSV: {e}")
+  # TODO: error checks
+  df= pd.read_csv(data_entry, sep=separator)
+  print(df.dtypes)
   print(f"table   i: {table__i}")
   print(f"data to i: {data_to_i}")
   try:
@@ -195,7 +219,8 @@ def db_tabi(data_entry=None, table=None, separator=';', engine=None, verbose = T
       if verbose:
            print(f.readline())  # Try reading first line to test access
       cur.copy_expert(
-          f"COPY i FROM STDIN WITH (FORMAT csv, DELIMITER '{separator}', HEADER TRUE)", f
+          f"COPY i FROM STDIN WITH (FORMAT csv, DELIMITER '{separator}')", f
+          # f"COPY i FROM STDIN WITH (FORMAT csv, DELIMITER '{separator}', HEADER TRUE)", f
       )
       conn.commit()
     if verbose:
@@ -213,11 +238,17 @@ def db_upsert(data_entry=None, table=None, separator=';', engine=None, verbose =
 
   Lorem ispum (doc SQL)
 
-  :param data_entry: a CSV file
+  :param data_entry: a CSV file path
   :param table: the name of a table
   :param separator: the field separator in the CSV, default: ";"
   :param engine: a Postgres connector created with the db_connect function
   :param verbose: verbose
+
+  :Example:
+  >>> root_path = "C:/Users/TH282424/Rprojects/iramat-test/"
+  >>> engine = db_connect(root_path + "credentials/pg_dev_credentials.json")
+  >>> db_upsert(data_entry= root_path + "dbs/chips/data/import_tableEchantillons_test.csv",
+                table="echantillons", separator = ',', engine=engine, verbose = True)
   """
   import pandas as pd
 

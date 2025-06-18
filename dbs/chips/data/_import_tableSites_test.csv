@@ -1,0 +1,5 @@
+id_site;id_localite;nom_site;centroid;srid;longitude;latitude;date_debut;date_fin;doute_date;points;key_periodo;key_periodo2
+1;102256;Cacadoie;false;4326;1.0001;1.0001;-5000;5000;true;;http://n2t.net/ark:/99152/p02chr4964n;
+1000;61139;NouveauSite0;false;4326;10.0001;10.0001;10;20;;;http://n2t.net/ark:/99152/p02chr4964n;
+1770;61738;NouveauSite1;true;4326;9.9344;49.7682;-550;-450;;;http://n2t.net/ark:/99152/p02chr4hm5d;
+1771;101490;NouveauSite2;true;4326;44.4041;3.4289;-50;100;;;http://n2t.net/ark:/99152/p02chr4hm5d;

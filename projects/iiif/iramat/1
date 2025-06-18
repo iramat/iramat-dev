@@ -1,0 +1,21 @@
+"annotations": [
+  {
+    "@context": "http://iiif.io/api/presentation/3/context.json",
+    "id": "http://157.136.252.188/page/annotations/1",
+    "type": "AnnotationPage",
+    "items": [
+      {
+        "id": "http://157.136.252.188/annotation/user-note-1",
+        "type": "Annotation",
+        "motivation": "commenting",
+        "body": {
+          "type": "TextualBody",
+          "value": "This area shows corrosion patterns",
+          "format": "text/plain",
+          "language": "en"
+        },
+        "target": "http://157.136.252.188/canvas/1#xywh=1000,1000,500,500"
+      }
+    ]
+  }
+]
