@@ -1,0 +1,4 @@
+id_ech,id_site,id_typo,nom_ech,referent,type_metal,bibreference,bibreference2,commentaire
+1,180,28,Cacadoie1XXXX,80,Fe,9,,test dUpsert - mise a jour
+7202,179,1,nouveauXXXXXXXXXXXXXXX,68,Fe,10,,test dUpsert - mise a jour
+7204,179,1,nouveaunouveau,68,Fe,,,test dUpsert - insertion
