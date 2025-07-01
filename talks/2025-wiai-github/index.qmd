@@ -1,0 +1,180 @@
+---
+title: "🧮 WIAI - GitHub"
+subtitle: "Webinaires de l'Informatique pour l'Archéologie à l'IRAMAT"
+author:
+  - name: Thomas Huet
+    affiliation: 
+      - id: cnrs
+        name: <span style="font-size:16pt">IRAMAT-CNRS</span>
+title-slide-attributes:
+    data-background-image: "https://raw.githubusercontent.com/iramat/iramat-dev/master/img/met-bles-henri-copper-mines-clipped.jpg"
+    data-background-size: "90%"
+    data-background-opacity: "0.5"
+    data-notes: Lorem
+format:
+  revealjs: 
+    css: https://zoometh.github.io/thomashuet/css/quarto.css
+    controls: true
+    auto-stretch: false
+    code-fold: false
+    code-summary: "<small>Code</small>"
+    slide-number: true
+    chalkboard:
+      theme: "whiteboard"
+      color: ['rgba(255, 0, 0, 0.3)'] # red
+    scrollable: true
+    preview-links: auto
+    reference-location: document
+    footnotes-hover: true
+    # self-contained: true
+    # embed-resources: true
+    # logo: https://raw.githubusercontent.com/zoometh/neonet/master/doc/img/neonet.png
+    footer: "Thomas Huet - <img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/inst-cnrs-iramat.png' style='height: 25px;vertical-align: middle;'> - 08 Juillet, 2025, LAPA, Saclay"
+    margin: 0
+    width: 1200
+---
+
+# Introduction<br>générale
+
+
+## Les séries WIAI
+
+
+Webinaire, le 2e mardi de chaque mois sur ZOOM, le matin entre 10h00 et 10h50 (50 minutes), sur un thème lié aux technologies de l'information pour l'archéologie et l'archéométrie: GitHub, Python et R, IIIF, etc. L'objectif est de faire découvrir, ou d'approfondir, une solution logicielle open-source en revenant sur l'histoire de ce logiciel, sa logique interne, ...
+
+
+![](https://raw.githubusercontent.com/zoometh/thomashuet/master/img/app-prg-python.png){width="75" style="horizontal-align: middle;"}
+![](https://raw.githubusercontent.com/zoometh/thomashuet/master/img/app-github-3.png){width="75" style="horizontal-align: middle;"}
+![](https://raw.githubusercontent.com/zoometh/thomashuet/master/img/prog-r-1.png){width="75" style="horizontal-align: middle;"}
+![](https://raw.githubusercontent.com/zoometh/thomashuet/master/img/lod-iso-iiif.png){width="75" style="horizontal-align: middle;"}
+![](https://raw.githubusercontent.com/zoometh/thomashuet/master/img/web-api.jpeg){width="75" style="horizontal-align: middle;"}
+
+## Plan de la présentation
+
+
+# Git
+
+## Et GitLab?
+
+
+# GitHub
+
+## Repositories
+
+app-github-repo-ex.jpeg
+
+## Users
+
+app-github-user-ex.jpeg
+
+## Organisation
+
+::: columns
+
+::: {.column width="50%"}
+app-github-org-ex.jpeg.jpeg
+\
+\
+
+:::
+
+::: {.column width="50%"}
+![](https://raw.githubusercontent.com/zoometh/thomashuet/master/img/app-github-4.png){width="100" style="horizontal-align: middle;"}
+<small>
+
+L'IRAMAT a une organisation GitHub <https://github.com/iramat> avec différents _repositories_: 
+
+- [iramat-dev](https://github.com/iramat/iramat-dev) pour le développement informatique
+- [iramat-functions](https://github.com/iramat/iramat-functions) pour les fonctions Python (infrastructure)
+- [iRamat](https://github.com/iramat/iRamat) pour les fonctions R (analyse de données)
+
+::: {.callout-warning}
+Le GitHub a été pensé pour être public: ne pas partager de mots de passe, données personnelles, confidentielles, sous embargo, etc.
+:::
+  
+</small>
+
+:::
+
+:::
+
+
+
+
+## Jupyter/Python
+
+::: columns
+
+::: {.column width="50%"}
+![](https://raw.githubusercontent.com/iramat/iramat-dev/master/img/python-jupyter-ex1.png){width="550" style="horizontal-align: middle;"}
+\
+\
+
+:::
+
+::: {.column width="50%"}
+![](https://raw.githubusercontent.com/zoometh/thomashuet/master/img/app-prg-python-1.png){width="75" style="horizontal-align: middle;"}
+![](https://raw.githubusercontent.com/zoometh/thomashuet/master/img/app-prg-python-jupyter.png){width="75" style="horizontal-align: middle;"}
+<small>
+
+Un notebook Jupyter pour le développement du code informatique est accessible ici : [IRAMAT BDDs.ipynb](https://colab.research.google.com/drive/1EHUO9JaBNLIyNdiHLCTtPAODgFhEvgcq)
+
+</small>
+
+:::
+
+:::
+
+## API
+
+::: columns
+
+::: {.column width="50%"}
+![](https://raw.githubusercontent.com/iramat/iramat-dev/master/img/bdd-chips-api-ex1.png){width="550" style="horizontal-align: middle;"}
+\
+\
+
+:::
+
+::: {.column width="50%"}
+![](https://raw.githubusercontent.com/zoometh/thomashuet/master/img/web-api.jpeg){width="75" style="horizontal-align: middle;"}
+<small>
+
+Les BDDs [CHIPS](https://github.com/iramat/iramat-dev/tree/main/dbs/chips) et [AeMA](https://github.com/iramat/iramat-dev/tree/main/dbs/aema) ont des API RESTfull, par exemple:
+
+- <http://157.136.252.188:3000/instrument_incertitude>
+- <https://aema.huma-num.fr/back/public/api/denominations>
+
+</small>
+
+:::
+
+:::
+
+## Zenodo
+
+::: columns
+
+::: {.column width="50%"}
+![](https://raw.githubusercontent.com/iramat/iramat-dev/master/img/zenodo-community-iramat.png){width="550" style="horizontal-align: middle;"}
+\
+\
+
+:::
+
+::: {.column width="50%"}
+![](https://raw.githubusercontent.com/zoometh/thomashuet/master/img/app-zenodo.png){width="75" style="horizontal-align: middle;"}
+<small>
+
+L'IRAMAT a une communauté Zenodo: <https://zenodo.org/communities/iramat>
+
+
+</small>
+
+:::
+
+:::
+
+# Contact
+
+<thomas.huet@cnrs.fr>
