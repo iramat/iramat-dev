@@ -83,13 +83,12 @@ Découvrir -- ou approfondir -- une solution logicielle open-source en revenant 
 
 ## Intro
 
-Git <img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/app-git.png' style='height: 45px;vertical-align: middle;'> est un __logiciel de gestion de versions décentralisé__[^1] originallement créé par Linus Torvalds pour le contrôle de version dans le développement du noyau Linux.
-<img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/app-os-linux.jpg' style='height: 45px;vertical-align: middle;'>
 
 :::: {.columns}
 
 ::: {.column width="65%"}
-
+Git <img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/app-git.png' style='height: 45px;vertical-align: middle;'> est un __logiciel de gestion de versions décentralisé__[^1] originallement créé par Linus Torvalds pour le contrôle de version dans le développement du noyau Linux.
+<img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/app-os-linux.jpg' style='height: 45px;vertical-align: middle;'>
 :::
 
 ::: {.column width="35%"}

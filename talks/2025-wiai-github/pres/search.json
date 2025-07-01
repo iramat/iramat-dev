@@ -18,14 +18,14 @@
     "href": "index.html#intro",
     "title": "🧮 WIAI - GitHub",
     "section": "Intro",
-    "text": "Intro\nGit  est un logiciel de gestion de versions décentralisé1 originallement créé par Linus Torvalds pour le contrôle de version dans le développement du noyau Linux. \n\n\n\n\n\n\nLinus Torvalds, “Git is not designed to make you happy. It’s designed to make other people happy after you’ve screwed things up”  (c) Lf Asia"
+    "text": "Intro\n\n\nGit  est un logiciel de gestion de versions décentralisé1 originallement créé par Linus Torvalds pour le contrôle de version dans le développement du noyau Linux. \n\n\n\nLinus Torvalds, “Git is not designed to make you happy. It’s designed to make other people happy after you’ve screwed things up” (c) Lf Asia"
   },
   {
     "objectID": "index.html#logique",
     "href": "index.html#logique",
     "title": "🧮 WIAI - GitHub",
     "section": "Logique",
-    "text": "Logique\nDécentralisé, versionnage et copies locales\n\nlocal vs online (et .gitignore). Dossier caché (.git) en local, push vers un serveur distant[^2]: (GitHub) branches Pull Request (PR) et merge"
+    "text": "Logique\n\nDécentraliséVersionnageCopies locales\n\n\n\n\n\n\ngit add .; git commit -m 'varia' ; git push \n\n\napp-git-ill1.png app-git-ill2.png\n\nlocal vs online (et .gitignore). Dossier caché (.git) en local, push vers un serveur distant[^2]: (GitHub) branches Pull Request (PR) et merge\n\n\nEt GitLab?\n\n\nGitHub\n\n\n\nSchéma\nRepositories, Users, Organisation\n\n\nRepositories\n\n\n\nUsers\n\n\n\nOrganisation\n\n\n\n\n\n\n\n \nL’IRAMAT a une organisation GitHub https://github.com/iramat avec différents repositories:\n\niramat-dev pour le développement informatique\niramat-functions pour les fonctions Python (infrastructure)\niRamat pour les fonctions R (analyse de données)\n\n\n\n\n\n\n\nWarning\n\n\nLe GitHub a été pensé pour être public: ne pas partager de mots de passe, données personnelles, confidentielles, sous embargo, etc.\n\n\n\n\n\n\n\nAPI\n\n\n\n\n\n\n \nLes BDDs CHIPS et AeMA ont des API RESTfull, par exemple:\n\nhttp://157.136.252.188:3000/instrument_incertitude\nhttps://aema.huma-num.fr/back/public/api/denominations\n\n\n\n\n\nZenodo\n\n\n\n\n\n\n \nL’IRAMAT a une communauté Zenodo: https://zenodo.org/communities/iramat\n\n\n\n\nAllez plus loin\n\nhttps://github.com/sslarch/caa2022_GitGitHub_workshop/tree/main\n\n\n\n\nContact\nthomas.huet@cnrs.fr"
   },
   {
     "objectID": "index.html#et-gitlab",
