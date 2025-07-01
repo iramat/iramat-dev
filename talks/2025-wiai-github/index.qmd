@@ -52,6 +52,7 @@ Webinaire, le 2e mardi de chaque mois sur ZOOM, le matin entre 10h00 et 10h50 (5
 ## Plan de la présentation
 
 
+
 # Git
 
 ## Et GitLab?
@@ -100,30 +101,6 @@ Le GitHub a été pensé pour être public: ne pas partager de mots de passe, do
 
 
 
-
-## Jupyter/Python
-
-::: columns
-
-::: {.column width="50%"}
-![](https://raw.githubusercontent.com/iramat/iramat-dev/master/img/python-jupyter-ex1.png){width="550" style="horizontal-align: middle;"}
-\
-\
-
-:::
-
-::: {.column width="50%"}
-![](https://raw.githubusercontent.com/zoometh/thomashuet/master/img/app-prg-python-1.png){width="75" style="horizontal-align: middle;"}
-![](https://raw.githubusercontent.com/zoometh/thomashuet/master/img/app-prg-python-jupyter.png){width="75" style="horizontal-align: middle;"}
-<small>
-
-Un notebook Jupyter pour le développement du code informatique est accessible ici : [IRAMAT BDDs.ipynb](https://colab.research.google.com/drive/1EHUO9JaBNLIyNdiHLCTtPAODgFhEvgcq)
-
-</small>
-
-:::
-
-:::
 
 ## API
 
@@ -174,6 +151,10 @@ L'IRAMAT a une communauté Zenodo: <https://zenodo.org/communities/iramat>
 :::
 
 :::
+
+## Allez plus loin
+
+* https://github.com/sslarch/caa2022_GitGitHub_workshop/tree/main
 
 # Contact
 
