@@ -1,6 +1,6 @@
 ---
 title: "🧮 WIAI - GitHub"
-subtitle: "Webinaires de l'Informatique pour l'Archéologie à l'IRAMAT"
+subtitle: "Webinaires de l'Informatique pour l'Archéométrie à l'IRAMAT"
 author:
   - name: Thomas Huet
     affiliation: 
@@ -37,12 +37,12 @@ format:
 # Introduction<br>générale
 
 
-## Les séries WIAI
+## La série WIAI
 
 :::: {.columns}
 ::: {.column width="65%"}
 
-Webinaire sur un thème lié aux technologies de l'information pour l'archéologie et l'archéométrie:  <br>
+Webinaire dédié aux technologies de l'information pour l'archéométrie:  <br>
 GitHub <img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/app-github.png' style='height: 45px;vertical-align: middle;'>, Python
 <img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/app-prg-python-2.png' style='height: 45px;vertical-align: middle;'>, R
 <img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/prog-r-1.png' style='height: 45px;vertical-align: middle;'>, API 
@@ -87,20 +87,50 @@ Découvrir -- ou approfondir -- une solution logicielle open-source en revenant 
 :::: {.columns}
 
 ::: {.column width="65%"}
-Git <img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/app-git.png' style='height: 45px;vertical-align: middle;'> est un __logiciel de gestion de versions décentralisé__[^1] originallement créé par Linus Torvalds pour le contrôle de version dans le développement du noyau Linux.
-<img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/app-os-linux.jpg' style='height: 45px;vertical-align: middle;'>
+Git <img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/app-git.png' style='height: 40px;vertical-align: middle;'> est un __logiciel de gestion de versions décentralisé__[^1] originallement créé par Linus Torvalds pour le contrôle de version dans le développement du noyau Linux
+<img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/app-os-linux.jpg' style='height: 45px;vertical-align: middle;'>.
 :::
 
 ::: {.column width="35%"}
 
 ![](https://upload.wikimedia.org/wikipedia/commons/e/e8/Lc3_2018_%28263682303%29_%28cropped%29.jpeg){width="300" style="vertical-align: middle;"}
-<div class="captiontext">Linus Torvalds, _"Git is not designed to make you happy. It’s designed to make other people happy after you’ve screwed things up"_ (c) Lf Asia </div>
+<div class="captiontext">, , (c) Lf Asia </div>
 :::
 
-:::
+::::
 
 
 [^1]: _distributed version control system_
+
+## Décentralisé, ...
+
+:::: {.columns}
+
+::: {.column width="65%"}
+<img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/app-git-workflow.png' style='width: 600px;vertical-align: middle;'>
+:::
+
+::: {.column width="35%"}
+
+Mettre la copie du serveur distant à jour:
+
+```{.sh}
+git add .
+git commit -m 'varia'
+git push 
+```
+
+Mettre la copie du serveur distant à jour:
+
+```{.sh}
+git add .
+git commit -m 'varia'
+git push 
+```
+
+:::
+
+::::
 
 ## Logique
 
@@ -108,23 +138,23 @@ Git <img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/ap
 
 ### Décentralisé
 
+Branches
 
+app-git-pr
 
 ### Versionnage
 
+Historique des _commit_[^3]
 
-<img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/app-git-workflow.png' style='height: 500px;vertical-align: middle;'>
+<img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/app-git-ill1.png' style='width: 800px;vertical-align: middle;'>
 
-```git
-git add .; git commit -m 'varia' ; git push 
-```
+[^3]: Commit history
 
 ### Copies locales
 
-app-git-ill1.png
-app-git-ill2.png
 
 
+:::
 
 ::: {.notes}
 local _vs_ online (et `.gitignore`). Dossier caché (`.git`) en local, push vers un __serveur distant__[^2]: (GitHub)
@@ -132,10 +162,27 @@ branches
 Pull Request (PR) et merge
 :::
 
-[^1]: _remote server_
+[^2]: _remote server_
 
 
-## Et GitLab?
+## Git en résumé
+
+:::: {.columns}
+
+::: {.column width="35%"}
+
+<img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/app-git-ill1-2.png' style='width: 600px;vertical-align: middle;'>
+:::
+
+
+::: {.column width="65%"}
+<img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/app-git-ill2.png' style='width: 600px;vertical-align: middle;'>
+:::
+
+:::
+<div class="captiontext">
+_"Git is not designed to make you happy. It’s designed to make other people happy after you’ve screwed things up"_ -- Linus Torvalds
+</div>
 
 
 # GitHub
@@ -239,6 +286,10 @@ L'IRAMAT a une communauté Zenodo: <https://zenodo.org/communities/iramat>
 :::
 
 :::
+
+# GitHub à l'IRAMAT?
+
+# Et GitLab?
 
 ## Allez plus loin
 
