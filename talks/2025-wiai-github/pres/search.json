@@ -11,28 +11,28 @@
     "href": "index.html#plan-de-la-présentation",
     "title": "🧮 WIAI - GitHub",
     "section": "Plan de la présentation",
-    "text": "Plan de la présentation\n\nGit\nGitHub\nGitHub à l’IRAMAT (discussion)"
+    "text": "Plan de la présentation\n\nGit \nGitHub \nGitHub à l’IRAMAT  \nEt GitLab  ?\nDiscussion"
   },
   {
     "objectID": "index.html#intro",
     "href": "index.html#intro",
     "title": "🧮 WIAI - GitHub",
     "section": "Intro",
-    "text": "Intro\n\n\nGit  est un logiciel de gestion de versions décentralisé1 originallement créé par Linus Torvalds pour le contrôle de version dans le développement du noyau Linux .\n\n\n\n, , (c) Lf Asia"
+    "text": "Intro\n\n\nGit  est un logiciel de gestion de versions décentralisé1 originallement créé par Linus Torvalds pour le contrôle de version dans le développement du noyau Linux . \n\n\n\n\n\n\nNote\n\n\nUn dépôt local2 ou distant3 est un système de dossiers et fichiers4 conservant sont propre historique (fichier caché .git) et un lien vers le dépôt (local ou distant).\n\n\n\n\n\n\nLinus Torvalds en 2018 (c) Lf Asia"
   },
   {
     "objectID": "index.html#décentralisé",
     "href": "index.html#décentralisé",
     "title": "🧮 WIAI - GitHub",
     "section": "Décentralisé, …",
-    "text": "Décentralisé, …\n\n\n\n\nMettre la copie du serveur distant à jour:\ngit add .\ngit commit -m 'varia'\ngit push \nMettre la copie du serveur distant à jour:\ngit add .\ngit commit -m 'varia'\ngit push"
+    "text": "Décentralisé, …\n\n\n\n\nMettre la copie du dépôt distant5 à jour:\ngit add .\ngit commit -m 'varia'\ngit push \nMettre la copie du dépôt local6 à jour:\ngit pull\ngit checkout"
   },
   {
     "objectID": "index.html#logique",
     "href": "index.html#logique",
     "title": "🧮 WIAI - GitHub",
     "section": "Logique",
-    "text": "Logique\n\nDécentraliséVersionnageCopies locales\n\n\nBranches\napp-git-pr\n\n\nHistorique des commit2\n\n\n\n\n\n\n\n\nlocal vs online (et .gitignore). Dossier caché (.git) en local, push vers un serveur distant3: (GitHub) branches Pull Request (PR) et merge"
+    "text": "Logique\n\nDécentraliséVersionnageCopies locales\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nHistorique des commit7\n\n\n\n\n\n\n\n\nlocal vs online (et .gitignore). Dossier caché (.git) en local, push vers un serveur distant8: (GitHub) branches Pull Request (PR) et merge"
   },
   {
     "objectID": "index.html#git-en-résumé",
@@ -42,11 +42,11 @@
     "text": "Git en résumé\n\n\n\n\n\n\n\n“Git is not designed to make you happy. It’s designed to make other people happy after you’ve screwed things up” – Linus Torvalds"
   },
   {
-    "objectID": "index.html#schéma",
-    "href": "index.html#schéma",
+    "objectID": "index.html#intro-1",
+    "href": "index.html#intro-1",
     "title": "🧮 WIAI - GitHub",
-    "section": "Schéma",
-    "text": "Schéma\nRepositories, Users, Organisation"
+    "section": "Intro",
+    "text": "Intro\nGitHub  une des principales plate-forme web propriétaire (🔒, hébergement cloud Microsoft ) pour les projets open source de développement d’applications informatiques utilisant \nRepositories, Users, Organisation"
   },
   {
     "objectID": "index.html#repositories",
@@ -67,34 +67,27 @@
     "href": "index.html#organisation",
     "title": "🧮 WIAI - GitHub",
     "section": "Organisation",
-    "text": "Organisation\n\n\n\n\n\n\n\n \nL’IRAMAT a une organisation GitHub https://github.com/iramat avec différents repositories:\n\niramat-dev pour le développement informatique\niramat-functions pour les fonctions Python (infrastructure)\niRamat pour les fonctions R (analyse de données)\n\n\n\n\n\n\n\nWarning\n\n\nLe GitHub a été pensé pour être public: ne pas partager de mots de passe, données personnelles, confidentielles, sous embargo, etc."
+    "text": "Organisation"
   },
   {
-    "objectID": "index.html#api",
-    "href": "index.html#api",
+    "objectID": "index.html#issues",
+    "href": "index.html#issues",
     "title": "🧮 WIAI - GitHub",
-    "section": "API",
-    "text": "API\n\n\n\n\n\n\n \nLes BDDs CHIPS et AeMA ont des API RESTfull, par exemple:\n\nhttp://157.136.252.188:3000/instrument_incertitude\nhttps://aema.huma-num.fr/back/public/api/denominations"
+    "section": "Issues",
+    "text": "Issues"
   },
   {
-    "objectID": "index.html#zenodo",
-    "href": "index.html#zenodo",
+    "objectID": "index.html#gitlab",
+    "href": "index.html#gitlab",
     "title": "🧮 WIAI - GitHub",
-    "section": "Zenodo",
-    "text": "Zenodo\n\n\n\n\n\n\n \nL’IRAMAT a une communauté Zenodo: https://zenodo.org/communities/iramat"
-  },
-  {
-    "objectID": "index.html#allez-plus-loin",
-    "href": "index.html#allez-plus-loin",
-    "title": "🧮 WIAI - GitHub",
-    "section": "Allez plus loin",
-    "text": "Allez plus loin\n\nhttps://github.com/sslarch/caa2022_GitGitHub_workshop/tree/main"
+    "section": "GitLab",
+    "text": "GitLab\nGitLab  est une plateforme indépendante (🔓, GitLab Inc.) avec un hébergement cloud ou un auto-hébergement, pour les projets [open source] de développement d’applications informatiques utilisant ."
   },
   {
     "objectID": "index.html#footnotes",
     "href": "index.html#footnotes",
     "title": "🧮 WIAI - GitHub",
     "section": "Footnotes",
-    "text": "Footnotes\n\n\ndistributed version control system\nCommit history\nremote server"
+    "text": "Footnotes\n\n\ndistributed version control system\nremote repo ou remote repository\nlocal repo ou local repository\nfile/folder structure\nremote repo ou remote repository\nlocal repo ou local repository\nCommit history\nremote server"
   }
 ]

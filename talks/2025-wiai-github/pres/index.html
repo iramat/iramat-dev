@@ -239,7 +239,7 @@ Thomas Huet
 </div><div class="column" style="width:35%;">
 <img data-src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/Charles_Babbage_-_1860.jpg/800px-Charles_Babbage_-_1860.jpg" style="vertical-align: middle;" width="300">
 <div class="captiontext">
-Charles Babbage, <em>“I wish God these calculations had been done by stream”</em> – 1821 <img src="https://raw.githubusercontent.com/zoometh/thomashuet/master/img/lod-licences-publicdomain-1.png" style="height: 20px;vertical-align: middle;"> Wikipedia
+Charles Babbage, <em>“I wish God these calculations had been done by stream”</em> – 1821 <img src="https://raw.githubusercontent.com/zoometh/thomashuet/master/img/lod-licences-publicdomain-1.png" style="height: 15px;vertical-align: middle;"> Wikipedia
 </div>
 </div></div>
 <aside class="notes">
@@ -256,13 +256,15 @@ Charles Babbage, <em>“I wish God these calculations had been done by stream”
           display:block!important;
       }</style></aside>
 </section>
-<section id="plan-de-la-présentation" class="slide level2">
+<section id="plan-de-la-présentation" class="slide level2 scrollable">
 <h2>Plan de la présentation</h2>
-<ul>
-<li>Git</li>
-<li>GitHub</li>
-<li>GitHub à l’IRAMAT (discussion)</li>
-</ul>
+<ol type="1">
+<li>Git <img src="https://raw.githubusercontent.com/zoometh/thomashuet/master/img/app-git-1.png" style="height: 40px;vertical-align: middle;"></li>
+<li>GitHub <img src="https://raw.githubusercontent.com/zoometh/thomashuet/master/img/app-github.png" style="height: 40px;vertical-align: middle;"></li>
+<li>GitHub à l’IRAMAT <img src="https://raw.githubusercontent.com/zoometh/thomashuet/master/img/app-github.png" style="height: 40px;vertical-align: middle;"> <img src="https://raw.githubusercontent.com/iramat/iramat-dev/master/img/logo.png" style="height: 40px;vertical-align: middle;"></li>
+<li>Et GitLab <img src="https://raw.githubusercontent.com/zoometh/thomashuet/master/img/app-gitlab.png" style="height: 40px;vertical-align: middle;"> ?</li>
+<li>Discussion</li>
+</ol>
 </section></section>
 <section>
 <section id="git" class="title-slide slide level1 center">
@@ -273,11 +275,24 @@ Charles Babbage, <em>“I wish God these calculations had been done by stream”
 <h2>Intro</h2>
 <div class="columns">
 <div class="column" style="width:65%;">
-<p>Git <img src="https://raw.githubusercontent.com/zoometh/thomashuet/master/img/app-git.png" style="height: 40px;vertical-align: middle;"> est un <strong>logiciel de gestion de versions décentralisé</strong><a href="#/footnotes" class="footnote-ref" id="fnref1" role="doc-noteref" data-footnote-href="#/fn1" onclick=""><sup>1</sup></a> originallement créé par Linus Torvalds pour le contrôle de version dans le développement du noyau Linux <img src="https://raw.githubusercontent.com/zoometh/thomashuet/master/img/app-os-linux.jpg" style="height: 45px;vertical-align: middle;">.</p>
+<p>Git <img src="https://raw.githubusercontent.com/zoometh/thomashuet/master/img/app-git-1.png" style="height: 40px;vertical-align: middle;"> est un <strong>logiciel de gestion de versions décentralisé</strong><a href="#/footnotes" class="footnote-ref" id="fnref1" role="doc-noteref" data-footnote-href="#/fn1" onclick=""><sup>1</sup></a> originallement créé par Linus Torvalds pour le contrôle de version dans le développement du noyau Linux <img src="https://raw.githubusercontent.com/zoometh/thomashuet/master/img/app-os-linux.jpg" style="height: 45px;vertical-align: middle;">. <br></p>
+<div class="callout callout-note callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Note</strong></p>
+</div>
+<div class="callout-content">
+<p>Un dépôt local<a href="#/footnotes" class="footnote-ref" id="fnref2" role="doc-noteref" data-footnote-href="#/fn2" onclick=""><sup>2</sup></a> ou distant<a href="#/footnotes" class="footnote-ref" id="fnref3" role="doc-noteref" data-footnote-href="#/fn3" onclick=""><sup>3</sup></a> est un système de dossiers et fichiers<a href="#/footnotes" class="footnote-ref" id="fnref4" role="doc-noteref" data-footnote-href="#/fn4" onclick=""><sup>4</sup></a> conservant sont propre historique (fichier caché <code>.git</code>) et un lien vers le dépôt (local ou distant).</p>
+</div>
+</div>
+</div>
 </div><div class="column" style="width:35%;">
 <img data-src="https://upload.wikimedia.org/wikipedia/commons/e/e8/Lc3_2018_%28263682303%29_%28cropped%29.jpeg" style="vertical-align: middle;" width="300">
 <div class="captiontext">
-, , (c) Lf Asia
+Linus Torvalds en 2018 (c) Lf Asia
 </div>
 </div></div>
 <aside></aside></section>
@@ -285,30 +300,37 @@ Charles Babbage, <em>“I wish God these calculations had been done by stream”
 <h2>Décentralisé, …</h2>
 <div class="columns">
 <div class="column" style="width:65%;">
-<p><img src="https://raw.githubusercontent.com/zoometh/thomashuet/master/img/app-git-workflow.png" style="width: 600px;vertical-align: middle;"></p>
-</div><div class="column" style="width:65%;">
-<p>Mettre la copie du serveur distant à jour:</p>
+<p><img src="https://raw.githubusercontent.com/zoometh/thomashuet/master/img/app-git-workflow.png" style="width: 700px;vertical-align: middle;"></p>
+</div><div class="column" style="width:35%;">
+<p><small>Mettre la copie du dépôt distant<a href="#/footnotes" class="footnote-ref" id="fnref5" role="doc-noteref" data-footnote-href="#/fn5" onclick=""><sup>5</sup></a> à jour:</small></p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode numberSource sh number-lines code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a></a><span class="fu">git</span> add .</span>
 <span id="cb1-2"><a></a><span class="fu">git</span> commit <span class="at">-m</span> <span class="st">'varia'</span></span>
 <span id="cb1-3"><a></a><span class="fu">git</span> push </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>Mettre la copie du serveur distant à jour:</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode numberSource sh number-lines code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a></a><span class="fu">git</span> add .</span>
-<span id="cb2-2"><a></a><span class="fu">git</span> commit <span class="at">-m</span> <span class="st">'varia'</span></span>
-<span id="cb2-3"><a></a><span class="fu">git</span> push </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><small>Mettre la copie du dépôt local<a href="#/footnotes" class="footnote-ref" id="fnref6" role="doc-noteref" data-footnote-href="#/fn6" onclick=""><sup>6</sup></a> à jour:</small></p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode numberSource sh number-lines code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a></a><span class="fu">git</span> pull</span>
+<span id="cb2-2"><a></a><span class="fu">git</span> checkout</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div></div>
-</section>
+<aside></aside></section>
 <section id="logique" class="slide level2">
 <h2>Logique</h2>
 <div class="panel-tabset">
 <ul id="tabset-1" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-1-1">Décentralisé</a></li><li><a href="#tabset-1-2">Versionnage</a></li><li><a href="#tabset-1-3">Copies locales</a></li></ul>
 <div class="tab-content">
 <div id="tabset-1-1">
-<p>Branches</p>
-<p>app-git-pr</p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p><img src="https://raw.githubusercontent.com/zoometh/thomashuet/master/img/app-git-commit-branch.png" style="width: 800px;vertical-align: middle;"></p>
+</div><div class="column" style="width:50%;">
+<p><img src="https://raw.githubusercontent.com/zoometh/thomashuet/master/img/app-git-pr.png" style="width: 800px;vertical-align: middle;"></p>
+</div></div>
 </div>
 <div id="tabset-1-2">
-<p>Historique des <em>commit</em><a href="#/footnotes" class="footnote-ref" id="fnref2" role="doc-noteref" data-footnote-href="#/fn2" onclick=""><sup>2</sup></a></p>
+<div class="columns">
+<div class="column" style="width:70%;">
 <p><img src="https://raw.githubusercontent.com/zoometh/thomashuet/master/img/app-git-ill1.png" style="width: 800px;vertical-align: middle;"></p>
+</div><div class="column" style="width:30%;">
+<p><small>Historique des <em>commit</em><a href="#/footnotes" class="footnote-ref" id="fnref7" role="doc-noteref" data-footnote-href="#/fn7" onclick=""><sup>7</sup></a></small></p>
+</div></div>
 </div>
 <div id="tabset-1-3">
 
@@ -316,7 +338,7 @@ Charles Babbage, <em>“I wish God these calculations had been done by stream”
 </div>
 </div>
 <aside class="notes">
-<p>local <em>vs</em> online (et <code>.gitignore</code>). Dossier caché (<code>.git</code>) en local, push vers un <strong>serveur distant</strong><a href="#/footnotes" class="footnote-ref" id="fnref3" role="doc-noteref" data-footnote-href="#/fn3" onclick=""><sup>3</sup></a>: (GitHub) branches Pull Request (PR) et merge</p>
+<p>local <em>vs</em> online (et <code>.gitignore</code>). Dossier caché (<code>.git</code>) en local, push vers un <strong>serveur distant</strong><a href="#/footnotes" class="footnote-ref" id="fnref8" role="doc-noteref" data-footnote-href="#/fn8" onclick=""><sup>8</sup></a>: (GitHub) branches Pull Request (PR) et merge</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -346,83 +368,50 @@ Charles Babbage, <em>“I wish God these calculations had been done by stream”
 <h1>GitHub</h1>
 
 </section>
-<section id="schéma" class="slide level2">
-<h2>Schéma</h2>
+<section id="intro-1" class="slide level2">
+<h2>Intro</h2>
+<p>GitHub <img src="https://raw.githubusercontent.com/zoometh/thomashuet/master/img/app-github.png" style="height: 40px;vertical-align: middle;"> une des principales plate-forme web propriétaire (🔒, hébergement cloud Microsoft <img src="https://raw.githubusercontent.com/zoometh/thomashuet/master/img/app-os-microsoft-windows-10.png" style="height: 40px;vertical-align: middle;">) pour les projets open source de développement d’applications informatiques utilisant <img src="https://raw.githubusercontent.com/zoometh/thomashuet/master/img/app-git-1.png" style="height: 40px;vertical-align: middle;"></p>
 <p>Repositories, Users, Organisation</p>
 </section>
 <section id="repositories" class="slide level2">
 <h2>Repositories</h2>
-<p><img data-src="https://raw.githubusercontent.com/zoometh/thomashuet/master/img/app-github-repo-ex.jpeg" style="horizontal-align: middle;" width="1000"></p>
+<p><a href="https://github.com/iramat/iramat-dev"><img src="https://raw.githubusercontent.com/zoometh/thomashuet/master/img/app-github-repo-ex.jpeg" style="width: 1000px;vertical-align: middle;"></a></p>
 </section>
 <section id="users" class="slide level2">
 <h2>Users</h2>
-<p><img data-src="https://raw.githubusercontent.com/zoometh/thomashuet/master/img/app-github-user-ex.jpeg" style="horizontal-align: middle;" width="1000"></p>
+<p><a href="https://github.com/zoometh"><img src="https://raw.githubusercontent.com/zoometh/thomashuet/master/img/app-github-user-ex.jpeg" style="width: 1000px;vertical-align: middle;"></a></p>
 </section>
 <section id="organisation" class="slide level2">
 <h2>Organisation</h2>
-<p><img data-src="https://raw.githubusercontent.com/zoometh/thomashuet/master/img/app-github-org-ex.jpeg" style="horizontal-align: middle;" width="1000"></p>
-<div class="columns">
-<div class="column" style="width:50%;">
-<p><br>
-<br>
-</p>
-</div><div class="column" style="width:50%;">
-<p><img data-src="https://raw.githubusercontent.com/zoometh/thomashuet/master/img/app-github-4.png" style="horizontal-align: middle;" width="100"> <small></small></p><small>
-<p>L’IRAMAT a une organisation GitHub <a href="https://github.com/iramat" class="uri">https://github.com/iramat</a> avec différents <em>repositories</em>:</p>
-<ul>
-<li><a href="https://github.com/iramat/iramat-dev">iramat-dev</a> pour le développement informatique</li>
-<li><a href="https://github.com/iramat/iramat-functions">iramat-functions</a> pour les fonctions Python (infrastructure)</li>
-<li><a href="https://github.com/iramat/iRamat">iRamat</a> pour les fonctions R (analyse de données)</li>
-</ul>
-<div class="callout callout-warning callout-titled callout-style-default">
-<div class="callout-body">
-<div class="callout-title">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<p><strong>Warning</strong></p>
-</div>
-<div class="callout-content">
-<p>Le GitHub a été pensé pour être public: ne pas partager de mots de passe, données personnelles, confidentielles, sous embargo, etc.</p>
-</div>
-</div>
-</div>
-</small><p><small></small></p>
-</div></div>
+<p><a href="https://github.com/iramat"><img src="https://raw.githubusercontent.com/zoometh/thomashuet/master/img/app-github-org-ex.jpeg" style="width: 1000px;vertical-align: middle;"></a></p>
 </section>
-<section id="api" class="slide level2">
-<h2>API</h2>
-<div class="columns">
-<div class="column" style="width:50%;">
-<p><img data-src="https://raw.githubusercontent.com/iramat/iramat-dev/master/img/bdd-chips-api-ex1.png" style="horizontal-align: middle;" width="550"><br>
-<br>
-</p>
-</div><div class="column" style="width:50%;">
-<p><img data-src="https://raw.githubusercontent.com/zoometh/thomashuet/master/img/web-api.jpeg" style="horizontal-align: middle;" width="75"> <small></small></p><small>
-<p>Les BDDs <a href="https://github.com/iramat/iramat-dev/tree/main/dbs/chips">CHIPS</a> et <a href="https://github.com/iramat/iramat-dev/tree/main/dbs/aema">AeMA</a> ont des API RESTfull, par exemple:</p>
-<ul>
-<li><a href="http://157.136.252.188:3000/instrument_incertitude" class="uri">http://157.136.252.188:3000/instrument_incertitude</a></li>
-<li><a href="https://aema.huma-num.fr/back/public/api/denominations" class="uri">https://aema.huma-num.fr/back/public/api/denominations</a></li>
-</ul>
-</small><p><small></small></p>
-</div></div>
-</section>
-<section id="zenodo" class="slide level2">
-<h2>Zenodo</h2>
-<div class="columns">
-<div class="column" style="width:50%;">
-<p><img data-src="https://raw.githubusercontent.com/iramat/iramat-dev/master/img/zenodo-community-iramat.png" style="horizontal-align: middle;" width="550"><br>
-<br>
-</p>
-</div><div class="column" style="width:50%;">
-<p><img data-src="https://raw.githubusercontent.com/zoometh/thomashuet/master/img/app-zenodo.png" style="horizontal-align: middle;" width="75"> <small></small></p><small>
-<p>L’IRAMAT a une communauté Zenodo: <a href="https://zenodo.org/communities/iramat" class="uri">https://zenodo.org/communities/iramat</a></p>
-</small><p><small></small></p>
-</div></div>
+<section id="issues" class="slide level2">
+<h2>Issues</h2>
+<p><a href="https://github.com/iramat/iramat-dev/issues/20"><img src="https://raw.githubusercontent.com/zoometh/thomashuet/master/img/app-github-issues.jpeg" style="width: 1000px;vertical-align: middle;"></a></p>
 </section></section>
 <section id="github-à-liramat" class="title-slide slide level1 center">
-<h1>GitHub à l’IRAMAT?</h1>
-
+<h1>GitHub à l’IRAMAT</h1>
+<div class="columns">
+<div class="column" style="width:33%;">
+<p><img src="https://raw.githubusercontent.com/zoometh/thomashuet/master/img/web-address-io.jpg" style="width: 300px;vertical-align: middle;"> Avoir une belle (i.e., courte) adresse: <a href="https://github.com/iramat" class="uri">https://github.com/iramat</a> et échanger des URLs</p>
+</div><div class="column" style="width:33%;">
+<p>Afficher des fichiers structurés: CSV, TSV, PDF, GeoJSON, HTML</p>
+</div><div class="column" style="width:33%;">
+<p>Visibilité du développement logiciel et des données de référence</p>
+</div></div>
+<aside class="notes">
+<p>Pour proposer une bibliothèque Python (ex: PyMca), ou un package R, il est fortement recommandé d’utiliser GitHub en raison de sa visibilité, de ses outils de collaboration et de son intégration avec les flux de travail de packaging</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section>
 
 <section>
@@ -430,15 +419,21 @@ Charles Babbage, <em>“I wish God these calculations had been done by stream”
 <h1>Et GitLab?</h1>
 
 </section>
-<section id="allez-plus-loin" class="slide level2">
-<h2>Allez plus loin</h2>
-<ul>
-<li>https://github.com/sslarch/caa2022_GitGitHub_workshop/tree/main</li>
-</ul>
+<section id="gitlab" class="slide level2">
+<h2>GitLab</h2>
+<p>GitLab <img src="https://raw.githubusercontent.com/zoometh/thomashuet/master/img/app-gitlab.png" style="height: 40px;vertical-align: middle;"> est une plateforme indépendante (🔓, GitLab Inc.) avec un hébergement cloud ou un auto-hébergement, pour les projets [open source] de développement d’applications informatiques utilisant <img src="https://raw.githubusercontent.com/zoometh/thomashuet/master/img/app-git-1.png" style="height: 40px;vertical-align: middle;">.</p>
 </section></section>
-<section id="contact" class="title-slide slide level1 center">
-<h1>Contact</h1>
-<p><a href="mailto:thomas.huet@cnrs.fr" class="email">thomas.huet@cnrs.fr</a></p>
+<section id="pour-allez-plus-loin" class="title-slide slide level1 center">
+<h1>Pour allez plus loin</h1>
+<p><small></small></p><small>
+<ul>
+<li><a href="https://github.com/sslarch/caa2022_GitGitHub_workshop/tree/main" class="uri">https://github.com/sslarch/caa2022_GitGitHub_workshop/tree/main</a></li>
+</ul>
+</small><p><small></small></p>
+</section>
+
+<section id="discussion" class="title-slide slide level1 center">
+<h1>Discussion</h1>
 
 
 </section>
@@ -447,8 +442,13 @@ Charles Babbage, <em>“I wish God these calculations had been done by stream”
 
 <ol>
 <li id="fn1"><p><em>distributed version control system</em></p></li>
-<li id="fn2"><p>Commit history</p></li>
-<li id="fn3"><p><em>remote server</em></p></li>
+<li id="fn2"><p><em>remote repo</em> ou <em>remote repository</em></p></li>
+<li id="fn3"><p><em>local repo</em> ou <em>local repository</em></p></li>
+<li id="fn4"><p><em>file/folder structure</em></p></li>
+<li id="fn5"><p><em>remote repo</em> ou <em>remote repository</em></p></li>
+<li id="fn6"><p><em>local repo</em> ou <em>local repository</em></p></li>
+<li id="fn7"><p>Commit history</p></li>
+<li id="fn8"><p><em>remote server</em></p></li>
 </ol>
 </section>
     </div>
