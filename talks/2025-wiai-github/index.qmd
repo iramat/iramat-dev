@@ -29,7 +29,7 @@ format:
     # self-contained: true
     # embed-resources: true
     # logo: https://raw.githubusercontent.com/zoometh/neonet/master/doc/img/neonet.png
-    footer: "Thomas Huet - <img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/inst-cnrs-iramat.png' style='height: 25px;vertical-align: middle;'> - 08 Juillet, 2025, LAPA, Saclay"
+    footer: "Thomas Huet - <img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/inst-cnrs-iramat.png' style='height: 20px;vertical-align: middle;'> - 08 Juillet, 2025, LAPA, Saclay"
     margin: 0
     width: 1200
 ---
@@ -124,7 +124,7 @@ Un dépôt local[^4] ou distant[^5] : système de dossiers et fichiers[^6] conse
 
 ::: {.column width="35%"}
 
-<small>Mettre la copie du dépôt distant[^4] à jour:</small>
+<small>Mettre la copie du dépôt distant[^4] à jour (_push_) :</small>
 
 ```{.sh}
 git add .
@@ -132,7 +132,9 @@ git commit -m 'varia'
 git push 
 ```
 
-<small>Mettre la copie du dépôt local[^5] à jour:</small>
+<br>
+
+<small>Mettre la copie du dépôt local[^5] à jour (_pull_) :</small>
 
 ```{.sh}
 git pull
@@ -188,18 +190,32 @@ git checkout
 
 ### Copies locales
 
+:::: {.columns}
 
+::: {.column width="65%"}
+<img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/app-github-file-gitignore.jpeg' style='width: 750px;vertical-align: middle;'>
+:::
+
+::: {.column width="35%"}
+<small>
+Capture d'écran de mon environnement de développement[^8] (Microsoft VS Code):
+
+- Gauche: arborescence du dépôt local `IRAMAT-DEV`
+
+- Centre: fichier `.gitignore` listant les dossiers `credentials` et `doc`, exclus du téléversement au dépôt distant[^4] (_push_) 
+
+- Droite: fichier `pg_credentials.json` avec les paramètres de connexion à la BDD `chips_d`, exclu du téléversement au dépôt distant[^4] (_push_)
+
+</small>
 
 :::
 
-::: {.notes}
-local _vs_ online (et `.gitignore`). Dossier caché (`.git`) en local, push vers un __serveur distant__[^2]: (GitHub)
-branches
-Pull Request (PR) et merge
+::::
+
 :::
 
 [^2]: _remote server_
-
+[^8]: _Integrated Development Environment_ (IDE)
 
 ## Git en résumé
 
@@ -207,12 +223,12 @@ Pull Request (PR) et merge
 
 ::: {.column width="35%"}
 
-<img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/app-git-ill1-2.png' style='width: 600px;vertical-align: middle;'>
+<img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/app-git-ill1-2.png' style='width: 700px;vertical-align: middle;'>
 :::
 
 
 ::: {.column width="65%"}
-<img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/app-git-ill2.png' style='width: 600px;vertical-align: middle;'>
+<img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/app-git-ill2.png' style='width: 700px;vertical-align: middle;'>
 :::
 
 ::::
@@ -226,7 +242,7 @@ _"Git is not designed to make you happy. It’s designed to make other people ha
 
 ## Intro
 
-GitHub <img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/app-github.png' style='height: 40px;vertical-align: middle;'> une des principales plate-forme web propriétaire (🔒, hébergement cloud Microsoft <img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/app-os-microsoft-windows-10.png' style='height: 40px;vertical-align: middle;'>) pour les projets open source de développement d'applications informatiques utilisant <img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/app-git-1.png' style='height: 40px;vertical-align: middle;'>
+GitHub <img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/app-github.png' style='height: 40px;vertical-align: middle;'> une des principales plate-forme web propriétaire (🔒, hébergement cloud Microsoft <img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/app-os-microsoft-windows-10.png' style='height: 40px;vertical-align: middle;'>) pour les projets _open source_ de développement d'applications informatiques utilisant <img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/app-git-1.png' style='height: 40px;vertical-align: middle;'>
 
 Repositories, Users, Organisation
 
@@ -255,20 +271,23 @@ Repositories, Users, Organisation
 
 # GitHub à l'IRAMAT
 
+## GitHub à l'IRAMAT
+
 :::: {.columns}
 
 ::: {.column width="33%"}
 
-<img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/web-address-io.jpg' style='width: 300px;vertical-align: middle;'>
-Avoir une belle (i.e., courte) adresse: <https://github.com/iramat> et échanger des URLs
+<img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/web-address-io.jpg' style='width: 250px;vertical-align: middle;'>
+<small>Avoir une belle (i.e., courte) adresse: <https://github.com/iramat> et échanger des URLs</small>
 :::
 
 ::: {.column width="33%"}
-Afficher des fichiers structurés: CSV, TSV, PDF, GeoJSON, HTML
+<small>Afficher des fichiers structurés: CSV, TSV, PDF, GeoJSON, HTML</small>
 :::
 
 ::: {.column width="33%"}
-Visibilité du développement logiciel et des données de référence
+https://caa-france.github.io/website/diagrams/oarch_repo_user.html
+<small>Visibilité du développement logiciel et des données de référence</small>
 :::
 
 ::::
@@ -282,13 +301,14 @@ Pour proposer une bibliothèque Python (ex: PyMca), ou un package R, il est fort
 
 ## GitLab
 
-GitLab <img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/app-gitlab.png' style='height: 40px;vertical-align: middle;'> : plateforme indépendante (🔓, GitLab Inc.) avec un hébergement cloud ou un auto-hébergement, pour les projets [open source] de développement d'applications informatiques utilisant <img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/app-git-1.png' style='height: 40px;vertical-align: middle;'>.
+GitLab <img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/app-gitlab.png' style='height: 40px;vertical-align: middle;'> : plateforme indépendante (🔓, GitLab Inc.) avec un hébergement cloud ou un auto-hébergement, pour les projets [_open source_] de développement d'applications informatiques utilisant <img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/app-git-1.png' style='height: 40px;vertical-align: middle;'>.
 
 # Pour allez plus loin
 
 <small>
 
-* <https://github.com/sslarch/caa2022_GitGitHub_workshop/tree/main>
+* Tutoriel sur Git et GitHub <https://github.com/sslarch/caa2022_GitGitHub_workshop/tree/main> par Clemens Schmid, Sophie C. Schmidt et Florian Thierry
+* _Computational Open Archaeology_, dont GitHub <https://intarch.ac.uk/journal/issue67/13/full-text.html> par Zachary Batist et Joe Roe
 
 </small>
 

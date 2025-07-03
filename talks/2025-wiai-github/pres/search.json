@@ -18,21 +18,21 @@
     "href": "index.html#intro",
     "title": "🧮 WIAI - GitHub",
     "section": "Intro",
-    "text": "Intro\n\n\nGit  est un logiciel de gestion de versions décentralisé1 originallement créé par Linus Torvalds pour le contrôle de version dans le développement du noyau Linux . \n\n\n\n\n\n\nNote\n\n\nUn dépôt local2 ou distant3 est un système de dossiers et fichiers4 conservant sont propre historique (fichier caché .git) et un lien vers le dépôt (local ou distant).\n\n\n\n\n\n\nLinus Torvalds en 2018 (c) Lf Asia"
+    "text": "Intro\n\n\nGit  : logiciel de gestion de versions décentralisé1 originallement créé par Linus Torvalds pour le contrôle de version dans le développement du noyau Linux . \n\n\n\n\n\n\nNote\n\n\nUn dépôt local2 ou distant3 : système de dossiers et fichiers4 conservant sont propre historique (fichier caché .git) et un lien vers le dépôt (local ou distant).\n\n\n\n\n\n\nLinus Torvalds en 2018 (c) Lf Asia"
   },
   {
     "objectID": "index.html#décentralisé",
     "href": "index.html#décentralisé",
     "title": "🧮 WIAI - GitHub",
     "section": "Décentralisé, …",
-    "text": "Décentralisé, …\n\n\n\n\nMettre la copie du dépôt distant5 à jour:\ngit add .\ngit commit -m 'varia'\ngit push \nMettre la copie du dépôt local6 à jour:\ngit pull\ngit checkout"
+    "text": "Décentralisé, …\n\n\n\n\nMettre la copie du dépôt distant5 à jour (push) :\ngit add .\ngit commit -m 'varia'\ngit push \n\nMettre la copie du dépôt local6 à jour (pull) :\ngit pull\ngit checkout"
   },
   {
     "objectID": "index.html#logique",
     "href": "index.html#logique",
     "title": "🧮 WIAI - GitHub",
     "section": "Logique",
-    "text": "Logique\n\nDécentraliséVersionnageCopies locales\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nHistorique des commit7\n\n\n\n\n\n\n\n\nlocal vs online (et .gitignore). Dossier caché (.git) en local, push vers un serveur distant8: (GitHub) branches Pull Request (PR) et merge"
+    "text": "Logique\n\nDécentraliséVersionnageCopies locales\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nHistorique des commit7\n\n\n\n\n\n\n\n Capture d’écran de mon environnement de développement8 (Microsoft VS Code):\n\nGauche: arborescence du dépôt local IRAMAT-DEV\nCentre: fichier .gitignore listant les dossiers credentials et doc, exclus du téléversement au dépôt distant9 (push)\nDroite: fichier pg_credentials.json avec les paramètres de connexion à la BDD chips_d, exclu du téléversement au dépôt distant10 (push)"
   },
   {
     "objectID": "index.html#git-en-résumé",
@@ -81,13 +81,13 @@
     "href": "index.html#gitlab",
     "title": "🧮 WIAI - GitHub",
     "section": "GitLab",
-    "text": "GitLab\nGitLab  est une plateforme indépendante (🔓, GitLab Inc.) avec un hébergement cloud ou un auto-hébergement, pour les projets [open source] de développement d’applications informatiques utilisant ."
+    "text": "GitLab\nGitLab  : plateforme indépendante (🔓, GitLab Inc.) avec un hébergement cloud ou un auto-hébergement, pour les projets [open source] de développement d’applications informatiques utilisant ."
   },
   {
     "objectID": "index.html#footnotes",
     "href": "index.html#footnotes",
     "title": "🧮 WIAI - GitHub",
     "section": "Footnotes",
-    "text": "Footnotes\n\n\ndistributed version control system\nremote repo ou remote repository\nlocal repo ou local repository\nfile/folder structure\nremote repo ou remote repository\nlocal repo ou local repository\nCommit history\nremote server"
+    "text": "Footnotes\n\n\ndistributed version control system\nremote repo ou remote repository\nlocal repo ou local repository\nfile/folder structure\nremote repo ou remote repository\nlocal repo ou local repository\nCommit history\nIntegrated Development Environment (IDE)\nremote repo ou remote repository\nremote repo ou remote repository"
   }
 ]
