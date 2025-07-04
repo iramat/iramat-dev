@@ -1,11 +1,11 @@
 ---
-title: "🧮 WIAI - GitHub"
-subtitle: "Webinaires de l'Informatique pour l'Archéométrie à l'IRAMAT"
+title: "GitHub"
+subtitle: "**WIAI** - **W**ebinaires de l'**I**nformatique pour l'**A**rchéométrie à l'**I**RAMAT"
 author:
   - name: Thomas Huet
     affiliation: 
       - id: cnrs
-        name: <span style="font-size:16pt">IRAMAT-CNRS</span>
+        name: <span style="font-size:17pt">IRAMAT-CNRS</span>
 title-slide-attributes:
     data-background-image: "https://raw.githubusercontent.com/iramat/iramat-dev/master/img/met-bles-henri-copper-mines-clipped.jpg"
     data-background-size: "90%"
@@ -47,10 +47,10 @@ GitHub <img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img
 <img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/app-prg-python-2.png' style='height: 45px;vertical-align: middle;'>, R
 <img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/prog-r-1.png' style='height: 45px;vertical-align: middle;'>, API 
 <img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/web-api.jpeg' style='height: 45px;vertical-align: middle;'>, IIIF
-<img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/lod-iso-iiif.png' style='height: 45px;vertical-align: middle;'>, etc. 
+<img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/lod-iso-iiif.png' style='height: 45px;vertical-align: middle;'>, etc. <br><br>
 
 ::: {.callout-note}
-Le 2<sup>e</sup> Mardi matin de chaque mois sur ZOOM entre 10h00 et 10h50 (50 minutes)
+📅 Le 2<sup>e</sup> Mardi matin de chaque mois sur ZOOM entre 10h00 et 10h50 (50 minutes)
 :::
 
 :::
@@ -58,7 +58,7 @@ Le 2<sup>e</sup> Mardi matin de chaque mois sur ZOOM entre 10h00 et 10h50 (50 mi
 ::: {.column width="35%"}
 
 ![](https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/Charles_Babbage_-_1860.jpg/800px-Charles_Babbage_-_1860.jpg){width="300" style="vertical-align: middle;"}
-<div class="captiontext">Charles Babbage, _"I wish God these calculations had been done by stream"_ -- 1821 <img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/lod-licences-publicdomain-1.png' style='height: 15px;vertical-align: middle;'> Wikipedia </div>
+<div class="captiontext">Charles Babbage, _"I wish God these calculations had been done by stream"_ -- 1821 <img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/lod-licences-publicdomain-1.png' style='height: 12px;vertical-align: middle;'> Wikipedia </div>
 
 
 :::
@@ -74,10 +74,10 @@ Découvrir -- ou approfondir -- une solution logicielle open-source en revenant 
 ## Plan de la présentation
 
 
-1. Git <img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/app-git-1.png' style='height: 40px;vertical-align: middle;'>
-2. GitHub <img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/app-github.png' style='height: 40px;vertical-align: middle;'> 
-3. GitHub à l'IRAMAT <img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/app-github.png' style='height: 40px;vertical-align: middle;'> <img src='https://raw.githubusercontent.com/iramat/iramat-dev/master/img/logo.png' style='height: 40px;vertical-align: middle;'> 
-4. Et GitLab <img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/app-gitlab.png' style='height: 40px;vertical-align: middle;'> ?
+1. Git <img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/app-git-1.png' style='height: 50px;vertical-align: middle;'>
+2. GitHub <img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/app-github.png' style='height: 50px;vertical-align: middle;'> 
+3. GitHub à l'IRAMAT <img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/app-github.png' style='height: 50px;vertical-align: middle;'> <img src='https://raw.githubusercontent.com/iramat/iramat-dev/master/img/logo.png' style='height: 40px;vertical-align: middle;'> 
+4. Et GitLab <img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/app-gitlab.png' style='height: 50px;vertical-align: middle;'> ?
 5. Discussion
 
 
@@ -95,10 +95,6 @@ Git <img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/ap
 <img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/app-os-linux.jpg' style='height: 45px;vertical-align: middle;'>.
 <br>
 
-::: {.callout-note}
-Un dépôt local[^4] ou distant[^5] : système de dossiers et fichiers[^6] conservant sont propre historique (fichier caché `.git`) et un lien vers le dépôt (local ou distant).
-:::
-
 :::
 
 ::: {.column width="35%"}
@@ -114,7 +110,7 @@ Un dépôt local[^4] ou distant[^5] : système de dossiers et fichiers[^6] conse
 [^1]: _distributed version control system_
 [^6]: _file/folder structure_
 
-## Décentralisé, ...
+## Schéma
 
 :::: {.columns}
 
@@ -132,14 +128,19 @@ git commit -m 'varia'
 git push 
 ```
 
-<br>
-
 <small>Mettre la copie du dépôt local[^5] à jour (_pull_) :</small>
 
 ```{.sh}
 git pull
 git checkout
 ```
+
+<br>
+
+---
+
+<small>Dépôt local[^4] ou distant[^5] : système de dossiers et fichiers[^6] conservant son propre historique (fichier  `.git`) et un lien vers le dépôt (local ou distant).</small>
+
 
 :::
 
@@ -186,7 +187,7 @@ git checkout
 
 ::::
 
-[^3]: Commit history
+[^3]: _commit history_
 
 ### Copies locales
 
@@ -200,7 +201,7 @@ git checkout
 <small>
 Capture d'écran de mon environnement de développement[^8] (Microsoft VS Code):
 
-- Gauche: arborescence du dépôt local `IRAMAT-DEV`
+- Gauche: arborescence du dépôt local[^4] `IRAMAT-DEV`
 
 - Centre: fichier `.gitignore` listant les dossiers `credentials` et `doc`, exclus du téléversement au dépôt distant[^4] (_push_) 
 
@@ -214,7 +215,6 @@ Capture d'écran de mon environnement de développement[^8] (Microsoft VS Code):
 
 :::
 
-[^2]: _remote server_
 [^8]: _Integrated Development Environment_ (IDE)
 
 ## Git en résumé
@@ -242,12 +242,14 @@ _"Git is not designed to make you happy. It’s designed to make other people ha
 
 ## Intro
 
-GitHub <img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/app-github.png' style='height: 40px;vertical-align: middle;'> une des principales plate-forme web propriétaire (🔒, hébergement cloud Microsoft <img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/app-os-microsoft-windows-10.png' style='height: 40px;vertical-align: middle;'>) pour les projets _open source_ de développement d'applications informatiques utilisant <img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/app-git-1.png' style='height: 40px;vertical-align: middle;'>
+GitHub <img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/app-github.png' style='height: 40px;vertical-align: middle;'> une des principales plate-forme web propriétaire 🔒[^10] pour les projets _open source_ de développement d'applications informatiques utilisant Git <img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/app-git-1.png' style='height: 40px;vertical-align: middle;'>
 
-Repositories, Users, Organisation
+* 📁 Repositories
+* 🙍 Users
+*  <img src='https://raw.githubusercontent.com/iramat/iramat-dev/master/img/logo.png' style='height: 35px;vertical-align: middle;'>  Organisation
+* 🧵 Issues
 
-
-
+[^10]: hébergement cloud Microsoft <img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/app-os-microsoft-windows-10.png' style='height: 40px;vertical-align: middle;'>)
 
 ## Repositories
 
@@ -275,18 +277,21 @@ Repositories, Users, Organisation
 
 :::: {.columns}
 
-::: {.column width="33%"}
+::: {.column width="30%"}
 
-<img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/web-address-io.jpg' style='width: 250px;vertical-align: middle;'>
-<small>Avoir une belle (i.e., courte) adresse: <https://github.com/iramat> et échanger des URLs</small>
+<img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/web-address-io.jpg' style='width: 300px;vertical-align: middle;'>
+<small>Avoir une "belle" (i.e., courte) adresse: <https://github.com/iramat> et échanger des URLs</small>
 :::
 
-::: {.column width="33%"}
-<small>Afficher des fichiers structurés: CSV, TSV, PDF, GeoJSON, HTML</small>
+::: {.column width="30%"}
+<img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/app-github-file-tsv.png' style='width: 300px;vertical-align: middle;'>
+<small>Afficher des fichiers structurés: CSV, TSV, PDF, GeoJSON, HTML (fichier et site web statique)</small>
 :::
 
-::: {.column width="33%"}
-https://caa-france.github.io/website/diagrams/oarch_repo_user.html
+::: {.column width="40%"}
+```{=html}
+<iframe width="700" height="300" src="https://caa-france.github.io/website/diagrams/oarch_repo_user.html" title="Quarto Documentation"></iframe>
+```
 <small>Visibilité du développement logiciel et des données de référence</small>
 :::
 

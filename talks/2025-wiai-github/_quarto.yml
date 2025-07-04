@@ -3,7 +3,7 @@ project:
   output-dir: pres
 
 website:
-  title: "IramatDev"
+  title: "WIAI"
   favicon: logo.png
   repo-url: https://github.com/quarto-dev/quarto-web
   page-footer:
