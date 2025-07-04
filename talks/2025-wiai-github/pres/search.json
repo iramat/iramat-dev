@@ -32,7 +32,7 @@
     "href": "index.html#logique",
     "title": "GitHub",
     "section": "Logique",
-    "text": "Logique\n\nDécentraliséVersionnageCopies locales\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nHistorique des commit7\n\n\n\n\n\n\n\n Capture d’écran de mon environnement de développement8 (Microsoft VS Code):\n\nGauche: arborescence du dépôt local9 IRAMAT-DEV\nCentre: fichier .gitignore listant les dossiers credentials et doc, exclus du téléversement au dépôt distant10 (push)\nDroite: fichier pg_credentials.json avec les paramètres de connexion à la BDD chips_d, exclu du téléversement au dépôt distant11 (push)"
+    "text": "Logique\n\nDécentraliséVersionnageCopies locales\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nHistorique des commit7\n\n\n\n\n\n\n\n Capture d’écran de mon environnement de développement8 (Microsoft VS Code):\n\nà gauche: arborescence du dépôt local9 IRAMAT-DEV\nau centre: fichier .gitignore listant les dossiers credentials et doc, exclus du téléversement au dépôt distant10 (push)\nà droite: fichier pg_credentials.json avec les paramètres de connexion à la BDD chips_d, exclu du téléversement au dépôt distant11 (push)"
   },
   {
     "objectID": "index.html#git-en-résumé",
@@ -88,13 +88,20 @@
     "href": "index.html#gitlab",
     "title": "GitHub",
     "section": "GitLab",
-    "text": "GitLab\nGitLab  : plateforme indépendante (🔓, GitLab Inc.) avec un hébergement cloud ou un auto-hébergement, pour les projets [open source] de développement d’applications informatiques utilisant ."
+    "text": "GitLab\nGitLab  : plateforme indépendante (🔓, GitLab Inc.) avec un hébergement cloud ou un auto-hébergement, pour les projets open source de développement d’applications informatiques utilisant Git .\n\n\n\n\nProjet BDD Terrifer/Sideros à l’IRAMAT Belfort\n\n\n\n\nProjet BDD Atmoce/AeMA à l’IRAMAT Orléans"
+  },
+  {
+    "objectID": "index.html#discussion-1",
+    "href": "index.html#discussion-1",
+    "title": "GitHub",
+    "section": "Discussion",
+    "text": "Discussion\n\n\nd’après (c) www.furygoat.com"
   },
   {
     "objectID": "index.html#footnotes",
     "href": "index.html#footnotes",
     "title": "GitHub",
     "section": "Footnotes",
-    "text": "Footnotes\n\n\ndistributed version control system\nremote repo ou remote repository\nlocal repo ou local repository\nremote repo ou remote repository\nlocal repo ou local repository\nfile/folder structure\ncommit history\nIntegrated Development Environment (IDE)\nremote repo ou remote repository\nremote repo ou remote repository\nremote repo ou remote repository\nhébergement cloud Microsoft )"
+    "text": "Footnotes\n\n\ndistributed version control system\nremote repo ou remote repository\nlocal repo ou local repository\nremote repo ou remote repository\nlocal repo ou local repository\nfile/folder structure\ncommit history\nIntegrated Development Environment (IDE)\nremote repo ou remote repository\nremote repo ou remote repository\nremote repo ou remote repository\nhébergement cloud Microsoft"
   }
 ]

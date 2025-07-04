@@ -7,9 +7,9 @@ author:
       - id: cnrs
         name: <span style="font-size:17pt">IRAMAT-CNRS</span>
 title-slide-attributes:
-    data-background-image: "https://raw.githubusercontent.com/iramat/iramat-dev/master/img/met-bles-henri-copper-mines-clipped.jpg"
+    data-background-image: "https://raw.githubusercontent.com/iramat/iramat-dev/master/img/ana-xrf-pymca-ex.png"
     data-background-size: "90%"
-    data-background-opacity: "0.5"
+    data-background-opacity: "0.2"
     data-notes: Lorem
 format:
   revealjs: 
@@ -194,18 +194,18 @@ git checkout
 :::: {.columns}
 
 ::: {.column width="65%"}
-<img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/app-github-file-gitignore.jpeg' style='width: 750px;vertical-align: middle;'>
+<img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/app-github-file-gitignore.jpeg' style='width: 700px;vertical-align: middle;'>
 :::
 
 ::: {.column width="35%"}
 <small>
 Capture d'écran de mon environnement de développement[^8] (Microsoft VS Code):
 
-- Gauche: arborescence du dépôt local[^4] `IRAMAT-DEV`
+- à gauche: arborescence du dépôt local[^4] `IRAMAT-DEV`
 
-- Centre: fichier `.gitignore` listant les dossiers `credentials` et `doc`, exclus du téléversement au dépôt distant[^4] (_push_) 
+- au centre: fichier `.gitignore` listant les dossiers `credentials` et `doc`, exclus du téléversement au dépôt distant[^4] (_push_) 
 
-- Droite: fichier `pg_credentials.json` avec les paramètres de connexion à la BDD `chips_d`, exclu du téléversement au dépôt distant[^4] (_push_)
+- à droite: fichier `pg_credentials.json` avec les paramètres de connexion à la BDD `chips_d`, exclu du téléversement au dépôt distant[^4] (_push_)
 
 </small>
 
@@ -249,7 +249,7 @@ GitHub <img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img
 *  <img src='https://raw.githubusercontent.com/iramat/iramat-dev/master/img/logo.png' style='height: 35px;vertical-align: middle;'>  Organisation
 * 🧵 Issues
 
-[^10]: hébergement cloud Microsoft <img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/app-os-microsoft-windows-10.png' style='height: 40px;vertical-align: middle;'>)
+[^10]: hébergement cloud Microsoft <img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/app-os-microsoft-windows-10.png' style='height: 40px;vertical-align: middle;'>
 
 ## Repositories
 
@@ -285,13 +285,16 @@ GitHub <img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img
 
 ::: {.column width="30%"}
 <img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/app-github-file-tsv.png' style='width: 300px;vertical-align: middle;'>
-<img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/app-github-file-geojson.png' style='width: 300px;vertical-align: middle;'>
+<img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/app-github-file-geojson.png' style='width: 300px;vertical-align: middle;'><br>
 <small>Afficher du Markdown et des fichiers structurés: CSV, TSV, PDF, GeoJSON, HTML (fichier et site web statique)</small>
+
+
+
 :::
 
 ::: {.column width="40%"}
 ```{=html}
-<iframe width="700" height="300" src="https://caa-france.github.io/website/diagrams/oarch_repo_user.html" title="Quarto Documentation"></iframe>
+<iframe width="700" height="350" src="https://caa-france.github.io/website/diagrams/oarch_repo_user.html" title="Quarto Documentation"></iframe>
 ```
 <small>Visibilité du développement logiciel et des données de référence</small>
 :::
@@ -311,17 +314,16 @@ GitLab <img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img
 
 :::: {.columns}
 
-::: {.column width="33%"}
-<img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/app-gitlab-ex-sideros.png' style='height: 400px;vertical-align: middle;'>
+::: {.column width="50%"}
+<img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/app-gitlab-ex-sideros.png' style='width: 400px;vertical-align: middle;'>
+<div class="captiontext">Projet BDD Terrifer/Sideros à l'IRAMAT Belfort</div>
 :::
 
-::: {.column width="33%"}
-<img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/app-gitlab-ex-atmoce.png' style='height: 400px;vertical-align: middle;'>
+::: {.column width="50%"}
+<img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/app-gitlab-ex-atmoce.png' style='width: 400px;vertical-align: middle;'>
+<div class="captiontext">Projet BDD Atmoce/AeMA à l'IRAMAT Orléans</div>
 :::
 
-::: {.column width="33%"}
-Lorem
-:::
 
 ::::
 
@@ -339,3 +341,7 @@ Lorem
 
 # Discussion
 
+## Discussion
+
+<img src='https://raw.githubusercontent.com/iramat/iramat-dev/master/img/it_meth.png' style='width: 650px;vertical-align: middle;'>
+<div class="captiontext">d'après (c) www.furygoat.com </div>
