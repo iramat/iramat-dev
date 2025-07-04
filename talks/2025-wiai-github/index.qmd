@@ -34,7 +34,7 @@ format:
     width: 1200
 ---
 
-# Introduction<br>générale
+# Introduction générale
 
 
 ## La série WIAI
@@ -285,7 +285,8 @@ GitHub <img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img
 
 ::: {.column width="30%"}
 <img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/app-github-file-tsv.png' style='width: 300px;vertical-align: middle;'>
-<small>Afficher des fichiers structurés: CSV, TSV, PDF, GeoJSON, HTML (fichier et site web statique)</small>
+<img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/app-github-file-geojson.png' style='width: 300px;vertical-align: middle;'>
+<small>Afficher du Markdown et des fichiers structurés: CSV, TSV, PDF, GeoJSON, HTML (fichier et site web statique)</small>
 :::
 
 ::: {.column width="40%"}
@@ -306,7 +307,26 @@ Pour proposer une bibliothèque Python (ex: PyMca), ou un package R, il est fort
 
 ## GitLab
 
-GitLab <img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/app-gitlab.png' style='height: 40px;vertical-align: middle;'> : plateforme indépendante (🔓, GitLab Inc.) avec un hébergement cloud ou un auto-hébergement, pour les projets [_open source_] de développement d'applications informatiques utilisant <img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/app-git-1.png' style='height: 40px;vertical-align: middle;'>.
+GitLab <img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/app-gitlab.png' style='height: 40px;vertical-align: middle;'> : plateforme indépendante (🔓, GitLab Inc.) avec un hébergement cloud ou un auto-hébergement, pour les projets _open source_ de développement d'applications informatiques utilisant Git <img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/app-git-1.png' style='height: 40px;vertical-align: middle;'>.
+
+:::: {.columns}
+
+::: {.column width="33%"}
+<img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/app-gitlab-ex-sideros.png' style='height: 400px;vertical-align: middle;'>
+:::
+
+::: {.column width="33%"}
+<img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/app-gitlab-ex-atmoce.png' style='height: 400px;vertical-align: middle;'>
+:::
+
+::: {.column width="33%"}
+Lorem
+:::
+
+::::
+
+
+
 
 # Pour allez plus loin
 

@@ -81,7 +81,7 @@
     "href": "index.html#github-à-liramat-1",
     "title": "GitHub",
     "section": "GitHub à l’IRAMAT",
-    "text": "GitHub à l’IRAMAT\n\n\n Avoir une “belle” (i.e., courte) adresse: https://github.com/iramat et échanger des URLs\n\n Afficher des fichiers structurés: CSV, TSV, PDF, GeoJSON, HTML (fichier et site web statique)\n\n\nVisibilité du développement logiciel et des données de référence\n\n\nPour proposer une bibliothèque Python (ex: PyMca), ou un package R, il est fortement recommandé d’utiliser GitHub en raison de sa visibilité, de ses outils de collaboration et de son intégration avec les flux de travail de packaging"
+    "text": "GitHub à l’IRAMAT\n\n\n Avoir une “belle” (i.e., courte) adresse: https://github.com/iramat et échanger des URLs\n\n  Afficher du Markdown et des fichiers structurés: CSV, TSV, PDF, GeoJSON, HTML (fichier et site web statique)\n\n\nVisibilité du développement logiciel et des données de référence\n\n\nPour proposer une bibliothèque Python (ex: PyMca), ou un package R, il est fortement recommandé d’utiliser GitHub en raison de sa visibilité, de ses outils de collaboration et de son intégration avec les flux de travail de packaging"
   },
   {
     "objectID": "index.html#gitlab",
