@@ -273,6 +273,10 @@ GitHub <img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img
 
 # GitHub à l'IRAMAT
 
+::: {.callout-warning}
+Le GitHub a été pensé pour être public: ne pas partager de mots de passe, données personnelles, confidentielles, sous embargo, etc.
+:::
+
 ## GitHub à l'IRAMAT
 
 :::: {.columns}
@@ -284,8 +288,11 @@ GitHub <img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img
 :::
 
 ::: {.column width="30%"}
-<img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/app-github-file-tsv.png' style='width: 300px;vertical-align: middle;'>
-<img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/app-github-file-geojson.png' style='width: 300px;vertical-align: middle;'><br>
+
+<a href= 'https://github.com/iramat/iramat-dev/blob/main/dbs/chips/data/dataset/dataset.tsv'><img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/app-github-file-tsv.png' style='width: 300px;vertical-align: middle;'></a>
+
+<a href= 'https://github.com/iramat/iramat-dev/blob/main/projects/castel-minier/castel-minier.geojson'><img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/app-github-file-geojson.png' style='width: 300px;vertical-align: middle;'></a> <br>
+
 <small>Afficher du Markdown et des fichiers structurés: CSV, TSV, PDF, GeoJSON, HTML (fichier et site web statique)</small>
 
 
