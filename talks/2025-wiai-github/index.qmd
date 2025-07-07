@@ -40,9 +40,9 @@ format:
 ## La série WIAI
 
 :::: {.columns}
-::: {.column width="65%"}
+::: {.column width="70%"}
 
-Webinaire dédié aux technologies de l'information pour l'archéométrie:  <br>
+Webinaires dédiés aux technologies de l'information pour l'archéométrie:  <br>
 GitHub <img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/app-github.png' style='height: 45px;vertical-align: middle;'>, Python
 <img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/app-prg-python-2.png' style='height: 45px;vertical-align: middle;'>, R
 <img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/prog-r-1.png' style='height: 45px;vertical-align: middle;'>, API 
@@ -55,7 +55,7 @@ GitHub <img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img
 
 :::
 
-::: {.column width="35%"}
+::: {.column width="30%"}
 
 ![](https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/Charles_Babbage_-_1860.jpg/800px-Charles_Babbage_-_1860.jpg){width="300" style="vertical-align: middle;"}
 <div class="captiontext">Charles Babbage, _"I wish God these calculations had been done by stream"_ -- 1821 <img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/lod-licences-publicdomain-1.png' style='height: 12px;vertical-align: middle;'> Wikipedia </div>
@@ -90,14 +90,14 @@ Découvrir -- ou approfondir -- une solution logicielle open-source en revenant 
 
 :::: {.columns}
 
-::: {.column width="65%"}
+::: {.column width="70%"}
 Git <img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/app-git-1.png' style='height: 40px;vertical-align: middle;'> : __logiciel de gestion de versions décentralisé__[^1] originallement créé par Linus Torvalds pour le contrôle de version dans le développement du noyau Linux
 <img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/app-os-linux.jpg' style='height: 45px;vertical-align: middle;'>.
 <br>
 
 :::
 
-::: {.column width="35%"}
+::: {.column width="30%"}
 
 ![](https://upload.wikimedia.org/wikipedia/commons/e/e8/Lc3_2018_%28263682303%29_%28cropped%29.jpeg){width="300" style="vertical-align: middle;"}
 <div class="captiontext">Linus Torvalds en 2018 (c) Lf Asia </div>
@@ -114,11 +114,11 @@ Git <img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/ap
 
 :::: {.columns}
 
-::: {.column width="65%"}
+::: {.column width="60%"}
 <img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/app-git-workflow.png' style='width: 700px;vertical-align: middle;'>
 :::
 
-::: {.column width="35%"}
+::: {.column width="40%"}
 
 <small>Mettre la copie du dépôt distant[^4] à jour (_push_) :</small>
 
@@ -246,7 +246,7 @@ GitHub <img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img
 
 * 📁 Repositories
 * 🙍 Users
-*  <img src='https://raw.githubusercontent.com/iramat/iramat-dev/master/img/logo.png' style='height: 35px;vertical-align: middle;'>  Organisation
+*  <img src='https://raw.githubusercontent.com/iramat/iramat-dev/master/img/logo.png' style='height: 35px;vertical-align: middle;'>  Organisations
 * 🧵 Issues
 
 [^10]: hébergement cloud Microsoft <img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/app-os-microsoft-windows-10.png' style='height: 40px;vertical-align: middle;'>
@@ -261,7 +261,7 @@ GitHub <img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img
 <a href= 'https://github.com/zoometh'><img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/app-github-user-ex.jpeg' style='width: 1000px;vertical-align: middle;'></a>
 
 
-## Organisation
+## Organisations
 
 <a href= 'https://github.com/iramat'><img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/app-github-org-ex.jpeg' style='width: 1000px;vertical-align: middle;'></a>
 
@@ -272,6 +272,8 @@ GitHub <img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img
 
 
 # GitHub à l'IRAMAT
+
+<br>
 
 ::: {.callout-warning}
 Le GitHub a été pensé pour être public: ne pas partager de mots de passe, données personnelles, confidentielles, sous embargo, etc.
@@ -303,10 +305,12 @@ Le GitHub a été pensé pour être public: ne pas partager de mots de passe, do
 ```{=html}
 <iframe width="700" height="350" src="https://caa-france.github.io/website/diagrams/oarch_repo_user.html" title="Quarto Documentation"></iframe>
 ```
-<small>Visibilité du développement logiciel et des données de référence</small>
+<small>Visibilité du développement logiciel et des données de référence (d'après Batist & Roe, 2024[^12])</small>
 :::
 
 ::::
+
+[^12]: Batist, Z., & Roe, J. A. (2024). Open Archaeology, Open Source? Collaborative practices in an emerging community of archaeological software engineers. *Internet Archaeology*, 67.
 
 ::: {.notes}
 Pour proposer une bibliothèque Python (ex: PyMca), ou un package R, il est fortement recommandé d'utiliser GitHub en raison de sa visibilité, de ses outils de collaboration et de son intégration avec les flux de travail de packaging
