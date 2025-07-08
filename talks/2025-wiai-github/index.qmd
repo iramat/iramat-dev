@@ -242,7 +242,7 @@ _"Git is not designed to make you happy. It’s designed to make other people ha
 
 ## Intro
 
-GitHub <img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/app-github.png' style='height: 40px;vertical-align: middle;'> une des principales plate-forme web propriétaire 🔒[^10] pour les projets _open source_ de développement d'applications informatiques utilisant Git <img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/app-git-1.png' style='height: 40px;vertical-align: middle;'>
+GitHub <img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/app-github.png' style='height: 40px;vertical-align: middle;'> une des principales plate-forme web (propriétaire 🔒[^10]) pour les projets _open source_ de développement d'applications informatiques utilisant Git <img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/app-git-1.png' style='height: 40px;vertical-align: middle;'>
 
 * 📁 Repositories
 * 🙍 Users
