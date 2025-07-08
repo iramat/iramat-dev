@@ -139,7 +139,7 @@ git checkout
 
 ---
 
-<small>Dépôt local[^4] ou distant[^5] : système de dossiers et fichiers[^6] conservant son propre historique (fichier  `.git`) et un lien vers le dépôt (local ou distant).</small>
+<small>Dépôt local[^4] ou distant[^5] : système de dossiers et fichiers[^6] conservant son propre historique (dossier `.git`) et un lien vers le dépôt (local ou distant).</small>
 
 
 :::

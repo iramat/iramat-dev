@@ -25,7 +25,7 @@
     "href": "index.html#schéma",
     "title": "GitHub",
     "section": "Schéma",
-    "text": "Schéma\n\n\n\n\nMettre la copie du dépôt distant2 à jour (push) :\ngit add .\ngit commit -m 'varia'\ngit push \nMettre la copie du dépôt local3 à jour (pull) :\ngit pull\ngit checkout\n\n\nDépôt local4 ou distant5 : système de dossiers et fichiers6 conservant son propre historique (fichier .git) et un lien vers le dépôt (local ou distant)."
+    "text": "Schéma\n\n\n\n\nMettre la copie du dépôt distant2 à jour (push) :\ngit add .\ngit commit -m 'varia'\ngit push \nMettre la copie du dépôt local3 à jour (pull) :\ngit pull\ngit checkout\n\n\nDépôt local4 ou distant5 : système de dossiers et fichiers6 conservant son propre historique (dossier .git) et un lien vers le dépôt (local ou distant)."
   },
   {
     "objectID": "index.html#logique",
