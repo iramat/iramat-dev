@@ -5,6 +5,7 @@
   <title>Mirador IIIF Viewer</title>
   <link rel="icon" type="image/png" href="favicon.png">
   <script src="https://unpkg.com/mirador@latest/dist/mirador.min.js"></script>
+  <script src="https://unpkg.com/mirador-annotations@latest/dist/mirador-annotations.min.js"></script>
   <style>
     html, body {
       margin: 0;
@@ -19,16 +20,19 @@
 </head>
 <body>
   <div id="viewer"></div>
-
   <script>
     Mirador.viewer({
       id: 'viewer',
       windows: [{
-        manifestId: 'http://157.136.252.188/iiif/manifest_puddled.json',
-        thumbnailNavigationPosition: 'far-bottom',
-        allowAnnotation: true,
+        manifestId: 'https://zoometh.xyz/page/manifest_puddled.json',
+        // thumbnailNavigationPosition: 'far-bottom',
+        // allowAnnotation: true,
         defaultSideBarPanel: 'annotations',
       }],
+      annotation: {
+        adapter: Mirador.AnnotationsLocalStorageAdapter,  // Save in local browser
+        // adapter: new MyCustomAnnotationAdapter() // Save on a server
+      },
       workspaceControlPanel: {
         enabled: false
       }
