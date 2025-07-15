@@ -1,4 +1,4 @@
-url	is.reference	description
+url_data	is_reference_data	description
 http://157.136.252.188:3000/ref_elements	Y	Atomic number
 http://157.136.252.188:3000/dataset_tyoungxx	N	Dataset
 http://157.136.252.188:3000/dataset_adisser17	N	Dataset
