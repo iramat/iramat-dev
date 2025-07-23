@@ -1,0 +1,16 @@
+---
+title: "My Reveal.js Presentation"
+author: "Your Name"
+output:
+  revealjs::revealjs_presentation:
+    self_contained: false
+    reveal_plugins: ["zoom"]
+---
+
+<div data-zoom>
+## Click me to zoom!
+This whole block is zoomable.
+</div>
+
+
+

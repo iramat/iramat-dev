@@ -48,6 +48,8 @@ CREATE OR REPLACE VIEW public.{dataset_name}
  AS
  SELECT s.nom_site AS site_name,
     c.id_chips,
+    s.longitude,
+	  s.latitude,
     e.nom_ech AS sample_name,
     (typo.categorie_en || ' '::text) || typo.sous_categorie_en AS typology,
     c.na,
