@@ -218,6 +218,17 @@ VALUES ('instrument_incertitude','@techreport{Doe2024TechReport,
 }');
 ```
 
+### à classer
+
+* https://zoometh.xyz/dash/dataset_adisser17 : Forbidden. You don't have permission to access this resource (temp)
+* https://zoometh.xyz/dash/dataset_gpages22 : Forbidden. You don't have permission to access this resource (temp)
+* https://zoometh.xyz/dash/dataset_vserneels93 : id.
+* ... : id.
+* https://zoometh.xyz/dash/dataset_amdesaulty8b : manque refs
+* https://zoometh.xyz/dash/dataset_gstdidier17 : id.
+* https://zoometh.xyz/dash/dataset_mbrauns13 : pas ouverte?
+* etc.
+
 ### notes
   
 | id_machinei         | integer   |                     |  analytical setup used to acquire isotopic amounts                |  
