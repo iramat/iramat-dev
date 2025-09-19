@@ -7,4 +7,7 @@
   <em>front-end d'AeMA, le 18/02/25</em>
 </p>
 
-voir [Python Jupyter NB](https://colab.research.google.com/drive/1xH7RvF7twkcZtfZs__BVHoFTccO5hc8i)
+## Development
+
+- Python [Jupyter NB](https://colab.research.google.com/drive/1xH7RvF7twkcZtfZs__BVHoFTccO5hc8i)
+- Python [fonctions](https://github.com/iramat/iramat-functions/blob/main/aema.py)
