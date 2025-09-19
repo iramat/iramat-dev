@@ -1,0 +1,356 @@
+---
+title: "iRamat, un package R"
+subtitle: "**WIAI** - **W**ebinaires de l'**I**nformatique pour l'**A**rchéométrie à l'**I**RAMAT"
+author:
+  - name: Thomas Huet
+    affiliation: 
+      - id: cnrs
+        name: <span style="font-size:17pt">IRAMAT-CNRS</span>
+title-slide-attributes:
+    data-background-image: "https://raw.githubusercontent.com/iramat/iramat-dev/master/img/ana-xrf-pymca-ex.png"
+    data-background-size: "90%"
+    data-background-opacity: "0.2"
+    data-notes: Lorem
+format:
+  revealjs: 
+    css: https://zoometh.github.io/thomashuet/css/quarto.css
+    controls: true
+    auto-stretch: false
+    code-fold: false
+    code-summary: "<small>Code</small>"
+    slide-number: true
+    chalkboard:
+      theme: "whiteboard"
+      color: ['rgba(255, 0, 0, 0.3)'] # red
+    scrollable: true
+    preview-links: auto
+    reference-location: document
+    footnotes-hover: true
+    # self-contained: true
+    # embed-resources: true
+    # logo: https://raw.githubusercontent.com/zoometh/neonet/master/doc/img/neonet.png
+    footer: "Thomas Huet - <img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/inst-cnrs-iramat.png' style='height: 20px;vertical-align: middle;'> - 09 décembre, 2025, LAPA, Saclay"
+    margin: 0
+    width: 1200
+---
+
+# Introduction générale
+
+
+## La série WIAI
+
+:::: {.columns}
+::: {.column width="70%"}
+
+Webinaires dédiés aux technologies de l'information pour l'archéométrie:  <br>
+GitHub <img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/app-github.png' style='height: 45px;vertical-align: middle;'>, Python
+<img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/app-prg-python-2.png' style='height: 45px;vertical-align: middle;'>, R
+<img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/prog-r-1.png' style='height: 45px;vertical-align: middle;'>, API 
+<img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/web-api.jpeg' style='height: 45px;vertical-align: middle;'>, IIIF
+<img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/lod-iso-iiif.png' style='height: 45px;vertical-align: middle;'>, etc. <br><br>
+
+::: {.callout-note}
+📅 Le 2<sup>e</sup> Mardi matin de chaque mois sur ZOOM entre 10h00 et 10h50 (50 minutes), lien sur le [GitHub de l'IRAMAT](https://github.com/iramat#-wiai)
+:::
+
+:::
+
+::: {.column width="30%"}
+
+![](https://upload.wikimedia.org/wikipedia/commons/f/fa/Hadley-wickham2016-02-04.jpg){width="300" style="vertical-align: middle;"}
+<div class="captiontext">Hadley Wickham, _"Anything that can be automated, should be automated"_ -- 2023 <img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/lod-licences-publicdomain-1.png' style='height: 12px;vertical-align: middle;'> Wikipedia </div>
+
+
+:::
+
+:::
+
+::: {.notes}
+Découvrir -- ou approfondir -- une solution logicielle open-source en revenant sur l'histoire de ce logiciel, sa logique interne, ... Avec des citations rigolotes
+:::
+
+
+
+## Plan de la présentation
+
+
+1. <img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/prog-r-1.png' style='height: 45px;vertical-align: middle;'>
+2. <img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/prog-r-1.png' style='height: 45px;vertical-align: middle;'>eproductible 
+3. iRamat <img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/prog-r-1.png' style='height: 45px;vertical-align: middle;'> <img src='https://raw.githubusercontent.com/iramat/iRamat/master/doc/img/logo.png' style='height: 60px;vertical-align: middle;'> 
+5. Discussion
+
+
+# R <img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/prog-r-1.png' style='height: 120px;vertical-align: middle;'>
+
+
+
+## Intro
+
+
+:::: {.columns}
+
+::: {.column width="70%"}
+R est le language de script le plus utilisé par les archéologues.
+<br>
+
+:::
+
+::: {.column width="30%"}
+
+![](https://upload.wikimedia.org/wikipedia/commons/e/e8/Lc3_2018_%28263682303%29_%28cropped%29.jpeg){width="300" style="vertical-align: middle;"}
+<div class="captiontext">Linus Torvalds en 2018 (c) Lf Asia </div>
+:::
+
+::::
+
+
+
+[^1]: _distributed version control system_
+[^6]: _file/folder structure_
+
+## Schéma
+
+:::: {.columns}
+
+::: {.column width="60%"}
+<img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/app-git-workflow.png' style='width: 700px;vertical-align: middle;'>
+:::
+
+::: {.column width="40%"}
+
+<small>Mettre la copie du dépôt distant[^4] à jour (_push_) :</small>
+
+```{.sh}
+git add .
+git commit -m 'varia'
+git push 
+```
+
+<small>Mettre la copie du dépôt local[^5] à jour (_pull_) :</small>
+
+```{.sh}
+git pull
+git checkout
+```
+
+<br>
+
+---
+
+<small>Dépôt local[^4] ou distant[^5] : système de dossiers et fichiers[^6] conservant son propre historique (dossier `.git`) et un lien vers le dépôt (local ou distant).</small>
+
+
+:::
+
+::::
+
+[^4]: _remote repo_ ou _remote repository_
+[^5]: _local repo_ ou _local repository_
+
+## Logique
+
+::: {.panel-tabset}
+
+### Décentralisé
+
+:::: {.columns}
+
+::: {.column width="50%"}
+
+<img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/app-git-commit-branch.png' style='width: 800px;vertical-align: middle;'>
+
+:::
+
+::: {.column width="50%"}
+
+<img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/app-git-pr.png' style='width: 800px;vertical-align: middle;'>
+
+:::
+
+::::
+
+### Versionnage
+
+
+
+:::: {.columns}
+
+::: {.column width="70%"}
+<img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/app-git-ill1.png' style='width: 800px;vertical-align: middle;'>
+:::
+
+::: {.column width="30%"}
+<small>Historique des _commit_[^3]</small>
+:::
+
+::::
+
+[^3]: _commit history_
+
+### Copies locales
+
+:::: {.columns}
+
+::: {.column width="65%"}
+<img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/app-github-file-gitignore.jpeg' style='width: 700px;vertical-align: middle;'>
+:::
+
+::: {.column width="35%"}
+<small>
+Capture d'écran de mon environnement de développement[^8] (Microsoft VS Code):
+
+- à gauche: arborescence du dépôt local[^4] `IRAMAT-DEV`
+
+- au centre: fichier `.gitignore` listant les dossiers `credentials` et `doc`, exclus du téléversement au dépôt distant[^4] (_push_) 
+
+- à droite: fichier `pg_credentials.json` avec les paramètres de connexion à la BDD `chips_d`, exclu du téléversement au dépôt distant[^4] (_push_)
+
+</small>
+
+:::
+
+::::
+
+:::
+
+[^8]: _Integrated Development Environment_ (IDE)
+
+## Git en résumé
+
+:::: {.columns}
+
+::: {.column width="35%"}
+
+<img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/app-git-ill1-2.png' style='width: 700px;vertical-align: middle;'>
+:::
+
+
+::: {.column width="65%"}
+<img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/app-git-ill2.png' style='width: 700px;vertical-align: middle;'>
+:::
+
+::::
+
+<div class="captiontext">
+_"Git is not designed to make you happy. It’s designed to make other people happy after you’ve screwed things up"_ -- Linus Torvalds
+</div>
+
+
+# GitHub
+
+## Intro
+
+GitHub <img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/app-github.png' style='height: 40px;vertical-align: middle;'> une des principales plate-forme web (propriétaire 🔒[^10]) pour les projets _open source_ de développement d'applications informatiques utilisant Git <img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/app-git-1.png' style='height: 40px;vertical-align: middle;'>
+
+* 📁 Repositories
+* 🙍 Users
+*  <img src='https://raw.githubusercontent.com/iramat/iramat-dev/master/img/logo.png' style='height: 35px;vertical-align: middle;'>  Organisations
+* 🧵 Issues
+
+[^10]: hébergement cloud Microsoft <img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/app-os-microsoft-windows-10.png' style='height: 40px;vertical-align: middle;'>
+
+## Repositories
+
+<a href= 'https://github.com/iramat/iramat-dev'><img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/app-github-repo-ex.jpeg' style='width: 1000px;vertical-align: middle;'></a>
+
+
+## Users
+
+<a href= 'https://github.com/zoometh'><img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/app-github-user-ex.jpeg' style='width: 1000px;vertical-align: middle;'></a>
+
+
+## Organisations
+
+<a href= 'https://github.com/iramat'><img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/app-github-org-ex.jpeg' style='width: 1000px;vertical-align: middle;'></a>
+
+
+## Issues
+
+<a href= 'https://github.com/iramat/iramat-dev/issues/20'><img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/app-github-issues.jpeg' style='width: 1000px;vertical-align: middle;'></a>
+
+
+# GitHub à l'IRAMAT
+
+<br>
+
+::: {.callout-warning}
+Le GitHub a été pensé pour être public: ne pas partager de mots de passe, données personnelles, confidentielles, sous embargo, etc.
+:::
+
+## GitHub à l'IRAMAT
+
+:::: {.columns}
+
+::: {.column width="30%"}
+
+<img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/web-address-io.jpg' style='width: 300px;vertical-align: middle;'>
+<small>Avoir une "belle" (i.e., courte) adresse: <https://github.com/iramat> et échanger des URLs</small>
+:::
+
+::: {.column width="30%"}
+
+<a href= 'https://github.com/iramat/iramat-dev/blob/main/dbs/chips/data/dataset/dataset.tsv'><img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/app-github-file-tsv.png' style='width: 300px;vertical-align: middle;'></a>
+
+<a href= 'https://github.com/iramat/iramat-dev/blob/main/projects/castel-minier/castel-minier.geojson'><img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/app-github-file-geojson.png' style='width: 300px;vertical-align: middle;'></a> <br>
+
+<small>Afficher du Markdown et des fichiers structurés: CSV, TSV, PDF, GeoJSON, HTML (fichier et site web statique)</small>
+
+
+
+:::
+
+::: {.column width="40%"}
+```{=html}
+<iframe width="700" height="350" src="https://caa-france.github.io/website/diagrams/oarch_repo_user.html" title="Quarto Documentation"></iframe>
+```
+<small>Visibilité du développement logiciel et des données de référence (d'après Batist & Roe, 2024[^12])</small>
+:::
+
+::::
+
+[^12]: Batist, Z., & Roe, J. A. (2024). Open Archaeology, Open Source? Collaborative practices in an emerging community of archaeological software engineers. *Internet Archaeology*, 67.
+
+::: {.notes}
+Pour proposer une bibliothèque Python (ex: PyMca), ou un package R, il est fortement recommandé d'utiliser GitHub en raison de sa visibilité, de ses outils de collaboration et de son intégration avec les flux de travail de packaging
+:::
+
+
+# Et GitLab?
+
+## GitLab
+
+GitLab <img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/app-gitlab.png' style='height: 40px;vertical-align: middle;'> : plateforme indépendante (🔓, GitLab Inc.) avec un hébergement cloud ou un auto-hébergement, pour les projets _open source_ de développement d'applications informatiques utilisant Git <img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/app-git-1.png' style='height: 40px;vertical-align: middle;'>.
+
+:::: {.columns}
+
+::: {.column width="50%"}
+<img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/app-gitlab-ex-sideros.png' style='width: 400px;vertical-align: middle;'>
+<div class="captiontext">Projet BDD Terrifer/Sideros à l'IRAMAT Belfort</div>
+:::
+
+::: {.column width="50%"}
+<img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/app-gitlab-ex-atmoce.png' style='width: 400px;vertical-align: middle;'>
+<div class="captiontext">Projet BDD Atmoce/AeMA à l'IRAMAT Orléans</div>
+:::
+
+
+::::
+
+
+
+
+# Pour aller plus loin
+
+<small>
+
+* Tutoriel sur Git et GitHub <https://github.com/sslarch/caa2022_GitGitHub_workshop/tree/main> par Clemens Schmid, Sophie C. Schmidt et Florian Thierry
+* _Computational Open Archaeology_, dont GitHub <https://intarch.ac.uk/journal/issue67/13/full-text.html> par Zachary Batist et Joe Roe
+
+</small>
+
+# Discussion
+
+## Discussion
+
+<img src='https://raw.githubusercontent.com/iramat/iramat-dev/master/img/it_meth.png' style='width: 650px;vertical-align: middle;'>
+<div class="captiontext">d'après (c) www.furygoat.com </div>
