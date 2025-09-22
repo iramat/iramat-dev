@@ -11,7 +11,7 @@
   <meta name="generator" content="quarto-1.7.23">
 
   <meta name="author" content="Thomas Huet">
-  <title>WIAI – Gestion, archivage et diffusion des données de l’unité : les bonnes pratiques</title>
+  <title>WIAI – ‘Le plus intelligent, mais pas à la bonne adresse …’</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -29,72 +29,6 @@
       margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
       vertical-align: middle;
     }
-    /* CSS for syntax highlighting */
-    html { -webkit-text-size-adjust: 100%; }
-    pre > code.sourceCode { white-space: pre; position: relative; }
-    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-    pre > code.sourceCode > span:empty { height: 1.2em; }
-    .sourceCode { overflow: visible; }
-    code.sourceCode > span { color: inherit; text-decoration: inherit; }
-    div.sourceCode { margin: 1em 0; }
-    pre.sourceCode { margin: 0; }
-    @media screen {
-    div.sourceCode { overflow: auto; }
-    }
-    @media print {
-    pre > code.sourceCode { white-space: pre-wrap; }
-    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-    }
-    pre.numberSource code
-      { counter-reset: source-line 0; }
-    pre.numberSource code > span
-      { position: relative; left: -4em; counter-increment: source-line; }
-    pre.numberSource code > span > a:first-child::before
-      { content: counter(source-line);
-        position: relative; left: -1em; text-align: right; vertical-align: baseline;
-        border: none; display: inline-block;
-        -webkit-touch-callout: none; -webkit-user-select: none;
-        -khtml-user-select: none; -moz-user-select: none;
-        -ms-user-select: none; user-select: none;
-        padding: 0 4px; width: 4em;
-        color: #aaaaaa;
-      }
-    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
-    div.sourceCode
-      { color: #003b4f; background-color: #f1f3f5; }
-    @media screen {
-    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-    }
-    code span { color: #003b4f; } /* Normal */
-    code span.al { color: #ad0000; } /* Alert */
-    code span.an { color: #5e5e5e; } /* Annotation */
-    code span.at { color: #657422; } /* Attribute */
-    code span.bn { color: #ad0000; } /* BaseN */
-    code span.bu { } /* BuiltIn */
-    code span.cf { color: #003b4f; font-weight: bold; } /* ControlFlow */
-    code span.ch { color: #20794d; } /* Char */
-    code span.cn { color: #8f5902; } /* Constant */
-    code span.co { color: #5e5e5e; } /* Comment */
-    code span.cv { color: #5e5e5e; font-style: italic; } /* CommentVar */
-    code span.do { color: #5e5e5e; font-style: italic; } /* Documentation */
-    code span.dt { color: #ad0000; } /* DataType */
-    code span.dv { color: #ad0000; } /* DecVal */
-    code span.er { color: #ad0000; } /* Error */
-    code span.ex { } /* Extension */
-    code span.fl { color: #ad0000; } /* Float */
-    code span.fu { color: #4758ab; } /* Function */
-    code span.im { color: #00769e; } /* Import */
-    code span.in { color: #5e5e5e; } /* Information */
-    code span.kw { color: #003b4f; font-weight: bold; } /* Keyword */
-    code span.op { color: #5e5e5e; } /* Operator */
-    code span.ot { color: #003b4f; } /* Other */
-    code span.pp { color: #ad0000; } /* Preprocessor */
-    code span.sc { color: #5e5e5e; } /* SpecialChar */
-    code span.ss { color: #20794d; } /* SpecialString */
-    code span.st { color: #20794d; } /* String */
-    code span.va { color: #111111; } /* Variable */
-    code span.vs { color: #20794d; } /* VerbatimString */
-    code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   </style>
   <link rel="stylesheet" href="site_libs/revealjs/dist/theme/quarto-00ac2f6af1389919a18f42df5b7c0002.css">
   <link rel="stylesheet" href="https://zoometh.github.io/thomashuet/css/quarto.css">
@@ -198,7 +132,8 @@
     <div class="slides">
 
 <section id="title-slide" data-background-image="https://raw.githubusercontent.com/iramat/iramat-dev/master/img/ana-xrf-pymca-ex.png" data-background-opacity="0.2" data-background-size="90%" data-notes="Lorem" class="quarto-title-block center">
-  <h1 class="title">Gestion, archivage et diffusion des données de l’unité : les bonnes pratiques</h1>
+  <h1 class="title">‘Le plus intelligent, mais pas à la bonne adresse …’</h1>
+  <p class="subtitle">Gestion, archivage et diffusion des données de l’unité : les bonnes pratiques</p>
 
 <div class="quarto-title-authors">
 <div class="quarto-title-author">
@@ -213,279 +148,27 @@ Thomas Huet
 
 </section>
 <section>
-<section id="introduction-générale" class="title-slide slide level1 center">
-<h1>Introduction générale</h1>
+<section id="indexation" class="title-slide slide level1 center">
+<h1>Indexation</h1>
 
 </section>
-<section id="la-série-wiai" class="slide level2">
-<h2>La série WIAI</h2>
-<div class="columns">
-<div class="column" style="width:70%;">
-<p>Webinaires dédiés aux technologies de l’information pour l’archéométrie: <br> GitHub <img src="https://raw.githubusercontent.com/zoometh/thomashuet/master/img/app-github.png" style="height: 45px;vertical-align: middle;">, Python <img src="https://raw.githubusercontent.com/zoometh/thomashuet/master/img/app-prg-python-2.png" style="height: 45px;vertical-align: middle;">, R <img src="https://raw.githubusercontent.com/zoometh/thomashuet/master/img/prog-r-1.png" style="height: 45px;vertical-align: middle;">, API <img src="https://raw.githubusercontent.com/zoometh/thomashuet/master/img/web-api.jpeg" style="height: 45px;vertical-align: middle;">, IIIF <img src="https://raw.githubusercontent.com/zoometh/thomashuet/master/img/lod-iso-iiif.png" style="height: 45px;vertical-align: middle;">, etc. <br><br></p>
-<div class="callout callout-note callout-titled callout-style-default">
-<div class="callout-body">
-<div class="callout-title">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<p><strong>Note</strong></p>
-</div>
-<div class="callout-content">
-<p>📅 Le 2<sup>e</sup> Mardi matin de chaque mois sur ZOOM entre 10h00 et 10h50 (50 minutes), lien sur le <a href="https://github.com/iramat#-wiai">GitHub de l’IRAMAT</a></p>
-</div>
-</div>
-</div>
-</div><div class="column" style="width:30%;">
-<img data-src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Hadley-wickham2016-02-04.jpg" style="vertical-align: middle;" width="300">
-<div class="captiontext">
-Hadley Wickham, <em>“Anything that can be automated, should be automated”</em> – 2023 <img src="https://raw.githubusercontent.com/zoometh/thomashuet/master/img/lod-licences-publicdomain-1.png" style="height: 12px;vertical-align: middle;"> Wikipedia
-</div>
-</div></div>
-<aside class="notes">
-<p>Découvrir – ou approfondir – une solution logicielle open-source en revenant sur l’histoire de ce logiciel, sa logique interne, … Avec des citations rigolotes</p>
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
-</section>
-<section id="plan-de-la-présentation" class="slide level2 scrollable">
-<h2>Plan de la présentation</h2>
-<ol type="1">
-<li><img src="https://raw.githubusercontent.com/zoometh/thomashuet/master/img/prog-r-1.png" style="height: 45px;vertical-align: middle;"></li>
-<li><img src="https://raw.githubusercontent.com/zoometh/thomashuet/master/img/prog-r-1.png" style="height: 45px;vertical-align: middle;">eproductible</li>
-<li>iRamat <img src="https://raw.githubusercontent.com/zoometh/thomashuet/master/img/prog-r-1.png" style="height: 45px;vertical-align: middle;"> <img src="https://raw.githubusercontent.com/iramat/iRamat/master/doc/img/logo.png" style="height: 60px;vertical-align: middle;"></li>
-<li>Discussion</li>
-</ol>
-</section></section>
-<section>
-<section id="r" class="title-slide slide level1 center">
-<h1>R <img src="https://raw.githubusercontent.com/zoometh/thomashuet/master/img/prog-r-1.png" style="height: 120px;vertical-align: middle;"></h1>
-
-</section>
-<section id="intro" class="slide level2">
-<h2>Intro</h2>
-<div class="columns">
-<div class="column" style="width:70%;">
-<p>R est le language de script le plus utilisé par les archéologues. <br></p>
-</div><div class="column" style="width:30%;">
-<img data-src="https://upload.wikimedia.org/wikipedia/commons/e/e8/Lc3_2018_%28263682303%29_%28cropped%29.jpeg" style="vertical-align: middle;" width="300">
-<div class="captiontext">
-Linus Torvalds en 2018 (c) Lf Asia
-</div>
-</div></div>
-</section>
-<section id="schéma" class="slide level2">
-<h2>Schéma</h2>
-<div class="columns">
-<div class="column" style="width:60%;">
-<p><img src="https://raw.githubusercontent.com/zoometh/thomashuet/master/img/app-git-workflow.png" style="width: 700px;vertical-align: middle;"></p>
-</div><div class="column" style="width:40%;">
-<p><small>Mettre la copie du dépôt distant<a href="#/footnotes" class="footnote-ref" id="fnref1" role="doc-noteref" data-footnote-href="#/fn1" onclick=""><sup>1</sup></a> à jour (<em>push</em>) :</small></p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode numberSource sh number-lines code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a></a><span class="fu">git</span> add .</span>
-<span id="cb1-2"><a></a><span class="fu">git</span> commit <span class="at">-m</span> <span class="st">'varia'</span></span>
-<span id="cb1-3"><a></a><span class="fu">git</span> push </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p><small>Mettre la copie du dépôt local<a href="#/footnotes" class="footnote-ref" id="fnref2" role="doc-noteref" data-footnote-href="#/fn2" onclick=""><sup>2</sup></a> à jour (<em>pull</em>) :</small></p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode numberSource sh number-lines code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a></a><span class="fu">git</span> pull</span>
-<span id="cb2-2"><a></a><span class="fu">git</span> checkout</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p><br></p>
-<hr>
-<p><small>Dépôt local<a href="#/footnotes" class="footnote-ref" id="fnref3" role="doc-noteref" data-footnote-href="#/fn3" onclick=""><sup>3</sup></a> ou distant<a href="#/footnotes" class="footnote-ref" id="fnref4" role="doc-noteref" data-footnote-href="#/fn4" onclick=""><sup>4</sup></a> : système de dossiers et fichiers<a href="#/footnotes" class="footnote-ref" id="fnref5" role="doc-noteref" data-footnote-href="#/fn5" onclick=""><sup>5</sup></a> conservant son propre historique (dossier <code>.git</code>) et un lien vers le dépôt (local ou distant).</small></p>
-</div></div>
-<aside></aside></section>
-<section id="logique" class="slide level2">
-<h2>Logique</h2>
-<div class="panel-tabset">
-<ul id="tabset-1" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-1-1">Décentralisé</a></li><li><a href="#tabset-1-2">Versionnage</a></li><li><a href="#tabset-1-3">Copies locales</a></li></ul>
-<div class="tab-content">
-<div id="tabset-1-1">
-<div class="columns">
-<div class="column" style="width:50%;">
-<p><img src="https://raw.githubusercontent.com/zoometh/thomashuet/master/img/app-git-commit-branch.png" style="width: 800px;vertical-align: middle;"></p>
-</div><div class="column" style="width:50%;">
-<p><img src="https://raw.githubusercontent.com/zoometh/thomashuet/master/img/app-git-pr.png" style="width: 800px;vertical-align: middle;"></p>
-</div></div>
-</div>
-<div id="tabset-1-2">
-<div class="columns">
-<div class="column" style="width:70%;">
-<p><img src="https://raw.githubusercontent.com/zoometh/thomashuet/master/img/app-git-ill1.png" style="width: 800px;vertical-align: middle;"></p>
-</div><div class="column" style="width:30%;">
-<p><small>Historique des <em>commit</em><a href="#/footnotes" class="footnote-ref" id="fnref6" role="doc-noteref" data-footnote-href="#/fn6" onclick=""><sup>6</sup></a></small></p>
-</div></div>
-</div>
-<div id="tabset-1-3">
-<div class="columns">
-<div class="column" style="width:65%;">
-<p><img src="https://raw.githubusercontent.com/zoometh/thomashuet/master/img/app-github-file-gitignore.jpeg" style="width: 700px;vertical-align: middle;"></p>
-</div><div class="column" style="width:35%;">
-<p><small> Capture d’écran de mon environnement de développement<a href="#/footnotes" class="footnote-ref" id="fnref7" role="doc-noteref" data-footnote-href="#/fn7" onclick=""><sup>7</sup></a> (Microsoft VS Code):</small></p><small>
-<ul>
-<li><p>à gauche: arborescence du dépôt local<a href="#/footnotes" class="footnote-ref" id="fnref8" role="doc-noteref" data-footnote-href="#/fn8" onclick=""><sup>8</sup></a> <code>IRAMAT-DEV</code></p></li>
-<li><p>au centre: fichier <code>.gitignore</code> listant les dossiers <code>credentials</code> et <code>doc</code>, exclus du téléversement au dépôt distant<a href="#/footnotes" class="footnote-ref" id="fnref9" role="doc-noteref" data-footnote-href="#/fn9" onclick=""><sup>9</sup></a> (<em>push</em>)</p></li>
-<li><p>à droite: fichier <code>pg_credentials.json</code> avec les paramètres de connexion à la BDD <code>chips_d</code>, exclu du téléversement au dépôt distant<a href="#/footnotes" class="footnote-ref" id="fnref10" role="doc-noteref" data-footnote-href="#/fn10" onclick=""><sup>10</sup></a> (<em>push</em>)</p></li>
-</ul>
-</small><p><small></small></p>
-</div></div>
-</div>
-</div>
-</div>
-<aside></aside></section>
-<section id="git-en-résumé" class="slide level2">
-<h2>Git en résumé</h2>
-<div class="columns">
-<div class="column" style="width:35%;">
-<p><img src="https://raw.githubusercontent.com/zoometh/thomashuet/master/img/app-git-ill1-2.png" style="width: 700px;vertical-align: middle;"></p>
-</div><div class="column" style="width:65%;">
-<p><img src="https://raw.githubusercontent.com/zoometh/thomashuet/master/img/app-git-ill2.png" style="width: 700px;vertical-align: middle;"></p>
-</div></div>
-<div class="captiontext">
-<p><em>“Git is not designed to make you happy. It’s designed to make other people happy after you’ve screwed things up”</em> – Linus Torvalds</p>
-</div>
-</section></section>
-<section>
-<section id="github" class="title-slide slide level1 center">
-<h1>GitHub</h1>
-
-</section>
-<section id="intro-1" class="slide level2">
-<h2>Intro</h2>
-<p>GitHub <img src="https://raw.githubusercontent.com/zoometh/thomashuet/master/img/app-github.png" style="height: 40px;vertical-align: middle;"> une des principales plate-forme web (propriétaire 🔒<a href="#/footnotes" class="footnote-ref" id="fnref11" role="doc-noteref" data-footnote-href="#/fn11" onclick=""><sup>11</sup></a>) pour les projets <em>open source</em> de développement d’applications informatiques utilisant Git <img src="https://raw.githubusercontent.com/zoometh/thomashuet/master/img/app-git-1.png" style="height: 40px;vertical-align: middle;"></p>
-<ul>
-<li>📁 Repositories</li>
-<li>🙍 Users</li>
-<li><img src="https://raw.githubusercontent.com/iramat/iramat-dev/master/img/logo.png" style="height: 35px;vertical-align: middle;"> Organisations</li>
-<li>🧵 Issues</li>
-</ul>
-<aside></aside></section>
-<section id="repositories" class="slide level2">
-<h2>Repositories</h2>
-<p><a href="https://github.com/iramat/iramat-dev"><img src="https://raw.githubusercontent.com/zoometh/thomashuet/master/img/app-github-repo-ex.jpeg" style="width: 1000px;vertical-align: middle;"></a></p>
-</section>
-<section id="users" class="slide level2">
-<h2>Users</h2>
-<p><a href="https://github.com/zoometh"><img src="https://raw.githubusercontent.com/zoometh/thomashuet/master/img/app-github-user-ex.jpeg" style="width: 1000px;vertical-align: middle;"></a></p>
-</section>
-<section id="organisations" class="slide level2">
-<h2>Organisations</h2>
-<p><a href="https://github.com/iramat"><img src="https://raw.githubusercontent.com/zoometh/thomashuet/master/img/app-github-org-ex.jpeg" style="width: 1000px;vertical-align: middle;"></a></p>
-</section>
-<section id="issues" class="slide level2">
-<h2>Issues</h2>
-<p><a href="https://github.com/iramat/iramat-dev/issues/20"><img src="https://raw.githubusercontent.com/zoometh/thomashuet/master/img/app-github-issues.jpeg" style="width: 1000px;vertical-align: middle;"></a></p>
-</section></section>
-<section>
-<section id="github-à-liramat" class="title-slide slide level1 center">
-<h1>GitHub à l’IRAMAT</h1>
-<p><br></p>
-<div class="callout callout-warning callout-titled callout-style-default">
-<div class="callout-body">
-<div class="callout-title">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<p><strong>Warning</strong></p>
-</div>
-<div class="callout-content">
-<p>Le GitHub a été pensé pour être public: ne pas partager de mots de passe, données personnelles, confidentielles, sous embargo, etc.</p>
-</div>
-</div>
-</div>
-</section>
-<section id="github-à-liramat-1" class="slide level2">
-<h2>GitHub à l’IRAMAT</h2>
+<section id="facile-à-trouver-accessible" class="slide level2">
+<h2>Facile à trouver, Accessible, …</h2>
 <div class="columns">
 <div class="column" style="width:30%;">
-<p><img src="https://raw.githubusercontent.com/zoometh/thomashuet/master/img/web-address-io.jpg" style="width: 300px;vertical-align: middle;"> <small>Avoir une “belle” (i.e., courte) adresse: <a href="https://github.com/iramat" class="uri">https://github.com/iramat</a> et échanger des URLs</small></p>
-</div><div class="column" style="width:30%;">
-<p><a href="https://github.com/iramat/iramat-dev/blob/main/dbs/chips/data/dataset/dataset.tsv"><img src="https://raw.githubusercontent.com/zoometh/thomashuet/master/img/app-github-file-tsv.png" style="width: 300px;vertical-align: middle;"></a></p>
-<p><a href="https://github.com/iramat/iramat-dev/blob/main/projects/castel-minier/castel-minier.geojson"><img src="https://raw.githubusercontent.com/zoometh/thomashuet/master/img/app-github-file-geojson.png" style="width: 300px;vertical-align: middle;"></a> <br></p>
-<p><small>Afficher du Markdown et des fichiers structurés: CSV, TSV, PDF, GeoJSON, HTML (fichier et site web statique)</small></p>
-</div><div class="column" style="width:40%;">
-<iframe width="700" height="350" src="https://caa-france.github.io/website/diagrams/oarch_repo_user.html" title="Quarto Documentation"></iframe>
-<p><small>Visibilité du développement logiciel et des données de référence (d’après Batist &amp; Roe, 2024<a href="#/footnotes" class="footnote-ref" id="fnref12" role="doc-noteref" data-footnote-href="#/fn12" onclick=""><sup>12</sup></a>)</small></p>
-</div></div>
-<aside class="notes">
-<p>Pour proposer une bibliothèque Python (ex: PyMca), ou un package R, il est fortement recommandé d’utiliser GitHub en raison de sa visibilité, de ses outils de collaboration et de son intégration avec les flux de travail de packaging</p>
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
-<aside></aside></section></section>
-<section>
-<section id="et-gitlab" class="title-slide slide level1 center">
-<h1>Et GitLab?</h1>
-
-</section>
-<section id="gitlab" class="slide level2">
-<h2>GitLab</h2>
-<p>GitLab <img src="https://raw.githubusercontent.com/zoometh/thomashuet/master/img/app-gitlab.png" style="height: 40px;vertical-align: middle;"> : plateforme indépendante (🔓, GitLab Inc.) avec un hébergement cloud ou un auto-hébergement, pour les projets <em>open source</em> de développement d’applications informatiques utilisant Git <img src="https://raw.githubusercontent.com/zoometh/thomashuet/master/img/app-git-1.png" style="height: 40px;vertical-align: middle;">.</p>
-<div class="columns">
-<div class="column" style="width:50%;">
-<img src="https://raw.githubusercontent.com/zoometh/thomashuet/master/img/app-gitlab-ex-sideros.png" style="width: 400px;vertical-align: middle;">
-<div class="captiontext">
-Projet BDD Terrifer/Sideros à l’IRAMAT Belfort
-</div>
-</div><div class="column" style="width:50%;">
-<img src="https://raw.githubusercontent.com/zoometh/thomashuet/master/img/app-gitlab-ex-atmoce.png" style="width: 400px;vertical-align: middle;">
-<div class="captiontext">
-Projet BDD Atmoce/AeMA à l’IRAMAT Orléans
-</div>
+<p><img src="https://raw.githubusercontent.com/zoometh/thomashuet/master/img/web-address-io.jpg" style="width: 300px;vertical-align: middle;"> <small>Les adresses en I/O (pour <em>in</em> / <em>out</em>, ou encore <code>1</code>/<code>0</code> en référence aux bits) sont les plus recherchées </small></p>
+</div><div class="column" style="width:70%;">
+<iframe width="780" height="500" src="https://iramat-apps.cnrs.fr/"></iframe>
 </div></div>
 </section></section>
-<section id="pour-aller-plus-loin" class="title-slide slide level1 center">
-<h1>Pour aller plus loin</h1>
-<p><small></small></p><small>
-<ul>
-<li>Tutoriel sur Git et GitHub <a href="https://github.com/sslarch/caa2022_GitGitHub_workshop/tree/main" class="uri">https://github.com/sslarch/caa2022_GitGitHub_workshop/tree/main</a> par Clemens Schmid, Sophie C. Schmidt et Florian Thierry</li>
-<li><em>Computational Open Archaeology</em>, dont GitHub <a href="https://intarch.ac.uk/journal/issue67/13/full-text.html" class="uri">https://intarch.ac.uk/journal/issue67/13/full-text.html</a> par Zachary Batist et Joe Roe</li>
-</ul>
-</small><p><small></small></p>
-</section>
-
-<section>
 <section id="discussion" class="title-slide slide level1 center">
 <h1>Discussion</h1>
-
-</section>
-<section id="discussion-1" class="slide level2">
-<h2>Discussion</h2>
 <img src="https://raw.githubusercontent.com/iramat/iramat-dev/master/img/it_meth.png" style="width: 650px;vertical-align: middle;">
 <div class="captiontext">
 d’après (c) www.furygoat.com
 </div>
 
 
-</section></section>
-<section id="footnotes" class="footnotes footnotes-end-of-document smaller scrollable" role="doc-endnotes"><h2>Footnotes</h2>
-
-<ol>
-<li id="fn1"><p><em>remote repo</em> ou <em>remote repository</em></p></li>
-<li id="fn2"><p><em>local repo</em> ou <em>local repository</em></p></li>
-<li id="fn3"><p><em>remote repo</em> ou <em>remote repository</em></p></li>
-<li id="fn4"><p><em>local repo</em> ou <em>local repository</em></p></li>
-<li id="fn5"><p><em>file/folder structure</em></p></li>
-<li id="fn6"><p><em>commit history</em></p></li>
-<li id="fn7"><p><em>Integrated Development Environment</em> (IDE)</p></li>
-<li id="fn8"><p><em>remote repo</em> ou <em>remote repository</em></p></li>
-<li id="fn9"><p><em>remote repo</em> ou <em>remote repository</em></p></li>
-<li id="fn10"><p><em>remote repo</em> ou <em>remote repository</em></p></li>
-<li id="fn11"><p>hébergement cloud Microsoft <img src="https://raw.githubusercontent.com/zoometh/thomashuet/master/img/app-os-microsoft-windows-10.png" style="height: 40px;vertical-align: middle;"></p></li>
-<li id="fn12"><p>Batist, Z., &amp; Roe, J. A. (2024). Open Archaeology, Open Source? Collaborative practices in an emerging community of archaeological software engineers. <em>Internet Archaeology</em>, 67.</p></li>
-</ol>
 </section>
     </div>
   <div class="quarto-auto-generated-content" style="display: none;">
