@@ -1,6 +1,6 @@
 ---
-title: "'Le plus intelligent, mais pas à la bonne adresse ...'"
-subtitle: "Gestion, archivage et diffusion des données de l’unité : les bonnes pratiques"
+title: "Découvrabilité des données"
+subtitle: "Gestion, archivage et **diffusion des données** de l’unité : les bonnes pratiques"
 author:
   - name: Thomas Huet
     affiliation: 
@@ -34,24 +34,28 @@ format:
     width: 1200
 ---
 
-# Indexation
 
-
-## Facile à trouver, Accessible, ...
+## Facile à trouver (<u>F</u>AIR)
 
 :::: {.columns}
 
 ::: {.column width="30%"}
 
-<img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/web-address-io.jpg' style='width: 300px;vertical-align: middle;'>
-<small>Les adresses en IO (pour _in_ / _out_, ou encore `1`/`0`, en référence aux bits) sont les plus recherchées </small>
+<img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/web-address-io.jpg' style='width: 320px;vertical-align: middle;'>
+<small>A Londres comme ailleurs, les adresses en <b><span style="font-family:'Courier New'">IO</span></b> (pour In/Out, ou **1**/**0** en référence aux bits) sont les plus recherchées.</small>
 :::
 
 ::: {.column width="70%"}
 
 ```{=html}
-<iframe width="780" height="500" src="https://iramat-apps.cnrs.fr/"></iframe>
+<iframe width="780" height="450" src="https://iramat-apps.cnrs.fr/"></iframe>
 ```
+
+<center>
+
+<small><https://iramat-apps.cnrs.fr/></small>
+
+</center>
 
 :::
 
