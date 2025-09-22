@@ -1,0 +1,107 @@
+[
+  {
+    "objectID": "index.html#la-série-wiai",
+    "href": "index.html#la-série-wiai",
+    "title": "Gestion, archivage et diffusion des données de l’unité : les bonnes pratiques",
+    "section": "La série WIAI",
+    "text": "La série WIAI\n\n\nWebinaires dédiés aux technologies de l’information pour l’archéométrie:  GitHub , Python , R , API , IIIF , etc. \n\n\n\n\n\n\nNote\n\n\n📅 Le 2e Mardi matin de chaque mois sur ZOOM entre 10h00 et 10h50 (50 minutes), lien sur le GitHub de l’IRAMAT\n\n\n\n\n\n\nHadley Wickham, “Anything that can be automated, should be automated” – 2023  Wikipedia\n\n\n\nDécouvrir – ou approfondir – une solution logicielle open-source en revenant sur l’histoire de ce logiciel, sa logique interne, … Avec des citations rigolotes"
+  },
+  {
+    "objectID": "index.html#plan-de-la-présentation",
+    "href": "index.html#plan-de-la-présentation",
+    "title": "Gestion, archivage et diffusion des données de l’unité : les bonnes pratiques",
+    "section": "Plan de la présentation",
+    "text": "Plan de la présentation\n\n\neproductible\niRamat  \nDiscussion"
+  },
+  {
+    "objectID": "index.html#intro",
+    "href": "index.html#intro",
+    "title": "Gestion, archivage et diffusion des données de l’unité : les bonnes pratiques",
+    "section": "Intro",
+    "text": "Intro\n\n\nR est le language de script le plus utilisé par les archéologues. \n\n\n\nLinus Torvalds en 2018 (c) Lf Asia"
+  },
+  {
+    "objectID": "index.html#schéma",
+    "href": "index.html#schéma",
+    "title": "Gestion, archivage et diffusion des données de l’unité : les bonnes pratiques",
+    "section": "Schéma",
+    "text": "Schéma\n\n\n\n\nMettre la copie du dépôt distant1 à jour (push) :\ngit add .\ngit commit -m 'varia'\ngit push \nMettre la copie du dépôt local2 à jour (pull) :\ngit pull\ngit checkout\n\n\nDépôt local3 ou distant4 : système de dossiers et fichiers5 conservant son propre historique (dossier .git) et un lien vers le dépôt (local ou distant)."
+  },
+  {
+    "objectID": "index.html#logique",
+    "href": "index.html#logique",
+    "title": "Gestion, archivage et diffusion des données de l’unité : les bonnes pratiques",
+    "section": "Logique",
+    "text": "Logique\n\nDécentraliséVersionnageCopies locales\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nHistorique des commit6\n\n\n\n\n\n\n\n Capture d’écran de mon environnement de développement7 (Microsoft VS Code):\n\nà gauche: arborescence du dépôt local8 IRAMAT-DEV\nau centre: fichier .gitignore listant les dossiers credentials et doc, exclus du téléversement au dépôt distant9 (push)\nà droite: fichier pg_credentials.json avec les paramètres de connexion à la BDD chips_d, exclu du téléversement au dépôt distant10 (push)"
+  },
+  {
+    "objectID": "index.html#git-en-résumé",
+    "href": "index.html#git-en-résumé",
+    "title": "Gestion, archivage et diffusion des données de l’unité : les bonnes pratiques",
+    "section": "Git en résumé",
+    "text": "Git en résumé\n\n\n\n\n\n\n\n“Git is not designed to make you happy. It’s designed to make other people happy after you’ve screwed things up” – Linus Torvalds"
+  },
+  {
+    "objectID": "index.html#intro-1",
+    "href": "index.html#intro-1",
+    "title": "Gestion, archivage et diffusion des données de l’unité : les bonnes pratiques",
+    "section": "Intro",
+    "text": "Intro\nGitHub  une des principales plate-forme web (propriétaire 🔒11) pour les projets open source de développement d’applications informatiques utilisant Git \n\n📁 Repositories\n🙍 Users\n Organisations\n🧵 Issues"
+  },
+  {
+    "objectID": "index.html#repositories",
+    "href": "index.html#repositories",
+    "title": "Gestion, archivage et diffusion des données de l’unité : les bonnes pratiques",
+    "section": "Repositories",
+    "text": "Repositories"
+  },
+  {
+    "objectID": "index.html#users",
+    "href": "index.html#users",
+    "title": "Gestion, archivage et diffusion des données de l’unité : les bonnes pratiques",
+    "section": "Users",
+    "text": "Users"
+  },
+  {
+    "objectID": "index.html#organisations",
+    "href": "index.html#organisations",
+    "title": "Gestion, archivage et diffusion des données de l’unité : les bonnes pratiques",
+    "section": "Organisations",
+    "text": "Organisations"
+  },
+  {
+    "objectID": "index.html#issues",
+    "href": "index.html#issues",
+    "title": "Gestion, archivage et diffusion des données de l’unité : les bonnes pratiques",
+    "section": "Issues",
+    "text": "Issues"
+  },
+  {
+    "objectID": "index.html#github-à-liramat-1",
+    "href": "index.html#github-à-liramat-1",
+    "title": "Gestion, archivage et diffusion des données de l’unité : les bonnes pratiques",
+    "section": "GitHub à l’IRAMAT",
+    "text": "GitHub à l’IRAMAT\n\n\n Avoir une “belle” (i.e., courte) adresse: https://github.com/iramat et échanger des URLs\n\n\n \nAfficher du Markdown et des fichiers structurés: CSV, TSV, PDF, GeoJSON, HTML (fichier et site web statique)\n\n\nVisibilité du développement logiciel et des données de référence (d’après Batist & Roe, 202412)\n\n\nPour proposer une bibliothèque Python (ex: PyMca), ou un package R, il est fortement recommandé d’utiliser GitHub en raison de sa visibilité, de ses outils de collaboration et de son intégration avec les flux de travail de packaging"
+  },
+  {
+    "objectID": "index.html#gitlab",
+    "href": "index.html#gitlab",
+    "title": "Gestion, archivage et diffusion des données de l’unité : les bonnes pratiques",
+    "section": "GitLab",
+    "text": "GitLab\nGitLab  : plateforme indépendante (🔓, GitLab Inc.) avec un hébergement cloud ou un auto-hébergement, pour les projets open source de développement d’applications informatiques utilisant Git .\n\n\n\n\nProjet BDD Terrifer/Sideros à l’IRAMAT Belfort\n\n\n\n\nProjet BDD Atmoce/AeMA à l’IRAMAT Orléans"
+  },
+  {
+    "objectID": "index.html#discussion-1",
+    "href": "index.html#discussion-1",
+    "title": "Gestion, archivage et diffusion des données de l’unité : les bonnes pratiques",
+    "section": "Discussion",
+    "text": "Discussion\n\n\nd’après (c) www.furygoat.com"
+  },
+  {
+    "objectID": "index.html#footnotes",
+    "href": "index.html#footnotes",
+    "title": "Gestion, archivage et diffusion des données de l’unité : les bonnes pratiques",
+    "section": "Footnotes",
+    "text": "Footnotes\n\n\nremote repo ou remote repository\nlocal repo ou local repository\nremote repo ou remote repository\nlocal repo ou local repository\nfile/folder structure\ncommit history\nIntegrated Development Environment (IDE)\nremote repo ou remote repository\nremote repo ou remote repository\nremote repo ou remote repository\nhébergement cloud Microsoft \nBatist, Z., & Roe, J. A. (2024). Open Archaeology, Open Source? Collaborative practices in an emerging community of archaeological software engineers. Internet Archaeology, 67."
+  }
+]
