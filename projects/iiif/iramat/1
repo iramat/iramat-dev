@@ -1,21 +1,39 @@
-"annotations": [
-  {
-    "@context": "http://iiif.io/api/presentation/3/context.json",
-    "id": "http://157.136.252.188/page/annotations/1",
-    "type": "AnnotationPage",
-    "items": [
-      {
-        "id": "http://157.136.252.188/annotation/user-note-1",
-        "type": "Annotation",
-        "motivation": "commenting",
-        "body": {
+{
+  "@context": "http://iiif.io/api/presentation/3/context.json",
+  "id": "https://iramat-apps.cnrs.fr/page/annotations/1",
+  "type": "AnnotationPage",
+  "items": [
+    {
+      "id": "https://iramat-apps.cnrs.fr/iiif/2/canvas/1/c9dc01e2-92b6-4f1e-b874-42bb5ee12eff",
+      "type": "Annotation",
+      "motivation": "commenting",
+      "body": [
+        {
+          "created": "2025-09-29T12:18:12.986Z",
+          "creator": "zoometh",
+          "purpose": "commenting",
           "type": "TextualBody",
-          "value": "This area shows corrosion patterns",
-          "format": "text/plain",
-          "language": "en"
-        },
-        "target": "http://157.136.252.188/canvas/1#xywh=1000,1000,500,500"
-      }
-    ]
-  }
-]
+          "format": "text/html",
+          "value": "<p>Annotation 1</p>"
+        }
+      ],
+      "target": "https://iramat-apps.cnrs.fr/iiif/2/canvas/1#xywh=4009,7700,354,500"
+    },
+    {
+      "id": "https://iramat-apps.cnrs.fr/iiif/2/canvas/1/d5fffec2-4f0e-447c-a229-69508ae18ee9",
+      "type": "Annotation",
+      "motivation": "commenting",
+      "body": [
+        {
+          "created": "2025-09-29T12:18:33.854Z",
+          "creator": "zoometh",
+          "purpose": "commenting",
+          "type": "TextualBody",
+          "format": "text/html",
+          "value": "<p>Annotation 2</p>"
+        }
+      ],
+      "target": "https://iramat-apps.cnrs.fr/iiif/2/canvas/1#xywh=5568,4828,193,491"
+    }
+  ]
+}

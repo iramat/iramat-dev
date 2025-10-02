@@ -1,6 +1,6 @@
 {
-  "@context": "https://iiif.io/api/presentation/3/context.json",
-  "id": "https://zoometh.xyz/page/manifest_puddled.json",
+  "@context": ["https://iiif.io/api/presentation/3/context.json"],
+  "id": "https://iramat-apps.cnrs.fr/page/manifest_puddled.json",
   "type": "Manifest",
   "label": {
     "fr": [
@@ -12,43 +12,43 @@
   },
   "items": [
     {
-      "id": "https://zoometh.xyz/iiif/2/canvas/1",
+      "id": "https://iramat-apps.cnrs.fr/iiif/2/canvas/1",
       "type": "Canvas",
       "width": 11526,
       "height": 20793,
       "items": [
         {
-          "id": "https://zoometh.xyz/iiif/2/page/1",
+          "id": "https://iramat-apps.cnrs.fr/iiif/2/page/1",
           "type": "AnnotationPage",
           "items": [
             {
-              "id": "https://zoometh.xyz/iiif/2/annotation/1",
+              "id": "https://iramat-apps.cnrs.fr/iiif/2/annotation/1",
               "type": "Annotation",
               "motivation": "painting",
               "body": {
                 "type": "Image",
-                "id": "https://zoometh.xyz/iiif/2/puddled%2FR217-1-macrox5.jpg/full/full/0/default.jpg",
+                "id": "https://iramat-apps.cnrs.fr/iiif/2/puddled%2FR217-1-macrox5.jpg/full/full/0/default.jpg",
                 "format": "image/jpeg",
                 "width": 11526,
                 "height": 20793,
                 "service": [
                   {
                     "@context": "https://iiif.io/api/image/2/context.json",
-                    "id": "https://zoometh.xyz/iiif/2/puddled%2FR217-1-macrox5.jpg",
+                    "id": "https://iramat-apps.cnrs.fr/iiif/2/puddled%2FR217-1-macrox5.jpg",
                     "type": "ImageService2",
                     "profile": "https://iiif.io/api/image/2/level2.json",
                     "crossOrigin": "anonymous"
                   }
                 ]
               },
-              "target": "https://zoometh.xyz/iiif/2/canvas/1"
+              "target": "https://iramat-apps.cnrs.fr/iiif/2/canvas/1"
             }
           ]
         }
       ],
       "annotations": [
         {
-          "id": "https://zoometh.xyz/page/annotations/1",
+          "id": "https://iramat-apps.cnrs.fr/page/annotations/1",
           "type": "AnnotationPage"
         }
       ]
