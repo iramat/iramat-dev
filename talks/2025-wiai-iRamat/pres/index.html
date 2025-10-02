@@ -274,30 +274,30 @@ Hadley Wickham, <em>“Anything that can be automated, should be automated”</e
 <h2>Intro</h2>
 <div class="columns">
 <div class="column" style="width:70%;">
-<p>Git <img src="https://raw.githubusercontent.com/zoometh/thomashuet/master/img/app-git-1.png" style="height: 40px;vertical-align: middle;"> : <strong>logiciel de gestion de versions décentralisé</strong><a href="#/footnotes" class="footnote-ref" id="fnref1" role="doc-noteref" data-footnote-href="#/fn1" onclick=""><sup>1</sup></a> originallement créé par Linus Torvalds pour le contrôle de version dans le développement du noyau Linux <img src="https://raw.githubusercontent.com/zoometh/thomashuet/master/img/app-os-linux.jpg" style="height: 45px;vertical-align: middle;">. <br></p>
+<p>R est le language de script le plus utilisé par les archéologues. <br></p>
 </div><div class="column" style="width:30%;">
 <img data-src="https://upload.wikimedia.org/wikipedia/commons/e/e8/Lc3_2018_%28263682303%29_%28cropped%29.jpeg" style="vertical-align: middle;" width="300">
 <div class="captiontext">
 Linus Torvalds en 2018 (c) Lf Asia
 </div>
 </div></div>
-<aside></aside></section>
+</section>
 <section id="schéma" class="slide level2">
 <h2>Schéma</h2>
 <div class="columns">
 <div class="column" style="width:60%;">
 <p><img src="https://raw.githubusercontent.com/zoometh/thomashuet/master/img/app-git-workflow.png" style="width: 700px;vertical-align: middle;"></p>
 </div><div class="column" style="width:40%;">
-<p><small>Mettre la copie du dépôt distant<a href="#/footnotes" class="footnote-ref" id="fnref2" role="doc-noteref" data-footnote-href="#/fn2" onclick=""><sup>2</sup></a> à jour (<em>push</em>) :</small></p>
+<p><small>Mettre la copie du dépôt distant<a href="#/footnotes" class="footnote-ref" id="fnref1" role="doc-noteref" data-footnote-href="#/fn1" onclick=""><sup>1</sup></a> à jour (<em>push</em>) :</small></p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode numberSource sh number-lines code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a></a><span class="fu">git</span> add .</span>
 <span id="cb1-2"><a></a><span class="fu">git</span> commit <span class="at">-m</span> <span class="st">'varia'</span></span>
 <span id="cb1-3"><a></a><span class="fu">git</span> push </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p><small>Mettre la copie du dépôt local<a href="#/footnotes" class="footnote-ref" id="fnref3" role="doc-noteref" data-footnote-href="#/fn3" onclick=""><sup>3</sup></a> à jour (<em>pull</em>) :</small></p>
+<p><small>Mettre la copie du dépôt local<a href="#/footnotes" class="footnote-ref" id="fnref2" role="doc-noteref" data-footnote-href="#/fn2" onclick=""><sup>2</sup></a> à jour (<em>pull</em>) :</small></p>
 <div class="sourceCode" id="cb2"><pre class="sourceCode numberSource sh number-lines code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a></a><span class="fu">git</span> pull</span>
 <span id="cb2-2"><a></a><span class="fu">git</span> checkout</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p><br></p>
 <hr>
-<p><small>Dépôt local<a href="#/footnotes" class="footnote-ref" id="fnref4" role="doc-noteref" data-footnote-href="#/fn4" onclick=""><sup>4</sup></a> ou distant<a href="#/footnotes" class="footnote-ref" id="fnref5" role="doc-noteref" data-footnote-href="#/fn5" onclick=""><sup>5</sup></a> : système de dossiers et fichiers<a href="#/footnotes" class="footnote-ref" id="fnref6" role="doc-noteref" data-footnote-href="#/fn6" onclick=""><sup>6</sup></a> conservant son propre historique (dossier <code>.git</code>) et un lien vers le dépôt (local ou distant).</small></p>
+<p><small>Dépôt local<a href="#/footnotes" class="footnote-ref" id="fnref3" role="doc-noteref" data-footnote-href="#/fn3" onclick=""><sup>3</sup></a> ou distant<a href="#/footnotes" class="footnote-ref" id="fnref4" role="doc-noteref" data-footnote-href="#/fn4" onclick=""><sup>4</sup></a> : système de dossiers et fichiers<a href="#/footnotes" class="footnote-ref" id="fnref5" role="doc-noteref" data-footnote-href="#/fn5" onclick=""><sup>5</sup></a> conservant son propre historique (dossier <code>.git</code>) et un lien vers le dépôt (local ou distant).</small></p>
 </div></div>
 <aside></aside></section>
 <section id="logique" class="slide level2">
@@ -318,7 +318,7 @@ Linus Torvalds en 2018 (c) Lf Asia
 <div class="column" style="width:70%;">
 <p><img src="https://raw.githubusercontent.com/zoometh/thomashuet/master/img/app-git-ill1.png" style="width: 800px;vertical-align: middle;"></p>
 </div><div class="column" style="width:30%;">
-<p><small>Historique des <em>commit</em><a href="#/footnotes" class="footnote-ref" id="fnref7" role="doc-noteref" data-footnote-href="#/fn7" onclick=""><sup>7</sup></a></small></p>
+<p><small>Historique des <em>commit</em><a href="#/footnotes" class="footnote-ref" id="fnref6" role="doc-noteref" data-footnote-href="#/fn6" onclick=""><sup>6</sup></a></small></p>
 </div></div>
 </div>
 <div id="tabset-1-3">
@@ -326,11 +326,11 @@ Linus Torvalds en 2018 (c) Lf Asia
 <div class="column" style="width:65%;">
 <p><img src="https://raw.githubusercontent.com/zoometh/thomashuet/master/img/app-github-file-gitignore.jpeg" style="width: 700px;vertical-align: middle;"></p>
 </div><div class="column" style="width:35%;">
-<p><small> Capture d’écran de mon environnement de développement<a href="#/footnotes" class="footnote-ref" id="fnref8" role="doc-noteref" data-footnote-href="#/fn8" onclick=""><sup>8</sup></a> (Microsoft VS Code):</small></p><small>
+<p><small> Capture d’écran de mon environnement de développement<a href="#/footnotes" class="footnote-ref" id="fnref7" role="doc-noteref" data-footnote-href="#/fn7" onclick=""><sup>7</sup></a> (Microsoft VS Code):</small></p><small>
 <ul>
-<li><p>à gauche: arborescence du dépôt local<a href="#/footnotes" class="footnote-ref" id="fnref9" role="doc-noteref" data-footnote-href="#/fn9" onclick=""><sup>9</sup></a> <code>IRAMAT-DEV</code></p></li>
-<li><p>au centre: fichier <code>.gitignore</code> listant les dossiers <code>credentials</code> et <code>doc</code>, exclus du téléversement au dépôt distant<a href="#/footnotes" class="footnote-ref" id="fnref10" role="doc-noteref" data-footnote-href="#/fn10" onclick=""><sup>10</sup></a> (<em>push</em>)</p></li>
-<li><p>à droite: fichier <code>pg_credentials.json</code> avec les paramètres de connexion à la BDD <code>chips_d</code>, exclu du téléversement au dépôt distant<a href="#/footnotes" class="footnote-ref" id="fnref11" role="doc-noteref" data-footnote-href="#/fn11" onclick=""><sup>11</sup></a> (<em>push</em>)</p></li>
+<li><p>à gauche: arborescence du dépôt local<a href="#/footnotes" class="footnote-ref" id="fnref8" role="doc-noteref" data-footnote-href="#/fn8" onclick=""><sup>8</sup></a> <code>IRAMAT-DEV</code></p></li>
+<li><p>au centre: fichier <code>.gitignore</code> listant les dossiers <code>credentials</code> et <code>doc</code>, exclus du téléversement au dépôt distant<a href="#/footnotes" class="footnote-ref" id="fnref9" role="doc-noteref" data-footnote-href="#/fn9" onclick=""><sup>9</sup></a> (<em>push</em>)</p></li>
+<li><p>à droite: fichier <code>pg_credentials.json</code> avec les paramètres de connexion à la BDD <code>chips_d</code>, exclu du téléversement au dépôt distant<a href="#/footnotes" class="footnote-ref" id="fnref10" role="doc-noteref" data-footnote-href="#/fn10" onclick=""><sup>10</sup></a> (<em>push</em>)</p></li>
 </ul>
 </small><p><small></small></p>
 </div></div>
@@ -357,7 +357,7 @@ Linus Torvalds en 2018 (c) Lf Asia
 </section>
 <section id="intro-1" class="slide level2">
 <h2>Intro</h2>
-<p>GitHub <img src="https://raw.githubusercontent.com/zoometh/thomashuet/master/img/app-github.png" style="height: 40px;vertical-align: middle;"> une des principales plate-forme web (propriétaire 🔒<a href="#/footnotes" class="footnote-ref" id="fnref12" role="doc-noteref" data-footnote-href="#/fn12" onclick=""><sup>12</sup></a>) pour les projets <em>open source</em> de développement d’applications informatiques utilisant Git <img src="https://raw.githubusercontent.com/zoometh/thomashuet/master/img/app-git-1.png" style="height: 40px;vertical-align: middle;"></p>
+<p>GitHub <img src="https://raw.githubusercontent.com/zoometh/thomashuet/master/img/app-github.png" style="height: 40px;vertical-align: middle;"> une des principales plate-forme web (propriétaire 🔒<a href="#/footnotes" class="footnote-ref" id="fnref11" role="doc-noteref" data-footnote-href="#/fn11" onclick=""><sup>11</sup></a>) pour les projets <em>open source</em> de développement d’applications informatiques utilisant Git <img src="https://raw.githubusercontent.com/zoometh/thomashuet/master/img/app-git-1.png" style="height: 40px;vertical-align: middle;"></p>
 <ul>
 <li>📁 Repositories</li>
 <li>🙍 Users</li>
@@ -410,7 +410,7 @@ Linus Torvalds en 2018 (c) Lf Asia
 <p><small>Afficher du Markdown et des fichiers structurés: CSV, TSV, PDF, GeoJSON, HTML (fichier et site web statique)</small></p>
 </div><div class="column" style="width:40%;">
 <iframe width="700" height="350" src="https://caa-france.github.io/website/diagrams/oarch_repo_user.html" title="Quarto Documentation"></iframe>
-<p><small>Visibilité du développement logiciel et des données de référence (d’après Batist &amp; Roe, 2024<a href="#/footnotes" class="footnote-ref" id="fnref13" role="doc-noteref" data-footnote-href="#/fn13" onclick=""><sup>13</sup></a>)</small></p>
+<p><small>Visibilité du développement logiciel et des données de référence (d’après Batist &amp; Roe, 2024<a href="#/footnotes" class="footnote-ref" id="fnref12" role="doc-noteref" data-footnote-href="#/fn12" onclick=""><sup>12</sup></a>)</small></p>
 </div></div>
 <aside class="notes">
 <p>Pour proposer une bibliothèque Python (ex: PyMca), ou un package R, il est fortement recommandé d’utiliser GitHub en raison de sa visibilité, de ses outils de collaboration et de son intégration avec les flux de travail de packaging</p>
@@ -474,25 +474,24 @@ d’après (c) www.furygoat.com
 <section id="footnotes" class="footnotes footnotes-end-of-document smaller scrollable" role="doc-endnotes"><h2>Footnotes</h2>
 
 <ol>
-<li id="fn1"><p><em>distributed version control system</em></p></li>
-<li id="fn2"><p><em>remote repo</em> ou <em>remote repository</em></p></li>
-<li id="fn3"><p><em>local repo</em> ou <em>local repository</em></p></li>
-<li id="fn4"><p><em>remote repo</em> ou <em>remote repository</em></p></li>
-<li id="fn5"><p><em>local repo</em> ou <em>local repository</em></p></li>
-<li id="fn6"><p><em>file/folder structure</em></p></li>
-<li id="fn7"><p><em>commit history</em></p></li>
-<li id="fn8"><p><em>Integrated Development Environment</em> (IDE)</p></li>
+<li id="fn1"><p><em>remote repo</em> ou <em>remote repository</em></p></li>
+<li id="fn2"><p><em>local repo</em> ou <em>local repository</em></p></li>
+<li id="fn3"><p><em>remote repo</em> ou <em>remote repository</em></p></li>
+<li id="fn4"><p><em>local repo</em> ou <em>local repository</em></p></li>
+<li id="fn5"><p><em>file/folder structure</em></p></li>
+<li id="fn6"><p><em>commit history</em></p></li>
+<li id="fn7"><p><em>Integrated Development Environment</em> (IDE)</p></li>
+<li id="fn8"><p><em>remote repo</em> ou <em>remote repository</em></p></li>
 <li id="fn9"><p><em>remote repo</em> ou <em>remote repository</em></p></li>
 <li id="fn10"><p><em>remote repo</em> ou <em>remote repository</em></p></li>
-<li id="fn11"><p><em>remote repo</em> ou <em>remote repository</em></p></li>
-<li id="fn12"><p>hébergement cloud Microsoft <img src="https://raw.githubusercontent.com/zoometh/thomashuet/master/img/app-os-microsoft-windows-10.png" style="height: 40px;vertical-align: middle;"></p></li>
-<li id="fn13"><p>Batist, Z., &amp; Roe, J. A. (2024). Open Archaeology, Open Source? Collaborative practices in an emerging community of archaeological software engineers. <em>Internet Archaeology</em>, 67.</p></li>
+<li id="fn11"><p>hébergement cloud Microsoft <img src="https://raw.githubusercontent.com/zoometh/thomashuet/master/img/app-os-microsoft-windows-10.png" style="height: 40px;vertical-align: middle;"></p></li>
+<li id="fn12"><p>Batist, Z., &amp; Roe, J. A. (2024). Open Archaeology, Open Source? Collaborative practices in an emerging community of archaeological software engineers. <em>Internet Archaeology</em>, 67.</p></li>
 </ol>
 </section>
     </div>
   <div class="quarto-auto-generated-content" style="display: none;">
 <div class="footer footer-default">
-<p>Thomas Huet - <img src="https://raw.githubusercontent.com/zoometh/thomashuet/master/img/inst-cnrs-iramat.png" style="height: 20px;vertical-align: middle;"> - 09 décembre, 2025, LAPA, Saclay</p>
+<p>Thomas Huet - <img src="https://raw.githubusercontent.com/zoometh/thomashuet/master/img/inst-cnrs-iramat.png" style="height: 20px;vertical-align: middle;"> - 7 Octobre, 2025, LAPA, Saclay</p>
 </div>
 </div></div>
 
