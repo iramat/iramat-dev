@@ -183,10 +183,12 @@ style Python fill:#02fa02
 ![#02fa02](https://placehold.co/15x15/02fa02/02fa02.png): fichiers/fonctions Python
 
 * `contrôle`
+  
   1. vérification des données saisies dans l'XLSX (types attendus, etc.)
 
 
 * `ajoute à`:
+  
   1. effectue un `INSERT INTO` dans la table chips avec auto-incrémentation des indenfiants ❓updates
   2. retourne un rapport: identifiants, etc. ❓Zenodo
 
@@ -220,13 +222,21 @@ VALUES ('instrument_incertitude','@techreport{Doe2024TechReport,
 
 ### à classer
 
+`chips` data -> `chips_d`, _run_: 
+
+```sh
+/home/ubuntu/backup_chips_tables.sh
+```
+
 erreurs:
 * https://zoometh.xyz/dash/dataset_leschenlohr01
 * https://zoometh.xyz/dash/dataset_mbenvenuti13
 
 
 ### notes
-  
-| id_machinei         | integer   |                     |  analytical setup used to acquire isotopic amounts                |  
+
+| champs          | type                         | description                         |
+|-----------------|-------------------------------------|-------------------------------------|
+| id_machinei         | integer   |                     |  analytical setup used to acquire isotopic amounts              |  
 | id_machinem         | integer   |                     |  analytical setup used to measure major elements                |  
 | id_machinet         | integer   |                     |  analytical setup used to measure trace elements                |  
