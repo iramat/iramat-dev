@@ -57,8 +57,8 @@ GitHub <img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img
 
 ::: {.column width="30%"}
 
-![](https://upload.wikimedia.org/wikipedia/commons/f/fa/Hadley-wickham2016-02-04.jpg){width="300" style="vertical-align: middle;"}
-<div class="captiontext">Hadley Wickham, _"Anything that can be automated, should be automated"_ -- 2023 <img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/lod-licences-publicdomain-1.png' style='height: 12px;vertical-align: middle;'> Wikipedia </div>
+![](https://upload.wikimedia.org/wikipedia/commons/7/76/Jim_Gray_Computing_in_the_21st_Century_2006.jpg){width="300" style="vertical-align: middle;"}
+<div class="captiontext">Jim Gray, _"A data structure is nothing without an algorithm, and an algorithm is nothing without a data structure."_ Microsoft Research, CC BY-SA </div>
 
 
 :::
@@ -74,33 +74,24 @@ Découvrir -- ou approfondir -- une solution logicielle open-source en revenant 
 ## Plan de la présentation
 
 
-1. <img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/prog-r-1.png' style='height: 45px;vertical-align: middle;'>
+1. <img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/prog-r-1.png' style='height: 45px;vertical-align: middle;'> et les _packages_
 2. <img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/prog-r-1.png' style='height: 45px;vertical-align: middle;'>eproductible 
 3. iRamat <img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/prog-r-1.png' style='height: 45px;vertical-align: middle;'> <img src='https://raw.githubusercontent.com/iramat/iRamat/master/doc/img/logo.png' style='height: 60px;vertical-align: middle;'> 
 5. Discussion
 
 
-# R <img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/prog-r-1.png' style='height: 120px;vertical-align: middle;'>
+# <img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/prog-r-1.png' style='height: 120px;vertical-align: middle;'> et les _packages_
 
 
 
-## Intro
+## R
 
 
 :::: {.columns}
 
 ::: {.column width="70%"}
-R est un language de script orienté statistiques (essais cliniques, analyse de survie, etc.). C'est le plus utilisé par les archéologues[^1] qui utilisent les _packages_ génériques comme `ggplot` <img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/r-pkg-ggplot.png' style='width: 40px;vertical-align: middle;'>pour les graphiques (développé par Hadley Wickham), `terra` <img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/r-pkg-terra.png' style='width: 40px;vertical-align: middle;'> et `sf` <img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/r-pkg-sf.png' style='width: 40px;vertical-align: middle;'> pour l'analyse spatiale, etc. 
+<img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/prog-r-1.png' style='height: 50px;vertical-align: middle;'> est un langage de script orienté statistiques. C'est le langage préférés des archéologues[^1] qui utilisent les _packages_ comme `ggplot` <img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/r-pkg-ggplot.png' style='width: 50px;vertical-align: middle;'> pour les graphiques (développé par Hadley Wickham), `terra` <img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/r-pkg-terra.png' style='width: 50px;vertical-align: middle;'> et `sf` <img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/r-pkg-sf.png' style='width: 50px;vertical-align: middle;'> pour l'analyse spatiale, etc. 
 
-et du code R est régulièrement publié en _supplementary material_ dans des articles Pour , _Chief Scientist_ pour Posit (ancien<sup>t</sup> RStudio)
-
-
-
-
-
-https://open-archaeo.info/tags/x-ray-fluorescence/
-
-<br>
 
 [^1]:  Batist, Z. and Roe, J. 2024 Open Archaeology, Open Source? Collaborative practices in an emerging community of archaeological software engineers, _Internet Archaeology_ 67. <https://doi.org/10.11141/ia.67.13>
 
@@ -116,249 +107,364 @@ https://open-archaeo.info/tags/x-ray-fluorescence/
 
 
 
-[^1]: _distributed version control system_
-[^6]: _file/folder structure_
-
-## Schéma
+## Les _packages_ R
 
 :::: {.columns}
 
-::: {.column width="60%"}
-<img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/app-git-workflow.png' style='width: 700px;vertical-align: middle;'>
+::: {.column width="50%"}
+Un _package_ rassemble du code, de la documentation et parfois des données.<br>
+
+Un _package_ est conçu pour être facilement partagé, installé et réutilisé et ainsi garantir la reproductibilité des analyses.
 :::
 
-::: {.column width="40%"}
+::: {.column width="50%"}
 
-<small>Mettre la copie du dépôt distant[^4] à jour (_push_) :</small>
-
-```{.sh}
-git add .
-git commit -m 'varia'
-git push 
+```{=html}
+<div style="width:1000px; height:450px; overflow:hidden;">
+  <iframe src="https://cran.r-project.org/"
+          style="transform: scale(0.9); transform-origin: 0 0; width:750px; height:500px; border:none;">
+  </iframe>
+</div>
 ```
-
-<small>Mettre la copie du dépôt local[^5] à jour (_pull_) :</small>
-
-```{.sh}
-git pull
-git checkout
-```
-
-<br>
-
----
-
-<small>Dépôt local[^4] ou distant[^5] : système de dossiers et fichiers[^6] conservant son propre historique (dossier `.git`) et un lien vers le dépôt (local ou distant).</small>
-
-
+<div class="captiontext">Le _Comprehensive R Archive Network_ (CRAN) <https://cran.r-project.org/>, l'archive officielle des _packages_ R </div>
 :::
 
 ::::
 
-[^4]: _remote repo_ ou _remote repository_
-[^5]: _local repo_ ou _local repository_
 
-## Logique
+
+## Les _packages_ R (suite)
+
+:::: {.columns}
+
+::: {.column width="50%"}
+En mars 2023, plus de 19,000 packages étaient disponibles sur le CRAN. En 2021 on estime qu'il y en avait plus de 25,000 hebergés sur GitHub <img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/app-github.png' style='width: 40px;vertical-align: middle;'>[^2]
+:::
+
+::: {.column width="50%"}
+<img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/r-pkgs-mosaic-3.png' style='width: 700px;vertical-align: middle;'>
+:::
+
+::::
+
+[^2]: Bommarito, E., & Bommarito II, M. J. (2021). An empirical analysis of the R package ecosystem. _arXiv preprint arXiv:2102.09904_.
+
+## Trouver un package <img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/r-pkgs-mosaic-4.png' style='width: 80px;vertical-align: middle;'>
 
 ::: {.panel-tabset}
 
-### Décentralisé
+### `{pkgsearch}`
+
+```{r echo=TRUE}
+# install.packages("pkgsearch")
+library(pkgsearch)
+ps("raman")
+```
+
+### R-Universe
+
+<small><https://r-universe.dev/search?q=raman></small>
+```{=html}
+<iframe width="1200" height="500" src="https://r-universe.dev/search?q=raman" title="Search for Raman"></iframe>
+```
+
+
+### GitHub
+
+<small><https://github.com/search/advanced></small>
+<img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/r-pkg--search-github.png' style='width: 1000px;vertical-align: middle;'><br><center>⬇️</center><br>
+<img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/r-pkg--search-github-1.png' style='width: 1000px;vertical-align: middle;'>
+
+### open-archaeo
+
+[open-archaeo](https://open-archaeo.info/) et le [SIG-SSLA](https://sslarch.github.io/)
+
+```{=html}
+<iframe width="1200" height="500" src="https://open-archaeo.info/tags/x-ray-fluorescence/" title="Search for Raman"></iframe>
+```
+<small>https://open-archaeo.info/tags/x-ray-fluorescence/</small>
+
+:::
+
+
+## Composition d'un _package_ <img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/prog-r-1.png' style='height: 45px;vertical-align: middle;'> (fichiers sources)
+
+
+::: {.panel-tabset}
+
+### `DESCRIPTION`
+
+Le fichier [`DESCRIPTION`](https://github.com/iramat/iRamat/blob/main/DESCRIPTION) contient les métadonnées du _package_
+
+```{.md code-line-numbers="1|3|4|6|9|12-22|28|29"}
+Package: iRamat
+Type: Package
+Title: Statistical analysis on Archaeomaterial
+Description: Statistical analysis on Archaeomaterial.
+Version: 1.0.0
+Authors@R: c(person("Thomas", "Huet", email = "thomas.huet@cnrs.fr", role = c("aut", "cre"), comment=c(ORCID="0000-0002-1112-6122")))
+Depends:
+    R (>= 4.0.1)
+License: MIT + file LICENSE
+Encoding: UTF-8
+LazyData: true
+Imports:
+    dplyr,
+    ggplot2,
+    forcats,
+    stringr,
+    hash,
+    jsonlite,
+    httr,
+    imager,
+    spatstat.geom,
+    spatstat.explore   
+RoxygenNote: 7.3.2
+Suggests: 
+    testthat (>= 3.0.0),
+    ggpubr
+Config/testthat/edition: 3
+URL: https://github.com/iramat/iRamat
+BugsReport: https://github.com/iramat/iRamat/issues
+```
+
+<br><br>
+
+### `LICENSE`
+
+Les fichiers [`LICENSE`](https://github.com/iramat/iRamat/blob/main/LICENSE) et [`LICENSE.md`](https://github.com/iramat/iRamat/blob/main/LICENSE.md) contiennent la licence du _package_
 
 :::: {.columns}
-
-::: {.column width="50%"}
-
-<img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/app-git-commit-branch.png' style='width: 800px;vertical-align: middle;'>
-
-:::
-
-::: {.column width="50%"}
-
-<img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/app-git-pr.png' style='width: 800px;vertical-align: middle;'>
-
-:::
-
-::::
-
-### Versionnage
-
-
-
-:::: {.columns}
-
-::: {.column width="70%"}
-<img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/app-git-ill1.png' style='width: 800px;vertical-align: middle;'>
-:::
-
-::: {.column width="30%"}
-<small>Historique des _commit_[^3]</small>
-:::
-
-::::
-
-[^3]: _commit history_
-
-### Copies locales
-
-:::: {.columns}
-
-::: {.column width="65%"}
-<img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/app-github-file-gitignore.jpeg' style='width: 700px;vertical-align: middle;'>
-:::
-
-::: {.column width="35%"}
-<small>
-Capture d'écran de mon environnement de développement[^8] (Microsoft VS Code):
-
-- à gauche: arborescence du dépôt local[^4] `IRAMAT-DEV`
-
-- au centre: fichier `.gitignore` listant les dossiers `credentials` et `doc`, exclus du téléversement au dépôt distant[^4] (_push_) 
-
-- à droite: fichier `pg_credentials.json` avec les paramètres de connexion à la BDD `chips_d`, exclu du téléversement au dépôt distant[^4] (_push_)
-
-</small>
-
-:::
-
-::::
-
-:::
-
-[^8]: _Integrated Development Environment_ (IDE)
-
-## Git en résumé
-
-:::: {.columns}
-
-::: {.column width="35%"}
-
-<img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/app-git-ill1-2.png' style='width: 700px;vertical-align: middle;'>
-:::
-
-
-::: {.column width="65%"}
-<img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/app-git-ill2.png' style='width: 700px;vertical-align: middle;'>
-:::
-
-::::
-
-<div class="captiontext">
-_"Git is not designed to make you happy. It’s designed to make other people happy after you’ve screwed things up"_ -- Linus Torvalds
-</div>
-
-
-# GitHub
-
-## Intro
-
-GitHub <img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/app-github.png' style='height: 40px;vertical-align: middle;'> une des principales plate-forme web (propriétaire 🔒[^10]) pour les projets _open source_ de développement d'applications informatiques utilisant Git <img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/app-git-1.png' style='height: 40px;vertical-align: middle;'>
-
-* 📁 Repositories
-* 🙍 Users
-*  <img src='https://raw.githubusercontent.com/iramat/iramat-dev/master/img/logo.png' style='height: 35px;vertical-align: middle;'>  Organisations
-* 🧵 Issues
-
-[^10]: hébergement cloud Microsoft <img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/app-os-microsoft-windows-10.png' style='height: 40px;vertical-align: middle;'>
-
-## Repositories
-
-<a href= 'https://github.com/iramat/iramat-dev'><img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/app-github-repo-ex.jpeg' style='width: 1000px;vertical-align: middle;'></a>
-
-
-## Users
-
-<a href= 'https://github.com/zoometh'><img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/app-github-user-ex.jpeg' style='width: 1000px;vertical-align: middle;'></a>
-
-
-## Organisations
-
-<a href= 'https://github.com/iramat'><img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/app-github-org-ex.jpeg' style='width: 1000px;vertical-align: middle;'></a>
-
-
-## Issues
-
-<a href= 'https://github.com/iramat/iramat-dev/issues/20'><img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/app-github-issues.jpeg' style='width: 1000px;vertical-align: middle;'></a>
-
-
-# GitHub à l'IRAMAT
-
-<br>
-
-::: {.callout-warning}
-Le GitHub a été pensé pour être public: ne pas partager de mots de passe, données personnelles, confidentielles, sous embargo, etc.
-:::
-
-## GitHub à l'IRAMAT
-
-:::: {.columns}
-
-::: {.column width="30%"}
-
-<img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/web-address-io.jpg' style='width: 300px;vertical-align: middle;'>
-<small>Avoir une "belle" (i.e., courte) adresse: <https://github.com/iramat> et échanger des URLs</small>
-:::
-
-::: {.column width="30%"}
-
-<a href= 'https://github.com/iramat/iramat-dev/blob/main/dbs/chips/data/dataset/dataset.tsv'><img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/app-github-file-tsv.png' style='width: 300px;vertical-align: middle;'></a>
-
-<a href= 'https://github.com/iramat/iramat-dev/blob/main/projects/castel-minier/castel-minier.geojson'><img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/app-github-file-geojson.png' style='width: 300px;vertical-align: middle;'></a> <br>
-
-<small>Afficher du Markdown et des fichiers structurés: CSV, TSV, PDF, GeoJSON, HTML (fichier et site web statique)</small>
-
-
-
-:::
 
 ::: {.column width="40%"}
-```{=html}
-<iframe width="700" height="350" src="https://caa-france.github.io/website/diagrams/oarch_repo_user.html" title="Quarto Documentation"></iframe>
+
+[`LICENSE`](https://github.com/iramat/iRamat/blob/main/LICENSE)
+```{.md}
+YEAR: 2025
+COPYRIGHT HOLDER: IRAMAT-CNRS
 ```
-<small>Visibilité du développement logiciel et des données de référence (d'après Batist & Roe, 2024[^12])</small>
+
+:::
+
+::: {.column width="60%"}
+
+[`LICENSE.md`](https://github.com/iramat/iRamat/blob/main/LICENSE.md)
+```{.md}
+# MIT License
+
+Copyright (c) 2025 IRAMAT-CNRS
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+(...)
+```
+
 :::
 
 ::::
 
-[^12]: Batist, Z., & Roe, J. A. (2024). Open Archaeology, Open Source? Collaborative practices in an emerging community of archaeological software engineers. *Internet Archaeology*, 67.
+### `README.md`
 
-::: {.notes}
-Pour proposer une bibliothèque Python (ex: PyMca), ou un package R, il est fortement recommandé d'utiliser GitHub en raison de sa visibilité, de ses outils de collaboration et de son intégration avec les flux de travail de packaging
-:::
+Le fichier [`README.md`](https://github.com/iramat/iRamat?tab=readme-ov-file) présente le _package_
+
+<img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/r-pkg--readme-github.png' style='width: 1000px;vertical-align: middle;'>
 
 
-# Et GitLab?
+### `R/`
 
-## GitLab
+Le dossier [`R/`](https://github.com/iramat/iRamat/tree/main/R) contient les fonctions R
 
-GitLab <img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/app-gitlab.png' style='height: 40px;vertical-align: middle;'> : plateforme indépendante (🔓, GitLab Inc.) avec un hébergement cloud ou un auto-hébergement, pour les projets _open source_ de développement d'applications informatiques utilisant Git <img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/app-git-1.png' style='height: 40px;vertical-align: middle;'>.
+```{.r code-line-numbers="1|3|4|6-9|11|13-16|18|19-26" code-overflow="wrap"}
+#' Connect the CHIPS DB API and return an R object (dataframe, etc.)
+#'
+#' @name db_api_connect
+#' @description Connect the CHIPS DB API and return an R object (dataframe, etc.). The default dataset is dataset_adisser17, accessed at <http://157.136.252.188:3000/dataset_adisser17>
+#'
+#' @param d A hash object. If none is provided, a new one will be created.
+#' @param api_url An URL landing to an API. Default: 'dataset_adisser17'.
+#' @param output_format The selected output format. Default "dataframe".
+#' @param verbose if TRUE (by default), verbose.
+#'
+#' @return An R object.
+#'
+#' @examples
+#' df <- db_api_connect()
+#' # Show the first rows of the dataframe
+#' head(df$dataset_adisser17)
+#' 
+#' @export
+db_api_connect <- function(d = NA,
+                           api_url = "http://157.136.252.188:3000/dataset_adisser17",
+                           output_format = "dataframe",
+                           verbose = TRUE){
+                           
+                           (...)
+                           
+                           }
+```
+
+<br><br>
+
+### `inst/extdata/`
+
+Le dossier [`inst/extdata/`](https://github.com/iramat/iRamat/tree/main/inst/extdata/) contient les données externes
+
 
 :::: {.columns}
 
-::: {.column width="50%"}
-<img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/app-gitlab-ex-sideros.png' style='width: 400px;vertical-align: middle;'>
-<div class="captiontext">Projet BDD Terrifer/Sideros à l'IRAMAT Belfort</div>
+::: {.column width="33%"}
+<small>regular_distribution.png</small>
+<img src='https://raw.githubusercontent.com/iramat/iRamat/master/inst/extdata/regular_distribution.png' style='width: 200px;vertical-align: middle;'>
 :::
 
-::: {.column width="50%"}
-<img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/app-gitlab-ex-atmoce.png' style='width: 400px;vertical-align: middle;'>
-<div class="captiontext">Projet BDD Atmoce/AeMA à l'IRAMAT Orléans</div>
+::: {.column width="33%"}
+<small>clustered_distribution.png</small>
+<img src='https://raw.githubusercontent.com/iramat/iRamat/master/inst/extdata/clustered_distribution.png' style='width: 200px;vertical-align: middle;'>
 :::
 
+::: {.column width="33%"}
+<small>random_distribution.png</small>
+<img src='https://raw.githubusercontent.com/iramat/iRamat/master/inst/extdata/random_distribution.png' style='width: 200px;vertical-align: middle;'>
+:::
 
 ::::
 
+:::
+
+
+## Composition d'un _package_ <img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/prog-r-1.png' style='height: 45px;vertical-align: middle;'> (fichiers générés)
+
+::: {.panel-tabset}
+
+### `NAMESPACE`
+
+Le fichier [`NAMESPACE`](https://github.com/iramat/iRamat/tree/main/NAMESPACE) décrit quelles fonctions du _package_ sont exportées.
+
+```{.r-doc code-line-numbers="1|3-5"}
+# Generated by roxygen2: do not edit by hand
+
+export(chrono)
+export(db_api_connect)
+export(ppa)
+```
+
+### `man/`
+
+Le dossier [`man/`](https://github.com/iramat/iRamat/tree/main/man) contient la documentation des fonctions générée -- en utilisant `{roxygen2}` -- depuis les fonctions elles-mêmes.
+
+```{.r-doc code-line-numbers="1-2"}
+% Generated by roxygen2: do not edit by hand
+% Please edit documentation in R/ppa.R
+\name{ppa}
+\alias{ppa}
+\title{Classify a Point Pattern Distribution}
+\usage{
+ppa(
+  d = NA,
+  root = "https://raw.githubusercontent.com/iramat/iRamat/master/inst/extdata/",
+  img.paths = c("clustered_distribution.png", "random_distribution.png",
+    "regular_distribution.png"),
+  ppa_tests = c("quadrat", "ripley", "gfunction"),
+  verbose = TRUE
+)
+}
+(...)
+```
+
+:::
+
+## Du code à la fonction, et au _package_
+
+::: {.panel-tabset}
+
+### Au Km
+
+```{.r}
+# Generate 100 random numbers from a normal distribution
+x <- rnorm(100, mean = 10, sd = 2)
+
+# Compute the mean
+mean_x <- mean(x)
+
+# Print the result
+cat("The mean of x is:", mean_x, "\n")
+```
 
 
 
-# Pour aller plus loin
+### Fonctions
 
-<small>
+```{.r}
+#' Compute the mean of random normal numbers
+#'
+#' This function generates `n` random numbers from a normal distribution
+#' with given `mean` and `sd`, then computes and prints their mean.
+#'
+#' @param n Integer, number of random values to generate.
+#' @param mean Numeric, the mean of the normal distribution.
+#' @param sd Numeric, the standard deviation of the normal distribution.
+#'
+#' @return The computed mean (numeric).
+#' @export
+#'
+#' @examples
+#' simulate_mean(100, mean = 10, sd = 2)
+simulate_mean <- function(n = 100, mean = 0, sd = 1) {
+  x <- rnorm(n, mean = mean, sd = sd)
+  mean_x <- mean(x)
+  cat("The mean of x is:", mean_x, "\n")
+  return(mean_x)
+}
+```
 
-* Tutoriel sur Git et GitHub <https://github.com/sslarch/caa2022_GitGitHub_workshop/tree/main> par Clemens Schmid, Sophie C. Schmidt et Florian Thierry
+<br><br>
 
-</small>
+### Package (_private_)
 
-# Discussion
+<small><https://github.com/iramat/iramat-private></small>
+
+<img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/r-pkg--repo-private-github.png' style='width: 1000px;vertical-align: middle;'>
+
+### Package (_public_)
+
+<small><https://github.com/iramat/iRamat></small>
+
+<img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/r-pkg--repo-public-github.png' style='width: 1000px;vertical-align: middle;'>
+
+
+:::
+
+
+## Réutiliser
+
+::: {.panel-tabset}
+
+### Citer
+
+```{r echo=TRUE}
+citation("iRamat")
+```
+
+<br><br>
+
+### Publier sur Zenodo
+
+<small><https://docs.github.com/en/repositories/archiving-a-github-repository/referencing-and-citing-content></small>
+
+<img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/app-zenodo-github-release.png' style='width: 900px;vertical-align: middle;'>
+
+### Publier dans une revue
+
+<small><https://joss.theoj.org/papers/10.21105/joss.03191></small>
+
+<img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/r-pkg--repo-public-publish-github.png' style='width: 900px;vertical-align: middle;'>
+
+:::
 
 ## Discussion
 

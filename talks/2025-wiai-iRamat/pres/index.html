@@ -237,9 +237,9 @@ Thomas Huet
 </div>
 </div>
 </div><div class="column" style="width:30%;">
-<img data-src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Hadley-wickham2016-02-04.jpg" style="vertical-align: middle;" width="300">
+<img data-src="https://upload.wikimedia.org/wikipedia/commons/7/76/Jim_Gray_Computing_in_the_21st_Century_2006.jpg" style="vertical-align: middle;" width="300">
 <div class="captiontext">
-Hadley Wickham, <em>“Anything that can be automated, should be automated”</em> – 2023 <img src="https://raw.githubusercontent.com/zoometh/thomashuet/master/img/lod-licences-publicdomain-1.png" style="height: 12px;vertical-align: middle;"> Wikipedia
+Jim Gray, <em>“A data structure is nothing without an algorithm, and an algorithm is nothing without a data structure.”</em> Microsoft Research, CC BY-SA
 </div>
 </div></div>
 <aside class="notes">
@@ -259,210 +259,333 @@ Hadley Wickham, <em>“Anything that can be automated, should be automated”</e
 <section id="plan-de-la-présentation" class="slide level2 scrollable">
 <h2>Plan de la présentation</h2>
 <ol type="1">
-<li><img src="https://raw.githubusercontent.com/zoometh/thomashuet/master/img/prog-r-1.png" style="height: 45px;vertical-align: middle;"></li>
+<li><img src="https://raw.githubusercontent.com/zoometh/thomashuet/master/img/prog-r-1.png" style="height: 45px;vertical-align: middle;"> et les <em>packages</em></li>
 <li><img src="https://raw.githubusercontent.com/zoometh/thomashuet/master/img/prog-r-1.png" style="height: 45px;vertical-align: middle;">eproductible</li>
 <li>iRamat <img src="https://raw.githubusercontent.com/zoometh/thomashuet/master/img/prog-r-1.png" style="height: 45px;vertical-align: middle;"> <img src="https://raw.githubusercontent.com/iramat/iRamat/master/doc/img/logo.png" style="height: 60px;vertical-align: middle;"></li>
 <li>Discussion</li>
 </ol>
 </section></section>
 <section>
-<section id="r" class="title-slide slide level1 center">
-<h1>R <img src="https://raw.githubusercontent.com/zoometh/thomashuet/master/img/prog-r-1.png" style="height: 120px;vertical-align: middle;"></h1>
+<section id="et-les-packages" class="title-slide slide level1 center">
+<h1><img src="https://raw.githubusercontent.com/zoometh/thomashuet/master/img/prog-r-1.png" style="height: 120px;vertical-align: middle;"> et les <em>packages</em></h1>
 
 </section>
-<section id="intro" class="slide level2">
-<h2>Intro</h2>
+<section id="r" class="slide level2">
+<h2>R</h2>
 <div class="columns">
 <div class="column" style="width:70%;">
-<p>R est le language de script le plus utilisé par les archéologues. <br></p>
+<p><img src="https://raw.githubusercontent.com/zoometh/thomashuet/master/img/prog-r-1.png" style="height: 50px;vertical-align: middle;"> est un langage de script orienté statistiques. C’est le langage préférés des archéologues<a href="#/footnotes" class="footnote-ref" id="fnref1" role="doc-noteref" data-footnote-href="#/fn1" onclick=""><sup>1</sup></a> qui utilisent les <em>packages</em> comme <code>ggplot</code> <img src="https://raw.githubusercontent.com/zoometh/thomashuet/master/img/r-pkg-ggplot.png" style="width: 50px;vertical-align: middle;"> pour les graphiques (développé par Hadley Wickham), <code>terra</code> <img src="https://raw.githubusercontent.com/zoometh/thomashuet/master/img/r-pkg-terra.png" style="width: 50px;vertical-align: middle;"> et <code>sf</code> <img src="https://raw.githubusercontent.com/zoometh/thomashuet/master/img/r-pkg-sf.png" style="width: 50px;vertical-align: middle;"> pour l’analyse spatiale, etc.</p>
 </div><div class="column" style="width:30%;">
-<img data-src="https://upload.wikimedia.org/wikipedia/commons/e/e8/Lc3_2018_%28263682303%29_%28cropped%29.jpeg" style="vertical-align: middle;" width="300">
+<img data-src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Hadley-wickham2016-02-04.jpg" style="vertical-align: middle;" width="300">
 <div class="captiontext">
-Linus Torvalds en 2018 (c) Lf Asia
+Hadley Wickham, <em>“Anything that can be automated, should be automated”</em> – 2023 <img src="https://raw.githubusercontent.com/zoometh/thomashuet/master/img/lod-licences-publicdomain-1.png" style="height: 12px;vertical-align: middle;"> Wikipedia
+</div>
+</div></div>
+<aside></aside></section>
+<section id="les-packages-r" class="slide level2">
+<h2>Les <em>packages</em> R</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p>Un <em>package</em> rassemble du code, de la documentation et parfois des données.<br></p>
+<p>Un <em>package</em> est conçu pour être facilement partagé, installé et réutilisé et ainsi garantir la reproductibilité des analyses.</p>
+</div><div class="column" style="width:50%;">
+<div style="width:1000px; height:450px; overflow:hidden;">
+  <iframe src="https://cran.r-project.org/" style="transform: scale(0.9); transform-origin: 0 0; width:750px; height:500px; border:none;">
+  </iframe>
+</div>
+<div class="captiontext">
+Le <em>Comprehensive R Archive Network</em> (CRAN) <a href="https://cran.r-project.org/" class="uri">https://cran.r-project.org/</a>, l’archive officielle des <em>packages</em> R
 </div>
 </div></div>
 </section>
-<section id="schéma" class="slide level2">
-<h2>Schéma</h2>
+<section id="les-packages-r-suite" class="slide level2">
+<h2>Les <em>packages</em> R (suite)</h2>
 <div class="columns">
-<div class="column" style="width:60%;">
-<p><img src="https://raw.githubusercontent.com/zoometh/thomashuet/master/img/app-git-workflow.png" style="width: 700px;vertical-align: middle;"></p>
-</div><div class="column" style="width:40%;">
-<p><small>Mettre la copie du dépôt distant<a href="#/footnotes" class="footnote-ref" id="fnref1" role="doc-noteref" data-footnote-href="#/fn1" onclick=""><sup>1</sup></a> à jour (<em>push</em>) :</small></p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode numberSource sh number-lines code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a></a><span class="fu">git</span> add .</span>
-<span id="cb1-2"><a></a><span class="fu">git</span> commit <span class="at">-m</span> <span class="st">'varia'</span></span>
-<span id="cb1-3"><a></a><span class="fu">git</span> push </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p><small>Mettre la copie du dépôt local<a href="#/footnotes" class="footnote-ref" id="fnref2" role="doc-noteref" data-footnote-href="#/fn2" onclick=""><sup>2</sup></a> à jour (<em>pull</em>) :</small></p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode numberSource sh number-lines code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a></a><span class="fu">git</span> pull</span>
-<span id="cb2-2"><a></a><span class="fu">git</span> checkout</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p><br></p>
-<hr>
-<p><small>Dépôt local<a href="#/footnotes" class="footnote-ref" id="fnref3" role="doc-noteref" data-footnote-href="#/fn3" onclick=""><sup>3</sup></a> ou distant<a href="#/footnotes" class="footnote-ref" id="fnref4" role="doc-noteref" data-footnote-href="#/fn4" onclick=""><sup>4</sup></a> : système de dossiers et fichiers<a href="#/footnotes" class="footnote-ref" id="fnref5" role="doc-noteref" data-footnote-href="#/fn5" onclick=""><sup>5</sup></a> conservant son propre historique (dossier <code>.git</code>) et un lien vers le dépôt (local ou distant).</small></p>
+<div class="column" style="width:50%;">
+<p>En mars 2023, plus de 19,000 packages étaient disponibles sur le CRAN. En 2021 on estime qu’il y en avait plus de 25,000 hebergés sur GitHub <img src="https://raw.githubusercontent.com/zoometh/thomashuet/master/img/app-github.png" style="width: 40px;vertical-align: middle;"><a href="#/footnotes" class="footnote-ref" id="fnref2" role="doc-noteref" data-footnote-href="#/fn2" onclick=""><sup>2</sup></a></p>
+</div><div class="column" style="width:50%;">
+<p><img src="https://raw.githubusercontent.com/zoometh/thomashuet/master/img/r-pkgs-mosaic-3.png" style="width: 700px;vertical-align: middle;"></p>
 </div></div>
 <aside></aside></section>
-<section id="logique" class="slide level2">
-<h2>Logique</h2>
+<section id="trouver-un-package" class="slide level2">
+<h2>Trouver un package <img src="https://raw.githubusercontent.com/zoometh/thomashuet/master/img/r-pkgs-mosaic-4.png" style="width: 80px;vertical-align: middle;"></h2>
 <div class="panel-tabset">
-<ul id="tabset-1" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-1-1">Décentralisé</a></li><li><a href="#tabset-1-2">Versionnage</a></li><li><a href="#tabset-1-3">Copies locales</a></li></ul>
+<ul id="tabset-1" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-1-1"><code>{pkgsearch}</code></a></li><li><a href="#tabset-1-2">R-Universe</a></li><li><a href="#tabset-1-3">GitHub</a></li><li><a href="#tabset-1-4">open-archaeo</a></li></ul>
 <div class="tab-content">
 <div id="tabset-1-1">
-<div class="columns">
-<div class="column" style="width:50%;">
-<p><img src="https://raw.githubusercontent.com/zoometh/thomashuet/master/img/app-git-commit-branch.png" style="width: 800px;vertical-align: middle;"></p>
-</div><div class="column" style="width:50%;">
-<p><img src="https://raw.githubusercontent.com/zoometh/thomashuet/master/img/app-git-pr.png" style="width: 800px;vertical-align: middle;"></p>
-</div></div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a></a><span class="co"># install.packages("pkgsearch")</span></span>
+<span id="cb1-2"><a></a><span class="fu">library</span>(pkgsearch)</span>
+<span id="cb1-3"><a></a><span class="fu">ps</span>(<span class="st">"raman"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>- "raman" -------------------------------------- 13 packages in 0.044 seconds -
+  #     package              version by                 @ title                
+  1 100 serrsBayes           0.5.0   Matt Moores       4y Bayesian Modelling...
+  2  92 RamanMP              1.0     Veronica Nava     4y Analysis and Ident...
+  3  75 OpenSpecy            1.5.3   Win Cowger        5M Analyze, Process, ...
+  4  37 readJDX              0.6.4   Bryan A. Hanson   2y Import Data in the...
+  5  26 hyperSpec            0.100.2 Claudia Beleites  1y Work with Hyperspe...
+  6  23 ChemoSpec            6.3.1   Bryan A. Hanson  26d Exploratory Chemom...
+  7  22 PlackettLuce         0.4.4   Heather Turner    1M Plackett-Luce Mode...
+  8  15 sabarsi              0.1.0   Li Jun            6y Background Removal...
+  9  12 smdi                 0.3.1   Janick Weberpals  1y Perform Structural...
+ 10  11 FishProxCompAnalyzer 0.1.0   Tanuj Misra       1y Proximate Composit...</code></pre>
+</div>
+</div>
 </div>
 <div id="tabset-1-2">
-<div class="columns">
-<div class="column" style="width:70%;">
-<p><img src="https://raw.githubusercontent.com/zoometh/thomashuet/master/img/app-git-ill1.png" style="width: 800px;vertical-align: middle;"></p>
-</div><div class="column" style="width:30%;">
-<p><small>Historique des <em>commit</em><a href="#/footnotes" class="footnote-ref" id="fnref6" role="doc-noteref" data-footnote-href="#/fn6" onclick=""><sup>6</sup></a></small></p>
-</div></div>
+<p><small><a href="https://r-universe.dev/search?q=raman" class="uri">https://r-universe.dev/search?q=raman</a></small></p>
+<iframe width="1200" height="500" src="https://r-universe.dev/search?q=raman" title="Search for Raman"></iframe>
 </div>
 <div id="tabset-1-3">
+<small><a href="https://github.com/search/advanced" class="uri">https://github.com/search/advanced</a></small> <img src="https://raw.githubusercontent.com/zoometh/thomashuet/master/img/r-pkg--search-github.png" style="width: 1000px;vertical-align: middle;"><br>
+<center>
+⬇️
+</center>
+<p><br> <img src="https://raw.githubusercontent.com/zoometh/thomashuet/master/img/r-pkg--search-github-1.png" style="width: 1000px;vertical-align: middle;"></p>
+</div>
+<div id="tabset-1-4">
+<p><a href="https://open-archaeo.info/">open-archaeo</a> et le <a href="https://sslarch.github.io/">SIG-SSLA</a></p>
+<iframe width="1200" height="500" src="https://open-archaeo.info/tags/x-ray-fluorescence/" title="Search for Raman"></iframe>
+<p><small>https://open-archaeo.info/tags/x-ray-fluorescence/</small></p>
+</div>
+</div>
+</div>
+</section>
+<section id="composition-dun-package-fichiers-sources" class="slide level2">
+<h2>Composition d’un <em>package</em> <img src="https://raw.githubusercontent.com/zoometh/thomashuet/master/img/prog-r-1.png" style="height: 45px;vertical-align: middle;"> (fichiers sources)</h2>
+<div class="panel-tabset">
+<ul id="tabset-2" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-2-1"><code>DESCRIPTION</code></a></li><li><a href="#tabset-2-2"><code>LICENSE</code></a></li><li><a href="#tabset-2-3"><code>README.md</code></a></li><li><a href="#tabset-2-4"><code>R/</code></a></li><li><a href="#tabset-2-5"><code>inst/extdata/</code></a></li></ul>
+<div class="tab-content">
+<div id="tabset-2-1">
+<p>Le fichier <a href="https://github.com/iramat/iRamat/blob/main/DESCRIPTION"><code>DESCRIPTION</code></a> contient les métadonnées du <em>package</em></p>
+<div class="sourceCode" id="cb3" data-code-line-numbers="1|3|4|6|9|12-22|28|29"><pre class="sourceCode numberSource md number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb3-1"><a></a><span class="an">Package:</span><span class="co"> iRamat</span></span>
+<span id="cb3-2"><a></a><span class="an">Type:</span><span class="co"> Package</span></span>
+<span id="cb3-3"><a></a><span class="an">Title:</span><span class="co"> Statistical analysis on Archaeomaterial</span></span>
+<span id="cb3-4"><a></a><span class="an">Description:</span><span class="co"> Statistical analysis on Archaeomaterial.</span></span>
+<span id="cb3-5"><a></a><span class="an">Version:</span><span class="co"> 1.0.0</span></span>
+<span id="cb3-6"><a></a>Authors@R: c(person("Thomas", "Huet", email = "thomas.huet@cnrs.fr", role = c("aut", "cre"), comment=c(ORCID="0000-0002-1112-6122")))</span>
+<span id="cb3-7"><a></a>Depends:</span>
+<span id="cb3-8"><a></a>    R (&gt;= 4.0.1)</span>
+<span id="cb3-9"><a></a>License: MIT + file LICENSE</span>
+<span id="cb3-10"><a></a>Encoding: UTF-8</span>
+<span id="cb3-11"><a></a>LazyData: true</span>
+<span id="cb3-12"><a></a>Imports:</span>
+<span id="cb3-13"><a></a>    dplyr,</span>
+<span id="cb3-14"><a></a>    ggplot2,</span>
+<span id="cb3-15"><a></a>    forcats,</span>
+<span id="cb3-16"><a></a>    stringr,</span>
+<span id="cb3-17"><a></a>    hash,</span>
+<span id="cb3-18"><a></a>    jsonlite,</span>
+<span id="cb3-19"><a></a>    httr,</span>
+<span id="cb3-20"><a></a>    imager,</span>
+<span id="cb3-21"><a></a>    spatstat.geom,</span>
+<span id="cb3-22"><a></a>    spatstat.explore   </span>
+<span id="cb3-23"><a></a>RoxygenNote: 7.3.2</span>
+<span id="cb3-24"><a></a>Suggests: </span>
+<span id="cb3-25"><a></a>    testthat (&gt;= 3.0.0),</span>
+<span id="cb3-26"><a></a>    ggpubr</span>
+<span id="cb3-27"><a></a>Config/testthat/edition: 3</span>
+<span id="cb3-28"><a></a>URL: https://github.com/iramat/iRamat</span>
+<span id="cb3-29"><a></a>BugsReport: https://github.com/iramat/iRamat/issues</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><br><br></p>
+</div>
+<div id="tabset-2-2">
+<p>Les fichiers <a href="https://github.com/iramat/iRamat/blob/main/LICENSE"><code>LICENSE</code></a> et <a href="https://github.com/iramat/iRamat/blob/main/LICENSE.md"><code>LICENSE.md</code></a> contiennent la licence du <em>package</em></p>
 <div class="columns">
-<div class="column" style="width:65%;">
-<p><img src="https://raw.githubusercontent.com/zoometh/thomashuet/master/img/app-github-file-gitignore.jpeg" style="width: 700px;vertical-align: middle;"></p>
-</div><div class="column" style="width:35%;">
-<p><small> Capture d’écran de mon environnement de développement<a href="#/footnotes" class="footnote-ref" id="fnref7" role="doc-noteref" data-footnote-href="#/fn7" onclick=""><sup>7</sup></a> (Microsoft VS Code):</small></p><small>
-<ul>
-<li><p>à gauche: arborescence du dépôt local<a href="#/footnotes" class="footnote-ref" id="fnref8" role="doc-noteref" data-footnote-href="#/fn8" onclick=""><sup>8</sup></a> <code>IRAMAT-DEV</code></p></li>
-<li><p>au centre: fichier <code>.gitignore</code> listant les dossiers <code>credentials</code> et <code>doc</code>, exclus du téléversement au dépôt distant<a href="#/footnotes" class="footnote-ref" id="fnref9" role="doc-noteref" data-footnote-href="#/fn9" onclick=""><sup>9</sup></a> (<em>push</em>)</p></li>
-<li><p>à droite: fichier <code>pg_credentials.json</code> avec les paramètres de connexion à la BDD <code>chips_d</code>, exclu du téléversement au dépôt distant<a href="#/footnotes" class="footnote-ref" id="fnref10" role="doc-noteref" data-footnote-href="#/fn10" onclick=""><sup>10</sup></a> (<em>push</em>)</p></li>
-</ul>
-</small><p><small></small></p>
+<div class="column" style="width:40%;">
+<p><a href="https://github.com/iramat/iRamat/blob/main/LICENSE"><code>LICENSE</code></a></p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode numberSource md number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb4-1"><a></a><span class="an">YEAR:</span><span class="co"> 2025</span></span>
+<span id="cb4-2"><a></a><span class="an">COPYRIGHT HOLDER:</span><span class="co"> IRAMAT-CNRS</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div><div class="column" style="width:60%;">
+<p><a href="https://github.com/iramat/iRamat/blob/main/LICENSE.md"><code>LICENSE.md</code></a></p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode numberSource md number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb5-1"><a></a><span class="fu"># MIT License</span></span>
+<span id="cb5-2"><a></a></span>
+<span id="cb5-3"><a></a>Copyright (c) 2025 IRAMAT-CNRS</span>
+<span id="cb5-4"><a></a></span>
+<span id="cb5-5"><a></a>Permission is hereby granted, free of charge, to any person obtaining a copy</span>
+<span id="cb5-6"><a></a>of this software and associated documentation files (the "Software"), to deal</span>
+<span id="cb5-7"><a></a>in the Software without restriction, including without limitation the rights</span>
+<span id="cb5-8"><a></a>to use, copy, modify, merge, publish, distribute, sublicense, and/or sell</span>
+<span id="cb5-9"><a></a>copies of the Software, and to permit persons to whom the Software is</span>
+<span id="cb5-10"><a></a>furnished to do so, subject to the following conditions:</span>
+<span id="cb5-11"><a></a></span>
+<span id="cb5-12"><a></a>(...)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div></div>
+</div>
+<div id="tabset-2-3">
+<p>Le fichier <a href="https://github.com/iramat/iRamat?tab=readme-ov-file"><code>README.md</code></a> présente le <em>package</em></p>
+<p><img src="https://raw.githubusercontent.com/zoometh/thomashuet/master/img/r-pkg--readme-github.png" style="width: 1000px;vertical-align: middle;"></p>
+</div>
+<div id="tabset-2-4">
+<p>Le dossier <a href="https://github.com/iramat/iRamat/tree/main/R"><code>R/</code></a> contient les fonctions R</p>
+<div class="sourceCode" id="cb6" data-code-overflow="wrap" data-code-line-numbers="1|3|4|6-9|11|13-16|18|19-26"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a></a><span class="co">#' Connect the CHIPS DB API and return an R object (dataframe, etc.)</span></span>
+<span id="cb6-2"><a></a><span class="co">#'</span></span>
+<span id="cb6-3"><a></a><span class="co">#' @name db_api_connect</span></span>
+<span id="cb6-4"><a></a><span class="co">#' @description Connect the CHIPS DB API and return an R object (dataframe, etc.). The default dataset is dataset_adisser17, accessed at &lt;http://157.136.252.188:3000/dataset_adisser17&gt;</span></span>
+<span id="cb6-5"><a></a><span class="co">#'</span></span>
+<span id="cb6-6"><a></a><span class="co">#' @param d A hash object. If none is provided, a new one will be created.</span></span>
+<span id="cb6-7"><a></a><span class="co">#' @param api_url An URL landing to an API. Default: 'dataset_adisser17'.</span></span>
+<span id="cb6-8"><a></a><span class="co">#' @param output_format The selected output format. Default "dataframe".</span></span>
+<span id="cb6-9"><a></a><span class="co">#' @param verbose if TRUE (by default), verbose.</span></span>
+<span id="cb6-10"><a></a><span class="co">#'</span></span>
+<span id="cb6-11"><a></a><span class="co">#' @return An R object.</span></span>
+<span id="cb6-12"><a></a><span class="co">#'</span></span>
+<span id="cb6-13"><a></a><span class="co">#' @examples</span></span>
+<span id="cb6-14"><a></a><span class="co">#' df &lt;- db_api_connect()</span></span>
+<span id="cb6-15"><a></a><span class="co">#' # Show the first rows of the dataframe</span></span>
+<span id="cb6-16"><a></a><span class="co">#' head(df$dataset_adisser17)</span></span>
+<span id="cb6-17"><a></a><span class="co">#' </span></span>
+<span id="cb6-18"><a></a><span class="co">#' @export</span></span>
+<span id="cb6-19"><a></a>db_api_connect <span class="ot">&lt;-</span> <span class="cf">function</span>(<span class="at">d =</span> <span class="cn">NA</span>,</span>
+<span id="cb6-20"><a></a>                           <span class="at">api_url =</span> <span class="st">"http://157.136.252.188:3000/dataset_adisser17"</span>,</span>
+<span id="cb6-21"><a></a>                           <span class="at">output_format =</span> <span class="st">"dataframe"</span>,</span>
+<span id="cb6-22"><a></a>                           <span class="at">verbose =</span> <span class="cn">TRUE</span>){</span>
+<span id="cb6-23"><a></a>                           </span>
+<span id="cb6-24"><a></a>                           (...)</span>
+<span id="cb6-25"><a></a>                           </span>
+<span id="cb6-26"><a></a>                           }</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><br><br></p>
+</div>
+<div id="tabset-2-5">
+<p>Le dossier <a href="https://github.com/iramat/iRamat/tree/main/inst/extdata/"><code>inst/extdata/</code></a> contient les données externes</p>
+<div class="columns">
+<div class="column" style="width:33%;">
+<p><small>regular_distribution.png</small> <img src="https://raw.githubusercontent.com/iramat/iRamat/master/inst/extdata/regular_distribution.png" style="width: 200px;vertical-align: middle;"></p>
+</div><div class="column" style="width:33%;">
+<p><small>clustered_distribution.png</small> <img src="https://raw.githubusercontent.com/iramat/iRamat/master/inst/extdata/clustered_distribution.png" style="width: 200px;vertical-align: middle;"></p>
+</div><div class="column" style="width:33%;">
+<p><small>random_distribution.png</small> <img src="https://raw.githubusercontent.com/iramat/iRamat/master/inst/extdata/random_distribution.png" style="width: 200px;vertical-align: middle;"></p>
 </div></div>
 </div>
 </div>
 </div>
-<aside></aside></section>
-<section id="git-en-résumé" class="slide level2">
-<h2>Git en résumé</h2>
-<div class="columns">
-<div class="column" style="width:35%;">
-<p><img src="https://raw.githubusercontent.com/zoometh/thomashuet/master/img/app-git-ill1-2.png" style="width: 700px;vertical-align: middle;"></p>
-</div><div class="column" style="width:65%;">
-<p><img src="https://raw.githubusercontent.com/zoometh/thomashuet/master/img/app-git-ill2.png" style="width: 700px;vertical-align: middle;"></p>
-</div></div>
-<div class="captiontext">
-<p><em>“Git is not designed to make you happy. It’s designed to make other people happy after you’ve screwed things up”</em> – Linus Torvalds</p>
+</section>
+<section id="composition-dun-package-fichiers-générés" class="slide level2">
+<h2>Composition d’un <em>package</em> <img src="https://raw.githubusercontent.com/zoometh/thomashuet/master/img/prog-r-1.png" style="height: 45px;vertical-align: middle;"> (fichiers générés)</h2>
+<div class="panel-tabset">
+<ul id="tabset-3" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-3-1"><code>NAMESPACE</code></a></li><li><a href="#tabset-3-2"><code>man/</code></a></li></ul>
+<div class="tab-content">
+<div id="tabset-3-1">
+<p>Le fichier <a href="https://github.com/iramat/iRamat/tree/main/NAMESPACE"><code>NAMESPACE</code></a> décrit quelles fonctions du <em>package</em> sont exportées.</p>
+<div class="sourceCode" id="cb7" data-code-line-numbers="1|3-5"><pre class="sourceCode numberSource r-doc number-lines code-with-copy"><code class="sourceCode"><span id="cb7-1"><a></a># Generated by roxygen2: do not edit by hand</span>
+<span id="cb7-2"><a></a></span>
+<span id="cb7-3"><a></a>export(chrono)</span>
+<span id="cb7-4"><a></a>export(db_api_connect)</span>
+<span id="cb7-5"><a></a>export(ppa)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-</section></section>
-<section>
-<section id="github" class="title-slide slide level1 center">
-<h1>GitHub</h1>
+<div id="tabset-3-2">
+<p>Le dossier <a href="https://github.com/iramat/iRamat/tree/main/man"><code>man/</code></a> contient la documentation des fonctions générée – en utilisant <code>{roxygen2}</code> – depuis les fonctions elles-mêmes.</p>
+<div class="sourceCode" id="cb8" data-code-line-numbers="1-2"><pre class="sourceCode numberSource r-doc number-lines code-with-copy"><code class="sourceCode"><span id="cb8-1"><a></a>% Generated by roxygen2: do not edit by hand</span>
+<span id="cb8-2"><a></a>% Please edit documentation in R/ppa.R</span>
+<span id="cb8-3"><a></a>\name{ppa}</span>
+<span id="cb8-4"><a></a>\alias{ppa}</span>
+<span id="cb8-5"><a></a>\title{Classify a Point Pattern Distribution}</span>
+<span id="cb8-6"><a></a>\usage{</span>
+<span id="cb8-7"><a></a>ppa(</span>
+<span id="cb8-8"><a></a>  d = NA,</span>
+<span id="cb8-9"><a></a>  root = "https://raw.githubusercontent.com/iramat/iRamat/master/inst/extdata/",</span>
+<span id="cb8-10"><a></a>  img.paths = c("clustered_distribution.png", "random_distribution.png",</span>
+<span id="cb8-11"><a></a>    "regular_distribution.png"),</span>
+<span id="cb8-12"><a></a>  ppa_tests = c("quadrat", "ripley", "gfunction"),</span>
+<span id="cb8-13"><a></a>  verbose = TRUE</span>
+<span id="cb8-14"><a></a>)</span>
+<span id="cb8-15"><a></a>}</span>
+<span id="cb8-16"><a></a>(...)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="du-code-à-la-fonction-et-au-package" class="slide level2">
+<h2>Du code à la fonction, et au <em>package</em></h2>
+<div class="panel-tabset">
+<ul id="tabset-4" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-4-1">Au Km</a></li><li><a href="#tabset-4-2">Fonctions</a></li><li><a href="#tabset-4-3">Package (<em>private</em>)</a></li><li><a href="#tabset-4-4">Package (<em>public</em>)</a></li></ul>
+<div class="tab-content">
+<div id="tabset-4-1">
+<div class="sourceCode" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a></a><span class="co"># Generate 100 random numbers from a normal distribution</span></span>
+<span id="cb9-2"><a></a>x <span class="ot">&lt;-</span> <span class="fu">rnorm</span>(<span class="dv">100</span>, <span class="at">mean =</span> <span class="dv">10</span>, <span class="at">sd =</span> <span class="dv">2</span>)</span>
+<span id="cb9-3"><a></a></span>
+<span id="cb9-4"><a></a><span class="co"># Compute the mean</span></span>
+<span id="cb9-5"><a></a>mean_x <span class="ot">&lt;-</span> <span class="fu">mean</span>(x)</span>
+<span id="cb9-6"><a></a></span>
+<span id="cb9-7"><a></a><span class="co"># Print the result</span></span>
+<span id="cb9-8"><a></a><span class="fu">cat</span>(<span class="st">"The mean of x is:"</span>, mean_x, <span class="st">"</span><span class="sc">\n</span><span class="st">"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div id="tabset-4-2">
+<div class="sourceCode" id="cb10"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a></a><span class="co">#' Compute the mean of random normal numbers</span></span>
+<span id="cb10-2"><a></a><span class="co">#'</span></span>
+<span id="cb10-3"><a></a><span class="co">#' This function generates `n` random numbers from a normal distribution</span></span>
+<span id="cb10-4"><a></a><span class="co">#' with given `mean` and `sd`, then computes and prints their mean.</span></span>
+<span id="cb10-5"><a></a><span class="co">#'</span></span>
+<span id="cb10-6"><a></a><span class="co">#' @param n Integer, number of random values to generate.</span></span>
+<span id="cb10-7"><a></a><span class="co">#' @param mean Numeric, the mean of the normal distribution.</span></span>
+<span id="cb10-8"><a></a><span class="co">#' @param sd Numeric, the standard deviation of the normal distribution.</span></span>
+<span id="cb10-9"><a></a><span class="co">#'</span></span>
+<span id="cb10-10"><a></a><span class="co">#' @return The computed mean (numeric).</span></span>
+<span id="cb10-11"><a></a><span class="co">#' @export</span></span>
+<span id="cb10-12"><a></a><span class="co">#'</span></span>
+<span id="cb10-13"><a></a><span class="co">#' @examples</span></span>
+<span id="cb10-14"><a></a><span class="co">#' simulate_mean(100, mean = 10, sd = 2)</span></span>
+<span id="cb10-15"><a></a>simulate_mean <span class="ot">&lt;-</span> <span class="cf">function</span>(<span class="at">n =</span> <span class="dv">100</span>, <span class="at">mean =</span> <span class="dv">0</span>, <span class="at">sd =</span> <span class="dv">1</span>) {</span>
+<span id="cb10-16"><a></a>  x <span class="ot">&lt;-</span> <span class="fu">rnorm</span>(n, <span class="at">mean =</span> mean, <span class="at">sd =</span> sd)</span>
+<span id="cb10-17"><a></a>  mean_x <span class="ot">&lt;-</span> <span class="fu">mean</span>(x)</span>
+<span id="cb10-18"><a></a>  <span class="fu">cat</span>(<span class="st">"The mean of x is:"</span>, mean_x, <span class="st">"</span><span class="sc">\n</span><span class="st">"</span>)</span>
+<span id="cb10-19"><a></a>  <span class="fu">return</span>(mean_x)</span>
+<span id="cb10-20"><a></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><br><br></p>
+</div>
+<div id="tabset-4-3">
+<p><small><a href="https://github.com/iramat/iramat-private" class="uri">https://github.com/iramat/iramat-private</a></small></p>
+<p><img src="https://raw.githubusercontent.com/zoometh/thomashuet/master/img/r-pkg--repo-private-github.png" style="width: 1000px;vertical-align: middle;"></p>
+</div>
+<div id="tabset-4-4">
+<p><small><a href="https://github.com/iramat/iRamat" class="uri">https://github.com/iramat/iRamat</a></small></p>
+<p><img src="https://raw.githubusercontent.com/zoometh/thomashuet/master/img/r-pkg--repo-public-github.png" style="width: 1000px;vertical-align: middle;"></p>
+</div>
+</div>
+</div>
+</section>
+<section id="réutiliser" class="slide level2">
+<h2>Réutiliser</h2>
+<div class="panel-tabset">
+<ul id="tabset-5" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-5-1">Citer</a></li><li><a href="#tabset-5-2">Publier sur Zenodo</a></li><li><a href="#tabset-5-3">Publier dans une revue</a></li></ul>
+<div class="tab-content">
+<div id="tabset-5-1">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a></a><span class="fu">citation</span>(<span class="st">"iRamat"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>To cite package 'iRamat' in publications use:
 
-</section>
-<section id="intro-1" class="slide level2">
-<h2>Intro</h2>
-<p>GitHub <img src="https://raw.githubusercontent.com/zoometh/thomashuet/master/img/app-github.png" style="height: 40px;vertical-align: middle;"> une des principales plate-forme web (propriétaire 🔒<a href="#/footnotes" class="footnote-ref" id="fnref11" role="doc-noteref" data-footnote-href="#/fn11" onclick=""><sup>11</sup></a>) pour les projets <em>open source</em> de développement d’applications informatiques utilisant Git <img src="https://raw.githubusercontent.com/zoometh/thomashuet/master/img/app-git-1.png" style="height: 40px;vertical-align: middle;"></p>
-<ul>
-<li>📁 Repositories</li>
-<li>🙍 Users</li>
-<li><img src="https://raw.githubusercontent.com/iramat/iramat-dev/master/img/logo.png" style="height: 35px;vertical-align: middle;"> Organisations</li>
-<li>🧵 Issues</li>
-</ul>
-<aside></aside></section>
-<section id="repositories" class="slide level2">
-<h2>Repositories</h2>
-<p><a href="https://github.com/iramat/iramat-dev"><img src="https://raw.githubusercontent.com/zoometh/thomashuet/master/img/app-github-repo-ex.jpeg" style="width: 1000px;vertical-align: middle;"></a></p>
-</section>
-<section id="users" class="slide level2">
-<h2>Users</h2>
-<p><a href="https://github.com/zoometh"><img src="https://raw.githubusercontent.com/zoometh/thomashuet/master/img/app-github-user-ex.jpeg" style="width: 1000px;vertical-align: middle;"></a></p>
-</section>
-<section id="organisations" class="slide level2">
-<h2>Organisations</h2>
-<p><a href="https://github.com/iramat"><img src="https://raw.githubusercontent.com/zoometh/thomashuet/master/img/app-github-org-ex.jpeg" style="width: 1000px;vertical-align: middle;"></a></p>
-</section>
-<section id="issues" class="slide level2">
-<h2>Issues</h2>
-<p><a href="https://github.com/iramat/iramat-dev/issues/20"><img src="https://raw.githubusercontent.com/zoometh/thomashuet/master/img/app-github-issues.jpeg" style="width: 1000px;vertical-align: middle;"></a></p>
-</section></section>
-<section>
-<section id="github-à-liramat" class="title-slide slide level1 center">
-<h1>GitHub à l’IRAMAT</h1>
-<p><br></p>
-<div class="callout callout-warning callout-titled callout-style-default">
-<div class="callout-body">
-<div class="callout-title">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<p><strong>Warning</strong></p>
-</div>
-<div class="callout-content">
-<p>Le GitHub a été pensé pour être public: ne pas partager de mots de passe, données personnelles, confidentielles, sous embargo, etc.</p>
-</div>
-</div>
-</div>
-</section>
-<section id="github-à-liramat-1" class="slide level2">
-<h2>GitHub à l’IRAMAT</h2>
-<div class="columns">
-<div class="column" style="width:30%;">
-<p><img src="https://raw.githubusercontent.com/zoometh/thomashuet/master/img/web-address-io.jpg" style="width: 300px;vertical-align: middle;"> <small>Avoir une “belle” (i.e., courte) adresse: <a href="https://github.com/iramat" class="uri">https://github.com/iramat</a> et échanger des URLs</small></p>
-</div><div class="column" style="width:30%;">
-<p><a href="https://github.com/iramat/iramat-dev/blob/main/dbs/chips/data/dataset/dataset.tsv"><img src="https://raw.githubusercontent.com/zoometh/thomashuet/master/img/app-github-file-tsv.png" style="width: 300px;vertical-align: middle;"></a></p>
-<p><a href="https://github.com/iramat/iramat-dev/blob/main/projects/castel-minier/castel-minier.geojson"><img src="https://raw.githubusercontent.com/zoometh/thomashuet/master/img/app-github-file-geojson.png" style="width: 300px;vertical-align: middle;"></a> <br></p>
-<p><small>Afficher du Markdown et des fichiers structurés: CSV, TSV, PDF, GeoJSON, HTML (fichier et site web statique)</small></p>
-</div><div class="column" style="width:40%;">
-<iframe width="700" height="350" src="https://caa-france.github.io/website/diagrams/oarch_repo_user.html" title="Quarto Documentation"></iframe>
-<p><small>Visibilité du développement logiciel et des données de référence (d’après Batist &amp; Roe, 2024<a href="#/footnotes" class="footnote-ref" id="fnref12" role="doc-noteref" data-footnote-href="#/fn12" onclick=""><sup>12</sup></a>)</small></p>
-</div></div>
-<aside class="notes">
-<p>Pour proposer une bibliothèque Python (ex: PyMca), ou un package R, il est fortement recommandé d’utiliser GitHub en raison de sa visibilité, de ses outils de collaboration et de son intégration avec les flux de travail de packaging</p>
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
-<aside></aside></section></section>
-<section>
-<section id="et-gitlab" class="title-slide slide level1 center">
-<h1>Et GitLab?</h1>
+  Huet T (2025). _iRamat: Statistical analysis on Archaeomaterial_. R
+  package version 1.0.0, commit
+  2106b34129c6c9ab96d8e6302d807ab35f7ed13d,
+  &lt;https://github.com/iramat/iRamat&gt;.
 
-</section>
-<section id="gitlab" class="slide level2">
-<h2>GitLab</h2>
-<p>GitLab <img src="https://raw.githubusercontent.com/zoometh/thomashuet/master/img/app-gitlab.png" style="height: 40px;vertical-align: middle;"> : plateforme indépendante (🔓, GitLab Inc.) avec un hébergement cloud ou un auto-hébergement, pour les projets <em>open source</em> de développement d’applications informatiques utilisant Git <img src="https://raw.githubusercontent.com/zoometh/thomashuet/master/img/app-git-1.png" style="height: 40px;vertical-align: middle;">.</p>
-<div class="columns">
-<div class="column" style="width:50%;">
-<img src="https://raw.githubusercontent.com/zoometh/thomashuet/master/img/app-gitlab-ex-sideros.png" style="width: 400px;vertical-align: middle;">
-<div class="captiontext">
-Projet BDD Terrifer/Sideros à l’IRAMAT Belfort
-</div>
-</div><div class="column" style="width:50%;">
-<img src="https://raw.githubusercontent.com/zoometh/thomashuet/master/img/app-gitlab-ex-atmoce.png" style="width: 400px;vertical-align: middle;">
-<div class="captiontext">
-Projet BDD Atmoce/AeMA à l’IRAMAT Orléans
-</div>
-</div></div>
-</section></section>
-<section id="pour-aller-plus-loin" class="title-slide slide level1 center">
-<h1>Pour aller plus loin</h1>
-<p><small></small></p><small>
-<ul>
-<li>Tutoriel sur Git et GitHub <a href="https://github.com/sslarch/caa2022_GitGitHub_workshop/tree/main" class="uri">https://github.com/sslarch/caa2022_GitGitHub_workshop/tree/main</a> par Clemens Schmid, Sophie C. Schmidt et Florian Thierry</li>
-<li><em>Computational Open Archaeology</em>, dont GitHub <a href="https://intarch.ac.uk/journal/issue67/13/full-text.html" class="uri">https://intarch.ac.uk/journal/issue67/13/full-text.html</a> par Zachary Batist et Joe Roe</li>
-</ul>
-</small><p><small></small></p>
-</section>
+A BibTeX entry for LaTeX users is
 
-<section>
-<section id="discussion" class="title-slide slide level1 center">
-<h1>Discussion</h1>
-
+  @Manual{,
+    title = {iRamat: Statistical analysis on Archaeomaterial},
+    author = {Thomas Huet},
+    year = {2025},
+    note = {R package version 1.0.0, commit 2106b34129c6c9ab96d8e6302d807ab35f7ed13d},
+    url = {https://github.com/iramat/iRamat},
+  }</code></pre>
+</div>
+</div>
+<p><br><br></p>
+</div>
+<div id="tabset-5-2">
+<p><small><a href="https://docs.github.com/en/repositories/archiving-a-github-repository/referencing-and-citing-content" class="uri">https://docs.github.com/en/repositories/archiving-a-github-repository/referencing-and-citing-content</a></small></p>
+<p><img src="https://raw.githubusercontent.com/zoometh/thomashuet/master/img/app-zenodo-github-release.png" style="width: 900px;vertical-align: middle;"></p>
+</div>
+<div id="tabset-5-3">
+<p><small><a href="https://joss.theoj.org/papers/10.21105/joss.03191" class="uri">https://joss.theoj.org/papers/10.21105/joss.03191</a></small></p>
+<p><img src="https://raw.githubusercontent.com/zoometh/thomashuet/master/img/r-pkg--repo-public-publish-github.png" style="width: 900px;vertical-align: middle;"></p>
+</div>
+</div>
+</div>
 </section>
-<section id="discussion-1" class="slide level2">
+<section id="discussion" class="slide level2">
 <h2>Discussion</h2>
 <img src="https://raw.githubusercontent.com/iramat/iramat-dev/master/img/it_meth.png" style="width: 650px;vertical-align: middle;">
 <div class="captiontext">
@@ -474,18 +597,8 @@ d’après (c) www.furygoat.com
 <section id="footnotes" class="footnotes footnotes-end-of-document smaller scrollable" role="doc-endnotes"><h2>Footnotes</h2>
 
 <ol>
-<li id="fn1"><p><em>remote repo</em> ou <em>remote repository</em></p></li>
-<li id="fn2"><p><em>local repo</em> ou <em>local repository</em></p></li>
-<li id="fn3"><p><em>remote repo</em> ou <em>remote repository</em></p></li>
-<li id="fn4"><p><em>local repo</em> ou <em>local repository</em></p></li>
-<li id="fn5"><p><em>file/folder structure</em></p></li>
-<li id="fn6"><p><em>commit history</em></p></li>
-<li id="fn7"><p><em>Integrated Development Environment</em> (IDE)</p></li>
-<li id="fn8"><p><em>remote repo</em> ou <em>remote repository</em></p></li>
-<li id="fn9"><p><em>remote repo</em> ou <em>remote repository</em></p></li>
-<li id="fn10"><p><em>remote repo</em> ou <em>remote repository</em></p></li>
-<li id="fn11"><p>hébergement cloud Microsoft <img src="https://raw.githubusercontent.com/zoometh/thomashuet/master/img/app-os-microsoft-windows-10.png" style="height: 40px;vertical-align: middle;"></p></li>
-<li id="fn12"><p>Batist, Z., &amp; Roe, J. A. (2024). Open Archaeology, Open Source? Collaborative practices in an emerging community of archaeological software engineers. <em>Internet Archaeology</em>, 67.</p></li>
+<li id="fn1"><p>Batist, Z. and Roe, J. 2024 Open Archaeology, Open Source? Collaborative practices in an emerging community of archaeological software engineers, <em>Internet Archaeology</em> 67. <a href="https://doi.org/10.11141/ia.67.13" class="uri">https://doi.org/10.11141/ia.67.13</a></p></li>
+<li id="fn2"><p>Bommarito, E., &amp; Bommarito II, M. J. (2021). An empirical analysis of the R package ecosystem. <em>arXiv preprint arXiv:2102.09904</em>.</p></li>
 </ol>
 </section>
     </div>
@@ -705,6 +818,82 @@ d’après (c) www.furygoat.com
         ]
       });
     </script>
+    
+
+    <script>
+
+      // htmlwidgets need to know to resize themselves when slides are shown/hidden.
+
+      // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
+
+      // slide changes (different for each slide format).
+
+      (function () {
+
+        // dispatch for htmlwidgets
+
+        function fireSlideEnter() {
+
+          const event = window.document.createEvent("Event");
+
+          event.initEvent("slideenter", true, true);
+
+          window.document.dispatchEvent(event);
+
+        }
+
+    
+
+        function fireSlideChanged(previousSlide, currentSlide) {
+
+          fireSlideEnter();
+
+    
+
+          // dispatch for shiny
+
+          if (window.jQuery) {
+
+            if (previousSlide) {
+
+              window.jQuery(previousSlide).trigger("hidden");
+
+            }
+
+            if (currentSlide) {
+
+              window.jQuery(currentSlide).trigger("shown");
+
+            }
+
+          }
+
+        }
+
+    
+
+        // hookup for slidy
+
+        if (window.w3c_slidy) {
+
+          window.w3c_slidy.add_observer(function (slide_num) {
+
+            // slide_num starts at position 1
+
+            fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
+
+          });
+
+        }
+
+    
+
+      })();
+
+    </script>
+
+    
+
     <script id="quarto-html-after-body" type="application/javascript">
       window.document.addEventListener("DOMContentLoaded", function (event) {
         const tabsets =  window.document.querySelectorAll(".panel-tabset-tabby")
