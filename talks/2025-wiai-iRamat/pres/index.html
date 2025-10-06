@@ -221,7 +221,7 @@ Thomas Huet
 <section id="la-série-wiai" class="slide level2">
 <h2>La série WIAI</h2>
 <div class="columns">
-<div class="column" style="width:70%;">
+<div class="column" style="width:65%;">
 <p>Webinaires dédiés aux technologies de l’information pour l’archéométrie: <br> GitHub <img src="https://raw.githubusercontent.com/zoometh/thomashuet/master/img/app-github.png" style="height: 45px;vertical-align: middle;">, Python <img src="https://raw.githubusercontent.com/zoometh/thomashuet/master/img/app-prg-python-2.png" style="height: 45px;vertical-align: middle;">, R <img src="https://raw.githubusercontent.com/zoometh/thomashuet/master/img/prog-r-1.png" style="height: 45px;vertical-align: middle;">, API <img src="https://raw.githubusercontent.com/zoometh/thomashuet/master/img/web-api.jpeg" style="height: 45px;vertical-align: middle;">, IIIF <img src="https://raw.githubusercontent.com/zoometh/thomashuet/master/img/lod-iso-iiif.png" style="height: 45px;vertical-align: middle;">, etc. <br><br></p>
 <div class="callout callout-note callout-titled callout-style-default">
 <div class="callout-body">
@@ -236,10 +236,12 @@ Thomas Huet
 </div>
 </div>
 </div>
-</div><div class="column" style="width:30%;">
+</div><div class="column" style="width:35%;">
+<center>
 <img data-src="https://upload.wikimedia.org/wikipedia/commons/7/76/Jim_Gray_Computing_in_the_21st_Century_2006.jpg" style="vertical-align: middle;" width="300">
+</center>
 <div class="captiontext">
-Jim Gray, <em>“A data structure is nothing without an algorithm, and an algorithm is nothing without a data structure.”</em> Microsoft Research, CC BY-SA
+<em>“A data structure is nothing without an algorithm, and an algorithm is nothing without a data structure.”</em> – Jim Gray © Microsoft Research, CC BY-SA
 </div>
 </div></div>
 <aside class="notes">
@@ -256,29 +258,21 @@ Jim Gray, <em>“A data structure is nothing without an algorithm, and an algori
           display:block!important;
       }</style></aside>
 </section>
-<section id="plan-de-la-présentation" class="slide level2 scrollable">
-<h2>Plan de la présentation</h2>
-<ol type="1">
-<li><img src="https://raw.githubusercontent.com/zoometh/thomashuet/master/img/prog-r-1.png" style="height: 45px;vertical-align: middle;"> et les <em>packages</em></li>
-<li><img src="https://raw.githubusercontent.com/zoometh/thomashuet/master/img/prog-r-1.png" style="height: 45px;vertical-align: middle;">eproductible</li>
-<li>iRamat <img src="https://raw.githubusercontent.com/zoometh/thomashuet/master/img/prog-r-1.png" style="height: 45px;vertical-align: middle;"> <img src="https://raw.githubusercontent.com/iramat/iRamat/master/doc/img/logo.png" style="height: 60px;vertical-align: middle;"></li>
-<li>Discussion</li>
-</ol>
-</section></section>
+</section>
 <section>
-<section id="et-les-packages" class="title-slide slide level1 center">
-<h1><img src="https://raw.githubusercontent.com/zoometh/thomashuet/master/img/prog-r-1.png" style="height: 120px;vertical-align: middle;"> et les <em>packages</em></h1>
+<section id="r-et-les-packages" class="title-slide slide level1 center">
+<h1>R et les <em>packages</em></h1>
 
 </section>
-<section id="r" class="slide level2">
-<h2>R</h2>
+<section id="section" class="slide level2">
+<h2></h2>
 <div class="columns">
 <div class="column" style="width:70%;">
-<p><img src="https://raw.githubusercontent.com/zoometh/thomashuet/master/img/prog-r-1.png" style="height: 50px;vertical-align: middle;"> est un langage de script orienté statistiques. C’est le langage préférés des archéologues<a href="#/footnotes" class="footnote-ref" id="fnref1" role="doc-noteref" data-footnote-href="#/fn1" onclick=""><sup>1</sup></a> qui utilisent les <em>packages</em> comme <code>ggplot</code> <img src="https://raw.githubusercontent.com/zoometh/thomashuet/master/img/r-pkg-ggplot.png" style="width: 50px;vertical-align: middle;"> pour les graphiques (développé par Hadley Wickham), <code>terra</code> <img src="https://raw.githubusercontent.com/zoometh/thomashuet/master/img/r-pkg-terra.png" style="width: 50px;vertical-align: middle;"> et <code>sf</code> <img src="https://raw.githubusercontent.com/zoometh/thomashuet/master/img/r-pkg-sf.png" style="width: 50px;vertical-align: middle;"> pour l’analyse spatiale, etc.</p>
+<p><img src="https://raw.githubusercontent.com/zoometh/thomashuet/master/img/prog-r-1.png" style="height: 50px;vertical-align: middle;"> est un langage de script orienté statistiques. C’est le langage préférés des archéologues<a href="#/footnotes" class="footnote-ref" id="fnref1" role="doc-noteref" data-footnote-href="#/fn1" onclick=""><sup>1</sup></a> qui utilisent des <em>packages</em> génériques comme <code>ggplot</code> <img src="https://raw.githubusercontent.com/zoometh/thomashuet/master/img/r-pkg-ggplot.png" style="width: 50px;vertical-align: middle;"> pour les graphiques (développé par Hadley Wickham), <code>terra</code> <img src="https://raw.githubusercontent.com/zoometh/thomashuet/master/img/r-pkg-terra.png" style="width: 50px;vertical-align: middle;"> et <code>sf</code> <img src="https://raw.githubusercontent.com/zoometh/thomashuet/master/img/r-pkg-sf.png" style="width: 50px;vertical-align: middle;"> pour l’analyse spatiale, etc., ou d’autres plus spécialisés: <code>nexus</code> <img src="https://raw.githubusercontent.com/zoometh/thomashuet/master/img/r-pkg-nexus.png" style="width: 50px;vertical-align: middle;">, <code>tidyspec</code> <img src="https://raw.githubusercontent.com/zoometh/thomashuet/master/img/r-pkg-tidyspec.png" style="width: 50px;vertical-align: middle;">, etc.</p>
 </div><div class="column" style="width:30%;">
 <img data-src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Hadley-wickham2016-02-04.jpg" style="vertical-align: middle;" width="300">
 <div class="captiontext">
-Hadley Wickham, <em>“Anything that can be automated, should be automated”</em> – 2023 <img src="https://raw.githubusercontent.com/zoometh/thomashuet/master/img/lod-licences-publicdomain-1.png" style="height: 12px;vertical-align: middle;"> Wikipedia
+<em>“Anything that can be automated, should be automated”</em> – Hadley Wickham, 2023 <img src="https://raw.githubusercontent.com/zoometh/thomashuet/master/img/lod-licences-publicdomain-1.png" style="height: 12px;vertical-align: middle;"> Wikipedia
 </div>
 </div></div>
 <aside></aside></section>
@@ -286,8 +280,11 @@ Hadley Wickham, <em>“Anything that can be automated, should be automated”</e
 <h2>Les <em>packages</em> R</h2>
 <div class="columns">
 <div class="column" style="width:50%;">
-<p>Un <em>package</em> rassemble du code, de la documentation et parfois des données.<br></p>
-<p>Un <em>package</em> est conçu pour être facilement partagé, installé et réutilisé et ainsi garantir la reproductibilité des analyses.</p>
+<ul>
+<li><p>rassemblent du code, de la documentation et parfois des données.<br></p></li>
+<li><p>conçus pour être facilement partagé, installé et réutilisé et ainsi garantir la reproductibilité des analyses.</p></li>
+<li><p><img src="https://raw.githubusercontent.com/zoometh/thomashuet/master/img/lod-data-fair.png" style="width: 350px;vertical-align: middle;"></p></li>
+</ul>
 </div><div class="column" style="width:50%;">
 <div style="width:1000px; height:450px; overflow:hidden;">
   <iframe src="https://cran.r-project.org/" style="transform: scale(0.9); transform-origin: 0 0; width:750px; height:500px; border:none;">
@@ -301,10 +298,13 @@ Le <em>Comprehensive R Archive Network</em> (CRAN) <a href="https://cran.r-proje
 <section id="les-packages-r-suite" class="slide level2">
 <h2>Les <em>packages</em> R (suite)</h2>
 <div class="columns">
-<div class="column" style="width:50%;">
-<p>En mars 2023, plus de 19,000 packages étaient disponibles sur le CRAN. En 2021 on estime qu’il y en avait plus de 25,000 hebergés sur GitHub <img src="https://raw.githubusercontent.com/zoometh/thomashuet/master/img/app-github.png" style="width: 40px;vertical-align: middle;"><a href="#/footnotes" class="footnote-ref" id="fnref2" role="doc-noteref" data-footnote-href="#/fn2" onclick=""><sup>2</sup></a></p>
-</div><div class="column" style="width:50%;">
-<p><img src="https://raw.githubusercontent.com/zoometh/thomashuet/master/img/r-pkgs-mosaic-3.png" style="width: 700px;vertical-align: middle;"></p>
+<div class="column" style="width:60%;">
+<ul>
+<li><p>En 2023, 19,000+ packages hebergés sur le CRAN.</p></li>
+<li><p>En 2021, 25,000+ packages hebergés sur GitHub<a href="#/footnotes" class="footnote-ref" id="fnref2" role="doc-noteref" data-footnote-href="#/fn2" onclick=""><sup>2</sup></a></p></li>
+</ul>
+</div><div class="column" style="width:40%;">
+<p><img src="https://raw.githubusercontent.com/zoometh/thomashuet/master/img/r-pkgs-mosaic-3.png" style="width: 600px;vertical-align: middle;"></p>
 </div></div>
 <aside></aside></section>
 <section id="trouver-un-package" class="slide level2">
@@ -318,14 +318,14 @@ Le <em>Comprehensive R Archive Network</em> (CRAN) <a href="https://cran.r-proje
 <span id="cb1-2"><a></a><span class="fu">library</span>(pkgsearch)</span>
 <span id="cb1-3"><a></a><span class="fu">ps</span>(<span class="st">"raman"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>- "raman" -------------------------------------- 13 packages in 0.044 seconds -
+<pre><code>- "raman" -------------------------------------- 13 packages in 0.009 seconds -
   #     package              version by                 @ title                
   1 100 serrsBayes           0.5.0   Matt Moores       4y Bayesian Modelling...
   2  92 RamanMP              1.0     Veronica Nava     4y Analysis and Ident...
   3  75 OpenSpecy            1.5.3   Win Cowger        5M Analyze, Process, ...
   4  37 readJDX              0.6.4   Bryan A. Hanson   2y Import Data in the...
   5  26 hyperSpec            0.100.2 Claudia Beleites  1y Work with Hyperspe...
-  6  23 ChemoSpec            6.3.1   Bryan A. Hanson  26d Exploratory Chemom...
+  6  23 ChemoSpec            6.3.1   Bryan A. Hanson  27d Exploratory Chemom...
   7  22 PlackettLuce         0.4.4   Heather Turner    1M Plackett-Luce Mode...
   8  15 sabarsi              0.1.0   Li Jun            6y Background Removal...
   9  12 smdi                 0.3.1   Janick Weberpals  1y Perform Structural...
@@ -351,9 +351,14 @@ Le <em>Comprehensive R Archive Network</em> (CRAN) <a href="https://cran.r-proje
 </div>
 </div>
 </div>
+</section></section>
+<section>
+<section id="composition-dun-package-r" class="title-slide slide level1 center">
+<h1>Composition d’un <em>package</em> R</h1>
+
 </section>
-<section id="composition-dun-package-fichiers-sources" class="slide level2">
-<h2>Composition d’un <em>package</em> <img src="https://raw.githubusercontent.com/zoometh/thomashuet/master/img/prog-r-1.png" style="height: 45px;vertical-align: middle;"> (fichiers sources)</h2>
+<section id="description-fichiers-sources" class="slide level2">
+<h2>Description (fichiers sources)</h2>
 <div class="panel-tabset">
 <ul id="tabset-2" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-2-1"><code>DESCRIPTION</code></a></li><li><a href="#tabset-2-2"><code>LICENSE</code></a></li><li><a href="#tabset-2-3"><code>README.md</code></a></li><li><a href="#tabset-2-4"><code>R/</code></a></li><li><a href="#tabset-2-5"><code>inst/extdata/</code></a></li></ul>
 <div class="tab-content">
@@ -451,18 +456,27 @@ Le <em>Comprehensive R Archive Network</em> (CRAN) <a href="https://cran.r-proje
 <p>Le dossier <a href="https://github.com/iramat/iRamat/tree/main/inst/extdata/"><code>inst/extdata/</code></a> contient les données externes</p>
 <div class="columns">
 <div class="column" style="width:33%;">
-<p><small>regular_distribution.png</small> <img src="https://raw.githubusercontent.com/iramat/iRamat/master/inst/extdata/regular_distribution.png" style="width: 200px;vertical-align: middle;"></p>
+<small>regular_distribution.png</small>
+<center>
+<img src="https://raw.githubusercontent.com/iramat/iRamat/master/inst/extdata/regular_distribution.png" style="width: 220px;vertical-align: middle;">
+</center>
 </div><div class="column" style="width:33%;">
-<p><small>clustered_distribution.png</small> <img src="https://raw.githubusercontent.com/iramat/iRamat/master/inst/extdata/clustered_distribution.png" style="width: 200px;vertical-align: middle;"></p>
+<small>clustered_distribution.png</small>
+<center>
+<img src="https://raw.githubusercontent.com/iramat/iRamat/master/inst/extdata/clustered_distribution.png" style="width: 220px;vertical-align: middle;">
+</center>
 </div><div class="column" style="width:33%;">
-<p><small>random_distribution.png</small> <img src="https://raw.githubusercontent.com/iramat/iRamat/master/inst/extdata/random_distribution.png" style="width: 200px;vertical-align: middle;"></p>
+<small>random_distribution.png</small>
+<center>
+<img src="https://raw.githubusercontent.com/iramat/iRamat/master/inst/extdata/random_distribution.png" style="width: 220px;vertical-align: middle;">
+</center>
 </div></div>
 </div>
 </div>
 </div>
 </section>
-<section id="composition-dun-package-fichiers-générés" class="slide level2">
-<h2>Composition d’un <em>package</em> <img src="https://raw.githubusercontent.com/zoometh/thomashuet/master/img/prog-r-1.png" style="height: 45px;vertical-align: middle;"> (fichiers générés)</h2>
+<section id="description-fichiers-générés" class="slide level2">
+<h2>Description (fichiers générés)</h2>
 <div class="panel-tabset">
 <ul id="tabset-3" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-3-1"><code>NAMESPACE</code></a></li><li><a href="#tabset-3-2"><code>man/</code></a></li></ul>
 <div class="tab-content">
@@ -475,7 +489,7 @@ Le <em>Comprehensive R Archive Network</em> (CRAN) <a href="https://cran.r-proje
 <span id="cb7-5"><a></a>export(ppa)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div id="tabset-3-2">
-<p>Le dossier <a href="https://github.com/iramat/iRamat/tree/main/man"><code>man/</code></a> contient la documentation des fonctions générée – en utilisant <code>{roxygen2}</code> – depuis les fonctions elles-mêmes.</p>
+<p>Le dossier <a href="https://github.com/iramat/iRamat/tree/main/man"><code>man/</code></a> contient la documentation des fonctions (générée depuis les fonctions elles-mêmes).</p>
 <div class="sourceCode" id="cb8" data-code-line-numbers="1-2"><pre class="sourceCode numberSource r-doc number-lines code-with-copy"><code class="sourceCode"><span id="cb8-1"><a></a>% Generated by roxygen2: do not edit by hand</span>
 <span id="cb8-2"><a></a>% Please edit documentation in R/ppa.R</span>
 <span id="cb8-3"><a></a>\name{ppa}</span>
@@ -495,9 +509,14 @@ Le <em>Comprehensive R Archive Network</em> (CRAN) <a href="https://cran.r-proje
 </div>
 </div>
 </div>
+</section></section>
+<section>
+<section id="du-code-à-la-fonction-et-de-la-fonction-au-package" class="title-slide slide level1 center">
+<h1>Du code à la fonction, et de la fonction au package</h1>
+
 </section>
-<section id="du-code-à-la-fonction-et-au-package" class="slide level2">
-<h2>Du code à la fonction, et au <em>package</em></h2>
+<section id="du-code-à-la-f-et-de-la-f-au-pkg" class="slide level2">
+<h2>Du <code>code</code> à la <math><mi>f</mi></math>, et de la <math><mi>f</mi></math> au <code>{pkg}</code></h2>
 <div class="panel-tabset">
 <ul id="tabset-4" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-4-1">Au Km</a></li><li><a href="#tabset-4-2">Fonctions</a></li><li><a href="#tabset-4-3">Package (<em>private</em>)</a></li><li><a href="#tabset-4-4">Package (<em>public</em>)</a></li></ul>
 <div class="tab-content">
@@ -544,6 +563,11 @@ Le <em>Comprehensive R Archive Network</em> (CRAN) <a href="https://cran.r-proje
 </div>
 </div>
 </div>
+</section></section>
+<section>
+<section id="code-as-data" class="title-slide slide level1 center">
+<h1><em>Code as data</em></h1>
+
 </section>
 <section id="réutiliser" class="slide level2">
 <h2>Réutiliser</h2>
@@ -584,16 +608,13 @@ A BibTeX entry for LaTeX users is
 </div>
 </div>
 </div>
-</section>
-<section id="discussion" class="slide level2">
-<h2>Discussion</h2>
-<img src="https://raw.githubusercontent.com/iramat/iramat-dev/master/img/it_meth.png" style="width: 650px;vertical-align: middle;">
-<div class="captiontext">
-d’après (c) www.furygoat.com
-</div>
-
-
 </section></section>
+<section id="discussion" class="title-slide slide level1 center" data-background-image="https://raw.githubusercontent.com/zoometh/thomashuet/master/img/r-pkg--repo-public-github.png" data-background-opacity="0.5" data-background-size="800px" data-background-repeat="repeat">
+<h1>Discussion</h1>
+
+
+</section>
+
 <section id="footnotes" class="footnotes footnotes-end-of-document smaller scrollable" role="doc-endnotes"><h2>Footnotes</h2>
 
 <ol>
@@ -604,7 +625,7 @@ d’après (c) www.furygoat.com
     </div>
   <div class="quarto-auto-generated-content" style="display: none;">
 <div class="footer footer-default">
-<p>Thomas Huet - <img src="https://raw.githubusercontent.com/zoometh/thomashuet/master/img/inst-cnrs-iramat.png" style="height: 20px;vertical-align: middle;"> - 7 Octobre, 2025, LAPA, Saclay</p>
+<p>Thomas Huet - <img src="https://raw.githubusercontent.com/zoometh/thomashuet/master/img/inst-cnrs-iramat.png" style="height: 17px;vertical-align: middle;"> - 7 Octobre, 2025, CEB, Orléans</p>
 </div>
 </div></div>
 

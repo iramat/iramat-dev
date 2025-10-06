@@ -29,7 +29,7 @@ format:
     # self-contained: true
     # embed-resources: true
     # logo: https://raw.githubusercontent.com/zoometh/neonet/master/doc/img/neonet.png
-    footer: "Thomas Huet - <img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/inst-cnrs-iramat.png' style='height: 20px;vertical-align: middle;'> - 7 Octobre, 2025, LAPA, Saclay"
+    footer: "Thomas Huet - <img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/inst-cnrs-iramat.png' style='height: 17px;vertical-align: middle;'> - 7 Octobre, 2025, CEB, Orléans"
     margin: 0
     width: 1200
 ---
@@ -40,7 +40,7 @@ format:
 ## La série WIAI
 
 :::: {.columns}
-::: {.column width="70%"}
+::: {.column width="65%"}
 
 Webinaires dédiés aux technologies de l'information pour l'archéométrie:  <br>
 GitHub <img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/app-github.png' style='height: 45px;vertical-align: middle;'>, Python
@@ -55,10 +55,13 @@ GitHub <img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img
 
 :::
 
-::: {.column width="30%"}
+::: {.column width="35%"}
+
+<center>
 
 ![](https://upload.wikimedia.org/wikipedia/commons/7/76/Jim_Gray_Computing_in_the_21st_Century_2006.jpg){width="300" style="vertical-align: middle;"}
-<div class="captiontext">Jim Gray, _"A data structure is nothing without an algorithm, and an algorithm is nothing without a data structure."_ Microsoft Research, CC BY-SA </div>
+</center>
+<div class="captiontext"> _"A data structure is nothing without an algorithm, and an algorithm is nothing without a data structure."_ -- Jim Gray © Microsoft Research, CC BY-SA </div>
 
 
 :::
@@ -71,7 +74,7 @@ Découvrir -- ou approfondir -- une solution logicielle open-source en revenant 
 
 
 
-## Plan de la présentation
+## Plan de la présentation {data-visibility=hidden}
 
 
 1. <img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/prog-r-1.png' style='height: 45px;vertical-align: middle;'> et les _packages_
@@ -80,17 +83,17 @@ Découvrir -- ou approfondir -- une solution logicielle open-source en revenant 
 5. Discussion
 
 
-# <img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/prog-r-1.png' style='height: 120px;vertical-align: middle;'> et les _packages_
+# R et les _packages_
 
 
 
-## R
+## {}
 
 
 :::: {.columns}
 
 ::: {.column width="70%"}
-<img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/prog-r-1.png' style='height: 50px;vertical-align: middle;'> est un langage de script orienté statistiques. C'est le langage préférés des archéologues[^1] qui utilisent les _packages_ comme `ggplot` <img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/r-pkg-ggplot.png' style='width: 50px;vertical-align: middle;'> pour les graphiques (développé par Hadley Wickham), `terra` <img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/r-pkg-terra.png' style='width: 50px;vertical-align: middle;'> et `sf` <img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/r-pkg-sf.png' style='width: 50px;vertical-align: middle;'> pour l'analyse spatiale, etc. 
+<img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/prog-r-1.png' style='height: 50px;vertical-align: middle;'> est un langage de script orienté statistiques. C'est le langage préférés des archéologues[^1] qui utilisent des _packages_ génériques comme `ggplot` <img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/r-pkg-ggplot.png' style='width: 50px;vertical-align: middle;'> pour les graphiques (développé par Hadley Wickham), `terra` <img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/r-pkg-terra.png' style='width: 50px;vertical-align: middle;'> et `sf` <img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/r-pkg-sf.png' style='width: 50px;vertical-align: middle;'> pour l'analyse spatiale, etc., ou d'autres plus spécialisés: `nexus` <img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/r-pkg-nexus.png' style='width: 50px;vertical-align: middle;'>, `tidyspec` <img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/r-pkg-tidyspec.png' style='width: 50px;vertical-align: middle;'>, etc.
 
 
 [^1]:  Batist, Z. and Roe, J. 2024 Open Archaeology, Open Source? Collaborative practices in an emerging community of archaeological software engineers, _Internet Archaeology_ 67. <https://doi.org/10.11141/ia.67.13>
@@ -100,7 +103,7 @@ Découvrir -- ou approfondir -- une solution logicielle open-source en revenant 
 ::: {.column width="30%"}
 
 ![](https://upload.wikimedia.org/wikipedia/commons/f/fa/Hadley-wickham2016-02-04.jpg){width="300" style="vertical-align: middle;"}
-<div class="captiontext">Hadley Wickham, _"Anything that can be automated, should be automated"_ -- 2023 <img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/lod-licences-publicdomain-1.png' style='height: 12px;vertical-align: middle;'> Wikipedia </div>
+<div class="captiontext">_"Anything that can be automated, should be automated"_ -- Hadley Wickham, 2023 <img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/lod-licences-publicdomain-1.png' style='height: 12px;vertical-align: middle;'> Wikipedia </div>
 :::
 
 ::::
@@ -112,9 +115,12 @@ Découvrir -- ou approfondir -- une solution logicielle open-source en revenant 
 :::: {.columns}
 
 ::: {.column width="50%"}
-Un _package_ rassemble du code, de la documentation et parfois des données.<br>
 
-Un _package_ est conçu pour être facilement partagé, installé et réutilisé et ainsi garantir la reproductibilité des analyses.
+- rassemblent du code, de la documentation et parfois des données.<br>
+
+- conçus pour être facilement partagé, installé et réutilisé et ainsi garantir la reproductibilité des analyses.
+
+- <img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/lod-data-fair.png' style='width: 350px;vertical-align: middle;'>
 :::
 
 ::: {.column width="50%"}
@@ -137,12 +143,14 @@ Un _package_ est conçu pour être facilement partagé, installé et réutilisé
 
 :::: {.columns}
 
-::: {.column width="50%"}
-En mars 2023, plus de 19,000 packages étaient disponibles sur le CRAN. En 2021 on estime qu'il y en avait plus de 25,000 hebergés sur GitHub <img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/app-github.png' style='width: 40px;vertical-align: middle;'>[^2]
+::: {.column width="60%"}
+- En 2023, 19,000+ packages hebergés sur le CRAN. 
+
+- En 2021, 25,000+ packages hebergés sur GitHub[^2]
 :::
 
-::: {.column width="50%"}
-<img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/r-pkgs-mosaic-3.png' style='width: 700px;vertical-align: middle;'>
+::: {.column width="40%"}
+<img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/r-pkgs-mosaic-3.png' style='width: 600px;vertical-align: middle;'>
 :::
 
 ::::
@@ -187,7 +195,10 @@ ps("raman")
 :::
 
 
-## Composition d'un _package_ <img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/prog-r-1.png' style='height: 45px;vertical-align: middle;'> (fichiers sources)
+# Composition d’un _package_ R
+
+
+## Description (fichiers sources)
 
 
 ::: {.panel-tabset}
@@ -319,17 +330,23 @@ Le dossier [`inst/extdata/`](https://github.com/iramat/iRamat/tree/main/inst/ext
 
 ::: {.column width="33%"}
 <small>regular_distribution.png</small>
-<img src='https://raw.githubusercontent.com/iramat/iRamat/master/inst/extdata/regular_distribution.png' style='width: 200px;vertical-align: middle;'>
+<center>
+<img src='https://raw.githubusercontent.com/iramat/iRamat/master/inst/extdata/regular_distribution.png' style='width: 220px;vertical-align: middle;'>
+</center>
 :::
 
 ::: {.column width="33%"}
 <small>clustered_distribution.png</small>
-<img src='https://raw.githubusercontent.com/iramat/iRamat/master/inst/extdata/clustered_distribution.png' style='width: 200px;vertical-align: middle;'>
+<center>
+<img src='https://raw.githubusercontent.com/iramat/iRamat/master/inst/extdata/clustered_distribution.png' style='width: 220px;vertical-align: middle;'>
+</center>
 :::
 
 ::: {.column width="33%"}
 <small>random_distribution.png</small>
-<img src='https://raw.githubusercontent.com/iramat/iRamat/master/inst/extdata/random_distribution.png' style='width: 200px;vertical-align: middle;'>
+<center>
+<img src='https://raw.githubusercontent.com/iramat/iRamat/master/inst/extdata/random_distribution.png' style='width: 220px;vertical-align: middle;'>
+</center>
 :::
 
 ::::
@@ -337,7 +354,7 @@ Le dossier [`inst/extdata/`](https://github.com/iramat/iRamat/tree/main/inst/ext
 :::
 
 
-## Composition d'un _package_ <img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/prog-r-1.png' style='height: 45px;vertical-align: middle;'> (fichiers générés)
+## Description (fichiers générés)
 
 ::: {.panel-tabset}
 
@@ -355,7 +372,7 @@ export(ppa)
 
 ### `man/`
 
-Le dossier [`man/`](https://github.com/iramat/iRamat/tree/main/man) contient la documentation des fonctions générée -- en utilisant `{roxygen2}` -- depuis les fonctions elles-mêmes.
+Le dossier [`man/`](https://github.com/iramat/iRamat/tree/main/man) contient la documentation des fonctions (générée depuis les fonctions elles-mêmes).
 
 ```{.r-doc code-line-numbers="1-2"}
 % Generated by roxygen2: do not edit by hand
@@ -378,7 +395,11 @@ ppa(
 
 :::
 
-## Du code à la fonction, et au _package_
+# Du code à la fonction, et de la fonction au package
+
+
+## Du `code` à la <math><mi>f</mi></math>, et de la <math><mi>f</mi></math> au `{pkg}`
+
 
 ::: {.panel-tabset}
 
@@ -439,6 +460,8 @@ simulate_mean <- function(n = 100, mean = 0, sd = 1) {
 
 :::
 
+# _Code as data_
+
 
 ## Réutiliser
 
@@ -466,7 +489,5 @@ citation("iRamat")
 
 :::
 
-## Discussion
+# Discussion {background-image="https://raw.githubusercontent.com/zoometh/thomashuet/master/img/r-pkg--repo-public-github.png" background-opacity=0.5 background-size="800px" background-repeat="repeat"}
 
-<img src='https://raw.githubusercontent.com/iramat/iramat-dev/master/img/it_meth.png' style='width: 650px;vertical-align: middle;'>
-<div class="captiontext">d'après (c) www.furygoat.com </div>

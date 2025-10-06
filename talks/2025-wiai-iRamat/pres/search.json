@@ -4,63 +4,56 @@
     "href": "index.html#la-série-wiai",
     "title": "iRamat, un package R",
     "section": "La série WIAI",
-    "text": "La série WIAI\n\n\nWebinaires dédiés aux technologies de l’information pour l’archéométrie:  GitHub , Python , R , API , IIIF , etc. \n\n\n\n\n\n\nNote\n\n\n📅 Le 2e Mardi matin de chaque mois sur ZOOM entre 10h00 et 10h50 (50 minutes), lien sur le GitHub de l’IRAMAT\n\n\n\n\n\n\nJim Gray, “A data structure is nothing without an algorithm, and an algorithm is nothing without a data structure.” Microsoft Research, CC BY-SA\n\n\n\nDécouvrir – ou approfondir – une solution logicielle open-source en revenant sur l’histoire de ce logiciel, sa logique interne, … Avec des citations rigolotes"
+    "text": "La série WIAI\n\n\nWebinaires dédiés aux technologies de l’information pour l’archéométrie:  GitHub , Python , R , API , IIIF , etc. \n\n\n\n\n\n\nNote\n\n\n📅 Le 2e Mardi matin de chaque mois sur ZOOM entre 10h00 et 10h50 (50 minutes), lien sur le GitHub de l’IRAMAT\n\n\n\n\n\n\n\n\n“A data structure is nothing without an algorithm, and an algorithm is nothing without a data structure.” – Jim Gray © Microsoft Research, CC BY-SA\n\n\n\nDécouvrir – ou approfondir – une solution logicielle open-source en revenant sur l’histoire de ce logiciel, sa logique interne, … Avec des citations rigolotes"
   },
   {
-    "objectID": "index.html#plan-de-la-présentation",
-    "href": "index.html#plan-de-la-présentation",
+    "objectID": "index.html#section",
+    "href": "index.html#section",
     "title": "iRamat, un package R",
-    "section": "Plan de la présentation",
-    "text": "Plan de la présentation\n\n et les packages\neproductible\niRamat  \nDiscussion"
-  },
-  {
-    "objectID": "index.html#r",
-    "href": "index.html#r",
-    "title": "iRamat, un package R",
-    "section": "R",
-    "text": "R\n\n\n est un langage de script orienté statistiques. C’est le langage préférés des archéologues1 qui utilisent les packages comme ggplot  pour les graphiques (développé par Hadley Wickham), terra  et sf  pour l’analyse spatiale, etc.\n\n\n\nHadley Wickham, “Anything that can be automated, should be automated” – 2023  Wikipedia"
+    "section": "",
+    "text": "est un langage de script orienté statistiques. C’est le langage préférés des archéologues1 qui utilisent des packages génériques comme ggplot  pour les graphiques (développé par Hadley Wickham), terra  et sf  pour l’analyse spatiale, etc., ou d’autres plus spécialisés: nexus , tidyspec , etc.\n\n\n\n“Anything that can be automated, should be automated” – Hadley Wickham, 2023  Wikipedia"
   },
   {
     "objectID": "index.html#les-packages-r",
     "href": "index.html#les-packages-r",
     "title": "iRamat, un package R",
     "section": "Les packages R",
-    "text": "Les packages R\n\n\nUn package rassemble du code, de la documentation et parfois des données.\nUn package est conçu pour être facilement partagé, installé et réutilisé et ainsi garantir la reproductibilité des analyses.\n\n\n  \n  \n\n\nLe Comprehensive R Archive Network (CRAN) https://cran.r-project.org/, l’archive officielle des packages R"
+    "text": "Les packages R\n\n\n\nrassemblent du code, de la documentation et parfois des données.\nconçus pour être facilement partagé, installé et réutilisé et ainsi garantir la reproductibilité des analyses.\n\n\n\n\n  \n  \n\n\nLe Comprehensive R Archive Network (CRAN) https://cran.r-project.org/, l’archive officielle des packages R"
   },
   {
     "objectID": "index.html#les-packages-r-suite",
     "href": "index.html#les-packages-r-suite",
     "title": "iRamat, un package R",
     "section": "Les packages R (suite)",
-    "text": "Les packages R (suite)\n\n\nEn mars 2023, plus de 19,000 packages étaient disponibles sur le CRAN. En 2021 on estime qu’il y en avait plus de 25,000 hebergés sur GitHub 2"
+    "text": "Les packages R (suite)\n\n\n\nEn 2023, 19,000+ packages hebergés sur le CRAN.\nEn 2021, 25,000+ packages hebergés sur GitHub2"
   },
   {
     "objectID": "index.html#trouver-un-package",
     "href": "index.html#trouver-un-package",
     "title": "iRamat, un package R",
     "section": "Trouver un package ",
-    "text": "Trouver un package \n\n{pkgsearch}R-UniverseGitHubopen-archaeo\n\n\n\n# install.packages(\"pkgsearch\")\nlibrary(pkgsearch)\nps(\"raman\")\n\n- \"raman\" -------------------------------------- 13 packages in 0.044 seconds -\n  #     package              version by                 @ title                \n  1 100 serrsBayes           0.5.0   Matt Moores       4y Bayesian Modelling...\n  2  92 RamanMP              1.0     Veronica Nava     4y Analysis and Ident...\n  3  75 OpenSpecy            1.5.3   Win Cowger        5M Analyze, Process, ...\n  4  37 readJDX              0.6.4   Bryan A. Hanson   2y Import Data in the...\n  5  26 hyperSpec            0.100.2 Claudia Beleites  1y Work with Hyperspe...\n  6  23 ChemoSpec            6.3.1   Bryan A. Hanson  26d Exploratory Chemom...\n  7  22 PlackettLuce         0.4.4   Heather Turner    1M Plackett-Luce Mode...\n  8  15 sabarsi              0.1.0   Li Jun            6y Background Removal...\n  9  12 smdi                 0.3.1   Janick Weberpals  1y Perform Structural...\n 10  11 FishProxCompAnalyzer 0.1.0   Tanuj Misra       1y Proximate Composit...\n\n\n\n\nhttps://r-universe.dev/search?q=raman\n\n\n\nhttps://github.com/search/advanced \n\n⬇️\n\n \n\n\nopen-archaeo et le SIG-SSLA\n\nhttps://open-archaeo.info/tags/x-ray-fluorescence/"
+    "text": "Trouver un package \n\n{pkgsearch}R-UniverseGitHubopen-archaeo\n\n\n\n# install.packages(\"pkgsearch\")\nlibrary(pkgsearch)\nps(\"raman\")\n\n- \"raman\" -------------------------------------- 13 packages in 0.009 seconds -\n  #     package              version by                 @ title                \n  1 100 serrsBayes           0.5.0   Matt Moores       4y Bayesian Modelling...\n  2  92 RamanMP              1.0     Veronica Nava     4y Analysis and Ident...\n  3  75 OpenSpecy            1.5.3   Win Cowger        5M Analyze, Process, ...\n  4  37 readJDX              0.6.4   Bryan A. Hanson   2y Import Data in the...\n  5  26 hyperSpec            0.100.2 Claudia Beleites  1y Work with Hyperspe...\n  6  23 ChemoSpec            6.3.1   Bryan A. Hanson  27d Exploratory Chemom...\n  7  22 PlackettLuce         0.4.4   Heather Turner    1M Plackett-Luce Mode...\n  8  15 sabarsi              0.1.0   Li Jun            6y Background Removal...\n  9  12 smdi                 0.3.1   Janick Weberpals  1y Perform Structural...\n 10  11 FishProxCompAnalyzer 0.1.0   Tanuj Misra       1y Proximate Composit...\n\n\n\n\nhttps://r-universe.dev/search?q=raman\n\n\n\nhttps://github.com/search/advanced \n\n⬇️\n\n \n\n\nopen-archaeo et le SIG-SSLA\n\nhttps://open-archaeo.info/tags/x-ray-fluorescence/"
   },
   {
-    "objectID": "index.html#composition-dun-package-fichiers-sources",
-    "href": "index.html#composition-dun-package-fichiers-sources",
+    "objectID": "index.html#description-fichiers-sources",
+    "href": "index.html#description-fichiers-sources",
     "title": "iRamat, un package R",
-    "section": "Composition d’un package  (fichiers sources)",
-    "text": "Composition d’un package  (fichiers sources)\n\nDESCRIPTIONLICENSEREADME.mdR/inst/extdata/\n\n\nLe fichier DESCRIPTION contient les métadonnées du package\nPackage: iRamat\nType: Package\nTitle: Statistical analysis on Archaeomaterial\nDescription: Statistical analysis on Archaeomaterial.\nVersion: 1.0.0\nAuthors@R: c(person(\"Thomas\", \"Huet\", email = \"thomas.huet@cnrs.fr\", role = c(\"aut\", \"cre\"), comment=c(ORCID=\"0000-0002-1112-6122\")))\nDepends:\n    R (&gt;= 4.0.1)\nLicense: MIT + file LICENSE\nEncoding: UTF-8\nLazyData: true\nImports:\n    dplyr,\n    ggplot2,\n    forcats,\n    stringr,\n    hash,\n    jsonlite,\n    httr,\n    imager,\n    spatstat.geom,\n    spatstat.explore   \nRoxygenNote: 7.3.2\nSuggests: \n    testthat (&gt;= 3.0.0),\n    ggpubr\nConfig/testthat/edition: 3\nURL: https://github.com/iramat/iRamat\nBugsReport: https://github.com/iramat/iRamat/issues\n\n\n\nLes fichiers LICENSE et LICENSE.md contiennent la licence du package\n\n\nLICENSE\nYEAR: 2025\nCOPYRIGHT HOLDER: IRAMAT-CNRS\n\nLICENSE.md\n# MIT License\n\nCopyright (c) 2025 IRAMAT-CNRS\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\n(...)\n\n\n\nLe fichier README.md présente le package\n\n\n\nLe dossier R/ contient les fonctions R\n#' Connect the CHIPS DB API and return an R object (dataframe, etc.)\n#'\n#' @name db_api_connect\n#' @description Connect the CHIPS DB API and return an R object (dataframe, etc.). The default dataset is dataset_adisser17, accessed at &lt;http://157.136.252.188:3000/dataset_adisser17&gt;\n#'\n#' @param d A hash object. If none is provided, a new one will be created.\n#' @param api_url An URL landing to an API. Default: 'dataset_adisser17'.\n#' @param output_format The selected output format. Default \"dataframe\".\n#' @param verbose if TRUE (by default), verbose.\n#'\n#' @return An R object.\n#'\n#' @examples\n#' df &lt;- db_api_connect()\n#' # Show the first rows of the dataframe\n#' head(df$dataset_adisser17)\n#' \n#' @export\ndb_api_connect &lt;- function(d = NA,\n                           api_url = \"http://157.136.252.188:3000/dataset_adisser17\",\n                           output_format = \"dataframe\",\n                           verbose = TRUE){\n                           \n                           (...)\n                           \n                           }\n\n\n\nLe dossier inst/extdata/ contient les données externes\n\n\nregular_distribution.png \n\nclustered_distribution.png \n\nrandom_distribution.png"
+    "section": "Description (fichiers sources)",
+    "text": "Description (fichiers sources)\n\nDESCRIPTIONLICENSEREADME.mdR/inst/extdata/\n\n\nLe fichier DESCRIPTION contient les métadonnées du package\nPackage: iRamat\nType: Package\nTitle: Statistical analysis on Archaeomaterial\nDescription: Statistical analysis on Archaeomaterial.\nVersion: 1.0.0\nAuthors@R: c(person(\"Thomas\", \"Huet\", email = \"thomas.huet@cnrs.fr\", role = c(\"aut\", \"cre\"), comment=c(ORCID=\"0000-0002-1112-6122\")))\nDepends:\n    R (&gt;= 4.0.1)\nLicense: MIT + file LICENSE\nEncoding: UTF-8\nLazyData: true\nImports:\n    dplyr,\n    ggplot2,\n    forcats,\n    stringr,\n    hash,\n    jsonlite,\n    httr,\n    imager,\n    spatstat.geom,\n    spatstat.explore   \nRoxygenNote: 7.3.2\nSuggests: \n    testthat (&gt;= 3.0.0),\n    ggpubr\nConfig/testthat/edition: 3\nURL: https://github.com/iramat/iRamat\nBugsReport: https://github.com/iramat/iRamat/issues\n\n\n\nLes fichiers LICENSE et LICENSE.md contiennent la licence du package\n\n\nLICENSE\nYEAR: 2025\nCOPYRIGHT HOLDER: IRAMAT-CNRS\n\nLICENSE.md\n# MIT License\n\nCopyright (c) 2025 IRAMAT-CNRS\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\n(...)\n\n\n\nLe fichier README.md présente le package\n\n\n\nLe dossier R/ contient les fonctions R\n#' Connect the CHIPS DB API and return an R object (dataframe, etc.)\n#'\n#' @name db_api_connect\n#' @description Connect the CHIPS DB API and return an R object (dataframe, etc.). The default dataset is dataset_adisser17, accessed at &lt;http://157.136.252.188:3000/dataset_adisser17&gt;\n#'\n#' @param d A hash object. If none is provided, a new one will be created.\n#' @param api_url An URL landing to an API. Default: 'dataset_adisser17'.\n#' @param output_format The selected output format. Default \"dataframe\".\n#' @param verbose if TRUE (by default), verbose.\n#'\n#' @return An R object.\n#'\n#' @examples\n#' df &lt;- db_api_connect()\n#' # Show the first rows of the dataframe\n#' head(df$dataset_adisser17)\n#' \n#' @export\ndb_api_connect &lt;- function(d = NA,\n                           api_url = \"http://157.136.252.188:3000/dataset_adisser17\",\n                           output_format = \"dataframe\",\n                           verbose = TRUE){\n                           \n                           (...)\n                           \n                           }\n\n\n\nLe dossier inst/extdata/ contient les données externes\n\n\nregular_distribution.png\n\n\n\n\nclustered_distribution.png\n\n\n\n\nrandom_distribution.png"
   },
   {
-    "objectID": "index.html#composition-dun-package-fichiers-générés",
-    "href": "index.html#composition-dun-package-fichiers-générés",
+    "objectID": "index.html#description-fichiers-générés",
+    "href": "index.html#description-fichiers-générés",
     "title": "iRamat, un package R",
-    "section": "Composition d’un package  (fichiers générés)",
-    "text": "Composition d’un package  (fichiers générés)\n\nNAMESPACEman/\n\n\nLe fichier NAMESPACE décrit quelles fonctions du package sont exportées.\n# Generated by roxygen2: do not edit by hand\n\nexport(chrono)\nexport(db_api_connect)\nexport(ppa)\n\n\nLe dossier man/ contient la documentation des fonctions générée – en utilisant {roxygen2} – depuis les fonctions elles-mêmes.\n% Generated by roxygen2: do not edit by hand\n% Please edit documentation in R/ppa.R\n\\name{ppa}\n\\alias{ppa}\n\\title{Classify a Point Pattern Distribution}\n\\usage{\nppa(\n  d = NA,\n  root = \"https://raw.githubusercontent.com/iramat/iRamat/master/inst/extdata/\",\n  img.paths = c(\"clustered_distribution.png\", \"random_distribution.png\",\n    \"regular_distribution.png\"),\n  ppa_tests = c(\"quadrat\", \"ripley\", \"gfunction\"),\n  verbose = TRUE\n)\n}\n(...)"
+    "section": "Description (fichiers générés)",
+    "text": "Description (fichiers générés)\n\nNAMESPACEman/\n\n\nLe fichier NAMESPACE décrit quelles fonctions du package sont exportées.\n# Generated by roxygen2: do not edit by hand\n\nexport(chrono)\nexport(db_api_connect)\nexport(ppa)\n\n\nLe dossier man/ contient la documentation des fonctions (générée depuis les fonctions elles-mêmes).\n% Generated by roxygen2: do not edit by hand\n% Please edit documentation in R/ppa.R\n\\name{ppa}\n\\alias{ppa}\n\\title{Classify a Point Pattern Distribution}\n\\usage{\nppa(\n  d = NA,\n  root = \"https://raw.githubusercontent.com/iramat/iRamat/master/inst/extdata/\",\n  img.paths = c(\"clustered_distribution.png\", \"random_distribution.png\",\n    \"regular_distribution.png\"),\n  ppa_tests = c(\"quadrat\", \"ripley\", \"gfunction\"),\n  verbose = TRUE\n)\n}\n(...)"
   },
   {
-    "objectID": "index.html#du-code-à-la-fonction-et-au-package",
-    "href": "index.html#du-code-à-la-fonction-et-au-package",
+    "objectID": "index.html#du-code-à-la-f-et-de-la-f-au-pkg",
+    "href": "index.html#du-code-à-la-f-et-de-la-f-au-pkg",
     "title": "iRamat, un package R",
-    "section": "Du code à la fonction, et au package",
-    "text": "Du code à la fonction, et au package\n\nAu KmFonctionsPackage (private)Package (public)\n\n\n# Generate 100 random numbers from a normal distribution\nx &lt;- rnorm(100, mean = 10, sd = 2)\n\n# Compute the mean\nmean_x &lt;- mean(x)\n\n# Print the result\ncat(\"The mean of x is:\", mean_x, \"\\n\")\n\n\n#' Compute the mean of random normal numbers\n#'\n#' This function generates `n` random numbers from a normal distribution\n#' with given `mean` and `sd`, then computes and prints their mean.\n#'\n#' @param n Integer, number of random values to generate.\n#' @param mean Numeric, the mean of the normal distribution.\n#' @param sd Numeric, the standard deviation of the normal distribution.\n#'\n#' @return The computed mean (numeric).\n#' @export\n#'\n#' @examples\n#' simulate_mean(100, mean = 10, sd = 2)\nsimulate_mean &lt;- function(n = 100, mean = 0, sd = 1) {\n  x &lt;- rnorm(n, mean = mean, sd = sd)\n  mean_x &lt;- mean(x)\n  cat(\"The mean of x is:\", mean_x, \"\\n\")\n  return(mean_x)\n}\n\n\n\nhttps://github.com/iramat/iramat-private\n\n\n\nhttps://github.com/iramat/iRamat"
+    "section": "Du code à la f, et de la f au {pkg}",
+    "text": "Du code à la f, et de la f au {pkg}\n\nAu KmFonctionsPackage (private)Package (public)\n\n\n# Generate 100 random numbers from a normal distribution\nx &lt;- rnorm(100, mean = 10, sd = 2)\n\n# Compute the mean\nmean_x &lt;- mean(x)\n\n# Print the result\ncat(\"The mean of x is:\", mean_x, \"\\n\")\n\n\n#' Compute the mean of random normal numbers\n#'\n#' This function generates `n` random numbers from a normal distribution\n#' with given `mean` and `sd`, then computes and prints their mean.\n#'\n#' @param n Integer, number of random values to generate.\n#' @param mean Numeric, the mean of the normal distribution.\n#' @param sd Numeric, the standard deviation of the normal distribution.\n#'\n#' @return The computed mean (numeric).\n#' @export\n#'\n#' @examples\n#' simulate_mean(100, mean = 10, sd = 2)\nsimulate_mean &lt;- function(n = 100, mean = 0, sd = 1) {\n  x &lt;- rnorm(n, mean = mean, sd = sd)\n  mean_x &lt;- mean(x)\n  cat(\"The mean of x is:\", mean_x, \"\\n\")\n  return(mean_x)\n}\n\n\n\nhttps://github.com/iramat/iramat-private\n\n\n\nhttps://github.com/iramat/iRamat"
   },
   {
     "objectID": "index.html#réutiliser",
@@ -68,13 +61,6 @@
     "title": "iRamat, un package R",
     "section": "Réutiliser",
     "text": "Réutiliser\n\nCiterPublier sur ZenodoPublier dans une revue\n\n\n\ncitation(\"iRamat\")\n\nTo cite package 'iRamat' in publications use:\n\n  Huet T (2025). _iRamat: Statistical analysis on Archaeomaterial_. R\n  package version 1.0.0, commit\n  2106b34129c6c9ab96d8e6302d807ab35f7ed13d,\n  &lt;https://github.com/iramat/iRamat&gt;.\n\nA BibTeX entry for LaTeX users is\n\n  @Manual{,\n    title = {iRamat: Statistical analysis on Archaeomaterial},\n    author = {Thomas Huet},\n    year = {2025},\n    note = {R package version 1.0.0, commit 2106b34129c6c9ab96d8e6302d807ab35f7ed13d},\n    url = {https://github.com/iramat/iRamat},\n  }\n\n\n\n\n\nhttps://docs.github.com/en/repositories/archiving-a-github-repository/referencing-and-citing-content\n\n\n\nhttps://joss.theoj.org/papers/10.21105/joss.03191"
-  },
-  {
-    "objectID": "index.html#discussion",
-    "href": "index.html#discussion",
-    "title": "iRamat, un package R",
-    "section": "Discussion",
-    "text": "Discussion\n\n\nd’après (c) www.furygoat.com"
   },
   {
     "objectID": "index.html#footnotes",
