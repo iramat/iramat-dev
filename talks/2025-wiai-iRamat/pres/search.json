@@ -7,6 +7,13 @@
     "text": "La série WIAI\n\n\nWebinaires dédiés aux technologies de l’information pour l’archéométrie:  GitHub , Python , R , API , IIIF , etc. \n\n\n\n\n\n\nNote\n\n\n📅 Le 2e Mardi matin de chaque mois sur ZOOM entre 10h00 et 10h50 (50 minutes), lien sur le GitHub de l’IRAMAT\n\n\n\n\n\n\n\n\n“A data structure is nothing without an algorithm, and an algorithm is nothing without a data structure.” – Jim Gray © Microsoft Research, CC BY-SA\n\n\n\nDécouvrir – ou approfondir – une solution logicielle open-source en revenant sur l’histoire de ce logiciel, sa logique interne, … Avec des citations rigolotes"
   },
   {
+    "objectID": "index.html#plan-de-la-présentation",
+    "href": "index.html#plan-de-la-présentation",
+    "title": "iRamat, un package R",
+    "section": "Plan de la présentation",
+    "text": "Plan de la présentation\n\n et les packages\nComposition d’un package  (  )\nDu code à la f, et de la f au {pkg} (  )\nCode as data\nDiscussion"
+  },
+  {
     "objectID": "index.html#section",
     "href": "index.html#section",
     "title": "iRamat, un package R",
@@ -32,7 +39,7 @@
     "href": "index.html#trouver-un-package",
     "title": "iRamat, un package R",
     "section": "Trouver un package ",
-    "text": "Trouver un package \n\n{pkgsearch}R-UniverseGitHubopen-archaeo\n\n\n\n# install.packages(\"pkgsearch\")\nlibrary(pkgsearch)\nps(\"raman\")\n\n- \"raman\" -------------------------------------- 13 packages in 0.009 seconds -\n  #     package              version by                 @ title                \n  1 100 serrsBayes           0.5.0   Matt Moores       4y Bayesian Modelling...\n  2  92 RamanMP              1.0     Veronica Nava     4y Analysis and Ident...\n  3  75 OpenSpecy            1.5.3   Win Cowger        5M Analyze, Process, ...\n  4  37 readJDX              0.6.4   Bryan A. Hanson   2y Import Data in the...\n  5  26 hyperSpec            0.100.2 Claudia Beleites  1y Work with Hyperspe...\n  6  23 ChemoSpec            6.3.1   Bryan A. Hanson  27d Exploratory Chemom...\n  7  22 PlackettLuce         0.4.4   Heather Turner    1M Plackett-Luce Mode...\n  8  15 sabarsi              0.1.0   Li Jun            6y Background Removal...\n  9  12 smdi                 0.3.1   Janick Weberpals  1y Perform Structural...\n 10  11 FishProxCompAnalyzer 0.1.0   Tanuj Misra       1y Proximate Composit...\n\n\n\n\nhttps://r-universe.dev/search?q=raman\n\n\n\nhttps://github.com/search/advanced \n\n⬇️\n\n \n\n\nopen-archaeo et le SIG-SSLA\n\nhttps://open-archaeo.info/tags/x-ray-fluorescence/"
+    "text": "Trouver un package \n\n{pkgsearch}R-UniverseGitHubopen-archaeo\n\n\n\n# install.packages(\"pkgsearch\")\nlibrary(pkgsearch)\nps(\"raman\")\n\n- \"raman\" -------------------------------------- 13 packages in 0.049 seconds -\n  #     package              version by                 @ title                \n  1 100 serrsBayes           0.5.0   Matt Moores       4y Bayesian Modelling...\n  2  92 RamanMP              1.0     Veronica Nava     4y Analysis and Ident...\n  3  75 OpenSpecy            1.5.3   Win Cowger        5M Analyze, Process, ...\n  4  36 readJDX              0.6.4   Bryan A. Hanson   2y Import Data in the...\n  5  26 hyperSpec            0.100.2 Claudia Beleites  1y Work with Hyperspe...\n  6  23 ChemoSpec            6.3.1   Bryan A. Hanson  28d Exploratory Chemom...\n  7  22 PlackettLuce         0.4.4   Heather Turner    1M Plackett-Luce Mode...\n  8  15 sabarsi              0.1.0   Li Jun            6y Background Removal...\n  9  12 smdi                 0.3.1   Janick Weberpals  1y Perform Structural...\n 10  11 FishProxCompAnalyzer 0.1.0   Tanuj Misra       1y Proximate Composit...\n\n\n\n\nhttps://r-universe.dev/search?q=raman\n\n\n\nhttps://github.com/search/advanced \n\n⬇️\n\n \n\n\nopen-archaeo et le SIG-SSLA\n\nhttps://open-archaeo.info/tags/x-ray-fluorescence/"
   },
   {
     "objectID": "index.html#description-fichiers-sources",

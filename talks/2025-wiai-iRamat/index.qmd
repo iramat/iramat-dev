@@ -74,13 +74,14 @@ Découvrir -- ou approfondir -- une solution logicielle open-source en revenant 
 
 
 
-## Plan de la présentation {data-visibility=hidden}
+## Plan de la présentation
 
 
 1. <img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/prog-r-1.png' style='height: 45px;vertical-align: middle;'> et les _packages_
-2. <img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/prog-r-1.png' style='height: 45px;vertical-align: middle;'>eproductible 
-3. iRamat <img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/prog-r-1.png' style='height: 45px;vertical-align: middle;'> <img src='https://raw.githubusercontent.com/iramat/iRamat/master/doc/img/logo.png' style='height: 60px;vertical-align: middle;'> 
-5. Discussion
+2. Composition d’un _package_ <img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/prog-r-1.png' style='height: 45px;vertical-align: middle;'> ( <img src='https://raw.githubusercontent.com/iramat/iRamat/master/doc/img/logo.png' style='height: 60px;vertical-align: middle;'> )
+3. Du `code` à la <math><mi>f</mi></math>, et de la <math><mi>f</mi></math> au `{pkg}` ( <img src='https://raw.githubusercontent.com/iramat/iRamat/master/doc/img/logo.png' style='height: 60px;vertical-align: middle;'> )
+5. _Code as data_
+6. Discussion
 
 
 # R et les _packages_
