@@ -1,0 +1,45 @@
+---
+title: "Le cadre IIIF"
+subtitle: "**WIAI** - **W**ebinaires de l'**I**nformatique pour l'**A**rchéométrie à l'**I**RAMAT"
+author:
+  - name: Thomas Huet
+    affiliation: 
+      - id: cnrs
+        name: <span style="font-size:17pt">IRAMAT-CNRS</span>
+title-slide-attributes:
+    data-background-image: "https://raw.githubusercontent.com/iramat/iramat-dev/master/img/ana-xrf-pymca-ex.png"
+    data-background-size: "90%"
+    data-background-opacity: "0.2"
+    data-notes: Lorem
+format:
+  revealjs: 
+    css: https://zoometh.github.io/thomashuet/css/quarto.css
+    controls: true
+    auto-stretch: false
+    code-fold: false
+    code-summary: "<small>Code</small>"
+    slide-number: true
+    chalkboard:
+      theme: "whiteboard"
+      color: ['rgba(255, 0, 0, 0.3)'] # red
+    scrollable: true
+    preview-links: auto
+    reference-location: document
+    footnotes-hover: true
+    # self-contained: true
+    # embed-resources: true
+    # logo: https://raw.githubusercontent.com/zoometh/neonet/master/doc/img/neonet.png
+    footer: "Thomas Huet - <img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/inst-cnrs-iramat.png' style='height: 17px;vertical-align: middle;'> - 7 Octobre, 2025, CEB, Orléans"
+    margin: 0
+    width: 1200
+---
+
+
+## IIIF
+
+```{=html}
+<iframe width="1200" height="500" src="https://iramat-apps.cnrs.fr/page/puddled.html" title="Puddled"></iframe>
+```
+
+
+
