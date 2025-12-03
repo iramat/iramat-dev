@@ -84,7 +84,7 @@ Découvrir -- ou approfondir -- une solution logicielle open-source en revenant 
 6. Discussion
 
 
-# R et les _packages_
+# La BDD CHIPS
 
 
 
@@ -94,6 +94,8 @@ Découvrir -- ou approfondir -- une solution logicielle open-source en revenant 
 :::: {.columns}
 
 ::: {.column width="70%"}
+CHIPS, ...
+
 <img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/prog-r-1.png' style='height: 50px;vertical-align: middle;'> est un langage de script orienté statistiques. C'est le langage préférés des archéologues[^1] qui utilisent des _packages_ génériques comme `ggplot` <img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/r-pkg-ggplot.png' style='width: 50px;vertical-align: middle;'> pour les graphiques (développé par Hadley Wickham), `terra` <img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/r-pkg-terra.png' style='width: 50px;vertical-align: middle;'> et `sf` <img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/r-pkg-sf.png' style='width: 50px;vertical-align: middle;'> pour l'analyse spatiale, etc., ou d'autres plus spécialisés: `nexus` <img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/r-pkg-nexus.png' style='width: 50px;vertical-align: middle;'>, `tidyspec` <img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/r-pkg-tidyspec.png' style='width: 50px;vertical-align: middle;'>, etc.
 
 
@@ -196,10 +198,57 @@ ps("raman")
 :::
 
 
-# Composition d’un _package_ R
+# Intéropérabilité et Réusabilité
 
 
-## Description (fichiers sources)
+## Repository GitHub
+
+https://github.com/iramat/chips
+
+
+## Dashboard
+
+::: {.panel-tabset}
+
+### Objectif
+
+Offir une vue synthétique du contenu de la BDD CHIPS; faciliter l'identification, l'accès, l'intéropérabilité et la réutilsation des données <img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/lod-data-fair.png' style='height: 60px;vertical-align: middle;'>. Indexation spatiale et par jeux de données (_datasets_)
+
+### Carte des _datasets_
+
+<img src='https://raw.githubusercontent.com/iramat/iramat-dev/master/img/bdd-chips-dash-mapgen.png' style='width: 1000px;vertical-align: middle;'>
+
+### Carte des échantillons
+
+<img src='https://raw.githubusercontent.com/iramat/iramat-dev/master/img/bdd-chips-dash-map-dataset.png' style='width: 1000px;vertical-align: middle;'>
+
+### Valeurs des échantillons
+
+<img src='https://raw.githubusercontent.com/iramat/iramat-dev/master/img/bdd-chips-dash-chart-line.png' style='width: 1000px;vertical-align: middle;'>
+
+### API des échantillons 
+
+<img src='https://raw.githubusercontent.com/iramat/iramat-dev/master/img/bdd-chips-dash-api.png' style='width: 1000px;vertical-align: middle;'>
+
+### _Live demo_
+
+```{=html}
+<iframe width="1200" height="700" src="https://iramat-apps.cnrs.fr/dash/" title="Quarto Documentation"></iframe>
+```
+
+:::
+
+## Analyses avec R
+
+
+```{. code-line-numbers="1|3|4|6|9|12-22|28|29"}
+# install.packages("devtools")
+# devtools::install_github("iramat/iRamat")
+library(iRamat)
+
+df <- db_api_connect()
+chrono(d = df$dataset_adisser17)
+```
 
 
 ::: {.panel-tabset}
