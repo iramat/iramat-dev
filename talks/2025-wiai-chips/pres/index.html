@@ -251,7 +251,7 @@ Alexandre Disser
 </div>
 </div><div class="column" style="width:35%;">
 <center>
-<p><img src="https://raw.githubusercontent.com/zoometh/thomashuet/master/img/app-prg-sql-1.png" style="width: 400px;vertical-align: middle;"></p>
+<p><img src="https://raw.githubusercontent.com/zoometh/thomashuet/master/img/app-prg-sql-1.png" style="width: 350px;vertical-align: middle;"></p>
 </center>
 <div class="captiontext">
 <a href="https://www.reddit.com/r/ProgrammerHumor/" class="uri">https://www.reddit.com/r/ProgrammerHumor/</a>
@@ -274,10 +274,9 @@ Alexandre Disser
 <section id="plan-de-la-présentation" class="slide level2 scrollable">
 <h2>Plan de la présentation</h2>
 <ol type="1">
-<li><img src="https://raw.githubusercontent.com/zoometh/thomashuet/master/img/prog-r-1.png" style="height: 45px;vertical-align: middle;"> et les <em>packages</em></li>
-<li>Composition d’un <em>package</em> <img src="https://raw.githubusercontent.com/zoometh/thomashuet/master/img/prog-r-1.png" style="height: 45px;vertical-align: middle;"> ( <img src="https://raw.githubusercontent.com/iramat/iRamat/master/doc/img/logo.png" style="height: 60px;vertical-align: middle;"> )</li>
-<li>Du <code>code</code> à la <math><mi>f</mi></math>, et de la <math><mi>f</mi></math> au <code>{pkg}</code> ( <img src="https://raw.githubusercontent.com/iramat/iRamat/master/doc/img/logo.png" style="height: 60px;vertical-align: middle;"> )</li>
-<li><em>Code as data</em></li>
+<li>La BDD CHIPS</li>
+<li>Intéropérabilité et Réusabilité</li>
+<li>Perspectives</li>
 <li>Discussion</li>
 </ol>
 </section></section>
@@ -296,12 +295,14 @@ CHIPS vise à (i) centraliser, normaliser, rendre interopérables des données, 
 <h2>Présentation</h2>
 <div class="columns">
 <div class="column" style="width:70%;">
-<p>CHIPS est une base de données <img src="https://raw.githubusercontent.com/zoometh/thomashuet/master/img/app-bd-postgres-2.png" style="height: 40px;vertical-align: middle;"> destinée aux archéométallurgistes du fer, offrant des références chimiques normalisées. Les données sont rendues interopérable grâce à des référentiels standardisés (e.g.&nbsp;<img src="https://raw.githubusercontent.com/zoometh/thomashuet/master/img/lod-gazetteer-periodo.png" style="height: 40px;vertical-align: middle;">,<img src="https://raw.githubusercontent.com/zoometh/thomashuet/master/img/lod-gazetteer-pactols.png" style="height: 50px;vertical-align: middle;">). &nbsp;<br>
+<p>CHIPS est une base de données <img src="https://raw.githubusercontent.com/zoometh/thomashuet/master/img/app-bd-postgres-2.png" style="height: 40px;vertical-align: middle;"> destinée aux archéométallurgistes du fer, offrant des milliers d’analyses chimiques révisées et normalisées. Les données sont rendues interopérable grâce à des référentiels standardisés (e.g.&nbsp;<img src="https://raw.githubusercontent.com/zoometh/thomashuet/master/img/lod-gazetteer-periodo.png" style="height: 40px;vertical-align: middle;">,<img src="https://raw.githubusercontent.com/zoometh/thomashuet/master/img/lod-gazetteer-pactols.png" style="height: 50px;vertical-align: middle;">). &nbsp;<br>
 Elle a été principalement développée par Alexandre Disser<a href="#/footnotes" class="footnote-ref" id="fnref1" role="doc-noteref" data-footnote-href="#/fn1" onclick=""><sup>1</sup></a> et Sylvain Bauvais<a href="#/footnotes" class="footnote-ref" id="fnref2" role="doc-noteref" data-footnote-href="#/fn2" onclick=""><sup>2</sup></a>.</p>
 </div><div class="column" style="width:30%;">
-<img data-src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Hadley-wickham2016-02-04.jpg" style="vertical-align: middle;" width="300">
+<center>
+<p><img src="https://raw.githubusercontent.com/iramat/iramat-dev/master/img/fer.png" style="width: 750px;vertical-align: middle;"></p>
+</center>
 <div class="captiontext">
-<em>“Anything that can be automated, should be automated”</em> – Hadley Wickham, 2023 <img src="https://raw.githubusercontent.com/zoometh/thomashuet/master/img/lod-licences-publicdomain-1.png" style="height: 12px;vertical-align: middle;"> Wikipedia
+loupe de fer
 </div>
 </div></div>
 <aside></aside></section>
@@ -315,7 +316,7 @@ Elle a été principalement développée par Alexandre Disser<a href="#/footnote
 <div class="column" style="width:25%;">
 <p>Modèle conceptuel de données simplifié</p>
 </div><div class="column" style="width:75%;">
-<p><img src="https://raw.githubusercontent.com/iramat/chips/master/img/db_erd.png" style="width: 800px;vertical-align: middle;"></p>
+<p><img src="https://raw.githubusercontent.com/iramat/chips/master/img/db_erd.png" style="width: 750px;vertical-align: middle;"></p>
 </div></div>
 </div>
 <div id="tabset-1-2">
@@ -344,7 +345,7 @@ Elle a été principalement développée par Alexandre Disser<a href="#/footnote
 <p>Technologies matures et open-source :</p>
 <ul>
 <li><img src="https://raw.githubusercontent.com/zoometh/thomashuet/master/img/app-os-linux-ubuntu-1.png" style="height: 40px;vertical-align: middle;"> : l’OS<a href="#/footnotes" class="footnote-ref" id="fnref4" role="doc-noteref" data-footnote-href="#/fn4" onclick=""><sup>4</sup></a> de la plupart des serveurs web.</li>
-<li><img src="https://raw.githubusercontent.com/zoometh/thomashuet/master/img/app-bd-postgres-2.png" style="height: 40px;vertical-align: middle;"> : parmi les SGBD<a href="#/footnotes" class="footnote-ref" id="fnref5" role="doc-noteref" data-footnote-href="#/fn5" onclick=""><sup>5</sup></a> open-source, c’est la plus proche de Oracle.</li>
+<li><img src="https://raw.githubusercontent.com/zoometh/thomashuet/master/img/app-bd-postgres-2.png" style="height: 40px;vertical-align: middle;"> : SGBD<a href="#/footnotes" class="footnote-ref" id="fnref5" role="doc-noteref" data-footnote-href="#/fn5" onclick=""><sup>5</sup></a> open-source proche d’Oracle.</li>
 <li><img src="https://raw.githubusercontent.com/zoometh/thomashuet/master/img/app-prg-python.png" style="height: 40px;vertical-align: middle;"> : le langage de programmation le plus utilisé au monde.</li>
 <li><img src="https://raw.githubusercontent.com/zoometh/thomashuet/master/img/web-api-2.png" style="height: 40px;vertical-align: middle;"> : protocole standard d’interface de programmation d’applications sur le web.</li>
 </ul>
@@ -376,8 +377,7 @@ Elle a été principalement développée par Alexandre Disser<a href="#/footnote
 </center>
 </div><div class="column" style="width:30%;">
 <center>
-<p><img src="https://raw.githubusercontent.com/zoometh/thomashuet/master/img/app-prog-bash.png" style="height: 60px;vertical-align: middle;"></p>
-<p><code>copy data only</code><br> 🠮 🠮 🠮</p>
+<p>🠮 🠮 🠮<br> <code>copy data only</code><br> 🠮 🠮 🠮</p>
 </center>
 </div><div class="column" style="width:35%;">
 <center>
@@ -408,7 +408,7 @@ Elle a été principalement développée par Alexandre Disser<a href="#/footnote
 <ul id="tabset-2" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-2-1">Objectif</a></li><li><a href="#tabset-2-2"><em>Datasets</em></a></li><li><a href="#tabset-2-3">Echantillons</a></li></ul>
 <div class="tab-content">
 <div id="tabset-2-1">
-<p>Offir une vue synthétique du contenu de la BDD CHIPS; faciliter l’identification, l’accès, l’intéropérabilité et la réutilisation des données <img src="https://raw.githubusercontent.com/zoometh/thomashuet/master/img/lod-data-fair.png" style="height: 50px;vertical-align: middle;">.<br>
+<p>Offir une vue synthétique du contenu de la BDD CHIPS ; faciliter l’identification, l’accès, l’intéropérabilité et la réutilisation des données <img src="https://raw.githubusercontent.com/zoometh/thomashuet/master/img/lod-data-fair.png" style="height: 50px;vertical-align: middle;">.<br>
 <br>
 Indexation spatiale et par jeux de données (<em>datasets</em>)</p>
 </div>
@@ -432,7 +432,7 @@ Indexation spatiale et par jeux de données (<em>datasets</em>)</p>
 <div class="tab-content">
 <div id="tabset-3-1">
 <center>
-<p><img src="https://raw.githubusercontent.com/iramat/iramat-dev/master/img/bdd-chips-dash-api.png" style="width: 850px;vertical-align: middle;"></p>
+<p><img src="https://raw.githubusercontent.com/iramat/iramat-dev/master/img/bdd-chips-dash-api.png" style="width: 900px;vertical-align: middle;"></p>
 </center>
 </div>
 <div id="tabset-3-2">
@@ -448,11 +448,9 @@ Indexation spatiale et par jeux de données (<em>datasets</em>)</p>
 <div class="tab-content">
 <div id="tabset-4-1">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a></a><span class="co"># install.packages("devtools")</span></span>
-<span id="cb1-2"><a></a><span class="co"># devtools::install_github("iramat/iRamat")</span></span>
-<span id="cb1-3"><a></a><span class="fu">library</span>(iRamat)</span>
-<span id="cb1-4"><a></a></span>
-<span id="cb1-5"><a></a>df <span class="ot">&lt;-</span> <span class="fu">db_api_connect</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a></a><span class="fu">library</span>(iRamat)</span>
+<span id="cb1-2"><a></a></span>
+<span id="cb1-3"><a></a>df <span class="ot">&lt;-</span> <span class="fu">db_api_connect</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] "Will store the results in a new variable"</code></pre>
 </div>
@@ -462,16 +460,13 @@ Indexation spatiale et par jeux de données (<em>datasets</em>)</p>
 </div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a></a><span class="fu">library</span>(dplyr)</span>
-<span id="cb5-2"><a></a><span class="fu">library</span>(kableExtra)</span>
-<span id="cb5-3"><a></a></span>
-<span id="cb5-4"><a></a>df<span class="sc">$</span>dataset_adisser17 <span class="sc">%&gt;%</span></span>
-<span id="cb5-5"><a></a>  <span class="fu">select</span>(<span class="sc">-</span>reference) <span class="sc">%&gt;%</span></span>
-<span id="cb5-6"><a></a>  <span class="fu">head</span>(<span class="dv">10</span>) <span class="sc">%&gt;%</span></span>
-<span id="cb5-7"><a></a>  <span class="fu">kable</span>(<span class="st">"html"</span>) <span class="sc">%&gt;%</span></span>
-<span id="cb5-8"><a></a>  <span class="fu">kable_styling</span>(<span class="at">full_width =</span> <span class="cn">FALSE</span>, <span class="at">position =</span> <span class="st">"center"</span>, <span class="at">font_size =</span> <span class="dv">18</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a></a>df<span class="sc">$</span>dataset_adisser17 <span class="sc">%&gt;%</span></span>
+<span id="cb5-2"><a></a>  <span class="fu">select</span>(<span class="sc">-</span>reference) <span class="sc">%&gt;%</span></span>
+<span id="cb5-3"><a></a>  <span class="fu">head</span>(<span class="dv">10</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb5-4"><a></a>  <span class="fu">kable</span>(<span class="st">"html"</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb5-5"><a></a>  <span class="fu">kable_styling</span>(<span class="at">font_size =</span> <span class="dv">18</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<table class="table caption-top" data-quarto-postprocess="true" style="font-size: 18px; width: auto !important; margin-left: auto; margin-right: auto;">
+<table class="table caption-top" data-quarto-postprocess="true" style="font-size: 18px; margin-left: auto; margin-right: auto;">
 <thead>
 <tr class="header">
 <th style="text-align: left;" data-quarto-table-cell-role="th">site_name</th>
@@ -1409,7 +1404,7 @@ Indexation spatiale et par jeux de données (<em>datasets</em>)</p>
 </div>
 <div id="tabset-4-2">
 <div class="sourceCode" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a></a><span class="fu">chrono</span>(<span class="at">d =</span> df<span class="sc">$</span>dataset_adisser17)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p><img src="https://raw.githubusercontent.com/iramat/iRamat/master/img/doc/chrono_sites_seriated.png" style="width: 1000px;vertical-align: middle;"></p>
+<p><img src="https://raw.githubusercontent.com/iramat/iRamat/master/doc/chrono_sites_seriated.png" style="width: 800px;vertical-align: middle;"></p>
 </div>
 <div id="tabset-4-3">
 <div class="sourceCode" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a></a>df <span class="ot">&lt;-</span> <span class="fu">db_api_connect</span>(<span class="at">all_datasets =</span> <span class="cn">TRUE</span>)</span>
@@ -1436,18 +1431,22 @@ Indexation spatiale et par jeux de données (<em>datasets</em>)</p>
 <span id="cb7-22"><a></a><span class="co"># Requesting: http://157.136.252.188:3000/dataset_kmittelstaedt22</span></span>
 <span id="cb7-23"><a></a><span class="co"># Requesting: http://157.136.252.188:3000/dataset_mbenvenuti13</span></span>
 <span id="cb7-24"><a></a><span class="co"># Collected and merged 21 datasets. Total rows: 3225</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><br>
+<br>
+<br>
+</p>
 </div>
 </div>
 </div>
 </section>
 <section id="perspectives" class="slide level2">
 <h2>Perspectives</h2>
-<p>La base CHIPS est fonctionnelle, rassemble des milliers d’analyses chimiques révisées et normalisées. Les prochaines étapes de son développement informatique concernent:</p>
+<p>Prochaines étapes du développement de la BDD CHIPS :</p>
 <ul>
-<li>dashboard: amélioration de l’interface, développement de nouveaux outils de visualisation, de sélection et d’export.</li>
-<li>développement des fonctions R (package iRamat)</li>
-<li>création d’une interface graphique utilisateur (GUI) pour la saisie de nouvelles données (<b><span style="color:black">C <span style="color:grey">R</span> U D</span></b>)</li>
-<li>un data pipeline entre l’API des <em>datasets</em> et Zenodo pour un dépôt standardisé et semi-automatique</li>
+<li>dashboard: amélioration de l’interface, nouveaux outils de visualisation, de sélection et d’export ;</li>
+<li>un <em>data pipeline</em> entre l’API des <em>datasets</em> et <img src="https://raw.githubusercontent.com/zoometh/thomashuet/master/img/app-zenodo.png" style="height: 40px;vertical-align: middle;"> pour un dépôt standardisé et semi-automatique ;</li>
+<li>nouvelles fonctions <img src="https://raw.githubusercontent.com/zoometh/thomashuet/master/img/prog-r-1.png" style="height: 45px;vertical-align: middle;"> ( <em>package</em> <img src="https://raw.githubusercontent.com/iramat/iRamat/master/doc/img/logo.png" style="height: 60px;vertical-align: middle;"> ) ;</li>
+<li>interface graphique utilisateur (GUI) pour la saisie des données.</li>
 </ul>
 </section></section>
 <section id="discussion" class="title-slide slide level1 center" data-background-image="https://raw.githubusercontent.com/zoometh/thomashuet/master/img/r-pkg--repo-public-github.png" data-background-opacity="0.3" data-background-size="800px" data-background-repeat="repeat">

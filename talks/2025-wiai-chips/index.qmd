@@ -38,6 +38,11 @@ format:
     width: 1200
 ---
 
+```{r, echo=FALSE}
+library(dplyr)
+library(kableExtra)
+```
+
 # Introduction générale
 
 
@@ -63,7 +68,7 @@ GitHub <img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img
 
 <center>
 
-<img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/app-prg-sql-1.png' style='width: 400px;vertical-align: middle;'> 
+<img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/app-prg-sql-1.png' style='width: 350px;vertical-align: middle;'> 
 
 </center>
 <div class="captiontext"> <https://www.reddit.com/r/ProgrammerHumor/> </div>
@@ -82,11 +87,10 @@ Découvrir -- ou approfondir -- une solution logicielle open-source en revenant 
 ## Plan de la présentation
 
 
-1. <img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/prog-r-1.png' style='height: 45px;vertical-align: middle;'> et les _packages_
-2. Composition d’un _package_ <img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/prog-r-1.png' style='height: 45px;vertical-align: middle;'> ( <img src='https://raw.githubusercontent.com/iramat/iRamat/master/doc/img/logo.png' style='height: 60px;vertical-align: middle;'> )
-3. Du `code` à la <math><mi>f</mi></math>, et de la <math><mi>f</mi></math> au `{pkg}` ( <img src='https://raw.githubusercontent.com/iramat/iRamat/master/doc/img/logo.png' style='height: 60px;vertical-align: middle;'> )
-5. _Code as data_
-6. Discussion
+1. La BDD CHIPS
+2. Intéropérabilité et Réusabilité
+3. Perspectives
+4. Discussion
 
 
 # La BDD CHIPS
@@ -105,7 +109,7 @@ CHIPS vise à (i) centraliser, normaliser, rendre interopérables des données, 
 
 ::: {.column width="70%"}
 
-CHIPS est une base de données <img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/app-bd-postgres-2.png' style='height: 40px;vertical-align: middle;'>  destinée aux archéométallurgistes du fer, offrant des références chimiques normalisées. Les données sont rendues interopérable grâce à des référentiels standardisés (e.g. <img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/lod-gazetteer-periodo.png' style='height: 40px;vertical-align: middle;'>,<img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/lod-gazetteer-pactols.png' style='height: 50px;vertical-align: middle;'>).  \ \
+CHIPS est une base de données <img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/app-bd-postgres-2.png' style='height: 40px;vertical-align: middle;'>  destinée aux archéométallurgistes du fer, offrant des milliers d’analyses chimiques révisées et normalisées. Les données sont rendues interopérable grâce à des référentiels standardisés (e.g. <img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/lod-gazetteer-periodo.png' style='height: 40px;vertical-align: middle;'>,<img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/lod-gazetteer-pactols.png' style='height: 50px;vertical-align: middle;'>).  \ \
 Elle a été principalement développée par Alexandre Disser[^1] et Sylvain Bauvais[^1].
 
 
@@ -141,7 +145,7 @@ Modèle conceptuel de données simplifié
 
 ::: {.column width="75%"}
 
-<img src='https://raw.githubusercontent.com/iramat/chips/master/img/db_erd.png' style='width: 800px;vertical-align: middle;'> 
+<img src='https://raw.githubusercontent.com/iramat/chips/master/img/db_erd.png' style='width: 750px;vertical-align: middle;'> 
 
 :::
 
@@ -168,7 +172,7 @@ pour faciliter l'intéropérabilité de ses données
 Technologies matures et open-source :
 
 * <img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/app-os-linux-ubuntu-1.png' style='height: 40px;vertical-align: middle;'> : l'OS[^4] de la plupart des serveurs web. 
-* <img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/app-bd-postgres-2.png' style='height: 40px;vertical-align: middle;'> : parmi les SGBD[^3] open-source, c’est la plus proche de Oracle.
+* <img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/app-bd-postgres-2.png' style='height: 40px;vertical-align: middle;'> : SGBD[^3] open-source proche d'Oracle.
 * <img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/app-prg-python.png' style='height: 40px;vertical-align: middle;'> : le langage de programmation le plus utilisé au monde.
 * <img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/web-api-2.png' style='height: 40px;vertical-align: middle;'> : protocole standard d'interface de programmation d'applications sur le web.
 
@@ -206,8 +210,8 @@ CHIPS
 
 <center>
 
-<img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/app-prog-bash.png' style='height: 60px;vertical-align: middle;'>
 
+🠮 🠮 🠮<br>
 `copy data only`<br>
 🠮 🠮 🠮
 
@@ -253,7 +257,7 @@ CHIPS dev
 
 ### Objectif
 
-Offir une vue synthétique du contenu de la BDD CHIPS; faciliter l'identification, l'accès, l'intéropérabilité et la réutilisation des données <img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/lod-data-fair.png' style='height: 50px;vertical-align: middle;'>. 
+Offir une vue synthétique du contenu de la BDD CHIPS ; faciliter l'identification, l'accès, l'intéropérabilité et la réutilisation des données <img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/lod-data-fair.png' style='height: 50px;vertical-align: middle;'>. 
 \
 \
 Indexation spatiale et par jeux de données (_datasets_)
@@ -285,7 +289,7 @@ Indexation spatiale et par jeux de données (_datasets_)
 
 <center>
 
-<img src='https://raw.githubusercontent.com/iramat/iramat-dev/master/img/bdd-chips-dash-api.png' style='width: 850px;vertical-align: middle;'>
+<img src='https://raw.githubusercontent.com/iramat/iramat-dev/master/img/bdd-chips-dash-api.png' style='width: 900px;vertical-align: middle;'>
 
 </center>
 
@@ -304,22 +308,17 @@ Indexation spatiale et par jeux de données (_datasets_)
 ### Un _dataset_
 
 ```{r, echo = TRUE}
-# install.packages("devtools")
-# devtools::install_github("iramat/iRamat")
 library(iRamat)
 
 df <- db_api_connect()
 names(df)
 ```
 ```{r, echo = TRUE}
-library(dplyr)
-library(kableExtra)
-
 df$dataset_adisser17 %>%
   select(-reference) %>%
   head(10) %>%
   kable("html") %>%
-  kable_styling(full_width = FALSE, position = "center", font_size = 18)
+  kable_styling(font_size = 18)
 ```
 \
 \
@@ -330,7 +329,7 @@ df$dataset_adisser17 %>%
 chrono(d = df$dataset_adisser17)
 ```
 
-<img src='https://raw.githubusercontent.com/iramat/iRamat/master/img/doc/chrono_sites_seriated.png' style='width: 1000px;vertical-align: middle;'>
+<img src='https://raw.githubusercontent.com/iramat/iRamat/master/doc/chrono_sites_seriated.png' style='width: 800px;vertical-align: middle;'>
 
 ### Tous les _datasets_
 
@@ -361,6 +360,9 @@ df <- db_api_connect(all_datasets = TRUE)
 # Collected and merged 21 datasets. Total rows: 3225
 ```
 
+\
+\
+\
 
 
 :::
@@ -368,12 +370,13 @@ df <- db_api_connect(all_datasets = TRUE)
 
 ## Perspectives
 
-La base CHIPS est fonctionnelle, rassemble des milliers d’analyses chimiques révisées et normalisées. Les prochaines étapes de son développement informatique concernent:
+Prochaines étapes du développement de la BDD CHIPS :
 
-* dashboard: amélioration de l'interface, développement de nouveaux outils de visualisation, de sélection et d'export.
-* développement des fonctions R (package iRamat)
-* création d'une interface graphique utilisateur (GUI) pour la saisie de nouvelles données (<b><span style="color:black">C <span style="color:grey">R</span> U D</span></b>)
-* un data pipeline entre l'API des _datasets_ et Zenodo pour un dépôt standardisé et semi-automatique
+* dashboard: amélioration de l'interface, nouveaux outils de visualisation, de sélection et d'export ;
+* un _data pipeline_ entre l'API des _datasets_ et <img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/app-zenodo.png' style='height: 40px;vertical-align: middle;'> pour un dépôt standardisé et semi-automatique ;
+* nouvelles fonctions <img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/prog-r-1.png' style='height: 45px;vertical-align: middle;'> ( _package_ <img src='https://raw.githubusercontent.com/iramat/iRamat/master/doc/img/logo.png' style='height: 60px;vertical-align: middle;'> ) ;
+* interface graphique utilisateur (GUI) pour la saisie des données.
+
 
 # Discussion {background-image="https://raw.githubusercontent.com/zoometh/thomashuet/master/img/r-pkg--repo-public-github.png" background-opacity=0.3 background-size="800px" background-repeat="repeat"}
 
