@@ -11,7 +11,8 @@
   <meta name="generator" content="quarto-1.7.23">
 
   <meta name="author" content="Thomas Huet">
-  <title>WIAI – iRamat, un package R</title>
+  <meta name="author" content="Alexandre Disser">
+  <title>WIAI – CHIPS, BDD CHImie en PaléoSidérurgie</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -192,19 +193,31 @@
       margin-right: 0; 
     }
   </style>
+  <script src="site_libs/kePrint-0.0.1/kePrint.js"></script>
+
+  <link href="site_libs/lightable-0.0.1/lightable.css" rel="stylesheet">
+
 </head>
 <body class="quarto-light">
   <div class="reveal">
     <div class="slides">
 
 <section id="title-slide" data-background-image="https://raw.githubusercontent.com/iramat/iramat-dev/master/img/ana-xrf-pymca-ex.png" data-background-opacity="0.2" data-background-size="90%" data-notes="Lorem" class="quarto-title-block center">
-  <h1 class="title">iRamat, un package R</h1>
+  <h1 class="title">CHIPS, BDD CHImie en PaléoSidérurgie</h1>
   <p class="subtitle"><strong>WIAI</strong> - <strong>W</strong>ebinaires de l’<strong>I</strong>nformatique pour l’<strong>A</strong>rchéométrie à l’<strong>I</strong>RAMAT</p>
 
 <div class="quarto-title-authors">
 <div class="quarto-title-author">
 <div class="quarto-title-author-name">
 Thomas Huet 
+</div>
+        <p class="quarto-title-affiliation">
+            <span style="font-size:17pt">IRAMAT-CNRS</span>
+          </p>
+    </div>
+<div class="quarto-title-author">
+<div class="quarto-title-author-name">
+Alexandre Disser 
 </div>
         <p class="quarto-title-affiliation">
             <span style="font-size:17pt">IRAMAT-CNRS</span>
@@ -232,16 +245,16 @@ Thomas Huet
 <p><strong>Note</strong></p>
 </div>
 <div class="callout-content">
-<p>📅 Le 2<sup>e</sup> Mardi matin de chaque mois sur ZOOM entre 10h00 et 10h50 (50 minutes), lien sur le <a href="https://github.com/iramat#-wiai">GitHub de l’IRAMAT</a></p>
+<p>📅 Bimestriel. Le 2<sup>e</sup> Mardi matin tous les 2 mois sur ZOOM entre 10h00 et 10h50 (50 minutes), lien sur le <a href="https://github.com/iramat#-wiai">GitHub</a> et le <a href="https://iramat.github.io/iramat-dev/admin/calendrier.html">calendrier</a> de l’IRAMAT</p>
 </div>
 </div>
 </div>
 </div><div class="column" style="width:35%;">
 <center>
-<img data-src="https://upload.wikimedia.org/wikipedia/commons/7/76/Jim_Gray_Computing_in_the_21st_Century_2006.jpg" style="vertical-align: middle;" width="300">
+<p><img src="https://raw.githubusercontent.com/zoometh/thomashuet/master/img/app-prg-sql-1.png" style="width: 400px;vertical-align: middle;"></p>
 </center>
 <div class="captiontext">
-<em>“A data structure is nothing without an algorithm, and an algorithm is nothing without a data structure.”</em> – Jim Gray © Microsoft Research, CC BY-SA
+<a href="https://www.reddit.com/r/ProgrammerHumor/" class="uri">https://www.reddit.com/r/ProgrammerHumor/</a>
 </div>
 </div></div>
 <aside class="notes">
@@ -269,15 +282,22 @@ Thomas Huet
 </ol>
 </section></section>
 <section>
-<section id="r-et-les-packages" class="title-slide slide level1 center">
-<h1>R et les <em>packages</em></h1>
+<section id="la-bdd-chips" class="title-slide slide level1 center">
+<h1>La BDD CHIPS</h1>
 
 </section>
-<section id="section" class="slide level2">
-<h2></h2>
+<section id="motivations" class="slide level2">
+<h2>Motivations</h2>
+<p>Malgré l’importance des données de l’archéométallurgie du fer pour reconstruire les techniques anciennes, comprendre les contextes et modéliser les réseaux d’échanges, l’absence d’un référentiel chimique partagé a conduit à la dispersion, l’hétérogénéité et la variabilité de qualité des analyses.<br>
+<br>
+CHIPS vise à (i) centraliser, normaliser, rendre interopérables des données, et (ii) identifier, développer et documenter les référentiels, afin de faciliter l’exploitation collective des données de l’archéométallurgie du fer.</p>
+</section>
+<section id="présentation" class="slide level2">
+<h2>Présentation</h2>
 <div class="columns">
 <div class="column" style="width:70%;">
-<p><img src="https://raw.githubusercontent.com/zoometh/thomashuet/master/img/prog-r-1.png" style="height: 50px;vertical-align: middle;"> est un langage de script orienté statistiques. C’est le langage préférés des archéologues<a href="#/footnotes" class="footnote-ref" id="fnref1" role="doc-noteref" data-footnote-href="#/fn1" onclick=""><sup>1</sup></a> qui utilisent des <em>packages</em> génériques comme <code>ggplot</code> <img src="https://raw.githubusercontent.com/zoometh/thomashuet/master/img/r-pkg-ggplot.png" style="width: 50px;vertical-align: middle;"> pour les graphiques (développé par Hadley Wickham), <code>terra</code> <img src="https://raw.githubusercontent.com/zoometh/thomashuet/master/img/r-pkg-terra.png" style="width: 50px;vertical-align: middle;"> et <code>sf</code> <img src="https://raw.githubusercontent.com/zoometh/thomashuet/master/img/r-pkg-sf.png" style="width: 50px;vertical-align: middle;"> pour l’analyse spatiale, etc., ou d’autres plus spécialisés: <code>nexus</code> <img src="https://raw.githubusercontent.com/zoometh/thomashuet/master/img/r-pkg-nexus.png" style="width: 50px;vertical-align: middle;">, <code>tidyspec</code> <img src="https://raw.githubusercontent.com/zoometh/thomashuet/master/img/r-pkg-tidyspec.png" style="width: 50px;vertical-align: middle;">, etc.</p>
+<p>CHIPS est une base de données <img src="https://raw.githubusercontent.com/zoometh/thomashuet/master/img/app-bd-postgres-2.png" style="height: 40px;vertical-align: middle;"> destinée aux archéométallurgistes du fer, offrant des références chimiques normalisées. Les données sont rendues interopérable grâce à des référentiels standardisés (e.g.&nbsp;<img src="https://raw.githubusercontent.com/zoometh/thomashuet/master/img/lod-gazetteer-periodo.png" style="height: 40px;vertical-align: middle;">,<img src="https://raw.githubusercontent.com/zoometh/thomashuet/master/img/lod-gazetteer-pactols.png" style="height: 50px;vertical-align: middle;">). &nbsp;<br>
+Elle a été principalement développée par Alexandre Disser<a href="#/footnotes" class="footnote-ref" id="fnref1" role="doc-noteref" data-footnote-href="#/fn1" onclick=""><sup>1</sup></a> et Sylvain Bauvais<a href="#/footnotes" class="footnote-ref" id="fnref2" role="doc-noteref" data-footnote-href="#/fn2" onclick=""><sup>2</sup></a>.</p>
 </div><div class="column" style="width:30%;">
 <img data-src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Hadley-wickham2016-02-04.jpg" style="vertical-align: middle;" width="300">
 <div class="captiontext">
@@ -285,341 +305,1157 @@ Thomas Huet
 </div>
 </div></div>
 <aside></aside></section>
-<section id="les-packages-r" class="slide level2">
-<h2>Les <em>packages</em> R</h2>
-<div class="columns">
-<div class="column" style="width:50%;">
-<ul>
-<li><p>rassemblent du code, de la documentation et parfois des données.<br></p></li>
-<li><p>conçus pour être facilement partagé, installé et réutilisé et ainsi garantir la reproductibilité des analyses.</p></li>
-<li><p><img src="https://raw.githubusercontent.com/zoometh/thomashuet/master/img/lod-data-fair.png" style="width: 350px;vertical-align: middle;"></p></li>
-</ul>
-</div><div class="column" style="width:50%;">
-<div style="width:1000px; height:450px; overflow:hidden;">
-  <iframe src="https://cran.r-project.org/" style="transform: scale(0.9); transform-origin: 0 0; width:750px; height:500px; border:none;">
-  </iframe>
-</div>
-<div class="captiontext">
-Le <em>Comprehensive R Archive Network</em> (CRAN) <a href="https://cran.r-project.org/" class="uri">https://cran.r-project.org/</a>, l’archive officielle des <em>packages</em> R
-</div>
-</div></div>
-</section>
-<section id="les-packages-r-suite" class="slide level2">
-<h2>Les <em>packages</em> R (suite)</h2>
-<div class="columns">
-<div class="column" style="width:60%;">
-<ul>
-<li><p>En 2023, 19,000+ packages hebergés sur le CRAN.</p></li>
-<li><p>En 2021, 25,000+ packages hebergés sur GitHub<a href="#/footnotes" class="footnote-ref" id="fnref2" role="doc-noteref" data-footnote-href="#/fn2" onclick=""><sup>2</sup></a></p></li>
-</ul>
-</div><div class="column" style="width:40%;">
-<p><img src="https://raw.githubusercontent.com/zoometh/thomashuet/master/img/r-pkgs-mosaic-3.png" style="width: 600px;vertical-align: middle;"></p>
-</div></div>
-<aside></aside></section>
-<section id="trouver-un-package" class="slide level2">
-<h2>Trouver un package <img src="https://raw.githubusercontent.com/zoometh/thomashuet/master/img/r-pkgs-mosaic-4.png" style="width: 80px;vertical-align: middle;"></h2>
+<section id="architecture" class="slide level2">
+<h2>Architecture</h2>
 <div class="panel-tabset">
-<ul id="tabset-1" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-1-1"><code>{pkgsearch}</code></a></li><li><a href="#tabset-1-2">R-Universe</a></li><li><a href="#tabset-1-3">GitHub</a></li><li><a href="#tabset-1-4">open-archaeo</a></li></ul>
+<ul id="tabset-1" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-1-1">MCD</a></li><li><a href="#tabset-1-2">Standards</a></li><li><a href="#tabset-1-3">Technologies</a></li><li><a href="#tabset-1-4">CHIPS et CHIPS dev</a></li></ul>
 <div class="tab-content">
 <div id="tabset-1-1">
-<div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a></a><span class="co"># install.packages("pkgsearch")</span></span>
-<span id="cb1-2"><a></a><span class="fu">library</span>(pkgsearch)</span>
-<span id="cb1-3"><a></a><span class="fu">ps</span>(<span class="st">"raman"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>- "raman" -------------------------------------- 13 packages in 0.049 seconds -
-  #     package              version by                 @ title                
-  1 100 serrsBayes           0.5.0   Matt Moores       4y Bayesian Modelling...
-  2  92 RamanMP              1.0     Veronica Nava     4y Analysis and Ident...
-  3  75 OpenSpecy            1.5.3   Win Cowger        5M Analyze, Process, ...
-  4  36 readJDX              0.6.4   Bryan A. Hanson   2y Import Data in the...
-  5  26 hyperSpec            0.100.2 Claudia Beleites  1y Work with Hyperspe...
-  6  23 ChemoSpec            6.3.1   Bryan A. Hanson  28d Exploratory Chemom...
-  7  22 PlackettLuce         0.4.4   Heather Turner    1M Plackett-Luce Mode...
-  8  15 sabarsi              0.1.0   Li Jun            6y Background Removal...
-  9  12 smdi                 0.3.1   Janick Weberpals  1y Perform Structural...
- 10  11 FishProxCompAnalyzer 0.1.0   Tanuj Misra       1y Proximate Composit...</code></pre>
-</div>
-</div>
+<div class="columns">
+<div class="column" style="width:25%;">
+<p>Modèle conceptuel de données simplifié</p>
+</div><div class="column" style="width:75%;">
+<p><img src="https://raw.githubusercontent.com/iramat/chips/master/img/db_erd.png" style="width: 800px;vertical-align: middle;"></p>
+</div></div>
 </div>
 <div id="tabset-1-2">
-<p><small><a href="https://r-universe.dev/search?q=raman" class="uri">https://r-universe.dev/search?q=raman</a></small></p>
-<iframe width="1200" height="500" src="https://r-universe.dev/search?q=raman" title="Search for Raman"></iframe>
+<p>Standards et isostandards:</p>
+<ul>
+<li><img src="https://raw.githubusercontent.com/zoometh/thomashuet/master/img/lod-gazetteer-periodo.png" style="height: 40px;vertical-align: middle;"> : répertoire de périodes (PID: <code>ark</code>)</li>
+<li><img src="https://raw.githubusercontent.com/zoometh/thomashuet/master/img/lod-gazetteer-pactols.png" style="height: 50px;vertical-align: middle;"> : thésaurus pour l’archéologie (PID: <code>ark</code>)</li>
+<li><img src="https://raw.githubusercontent.com/zoometh/thomashuet/master/img/lod-gazetteer-aat-2.png" style="height: 50px;vertical-align: middle;">: thésaurus pour les objets d’art et architecture (PID: <code>aat</code>)</li>
+<li><img src="https://raw.githubusercontent.com/zoometh/thomashuet/master/img/lod-iso-edtf.png" style="height: 50px;vertical-align: middle;"><a href="#/footnotes" class="footnote-ref" id="fnref3" role="doc-noteref" data-footnote-href="#/fn3" onclick=""><sup>3</sup></a>: pour des dates <em>fuzzy</em> ou très précises (<em>timestamped</em>)</li>
+</ul>
+<aside class="notes">
+<p>pour faciliter l’intéropérabilité de ses données</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </div>
 <div id="tabset-1-3">
-<small><a href="https://github.com/search/advanced" class="uri">https://github.com/search/advanced</a></small> <img src="https://raw.githubusercontent.com/zoometh/thomashuet/master/img/r-pkg--search-github.png" style="width: 1000px;vertical-align: middle;"><br>
-<center>
-⬇️
-</center>
-<p><br> <img src="https://raw.githubusercontent.com/zoometh/thomashuet/master/img/r-pkg--search-github-1.png" style="width: 1000px;vertical-align: middle;"></p>
+<p>Technologies matures et open-source :</p>
+<ul>
+<li><img src="https://raw.githubusercontent.com/zoometh/thomashuet/master/img/app-os-linux-ubuntu-1.png" style="height: 40px;vertical-align: middle;"> : l’OS<a href="#/footnotes" class="footnote-ref" id="fnref4" role="doc-noteref" data-footnote-href="#/fn4" onclick=""><sup>4</sup></a> de la plupart des serveurs web.</li>
+<li><img src="https://raw.githubusercontent.com/zoometh/thomashuet/master/img/app-bd-postgres-2.png" style="height: 40px;vertical-align: middle;"> : parmi les SGBD<a href="#/footnotes" class="footnote-ref" id="fnref5" role="doc-noteref" data-footnote-href="#/fn5" onclick=""><sup>5</sup></a> open-source, c’est la plus proche de Oracle.</li>
+<li><img src="https://raw.githubusercontent.com/zoometh/thomashuet/master/img/app-prg-python.png" style="height: 40px;vertical-align: middle;"> : le langage de programmation le plus utilisé au monde.</li>
+<li><img src="https://raw.githubusercontent.com/zoometh/thomashuet/master/img/web-api-2.png" style="height: 40px;vertical-align: middle;"> : protocole standard d’interface de programmation d’applications sur le web.</li>
+</ul>
+<aside class="notes">
+<p>pour garantir la maintenance des données sur le long terme</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </div>
 <div id="tabset-1-4">
-<p><a href="https://open-archaeo.info/">open-archaeo</a> et le <a href="https://sslarch.github.io/">SIG-SSLA</a></p>
-<iframe width="1200" height="500" src="https://open-archaeo.info/tags/x-ray-fluorescence/" title="Search for Raman"></iframe>
-<p><small>https://open-archaeo.info/tags/x-ray-fluorescence/</small></p>
+<div class="columns">
+<ul>
+<li>l’accès et l’ouverture de CHIPS limités</li>
+<li>clone de CHIPS, CHIPS dev, ouverte sur le web dashboard</li>
+</ul><div class="column" style="width:35%;">
+<center>
+<p>CHIPS</p>
+<p><img src="https://raw.githubusercontent.com/zoometh/thomashuet/master/img/bd--generic.png" style="height: 70px;vertical-align: middle;"></p>
+<p><b><span style="color:black">C <span style="color:grey">R</span> U D</span></b></p>
+<p><small> 🏠 Huma-Num </small></p>
+</center>
+</div><div class="column" style="width:30%;">
+<center>
+<p><img src="https://raw.githubusercontent.com/zoometh/thomashuet/master/img/app-prog-bash.png" style="height: 60px;vertical-align: middle;"></p>
+<p><code>copy data only</code><br> 🠮 🠮 🠮</p>
+</center>
+</div><div class="column" style="width:35%;">
+<center>
+<p>CHIPS dev</p>
+<p><img src="https://raw.githubusercontent.com/zoometh/thomashuet/master/img/bd--generic.png" style="height: 70px;vertical-align: middle;"></p>
+<p><b><span style="color:grey">C <span style="color:black">R</span> U D</span></b></p>
+<p><small> 🏠 Mésocentre UPSac </small></p>
+</center>
+</div></div>
 </div>
 </div>
 </div>
-</section></section>
+<aside></aside></section></section>
 <section>
-<section id="composition-dun-package-r" class="title-slide slide level1 center">
-<h1>Composition d’un <em>package</em> R</h1>
+<section id="intéropérabilité-et-réusabilité" class="title-slide slide level1 center">
+<h1>Intéropérabilité et Réusabilité</h1>
 
 </section>
-<section id="description-fichiers-sources" class="slide level2">
-<h2>Description (fichiers sources)</h2>
+<section id="plateforme-geo" class="slide level2">
+<h2>Plateforme GEO</h2>
+<center>
+<iframe width="1000" height="500" src="https://fnp.huma-num.fr/adws/app/efbc5983-40d6-11ec-810c-a7f8dd92e681/index.html" title="Quarto Documentation"></iframe>
+</center>
+</section>
+<section id="dashboard-12" class="slide level2">
+<h2>Dashboard (1/2)</h2>
 <div class="panel-tabset">
-<ul id="tabset-2" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-2-1"><code>DESCRIPTION</code></a></li><li><a href="#tabset-2-2"><code>LICENSE</code></a></li><li><a href="#tabset-2-3"><code>README.md</code></a></li><li><a href="#tabset-2-4"><code>R/</code></a></li><li><a href="#tabset-2-5"><code>inst/extdata/</code></a></li></ul>
+<ul id="tabset-2" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-2-1">Objectif</a></li><li><a href="#tabset-2-2"><em>Datasets</em></a></li><li><a href="#tabset-2-3">Echantillons</a></li></ul>
 <div class="tab-content">
 <div id="tabset-2-1">
-<p>Le fichier <a href="https://github.com/iramat/iRamat/blob/main/DESCRIPTION"><code>DESCRIPTION</code></a> contient les métadonnées du <em>package</em></p>
-<div class="sourceCode" id="cb3" data-code-line-numbers="1|3|4|6|9|12-22|28|29"><pre class="sourceCode numberSource md number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb3-1"><a></a><span class="an">Package:</span><span class="co"> iRamat</span></span>
-<span id="cb3-2"><a></a><span class="an">Type:</span><span class="co"> Package</span></span>
-<span id="cb3-3"><a></a><span class="an">Title:</span><span class="co"> Statistical analysis on Archaeomaterial</span></span>
-<span id="cb3-4"><a></a><span class="an">Description:</span><span class="co"> Statistical analysis on Archaeomaterial.</span></span>
-<span id="cb3-5"><a></a><span class="an">Version:</span><span class="co"> 1.0.0</span></span>
-<span id="cb3-6"><a></a>Authors@R: c(person("Thomas", "Huet", email = "thomas.huet@cnrs.fr", role = c("aut", "cre"), comment=c(ORCID="0000-0002-1112-6122")))</span>
-<span id="cb3-7"><a></a>Depends:</span>
-<span id="cb3-8"><a></a>    R (&gt;= 4.0.1)</span>
-<span id="cb3-9"><a></a>License: MIT + file LICENSE</span>
-<span id="cb3-10"><a></a>Encoding: UTF-8</span>
-<span id="cb3-11"><a></a>LazyData: true</span>
-<span id="cb3-12"><a></a>Imports:</span>
-<span id="cb3-13"><a></a>    dplyr,</span>
-<span id="cb3-14"><a></a>    ggplot2,</span>
-<span id="cb3-15"><a></a>    forcats,</span>
-<span id="cb3-16"><a></a>    stringr,</span>
-<span id="cb3-17"><a></a>    hash,</span>
-<span id="cb3-18"><a></a>    jsonlite,</span>
-<span id="cb3-19"><a></a>    httr,</span>
-<span id="cb3-20"><a></a>    imager,</span>
-<span id="cb3-21"><a></a>    spatstat.geom,</span>
-<span id="cb3-22"><a></a>    spatstat.explore   </span>
-<span id="cb3-23"><a></a>RoxygenNote: 7.3.2</span>
-<span id="cb3-24"><a></a>Suggests: </span>
-<span id="cb3-25"><a></a>    testthat (&gt;= 3.0.0),</span>
-<span id="cb3-26"><a></a>    ggpubr</span>
-<span id="cb3-27"><a></a>Config/testthat/edition: 3</span>
-<span id="cb3-28"><a></a>URL: https://github.com/iramat/iRamat</span>
-<span id="cb3-29"><a></a>BugsReport: https://github.com/iramat/iRamat/issues</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p><br><br></p>
+<p>Offir une vue synthétique du contenu de la BDD CHIPS; faciliter l’identification, l’accès, l’intéropérabilité et la réutilisation des données <img src="https://raw.githubusercontent.com/zoometh/thomashuet/master/img/lod-data-fair.png" style="height: 50px;vertical-align: middle;">.<br>
+<br>
+Indexation spatiale et par jeux de données (<em>datasets</em>)</p>
 </div>
 <div id="tabset-2-2">
-<p>Les fichiers <a href="https://github.com/iramat/iRamat/blob/main/LICENSE"><code>LICENSE</code></a> et <a href="https://github.com/iramat/iRamat/blob/main/LICENSE.md"><code>LICENSE.md</code></a> contiennent la licence du <em>package</em></p>
-<div class="columns">
-<div class="column" style="width:40%;">
-<p><a href="https://github.com/iramat/iRamat/blob/main/LICENSE"><code>LICENSE</code></a></p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode numberSource md number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb4-1"><a></a><span class="an">YEAR:</span><span class="co"> 2025</span></span>
-<span id="cb4-2"><a></a><span class="an">COPYRIGHT HOLDER:</span><span class="co"> IRAMAT-CNRS</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div><div class="column" style="width:60%;">
-<p><a href="https://github.com/iramat/iRamat/blob/main/LICENSE.md"><code>LICENSE.md</code></a></p>
-<div class="sourceCode" id="cb5"><pre class="sourceCode numberSource md number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb5-1"><a></a><span class="fu"># MIT License</span></span>
-<span id="cb5-2"><a></a></span>
-<span id="cb5-3"><a></a>Copyright (c) 2025 IRAMAT-CNRS</span>
-<span id="cb5-4"><a></a></span>
-<span id="cb5-5"><a></a>Permission is hereby granted, free of charge, to any person obtaining a copy</span>
-<span id="cb5-6"><a></a>of this software and associated documentation files (the "Software"), to deal</span>
-<span id="cb5-7"><a></a>in the Software without restriction, including without limitation the rights</span>
-<span id="cb5-8"><a></a>to use, copy, modify, merge, publish, distribute, sublicense, and/or sell</span>
-<span id="cb5-9"><a></a>copies of the Software, and to permit persons to whom the Software is</span>
-<span id="cb5-10"><a></a>furnished to do so, subject to the following conditions:</span>
-<span id="cb5-11"><a></a></span>
-<span id="cb5-12"><a></a>(...)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div></div>
+<center>
+<p><img src="https://raw.githubusercontent.com/iramat/iramat-dev/master/img/bdd-chips-dash-mapgen.png" style="width: 750px;vertical-align: middle;"></p>
+</center>
 </div>
 <div id="tabset-2-3">
-<p>Le fichier <a href="https://github.com/iramat/iRamat?tab=readme-ov-file"><code>README.md</code></a> présente le <em>package</em></p>
-<p><img src="https://raw.githubusercontent.com/zoometh/thomashuet/master/img/r-pkg--readme-github.png" style="width: 1000px;vertical-align: middle;"></p>
-</div>
-<div id="tabset-2-4">
-<p>Le dossier <a href="https://github.com/iramat/iRamat/tree/main/R"><code>R/</code></a> contient les fonctions R</p>
-<div class="sourceCode" id="cb6" data-code-overflow="wrap" data-code-line-numbers="1|3|4|6-9|11|13-16|18|19-26"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a></a><span class="co">#' Connect the CHIPS DB API and return an R object (dataframe, etc.)</span></span>
-<span id="cb6-2"><a></a><span class="co">#'</span></span>
-<span id="cb6-3"><a></a><span class="co">#' @name db_api_connect</span></span>
-<span id="cb6-4"><a></a><span class="co">#' @description Connect the CHIPS DB API and return an R object (dataframe, etc.). The default dataset is dataset_adisser17, accessed at &lt;http://157.136.252.188:3000/dataset_adisser17&gt;</span></span>
-<span id="cb6-5"><a></a><span class="co">#'</span></span>
-<span id="cb6-6"><a></a><span class="co">#' @param d A hash object. If none is provided, a new one will be created.</span></span>
-<span id="cb6-7"><a></a><span class="co">#' @param api_url An URL landing to an API. Default: 'dataset_adisser17'.</span></span>
-<span id="cb6-8"><a></a><span class="co">#' @param output_format The selected output format. Default "dataframe".</span></span>
-<span id="cb6-9"><a></a><span class="co">#' @param verbose if TRUE (by default), verbose.</span></span>
-<span id="cb6-10"><a></a><span class="co">#'</span></span>
-<span id="cb6-11"><a></a><span class="co">#' @return An R object.</span></span>
-<span id="cb6-12"><a></a><span class="co">#'</span></span>
-<span id="cb6-13"><a></a><span class="co">#' @examples</span></span>
-<span id="cb6-14"><a></a><span class="co">#' df &lt;- db_api_connect()</span></span>
-<span id="cb6-15"><a></a><span class="co">#' # Show the first rows of the dataframe</span></span>
-<span id="cb6-16"><a></a><span class="co">#' head(df$dataset_adisser17)</span></span>
-<span id="cb6-17"><a></a><span class="co">#' </span></span>
-<span id="cb6-18"><a></a><span class="co">#' @export</span></span>
-<span id="cb6-19"><a></a>db_api_connect <span class="ot">&lt;-</span> <span class="cf">function</span>(<span class="at">d =</span> <span class="cn">NA</span>,</span>
-<span id="cb6-20"><a></a>                           <span class="at">api_url =</span> <span class="st">"http://157.136.252.188:3000/dataset_adisser17"</span>,</span>
-<span id="cb6-21"><a></a>                           <span class="at">output_format =</span> <span class="st">"dataframe"</span>,</span>
-<span id="cb6-22"><a></a>                           <span class="at">verbose =</span> <span class="cn">TRUE</span>){</span>
-<span id="cb6-23"><a></a>                           </span>
-<span id="cb6-24"><a></a>                           (...)</span>
-<span id="cb6-25"><a></a>                           </span>
-<span id="cb6-26"><a></a>                           }</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p><br><br></p>
-</div>
-<div id="tabset-2-5">
-<p>Le dossier <a href="https://github.com/iramat/iRamat/tree/main/inst/extdata/"><code>inst/extdata/</code></a> contient les données externes</p>
-<div class="columns">
-<div class="column" style="width:33%;">
-<small>regular_distribution.png</small>
 <center>
-<img src="https://raw.githubusercontent.com/iramat/iRamat/master/inst/extdata/regular_distribution.png" style="width: 220px;vertical-align: middle;">
+<p><img src="https://raw.githubusercontent.com/iramat/iramat-dev/master/img/bdd-chips-dash-map-dataset.png" style="width: 750px;vertical-align: middle;"></p>
 </center>
-</div><div class="column" style="width:33%;">
-<small>clustered_distribution.png</small>
-<center>
-<img src="https://raw.githubusercontent.com/iramat/iRamat/master/inst/extdata/clustered_distribution.png" style="width: 220px;vertical-align: middle;">
-</center>
-</div><div class="column" style="width:33%;">
-<small>random_distribution.png</small>
-<center>
-<img src="https://raw.githubusercontent.com/iramat/iRamat/master/inst/extdata/random_distribution.png" style="width: 220px;vertical-align: middle;">
-</center>
-</div></div>
 </div>
 </div>
 </div>
 </section>
-<section id="description-fichiers-générés" class="slide level2">
-<h2>Description (fichiers générés)</h2>
+<section id="dashboard-22" class="slide level2">
+<h2>Dashboard (2/2)</h2>
 <div class="panel-tabset">
-<ul id="tabset-3" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-3-1"><code>NAMESPACE</code></a></li><li><a href="#tabset-3-2"><code>man/</code></a></li></ul>
+<ul id="tabset-3" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-3-1">API des échantillons</a></li><li><a href="#tabset-3-2"><em>Live demo</em></a></li></ul>
 <div class="tab-content">
 <div id="tabset-3-1">
-<p>Le fichier <a href="https://github.com/iramat/iRamat/tree/main/NAMESPACE"><code>NAMESPACE</code></a> décrit quelles fonctions du <em>package</em> sont exportées.</p>
-<div class="sourceCode" id="cb7" data-code-line-numbers="1|3-5"><pre class="sourceCode numberSource r-doc number-lines code-with-copy"><code class="sourceCode"><span id="cb7-1"><a></a># Generated by roxygen2: do not edit by hand</span>
-<span id="cb7-2"><a></a></span>
-<span id="cb7-3"><a></a>export(chrono)</span>
-<span id="cb7-4"><a></a>export(db_api_connect)</span>
-<span id="cb7-5"><a></a>export(ppa)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<center>
+<p><img src="https://raw.githubusercontent.com/iramat/iramat-dev/master/img/bdd-chips-dash-api.png" style="width: 850px;vertical-align: middle;"></p>
+</center>
 </div>
 <div id="tabset-3-2">
-<p>Le dossier <a href="https://github.com/iramat/iRamat/tree/main/man"><code>man/</code></a> contient la documentation des fonctions (générée depuis les fonctions elles-mêmes).</p>
-<div class="sourceCode" id="cb8" data-code-line-numbers="1-2"><pre class="sourceCode numberSource r-doc number-lines code-with-copy"><code class="sourceCode"><span id="cb8-1"><a></a>% Generated by roxygen2: do not edit by hand</span>
-<span id="cb8-2"><a></a>% Please edit documentation in R/ppa.R</span>
-<span id="cb8-3"><a></a>\name{ppa}</span>
-<span id="cb8-4"><a></a>\alias{ppa}</span>
-<span id="cb8-5"><a></a>\title{Classify a Point Pattern Distribution}</span>
-<span id="cb8-6"><a></a>\usage{</span>
-<span id="cb8-7"><a></a>ppa(</span>
-<span id="cb8-8"><a></a>  d = NA,</span>
-<span id="cb8-9"><a></a>  root = "https://raw.githubusercontent.com/iramat/iRamat/master/inst/extdata/",</span>
-<span id="cb8-10"><a></a>  img.paths = c("clustered_distribution.png", "random_distribution.png",</span>
-<span id="cb8-11"><a></a>    "regular_distribution.png"),</span>
-<span id="cb8-12"><a></a>  ppa_tests = c("quadrat", "ripley", "gfunction"),</span>
-<span id="cb8-13"><a></a>  verbose = TRUE</span>
-<span id="cb8-14"><a></a>)</span>
-<span id="cb8-15"><a></a>}</span>
-<span id="cb8-16"><a></a>(...)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<iframe width="1200" height="700" src="https://iramat-apps.cnrs.fr/dash/" title="Quarto Documentation"></iframe>
 </div>
 </div>
 </div>
-</section></section>
-<section>
-<section id="du-code-à-la-fonction-et-de-la-fonction-au-package" class="title-slide slide level1 center">
-<h1>Du code à la fonction, et de la fonction au package</h1>
-
 </section>
-<section id="du-code-à-la-f-et-de-la-f-au-pkg" class="slide level2">
-<h2>Du <code>code</code> à la <math><mi>f</mi></math>, et de la <math><mi>f</mi></math> au <code>{pkg}</code></h2>
+<section id="analyses-avec-r" class="slide level2">
+<h2>Analyses avec R</h2>
 <div class="panel-tabset">
-<ul id="tabset-4" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-4-1">Au Km</a></li><li><a href="#tabset-4-2">Fonctions</a></li><li><a href="#tabset-4-3">Package (<em>private</em>)</a></li><li><a href="#tabset-4-4">Package (<em>public</em>)</a></li></ul>
+<ul id="tabset-4" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-4-1">Un <em>dataset</em></a></li><li><a href="#tabset-4-2">Un <em>dataset</em> (chronologie)</a></li><li><a href="#tabset-4-3">Tous les <em>datasets</em></a></li></ul>
 <div class="tab-content">
 <div id="tabset-4-1">
-<div class="sourceCode" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a></a><span class="co"># Generate 100 random numbers from a normal distribution</span></span>
-<span id="cb9-2"><a></a>x <span class="ot">&lt;-</span> <span class="fu">rnorm</span>(<span class="dv">100</span>, <span class="at">mean =</span> <span class="dv">10</span>, <span class="at">sd =</span> <span class="dv">2</span>)</span>
-<span id="cb9-3"><a></a></span>
-<span id="cb9-4"><a></a><span class="co"># Compute the mean</span></span>
-<span id="cb9-5"><a></a>mean_x <span class="ot">&lt;-</span> <span class="fu">mean</span>(x)</span>
-<span id="cb9-6"><a></a></span>
-<span id="cb9-7"><a></a><span class="co"># Print the result</span></span>
-<span id="cb9-8"><a></a><span class="fu">cat</span>(<span class="st">"The mean of x is:"</span>, mean_x, <span class="st">"</span><span class="sc">\n</span><span class="st">"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a></a><span class="co"># install.packages("devtools")</span></span>
+<span id="cb1-2"><a></a><span class="co"># devtools::install_github("iramat/iRamat")</span></span>
+<span id="cb1-3"><a></a><span class="fu">library</span>(iRamat)</span>
+<span id="cb1-4"><a></a></span>
+<span id="cb1-5"><a></a>df <span class="ot">&lt;-</span> <span class="fu">db_api_connect</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "Will store the results in a new variable"</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a></a><span class="fu">names</span>(df)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "dataset_adisser17"</code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a></a><span class="fu">library</span>(dplyr)</span>
+<span id="cb5-2"><a></a><span class="fu">library</span>(kableExtra)</span>
+<span id="cb5-3"><a></a></span>
+<span id="cb5-4"><a></a>df<span class="sc">$</span>dataset_adisser17 <span class="sc">%&gt;%</span></span>
+<span id="cb5-5"><a></a>  <span class="fu">select</span>(<span class="sc">-</span>reference) <span class="sc">%&gt;%</span></span>
+<span id="cb5-6"><a></a>  <span class="fu">head</span>(<span class="dv">10</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb5-7"><a></a>  <span class="fu">kable</span>(<span class="st">"html"</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb5-8"><a></a>  <span class="fu">kable_styling</span>(<span class="at">full_width =</span> <span class="cn">FALSE</span>, <span class="at">position =</span> <span class="st">"center"</span>, <span class="at">font_size =</span> <span class="dv">18</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<table class="table caption-top" data-quarto-postprocess="true" style="font-size: 18px; width: auto !important; margin-left: auto; margin-right: auto;">
+<thead>
+<tr class="header">
+<th style="text-align: left;" data-quarto-table-cell-role="th">site_name</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">id_chips</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">longitude</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">latitude</th>
+<th style="text-align: left;" data-quarto-table-cell-role="th">edtf</th>
+<th style="text-align: left;" data-quarto-table-cell-role="th">sample_name</th>
+<th style="text-align: left;" data-quarto-table-cell-role="th">typology</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">na</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">mg</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">al</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">si</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">p</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">s</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">cl</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">k</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">ca</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">mn</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">fe</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">loi</th>
+<th style="text-align: left;" data-quarto-table-cell-role="th">ag</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">arsenic</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">ba</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">be</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">bi</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">cd</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">ce</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">co</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">cr</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">cs</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">cu</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">dy</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">er</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">eu</th>
+<th style="text-align: left;" data-quarto-table-cell-role="th">deltafe56</th>
+<th style="text-align: left;" data-quarto-table-cell-role="th">deltafe57</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">ga</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">gd</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">ge</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">hf</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">ho</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">indium</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">la</th>
+<th style="text-align: left;" data-quarto-table-cell-role="th">li</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">lu</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">mo</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">nb</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">nd</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">ni</th>
+<th style="text-align: left;" data-quarto-table-cell-role="th">os</th>
+<th style="text-align: left;" data-quarto-table-cell-role="th">os187_os188</th>
+<th style="text-align: left;" data-quarto-table-cell-role="th">os187_os186</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">pb</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">pd</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">pr</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">rb</th>
+<th style="text-align: left;" data-quarto-table-cell-role="th">ru</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">sb</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">sc</th>
+<th style="text-align: left;" data-quarto-table-cell-role="th">se</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">sm</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">sn</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">sr</th>
+<th style="text-align: left;" data-quarto-table-cell-role="th">sr87_sr86</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">ta</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">tb</th>
+<th style="text-align: left;" data-quarto-table-cell-role="th">te</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">th</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">ti</th>
+<th style="text-align: left;" data-quarto-table-cell-role="th">tl</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">tm</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">u</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">v</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">w</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">y</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">yb</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">zn</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">zr</th>
+<th style="text-align: left;" data-quarto-table-cell-role="th">major_method</th>
+<th style="text-align: left;" data-quarto-table-cell-role="th">major_analytical_setup</th>
+<th style="text-align: left;" data-quarto-table-cell-role="th">trace_method</th>
+<th style="text-align: left;" data-quarto-table-cell-role="th">trace_analytical_setup</th>
+<th style="text-align: left;" data-quarto-table-cell-role="th">url</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Aux Minières</td>
+<td style="text-align: right;">4967</td>
+<td style="text-align: right;">5.8506</td>
+<td style="text-align: right;">49.4950</td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: left;">MINHAO108-A</td>
+<td style="text-align: left;">Ore</td>
+<td style="text-align: right;">0.04</td>
+<td style="text-align: right;">0.03</td>
+<td style="text-align: right;">3.23</td>
+<td style="text-align: right;">4.45</td>
+<td style="text-align: right;">0.04</td>
+<td style="text-align: right;">0.00</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0.07</td>
+<td style="text-align: right;">0.09</td>
+<td style="text-align: right;">0.03</td>
+<td style="text-align: right;">53.17</td>
+<td style="text-align: right;">7.90</td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: right;">578.900</td>
+<td style="text-align: right;">20.31</td>
+<td style="text-align: right;">13.500</td>
+<td style="text-align: right;">0.308</td>
+<td style="text-align: right;">0.325</td>
+<td style="text-align: right;">56.06</td>
+<td style="text-align: right;">26.590</td>
+<td style="text-align: right;">214.9</td>
+<td style="text-align: right;">0.971</td>
+<td style="text-align: right;">5.587</td>
+<td style="text-align: right;">5.025</td>
+<td style="text-align: right;">2.637</td>
+<td style="text-align: right;">1.387</td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: right;">7.478</td>
+<td style="text-align: right;">4.960</td>
+<td style="text-align: right;">2.610</td>
+<td style="text-align: right;">1.431</td>
+<td style="text-align: right;">0.938</td>
+<td style="text-align: right;">0.475</td>
+<td style="text-align: right;">21.24</td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: right;">0.372</td>
+<td style="text-align: right;">5.362</td>
+<td style="text-align: right;">2.808</td>
+<td style="text-align: right;">24.37</td>
+<td style="text-align: right;">63.140</td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: right;">113.8444</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">6.119</td>
+<td style="text-align: right;">4.692</td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: right;">127.50</td>
+<td style="text-align: right;">1.342</td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: right;">6.095</td>
+<td style="text-align: right;">0.945</td>
+<td style="text-align: right;">43.73</td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: right;">0.227</td>
+<td style="text-align: right;">0.843</td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: right;">17.38</td>
+<td style="text-align: right;">0.092</td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: right;">0.397</td>
+<td style="text-align: right;">9.352</td>
+<td style="text-align: right;">857.3</td>
+<td style="text-align: right;">0.563</td>
+<td style="text-align: right;">22.17</td>
+<td style="text-align: right;">2.776</td>
+<td style="text-align: right;">112.60</td>
+<td style="text-align: right;">58.04</td>
+<td style="text-align: left;">ICP-OES</td>
+<td style="text-align: left;">CRPG - Thermo Fisher Scientific Icap 6500</td>
+<td style="text-align: left;">ICP-OES</td>
+<td style="text-align: left;">CRPG - Thermo Fisher Scientific Icap 6500</td>
+<td style="text-align: left;">https://onlinelibrary.wiley.com/doi/full/10.1111/arcm.12265</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Aux Minières</td>
+<td style="text-align: right;">4968</td>
+<td style="text-align: right;">5.8506</td>
+<td style="text-align: right;">49.4950</td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: left;">MINHAO108-B</td>
+<td style="text-align: left;">Ore</td>
+<td style="text-align: right;">0.03</td>
+<td style="text-align: right;">0.03</td>
+<td style="text-align: right;">4.57</td>
+<td style="text-align: right;">8.40</td>
+<td style="text-align: right;">0.04</td>
+<td style="text-align: right;">0.00</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0.02</td>
+<td style="text-align: right;">0.11</td>
+<td style="text-align: right;">0.04</td>
+<td style="text-align: right;">43.30</td>
+<td style="text-align: right;">10.57</td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: right;">1010.000</td>
+<td style="text-align: right;">12.87</td>
+<td style="text-align: right;">9.351</td>
+<td style="text-align: right;">0.193</td>
+<td style="text-align: right;">0.296</td>
+<td style="text-align: right;">47.05</td>
+<td style="text-align: right;">27.430</td>
+<td style="text-align: right;">341.7</td>
+<td style="text-align: right;">0.221</td>
+<td style="text-align: right;">63.670</td>
+<td style="text-align: right;">4.556</td>
+<td style="text-align: right;">2.518</td>
+<td style="text-align: right;">1.103</td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: right;">5.733</td>
+<td style="text-align: right;">4.166</td>
+<td style="text-align: right;">1.560</td>
+<td style="text-align: right;">2.771</td>
+<td style="text-align: right;">0.908</td>
+<td style="text-align: right;">0.806</td>
+<td style="text-align: right;">24.99</td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: right;">0.354</td>
+<td style="text-align: right;">4.121</td>
+<td style="text-align: right;">2.977</td>
+<td style="text-align: right;">18.26</td>
+<td style="text-align: right;">81.020</td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: right;">117.9742</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">5.025</td>
+<td style="text-align: right;">2.133</td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: right;">47.82</td>
+<td style="text-align: right;">1.333</td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: right;">4.576</td>
+<td style="text-align: right;">0.911</td>
+<td style="text-align: right;">86.50</td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: right;">0.253</td>
+<td style="text-align: right;">0.748</td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: right;">55.21</td>
+<td style="text-align: right;">0.094</td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: right;">0.364</td>
+<td style="text-align: right;">4.369</td>
+<td style="text-align: right;">3957.0</td>
+<td style="text-align: right;">0.663</td>
+<td style="text-align: right;">23.34</td>
+<td style="text-align: right;">2.575</td>
+<td style="text-align: right;">113.70</td>
+<td style="text-align: right;">118.50</td>
+<td style="text-align: left;">ICP-OES</td>
+<td style="text-align: left;">CRPG - Thermo Fisher Scientific Icap 6500</td>
+<td style="text-align: left;">ICP-OES</td>
+<td style="text-align: left;">CRPG - Thermo Fisher Scientific Icap 6500</td>
+<td style="text-align: left;">https://onlinelibrary.wiley.com/doi/full/10.1111/arcm.12265</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Aux Minières</td>
+<td style="text-align: right;">71</td>
+<td style="text-align: right;">5.8506</td>
+<td style="text-align: right;">49.4950</td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: left;">SCHAO 108a</td>
+<td style="text-align: left;">Smelting Slag</td>
+<td style="text-align: right;">0.52</td>
+<td style="text-align: right;">0.22</td>
+<td style="text-align: right;">3.43</td>
+<td style="text-align: right;">9.54</td>
+<td style="text-align: right;">0.11</td>
+<td style="text-align: right;">0.21</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">1.03</td>
+<td style="text-align: right;">0.94</td>
+<td style="text-align: right;">0.09</td>
+<td style="text-align: right;">52.61</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: right;">5.200</td>
+<td style="text-align: right;">93.00</td>
+<td style="text-align: right;">7.270</td>
+<td style="text-align: right;">0.010</td>
+<td style="text-align: right;">0.030</td>
+<td style="text-align: right;">122.00</td>
+<td style="text-align: right;">1.300</td>
+<td style="text-align: right;">110.0</td>
+<td style="text-align: right;">2.380</td>
+<td style="text-align: right;">4.100</td>
+<td style="text-align: right;">18.650</td>
+<td style="text-align: right;">10.700</td>
+<td style="text-align: right;">4.500</td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: right;">5.800</td>
+<td style="text-align: right;">20.800</td>
+<td style="text-align: right;">0.960</td>
+<td style="text-align: right;">4.700</td>
+<td style="text-align: right;">3.740</td>
+<td style="text-align: right;">0.020</td>
+<td style="text-align: right;">58.10</td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: right;">1.490</td>
+<td style="text-align: right;">2.740</td>
+<td style="text-align: right;">9.600</td>
+<td style="text-align: right;">79.40</td>
+<td style="text-align: right;">1.000</td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: right;">5.7000</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">18.250</td>
+<td style="text-align: right;">20.500</td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: right;">0.08</td>
+<td style="text-align: right;">14.900</td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: right;">20.400</td>
+<td style="text-align: right;">1.000</td>
+<td style="text-align: right;">82.60</td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: right;">0.670</td>
+<td style="text-align: right;">3.350</td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: right;">15.70</td>
+<td style="text-align: right;">0.097</td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: right;">1.690</td>
+<td style="text-align: right;">2.400</td>
+<td style="text-align: right;">144.0</td>
+<td style="text-align: right;">3.000</td>
+<td style="text-align: right;">119.00</td>
+<td style="text-align: right;">10.100</td>
+<td style="text-align: right;">23.00</td>
+<td style="text-align: right;">195.00</td>
+<td style="text-align: left;">ICP-MS</td>
+<td style="text-align: left;">ALS Chemex - Unknown ME-MS61</td>
+<td style="text-align: left;">ICP-MS</td>
+<td style="text-align: left;">ALS Chemex - Unknown ME-MS61</td>
+<td style="text-align: left;">https://onlinelibrary.wiley.com/doi/full/10.1111/arcm.12265</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Aux Minières</td>
+<td style="text-align: right;">72</td>
+<td style="text-align: right;">5.8506</td>
+<td style="text-align: right;">49.4950</td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: left;">SCHAO 108b</td>
+<td style="text-align: left;">Smelting Slag</td>
+<td style="text-align: right;">0.03</td>
+<td style="text-align: right;">0.08</td>
+<td style="text-align: right;">3.07</td>
+<td style="text-align: right;">10.61</td>
+<td style="text-align: right;">0.04</td>
+<td style="text-align: right;">0.01</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">0.58</td>
+<td style="text-align: right;">0.76</td>
+<td style="text-align: right;">0.12</td>
+<td style="text-align: right;">53.59</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: right;">2.300</td>
+<td style="text-align: right;">172.50</td>
+<td style="text-align: right;">11.650</td>
+<td style="text-align: right;">0.060</td>
+<td style="text-align: right;">0.020</td>
+<td style="text-align: right;">146.00</td>
+<td style="text-align: right;">0.500</td>
+<td style="text-align: right;">137.0</td>
+<td style="text-align: right;">4.230</td>
+<td style="text-align: right;">3.700</td>
+<td style="text-align: right;">21.300</td>
+<td style="text-align: right;">11.950</td>
+<td style="text-align: right;">5.090</td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: right;">6.000</td>
+<td style="text-align: right;">23.500</td>
+<td style="text-align: right;">0.800</td>
+<td style="text-align: right;">6.600</td>
+<td style="text-align: right;">4.220</td>
+<td style="text-align: right;">0.010</td>
+<td style="text-align: right;">66.50</td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: right;">1.680</td>
+<td style="text-align: right;">0.480</td>
+<td style="text-align: right;">11.800</td>
+<td style="text-align: right;">93.90</td>
+<td style="text-align: right;">0.600</td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: right;">30.2000</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">21.300</td>
+<td style="text-align: right;">36.100</td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: right;">0.05</td>
+<td style="text-align: right;">19.300</td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: right;">24.100</td>
+<td style="text-align: right;">1.000</td>
+<td style="text-align: right;">147.00</td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: right;">0.800</td>
+<td style="text-align: right;">3.700</td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: right;">20.00</td>
+<td style="text-align: right;">0.083</td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: right;">1.860</td>
+<td style="text-align: right;">2.800</td>
+<td style="text-align: right;">522.0</td>
+<td style="text-align: right;">4.000</td>
+<td style="text-align: right;">138.50</td>
+<td style="text-align: right;">11.300</td>
+<td style="text-align: right;">4.00</td>
+<td style="text-align: right;">278.00</td>
+<td style="text-align: left;">ICP-MS</td>
+<td style="text-align: left;">ALS Chemex - Unknown ME-MS61</td>
+<td style="text-align: left;">ICP-MS</td>
+<td style="text-align: left;">ALS Chemex - Unknown ME-MS61</td>
+<td style="text-align: left;">https://onlinelibrary.wiley.com/doi/full/10.1111/arcm.12265</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Aux Minières</td>
+<td style="text-align: right;">73</td>
+<td style="text-align: right;">5.8506</td>
+<td style="text-align: right;">49.4950</td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: left;">SCHAO 108c</td>
+<td style="text-align: left;">Smelting Slag</td>
+<td style="text-align: right;">0.07</td>
+<td style="text-align: right;">0.10</td>
+<td style="text-align: right;">3.69</td>
+<td style="text-align: right;">10.04</td>
+<td style="text-align: right;">0.03</td>
+<td style="text-align: right;">0.01</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">0.67</td>
+<td style="text-align: right;">0.97</td>
+<td style="text-align: right;">0.10</td>
+<td style="text-align: right;">53.19</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: right;">2.500</td>
+<td style="text-align: right;">174.00</td>
+<td style="text-align: right;">7.330</td>
+<td style="text-align: right;">0.010</td>
+<td style="text-align: right;">0.020</td>
+<td style="text-align: right;">95.30</td>
+<td style="text-align: right;">0.500</td>
+<td style="text-align: right;">118.0</td>
+<td style="text-align: right;">2.720</td>
+<td style="text-align: right;">3.600</td>
+<td style="text-align: right;">17.400</td>
+<td style="text-align: right;">10.350</td>
+<td style="text-align: right;">3.840</td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: right;">6.400</td>
+<td style="text-align: right;">18.450</td>
+<td style="text-align: right;">0.760</td>
+<td style="text-align: right;">4.900</td>
+<td style="text-align: right;">3.510</td>
+<td style="text-align: right;">0.010</td>
+<td style="text-align: right;">46.20</td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: right;">1.550</td>
+<td style="text-align: right;">0.790</td>
+<td style="text-align: right;">12.200</td>
+<td style="text-align: right;">64.40</td>
+<td style="text-align: right;">0.500</td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: right;">3.1000</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">14.300</td>
+<td style="text-align: right;">28.900</td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: right;">0.05</td>
+<td style="text-align: right;">15.300</td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: right;">16.900</td>
+<td style="text-align: right;">1.000</td>
+<td style="text-align: right;">60.60</td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: right;">0.750</td>
+<td style="text-align: right;">3.030</td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: right;">12.30</td>
+<td style="text-align: right;">0.046</td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: right;">1.630</td>
+<td style="text-align: right;">2.200</td>
+<td style="text-align: right;">397.0</td>
+<td style="text-align: right;">6.000</td>
+<td style="text-align: right;">105.00</td>
+<td style="text-align: right;">10.050</td>
+<td style="text-align: right;">15.00</td>
+<td style="text-align: right;">216.00</td>
+<td style="text-align: left;">ICP-MS</td>
+<td style="text-align: left;">ALS Chemex - Unknown ME-MS61</td>
+<td style="text-align: left;">ICP-MS</td>
+<td style="text-align: left;">ALS Chemex - Unknown ME-MS61</td>
+<td style="text-align: left;">https://onlinelibrary.wiley.com/doi/full/10.1111/arcm.12265</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Aux Minières</td>
+<td style="text-align: right;">4973</td>
+<td style="text-align: right;">5.8506</td>
+<td style="text-align: right;">49.4950</td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: left;">SLHAO108-A</td>
+<td style="text-align: left;">Smelting Slag</td>
+<td style="text-align: right;">0.12</td>
+<td style="text-align: right;">0.24</td>
+<td style="text-align: right;">3.44</td>
+<td style="text-align: right;">16.17</td>
+<td style="text-align: right;">0.13</td>
+<td style="text-align: right;">0.00</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0.76</td>
+<td style="text-align: right;">0.92</td>
+<td style="text-align: right;">0.11</td>
+<td style="text-align: right;">42.26</td>
+<td style="text-align: right;">-5.23</td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: right;">7.245</td>
+<td style="text-align: right;">110.50</td>
+<td style="text-align: right;">10.520</td>
+<td style="text-align: right;">-0.001</td>
+<td style="text-align: right;">0.131</td>
+<td style="text-align: right;">89.76</td>
+<td style="text-align: right;">1.378</td>
+<td style="text-align: right;">155.4</td>
+<td style="text-align: right;">2.225</td>
+<td style="text-align: right;">5.491</td>
+<td style="text-align: right;">14.130</td>
+<td style="text-align: right;">8.028</td>
+<td style="text-align: right;">3.319</td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: right;">7.276</td>
+<td style="text-align: right;">13.860</td>
+<td style="text-align: right;">0.590</td>
+<td style="text-align: right;">5.377</td>
+<td style="text-align: right;">2.821</td>
+<td style="text-align: right;">0.197</td>
+<td style="text-align: right;">39.26</td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: right;">1.177</td>
+<td style="text-align: right;">0.971</td>
+<td style="text-align: right;">8.751</td>
+<td style="text-align: right;">51.53</td>
+<td style="text-align: right;">-0.001</td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: right;">3.0746</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">12.090</td>
+<td style="text-align: right;">29.830</td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: right;">20.83</td>
+<td style="text-align: right;">-0.001</td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: right;">13.520</td>
+<td style="text-align: right;">0.627</td>
+<td style="text-align: right;">69.98</td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: right;">0.647</td>
+<td style="text-align: right;">2.342</td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: right;">14.67</td>
+<td style="text-align: right;">0.251</td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: right;">1.236</td>
+<td style="text-align: right;">2.607</td>
+<td style="text-align: right;">599.8</td>
+<td style="text-align: right;">4.843</td>
+<td style="text-align: right;">83.14</td>
+<td style="text-align: right;">8.150</td>
+<td style="text-align: right;">31.42</td>
+<td style="text-align: right;">232.10</td>
+<td style="text-align: left;">ICP-OES</td>
+<td style="text-align: left;">CRPG - Thermo Fisher Scientific Icap 6500</td>
+<td style="text-align: left;">ICP-OES</td>
+<td style="text-align: left;">CRPG - Thermo Fisher Scientific Icap 6500</td>
+<td style="text-align: left;">https://onlinelibrary.wiley.com/doi/full/10.1111/arcm.12265</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Aux Minières</td>
+<td style="text-align: right;">4974</td>
+<td style="text-align: right;">5.8506</td>
+<td style="text-align: right;">49.4950</td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: left;">SLHAO108-B</td>
+<td style="text-align: left;">Smelting Slag</td>
+<td style="text-align: right;">0.08</td>
+<td style="text-align: right;">0.41</td>
+<td style="text-align: right;">3.88</td>
+<td style="text-align: right;">15.01</td>
+<td style="text-align: right;">0.18</td>
+<td style="text-align: right;">0.00</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0.75</td>
+<td style="text-align: right;">1.25</td>
+<td style="text-align: right;">0.13</td>
+<td style="text-align: right;">43.16</td>
+<td style="text-align: right;">-5.01</td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: right;">11.860</td>
+<td style="text-align: right;">125.90</td>
+<td style="text-align: right;">14.480</td>
+<td style="text-align: right;">-0.001</td>
+<td style="text-align: right;">0.201</td>
+<td style="text-align: right;">127.30</td>
+<td style="text-align: right;">1.984</td>
+<td style="text-align: right;">185.9</td>
+<td style="text-align: right;">2.613</td>
+<td style="text-align: right;">7.385</td>
+<td style="text-align: right;">17.850</td>
+<td style="text-align: right;">10.290</td>
+<td style="text-align: right;">4.674</td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: right;">7.016</td>
+<td style="text-align: right;">19.010</td>
+<td style="text-align: right;">1.061</td>
+<td style="text-align: right;">5.098</td>
+<td style="text-align: right;">3.661</td>
+<td style="text-align: right;">0.279</td>
+<td style="text-align: right;">54.33</td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: right;">1.510</td>
+<td style="text-align: right;">1.722</td>
+<td style="text-align: right;">8.280</td>
+<td style="text-align: right;">75.89</td>
+<td style="text-align: right;">11.310</td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: right;">2.2696</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">17.660</td>
+<td style="text-align: right;">30.320</td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: right;">26.83</td>
+<td style="text-align: right;">-0.001</td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: right;">19.670</td>
+<td style="text-align: right;">0.707</td>
+<td style="text-align: right;">104.70</td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: right;">0.657</td>
+<td style="text-align: right;">2.978</td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: right;">19.18</td>
+<td style="text-align: right;">0.255</td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: right;">1.601</td>
+<td style="text-align: right;">2.557</td>
+<td style="text-align: right;">569.1</td>
+<td style="text-align: right;">6.268</td>
+<td style="text-align: right;">113.20</td>
+<td style="text-align: right;">10.300</td>
+<td style="text-align: right;">24.08</td>
+<td style="text-align: right;">223.20</td>
+<td style="text-align: left;">ICP-OES</td>
+<td style="text-align: left;">CRPG - Thermo Fisher Scientific Icap 6500</td>
+<td style="text-align: left;">ICP-OES</td>
+<td style="text-align: left;">CRPG - Thermo Fisher Scientific Icap 6500</td>
+<td style="text-align: left;">https://onlinelibrary.wiley.com/doi/full/10.1111/arcm.12265</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Bigerling F70</td>
+<td style="text-align: right;">698</td>
+<td style="text-align: right;">6.0227</td>
+<td style="text-align: right;">49.3086</td>
+<td style="text-align: left;">-0025?~/0450?~</td>
+<td style="text-align: left;">2271</td>
+<td style="text-align: left;">Smelting Tap slag Slag</td>
+<td style="text-align: right;">0.11</td>
+<td style="text-align: right;">1.23</td>
+<td style="text-align: right;">5.48</td>
+<td style="text-align: right;">13.96</td>
+<td style="text-align: right;">0.86</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">1.53</td>
+<td style="text-align: right;">9.63</td>
+<td style="text-align: right;">0.40</td>
+<td style="text-align: right;">30.51</td>
+<td style="text-align: right;">-3.98</td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: right;">12.300</td>
+<td style="text-align: right;">218.00</td>
+<td style="text-align: right;">10.200</td>
+<td style="text-align: right;">0.020</td>
+<td style="text-align: right;">0.020</td>
+<td style="text-align: right;">165.00</td>
+<td style="text-align: right;">9.700</td>
+<td style="text-align: right;">275.0</td>
+<td style="text-align: right;">1.190</td>
+<td style="text-align: right;">8.300</td>
+<td style="text-align: right;">22.500</td>
+<td style="text-align: right;">9.080</td>
+<td style="text-align: right;">5.180</td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: right;">5.750</td>
+<td style="text-align: right;">17.800</td>
+<td style="text-align: right;">0.350</td>
+<td style="text-align: right;">5.180</td>
+<td style="text-align: right;">4.280</td>
+<td style="text-align: right;">0.050</td>
+<td style="text-align: right;">67.90</td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: right;">1.970</td>
+<td style="text-align: right;">1.570</td>
+<td style="text-align: right;">13.800</td>
+<td style="text-align: right;">79.70</td>
+<td style="text-align: right;">11.400</td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: right;">6.4800</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">16.100</td>
+<td style="text-align: right;">25.300</td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: right;">0.22</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: right;">25.100</td>
+<td style="text-align: right;">0.590</td>
+<td style="text-align: right;">237.00</td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: right;">0.780</td>
+<td style="text-align: right;">3.210</td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: right;">33.80</td>
+<td style="text-align: right;">0.300</td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: right;">1.580</td>
+<td style="text-align: right;">4.090</td>
+<td style="text-align: right;">776.0</td>
+<td style="text-align: right;">1.970</td>
+<td style="text-align: right;">122.00</td>
+<td style="text-align: right;">12.800</td>
+<td style="text-align: right;">133.00</td>
+<td style="text-align: right;">293.00</td>
+<td style="text-align: left;">ICP-OES</td>
+<td style="text-align: left;">CRPG - Thermo Fisher Scientific Icap 6500</td>
+<td style="text-align: left;">ICP-OES</td>
+<td style="text-align: left;">CRPG - Thermo Fisher Scientific Icap 6500</td>
+<td style="text-align: left;">https://onlinelibrary.wiley.com/doi/full/10.1111/arcm.12265</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Bois dHaouy 01</td>
+<td style="text-align: right;">74</td>
+<td style="text-align: right;">5.8537</td>
+<td style="text-align: right;">49.5021</td>
+<td style="text-align: left;">0375?~/0600?~</td>
+<td style="text-align: left;">SCHAO 103a</td>
+<td style="text-align: left;">Smelting Slag</td>
+<td style="text-align: right;">0.08</td>
+<td style="text-align: right;">0.12</td>
+<td style="text-align: right;">3.13</td>
+<td style="text-align: right;">10.17</td>
+<td style="text-align: right;">0.03</td>
+<td style="text-align: right;">0.03</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">0.64</td>
+<td style="text-align: right;">0.91</td>
+<td style="text-align: right;">0.12</td>
+<td style="text-align: right;">53.84</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: right;">8.100</td>
+<td style="text-align: right;">128.00</td>
+<td style="text-align: right;">9.170</td>
+<td style="text-align: right;">0.010</td>
+<td style="text-align: right;">0.020</td>
+<td style="text-align: right;">81.60</td>
+<td style="text-align: right;">1.000</td>
+<td style="text-align: right;">87.0</td>
+<td style="text-align: right;">1.870</td>
+<td style="text-align: right;">2.900</td>
+<td style="text-align: right;">10.550</td>
+<td style="text-align: right;">5.180</td>
+<td style="text-align: right;">2.920</td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: right;">3.400</td>
+<td style="text-align: right;">13.400</td>
+<td style="text-align: right;">0.780</td>
+<td style="text-align: right;">4.000</td>
+<td style="text-align: right;">1.900</td>
+<td style="text-align: right;">0.010</td>
+<td style="text-align: right;">47.70</td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: right;">0.660</td>
+<td style="text-align: right;">1.200</td>
+<td style="text-align: right;">7.300</td>
+<td style="text-align: right;">59.70</td>
+<td style="text-align: right;">2.100</td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: right;">51.2000</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">14.650</td>
+<td style="text-align: right;">32.500</td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: right;">0.05</td>
+<td style="text-align: right;">9.500</td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: right;">14.000</td>
+<td style="text-align: right;">1.000</td>
+<td style="text-align: right;">59.80</td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: right;">0.400</td>
+<td style="text-align: right;">1.890</td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: right;">11.30</td>
+<td style="text-align: right;">0.158</td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: right;">0.750</td>
+<td style="text-align: right;">3.200</td>
+<td style="text-align: right;">118.0</td>
+<td style="text-align: right;">2.000</td>
+<td style="text-align: right;">62.50</td>
+<td style="text-align: right;">5.130</td>
+<td style="text-align: right;">12.00</td>
+<td style="text-align: right;">143.50</td>
+<td style="text-align: left;">ICP-MS</td>
+<td style="text-align: left;">ALS Chemex - Unknown ME-MS61</td>
+<td style="text-align: left;">ICP-MS</td>
+<td style="text-align: left;">ALS Chemex - Unknown ME-MS61</td>
+<td style="text-align: left;">https://onlinelibrary.wiley.com/doi/full/10.1111/arcm.12265</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Bois dHaouy 01</td>
+<td style="text-align: right;">75</td>
+<td style="text-align: right;">5.8537</td>
+<td style="text-align: right;">49.5021</td>
+<td style="text-align: left;">0375?~/0600?~</td>
+<td style="text-align: left;">SCHAO 103b</td>
+<td style="text-align: left;">Smelting Slag</td>
+<td style="text-align: right;">0.09</td>
+<td style="text-align: right;">0.24</td>
+<td style="text-align: right;">5.27</td>
+<td style="text-align: right;">13.76</td>
+<td style="text-align: right;">0.04</td>
+<td style="text-align: right;">0.04</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">1.01</td>
+<td style="text-align: right;">1.41</td>
+<td style="text-align: right;">0.14</td>
+<td style="text-align: right;">43.52</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: right;">4.900</td>
+<td style="text-align: right;">72.80</td>
+<td style="text-align: right;">7.100</td>
+<td style="text-align: right;">0.010</td>
+<td style="text-align: right;">0.020</td>
+<td style="text-align: right;">72.90</td>
+<td style="text-align: right;">2.200</td>
+<td style="text-align: right;">59.0</td>
+<td style="text-align: right;">1.270</td>
+<td style="text-align: right;">3.900</td>
+<td style="text-align: right;">10.100</td>
+<td style="text-align: right;">4.830</td>
+<td style="text-align: right;">2.490</td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: right;">4.400</td>
+<td style="text-align: right;">11.500</td>
+<td style="text-align: right;">0.860</td>
+<td style="text-align: right;">3.200</td>
+<td style="text-align: right;">1.790</td>
+<td style="text-align: right;">0.010</td>
+<td style="text-align: right;">33.60</td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: right;">0.670</td>
+<td style="text-align: right;">5.760</td>
+<td style="text-align: right;">5.900</td>
+<td style="text-align: right;">47.30</td>
+<td style="text-align: right;">3.000</td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: right;">3.2000</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">11.550</td>
+<td style="text-align: right;">22.900</td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: right;">0.05</td>
+<td style="text-align: right;">11.200</td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: right;">12.700</td>
+<td style="text-align: right;">1.000</td>
+<td style="text-align: right;">33.60</td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: right;">0.360</td>
+<td style="text-align: right;">1.770</td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: right;">8.10</td>
+<td style="text-align: right;">0.137</td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: right;">0.720</td>
+<td style="text-align: right;">2.500</td>
+<td style="text-align: right;">67.0</td>
+<td style="text-align: right;">2.000</td>
+<td style="text-align: right;">52.20</td>
+<td style="text-align: right;">5.030</td>
+<td style="text-align: right;">27.00</td>
+<td style="text-align: right;">127.00</td>
+<td style="text-align: left;">ICP-MS</td>
+<td style="text-align: left;">ALS Chemex - Unknown ME-MS61</td>
+<td style="text-align: left;">ICP-MS</td>
+<td style="text-align: left;">ALS Chemex - Unknown ME-MS61</td>
+<td style="text-align: left;">https://onlinelibrary.wiley.com/doi/full/10.1111/arcm.12265</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p><br>
+<br>
+</p>
 </div>
 <div id="tabset-4-2">
-<div class="sourceCode" id="cb10"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a></a><span class="co">#' Compute the mean of random normal numbers</span></span>
-<span id="cb10-2"><a></a><span class="co">#'</span></span>
-<span id="cb10-3"><a></a><span class="co">#' This function generates `n` random numbers from a normal distribution</span></span>
-<span id="cb10-4"><a></a><span class="co">#' with given `mean` and `sd`, then computes and prints their mean.</span></span>
-<span id="cb10-5"><a></a><span class="co">#'</span></span>
-<span id="cb10-6"><a></a><span class="co">#' @param n Integer, number of random values to generate.</span></span>
-<span id="cb10-7"><a></a><span class="co">#' @param mean Numeric, the mean of the normal distribution.</span></span>
-<span id="cb10-8"><a></a><span class="co">#' @param sd Numeric, the standard deviation of the normal distribution.</span></span>
-<span id="cb10-9"><a></a><span class="co">#'</span></span>
-<span id="cb10-10"><a></a><span class="co">#' @return The computed mean (numeric).</span></span>
-<span id="cb10-11"><a></a><span class="co">#' @export</span></span>
-<span id="cb10-12"><a></a><span class="co">#'</span></span>
-<span id="cb10-13"><a></a><span class="co">#' @examples</span></span>
-<span id="cb10-14"><a></a><span class="co">#' simulate_mean(100, mean = 10, sd = 2)</span></span>
-<span id="cb10-15"><a></a>simulate_mean <span class="ot">&lt;-</span> <span class="cf">function</span>(<span class="at">n =</span> <span class="dv">100</span>, <span class="at">mean =</span> <span class="dv">0</span>, <span class="at">sd =</span> <span class="dv">1</span>) {</span>
-<span id="cb10-16"><a></a>  x <span class="ot">&lt;-</span> <span class="fu">rnorm</span>(n, <span class="at">mean =</span> mean, <span class="at">sd =</span> sd)</span>
-<span id="cb10-17"><a></a>  mean_x <span class="ot">&lt;-</span> <span class="fu">mean</span>(x)</span>
-<span id="cb10-18"><a></a>  <span class="fu">cat</span>(<span class="st">"The mean of x is:"</span>, mean_x, <span class="st">"</span><span class="sc">\n</span><span class="st">"</span>)</span>
-<span id="cb10-19"><a></a>  <span class="fu">return</span>(mean_x)</span>
-<span id="cb10-20"><a></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p><br><br></p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a></a><span class="fu">chrono</span>(<span class="at">d =</span> df<span class="sc">$</span>dataset_adisser17)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><img src="https://raw.githubusercontent.com/iramat/iRamat/master/img/doc/chrono_sites_seriated.png" style="width: 1000px;vertical-align: middle;"></p>
 </div>
 <div id="tabset-4-3">
-<p><small><a href="https://github.com/iramat/iramat-private" class="uri">https://github.com/iramat/iramat-private</a></small></p>
-<p><img src="https://raw.githubusercontent.com/zoometh/thomashuet/master/img/r-pkg--repo-private-github.png" style="width: 1000px;vertical-align: middle;"></p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a></a>df <span class="ot">&lt;-</span> <span class="fu">db_api_connect</span>(<span class="at">all_datasets =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb7-2"><a></a><span class="co"># all_datasets = TRUE: collecting all datasets from urls_data.tsv</span></span>
+<span id="cb7-3"><a></a><span class="co"># Requesting: http://157.136.252.188:3000/dataset_tyoungxx</span></span>
+<span id="cb7-4"><a></a><span class="co"># Requesting: http://157.136.252.188:3000/dataset_adisser17</span></span>
+<span id="cb7-5"><a></a><span class="co"># Requesting: http://157.136.252.188:3000/dataset_gzabinski23</span></span>
+<span id="cb7-6"><a></a><span class="co"># Requesting: http://157.136.252.188:3000/dataset_gpages22</span></span>
+<span id="cb7-7"><a></a><span class="co"># Requesting: http://157.136.252.188:3000/dataset_vserneels93</span></span>
+<span id="cb7-8"><a></a><span class="co"># Requesting: http://157.136.252.188:3000/dataset_sleroy12</span></span>
+<span id="cb7-9"><a></a><span class="co"># Requesting: http://157.136.252.188:3000/dataset_pdillmann17</span></span>
+<span id="cb7-10"><a></a><span class="co"># Requesting: http://157.136.252.188:3000/dataset_amdesaulty8a</span></span>
+<span id="cb7-11"><a></a><span class="co"># Requesting: http://157.136.252.188:3000/dataset_amdesaulty8b</span></span>
+<span id="cb7-12"><a></a><span class="co"># Requesting: http://157.136.252.188:3000/dataset_jmilot16</span></span>
+<span id="cb7-13"><a></a><span class="co"># Requesting: http://157.136.252.188:3000/dataset_mpcoustures06</span></span>
+<span id="cb7-14"><a></a><span class="co"># Requesting: http://157.136.252.188:3000/dataset_gstdidier17</span></span>
+<span id="cb7-15"><a></a><span class="co"># Requesting: http://157.136.252.188:3000/dataset_mbrauns13</span></span>
+<span id="cb7-16"><a></a><span class="co"># Requesting: http://157.136.252.188:3000/dataset_lheritier20</span></span>
+<span id="cb7-17"><a></a><span class="co"># Requesting: http://157.136.252.188:3000/dataset_mleroy97</span></span>
+<span id="cb7-18"><a></a><span class="co"># Requesting: http://157.136.252.188:3000/dataset_mleroy24</span></span>
+<span id="cb7-19"><a></a><span class="co"># Requesting: http://157.136.252.188:3000/dataset_leschenlohr01</span></span>
+<span id="cb7-20"><a></a><span class="co"># Requesting: http://157.136.252.188:3000/dataset_tivancan21</span></span>
+<span id="cb7-21"><a></a><span class="co"># Requesting: http://157.136.252.188:3000/dataset_pmameli14</span></span>
+<span id="cb7-22"><a></a><span class="co"># Requesting: http://157.136.252.188:3000/dataset_kmittelstaedt22</span></span>
+<span id="cb7-23"><a></a><span class="co"># Requesting: http://157.136.252.188:3000/dataset_mbenvenuti13</span></span>
+<span id="cb7-24"><a></a><span class="co"># Collected and merged 21 datasets. Total rows: 3225</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="tabset-4-4">
-<p><small><a href="https://github.com/iramat/iRamat" class="uri">https://github.com/iramat/iRamat</a></small></p>
-<p><img src="https://raw.githubusercontent.com/zoometh/thomashuet/master/img/r-pkg--repo-public-github.png" style="width: 1000px;vertical-align: middle;"></p>
 </div>
 </div>
-</div>
-</section></section>
-<section>
-<section id="code-as-data" class="title-slide slide level1 center">
-<h1><em>Code as data</em></h1>
-
 </section>
-<section id="réutiliser" class="slide level2">
-<h2>Réutiliser</h2>
-<div class="panel-tabset">
-<ul id="tabset-5" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-5-1">Citer</a></li><li><a href="#tabset-5-2">Publier sur Zenodo</a></li><li><a href="#tabset-5-3">Publier dans une revue</a></li></ul>
-<div class="tab-content">
-<div id="tabset-5-1">
-<div class="cell">
-<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a></a><span class="fu">citation</span>(<span class="st">"iRamat"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>To cite package 'iRamat' in publications use:
-
-  Huet T (2025). _iRamat: Statistical analysis on Archaeomaterial_. R
-  package version 1.0.0, commit
-  2106b34129c6c9ab96d8e6302d807ab35f7ed13d,
-  &lt;https://github.com/iramat/iRamat&gt;.
-
-A BibTeX entry for LaTeX users is
-
-  @Manual{,
-    title = {iRamat: Statistical analysis on Archaeomaterial},
-    author = {Thomas Huet},
-    year = {2025},
-    note = {R package version 1.0.0, commit 2106b34129c6c9ab96d8e6302d807ab35f7ed13d},
-    url = {https://github.com/iramat/iRamat},
-  }</code></pre>
-</div>
-</div>
-<p><br><br></p>
-</div>
-<div id="tabset-5-2">
-<p><small><a href="https://docs.github.com/en/repositories/archiving-a-github-repository/referencing-and-citing-content" class="uri">https://docs.github.com/en/repositories/archiving-a-github-repository/referencing-and-citing-content</a></small></p>
-<p><img src="https://raw.githubusercontent.com/zoometh/thomashuet/master/img/app-zenodo-github-release.png" style="width: 900px;vertical-align: middle;"></p>
-</div>
-<div id="tabset-5-3">
-<p><small><a href="https://joss.theoj.org/papers/10.21105/joss.03191" class="uri">https://joss.theoj.org/papers/10.21105/joss.03191</a></small></p>
-<p><img src="https://raw.githubusercontent.com/zoometh/thomashuet/master/img/r-pkg--repo-public-publish-github.png" style="width: 900px;vertical-align: middle;"></p>
-</div>
-</div>
-</div>
+<section id="perspectives" class="slide level2">
+<h2>Perspectives</h2>
+<p>La base CHIPS est fonctionnelle, rassemble des milliers d’analyses chimiques révisées et normalisées. Les prochaines étapes de son développement informatique concernent:</p>
+<ul>
+<li>dashboard: amélioration de l’interface, développement de nouveaux outils de visualisation, de sélection et d’export.</li>
+<li>développement des fonctions R (package iRamat)</li>
+<li>création d’une interface graphique utilisateur (GUI) pour la saisie de nouvelles données (<b><span style="color:black">C <span style="color:grey">R</span> U D</span></b>)</li>
+<li>un data pipeline entre l’API des <em>datasets</em> et Zenodo pour un dépôt standardisé et semi-automatique</li>
+</ul>
 </section></section>
-<section id="discussion" class="title-slide slide level1 center" data-background-image="https://raw.githubusercontent.com/zoometh/thomashuet/master/img/r-pkg--repo-public-github.png" data-background-opacity="0.5" data-background-size="800px" data-background-repeat="repeat">
+<section id="discussion" class="title-slide slide level1 center" data-background-image="https://raw.githubusercontent.com/zoometh/thomashuet/master/img/r-pkg--repo-public-github.png" data-background-opacity="0.3" data-background-size="800px" data-background-repeat="repeat">
 <h1>Discussion</h1>
+<ul>
+<li>Site web: <a href="https://iramat.github.io/chips" class="uri">https://iramat.github.io/chips</a></li>
+<li>GitHub: <a href="https://github.com/iramat/chips" class="uri">https://github.com/iramat/chips</a></li>
+</ul>
 
 
 </section>
@@ -627,14 +1463,17 @@ A BibTeX entry for LaTeX users is
 <section id="footnotes" class="footnotes footnotes-end-of-document smaller scrollable" role="doc-endnotes"><h2>Footnotes</h2>
 
 <ol>
-<li id="fn1"><p>Batist, Z. and Roe, J. 2024 Open Archaeology, Open Source? Collaborative practices in an emerging community of archaeological software engineers, <em>Internet Archaeology</em> 67. <a href="https://doi.org/10.11141/ia.67.13" class="uri">https://doi.org/10.11141/ia.67.13</a></p></li>
-<li id="fn2"><p>Bommarito, E., &amp; Bommarito II, M. J. (2021). An empirical analysis of the R package ecosystem. <em>arXiv preprint arXiv:2102.09904</em>.</p></li>
+<li id="fn1"><p>IRAMAT-CNRS</p></li>
+<li id="fn2"><p>IRAMAT-CNRS</p></li>
+<li id="fn3"><p>ISO 8601-2:2019</p></li>
+<li id="fn4"><p><em>Operating System</em>, système d’exploitation</p></li>
+<li id="fn5"><p>Système de Gestion de Bases de Données</p></li>
 </ol>
 </section>
     </div>
   <div class="quarto-auto-generated-content" style="display: none;">
 <div class="footer footer-default">
-<p>Thomas Huet - <img src="https://raw.githubusercontent.com/zoometh/thomashuet/master/img/inst-cnrs-iramat.png" style="height: 17px;vertical-align: middle;"> - 7 Octobre, 2025, CEB, Orléans</p>
+<p>T. Huet, A. Disser - <img src="https://raw.githubusercontent.com/zoometh/thomashuet/master/img/inst-cnrs-iramat.png" style="height: 17px;vertical-align: middle;"> - 9 Décembre, 2025, LAPA, Saclay</p>
 </div>
 </div></div>
 

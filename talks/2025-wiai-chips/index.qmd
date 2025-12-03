@@ -6,6 +6,10 @@ author:
     affiliation: 
       - id: cnrs
         name: <span style="font-size:17pt">IRAMAT-CNRS</span>
+  - name: Alexandre Disser
+    affiliation: 
+      - id: cnrs
+        name: <span style="font-size:17pt">IRAMAT-CNRS</span>
 title-slide-attributes:
     data-background-image: "https://raw.githubusercontent.com/iramat/iramat-dev/master/img/ana-xrf-pymca-ex.png"
     data-background-size: "90%"
@@ -29,7 +33,7 @@ format:
     # self-contained: true
     # embed-resources: true
     # logo: https://raw.githubusercontent.com/zoometh/neonet/master/doc/img/neonet.png
-    footer: "Thomas Huet - <img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/inst-cnrs-iramat.png' style='height: 17px;vertical-align: middle;'> - 9 Décembre, 2025, LAPA, Saclay"
+    footer: "T. Huet, A. Disser - <img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/inst-cnrs-iramat.png' style='height: 17px;vertical-align: middle;'> - 9 Décembre, 2025, LAPA, Saclay"
     margin: 0
     width: 1200
 ---
@@ -59,9 +63,10 @@ GitHub <img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img
 
 <center>
 
-![](https://upload.wikimedia.org/wikipedia/commons/7/76/Jim_Gray_Computing_in_the_21st_Century_2006.jpg){width="300" style="vertical-align: middle;"}
+<img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/app-prg-sql-1.png' style='width: 400px;vertical-align: middle;'> 
+
 </center>
-<div class="captiontext"> _"A data structure is nothing without an algorithm, and an algorithm is nothing without a data structure."_ -- Jim Gray © Microsoft Research, CC BY-SA </div>
+<div class="captiontext"> <https://www.reddit.com/r/ProgrammerHumor/> </div>
 
 
 :::
@@ -86,114 +91,147 @@ Découvrir -- ou approfondir -- une solution logicielle open-source en revenant 
 
 # La BDD CHIPS
 
+## Motivations
+
+Malgré l’importance des données de l'archéométallurgie du fer pour reconstruire les techniques anciennes, comprendre les contextes et modéliser les réseaux d’échanges, l’absence d’un référentiel chimique partagé a conduit à la dispersion, l’hétérogénéité et la variabilité de qualité des analyses. 
+\
+\
+CHIPS vise à (i) centraliser, normaliser, rendre interopérables des données, et (ii) identifier, développer et documenter les référentiels, afin de faciliter l'exploitation collective des données de l'archéométallurgie du fer.
 
 
-## {}
-
+## Présentation
 
 :::: {.columns}
 
 ::: {.column width="70%"}
-CHIPS, ...
 
-<img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/prog-r-1.png' style='height: 50px;vertical-align: middle;'> est un langage de script orienté statistiques. C'est le langage préférés des archéologues[^1] qui utilisent des _packages_ génériques comme `ggplot` <img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/r-pkg-ggplot.png' style='width: 50px;vertical-align: middle;'> pour les graphiques (développé par Hadley Wickham), `terra` <img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/r-pkg-terra.png' style='width: 50px;vertical-align: middle;'> et `sf` <img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/r-pkg-sf.png' style='width: 50px;vertical-align: middle;'> pour l'analyse spatiale, etc., ou d'autres plus spécialisés: `nexus` <img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/r-pkg-nexus.png' style='width: 50px;vertical-align: middle;'>, `tidyspec` <img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/r-pkg-tidyspec.png' style='width: 50px;vertical-align: middle;'>, etc.
+CHIPS est une base de données <img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/app-bd-postgres-2.png' style='height: 40px;vertical-align: middle;'>  destinée aux archéométallurgistes du fer, offrant des références chimiques normalisées. Les données sont rendues interopérable grâce à des référentiels standardisés (e.g. <img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/lod-gazetteer-periodo.png' style='height: 40px;vertical-align: middle;'>,<img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/lod-gazetteer-pactols.png' style='height: 50px;vertical-align: middle;'>).  \ \
+Elle a été principalement développée par Alexandre Disser[^1] et Sylvain Bauvais[^1].
 
 
-[^1]:  Batist, Z. and Roe, J. 2024 Open Archaeology, Open Source? Collaborative practices in an emerging community of archaeological software engineers, _Internet Archaeology_ 67. <https://doi.org/10.11141/ia.67.13>
+[^1]: IRAMAT-CNRS
+
+:::
+
+::: {.column width="30%"}
+<center>
+
+<img src='https://raw.githubusercontent.com/iramat/iramat-dev/master/img/fer.png' style='width: 750px;vertical-align: middle;'>
+
+</center>
+
+<div class="captiontext">loupe de fer</div>
+:::
+
+::::
+
+
+## Architecture
+
+::: {.panel-tabset}
+
+### MCD
+
+:::: {.columns}
+
+::: {.column width="25%"}
+Modèle conceptuel de données simplifié 
+
+:::
+
+::: {.column width="75%"}
+
+<img src='https://raw.githubusercontent.com/iramat/chips/master/img/db_erd.png' style='width: 800px;vertical-align: middle;'> 
+
+:::
+
+::::
+
+### Standards
+
+Standards et isostandards: 
+
+* <img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/lod-gazetteer-periodo.png' style='height: 40px;vertical-align: middle;'> : répertoire de périodes (PID: `ark`)
+* <img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/lod-gazetteer-pactols.png' style='height: 50px;vertical-align: middle;'> : thésaurus pour l'archéologie (PID: `ark`)
+* <img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/lod-gazetteer-aat-2.png' style='height: 50px;vertical-align: middle;'>: thésaurus pour les objets d'art et architecture (PID: `aat`)
+* <img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/lod-iso-edtf.png' style='height: 50px;vertical-align: middle;'>[^2]: pour des dates _fuzzy_ ou très précises (_timestamped_)
+
+[^2]: ISO 8601-2:2019
+
+::: {.notes}
+pour faciliter l'intéropérabilité de ses données
+:::
+
+
+### Technologies
+
+Technologies matures et open-source :
+
+* <img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/app-os-linux-ubuntu-1.png' style='height: 40px;vertical-align: middle;'> : l'OS[^4] de la plupart des serveurs web. 
+* <img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/app-bd-postgres-2.png' style='height: 40px;vertical-align: middle;'> : parmi les SGBD[^3] open-source, c’est la plus proche de Oracle.
+* <img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/app-prg-python.png' style='height: 40px;vertical-align: middle;'> : le langage de programmation le plus utilisé au monde.
+* <img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/web-api-2.png' style='height: 40px;vertical-align: middle;'> : protocole standard d'interface de programmation d'applications sur le web.
+
+[^4]: _Operating System_, système d'exploitation
+[^3]: Système de Gestion de Bases de Données
+
+::: {.notes}
+pour garantir la maintenance des données sur le long terme
+:::
+
+### CHIPS et CHIPS dev
+
+:::: {.columns}
+
+* l'accès et l'ouverture de CHIPS limités
+* clone de CHIPS, CHIPS dev, ouverte sur le web dashboard
+
+::: {.column width="35%"}
+
+<center>
+
+CHIPS
+
+<img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/bd--generic.png' style='height: 70px;vertical-align: middle;'>
+
+<b><span style="color:black">C <span style="color:grey">R</span> U D</span></b>
+
+<small> 🏠 Huma-Num </small>
+
+</center>
 
 :::
 
 ::: {.column width="30%"}
 
-![](https://upload.wikimedia.org/wikipedia/commons/f/fa/Hadley-wickham2016-02-04.jpg){width="300" style="vertical-align: middle;"}
-<div class="captiontext">_"Anything that can be automated, should be automated"_ -- Hadley Wickham, 2023 <img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/lod-licences-publicdomain-1.png' style='height: 12px;vertical-align: middle;'> Wikipedia </div>
+<center>
+
+<img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/app-prog-bash.png' style='height: 60px;vertical-align: middle;'>
+
+`copy data only`<br>
+🠮 🠮 🠮
+
+</center>
+
+:::
+
+::: {.column width="35%"}
+
+<center>
+
+CHIPS dev
+
+<img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/bd--generic.png' style='height: 70px;vertical-align: middle;'>
+
+<b><span style="color:grey">C <span style="color:black">R</span> U D</span></b>
+
+<small> 🏠 Mésocentre UPSac </small>
+
+</center>
+
 :::
 
 ::::
-
-
-
-## Les _packages_ R
-
-:::: {.columns}
-
-::: {.column width="50%"}
-
-- rassemblent du code, de la documentation et parfois des données.<br>
-
-- conçus pour être facilement partagé, installé et réutilisé et ainsi garantir la reproductibilité des analyses.
-
-- <img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/lod-data-fair.png' style='width: 350px;vertical-align: middle;'>
-:::
-
-::: {.column width="50%"}
-
-```{=html}
-<div style="width:1000px; height:450px; overflow:hidden;">
-  <iframe src="https://cran.r-project.org/"
-          style="transform: scale(0.9); transform-origin: 0 0; width:750px; height:500px; border:none;">
-  </iframe>
-</div>
-```
-<div class="captiontext">Le _Comprehensive R Archive Network_ (CRAN) <https://cran.r-project.org/>, l'archive officielle des _packages_ R </div>
-:::
-
-::::
-
-
-
-## Les _packages_ R (suite)
-
-:::: {.columns}
-
-::: {.column width="60%"}
-- En 2023, 19,000+ packages hebergés sur le CRAN. 
-
-- En 2021, 25,000+ packages hebergés sur GitHub[^2]
-:::
-
-::: {.column width="40%"}
-<img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/r-pkgs-mosaic-3.png' style='width: 600px;vertical-align: middle;'>
-:::
-
-::::
-
-[^2]: Bommarito, E., & Bommarito II, M. J. (2021). An empirical analysis of the R package ecosystem. _arXiv preprint arXiv:2102.09904_.
-
-## Trouver un package <img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/r-pkgs-mosaic-4.png' style='width: 80px;vertical-align: middle;'>
-
-::: {.panel-tabset}
-
-### `{pkgsearch}`
-
-```{r echo=TRUE}
-# install.packages("pkgsearch")
-library(pkgsearch)
-ps("raman")
-```
-
-### R-Universe
-
-<small><https://r-universe.dev/search?q=raman></small>
-```{=html}
-<iframe width="1200" height="500" src="https://r-universe.dev/search?q=raman" title="Search for Raman"></iframe>
-```
-
-
-### GitHub
-
-<small><https://github.com/search/advanced></small>
-<img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/r-pkg--search-github.png' style='width: 1000px;vertical-align: middle;'><br><center>⬇️</center><br>
-<img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/r-pkg--search-github-1.png' style='width: 1000px;vertical-align: middle;'>
-
-### open-archaeo
-
-[open-archaeo](https://open-archaeo.info/) et le [SIG-SSLA](https://sslarch.github.io/)
-
-```{=html}
-<iframe width="1200" height="500" src="https://open-archaeo.info/tags/x-ray-fluorescence/" title="Search for Raman"></iframe>
-```
-<small>https://open-archaeo.info/tags/x-ray-fluorescence/</small>
 
 :::
 
@@ -201,34 +239,55 @@ ps("raman")
 # Intéropérabilité et Réusabilité
 
 
-## Repository GitHub
+## Plateforme GEO
 
-https://github.com/iramat/chips
+```{=html}
+<center>
+<iframe width="1000" height="500" src="https://fnp.huma-num.fr/adws/app/efbc5983-40d6-11ec-810c-a7f8dd92e681/index.html" title="Quarto Documentation"></iframe>
+</center>
+```
 
-
-## Dashboard
+## Dashboard (1/2)
 
 ::: {.panel-tabset}
 
 ### Objectif
 
-Offir une vue synthétique du contenu de la BDD CHIPS; faciliter l'identification, l'accès, l'intéropérabilité et la réutilsation des données <img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/lod-data-fair.png' style='height: 60px;vertical-align: middle;'>. Indexation spatiale et par jeux de données (_datasets_)
+Offir une vue synthétique du contenu de la BDD CHIPS; faciliter l'identification, l'accès, l'intéropérabilité et la réutilisation des données <img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/lod-data-fair.png' style='height: 50px;vertical-align: middle;'>. 
+\
+\
+Indexation spatiale et par jeux de données (_datasets_)
 
-### Carte des _datasets_
+### _Datasets_
 
-<img src='https://raw.githubusercontent.com/iramat/iramat-dev/master/img/bdd-chips-dash-mapgen.png' style='width: 1000px;vertical-align: middle;'>
+<center>
 
-### Carte des échantillons
+<img src='https://raw.githubusercontent.com/iramat/iramat-dev/master/img/bdd-chips-dash-mapgen.png' style='width: 750px;vertical-align: middle;'>
 
-<img src='https://raw.githubusercontent.com/iramat/iramat-dev/master/img/bdd-chips-dash-map-dataset.png' style='width: 1000px;vertical-align: middle;'>
+</center>
 
-### Valeurs des échantillons
+### Echantillons
 
-<img src='https://raw.githubusercontent.com/iramat/iramat-dev/master/img/bdd-chips-dash-chart-line.png' style='width: 1000px;vertical-align: middle;'>
+<center>
+
+<img src='https://raw.githubusercontent.com/iramat/iramat-dev/master/img/bdd-chips-dash-map-dataset.png' style='width: 750px;vertical-align: middle;'>
+
+</center>
+
+:::
+
+## Dashboard (2/2)
+
+::: {.panel-tabset}
+
 
 ### API des échantillons 
 
-<img src='https://raw.githubusercontent.com/iramat/iramat-dev/master/img/bdd-chips-dash-api.png' style='width: 1000px;vertical-align: middle;'>
+<center>
+
+<img src='https://raw.githubusercontent.com/iramat/iramat-dev/master/img/bdd-chips-dash-api.png' style='width: 850px;vertical-align: middle;'>
+
+</center>
 
 ### _Live demo_
 
@@ -240,304 +299,84 @@ Offir une vue synthétique du contenu de la BDD CHIPS; faciliter l'identificatio
 
 ## Analyses avec R
 
+::: {.panel-tabset}
 
-```{. code-line-numbers="1|3|4|6|9|12-22|28|29"}
+### Un _dataset_
+
+```{r, echo = TRUE}
 # install.packages("devtools")
 # devtools::install_github("iramat/iRamat")
 library(iRamat)
 
 df <- db_api_connect()
+names(df)
+```
+```{r, echo = TRUE}
+library(dplyr)
+library(kableExtra)
+
+df$dataset_adisser17 %>%
+  select(-reference) %>%
+  head(10) %>%
+  kable("html") %>%
+  kable_styling(full_width = FALSE, position = "center", font_size = 18)
+```
+\
+\
+
+### Un _dataset_ (chronologie)
+
+```{.r}
 chrono(d = df$dataset_adisser17)
 ```
 
+<img src='https://raw.githubusercontent.com/iramat/iRamat/master/img/doc/chrono_sites_seriated.png' style='width: 1000px;vertical-align: middle;'>
 
-::: {.panel-tabset}
-
-### `DESCRIPTION`
-
-Le fichier [`DESCRIPTION`](https://github.com/iramat/iRamat/blob/main/DESCRIPTION) contient les métadonnées du _package_
-
-```{.md code-line-numbers="1|3|4|6|9|12-22|28|29"}
-Package: iRamat
-Type: Package
-Title: Statistical analysis on Archaeomaterial
-Description: Statistical analysis on Archaeomaterial.
-Version: 1.0.0
-Authors@R: c(person("Thomas", "Huet", email = "thomas.huet@cnrs.fr", role = c("aut", "cre"), comment=c(ORCID="0000-0002-1112-6122")))
-Depends:
-    R (>= 4.0.1)
-License: MIT + file LICENSE
-Encoding: UTF-8
-LazyData: true
-Imports:
-    dplyr,
-    ggplot2,
-    forcats,
-    stringr,
-    hash,
-    jsonlite,
-    httr,
-    imager,
-    spatstat.geom,
-    spatstat.explore   
-RoxygenNote: 7.3.2
-Suggests: 
-    testthat (>= 3.0.0),
-    ggpubr
-Config/testthat/edition: 3
-URL: https://github.com/iramat/iRamat
-BugsReport: https://github.com/iramat/iRamat/issues
-```
-
-<br><br>
-
-### `LICENSE`
-
-Les fichiers [`LICENSE`](https://github.com/iramat/iRamat/blob/main/LICENSE) et [`LICENSE.md`](https://github.com/iramat/iRamat/blob/main/LICENSE.md) contiennent la licence du _package_
-
-:::: {.columns}
-
-::: {.column width="40%"}
-
-[`LICENSE`](https://github.com/iramat/iRamat/blob/main/LICENSE)
-```{.md}
-YEAR: 2025
-COPYRIGHT HOLDER: IRAMAT-CNRS
-```
-
-:::
-
-::: {.column width="60%"}
-
-[`LICENSE.md`](https://github.com/iramat/iRamat/blob/main/LICENSE.md)
-```{.md}
-# MIT License
-
-Copyright (c) 2025 IRAMAT-CNRS
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-(...)
-```
-
-:::
-
-::::
-
-### `README.md`
-
-Le fichier [`README.md`](https://github.com/iramat/iRamat?tab=readme-ov-file) présente le _package_
-
-<img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/r-pkg--readme-github.png' style='width: 1000px;vertical-align: middle;'>
-
-
-### `R/`
-
-Le dossier [`R/`](https://github.com/iramat/iRamat/tree/main/R) contient les fonctions R
-
-```{.r code-line-numbers="1|3|4|6-9|11|13-16|18|19-26" code-overflow="wrap"}
-#' Connect the CHIPS DB API and return an R object (dataframe, etc.)
-#'
-#' @name db_api_connect
-#' @description Connect the CHIPS DB API and return an R object (dataframe, etc.). The default dataset is dataset_adisser17, accessed at <http://157.136.252.188:3000/dataset_adisser17>
-#'
-#' @param d A hash object. If none is provided, a new one will be created.
-#' @param api_url An URL landing to an API. Default: 'dataset_adisser17'.
-#' @param output_format The selected output format. Default "dataframe".
-#' @param verbose if TRUE (by default), verbose.
-#'
-#' @return An R object.
-#'
-#' @examples
-#' df <- db_api_connect()
-#' # Show the first rows of the dataframe
-#' head(df$dataset_adisser17)
-#' 
-#' @export
-db_api_connect <- function(d = NA,
-                           api_url = "http://157.136.252.188:3000/dataset_adisser17",
-                           output_format = "dataframe",
-                           verbose = TRUE){
-                           
-                           (...)
-                           
-                           }
-```
-
-<br><br>
-
-### `inst/extdata/`
-
-Le dossier [`inst/extdata/`](https://github.com/iramat/iRamat/tree/main/inst/extdata/) contient les données externes
-
-
-:::: {.columns}
-
-::: {.column width="33%"}
-<small>regular_distribution.png</small>
-<center>
-<img src='https://raw.githubusercontent.com/iramat/iRamat/master/inst/extdata/regular_distribution.png' style='width: 220px;vertical-align: middle;'>
-</center>
-:::
-
-::: {.column width="33%"}
-<small>clustered_distribution.png</small>
-<center>
-<img src='https://raw.githubusercontent.com/iramat/iRamat/master/inst/extdata/clustered_distribution.png' style='width: 220px;vertical-align: middle;'>
-</center>
-:::
-
-::: {.column width="33%"}
-<small>random_distribution.png</small>
-<center>
-<img src='https://raw.githubusercontent.com/iramat/iRamat/master/inst/extdata/random_distribution.png' style='width: 220px;vertical-align: middle;'>
-</center>
-:::
-
-::::
-
-:::
-
-
-## Description (fichiers générés)
-
-::: {.panel-tabset}
-
-### `NAMESPACE`
-
-Le fichier [`NAMESPACE`](https://github.com/iramat/iRamat/tree/main/NAMESPACE) décrit quelles fonctions du _package_ sont exportées.
-
-```{.r-doc code-line-numbers="1|3-5"}
-# Generated by roxygen2: do not edit by hand
-
-export(chrono)
-export(db_api_connect)
-export(ppa)
-```
-
-### `man/`
-
-Le dossier [`man/`](https://github.com/iramat/iRamat/tree/main/man) contient la documentation des fonctions (générée depuis les fonctions elles-mêmes).
-
-```{.r-doc code-line-numbers="1-2"}
-% Generated by roxygen2: do not edit by hand
-% Please edit documentation in R/ppa.R
-\name{ppa}
-\alias{ppa}
-\title{Classify a Point Pattern Distribution}
-\usage{
-ppa(
-  d = NA,
-  root = "https://raw.githubusercontent.com/iramat/iRamat/master/inst/extdata/",
-  img.paths = c("clustered_distribution.png", "random_distribution.png",
-    "regular_distribution.png"),
-  ppa_tests = c("quadrat", "ripley", "gfunction"),
-  verbose = TRUE
-)
-}
-(...)
-```
-
-:::
-
-# Du code à la fonction, et de la fonction au package
-
-
-## Du `code` à la <math><mi>f</mi></math>, et de la <math><mi>f</mi></math> au `{pkg}`
-
-
-::: {.panel-tabset}
-
-### Au Km
+### Tous les _datasets_
 
 ```{.r}
-# Generate 100 random numbers from a normal distribution
-x <- rnorm(100, mean = 10, sd = 2)
-
-# Compute the mean
-mean_x <- mean(x)
-
-# Print the result
-cat("The mean of x is:", mean_x, "\n")
+df <- db_api_connect(all_datasets = TRUE)
+# all_datasets = TRUE: collecting all datasets from urls_data.tsv
+# Requesting: http://157.136.252.188:3000/dataset_tyoungxx
+# Requesting: http://157.136.252.188:3000/dataset_adisser17
+# Requesting: http://157.136.252.188:3000/dataset_gzabinski23
+# Requesting: http://157.136.252.188:3000/dataset_gpages22
+# Requesting: http://157.136.252.188:3000/dataset_vserneels93
+# Requesting: http://157.136.252.188:3000/dataset_sleroy12
+# Requesting: http://157.136.252.188:3000/dataset_pdillmann17
+# Requesting: http://157.136.252.188:3000/dataset_amdesaulty8a
+# Requesting: http://157.136.252.188:3000/dataset_amdesaulty8b
+# Requesting: http://157.136.252.188:3000/dataset_jmilot16
+# Requesting: http://157.136.252.188:3000/dataset_mpcoustures06
+# Requesting: http://157.136.252.188:3000/dataset_gstdidier17
+# Requesting: http://157.136.252.188:3000/dataset_mbrauns13
+# Requesting: http://157.136.252.188:3000/dataset_lheritier20
+# Requesting: http://157.136.252.188:3000/dataset_mleroy97
+# Requesting: http://157.136.252.188:3000/dataset_mleroy24
+# Requesting: http://157.136.252.188:3000/dataset_leschenlohr01
+# Requesting: http://157.136.252.188:3000/dataset_tivancan21
+# Requesting: http://157.136.252.188:3000/dataset_pmameli14
+# Requesting: http://157.136.252.188:3000/dataset_kmittelstaedt22
+# Requesting: http://157.136.252.188:3000/dataset_mbenvenuti13
+# Collected and merged 21 datasets. Total rows: 3225
 ```
 
-
-
-### Fonctions
-
-```{.r}
-#' Compute the mean of random normal numbers
-#'
-#' This function generates `n` random numbers from a normal distribution
-#' with given `mean` and `sd`, then computes and prints their mean.
-#'
-#' @param n Integer, number of random values to generate.
-#' @param mean Numeric, the mean of the normal distribution.
-#' @param sd Numeric, the standard deviation of the normal distribution.
-#'
-#' @return The computed mean (numeric).
-#' @export
-#'
-#' @examples
-#' simulate_mean(100, mean = 10, sd = 2)
-simulate_mean <- function(n = 100, mean = 0, sd = 1) {
-  x <- rnorm(n, mean = mean, sd = sd)
-  mean_x <- mean(x)
-  cat("The mean of x is:", mean_x, "\n")
-  return(mean_x)
-}
-```
-
-<br><br>
-
-### Package (_private_)
-
-<small><https://github.com/iramat/iramat-private></small>
-
-<img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/r-pkg--repo-private-github.png' style='width: 1000px;vertical-align: middle;'>
-
-### Package (_public_)
-
-<small><https://github.com/iramat/iRamat></small>
-
-<img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/r-pkg--repo-public-github.png' style='width: 1000px;vertical-align: middle;'>
 
 
 :::
 
-# _Code as data_
 
+## Perspectives
 
-## Réutiliser
+La base CHIPS est fonctionnelle, rassemble des milliers d’analyses chimiques révisées et normalisées. Les prochaines étapes de son développement informatique concernent:
 
-::: {.panel-tabset}
+* dashboard: amélioration de l'interface, développement de nouveaux outils de visualisation, de sélection et d'export.
+* développement des fonctions R (package iRamat)
+* création d'une interface graphique utilisateur (GUI) pour la saisie de nouvelles données (<b><span style="color:black">C <span style="color:grey">R</span> U D</span></b>)
+* un data pipeline entre l'API des _datasets_ et Zenodo pour un dépôt standardisé et semi-automatique
 
-### Citer
+# Discussion {background-image="https://raw.githubusercontent.com/zoometh/thomashuet/master/img/r-pkg--repo-public-github.png" background-opacity=0.3 background-size="800px" background-repeat="repeat"}
 
-```{r echo=TRUE}
-citation("iRamat")
-```
-
-<br><br>
-
-### Publier sur Zenodo
-
-<small><https://docs.github.com/en/repositories/archiving-a-github-repository/referencing-and-citing-content></small>
-
-<img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/app-zenodo-github-release.png' style='width: 900px;vertical-align: middle;'>
-
-### Publier dans une revue
-
-<small><https://joss.theoj.org/papers/10.21105/joss.03191></small>
-
-<img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/r-pkg--repo-public-publish-github.png' style='width: 900px;vertical-align: middle;'>
-
-:::
-
-# Discussion {background-image="https://raw.githubusercontent.com/zoometh/thomashuet/master/img/r-pkg--repo-public-github.png" background-opacity=0.5 background-size="800px" background-repeat="repeat"}
+* Site web: <https://iramat.github.io/chips>
+* GitHub: <https://github.com/iramat/chips>
 
