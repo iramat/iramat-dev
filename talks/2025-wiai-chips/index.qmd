@@ -97,7 +97,7 @@ Découvrir -- ou approfondir -- une solution logicielle open-source en revenant 
 
 ## Motivations
 
-Malgré l’importance des données de l'archéométallurgie du fer pour reconstruire les techniques anciennes, comprendre les contextes et modéliser les réseaux d’échanges, l’absence d’un référentiel chimique partagé a conduit à la dispersion, l’hétérogénéité et la variabilité de qualité des analyses. 
+Malgré l’importance des données de l'archéométallurgie du fer pour reconstruire les techniques anciennes, comprendre les contextes et modéliser les réseaux d’échanges, ➡️ l’absence d’un référentiel chimique partagé a conduit à la l’hétérogénéité des résultats des analyses. 
 \
 \
 CHIPS vise à (i) centraliser, normaliser, rendre interopérables des données, et (ii) identifier, développer et documenter les référentiels, afin de faciliter l'exploitation collective des données de l'archéométallurgie du fer.
@@ -109,7 +109,9 @@ CHIPS vise à (i) centraliser, normaliser, rendre interopérables des données, 
 
 ::: {.column width="70%"}
 
-CHIPS est une base de données <img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/app-bd-postgres-2.png' style='height: 40px;vertical-align: middle;'>  destinée aux archéométallurgistes du fer, offrant des milliers d’analyses chimiques révisées et normalisées. Les données sont rendues interopérable grâce à des référentiels standardisés (e.g. <img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/lod-gazetteer-periodo.png' style='height: 40px;vertical-align: middle;'>,<img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/lod-gazetteer-pactols.png' style='height: 50px;vertical-align: middle;'>).  \ \
+CHIPS est une base de données <img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/app-bd-postgres-2.png' style='height: 40px;vertical-align: middle;'>  destinée aux archéométallurgistes du fer, offrant des milliers d’analyses chimiques révisées et normalisées. Les données sont rendues interopérable grâce à des référentiels standardisés (e.g. <img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/lod-gazetteer-periodo.png' style='height: 40px;vertical-align: middle;'>,<img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/lod-gazetteer-pactols.png' style='height: 50px;vertical-align: middle;'>).
+\
+\
 Elle a été principalement développée par Alexandre Disser[^1] et Sylvain Bauvais[^1].
 
 
@@ -198,9 +200,9 @@ CHIPS
 
 <img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/bd--generic.png' style='height: 70px;vertical-align: middle;'>
 
-<b><span style="color:black">C <span style="color:grey">R</span> U D</span></b>
+<b><span style="color:black">C <span style="color:lightgrey">R</span> U D</span></b>
 
-<small> 🏠 Huma-Num </small>
+<small> _host_ <img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/inst-humanum-2.png' style='height: 70px;vertical-align: middle;'> </small>
 
 </center>
 
@@ -227,9 +229,9 @@ CHIPS dev
 
 <img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/bd--generic.png' style='height: 70px;vertical-align: middle;'>
 
-<b><span style="color:grey">C <span style="color:black">R</span> U D</span></b>
+<b><span style="color:lightgrey">C <span style="color:black">R</span> U D</span></b>
 
-<small> 🏠 Mésocentre UPSac </small>
+<small> _host_ <img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/inst-upsac-mesocentre.png' style='height: 70px;vertical-align: middle;'> </small>
 
 </center>
 
@@ -251,7 +253,7 @@ CHIPS dev
 </center>
 ```
 
-## Dashboard (1/2)
+## Dashboard <img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/app-prg-python-1.png' style='height: 40px;vertical-align: middle;'> (1/2)
 
 ::: {.panel-tabset}
 
@@ -280,7 +282,7 @@ Indexation spatiale et par jeux de données (_datasets_)
 
 :::
 
-## Dashboard (2/2)
+## Dashboard <img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/app-prg-python-1.png' style='height: 40px;vertical-align: middle;'> (2/2)
 
 ::: {.panel-tabset}
 

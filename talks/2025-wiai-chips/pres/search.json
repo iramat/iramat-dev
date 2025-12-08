@@ -18,14 +18,14 @@
     "href": "index.html#motivations",
     "title": "CHIPS, BDD CHImie en PaléoSidérurgie",
     "section": "Motivations",
-    "text": "Motivations\nMalgré l’importance des données de l’archéométallurgie du fer pour reconstruire les techniques anciennes, comprendre les contextes et modéliser les réseaux d’échanges, l’absence d’un référentiel chimique partagé a conduit à la dispersion, l’hétérogénéité et la variabilité de qualité des analyses.\n\nCHIPS vise à (i) centraliser, normaliser, rendre interopérables des données, et (ii) identifier, développer et documenter les référentiels, afin de faciliter l’exploitation collective des données de l’archéométallurgie du fer."
+    "text": "Motivations\nMalgré l’importance des données de l’archéométallurgie du fer pour reconstruire les techniques anciennes, comprendre les contextes et modéliser les réseaux d’échanges, ➡️ l’absence d’un référentiel chimique partagé a conduit à la l’hétérogénéité des résultats des analyses.\n\nCHIPS vise à (i) centraliser, normaliser, rendre interopérables des données, et (ii) identifier, développer et documenter les référentiels, afin de faciliter l’exploitation collective des données de l’archéométallurgie du fer."
   },
   {
     "objectID": "index.html#présentation",
     "href": "index.html#présentation",
     "title": "CHIPS, BDD CHImie en PaléoSidérurgie",
     "section": "Présentation",
-    "text": "Présentation\n\n\nCHIPS est une base de données  destinée aux archéométallurgistes du fer, offrant des milliers d’analyses chimiques révisées et normalisées. Les données sont rendues interopérable grâce à des référentiels standardisés (e.g. ,).  \nElle a été principalement développée par Alexandre Disser1 et Sylvain Bauvais2.\n\n\n\n\n\nloupe de fer"
+    "text": "Présentation\n\n\nCHIPS est une base de données  destinée aux archéométallurgistes du fer, offrant des milliers d’analyses chimiques révisées et normalisées. Les données sont rendues interopérable grâce à des référentiels standardisés (e.g. ,).\n\nElle a été principalement développée par Alexandre Disser1 et Sylvain Bauvais2.\n\n\n\n\n\nloupe de fer"
   },
   {
     "objectID": "index.html#architecture",
@@ -45,15 +45,15 @@
     "objectID": "index.html#dashboard-12",
     "href": "index.html#dashboard-12",
     "title": "CHIPS, BDD CHImie en PaléoSidérurgie",
-    "section": "Dashboard (1/2)",
-    "text": "Dashboard (1/2)\n\nObjectifDatasetsEchantillons\n\n\nOffir une vue synthétique du contenu de la BDD CHIPS ; faciliter l’identification, l’accès, l’intéropérabilité et la réutilisation des données .\n\nIndexation spatiale et par jeux de données (datasets)"
+    "section": "Dashboard  (1/2)",
+    "text": "Dashboard  (1/2)\n\nObjectifDatasetsEchantillons\n\n\nOffir une vue synthétique du contenu de la BDD CHIPS ; faciliter l’identification, l’accès, l’intéropérabilité et la réutilisation des données .\n\nIndexation spatiale et par jeux de données (datasets)"
   },
   {
     "objectID": "index.html#dashboard-22",
     "href": "index.html#dashboard-22",
     "title": "CHIPS, BDD CHImie en PaléoSidérurgie",
-    "section": "Dashboard (2/2)",
-    "text": "Dashboard (2/2)\n\nAPI des échantillonsLive demo"
+    "section": "Dashboard  (2/2)",
+    "text": "Dashboard  (2/2)\n\nAPI des échantillonsLive demo"
   },
   {
     "objectID": "index.html#analyses-avec-r",
