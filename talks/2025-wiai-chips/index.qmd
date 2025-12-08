@@ -202,7 +202,7 @@ CHIPS
 
 <b><span style="color:black">C <span style="color:lightgrey">R</span> U D</span></b>
 
-<small> _host_ <img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/inst-humanum-2.png' style='height: 70px;vertical-align: middle;'> </small>
+<small> _host_ <img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/inst-humanum-2.png' style='height: 40px;vertical-align: middle;'> </small>
 
 </center>
 
@@ -212,7 +212,7 @@ CHIPS
 
 <center>
 
-
+<br>
 🠮 🠮 🠮<br>
 `copy data only`<br>
 🠮 🠮 🠮
