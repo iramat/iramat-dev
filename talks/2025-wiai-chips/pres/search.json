@@ -32,7 +32,7 @@
     "href": "index.html#architecture",
     "title": "CHIPS, BDD CHImie en PaléoSidérurgie",
     "section": "Architecture",
-    "text": "Architecture\n\nMCDStandardsTechnologiesCHIPS et CHIPS dev\n\n\n\n\nModèle conceptuel de données simplifié\n\n\n\n\n\nStandards et isostandards:\n\n : répertoire de périodes (PID: ark)\n : thésaurus pour l’archéologie (PID: ark)\n: thésaurus pour les objets d’art et architecture (PID: aat)\n3: pour des dates fuzzy ou très précises (timestamped)\n\n\npour faciliter l’intéropérabilité de ses données\n\n\n\nTechnologies matures et open-source :\n\n : l’OS4 de la plupart des serveurs web.\n : SGBD5 open-source proche d’Oracle.\n : le langage de programmation le plus utilisé au monde.\n : protocole standard d’interface de programmation d’applications sur le web.\n\n\npour garantir la maintenance des données sur le long terme\n\n\n\n\n\nl’accès et l’ouverture de CHIPS limités\nclone de CHIPS, CHIPS dev, ouverte sur le web dashboard\n\n\nCHIPS\n\nC R U D\n host  \n\n\n\n 🠮 🠮 🠮 copy data only 🠮 🠮 🠮\n\n\n\nCHIPS dev\n\nC R U D\n host"
+    "text": "Architecture\n\nMCDStandardsTechnologiesCHIPS et CHIPS dev\n\n\n\n\nModèle conceptuel de données simplifié\n\n\n\n\n\nStandards et isostandards:\n\n : répertoire de périodes (PID: ark)\n : thésaurus pour l’archéologie (PID: ark)\n: thésaurus pour les objets d’art et architecture (PID: aat)\n3: pour des dates fuzzy ou très précises (timestamped)\n\n\npour faciliter l’intéropérabilité de ses données\n\n\n\nTechnologies matures et open-source :\n\n : OS4 de la plupart des serveurs web.\n : SGBD5 open-source proche d’Oracle.\n : langage de programmation le plus utilisé au monde.\n : standard d’interface de programmation d’applications sur le web.\n\n\npour garantir la maintenance des données sur le long terme\n\n\n\n\n\nl’accès et l’ouverture de CHIPS limités\nclone de CHIPS, CHIPS dev, ouverte sur le web dashboard\n\n\nCHIPS\n\nC R U D\n\n\n\n\n\n 🠮 🠮 🠮 copy data only 🠮 🠮 🠮\n\n\n\nCHIPS dev\n\nC R U D"
   },
   {
     "objectID": "index.html#plateforme-geo",
@@ -67,7 +67,7 @@
     "href": "index.html#perspectives",
     "title": "CHIPS, BDD CHImie en PaléoSidérurgie",
     "section": "Perspectives",
-    "text": "Perspectives\nProchaines étapes du développement de la BDD CHIPS :\n\ndashboard: amélioration de l’interface, nouveaux outils de visualisation, de sélection et d’export ;\nun data pipeline entre l’API des datasets et  pour un dépôt standardisé et semi-automatique ;\nnouvelles fonctions  ( package  ) ;\ninterface graphique utilisateur (GUI) pour la saisie des données."
+    "text": "Perspectives\nProchaines étapes du développement de la BDD CHIPS :\n\nDashboard : amélioration de l’interface, nouveaux outils de visualisation, de sélection et d’export ;\nun data pipeline entre l’API des datasets et  pour un dépôt standardisé et semi-automatique ;\nnouvelles fonctions  ( package  ) ;\ninterface graphique utilisateur (GUI) avec  pour la saisie des données."
   },
   {
     "objectID": "index.html#footnotes",

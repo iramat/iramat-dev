@@ -173,10 +173,10 @@ pour faciliter l'intéropérabilité de ses données
 
 Technologies matures et open-source :
 
-* <img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/app-os-linux-ubuntu-1.png' style='height: 40px;vertical-align: middle;'> : l'OS[^4] de la plupart des serveurs web. 
+* <img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/app-os-linux-ubuntu-1.png' style='height: 40px;vertical-align: middle;'> : OS[^4] de la plupart des serveurs web. 
 * <img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/app-bd-postgres-2.png' style='height: 40px;vertical-align: middle;'> : SGBD[^3] open-source proche d'Oracle.
-* <img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/app-prg-python.png' style='height: 40px;vertical-align: middle;'> : le langage de programmation le plus utilisé au monde.
-* <img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/web-api-2.png' style='height: 40px;vertical-align: middle;'> : protocole standard d'interface de programmation d'applications sur le web.
+* <img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/app-prg-python.png' style='height: 40px;vertical-align: middle;'> : langage de programmation le plus utilisé au monde.
+* <img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/web-api-2.png' style='height: 40px;vertical-align: middle;'> : standard d'interface de programmation d'applications sur le web.
 
 [^4]: _Operating System_, système d'exploitation
 [^3]: Système de Gestion de Bases de Données
@@ -202,7 +202,8 @@ CHIPS
 
 <b><span style="color:black">C <span style="color:lightgrey">R</span> U D</span></b>
 
-<small> _host_ <img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/inst-humanum-2.png' style='height: 40px;vertical-align: middle;'> </small>
+<!-- <small> _host_ <img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/inst-humanum-2.png' style='height: 30px;vertical-align: middle;'> </small> -->
+<img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/inst-humanum-2.png' style='height: 40px;vertical-align: middle;'>
 
 </center>
 
@@ -231,8 +232,8 @@ CHIPS dev
 
 <b><span style="color:lightgrey">C <span style="color:black">R</span> U D</span></b>
 
-<small> _host_ <img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/inst-upsac-mesocentre.png' style='height: 70px;vertical-align: middle;'> </small>
-
+<!-- <small> _host_ <img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/inst-upsac-mesocentre.png' style='height: 40px;vertical-align: middle;'> </small> -->
+<img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/inst-upsac-mesocentre.png' style='height: 40px;vertical-align: middle;'>
 </center>
 
 :::
@@ -253,7 +254,7 @@ CHIPS dev
 </center>
 ```
 
-## Dashboard <img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/app-prg-python-1.png' style='height: 40px;vertical-align: middle;'> (1/2)
+## Dashboard <img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/app-prg-python.png' style='height: 60px;vertical-align: middle;'> (1/2)
 
 ::: {.panel-tabset}
 
@@ -282,7 +283,7 @@ Indexation spatiale et par jeux de données (_datasets_)
 
 :::
 
-## Dashboard <img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/app-prg-python-1.png' style='height: 40px;vertical-align: middle;'> (2/2)
+## Dashboard <img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/app-prg-python.png' style='height: 60px;vertical-align: middle;'> (2/2)
 
 ::: {.panel-tabset}
 
@@ -374,10 +375,10 @@ df <- db_api_connect(all_datasets = TRUE)
 
 Prochaines étapes du développement de la BDD CHIPS :
 
-* dashboard: amélioration de l'interface, nouveaux outils de visualisation, de sélection et d'export ;
+* Dashboard <img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/app-prg-python.png' style='height: 50px;vertical-align: middle;'>: amélioration de l'interface, nouveaux outils de visualisation, de sélection et d'export ;
 * un _data pipeline_ entre l'API des _datasets_ et <img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/app-zenodo.png' style='height: 40px;vertical-align: middle;'> pour un dépôt standardisé et semi-automatique ;
 * nouvelles fonctions <img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/prog-r-1.png' style='height: 45px;vertical-align: middle;'> ( _package_ <img src='https://raw.githubusercontent.com/iramat/iRamat/master/doc/img/logo.png' style='height: 60px;vertical-align: middle;'> ) ;
-* interface graphique utilisateur (GUI) pour la saisie des données.
+* interface graphique utilisateur (GUI) avec <img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/app-pao-qt.png' style='height: 50px;vertical-align: middle;'> pour la saisie des données.
 
 
 # Discussion {background-image="https://raw.githubusercontent.com/zoometh/thomashuet/master/img/r-pkg--repo-public-github.png" background-opacity=0.3 background-size="800px" background-repeat="repeat"}
