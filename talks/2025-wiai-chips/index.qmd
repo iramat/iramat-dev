@@ -59,7 +59,7 @@ GitHub <img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img
 <img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/lod-iso-iiif.png' style='height: 45px;vertical-align: middle;'>, etc. <br><br>
 
 ::: {.callout-note}
-📅 Bimestriel. Le 2<sup>e</sup> Mardi matin tous les 2 mois sur ZOOM entre 10h00 et 10h50 (50 minutes), lien sur le [GitHub](https://github.com/iramat#-wiai) et le [calendrier](https://iramat.github.io/iramat-dev/admin/calendrier.html) de l'IRAMAT
+📅 Bimestriel. Le 2<sup>e</sup> Mardi matin, sur ZOOM entre 10h00 et 10h50 (50 minutes), lien sur le [GitHub](https://github.com/iramat#-wiai) et le [calendrier](https://iramat.github.io/iramat-dev/admin/calendrier.html) de l'IRAMAT
 :::
 
 :::
@@ -68,11 +68,11 @@ GitHub <img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img
 
 <center>
 
-<img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/app-prg-sql-1.png' style='width: 350px;vertical-align: middle;'> 
+<img src='https://upload.wikimedia.org/wikipedia/commons/0/06/Michael_Stonebraker_P1120062.jpg' style='width: 350px;vertical-align: middle;'> 
+
+<div class="captiontext"> _"SQL won. Get over it."_ -- Michael Stonebraker, crédit: David Monniaux <img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/lod-licences-cc-by-sa.png' style='height: 30px;vertical-align: middle;'></div>
 
 </center>
-<div class="captiontext"> <https://www.reddit.com/r/ProgrammerHumor/> </div>
-
 
 :::
 
@@ -87,13 +87,13 @@ Découvrir -- ou approfondir -- une solution logicielle open-source en revenant 
 ## Plan de la présentation
 
 
-1. La BDD CHIPS
+1. La BDD CHIPS <img src='https://raw.githubusercontent.com/iramat/iramat-dev/main/img/logo-chips-round.png' style='height: 70px;vertical-align: middle;'>
 2. Intéropérabilité et Réusabilité
 3. Perspectives
 4. Discussion
 
 
-# La BDD CHIPS
+# La BDD CHIPS <img src='https://raw.githubusercontent.com/iramat/iramat-dev/main/img/logo-chips-round.png' style='height: 100px;vertical-align: middle;'>
 
 ## Motivations
 
@@ -107,19 +107,16 @@ CHIPS vise à (i) centraliser, normaliser, rendre interopérables des données, 
 
 :::: {.columns}
 
-::: {.column width="70%"}
+::: {.column width="75%"}
 
-CHIPS est une base de données <img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/app-bd-postgres-2.png' style='height: 40px;vertical-align: middle;'>  destinée aux archéométallurgistes du fer, offrant des milliers d’analyses chimiques révisées et normalisées. Les données sont rendues interopérable grâce à des référentiels standardisés (e.g. <img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/lod-gazetteer-periodo.png' style='height: 40px;vertical-align: middle;'>,<img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/lod-gazetteer-pactols.png' style='height: 50px;vertical-align: middle;'>).
+Base de données <img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/app-bd-postgres-2.png' style='height: 40px;vertical-align: middle;'>  destinée aux archéométallurgistes du fer, offrant des milliers d’analyses chimiques révisées et normalisées (6650 échantillons issus de 1150 sites). Les données sont rendues interopérable grâce à des référentiels standardisés (e.g. <img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/lod-gazetteer-periodo.png' style='height: 40px;vertical-align: middle;'>,<img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/lod-gazetteer-pactols.png' style='height: 50px;vertical-align: middle;'>).
 \
-\
-Elle a été principalement développée par Alexandre Disser[^1] et Sylvain Bauvais[^1].
 
-
-[^1]: IRAMAT-CNRS
+Elle a été principalement développée par Alexandre Disser et Sylvain Bauvais à l'IRAMAT-CNRS.
 
 :::
 
-::: {.column width="30%"}
+::: {.column width="25%"}
 <center>
 
 <img src='https://raw.githubusercontent.com/iramat/iramat-dev/master/img/fer.png' style='width: 750px;vertical-align: middle;'>
@@ -129,7 +126,10 @@ Elle a été principalement développée par Alexandre Disser[^1] et Sylvain Bau
 <div class="captiontext">loupe de fer</div>
 :::
 
+
 ::::
+
+
 
 
 ## Architecture
@@ -189,21 +189,21 @@ pour garantir la maintenance des données sur le long terme
 
 :::: {.columns}
 
-* l'accès et l'ouverture de CHIPS limités
-* clone de CHIPS, CHIPS dev, ouverte sur le web dashboard
+* `CHIPS`: accès et ouverture sur le web limités
+* `CHIPS dev`: clone de CHIPS ouverte sur le web (_dashboard_)
 
 ::: {.column width="35%"}
 
 <center>
 
-CHIPS
+`CHIPS`
 
 <img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/bd--generic.png' style='height: 70px;vertical-align: middle;'>
 
 <b><span style="color:black">C <span style="color:lightgrey">R</span> U D</span></b>
 
 <!-- <small> _host_ <img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/inst-humanum-2.png' style='height: 30px;vertical-align: middle;'> </small> -->
-<img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/inst-humanum-2.png' style='height: 40px;vertical-align: middle;'>
+<img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/inst-humanum-2.png' style='height: 35px;vertical-align: middle;'>
 
 </center>
 
@@ -226,14 +226,15 @@ CHIPS
 
 <center>
 
-CHIPS dev
+`CHIPS dev`
 
 <img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/bd--generic.png' style='height: 70px;vertical-align: middle;'>
 
 <b><span style="color:lightgrey">C <span style="color:black">R</span> U D</span></b>
 
 <!-- <small> _host_ <img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/inst-upsac-mesocentre.png' style='height: 40px;vertical-align: middle;'> </small> -->
-<img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/inst-upsac-mesocentre.png' style='height: 40px;vertical-align: middle;'>
+<img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/inst-upsac-mesocentre.png' style='height: 35px;vertical-align: middle;'>
+
 </center>
 
 :::
@@ -260,12 +261,48 @@ CHIPS dev
 
 ### Objectif
 
-Offir une vue synthétique du contenu de la BDD CHIPS ; faciliter l'identification, l'accès, l'intéropérabilité et la réutilisation des données <img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/lod-data-fair.png' style='height: 50px;vertical-align: middle;'>. 
+
+
+:::: {.columns}
+
+
+::: {.column width="70%"}
+
+Offir une vue synthétique du contenu de la BDD CHIPS ; faciliter l'identification, l'accès, l'intéropérabilité et la réutilisation des données 
 \
 \
-Indexation spatiale et par jeux de données (_datasets_)
+Créer du code modulaire pour sa réutilisabilité (_code as data_)
+\
+\
+
+:::
+
+::: {.column width="30%"}
+
+<center>
+
+
+<img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/lod-data-fair-1.png' style='width: 350px;vertical-align: middle;'>
+
+</center>
+
+:::
+
+::::
 
 ### _Datasets_
+
+
+:::: {.columns}
+
+
+::: {.column width="30%"}
+
+Indexation spatiale et par jeux de données (_datasets_)
+
+:::
+
+::: {.column width="70%"}
 
 <center>
 
@@ -273,13 +310,34 @@ Indexation spatiale et par jeux de données (_datasets_)
 
 </center>
 
+:::
+
+::::
+
+
 ### Echantillons
+
+:::: {.columns}
+
+
+::: {.column width="30%"}
+
+Indexation spatiale
+
+:::
+
+::: {.column width="70%"}
 
 <center>
 
 <img src='https://raw.githubusercontent.com/iramat/iramat-dev/master/img/bdd-chips-dash-map-dataset.png' style='width: 750px;vertical-align: middle;'>
 
 </center>
+
+:::
+
+::::
+
 
 :::
 
@@ -304,7 +362,7 @@ Indexation spatiale et par jeux de données (_datasets_)
 
 :::
 
-## Analyses avec R
+## Analyses avec R <img src='https://raw.githubusercontent.com/iramat/iramat-dev/main/img/logo-iRamat.png' style='height: 50px;vertical-align: middle;'>
 
 ::: {.panel-tabset}
 
@@ -373,7 +431,7 @@ df <- db_api_connect(all_datasets = TRUE)
 
 ## Perspectives
 
-Prochaines étapes du développement de la BDD CHIPS :
+Prochaines étapes du développement de la BDD CHIPS <img src='https://raw.githubusercontent.com/iramat/iramat-dev/main/img/logo-chips-round.png' style='height: 60px;vertical-align: middle;'>:
 
 * Dashboard <img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/app-prg-python.png' style='height: 50px;vertical-align: middle;'>: amélioration de l'interface, nouveaux outils de visualisation, de sélection et d'export ;
 * un _data pipeline_ entre l'API des _datasets_ et <img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/app-zenodo.png' style='height: 40px;vertical-align: middle;'> pour un dépôt standardisé et semi-automatique ;
@@ -383,6 +441,6 @@ Prochaines étapes du développement de la BDD CHIPS :
 
 # Discussion {background-image="https://raw.githubusercontent.com/zoometh/thomashuet/master/img/r-pkg--repo-public-github.png" background-opacity=0.3 background-size="800px" background-repeat="repeat"}
 
-* Site web: <https://iramat.github.io/chips>
-* GitHub: <https://github.com/iramat/chips>
-
+* Site web:     <https://iramat.github.io/chips>
+* GitHub:       <https://github.com/iramat/chips>
+* GEO platform: <https://fnp.huma-num.fr/aws/app/b652928b-ee00-11ef-a2bf-831c0bd9b87e/index.html>
