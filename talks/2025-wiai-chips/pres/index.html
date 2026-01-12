@@ -472,21 +472,18 @@ Créer du code modulaire pour sa réutilisabilité (<em>code as data</em>)<br>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a></a><span class="fu">library</span>(iRamat)</span>
 <span id="cb1-2"><a></a></span>
-<span id="cb1-3"><a></a>df <span class="ot">&lt;-</span> <span class="fu">db_api_connect</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] "Will store the results in a new variable"</code></pre>
-</div>
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a></a><span class="fu">names</span>(df)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb1-3"><a></a>df <span class="ot">&lt;-</span> <span class="fu">db_api_connect</span>()</span>
+<span id="cb1-4"><a></a><span class="fu">names</span>(df)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] "dataset_adisser17"</code></pre>
 </div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a></a>df<span class="sc">$</span>dataset_adisser17 <span class="sc">%&gt;%</span></span>
-<span id="cb5-2"><a></a>  <span class="fu">select</span>(<span class="sc">-</span>reference) <span class="sc">%&gt;%</span></span>
-<span id="cb5-3"><a></a>  <span class="fu">head</span>(<span class="dv">10</span>) <span class="sc">%&gt;%</span></span>
-<span id="cb5-4"><a></a>  <span class="fu">kable</span>(<span class="st">"html"</span>) <span class="sc">%&gt;%</span></span>
-<span id="cb5-5"><a></a>  <span class="fu">kable_styling</span>(<span class="at">font_size =</span> <span class="dv">18</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a></a>df<span class="sc">$</span>dataset_adisser17 <span class="sc">%&gt;%</span></span>
+<span id="cb3-2"><a></a>  <span class="fu">select</span>(<span class="sc">-</span>reference) <span class="sc">%&gt;%</span></span>
+<span id="cb3-3"><a></a>  <span class="fu">head</span>(<span class="dv">10</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb3-4"><a></a>  <span class="fu">kable</span>(<span class="st">"html"</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb3-5"><a></a>  <span class="fu">kable_styling</span>(<span class="at">font_size =</span> <span class="dv">18</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <table class="table caption-top" data-quarto-postprocess="true" style="font-size: 18px; margin-left: auto; margin-right: auto;">
 <thead>
@@ -1425,34 +1422,34 @@ Créer du code modulaire pour sa réutilisabilité (<em>code as data</em>)<br>
 </p>
 </div>
 <div id="tabset-4-2">
-<div class="sourceCode" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a></a><span class="fu">chrono</span>(<span class="at">d =</span> df<span class="sc">$</span>dataset_adisser17)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a></a><span class="fu">chrono</span>(<span class="at">d =</span> df<span class="sc">$</span>dataset_adisser17)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p><img src="https://raw.githubusercontent.com/iramat/iRamat/master/doc/chrono_sites_seriated.png" style="width: 800px;vertical-align: middle;"></p>
 </div>
 <div id="tabset-4-3">
-<div class="sourceCode" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a></a>df <span class="ot">&lt;-</span> <span class="fu">db_api_connect</span>(<span class="at">all_datasets =</span> <span class="cn">TRUE</span>)</span>
-<span id="cb7-2"><a></a><span class="co"># all_datasets = TRUE: collecting all datasets from urls_data.tsv</span></span>
-<span id="cb7-3"><a></a><span class="co"># Requesting: http://157.136.252.188:3000/dataset_tyoungxx</span></span>
-<span id="cb7-4"><a></a><span class="co"># Requesting: http://157.136.252.188:3000/dataset_adisser17</span></span>
-<span id="cb7-5"><a></a><span class="co"># Requesting: http://157.136.252.188:3000/dataset_gzabinski23</span></span>
-<span id="cb7-6"><a></a><span class="co"># Requesting: http://157.136.252.188:3000/dataset_gpages22</span></span>
-<span id="cb7-7"><a></a><span class="co"># Requesting: http://157.136.252.188:3000/dataset_vserneels93</span></span>
-<span id="cb7-8"><a></a><span class="co"># Requesting: http://157.136.252.188:3000/dataset_sleroy12</span></span>
-<span id="cb7-9"><a></a><span class="co"># Requesting: http://157.136.252.188:3000/dataset_pdillmann17</span></span>
-<span id="cb7-10"><a></a><span class="co"># Requesting: http://157.136.252.188:3000/dataset_amdesaulty8a</span></span>
-<span id="cb7-11"><a></a><span class="co"># Requesting: http://157.136.252.188:3000/dataset_amdesaulty8b</span></span>
-<span id="cb7-12"><a></a><span class="co"># Requesting: http://157.136.252.188:3000/dataset_jmilot16</span></span>
-<span id="cb7-13"><a></a><span class="co"># Requesting: http://157.136.252.188:3000/dataset_mpcoustures06</span></span>
-<span id="cb7-14"><a></a><span class="co"># Requesting: http://157.136.252.188:3000/dataset_gstdidier17</span></span>
-<span id="cb7-15"><a></a><span class="co"># Requesting: http://157.136.252.188:3000/dataset_mbrauns13</span></span>
-<span id="cb7-16"><a></a><span class="co"># Requesting: http://157.136.252.188:3000/dataset_lheritier20</span></span>
-<span id="cb7-17"><a></a><span class="co"># Requesting: http://157.136.252.188:3000/dataset_mleroy97</span></span>
-<span id="cb7-18"><a></a><span class="co"># Requesting: http://157.136.252.188:3000/dataset_mleroy24</span></span>
-<span id="cb7-19"><a></a><span class="co"># Requesting: http://157.136.252.188:3000/dataset_leschenlohr01</span></span>
-<span id="cb7-20"><a></a><span class="co"># Requesting: http://157.136.252.188:3000/dataset_tivancan21</span></span>
-<span id="cb7-21"><a></a><span class="co"># Requesting: http://157.136.252.188:3000/dataset_pmameli14</span></span>
-<span id="cb7-22"><a></a><span class="co"># Requesting: http://157.136.252.188:3000/dataset_kmittelstaedt22</span></span>
-<span id="cb7-23"><a></a><span class="co"># Requesting: http://157.136.252.188:3000/dataset_mbenvenuti13</span></span>
-<span id="cb7-24"><a></a><span class="co"># Collected and merged 21 datasets. Total rows: 3225</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a></a>df <span class="ot">&lt;-</span> <span class="fu">db_api_connect</span>(<span class="at">all_datasets =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb5-2"><a></a><span class="co"># all_datasets = TRUE: collecting all datasets from urls_data.tsv</span></span>
+<span id="cb5-3"><a></a><span class="co"># Requesting: http://157.136.252.188:3000/dataset_tyoungxx</span></span>
+<span id="cb5-4"><a></a><span class="co"># Requesting: http://157.136.252.188:3000/dataset_adisser17</span></span>
+<span id="cb5-5"><a></a><span class="co"># Requesting: http://157.136.252.188:3000/dataset_gzabinski23</span></span>
+<span id="cb5-6"><a></a><span class="co"># Requesting: http://157.136.252.188:3000/dataset_gpages22</span></span>
+<span id="cb5-7"><a></a><span class="co"># Requesting: http://157.136.252.188:3000/dataset_vserneels93</span></span>
+<span id="cb5-8"><a></a><span class="co"># Requesting: http://157.136.252.188:3000/dataset_sleroy12</span></span>
+<span id="cb5-9"><a></a><span class="co"># Requesting: http://157.136.252.188:3000/dataset_pdillmann17</span></span>
+<span id="cb5-10"><a></a><span class="co"># Requesting: http://157.136.252.188:3000/dataset_amdesaulty8a</span></span>
+<span id="cb5-11"><a></a><span class="co"># Requesting: http://157.136.252.188:3000/dataset_amdesaulty8b</span></span>
+<span id="cb5-12"><a></a><span class="co"># Requesting: http://157.136.252.188:3000/dataset_jmilot16</span></span>
+<span id="cb5-13"><a></a><span class="co"># Requesting: http://157.136.252.188:3000/dataset_mpcoustures06</span></span>
+<span id="cb5-14"><a></a><span class="co"># Requesting: http://157.136.252.188:3000/dataset_gstdidier17</span></span>
+<span id="cb5-15"><a></a><span class="co"># Requesting: http://157.136.252.188:3000/dataset_mbrauns13</span></span>
+<span id="cb5-16"><a></a><span class="co"># Requesting: http://157.136.252.188:3000/dataset_lheritier20</span></span>
+<span id="cb5-17"><a></a><span class="co"># Requesting: http://157.136.252.188:3000/dataset_mleroy97</span></span>
+<span id="cb5-18"><a></a><span class="co"># Requesting: http://157.136.252.188:3000/dataset_mleroy24</span></span>
+<span id="cb5-19"><a></a><span class="co"># Requesting: http://157.136.252.188:3000/dataset_leschenlohr01</span></span>
+<span id="cb5-20"><a></a><span class="co"># Requesting: http://157.136.252.188:3000/dataset_tivancan21</span></span>
+<span id="cb5-21"><a></a><span class="co"># Requesting: http://157.136.252.188:3000/dataset_pmameli14</span></span>
+<span id="cb5-22"><a></a><span class="co"># Requesting: http://157.136.252.188:3000/dataset_kmittelstaedt22</span></span>
+<span id="cb5-23"><a></a><span class="co"># Requesting: http://157.136.252.188:3000/dataset_mbenvenuti13</span></span>
+<span id="cb5-24"><a></a><span class="co"># Collected and merged 21 datasets. Total rows: 3225</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p><br>
 <br>
 <br>
