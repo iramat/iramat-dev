@@ -8,13 +8,13 @@ flowchart TD
     analyses
     analyses --> IRAMATdata
     analyses --> IRAMATimg
-    subgraph IRAMATdata[mesures archéométriques]
+    subgraph IRAMATdata[Archaeometric Measurements]
         BD -- API RESTful --> APIdata[<em>labeled data</em>]
     end
-    subgraph IRAMATimg[imagerie scientifique]
-        Macro{{Macro-<br>photographie}} -- format --> IIIF([IIIF])
-        Opt{{Microscopie<br>optique}} -- format --> IIIF
-        MEB{{MEB-EDS}} -- format --> IIIF
+    subgraph IRAMATimg[Scientific Imaging]
+        Macro{{Macro-<br>photography}} -- format --> IIIF([IIIF])
+        Opt{{Optical<br>Microscopy}} -- format --> IIIF
+        SEM{{SEM-EDS}} -- format --> IIIF
         Raman{{Raman}} -- format --> IIIF
         IIIF -- manifests<br>annotations --> BD
         BD -- IIIF --> IIIFmanifest[<em>labeled images</em>]
@@ -23,16 +23,16 @@ flowchart TD
   APIdata ---> PyExtract[<em>Data Fusion</em>]
   IIIFmanifest ---> PyExtract
   subgraph BSC[Barcelona Supercomputing Center]
-    PyExtract -- créé --> MLlearn[(learn base)]
+    PyExtract -- creates --> MLlearn[(learning base)]
     subgraph ML[Machine Learning]
       MLlearn ---> MLvalid[validation]
       MLvalid ---> MLtest[test]
       MLtest --> MLlearn
     end
   end
-    subgraph out[détection et classification automatique]
-      ResMet[faciès archéométalligiques]
-      ResNum[coins monétaires]
+    subgraph out[Automatic Detection and Classification]
+      ResMet[archaeometallurgical facies]
+      ResNum[numismatic coins]
     end
   ML ---> out
 
@@ -44,7 +44,7 @@ style IRAMATdata fill:#f4fa82
 style IRAMATimg fill:#f4fa82
 style Macro fill:#f6f7d5
 style Opt fill:#f6f7d5
-style MEB fill:#f6f7d5
+style SEM fill:#f6f7d5
 style Raman fill:#f6f7d5
 style IIIF fill:#f6f7d5
 style IIIFmanifest fill:#f6f7d5
