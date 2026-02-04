@@ -78,9 +78,11 @@ style out fill:#42ff70
 style ResMet fill:#b0ffc3
 style ResNum fill:#b0ffc3
 
-click BD "https://github.com/iramat/iramat-dev/edit/main/talks/2026-bsc/README.md#db"
-click VM "https://github.com/iramat/iramat-dev/edit/main/talks/2026-bsc/README.md#vm"
-click IIIFimg "https://github.com/iramat/iramat-dev/edit/main/talks/2026-bsc/README.md#IIIFimg"
+click BD "https://github.com/iramat/iramat-dev/main/talks/2026-bsc/README.md#db"
+click VM "https://github.com/iramat/iramat-dev/main/talks/2026-bsc/README.md#vm"
+click IIIFimg "https://github.com/iramat/iramat-dev/main/talks/2026-bsc/README.md#iiif-image"
+click IIIFpres "https://github.com/iramat/iramat-dev/main/talks/2026-bsc/README.md#iiif-presentation"
+click IIIFannot "https://github.com/iramat/iramat-dev/main/talks/2026-bsc/README.md#iiif-annotation"
 ```
 
 
@@ -94,7 +96,19 @@ Ubuntu 22.04 LTS Virtual Machine, hosted by the [Université of Paris-Saclay Mé
 
 - [CHIPS (Chimie en PaléoSidérurgie) Database](https://iramat-apps.cnrs.fr/dash/)
 
-### IIIFimg
+### IIIF
 
-- [Cantaloupe example]()
-- [Mirador example](https://iramat-apps.cnrs.fr/page/puddled.html)
+#### IIIF image
+
+- [info.json example](https://iramat-apps.cnrs.fr/iiif/2/acies%2FSeax_sample_process.tif/info.json)
+- [Cantaloupe example](https://iramat-apps.cnrs.fr/iiif/2/acies%2FSeax_sample_process.tif/full/full/0/default.jpg)
+
+#### IIIF presentation
+
+- [Manifest example](https://iramat-apps.cnrs.fr/iiif/manifest_seax.json)
+- ~~[Mirador image example](https://iramat-apps.cnrs.fr/page/puddled.html)~~
+- [Mirador image example](https://jpadfield.github.io/simple-mirador/Standard_Example.html)
+
+#### IIIF annotation
+
+- [TODO]()
