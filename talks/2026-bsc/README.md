@@ -101,14 +101,14 @@ Ubuntu 22.04 LTS Virtual Machine, hosted by the [Université of Paris-Saclay Mé
 #### IIIF image
 
 - [info.json example](https://iramat-apps.cnrs.fr/iiif/2/acies%2FSeax_sample_process.tif/info.json)
-- [Cantaloupe example](https://iramat-apps.cnrs.fr/iiif/2/acies%2FSeax_sample_process.tif/full/full/0/default.jpg)
+- [Cantaloupe example](https://iramat-apps.cnrs.fr/iiif/2/puddled%2FR217-1-macrox5.jpg/full/full/0/default.jpg)
 
 #### IIIF presentation
 
-- [Manifest example](https://iramat-apps.cnrs.fr/iiif/manifest_seax.json)
+- [Manifest example](https://iramat-apps.cnrs.fr/iiif/mirador/cdn/puddled/manifest_puddled.json)
 - ~~[Mirador image example](https://iramat-apps.cnrs.fr/page/puddled.html)~~
-- [Mirador image example](https://jpadfield.github.io/simple-mirador/Standard_Example.html)
+- [Mirador image example](https://iramat-apps.cnrs.fr/view/puddled/puddled.html)
 
 #### IIIF annotation
 
-- [TODO]()
+- [Mirador annotation example](https://iramat-apps.cnrs.fr/view/puddled/puddled.html)
