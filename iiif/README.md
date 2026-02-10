@@ -3,3 +3,9 @@
 
 * https://iramat-apps.cnrs.fr/view/numismatic/1986.416_obv.html
 * https://iramat-apps.cnrs.fr/view/puddled/puddled.html
+* https://iramat-apps.cnrs.fr/view/acies/seax_sample_process.html
+
+### en test
+
+* https://iramat-apps.cnrs.fr/view/puddled/puddled_zoomin.html
+* https://iramat-apps.cnrs.fr/view/puddled/puddled_zoomin.html?xywh=4009,7700,354,500

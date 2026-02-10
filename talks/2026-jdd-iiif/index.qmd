@@ -1,6 +1,6 @@
 ---
 title: "Interopérabilité de l'imagerie scientifique"
-subtitle: "le IIIF et les annotations"
+subtitle: "<b>le IIIF et les annotations</b>"
 abstract: "En archéologie, l’image (photographies, relevés, imagerie scientifique) est une donnée primaire essentielle, annotée par les chercheurs pour identifier des traces techniques, d’usage ou des chaînes opératoires. Cependant, contrairement aux données spatiales, ces images sont souvent publiées de manière statique, peu réutilisables et mal interopérables, avec des métadonnées dissociées et une qualité dégradée. Un enjeu majeur réside dans le développement de référentiels visuels annotés, haute définition, accessibles et interopérables, favorisant l’indexation, la reproductibilité des analyses et l’exploitation par l’apprentissage automatique. Le cadre IIIF (International Image Interoperability Framework) répond à ces besoins en permettant le zoom profond, l’annotation normalisée, la comparaison visuelle et l’interopérabilité entre plateformes. Par exemple, il facilite la comparaison directe de traces d’usage sur des artefacts dispersés dans différentes institutions. Cette communication présente la structure d’annotation IIIF mise en place à l’IRAMAT, illustrant son potentiel pour la recherche archéologique."
 author:
   - name: Thomas Huet
@@ -15,6 +15,7 @@ title-slide-attributes:
     data-notes: Lorem
 format:
   revealjs: 
+    disable-layout: false
     css: https://zoometh.github.io/thomashuet/css/quarto.css
     controls: true
     auto-stretch: false
@@ -31,7 +32,7 @@ format:
     # self-contained: true
     # embed-resources: true
     # logo: https://raw.githubusercontent.com/zoometh/neonet/master/doc/img/neonet.png
-    footer: "Journée Doctorale <img src='https://raw.githubusercontent.com/iramat/almacir/master/img/logo.png' style='height: 30px;vertical-align: middle;'> 12 février, 2026, MSH, Paris"
+    footer: "<small>Journée des doctorants de l'IRAMAT <img src='https://raw.githubusercontent.com/iramat/iramat-dev/master/img/logo.png' style='height: 30px;vertical-align: middle;'> 12 février, 2026, MSH, Paris</small>"
     margin: 0
     width: 1200
 ---
@@ -41,124 +42,68 @@ library(dplyr)
 library(kableExtra)
 ```
 
-## Aclass
 
-Structure HTML
+## IIIF
 
-```html
+<span class="smalltext"><https://iramat-apps.cnrs.fr/view/acies/seax_sample_process.html></span>
 
-/iiif/mirador/cdn/<collection>/<manifest>.json
+```{=html}
+<div class="iframe-figure">
+  <iframe width="800" height="470"
+          src="https://iramat-apps.cnrs.fr/view/acies/seax_sample_process.html"
+          title="Nomisma.org"></iframe>
+  <div class="captiontext">Scaramaxe (c) Tobias Heal</div>
+</div>
 ```
-
-structure interne
 
 
 
 # Introduction {background-image="https://raw.githubusercontent.com/iramat/almacir/master/img/app-web-seo-google-sijilmasa-dinar-gold.png" background-opacity=0.1 background-size="400px" background-repeat="repeat"}
+
+## Des images pour les archéologues...
   
 ## Plan
 
-- Numishare
-- Langage R
-- GitHub
-- Zenodo
-- site web
+1. Le IIIF, généralités
+2. Le IIIF à l'IRAMAT
+3. Publier vos images en IIIF
+4. Prochains développements
 
-# Base de données {background-image="https://raw.githubusercontent.com/iramat/almacir/master/img/app-web-seo-google-sijilmasa-dinar-gold.png" background-opacity=0.1 background-size="400px" background-repeat="repeat"}
+# 1. Le IIIF, généralités {background-image="https://raw.githubusercontent.com/iramat/almacir/master/img/app-web-seo-google-sijilmasa-dinar-gold.png" background-opacity=0.1 background-size="400px" background-repeat="repeat"}
 
-## Numishare
+## Demo
 
-::: {.panel-tabset}
-
-### Présentation
-
-:::: {.columns}
-
-::: {.column width="50%"}
-Suite d'applications _open source_[^0], alignée sur [Nomisma.org](https://nomisma.org/)[^10], pour la gestion des collections numismatiques. Normes (NUDS)[^7] pratiques communes des bibliothèques/archives/musées pour la réutilisabilité des données (FAI**R**). 
-:::
-
-::: {.column width="50%"}
+<span class="smalltext"><https://projectmirador.org/demo/></span>
 
 ```{=html}
-<iframe width="800" height="450" src="https://nomisma.org/" title="Nomisma.org"></iframe>
+<div class="iframe-figure">
+  <iframe width="800" height="470"
+          src="https://projectmirador.org/demo/"
+          title="projectmirador.org"></iframe>
+  <div class="captiontext">présentation IIIF (c) projectmirador.org</div>
+</div>
 ```
 
 
-:::
+## Lorem
 
-::::
+- FAIR
+- partager des images haute définition
 
-[^0]: <https://github.com/ewg118/numishare>
-[^7]: _NUmismatic Description Standard_ XML
-[^10]: _nomisma concepts_: thesauri et ontologie
+# 2. Le IIIF à l'IRAMAT {background-image="https://raw.githubusercontent.com/iramat/almacir/master/img/app-web-seo-google-sijilmasa-dinar-gold.png" background-opacity=0.1 background-size="400px" background-repeat="repeat"}
 
-### Historique
+# 3. Publier vos images en IIIF {background-image="https://raw.githubusercontent.com/iramat/almacir/master/img/app-web-seo-google-sijilmasa-dinar-gold.png" background-opacity=0.1 background-size="400px" background-repeat="repeat"}
 
-Collection numismatique du Musée d'art de l'Université de Virginie hébergé par le Scholars' Lab. Le projet a débuté à l'automne 2007 et le code a été rendu _open source_ à l'été 2009. Développé et maintenu par l' ANS[^1] et utilisé pour sa collection en ligne
+# 4. Prochains développements {background-image="https://raw.githubusercontent.com/iramat/almacir/master/img/app-web-seo-google-sijilmasa-dinar-gold.png" background-opacity=0.1 background-size="400px" background-repeat="repeat"}
 
-[^1]: _American Numismatic Society_
+## LOrem2
 
-### Base de données/Projets
-
-```{=html}
-<iframe width="1200" height="450" src="https://numismatics.org/resources/" title="Numishare projects"></iframe>
-```
+- mise en base de données des IIIF (_manifests_ et _annotations_)
+- creation de bases de références thématiques 
+- data pipeline vers du Machine learning
 
 
-### MCD
-
-<https://github.com/iramat/almacir/blob/dev/INSTALL.md#erd>
-
-```{mermaid}
-flowchart TB
-Browser["Web Browser"]
-subgraph Numishare_stack["Numishare stack"]
-Tomcat["Apache Tomcat 9"]
-Orbeon["Orbeon Forms CE"]
-Numishare["Numishare App"]
-Exist["eXist-db"]
-Solr["Apache Solr"]
-Cantaloupe["Cantaloupe IIIF"]
-Images["Image Storage"]
-end
-Browser -->|HTTP-S| Tomcat
-Tomcat --> Orbeon
-Orbeon --> Numishare
-Numishare --> Exist
-Numishare --> Solr
-Numishare --> Cantaloupe
-Cantaloupe --> Images
-style Numishare_stack fill:#f9f9f9,stroke:#333,stroke-width:2px,stroke-dasharray:5 5
-```
-
-:::
-
-## ALMACIR sur Numishare
-
-Numishare est déployé et opérationnel en mode `admin`.
-
-| Applications    | URLs |
-| -------- | ------- |
-| Tomcat  | <http://157.136.252.188:8080>    |
-| Orbeon | <http://157.136.252.188:8080/orbeon/>    |
-| Numishare    | <http://157.136.252.188:8080/orbeon/numishare/>   |
-
-<br>
-
-🪙 demo.0003: <http://157.136.252.188:8080/orbeon/numishare/demo/id/demo.0003>
-
-
-## ⏳ TODO 
-
-- Développer la fiche descriptive (_nomisma concepts_ + nouveaux concepts)
-- Développer un flux de création et d'édition des données 
-- Création des données
-- Finaliser l’exposition publique (production): <http://157.136.252.188> (HTTP) -> <https://iramat-apps.cnrs.fr/> (HTTPS)
-
-# Langage R {background-image="https://raw.githubusercontent.com/iramat/almacir/master/img/app-web-seo-google-sijilmasa-dinar-gold.png" background-opacity=0.1 background-size="400px" background-repeat="repeat"}
-
-## package iRamat pour les analyses
+## WIAI sur le IIIF
 
 
 :::: {.columns}
@@ -172,7 +117,7 @@ Numishare est déployé et opérationnel en mode `admin`.
 <br>
 
 ::: {.callout-note}
-**Présentation du package R `iRamat`** - [support](https://iramat.github.io/iramat-dev/talks/2025-wiai-iRamat/pres) | [video](https://sdrive.cnrs.fr/s/yP5DFgGXtF9ERQH) - Mardi 7 octobre 2025, 10:00 - 10:50
+**Présentation du cadre IIIF** - [support]() | [video]() - Mardi 10 Mars 2026, 10:00 - 10:50
 :::
 
 
@@ -187,193 +132,36 @@ Numishare est déployé et opérationnel en mode `admin`.
 ::::
 
 
-
-## ⏳ TODO 
-
-
-:::: {.columns}
-
-::: {.column width="50%"}
-
-- Mutualisation et mise en fonction documentées des scripts R "tapés au km" 
-- Developpement de fonctions spécifiques pour la numismatique
-
-:::
-
-::: {.column width="50%"}
-
-<img src='https://raw.githubusercontent.com/iramat/iramat-dev/master/img/prg-R-iRamat-function-extractICP.png' style='width: 550px;vertical-align: middle;'>
-
-:::
-
-::::
-
-
-
-# GitHub {background-image="https://raw.githubusercontent.com/iramat/almacir/master/img/app-web-seo-google-sijilmasa-dinar-gold.png" background-opacity=0.1 background-size="400px" background-repeat="repeat"}
-
-## GitHub - Généralités
-
-
-:::: {.columns}
-
-::: {.column width="50%"}
-
-🧮 [WIAI](https://github.com/iramat#-wiai)  
-
-> WIAI, Webinaires de l'Informatique pour l'Archéologie à l'IRAMAT
-
-<br>
-
-::: {.callout-note}
-**Présentation de GitHub** - [support](https://iramat.github.io/iramat-dev/talks/2025-wiai-github/pres) | [video](https://sdrive.cnrs.fr/s/kZ32eLX6js6rBSW)- Mardi 8 juillet 2025, 10:00 - 10:50
-:::
-
-
-
-:::
-::: {.column width="50%"}
-
-<img src='https://raw.githubusercontent.com/iramat/iramat-dev/master/img/github-iramat-org.png' style='width: 750px;vertical-align: middle;'>
-
-:::
-
-::::
-
-
-## ALMACIR sur GitHub
-
-::: {.panel-tabset}
-
-### Repo public
-
-:::: {.columns}
-
-::: {.column width="50%"}
-
-<https://github.com/iramat/almacir> ( = branche [main](https://github.com/iramat/almacir/tree/main)[^6]): Données publiques: données de référence (ex: nouveaux concepts), images, présentations, code informatique (non R), etc.
-
-[^6]: Autres branches [hugo-files](https://github.com/iramat/almacir/tree/hugo-files) et [gh-pages](https://github.com/iramat/almacir/tree/gh-pages) pour la génération du site web Hugo; [dev](https://github.com/iramat/almacir/tree/dev) pour le développement informatique
-
-:::
-
-::: {.column width="50%"}
-<br>
-
-<img src='https://raw.githubusercontent.com/iramat/almacir/master/img/app-github-almacir-data-public.png' style='width: 750px;vertical-align: middle;'> 
-
-:::
-
-::::
-
-
-
-### Repo privé
-
-
-
-::: {.column width="50%"}
-
-<https://github.com/iramat/almacir-private> ([main](https://github.com/iramat/almacir-private/tree/main) uniquement) 
-
-:::
-
-::: {.column width="50%"}
-
-<br>
-
-<img src='https://raw.githubusercontent.com/iramat/almacir/master/img/app-github-almacir-issue-private.png' style='width: 750px;vertical-align: middle;'> 
-
-:::
-
-::::
-
-## ⏳ TODO 
-
-- inscription sur GitHub ([ici](https://github.com/signup))
-- envoyez-moi votre nom d'utilisateur (_username_) ex:  [@SebastienGsc](https://github.com/SebastienGsc)
-- valider l'invitation que je vous enverrai (_repos_ `almacir` et `almacir-private`)
-- contribuer aux discussions (👋 _Issues_)
-
-
-# Zenodo {background-image="https://raw.githubusercontent.com/iramat/almacir/master/img/app-web-seo-google-sijilmasa-dinar-gold.png" background-opacity=0.1 background-size="400px" background-repeat="repeat"}
-
-## Généralités
-
-Entrepot de données (_self-archiving_), fournisseur de DOI intégrant le protocole OAI-PMH[^2], des API (Python, GitHub, etc). 
-
-Créé dans le cadre d' OpenAIRE[^4] et hébergé au CERN[^3], sauvegarde des données sur le _Data Center_ du CERN (Gratuit pour le dépôt jusqu'à 50 GB)
-
-[^2]: _Open Archives Initiative Protocol for Metadata Harvesting_
-[^3]: Centre Européen pour la Recherche Nucléaire
-[^4]: _nutshell_ européenne pour la Science Ouverte 
-
-## ALMACIR sur Zenodo
-
-::: {.panel-tabset}
-
-### Communauté "IRAMAT"
-
-<https://zenodo.org/communities/iramat/>
-
-<img src='https://raw.githubusercontent.com/iramat/iramat-dev/master/img/zenodo-community-iramat-members.png' style='width: 750px;vertical-align: middle;'>
-
-### Données
-
-<img src='https://raw.githubusercontent.com/iramat/iramat-dev/master/img/zenodo-community-iramat-data.png' style='width: 750px;vertical-align: middle;'>
-
-### Données numismatiques
-
-filtrer les données ALMACIR avec le `subject` = `Numismatics`[^11]
-<br>
-<https://zenodo.org/communities/iramat/records?q=&f=subject%3ANumismatics&l=list&p=1&s=10&sort=newest>
-
-[^11]: Issu du vocabulaire contrôlé MeSH (_Medical Subject Headings_)
-
-:::
-
-## ⏳ TODO 
-
-- inscription sur Zenodo ([ici](https://zenodo.org/signup/))
-- envoyez-moi votre nom d'utilisateur (_username_)
-- valider l'invitation que je vous enverrai
-- déposer des documents
-- contribuer à l'édition/sélection des métadonnées
-
-# Site web {background-image="https://raw.githubusercontent.com/iramat/almacir/master/img/app-web-seo-google-sijilmasa-dinar-gold.png" background-opacity=0.1 background-size="400px" background-repeat="repeat"}
-
-## _Framework_ Hugo - Généralités
-
-Logiciel _open source_ pour la génération de sites statiques (comme Hypotheses.org)
-
-
-```{=html}
-<iframe width="1200" height="450" src="https://gohugo.io/" title="Hugo"></iframe>
-```
-
-
-## Site web d'ALMACIR
-
-<https://iramat.github.io/almacir/>
-
-<img src='https://raw.githubusercontent.com/iramat/almacir/master/img/app-website-presentation-hugo.png' style='width: 750px;vertical-align: middle;'> 
-
-## ⏳ TODO 
-
-- internationalisation (`en`, `ar`)
-- contribuer au contenu (ex: [../content/fr/presentation/..](https://github.com/iramat/almacir/blob/hugo-files/content/fr/presentation/_index.md))
-
-# Synthèse {background-image="https://raw.githubusercontent.com/iramat/almacir/master/img/app-web-seo-google-sijilmasa-dinar-gold.png" background-opacity=0.1 background-size="400px" background-repeat="repeat"}
-
-## Points clefs
-
-- Numishare = application  
-- Nomisma = contenu
-- FAIR + LOD + Science Ouverte
-- _code as data_
-
-
 # Discussion {background-image="https://raw.githubusercontent.com/iramat/almacir/master/img/app-web-seo-google-sijilmasa-dinar-gold.png" background-opacity=0.1 background-size="400px" background-repeat="repeat"}
 
+## Participez!
 
+Participez au développement informatique du labo (_code as data_) :
+
+
+- GitHub (`https://github.com/iramat`[^10])
+  - inscription ([ici](https://github.com/signup))
+  - envoyez-moi votre nom d'utilisateur (_username_)
+  - valider l'invitation
+  - publier du code _open-source_ des référentiels ou des données publiques, contribuer aux discussions (👋 _Issues_), 
+- Zenodo (`https://zenodo.org/communities/iramat`)
+  - inscription ([ici](https://zenodo.org/signup/))
+  - envoyez-moi votre nom d'utilisateur (_username_)
+  - valider l'invitation
+  - déposer des documents, contribuer à l'édition/sélection des métadonnées, etc. 
+
+<center><thomas.huet@cnrs.fr></center>
+
+[^10]: par exemple: [`iramat-dev`](https://github.com/iramat/iramat-dev) pour les généralités, [`numishare`](https://github.com/iramat/numishare) pour les projets en numismatique, [`almacir`](https://github.com/iramat/almacir/tree/hugo-files) comme exemple de site web orienté projet
+
+## Aclass
+
+Structure HTML
+
+```html
+
+/iiif/mirador/cdn/<collection>/<manifest>.json
+```
+
+Structure interne
 

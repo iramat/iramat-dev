@@ -11,8 +11,7 @@
   <meta name="generator" content="quarto-1.7.23">
 
   <meta name="author" content="Thomas Huet">
-  <meta name="author" content="Sébastien Gasc (coord.)">
-  <title>ALMACIR – ANR ALMACIR</title>
+  <title>JDD IRAMAT – Interopérabilité de l’imagerie scientifique</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -30,6 +29,72 @@
       margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
       vertical-align: middle;
     }
+    /* CSS for syntax highlighting */
+    html { -webkit-text-size-adjust: 100%; }
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #aaaaaa;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+    div.sourceCode
+      { color: #003b4f; background-color: #f1f3f5; }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span { color: #003b4f; } /* Normal */
+    code span.al { color: #ad0000; } /* Alert */
+    code span.an { color: #5e5e5e; } /* Annotation */
+    code span.at { color: #657422; } /* Attribute */
+    code span.bn { color: #ad0000; } /* BaseN */
+    code span.bu { } /* BuiltIn */
+    code span.cf { color: #003b4f; font-weight: bold; } /* ControlFlow */
+    code span.ch { color: #20794d; } /* Char */
+    code span.cn { color: #8f5902; } /* Constant */
+    code span.co { color: #5e5e5e; } /* Comment */
+    code span.cv { color: #5e5e5e; font-style: italic; } /* CommentVar */
+    code span.do { color: #5e5e5e; font-style: italic; } /* Documentation */
+    code span.dt { color: #ad0000; } /* DataType */
+    code span.dv { color: #ad0000; } /* DecVal */
+    code span.er { color: #ad0000; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #ad0000; } /* Float */
+    code span.fu { color: #4758ab; } /* Function */
+    code span.im { color: #00769e; } /* Import */
+    code span.in { color: #5e5e5e; } /* Information */
+    code span.kw { color: #003b4f; font-weight: bold; } /* Keyword */
+    code span.op { color: #5e5e5e; } /* Operator */
+    code span.ot { color: #003b4f; } /* Other */
+    code span.pp { color: #ad0000; } /* Preprocessor */
+    code span.sc { color: #5e5e5e; } /* SpecialChar */
+    code span.ss { color: #20794d; } /* SpecialString */
+    code span.st { color: #20794d; } /* String */
+    code span.va { color: #111111; } /* Variable */
+    code span.vs { color: #20794d; } /* VerbatimString */
+    code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   </style>
   <link rel="stylesheet" href="site_libs/revealjs/dist/theme/quarto-00ac2f6af1389919a18f42df5b7c0002.css">
   <link rel="stylesheet" href="https://zoometh.github.io/thomashuet/css/quarto.css">
@@ -127,17 +192,14 @@
       margin-right: 0; 
     }
   </style>
-  <script src="site_libs/quarto-diagram/mermaid.min.js"></script>
-  <script src="site_libs/quarto-diagram/mermaid-init.js"></script>
-  <link href="site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
 </head>
 <body class="quarto-light">
   <div class="reveal">
     <div class="slides">
 
 <section id="title-slide" data-background-image="https://raw.githubusercontent.com/iramat/almacir/master/img/app-web-seo-google-sijilmasa-dinar-gold.png" data-background-opacity="0.1" data-background-size="110%" data-notes="Lorem" class="quarto-title-block center">
-  <h1 class="title">ANR ALMACIR</h1>
-  <p class="subtitle"><strong>Le système d’information</strong><br>Numishare, package R, GitHub, Zenodo, site web</p>
+  <h1 class="title">Interopérabilité de l’imagerie scientifique</h1>
+  <p class="subtitle"><b>le IIIF et les annotations</b></p>
 
 <div class="quarto-title-authors">
 <div class="quarto-title-author">
@@ -148,136 +210,71 @@ Thomas Huet
             <span style="font-size:17pt">IRAMAT-CNRS</span>
           </p>
     </div>
-<div class="quarto-title-author">
-<div class="quarto-title-author-name">
-Sébastien Gasc (coord.) 
-</div>
-        <p class="quarto-title-affiliation">
-            <span style="font-size:17pt">IRAMAT-CNRS</span>
-          </p>
-    </div>
 </div>
 
+</section>
+<section id="iiif" class="slide level2">
+<h2>IIIF</h2>
+<p><span class="smalltext"><a href="https://iramat-apps.cnrs.fr/view/acies/seax_sample_process.html" class="uri">https://iramat-apps.cnrs.fr/view/acies/seax_sample_process.html</a></span></p>
+<div class="iframe-figure">
+  <iframe width="800" height="470" src="https://iramat-apps.cnrs.fr/view/acies/seax_sample_process.html" title="Nomisma.org"></iframe>
+  <div class="captiontext">Scaramaxe (c) Tobias Heal</div>
+</div>
 </section>
 <section>
 <section id="introduction" class="title-slide slide level1 center" data-background-image="https://raw.githubusercontent.com/iramat/almacir/master/img/app-web-seo-google-sijilmasa-dinar-gold.png" data-background-opacity="0.1" data-background-size="400px" data-background-repeat="repeat">
 <h1>Introduction</h1>
 
 </section>
-<section id="plan" class="slide level2">
+<section id="des-images-pour-les-archéologues" class="slide level2">
+<h2>Des images pour les archéologues…</h2>
+</section>
+<section id="plan" class="slide level2 scrollable">
 <h2>Plan</h2>
-<ul>
-<li>Numishare</li>
-<li>Langage R</li>
-<li>GitHub</li>
-<li>Zenodo</li>
-<li>site web</li>
-</ul>
+<ol type="1">
+<li>Le IIIF, généralités</li>
+<li>Le IIIF à l’IRAMAT</li>
+<li>Publier vos images en IIIF</li>
+<li>Prochains développements</li>
+</ol>
 </section></section>
 <section>
-<section id="base-de-données" class="title-slide slide level1 center" data-background-image="https://raw.githubusercontent.com/iramat/almacir/master/img/app-web-seo-google-sijilmasa-dinar-gold.png" data-background-opacity="0.1" data-background-size="400px" data-background-repeat="repeat">
-<h1>Base de données</h1>
+<section id="le-iiif-généralités" class="title-slide slide level1 center" data-background-image="https://raw.githubusercontent.com/iramat/almacir/master/img/app-web-seo-google-sijilmasa-dinar-gold.png" data-background-opacity="0.1" data-background-size="400px" data-background-repeat="repeat">
+<h1>1. Le IIIF, généralités</h1>
 
 </section>
-<section id="numishare" class="slide level2">
-<h2>Numishare</h2>
-<div class="panel-tabset">
-<ul id="tabset-1" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-1-1">Présentation</a></li><li><a href="#tabset-1-2">Historique</a></li><li><a href="#tabset-1-3">Base de données/Projets</a></li><li><a href="#tabset-1-4">MCD</a></li></ul>
-<div class="tab-content">
-<div id="tabset-1-1">
-<div class="columns">
-<div class="column" style="width:50%;">
-<p>Suite d’applications <em>open source</em><a href="#/footnotes" class="footnote-ref" id="fnref1" role="doc-noteref" data-footnote-href="#/fn1" onclick=""><sup>1</sup></a>, alignée sur <a href="https://nomisma.org/">Nomisma.org</a><a href="#/footnotes" class="footnote-ref" id="fnref2" role="doc-noteref" data-footnote-href="#/fn2" onclick=""><sup>2</sup></a>, pour la gestion des collections numismatiques. Normes (NUDS)<a href="#/footnotes" class="footnote-ref" id="fnref3" role="doc-noteref" data-footnote-href="#/fn3" onclick=""><sup>3</sup></a> pratiques communes des bibliothèques/archives/musées pour la réutilisabilité des données (FAI<strong>R</strong>).</p>
-</div><div class="column" style="width:50%;">
-<iframe width="800" height="450" src="https://nomisma.org/" title="Nomisma.org"></iframe>
-</div></div>
-</div>
-<div id="tabset-1-2">
-<p>Collection numismatique du Musée d’art de l’Université de Virginie hébergé par le Scholars’ Lab. Le projet a débuté à l’automne 2007 et le code a été rendu <em>open source</em> à l’été 2009. Développé et maintenu par l’ ANS<a href="#/footnotes" class="footnote-ref" id="fnref4" role="doc-noteref" data-footnote-href="#/fn4" onclick=""><sup>4</sup></a> et utilisé pour sa collection en ligne</p>
-</div>
-<div id="tabset-1-3">
-<iframe width="1200" height="450" src="https://numismatics.org/resources/" title="Numishare projects"></iframe>
-</div>
-<div id="tabset-1-4">
-<p><a href="https://github.com/iramat/almacir/blob/dev/INSTALL.md#erd" class="uri">https://github.com/iramat/almacir/blob/dev/INSTALL.md#erd</a></p>
-<div class="cell" data-reveal="true" data-layout-align="default">
-<div class="cell-output-display">
-<div>
-<p></p><figure class=""><p></p>
-<div>
-<pre class="mermaid mermaid-js">flowchart TB
-Browser["Web Browser"]
-subgraph Numishare_stack["Numishare stack"]
-Tomcat["Apache Tomcat 9"]
-Orbeon["Orbeon Forms CE"]
-Numishare["Numishare App"]
-Exist["eXist-db"]
-Solr["Apache Solr"]
-Cantaloupe["Cantaloupe IIIF"]
-Images["Image Storage"]
-end
-Browser --&gt;|HTTP-S| Tomcat
-Tomcat --&gt; Orbeon
-Orbeon --&gt; Numishare
-Numishare --&gt; Exist
-Numishare --&gt; Solr
-Numishare --&gt; Cantaloupe
-Cantaloupe --&gt; Images
-style Numishare_stack fill:#f9f9f9,stroke:#333,stroke-width:2px,stroke-dasharray:5 5
-</pre>
-</div>
-<p></p></figure><p></p>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<aside></aside></section>
-<section id="almacir-sur-numishare" class="slide level2">
-<h2>ALMACIR sur Numishare</h2>
-<p>Numishare est déployé et opérationnel en mode <code>admin</code>.</p>
-<table class="caption-top">
-<thead>
-<tr class="header">
-<th>Applications</th>
-<th>URLs</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Tomcat</td>
-<td><a href="http://157.136.252.188:8080" class="uri">http://157.136.252.188:8080</a></td>
-</tr>
-<tr class="even">
-<td>Orbeon</td>
-<td><a href="http://157.136.252.188:8080/orbeon/" class="uri">http://157.136.252.188:8080/orbeon/</a></td>
-</tr>
-<tr class="odd">
-<td>Numishare</td>
-<td><a href="http://157.136.252.188:8080/orbeon/numishare/" class="uri">http://157.136.252.188:8080/orbeon/numishare/</a></td>
-</tr>
-</tbody>
-</table>
-<p><br></p>
-<p>🪙 demo.0003: <a href="http://157.136.252.188:8080/orbeon/numishare/demo/id/demo.0003" class="uri">http://157.136.252.188:8080/orbeon/numishare/demo/id/demo.0003</a></p>
-</section>
-<section id="todo" class="slide level2">
-<h2>⏳ TODO</h2>
+<section id="lorem" class="slide level2">
+<h2>Lorem</h2>
 <ul>
-<li>Développer la fiche descriptive (<em>nomisma concepts</em> + nouveaux concepts)</li>
-<li>Développer un flux de création et d’édition des données</li>
-<li>Création des données</li>
-<li>Finaliser l’exposition publique (production): <a href="http://157.136.252.188" class="uri">http://157.136.252.188</a> (HTTP) -&gt; <a href="https://iramat-apps.cnrs.fr/" class="uri">https://iramat-apps.cnrs.fr/</a> (HTTPS)</li>
+<li>FAIR</li>
+<li>partager des images haute définition</li>
 </ul>
 </section></section>
-<section>
-<section id="langage-r" class="title-slide slide level1 center" data-background-image="https://raw.githubusercontent.com/iramat/almacir/master/img/app-web-seo-google-sijilmasa-dinar-gold.png" data-background-opacity="0.1" data-background-size="400px" data-background-repeat="repeat">
-<h1>Langage R</h1>
+<section id="le-iiif-à-liramat" class="title-slide slide level1 center" data-background-image="https://raw.githubusercontent.com/iramat/almacir/master/img/app-web-seo-google-sijilmasa-dinar-gold.png" data-background-opacity="0.1" data-background-size="400px" data-background-repeat="repeat">
+<h1>2. Le IIIF à l’IRAMAT</h1>
 
 </section>
-<section id="package-iramat-pour-les-analyses" class="slide level2">
-<h2>package iRamat pour les analyses</h2>
+
+<section id="publier-vos-images-en-iiif" class="title-slide slide level1 center" data-background-image="https://raw.githubusercontent.com/iramat/almacir/master/img/app-web-seo-google-sijilmasa-dinar-gold.png" data-background-opacity="0.1" data-background-size="400px" data-background-repeat="repeat">
+<h1>3. Publier vos images en IIIF</h1>
+
+</section>
+
+<section>
+<section id="prochains-développements" class="title-slide slide level1 center" data-background-image="https://raw.githubusercontent.com/iramat/almacir/master/img/app-web-seo-google-sijilmasa-dinar-gold.png" data-background-opacity="0.1" data-background-size="400px" data-background-repeat="repeat">
+<h1>4. Prochains développements</h1>
+
+</section>
+<section id="lorem2" class="slide level2">
+<h2>LOrem2</h2>
+<ul>
+<li>mise en base de données des IIIF (<em>manifests</em> et <em>annotations</em>)</li>
+<li>creation de bases de références thématiques</li>
+<li>data pipeline vers du Machine learning</li>
+</ul>
+</section>
+<section id="wiai-sur-le-iiif" class="slide level2">
+<h2>WIAI sur le IIIF</h2>
 <div class="columns">
 <div class="column" style="width:50%;">
 <p>🧮 <a href="https://github.com/iramat#-wiai">WIAI</a></p>
@@ -294,189 +291,61 @@ style Numishare_stack fill:#f9f9f9,stroke:#333,stroke-width:2px,stroke-dasharray
 <p><strong>Note</strong></p>
 </div>
 <div class="callout-content">
-<p><strong>Présentation du package R <code>iRamat</code></strong> - <a href="https://iramat.github.io/iramat-dev/talks/2025-wiai-iRamat/pres">support</a> | <a href="https://sdrive.cnrs.fr/s/yP5DFgGXtF9ERQH">video</a> - Mardi 7 octobre 2025, 10:00 - 10:50</p>
+<p><strong>Présentation du cadre IIIF</strong> - <a href="">support</a> | <a href="">video</a> - Mardi 10 Mars 2026, 10:00 - 10:50</p>
 </div>
 </div>
 </div>
 </div><div class="column" style="width:50%;">
 <p><img src="https://raw.githubusercontent.com/iramat/iramat-dev/master/img/prg-R-iRamat-github-pres.png" style="width: 750px;vertical-align: middle;"></p>
 </div></div>
-</section>
-<section id="todo-1" class="slide level2">
-<h2>⏳ TODO</h2>
-<div class="columns">
-<div class="column" style="width:50%;">
-<ul>
-<li>Mutualisation et mise en fonction documentées des scripts R “tapés au km”</li>
-<li>Developpement de fonctions spécifiques pour la numismatique</li>
-</ul>
-</div><div class="column" style="width:50%;">
-<p><img src="https://raw.githubusercontent.com/iramat/iramat-dev/master/img/prg-R-iRamat-function-extractICP.png" style="width: 550px;vertical-align: middle;"></p>
-</div></div>
 </section></section>
 <section>
-<section id="github" class="title-slide slide level1 center" data-background-image="https://raw.githubusercontent.com/iramat/almacir/master/img/app-web-seo-google-sijilmasa-dinar-gold.png" data-background-opacity="0.1" data-background-size="400px" data-background-repeat="repeat">
-<h1>GitHub</h1>
-
-</section>
-<section id="github---généralités" class="slide level2">
-<h2>GitHub - Généralités</h2>
-<div class="columns">
-<div class="column" style="width:50%;">
-<p>🧮 <a href="https://github.com/iramat#-wiai">WIAI</a></p>
-<blockquote>
-<p>WIAI, Webinaires de l’Informatique pour l’Archéologie à l’IRAMAT</p>
-</blockquote>
-<p><br></p>
-<div class="callout callout-note callout-titled callout-style-default">
-<div class="callout-body">
-<div class="callout-title">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<p><strong>Note</strong></p>
-</div>
-<div class="callout-content">
-<p><strong>Présentation de GitHub</strong> - <a href="https://iramat.github.io/iramat-dev/talks/2025-wiai-github/pres">support</a> | <a href="https://sdrive.cnrs.fr/s/kZ32eLX6js6rBSW">video</a>- Mardi 8 juillet 2025, 10:00 - 10:50</p>
-</div>
-</div>
-</div>
-</div><div class="column" style="width:50%;">
-<p><img src="https://raw.githubusercontent.com/iramat/iramat-dev/master/img/github-iramat-org.png" style="width: 750px;vertical-align: middle;"></p>
-</div></div>
-</section>
-<section id="almacir-sur-github" class="slide level2">
-<h2>ALMACIR sur GitHub</h2>
-<div class="panel-tabset">
-<ul id="tabset-2" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-2-1">Repo public</a></li><li><a href="#tabset-2-2">Repo privé</a></li></ul>
-<div class="tab-content">
-<div id="tabset-2-1">
-<div class="columns">
-<div class="column" style="width:50%;">
-<p><a href="https://github.com/iramat/almacir" class="uri">https://github.com/iramat/almacir</a> ( = branche <a href="https://github.com/iramat/almacir/tree/main">main</a><a href="#/footnotes" class="footnote-ref" id="fnref5" role="doc-noteref" data-footnote-href="#/fn5" onclick=""><sup>5</sup></a>): Données publiques: données de référence (ex: nouveaux concepts), images, présentations, code informatique (non R), etc.</p>
-</div><div class="column" style="width:50%;">
-<p><br></p>
-<p><img src="https://raw.githubusercontent.com/iramat/almacir/master/img/app-github-almacir-data-public.png" style="width: 750px;vertical-align: middle;"></p>
-</div></div>
-</div>
-<div id="tabset-2-2">
-<div class="column" style="width:50%;">
-<p><a href="https://github.com/iramat/almacir-private" class="uri">https://github.com/iramat/almacir-private</a> (<a href="https://github.com/iramat/almacir-private/tree/main">main</a> uniquement)</p>
-</div><div class="column" style="width:50%;">
-<p><br></p>
-<p><img src="https://raw.githubusercontent.com/iramat/almacir/master/img/app-github-almacir-issue-private.png" style="width: 750px;vertical-align: middle;"></p>
-</div></div>
-</div>
-</div>
-<aside></aside></section>
-<section id="todo-2" class="slide level2">
-<h2>⏳ TODO</h2>
-<ul>
-<li>inscription sur GitHub (<a href="https://github.com/signup">ici</a>)</li>
-<li>envoyez-moi votre nom d’utilisateur (<em>username</em>) ex: <a href="https://github.com/SebastienGsc"><span class="citation" data-cites="SebastienGsc">@SebastienGsc</span></a></li>
-<li>valider l’invitation que je vous enverrai (<em>repos</em> <code>almacir</code> et <code>almacir-private</code>)</li>
-<li>contribuer aux discussions (👋 <em>Issues</em>)</li>
-</ul>
-</section></section>
-<section>
-<section id="zenodo" class="title-slide slide level1 center" data-background-image="https://raw.githubusercontent.com/iramat/almacir/master/img/app-web-seo-google-sijilmasa-dinar-gold.png" data-background-opacity="0.1" data-background-size="400px" data-background-repeat="repeat">
-<h1>Zenodo</h1>
-
-</section>
-<section id="généralités" class="slide level2">
-<h2>Généralités</h2>
-<p>Entrepot de données (<em>self-archiving</em>), fournisseur de DOI intégrant le protocole OAI-PMH<a href="#/footnotes" class="footnote-ref" id="fnref6" role="doc-noteref" data-footnote-href="#/fn6" onclick=""><sup>6</sup></a>, des API (Python, GitHub, etc).</p>
-<p>Créé dans le cadre d’ OpenAIRE<a href="#/footnotes" class="footnote-ref" id="fnref7" role="doc-noteref" data-footnote-href="#/fn7" onclick=""><sup>7</sup></a> et hébergé au CERN<a href="#/footnotes" class="footnote-ref" id="fnref8" role="doc-noteref" data-footnote-href="#/fn8" onclick=""><sup>8</sup></a>, sauvegarde des données sur le <em>Data Center</em> du CERN (Gratuit pour le dépôt jusqu’à 50 GB)</p>
-<aside></aside></section>
-<section id="almacir-sur-zenodo" class="slide level2">
-<h2>ALMACIR sur Zenodo</h2>
-<div class="panel-tabset">
-<ul id="tabset-3" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-3-1">Communauté “IRAMAT”</a></li><li><a href="#tabset-3-2">Données</a></li><li><a href="#tabset-3-3">Données numismatiques</a></li></ul>
-<div class="tab-content">
-<div id="tabset-3-1">
-<p><a href="https://zenodo.org/communities/iramat/" class="uri">https://zenodo.org/communities/iramat/</a></p>
-<p><img src="https://raw.githubusercontent.com/iramat/iramat-dev/master/img/zenodo-community-iramat-members.png" style="width: 750px;vertical-align: middle;"></p>
-</div>
-<div id="tabset-3-2">
-<p><img src="https://raw.githubusercontent.com/iramat/iramat-dev/master/img/zenodo-community-iramat-data.png" style="width: 750px;vertical-align: middle;"></p>
-</div>
-<div id="tabset-3-3">
-<p>filtrer les données ALMACIR avec le <code>subject</code> = <code>Numismatics</code><a href="#/footnotes" class="footnote-ref" id="fnref9" role="doc-noteref" data-footnote-href="#/fn9" onclick=""><sup>9</sup></a> <br> <a href="https://zenodo.org/communities/iramat/records?q=&amp;f=subject%3ANumismatics&amp;l=list&amp;p=1&amp;s=10&amp;sort=newest" class="uri">https://zenodo.org/communities/iramat/records?q=&amp;f=subject%3ANumismatics&amp;l=list&amp;p=1&amp;s=10&amp;sort=newest</a></p>
-</div>
-</div>
-</div>
-<aside></aside></section>
-<section id="todo-3" class="slide level2">
-<h2>⏳ TODO</h2>
-<ul>
-<li>inscription sur Zenodo (<a href="https://zenodo.org/signup/">ici</a>)</li>
-<li>envoyez-moi votre nom d’utilisateur (<em>username</em>)</li>
-<li>valider l’invitation que je vous enverrai</li>
-<li>déposer des documents</li>
-<li>contribuer à l’édition/sélection des métadonnées</li>
-</ul>
-</section></section>
-<section>
-<section id="site-web" class="title-slide slide level1 center" data-background-image="https://raw.githubusercontent.com/iramat/almacir/master/img/app-web-seo-google-sijilmasa-dinar-gold.png" data-background-opacity="0.1" data-background-size="400px" data-background-repeat="repeat">
-<h1>Site web</h1>
-
-</section>
-<section id="framework-hugo---généralités" class="slide level2">
-<h2><em>Framework</em> Hugo - Généralités</h2>
-<p>Logiciel <em>open source</em> pour la génération de sites statiques (comme Hypotheses.org)</p>
-<iframe width="1200" height="450" src="https://gohugo.io/" title="Hugo"></iframe>
-</section>
-<section id="site-web-dalmacir" class="slide level2">
-<h2>Site web d’ALMACIR</h2>
-<p><a href="https://iramat.github.io/almacir/" class="uri">https://iramat.github.io/almacir/</a></p>
-<p><img src="https://raw.githubusercontent.com/iramat/almacir/master/img/app-website-presentation-hugo.png" style="width: 750px;vertical-align: middle;"></p>
-</section>
-<section id="todo-4" class="slide level2">
-<h2>⏳ TODO</h2>
-<ul>
-<li>internationalisation (<code>en</code>, <code>ar</code>)</li>
-<li>contribuer au contenu (ex: <a href="https://github.com/iramat/almacir/blob/hugo-files/content/fr/presentation/_index.md">../content/fr/presentation/..</a>)</li>
-</ul>
-</section></section>
-<section>
-<section id="synthèse" class="title-slide slide level1 center" data-background-image="https://raw.githubusercontent.com/iramat/almacir/master/img/app-web-seo-google-sijilmasa-dinar-gold.png" data-background-opacity="0.1" data-background-size="400px" data-background-repeat="repeat">
-<h1>Synthèse</h1>
-
-</section>
-<section id="points-clefs" class="slide level2">
-<h2>Points clefs</h2>
-<ul>
-<li>Numishare = application<br>
-</li>
-<li>Nomisma = contenu</li>
-<li>FAIR + LOD + Science Ouverte</li>
-<li><em>code as data</em></li>
-</ul>
-</section></section>
 <section id="discussion" class="title-slide slide level1 center" data-background-image="https://raw.githubusercontent.com/iramat/almacir/master/img/app-web-seo-google-sijilmasa-dinar-gold.png" data-background-opacity="0.1" data-background-size="400px" data-background-repeat="repeat">
 <h1>Discussion</h1>
 
-
 </section>
+<section id="participez" class="slide level2">
+<h2>Participez!</h2>
+<p>Participez au développement informatique du labo (<em>code as data</em>) :</p>
+<ul>
+<li>GitHub (<code>https://github.com/iramat</code><a href="#/footnotes" class="footnote-ref" id="fnref1" role="doc-noteref" data-footnote-href="#/fn1" onclick=""><sup>1</sup></a>)
+<ul>
+<li>inscription (<a href="https://github.com/signup">ici</a>)</li>
+<li>envoyez-moi votre nom d’utilisateur (<em>username</em>)</li>
+<li>valider l’invitation</li>
+<li>publier du code <em>open-source</em> des référentiels ou des données publiques, contribuer aux discussions (👋 <em>Issues</em>),</li>
+</ul></li>
+<li>Zenodo (<code>https://zenodo.org/communities/iramat</code>)
+<ul>
+<li>inscription (<a href="https://zenodo.org/signup/">ici</a>)</li>
+<li>envoyez-moi votre nom d’utilisateur (<em>username</em>)</li>
+<li>valider l’invitation</li>
+<li>déposer des documents, contribuer à l’édition/sélection des métadonnées, etc.</li>
+</ul></li>
+</ul>
+<center>
+<a href="mailto:thomas.huet@cnrs.fr" class="email">thomas.huet@cnrs.fr</a>
+</center>
+<aside></aside></section>
+<section id="aclass" class="slide level2">
+<h2>Aclass</h2>
+<p>Structure HTML</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode numberSource html number-lines code-with-copy"><code class="sourceCode html"><span id="cb1-1"><a></a></span>
+<span id="cb1-2"><a></a>/iiif/mirador/cdn/<span class="dt">&lt;</span><span class="kw">collection</span><span class="dt">&gt;</span>/<span class="dt">&lt;</span><span class="kw">manifest</span><span class="dt">&gt;</span>.json</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Structure interne</p>
 
+
+</section></section>
 <section id="footnotes" class="footnotes footnotes-end-of-document smaller scrollable" role="doc-endnotes"><h2>Footnotes</h2>
 
 <ol>
-<li id="fn1"><p><a href="https://github.com/ewg118/numishare" class="uri">https://github.com/ewg118/numishare</a></p></li>
-<li id="fn2"><p><em>nomisma concepts</em>: thesauri et ontologie</p></li>
-<li id="fn3"><p><em>NUmismatic Description Standard</em> XML</p></li>
-<li id="fn4"><p><em>American Numismatic Society</em></p></li>
-<li id="fn5"><p>Autres branches <a href="https://github.com/iramat/almacir/tree/hugo-files">hugo-files</a> et <a href="https://github.com/iramat/almacir/tree/gh-pages">gh-pages</a> pour la génération du site web Hugo; <a href="https://github.com/iramat/almacir/tree/dev">dev</a> pour le développement informatique</p></li>
-<li id="fn6"><p><em>Open Archives Initiative Protocol for Metadata Harvesting</em></p></li>
-<li id="fn7"><p><em>nutshell</em> européenne pour la Science Ouverte</p></li>
-<li id="fn8"><p>Centre Européen pour la Recherche Nucléaire</p></li>
-<li id="fn9"><p>Issu du vocabulaire contrôlé MeSH (<em>Medical Subject Headings</em>)</p></li>
+<li id="fn1"><p>par exemple: <a href="https://github.com/iramat/iramat-dev"><code>iramat-dev</code></a> pour les généralités, <a href="https://github.com/iramat/numishare"><code>numishare</code></a> pour les projets en numismatique, <a href="https://github.com/iramat/almacir/tree/hugo-files"><code>almacir</code></a> comme exemple de site web orienté projet</p></li>
 </ol>
 </section>
     </div>
   <div class="quarto-auto-generated-content" style="display: none;">
 <div class="footer footer-default">
-<p>ANR ALMACIR - réunion préparatoire <img src="https://raw.githubusercontent.com/iramat/almacir/master/img/logo.png" style="height: 30px;vertical-align: middle;"> 15 Janvier, 2026, LAPA, Saclay</p>
+<p><small>Journée des doctorants de l’IRAMAT <img src="https://raw.githubusercontent.com/iramat/iramat-dev/master/img/logo.png" style="height: 30px;vertical-align: middle;"> 12 février, 2026, MSH, Paris</small></p>
 </div>
 </div></div>
 

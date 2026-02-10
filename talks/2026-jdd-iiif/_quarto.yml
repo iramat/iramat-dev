@@ -3,7 +3,7 @@ project:
   output-dir: pres
 
 website:
-  title: "ALMACIR"
+  title: "JDD IRAMAT"
   favicon: logo.png
   repo-url: https://github.com/quarto-dev/quarto-web
   page-footer:
