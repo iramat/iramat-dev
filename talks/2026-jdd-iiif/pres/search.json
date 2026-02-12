@@ -1,65 +1,114 @@
 [
   {
-    "objectID": "index.html#iiif",
-    "href": "index.html#iiif",
-    "title": "Interopérabilité de l’imagerie scientifique",
-    "section": "IIIF",
-    "text": "IIIF\nhttps://iramat-apps.cnrs.fr/view/acies/seax_sample_process.html\n\n  \n  Scaramaxe (c) Tobias Heal"
-  },
-  {
     "objectID": "index.html#des-images-pour-les-archéologues",
     "href": "index.html#des-images-pour-les-archéologues",
     "title": "Interopérabilité de l’imagerie scientifique",
     "section": "Des images pour les archéologues…",
-    "text": "Des images pour les archéologues…"
+    "text": "Des images pour les archéologues…\n\n\n\n\n\nIdentification/comptage des graines (INRAP/MNHN 2023)\n\n\n\n\nApprentissage machine pour la détermination des espèces domestiquées/non domestiquées (Bonhomme et al. 2025)"
   },
   {
-    "objectID": "index.html#plan",
-    "href": "index.html#plan",
+    "objectID": "index.html#iiif-standard-dintéropérabilité-des-images",
+    "href": "index.html#iiif-standard-dintéropérabilité-des-images",
     "title": "Interopérabilité de l’imagerie scientifique",
-    "section": "Plan",
-    "text": "Plan\n\nLe IIIF, généralités\nLe IIIF à l’IRAMAT\nPublier vos images en IIIF\nProchains développements"
+    "section": "IIIF: standard d’intéropérabilité des images",
+    "text": "IIIF: standard d’intéropérabilité des images\n\nDéfinitionMotivationFonctionnalitésFonctionnement\n\n\n\n   International Image Interoperability Framework  \n\n\n\n\n\n\n\nNote\n\n\nDéveloppé au début des années 2010.\n\n\n\n\n\n\n\nCommunauté d’acteurs du monde patrimonial et de la recherche (musées, bibliothèques, archives, universités…) ressentant la nécessité de partager des images haute résolution, des annotations, des pratiques de nommage, etc.\n\nmy_image_API\n\n\n\nLes images n’existent qu’à un endroit  \n🍃 baisse des coûts de stockage\n🔍 image indexée par une URL (URL1 -&gt; URI2)\n✒️ meilleure gestion des droits de réutilisation (citations et partages)\n🎮 meilleure expérience utilisateur (UX3)\n🏷️ sémantisation (annotations\n👥 aggrégation de collections (APIs partagées)\n\n\n\n\nURL4\n\n  \n\nImage source\n\nURL5\n\n  \n  manifest JSON"
   },
   {
-    "objectID": "index.html#lorem",
-    "href": "index.html#lorem",
+    "objectID": "index.html#image-source-default",
+    "href": "index.html#image-source-default",
     "title": "Interopérabilité de l’imagerie scientifique",
-    "section": "Lorem",
-    "text": "Lorem\n\nFAIR\npartager des images haute définition"
+    "section": "Image source (default)",
+    "text": "Image source (default)\nhttps://iramat-apps.cnrs.fr/iiif/2/numismatic%2F1986.416_obv.JPG/full/full/0/default.jpg"
   },
   {
-    "objectID": "index.html#lorem2",
-    "href": "index.html#lorem2",
+    "objectID": "index.html#image-source-region",
+    "href": "index.html#image-source-region",
     "title": "Interopérabilité de l’imagerie scientifique",
-    "section": "LOrem2",
-    "text": "LOrem2\n\nmise en base de données des IIIF (manifests et annotations)\ncreation de bases de références thématiques\ndata pipeline vers du Machine learning"
+    "section": "Image source (region)",
+    "text": "Image source (region)\nhttps://iramat-apps.cnrs.fr/iiif/2/numismatic%2F1986.416_obv.JPG/889,806,1697,635/full/0/default.jpg"
   },
   {
-    "objectID": "index.html#wiai-sur-le-iiif",
-    "href": "index.html#wiai-sur-le-iiif",
+    "objectID": "index.html#image-source-scale",
+    "href": "index.html#image-source-scale",
     "title": "Interopérabilité de l’imagerie scientifique",
-    "section": "WIAI sur le IIIF",
-    "text": "WIAI sur le IIIF\n\n\n🧮 WIAI\n\nWIAI, Webinaires de l’Informatique pour l’Archéologie à l’IRAMAT\n\n\n\n\n\n\n\n\nNote\n\n\nPrésentation du cadre IIIF - support | video - Mardi 10 Mars 2026, 10:00 - 10:50"
+    "section": "Image source (scale)",
+    "text": "Image source (scale)\nhttps://iramat-apps.cnrs.fr/iiif/2/numismatic%2F1986.416_obv.JPG/full/pct:7/0/default.jpg"
   },
   {
-    "objectID": "index.html#participez",
-    "href": "index.html#participez",
+    "objectID": "index.html#image-source-rotation",
+    "href": "index.html#image-source-rotation",
     "title": "Interopérabilité de l’imagerie scientifique",
-    "section": "Participez!",
-    "text": "Participez!\nParticipez au développement informatique du labo (code as data) :\n\nGitHub (https://github.com/iramat1)\n\ninscription (ici)\nenvoyez-moi votre nom d’utilisateur (username)\nvalider l’invitation\npublier du code open-source des référentiels ou des données publiques, contribuer aux discussions (👋 Issues),\n\nZenodo (https://zenodo.org/communities/iramat)\n\ninscription (ici)\nenvoyez-moi votre nom d’utilisateur (username)\nvalider l’invitation\ndéposer des documents, contribuer à l’édition/sélection des métadonnées, etc.\n\n\n\nthomas.huet@cnrs.fr"
+    "section": "Image source (rotation)",
+    "text": "Image source (rotation)\nhttps://iramat-apps.cnrs.fr/iiif/2/numismatic%2F1986.416_obv.JPG/full/full/180/default.jpg"
   },
   {
-    "objectID": "index.html#aclass",
-    "href": "index.html#aclass",
+    "objectID": "index.html#image-source-quality",
+    "href": "index.html#image-source-quality",
     "title": "Interopérabilité de l’imagerie scientifique",
-    "section": "Aclass",
-    "text": "Aclass\nStructure HTML\n\n/iiif/mirador/cdn/&lt;collection&gt;/&lt;manifest&gt;.json\nStructure interne"
+    "section": "Image source (quality)",
+    "text": "Image source (quality)\nhttps://iramat-apps.cnrs.fr/iiif/2/numismatic%2F1986.416_obv.JPG/full/full/0/gray.jpg"
+  },
+  {
+    "objectID": "index.html#une-image",
+    "href": "index.html#une-image",
+    "title": "Interopérabilité de l’imagerie scientifique",
+    "section": "Une image",
+    "text": "Une image\nhttps://iramat-apps.cnrs.fr/view/acies/seax_sample_process.html"
+  },
+  {
+    "objectID": "index.html#une-séquence-dimages",
+    "href": "index.html#une-séquence-dimages",
+    "title": "Interopérabilité de l’imagerie scientifique",
+    "section": "Une séquence d’images",
+    "text": "Une séquence d’images\nhttps://iramat-apps.cnrs.fr/view/numismatic/1986.416.html"
+  },
+  {
+    "objectID": "index.html#une-collection-dimages",
+    "href": "index.html#une-collection-dimages",
+    "title": "Interopérabilité de l’imagerie scientifique",
+    "section": "Une collection d’images",
+    "text": "Une collection d’images\nhttps://iramat-apps.cnrs.fr/view/iramat_iiif.html"
+  },
+  {
+    "objectID": "index.html#une-aggrégation-de-collections",
+    "href": "index.html#une-aggrégation-de-collections",
+    "title": "Interopérabilité de l’imagerie scientifique",
+    "section": "Une aggrégation de collections",
+    "text": "Une aggrégation de collections\nhttps://iramat-apps.cnrs.fr/view/iramat_bnf_iiif.html"
+  },
+  {
+    "objectID": "index.html#procédure",
+    "href": "index.html#procédure",
+    "title": "Interopérabilité de l’imagerie scientifique",
+    "section": "Procédure",
+    "text": "Procédure\nhttps://iramat-apps.cnrs.fr/view/acies/arl-x-s-1_side-1.html\n\n  \n\n👋 thomas.huet@cnrs.fr"
+  },
+  {
+    "objectID": "index.html#base-de-données",
+    "href": "index.html#base-de-données",
+    "title": "Interopérabilité de l’imagerie scientifique",
+    "section": "Base de données",
+    "text": "Base de données\n\n\nMise en base de données () des manifests et annotations"
+  },
+  {
+    "objectID": "index.html#data-pipeline",
+    "href": "index.html#data-pipeline",
+    "title": "Interopérabilité de l’imagerie scientifique",
+    "section": "Data pipeline",
+    "text": "Data pipeline\n\n\n\n\n\nflowchart LR\n  subgraph IRAMAT[&lt;b&gt;IRAMAT&lt;/b&gt;]\n    ICP{{ICP-MS}}\n    XRD{{XRD}}\n    XRF{{XRF}}\n    BD[(DB)]\n    analyses[archaeometry analysis]\n    analyses --&gt; IRAMATdata\n    analyses --&gt; IRAMATimg\n    subgraph VM[VM]\n    subgraph IRAMATdata[Scalar measurements]\n        XRF --&gt; BD\n        XRD --&gt; BD\n        ICP --&gt; BD\n        BD -- API RESTful --&gt; APIdata[&lt;em&gt;labeled data&lt;/em&gt;]\n    end\n    subgraph IRAMATimg[Imaging]\n        Macro{{Macro-&lt;br&gt;photography}} -- format --&gt; IIIFimg([IIIF image])\n        Opt{{Optical&lt;br&gt;Microscopy}} -- format --&gt; IIIFimg\n        SEM{{SEM-EDS}} -- format --&gt; IIIFimg\n        Raman{{Raman}} -- format --&gt; IIIFimg\n        IIIFimg ---&gt; IIIFpres([IIIF presentation])\n        IIIFpres --&gt; IIIFannot([IIIF annotation])\n        IIIFannot -- manifests&lt;br&gt;annotations --&gt; BD\n        BD -- API RESTful --&gt; APIimg[&lt;em&gt;labeled images&lt;/em&gt;]\n    end\n    end\n  end\n  APIdata ---&gt; PyExtract[&lt;em&gt;Data Fusion&lt;/em&gt;]\n  APIimg ---&gt; PyExtract\n  subgraph BSC[&lt;b&gt;BSC&lt;/b&gt;]\n    PyExtract -- creates --&gt; MLlearn[(learning base)]\n    subgraph ML[Machine Learning]\n      MLlearn ---&gt; MLvalid[validation]\n      MLvalid ---&gt; MLtest[test]\n      MLtest --&gt; MLlearn\n    end\n  end\n    subgraph out[&lt;b&gt;Automatic Classification&lt;/b&gt;]\n      ResMet[archaeometallurgical facies]\n      ResNum[numismatic coins]\n    end\n  ML ---&gt; out\n\nstyle BD fill:#cccccc\n\nstyle IRAMAT fill:#edfa05\nstyle VM fill:#f4fa82\nstyle analyses fill:#fbfcd7\nstyle IRAMATdata fill:#fbfcd7\nstyle IRAMATimg fill:#fbfcd7\nstyle XRF fill:#f6f7d5\nstyle XRD fill:#f6f7d5\nstyle ICP fill:#f6f7d5\nstyle Macro fill:#f6f7d5\nstyle Opt fill:#f6f7d5\nstyle SEM fill:#f6f7d5\nstyle Raman fill:#f6f7d5\nstyle IIIFimg fill:#f6f7d5\nstyle IIIFpres fill:#f6f7d5\nstyle IIIFannot fill:#f6f7d5\nstyle BD fill:#c9c9c9\nstyle APIdata fill:#f6f7d5\nstyle APIimg fill:#f6f7d5\n\nstyle BSC fill:#919cfa\nstyle PyExtract fill:#8794ff\nstyle ML fill:#8794ff\nstyle MLlearn fill:#d9ddff\nstyle MLvalid fill:#d9ddff\nstyle MLtest fill:#d9ddff\n\nstyle out fill:#42ff70\nstyle ResMet fill:#b0ffc3\nstyle ResNum fill:#b0ffc3\n\nclick BD \"https://github.com/iramat/iramat-dev/main/talks/2026-bsc/README.md#db\"\nclick VM \"https://github.com/iramat/iramat-dev/main/talks/2026-bsc/README.md#vm\"\nclick IIIFimg \"https://github.com/iramat/iramat-dev/main/talks/2026-bsc/README.md#iiif-image\"\nclick IIIFpres \"https://github.com/iramat/iramat-dev/main/talks/2026-bsc/README.md#iiif-presentation\"\nclick IIIFannot \"https://github.com/iramat/iramat-dev/main/talks/2026-bsc/README.md#iiif-annotation\"\n\n\n\n\n\n\n\nData pipeline vers du Machine learning"
+  },
+  {
+    "objectID": "index.html#collaborez",
+    "href": "index.html#collaborez",
+    "title": "Interopérabilité de l’imagerie scientifique",
+    "section": "Collaborez",
+    "text": "Collaborez\nParticipez aux développements informatiques de l’IRAMAT (code as data) :\n\nGitHub (https://github.com/iramat): code open-source, référentiels, données publiques, discussions, … Inscription (ici)\nZenodo (https://zenodo.org/communities/iramat): documents, édition/sélection des métadonnées,… Inscription (ici)\n\n\n👋 thomas.huet@cnrs.fr\n\n\n\n\n\n\n\nNote\n\n\n🧮 WIAI Présentation du cadre IIIF - support | video - Mardi 10 Mars 2026, 10:00 - 10:50"
   },
   {
     "objectID": "index.html#footnotes",
     "href": "index.html#footnotes",
     "title": "Interopérabilité de l’imagerie scientifique",
     "section": "Footnotes",
-    "text": "Footnotes\n\n\npar exemple: iramat-dev pour les généralités, numishare pour les projets en numismatique, almacir comme exemple de site web orienté projet"
+    "text": "Footnotes\n\n\nUniform Resource Locator\nUniform Resource Identifiers\nUser eXperience\nhttps://iramat-apps.cnrs.fr/iiif/2/numismatic%2F1986.416_obv.JPG/full/full/0/default.jpg\nhttps://iramat-apps.cnrs.fr/iiif/mirador/cdn/numismatic/1986.416.json"
   }
 ]
