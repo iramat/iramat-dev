@@ -11,7 +11,7 @@
     "href": "index.html#iiif-standard-dintéropérabilité-des-images",
     "title": "Interopérabilité de l’imagerie scientifique",
     "section": "IIIF: standard d’intéropérabilité des images",
-    "text": "IIIF: standard d’intéropérabilité des images\n\nDéfinitionMotivationFonctionnalitésFonctionnement\n\n\n\n   International Image Interoperability Framework  \n\n\n\n\n\n\n\nNote\n\n\nDéveloppé au début des années 2010.\n\n\n\n\n\n\n\nCommunauté d’acteurs du monde patrimonial et de la recherche (musées, bibliothèques, archives, universités…) ressentant la nécessité de partager des images haute résolution, des annotations, des pratiques de nommage, etc.\n\nmy_image_API\n\n\n\nLes images n’existent qu’à un endroit  \n🍃 baisse des coûts de stockage\n🔍 image indexée par une URL (URL1 -&gt; URI2)\n✒️ meilleure gestion des droits de réutilisation (citations et partages)\n🎮 meilleure expérience utilisateur (UX3)\n🏷️ sémantisation (annotations\n👥 aggrégation de collections (APIs partagées)\n\n\n\n\nURL4\n\n  \n\nImage source\n\nURL5\n\n  \n  manifest JSON"
+    "text": "IIIF: standard d’intéropérabilité des images\n\nDéfinitionMotivationFonctionnalitésFonctionnement\n\n\n\n   International Image Interoperability Framework  \n\n\n\n\n\n\n\nNote\n\n\nDéveloppé au début des années 2010.\n\n\n\n\n\n\n\nCommunauté d’acteurs du monde patrimonial et de la recherche (musées, bibliothèques, archives, universités…) ressentant la nécessité de partager des images haute résolution, des annotations, des pratiques de nommage, etc.\n\nmy_image_API\n\n\n\nLes images existent dans un seul endroit  \n🍃 baisse des coûts de stockage\n🔍 image indexée par une URL (URL1 -&gt; URI2)\n✒️ meilleure gestion des droits de réutilisation (citations et partages)\n🎮 meilleure expérience utilisateur (UX3)\n🏷️ sémantisation (annotations\n👥 aggrégation de collections (APIs partagées)\n\n\n\n\nURL4\n\n  \n\nImage source\n\nURL5\n\n  \n  manifest JSON"
   },
   {
     "objectID": "index.html#image-source-default",
@@ -88,7 +88,7 @@
     "href": "index.html#base-de-données",
     "title": "Interopérabilité de l’imagerie scientifique",
     "section": "Base de données",
-    "text": "Base de données\n\n\nMise en base de données () des manifests et annotations"
+    "text": "Base de données\n\n\nEnregistrement en base de données () des manifests et annotations"
   },
   {
     "objectID": "index.html#data-pipeline",
@@ -102,7 +102,7 @@
     "href": "index.html#collaborez",
     "title": "Interopérabilité de l’imagerie scientifique",
     "section": "Collaborez",
-    "text": "Collaborez\nParticipez aux développements informatiques de l’IRAMAT (code as data) :\n\nGitHub (https://github.com/iramat): code open-source, référentiels, données publiques, discussions, … Inscription (ici)\nZenodo (https://zenodo.org/communities/iramat): documents, édition/sélection des métadonnées,… Inscription (ici)\n\n\n👋 thomas.huet@cnrs.fr\n\n\n\n\n\n\n\nNote\n\n\n🧮 WIAI Présentation du cadre IIIF - support | video - Mardi 10 Mars 2026, 10:00 - 10:50"
+    "text": "Collaborez\nParticipez aux développements informatiques de l’IRAMAT :\n\n (https://github.com/iramat): code open-source, référentiels, données publiques, discussions, … Inscription (ici)\n Zenodo (https://zenodo.org/communities/iramat): documents, édition/sélection des métadonnées,… Inscription (ici)\n\n\n👋 thomas.huet@cnrs.fr\n\n\n\n\n\n\n\nNote\n\n\n🧮 WIAI Présentation du cadre IIIF - support | video - Mardi 10 Mars 2026, 10:00 - 10:50"
   },
   {
     "objectID": "index.html#footnotes",

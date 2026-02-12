@@ -8,10 +8,10 @@ author:
       - id: cnrs
         name: <span style="font-size:17pt">IRAMAT-CNRS</span>
 title-slide-attributes:
-    data-background-image: "https://raw.githubusercontent.com/iramat/almacir/master/img/app-web-seo-google-sijilmasa-dinar-gold.png" 
+    data-background-image: "https://raw.githubusercontent.com/iramat/iramat-dev/master/img/iiif-pres-collection-multi.png" 
     # data-background-repeat: "repeat"
     data-background-size: "110%"
-    data-background-opacity: "0.1"
+    data-background-opacity: "0.3"
     data-notes: Lorem
 format:
   revealjs: 
@@ -43,7 +43,7 @@ library(kableExtra)
 ```
 
 
-# Introduction {background-image="https://raw.githubusercontent.com/iramat/almacir/master/img/app-web-seo-google-sijilmasa-dinar-gold.png" background-opacity=0.1 background-size="400px" background-repeat="repeat"}
+# Introduction {background-image="https://raw.githubusercontent.com/iramat/iramat-dev/master/img/iiif-pres-collection-multi.png" background-opacity=0.2 background-size="400px" background-repeat="repeat"}
 
 ## Des images pour les archéologues...
 
@@ -156,11 +156,11 @@ Les images existent dans **un seul endroit**  \
 [^4]: <https://iramat-apps.cnrs.fr/iiif/2/numismatic%2F1986.416_obv.JPG/full/full/0/default.jpg>
 [^5]: <https://iramat-apps.cnrs.fr/iiif/mirador/cdn/numismatic/1986.416.json>
 
-# Image API {background-image="https://raw.githubusercontent.com/iramat/almacir/master/img/app-web-seo-google-sijilmasa-dinar-gold.png" background-opacity=0.1 background-size="400px" background-repeat="repeat"}
+# Image API {background-image="https://raw.githubusercontent.com/iramat/iramat-dev/master/img/iiif-pres-collection-multi.png" background-opacity=0.2 background-size="400px" background-repeat="repeat"}
 
 ## Image source (default)
 
-<span class="smalltext">[<span style="color: lightgrey">https://iramat-apps.cnrs.fr/iiif/2/numismatic%2F1986.416_obv.JPG</span>/full/full/0/default.jpg](https://iramat-apps.cnrs.fr/iiif/2/numismatic%2F1986.416_obv.JPG/full/full/0/default.jpg)</span>
+<span class="smalltext">[<span style="color: grey">https://iramat-apps.cnrs.fr/iiif/2/numismatic%2F1986.416_obv.JPG</span>/full/full/0/default.jpg](https://iramat-apps.cnrs.fr/iiif/2/numismatic%2F1986.416_obv.JPG/full/full/0/default.jpg)</span>
 ```{=html}
 <div style="display: flex; justify-content: center; align-items: center; width: 100%;">
   <img
@@ -173,7 +173,7 @@ Les images existent dans **un seul endroit**  \
 
 ## Image source (region)
 
-<span class="smalltext">[<span style="color: lightgrey">https://iramat-apps.cnrs.fr/iiif/2/numismatic%2F1986.416_obv.JPG</span>/889,806,1697,635/full/0/default.jpg](https://iramat-apps.cnrs.fr/iiif/2/numismatic%2F1986.416_obv.JPG/889,806,1697,635/full/0/default.jpg)</span>
+<span class="smalltext">[<span style="color: grey">https://iramat-apps.cnrs.fr/iiif/2/numismatic%2F1986.416_obv.JPG</span>/889,806,1697,635/full/0/default.jpg](https://iramat-apps.cnrs.fr/iiif/2/numismatic%2F1986.416_obv.JPG/889,806,1697,635/full/0/default.jpg)</span>
 ```{=html}
 <div style="display: flex; justify-content: center; align-items: center; width: 100%;">
   <img
@@ -186,7 +186,7 @@ Les images existent dans **un seul endroit**  \
 
 ## Image source (scale)
 
-<span class="smalltext">[<span style="color: lightgrey">https://iramat-apps.cnrs.fr/iiif/2/numismatic%2F1986.416_obv.JPG</span>/full/pct:7/0/default.jpg](https://iramat-apps.cnrs.fr/iiif/2/numismatic%2F1986.416_obv.JPG/full/pct:7/0/default.jpg)</span>
+<span class="smalltext">[<span style="color: grey">https://iramat-apps.cnrs.fr/iiif/2/numismatic%2F1986.416_obv.JPG</span>/full/pct:7/0/default.jpg](https://iramat-apps.cnrs.fr/iiif/2/numismatic%2F1986.416_obv.JPG/full/pct:7/0/default.jpg)</span>
 ```{=html}
 <div style="display: flex; justify-content: center; align-items: center; width: 100%;">
   <img
@@ -199,7 +199,7 @@ Les images existent dans **un seul endroit**  \
 
 ## Image source (rotation)
 
-<span class="smalltext">[<span style="color: lightgrey">https://iramat-apps.cnrs.fr/iiif/2/numismatic%2F1986.416_obv.JPG</span>/full/full/180/default.jpg](https://iramat-apps.cnrs.fr/iiif/2/numismatic%2F1986.416_obv.JPG/full/full/180/default.jpg)</span>
+<span class="smalltext">[<span style="color: grey">https://iramat-apps.cnrs.fr/iiif/2/numismatic%2F1986.416_obv.JPG</span>/full/full/180/default.jpg](https://iramat-apps.cnrs.fr/iiif/2/numismatic%2F1986.416_obv.JPG/full/full/180/default.jpg)</span>
 ```{=html}
 <div style="display: flex; justify-content: center; align-items: center; width: 100%;">
   <img
@@ -212,7 +212,7 @@ Les images existent dans **un seul endroit**  \
 
 ## Image source (quality)
 
-<span class="smalltext">[<span style="color: lightgrey">https://iramat-apps.cnrs.fr/iiif/2/numismatic%2F1986.416_obv.JPG</span>/full/full/0/gray.jpg](https://iramat-apps.cnrs.fr/iiif/2/numismatic%2F1986.416_obv.JPG/full/full/0/gray.jpg)</span>
+<span class="smalltext">[<span style="color: grey">https://iramat-apps.cnrs.fr/iiif/2/numismatic%2F1986.416_obv.JPG</span>/full/full/0/gray.jpg](https://iramat-apps.cnrs.fr/iiif/2/numismatic%2F1986.416_obv.JPG/full/full/0/gray.jpg)</span>
 ```{=html}
 <div style="display: flex; justify-content: center; align-items: center; width: 100%;">
   <img
@@ -223,7 +223,7 @@ Les images existent dans **un seul endroit**  \
 </div>
 ```
 
-# Presentation API {background-image="https://raw.githubusercontent.com/iramat/almacir/master/img/app-web-seo-google-sijilmasa-dinar-gold.png" background-opacity=0.1 background-size="400px" background-repeat="repeat"}
+# Presentation API {background-image="https://raw.githubusercontent.com/iramat/iramat-dev/master/img/iiif-pres-collection-multi.png" background-opacity=0.2 background-size="400px" background-repeat="repeat"}
 
 ## Une image
 
@@ -272,23 +272,23 @@ Les images existent dans **un seul endroit**  \
 ```
 
 
-# Publier vos images en IIIF {background-image="https://raw.githubusercontent.com/iramat/almacir/master/img/app-web-seo-google-sijilmasa-dinar-gold.png" background-opacity=0.1 background-size="400px" background-repeat="repeat"}
+# Publier vos images en IIIF {background-image="https://raw.githubusercontent.com/iramat/iramat-dev/master/img/iiif-pres-collection-multi.png" background-opacity=0.2 background-size="400px" background-repeat="repeat"}
 
 ## Procédure
 
 <span class="smalltext"><https://iramat-apps.cnrs.fr/view/acies/arl-x-s-1_side-1.html></span>
 ```{=html}
 <div class="iframe-figure">
-  <iframe width="1000" height="450"
+  <iframe width="1000" height="420"
           src="https://iramat-apps.cnrs.fr/view/acies/arl-x-s-1_side-1.html"
           title="Nomisma.org"></iframe>
 </div>
 ```
 
-👋 <thomas.huet@cnrs.fr>
+👋 <small><thomas.huet@cnrs.fr></small>
 
 
-# Développements prévus {background-image="https://raw.githubusercontent.com/iramat/almacir/master/img/app-web-seo-google-sijilmasa-dinar-gold.png" background-opacity=0.1 background-size="400px" background-repeat="repeat"}
+# Développements prévus {background-image="https://raw.githubusercontent.com/iramat/iramat-dev/master/img/iiif-pres-collection-multi.png" background-opacity=0.2 background-size="400px" background-repeat="repeat"}
 
 
 
@@ -298,7 +298,7 @@ Les images existent dans **un seul endroit**  \
 
 ::: {.column width="30%"}
 
-Mise en base de données (<img src='https://raw.githubusercontent.com/iramat/iramat-dev/main/img/logo-chips-txt.png' style='width: 35px;vertical-align: middle;'>) des _manifests_ et _annotations_ 
+Enregistrement en base de données (<img src='https://raw.githubusercontent.com/iramat/iramat-dev/main/img/logo-chips-txt.png' style='width: 35px;vertical-align: middle;'>) des _manifests_ et annotations
 
 :::
 ::: {.column width="70%"}
@@ -310,7 +310,6 @@ Mise en base de données (<img src='https://raw.githubusercontent.com/iramat/ira
 ::::
 
 ## Data pipeline
-
 
 
 ```{mermaid}
@@ -400,15 +399,15 @@ click IIIFannot "https://github.com/iramat/iramat-dev/main/talks/2026-bsc/README
 
 <div class="captiontext">_Data pipeline_ vers du Machine learning</div>
 
-# Discussion {background-image="https://raw.githubusercontent.com/iramat/almacir/master/img/app-web-seo-google-sijilmasa-dinar-gold.png" background-opacity=0.1 background-size="400px" background-repeat="repeat"}
+# Discussion {background-image="https://raw.githubusercontent.com/iramat/iramat-dev/master/img/iiif-pres-collection-multi.png" background-opacity=0.2 background-size="400px" background-repeat="repeat"}
 
 ## Collaborez
 
-Participez aux développements informatiques de l'IRAMAT (_code as data_) :
+Participez aux développements informatiques de l'IRAMAT :
 
 
-- GitHub (`https://github.com/iramat`): code _open-source_, référentiels, données publiques, discussions, ... Inscription ([ici](https://github.com/signup))
-- Zenodo (`https://zenodo.org/communities/iramat`): documents, édition/sélection des métadonnées,... Inscription ([ici](https://zenodo.org/signup/))
+- <img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/app-github-3.png' style='height: 45px;vertical-align: middle;'> (`https://github.com/iramat`): code _open-source_, référentiels, données publiques, discussions, ... Inscription ([ici](https://github.com/signup))
+- <img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/app-zenodo.png' style='height: 45px;vertical-align: middle;'> Zenodo (`https://zenodo.org/communities/iramat`): documents, édition/sélection des métadonnées,... Inscription ([ici](https://zenodo.org/signup/))
 
 <center>👋 <thomas.huet@cnrs.fr></center>
 
