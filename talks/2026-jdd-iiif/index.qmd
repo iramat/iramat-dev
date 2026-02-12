@@ -45,7 +45,7 @@ library(kableExtra)
 
 # Introduction {background-image="https://raw.githubusercontent.com/iramat/iramat-dev/master/img/iiif-pres-collection-multi.png" background-opacity=0.2 background-size="400px" background-repeat="repeat"}
 
-## Des images pour les archéologues...
+## Des images pour les archéologues
 
 <br><br>
 
@@ -98,7 +98,8 @@ Communauté d’acteurs du monde patrimonial et de la recherche (musées, biblio
 :::
 
 ::: {.column width="40%"}
-my_image_API
+<img src='https://raw.githubusercontent.com/iramat/iramat-dev/main/img/prg-API-many-to-many.png' style='width: 300px;vertical-align: middle;'>
+
 :::
 
 ::::

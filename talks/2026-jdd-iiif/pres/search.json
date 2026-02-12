@@ -3,15 +3,15 @@
     "objectID": "index.html#des-images-pour-les-archéologues",
     "href": "index.html#des-images-pour-les-archéologues",
     "title": "Interopérabilité de l’imagerie scientifique",
-    "section": "Des images pour les archéologues…",
-    "text": "Des images pour les archéologues…\n\n\n\n\n\nIdentification/comptage des graines (INRAP/MNHN 2023)\n\n\n\n\nApprentissage machine pour la détermination des espèces domestiquées/non domestiquées (Bonhomme et al. 2025)"
+    "section": "Des images pour les archéologues",
+    "text": "Des images pour les archéologues\n\n\n\n\n\nIdentification/comptage des graines (INRAP/MNHN 2023)\n\n\n\n\nApprentissage machine pour la détermination des espèces domestiquées/non domestiquées (Bonhomme et al. 2025)"
   },
   {
     "objectID": "index.html#iiif-standard-dintéropérabilité-des-images",
     "href": "index.html#iiif-standard-dintéropérabilité-des-images",
     "title": "Interopérabilité de l’imagerie scientifique",
     "section": "IIIF: standard d’intéropérabilité des images",
-    "text": "IIIF: standard d’intéropérabilité des images\n\nDéfinitionMotivationFonctionnalitésFonctionnement\n\n\n\n   International Image Interoperability Framework  \n\n\n\n\n\n\n\nNote\n\n\nDéveloppé au début des années 2010.\n\n\n\n\n\n\n\nCommunauté d’acteurs du monde patrimonial et de la recherche (musées, bibliothèques, archives, universités…) ressentant la nécessité de partager des images haute résolution, des annotations, des pratiques de nommage, etc.\n\nmy_image_API\n\n\n\nLes images existent dans un seul endroit  \n🍃 baisse des coûts de stockage\n🔍 image indexée par une URL (URL1 -&gt; URI2)\n✒️ meilleure gestion des droits de réutilisation (citations et partages)\n🎮 meilleure expérience utilisateur (UX3)\n🏷️ sémantisation (annotations\n👥 aggrégation de collections (APIs partagées)\n\n\n\n\nURL4\n\n  \n\nImage source\n\nURL5\n\n  \n  manifest JSON"
+    "text": "IIIF: standard d’intéropérabilité des images\n\nDéfinitionMotivationFonctionnalitésFonctionnement\n\n\n\n   International Image Interoperability Framework  \n\n\n\n\n\n\n\nNote\n\n\nDéveloppé au début des années 2010.\n\n\n\n\n\n\n\nCommunauté d’acteurs du monde patrimonial et de la recherche (musées, bibliothèques, archives, universités…) ressentant la nécessité de partager des images haute résolution, des annotations, des pratiques de nommage, etc.\n\n\n\n\n\nLes images existent dans un seul endroit  \n🍃 baisse des coûts de stockage\n🔍 image indexée par une URL (URL1 -&gt; URI2)\n✒️ meilleure gestion des droits de réutilisation (citations et partages)\n🎮 meilleure expérience utilisateur (UX3)\n🏷️ sémantisation (annotations\n👥 aggrégation de collections (APIs partagées)\n\n\n\n\nURL4\n\n  \n\nImage source\n\nURL5\n\n  \n  manifest JSON"
   },
   {
     "objectID": "index.html#image-source-default",
