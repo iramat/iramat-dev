@@ -1,6 +1,6 @@
 ---
-title: "Interopérabilité de l'imagerie scientifique"
-subtitle: "<b>le IIIF et les annotations</b>"
+title: "Le IIIF et les annotations"
+subtitle: "<b>Interopérabilité de l'imagerie scientifique</b>"
 abstract: "En archéologie, l’image (photographies, relevés, imagerie scientifique) est une donnée primaire essentielle, annotée par les chercheurs pour identifier des traces techniques, d’usage ou des chaînes opératoires. Cependant, contrairement aux données spatiales, ces images sont souvent publiées de manière statique, peu réutilisables et mal interopérables, avec des métadonnées dissociées et une qualité dégradée. Un enjeu majeur réside dans le développement de référentiels visuels annotés, haute définition, accessibles et interopérables, favorisant l’indexation, la reproductibilité des analyses et l’exploitation par l’apprentissage automatique. Le cadre IIIF (International Image Interoperability Framework) répond à ces besoins en permettant le zoom profond, l’annotation normalisée, la comparaison visuelle et l’interopérabilité entre plateformes. Par exemple, il facilite la comparaison directe de traces d’usage sur des artefacts dispersés dans différentes institutions. Cette communication présente la structure d’annotation IIIF mise en place à l’IRAMAT, illustrant son potentiel pour la recherche archéologique."
 author:
   - name: Thomas Huet
@@ -79,7 +79,7 @@ library(kableExtra)
 
 <img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/lod-iso-iiif.png' style='height: 120px;vertical-align: middle;'> 
 <br> <br>
-<span class="largetext"><span style="color: blue">International</span><span style="color: red">Image</span><span style="color: blue">Interoperability</span><span style="color: red">Framework</span>
+<span class="largetext"><span style="color: #0f7ca7">International </span><span style="color: #ea2026">Image </span><span style="color: #0f7ca7">Interoperability </span><span style="color: #ea2026">Framework</span>
 <br> <br> 
 </center>
 
@@ -94,7 +94,7 @@ Développé au début des années 2010.
 :::: {.columns}
 
 ::: {.column width="60%"}
-Communauté d’acteurs du monde patrimonial et de la recherche (musées, bibliothèques, archives, universités...) ressentant la nécessité de partager des images haute résolution, des annotations, des pratiques de nommage, etc. 
+Communautés du monde patrimonial et de la recherche (musées, bibliothèques, archives, universités...) ressentant la nécessité de partager des images haute résolution, des annotations, des pratiques de nommage, etc.<br><b> ≠ silo de données</b> 
 :::
 
 ::: {.column width="40%"}
@@ -106,7 +106,7 @@ Communauté d’acteurs du monde patrimonial et de la recherche (musées, biblio
 
 ### Fonctionnalités
 
-Les images <img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/lod-iso-iiif.png' style='height: 35px;vertical-align: middle;'> existent dans **un seul endroit**  \ 
+Les images <img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/lod-iso-iiif.png' style='height: 55px;vertical-align: middle;'> existent à **un seul endroit**  \ 
 \
 🍃 baisse des coûts de stockage \
 🔍 image indexée par une URL (URL[^1] `->` URI[^2]) \
@@ -129,6 +129,7 @@ Les images <img src='https://raw.githubusercontent.com/zoometh/thomashuet/master
     style="max-width: 600px; max-height: 320px; object-fit: contain;"
   />
 </div>
+<br>
 <div class="captiontext">Image source</div>
 ```
 
@@ -141,8 +142,9 @@ Les images <img src='https://raw.githubusercontent.com/zoometh/thomashuet/master
   <iframe width="800" height="320"
           src="https://iramat-apps.cnrs.fr/iiif/mirador/cdn/numismatic/1986.416.json"
           title="manifest JSON"></iframe>
-  <div class="captiontext"><em>manifest</em> JSON</div>
 </div>
+<br>
+<div class="captiontext"><em>manifest</em> JSON</div>
 ```
 :::
 
@@ -161,7 +163,7 @@ Les images <img src='https://raw.githubusercontent.com/zoometh/thomashuet/master
 
 ## Image source (default)
 
-<span class="smalltext">[<span style="color: grey">https://iramat-apps.cnrs.fr/iiif/2/numismatic%2F1986.416_obv.JPG</span>/full/full/0/default.jpg](https://iramat-apps.cnrs.fr/iiif/2/numismatic%2F1986.416_obv.JPG/full/full/0/default.jpg)</span>
+<span class="smalltext">[<span style="color: #b0afaf">https://iramat-apps.cnrs.fr/iiif/2/numismatic%2F1986.416_obv.JPG</span>/full/full/0/default.jpg](https://iramat-apps.cnrs.fr/iiif/2/numismatic%2F1986.416_obv.JPG/full/full/0/default.jpg)</span>
 ```{=html}
 <div style="display: flex; justify-content: center; align-items: center; width: 100%;">
   <img
@@ -174,7 +176,7 @@ Les images <img src='https://raw.githubusercontent.com/zoometh/thomashuet/master
 
 ## Image source (region)
 
-<span class="smalltext">[<span style="color: grey">https://iramat-apps.cnrs.fr/iiif/2/numismatic%2F1986.416_obv.JPG</span>/889,806,1697,635/full/0/default.jpg](https://iramat-apps.cnrs.fr/iiif/2/numismatic%2F1986.416_obv.JPG/889,806,1697,635/full/0/default.jpg)</span>
+<span class="smalltext">[<span style="color: #b0afaf">https://iramat-apps.cnrs.fr/iiif/2/numismatic%2F1986.416_obv.JPG/</span>889,806,1697,635<span style="color: #b0afaf">/full/0/default.jpg</span>](https://iramat-apps.cnrs.fr/iiif/2/numismatic%2F1986.416_obv.JPG/889,806,1697,635/full/0/default.jpg)</span>
 ```{=html}
 <div style="display: flex; justify-content: center; align-items: center; width: 100%;">
   <img
@@ -187,7 +189,7 @@ Les images <img src='https://raw.githubusercontent.com/zoometh/thomashuet/master
 
 ## Image source (scale)
 
-<span class="smalltext">[<span style="color: grey">https://iramat-apps.cnrs.fr/iiif/2/numismatic%2F1986.416_obv.JPG</span>/full/pct:7/0/default.jpg](https://iramat-apps.cnrs.fr/iiif/2/numismatic%2F1986.416_obv.JPG/full/pct:7/0/default.jpg)</span>
+<span class="smalltext">[<span style="color: #b0afaf">https://iramat-apps.cnrs.fr/iiif/2/numismatic%2F1986.416_obv.JPG/full/</span>pct:7<span style="color: #b0afaf">/0/default.jpg</span>](https://iramat-apps.cnrs.fr/iiif/2/numismatic%2F1986.416_obv.JPG/full/pct:7/0/default.jpg)</span>
 ```{=html}
 <div style="display: flex; justify-content: center; align-items: center; width: 100%;">
   <img
@@ -200,7 +202,7 @@ Les images <img src='https://raw.githubusercontent.com/zoometh/thomashuet/master
 
 ## Image source (rotation)
 
-<span class="smalltext">[<span style="color: grey">https://iramat-apps.cnrs.fr/iiif/2/numismatic%2F1986.416_obv.JPG</span>/full/full/180/default.jpg](https://iramat-apps.cnrs.fr/iiif/2/numismatic%2F1986.416_obv.JPG/full/full/180/default.jpg)</span>
+<span class="smalltext">[<span style="color: #b0afaf">https://iramat-apps.cnrs.fr/iiif/2/numismatic%2F1986.416_obv.JPG/full/full/</span>180<span style="color: #b0afaf">/default.jpg</span>](https://iramat-apps.cnrs.fr/iiif/2/numismatic%2F1986.416_obv.JPG/full/full/180/default.jpg)</span>
 ```{=html}
 <div style="display: flex; justify-content: center; align-items: center; width: 100%;">
   <img
@@ -213,7 +215,7 @@ Les images <img src='https://raw.githubusercontent.com/zoometh/thomashuet/master
 
 ## Image source (quality)
 
-<span class="smalltext">[<span style="color: grey">https://iramat-apps.cnrs.fr/iiif/2/numismatic%2F1986.416_obv.JPG</span>/full/full/0/gray.jpg](https://iramat-apps.cnrs.fr/iiif/2/numismatic%2F1986.416_obv.JPG/full/full/0/gray.jpg)</span>
+<span class="smalltext">[<span style="color: #b0afaf">https://iramat-apps.cnrs.fr/iiif/2/numismatic%2F1986.416_obv.JPG/full/full/0/</span>gray.jpg](https://iramat-apps.cnrs.fr/iiif/2/numismatic%2F1986.416_obv.JPG/full/full/0/gray.jpg)</span>
 ```{=html}
 <div style="display: flex; justify-content: center; align-items: center; width: 100%;">
   <img

@@ -11,7 +11,7 @@
   <meta name="generator" content="quarto-1.7.23">
 
   <meta name="author" content="Thomas Huet">
-  <title>JDD IRAMAT – Interopérabilité de l’imagerie scientifique</title>
+  <title>JDD IRAMAT – Le IIIF et les annotations</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -201,8 +201,8 @@
     <div class="slides">
 
 <section id="title-slide" data-background-image="https://raw.githubusercontent.com/iramat/iramat-dev/master/img/iiif-pres-collection-multi.png" data-background-opacity="0.3" data-background-size="110%" data-notes="Lorem" class="quarto-title-block center">
-  <h1 class="title">Interopérabilité de l’imagerie scientifique</h1>
-  <p class="subtitle"><b>le IIIF et les annotations</b></p>
+  <h1 class="title">Le IIIF et les annotations</h1>
+  <p class="subtitle"><b>Interopérabilité de l’imagerie scientifique</b></p>
 
 <div class="quarto-title-authors">
 <div class="quarto-title-author">
@@ -244,8 +244,8 @@ Apprentissage machine pour la détermination des espèces domestiquées/non dome
 <div class="tab-content">
 <div id="tabset-1-1">
 <center>
-<img src="https://raw.githubusercontent.com/zoometh/thomashuet/master/img/lod-iso-iiif.png" style="height: 120px;vertical-align: middle;"> <br> <br> <span class="largetext">International Image Interoperability Framework</span> <br> <br>
-</center>
+<img src="https://raw.githubusercontent.com/zoometh/thomashuet/master/img/lod-iso-iiif.png" style="height: 120px;vertical-align: middle;"> <br> <br> <span class="largetext"><span style="color: #0f7ca7">International </span><span style="color: #ea2026">Image </span><span style="color: #0f7ca7">Interoperability </span><span style="color: #ea2026">Framework</span> <br> <br>
+</span></center>
 <div class="callout callout-note callout-titled callout-style-default">
 <div class="callout-body">
 <div class="callout-title">
@@ -263,13 +263,13 @@ Apprentissage machine pour la détermination des espèces domestiquées/non dome
 <div id="tabset-1-2">
 <div class="columns">
 <div class="column" style="width:60%;">
-<p>Communauté d’acteurs du monde patrimonial et de la recherche (musées, bibliothèques, archives, universités…) ressentant la nécessité de partager des images haute résolution, des annotations, des pratiques de nommage, etc.</p>
+<p>Communautés du monde patrimonial et de la recherche (musées, bibliothèques, archives, universités…) ressentant la nécessité de partager des images haute résolution, des annotations, des pratiques de nommage, etc.<br><b> ≠ silo de données</b></p>
 </div><div class="column" style="width:40%;">
 <p><img src="https://raw.githubusercontent.com/iramat/iramat-dev/main/img/prg-API-many-to-many.png" style="width: 300px;vertical-align: middle;"></p>
 </div></div>
 </div>
 <div id="tabset-1-3">
-<p>Les images existent dans <strong>un seul endroit</strong> &nbsp;<br>
+<p>Les images <img src="https://raw.githubusercontent.com/zoometh/thomashuet/master/img/lod-iso-iiif.png" style="height: 55px;vertical-align: middle;"> existent à <strong>un seul endroit</strong> &nbsp;<br>
 🍃 baisse des coûts de stockage<br>
 🔍 image indexée par une URL (URL<a href="#/footnotes" class="footnote-ref" id="fnref1" role="doc-noteref" data-footnote-href="#/fn1" onclick=""><sup>1</sup></a> <code>-&gt;</code> URI<a href="#/footnotes" class="footnote-ref" id="fnref2" role="doc-noteref" data-footnote-href="#/fn2" onclick=""><sup>2</sup></a>)<br>
 ✒️ meilleure gestion des droits de réutilisation (citations et partages)<br>
@@ -284,13 +284,15 @@ Apprentissage machine pour la détermination des espèces domestiquées/non dome
 <div style="display: flex; justify-content: center; align-items: center; width: 100%;">
   <img src="https://iramat-apps.cnrs.fr/iiif/2/numismatic%2F1986.416_obv.JPG/full/full/0/default.jpg" alt="source image" style="max-width: 600px; max-height: 320px; object-fit: contain;">
 </div>
+<br>
 <div class="captiontext">Image source</div>
 </div><div class="column" style="width:60%;">
 <p><span class="smalltext">URL<a href="#/footnotes" class="footnote-ref" id="fnref5" role="doc-noteref" data-footnote-href="#/fn5" onclick=""><sup>5</sup></a></span></p>
 <div class="iframe-figure">
   <iframe width="800" height="320" src="https://iramat-apps.cnrs.fr/iiif/mirador/cdn/numismatic/1986.416.json" title="manifest JSON"></iframe>
-  <div class="captiontext"><em>manifest</em> JSON</div>
 </div>
+<br>
+<div class="captiontext"><em>manifest</em> JSON</div>
 </div></div>
 </div>
 </div>
@@ -303,35 +305,35 @@ Apprentissage machine pour la détermination des espèces domestiquées/non dome
 </section>
 <section id="image-source-default" class="slide level2">
 <h2>Image source (default)</h2>
-<p><span class="smalltext"><a href="https://iramat-apps.cnrs.fr/iiif/2/numismatic%2F1986.416_obv.JPG/full/full/0/default.jpg"><span style="color: grey">https://iramat-apps.cnrs.fr/iiif/2/numismatic%2F1986.416_obv.JPG</span>/full/full/0/default.jpg</a></span></p>
+<p><span class="smalltext"><a href="https://iramat-apps.cnrs.fr/iiif/2/numismatic%2F1986.416_obv.JPG/full/full/0/default.jpg"><span style="color: #b0afaf">https://iramat-apps.cnrs.fr/iiif/2/numismatic%2F1986.416_obv.JPG</span>/full/full/0/default.jpg</a></span></p>
 <div style="display: flex; justify-content: center; align-items: center; width: 100%;">
   <img src="https://iramat-apps.cnrs.fr/iiif/2/numismatic%2F1986.416_obv.JPG/full/full/0/default.jpg" alt="source image" style="max-width: 800px; max-height: 450px; object-fit: contain;">
 </div>
 </section>
 <section id="image-source-region" class="slide level2">
 <h2>Image source (region)</h2>
-<p><span class="smalltext"><a href="https://iramat-apps.cnrs.fr/iiif/2/numismatic%2F1986.416_obv.JPG/889,806,1697,635/full/0/default.jpg"><span style="color: grey">https://iramat-apps.cnrs.fr/iiif/2/numismatic%2F1986.416_obv.JPG</span>/889,806,1697,635/full/0/default.jpg</a></span></p>
+<p><span class="smalltext"><a href="https://iramat-apps.cnrs.fr/iiif/2/numismatic%2F1986.416_obv.JPG/889,806,1697,635/full/0/default.jpg"><span style="color: #b0afaf">https://iramat-apps.cnrs.fr/iiif/2/numismatic%2F1986.416_obv.JPG/</span>889,806,1697,635<span style="color: #b0afaf">/full/0/default.jpg</span></a></span></p>
 <div style="display: flex; justify-content: center; align-items: center; width: 100%;">
   <img src="https://iramat-apps.cnrs.fr/iiif/2/numismatic%2F1986.416_obv.JPG/889,806,1697,635/full/0/default.jpg" alt="source image" style="max-width: 800px; max-height: 450px; object-fit: contain;">
 </div>
 </section>
 <section id="image-source-scale" class="slide level2">
 <h2>Image source (scale)</h2>
-<p><span class="smalltext"><a href="https://iramat-apps.cnrs.fr/iiif/2/numismatic%2F1986.416_obv.JPG/full/pct:7/0/default.jpg"><span style="color: grey">https://iramat-apps.cnrs.fr/iiif/2/numismatic%2F1986.416_obv.JPG</span>/full/pct:7/0/default.jpg</a></span></p>
+<p><span class="smalltext"><a href="https://iramat-apps.cnrs.fr/iiif/2/numismatic%2F1986.416_obv.JPG/full/pct:7/0/default.jpg"><span style="color: #b0afaf">https://iramat-apps.cnrs.fr/iiif/2/numismatic%2F1986.416_obv.JPG/full/</span>pct:7<span style="color: #b0afaf">/0/default.jpg</span></a></span></p>
 <div style="display: flex; justify-content: center; align-items: center; width: 100%;">
   <img src="https://iramat-apps.cnrs.fr/iiif/2/numismatic%2F1986.416_obv.JPG/full/pct:7/0/default.jpg" alt="source image" style="max-width: 800px; max-height: 450px; object-fit: contain;">
 </div>
 </section>
 <section id="image-source-rotation" class="slide level2">
 <h2>Image source (rotation)</h2>
-<p><span class="smalltext"><a href="https://iramat-apps.cnrs.fr/iiif/2/numismatic%2F1986.416_obv.JPG/full/full/180/default.jpg"><span style="color: grey">https://iramat-apps.cnrs.fr/iiif/2/numismatic%2F1986.416_obv.JPG</span>/full/full/180/default.jpg</a></span></p>
+<p><span class="smalltext"><a href="https://iramat-apps.cnrs.fr/iiif/2/numismatic%2F1986.416_obv.JPG/full/full/180/default.jpg"><span style="color: #b0afaf">https://iramat-apps.cnrs.fr/iiif/2/numismatic%2F1986.416_obv.JPG/full/full/</span>180<span style="color: #b0afaf">/default.jpg</span></a></span></p>
 <div style="display: flex; justify-content: center; align-items: center; width: 100%;">
   <img src="https://iramat-apps.cnrs.fr/iiif/2/numismatic%2F1986.416_obv.JPG/full/full/180/default.jpg" alt="source image" style="max-width: 800px; max-height: 450px; object-fit: contain;">
 </div>
 </section>
 <section id="image-source-quality" class="slide level2">
 <h2>Image source (quality)</h2>
-<p><span class="smalltext"><a href="https://iramat-apps.cnrs.fr/iiif/2/numismatic%2F1986.416_obv.JPG/full/full/0/gray.jpg"><span style="color: grey">https://iramat-apps.cnrs.fr/iiif/2/numismatic%2F1986.416_obv.JPG</span>/full/full/0/gray.jpg</a></span></p>
+<p><span class="smalltext"><a href="https://iramat-apps.cnrs.fr/iiif/2/numismatic%2F1986.416_obv.JPG/full/full/0/gray.jpg"><span style="color: #b0afaf">https://iramat-apps.cnrs.fr/iiif/2/numismatic%2F1986.416_obv.JPG/full/full/0/</span>gray.jpg</a></span></p>
 <div style="display: flex; justify-content: center; align-items: center; width: 100%;">
   <img src="https://iramat-apps.cnrs.fr/iiif/2/numismatic%2F1986.416_obv.JPG/full/full/0/gray.jpg" alt="source image" style="max-width: 800px; max-height: 450px; object-fit: contain;">
 </div>
