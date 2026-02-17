@@ -79,7 +79,7 @@ library(kableExtra)
 
 <img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/lod-iso-iiif.png' style='height: 120px;vertical-align: middle;'> 
 <br> <br>
-<span class="largetext">International Image Interoperability Framework</span>
+<span class="largetext"><span style="color: blue">International</span><span style="color: red">Image</span><span style="color: blue">Interoperability</span><span style="color: red">Framework</span>
 <br> <br> 
 </center>
 
@@ -106,7 +106,7 @@ Communauté d’acteurs du monde patrimonial et de la recherche (musées, biblio
 
 ### Fonctionnalités
 
-Les images existent dans **un seul endroit**  \ 
+Les images <img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/lod-iso-iiif.png' style='height: 35px;vertical-align: middle;'> existent dans **un seul endroit**  \ 
 \
 🍃 baisse des coûts de stockage \
 🔍 image indexée par une URL (URL[^1] `->` URI[^2]) \
