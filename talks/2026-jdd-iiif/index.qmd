@@ -403,9 +403,10 @@ click IIIFannot "https://github.com/iramat/iramat-dev/main/talks/2026-bsc/README
 
 
 <div class="captiontext">_Data pipeline_ vers du Machine learning</div>
+<br>
 
 ::: {.callout-note}
-Utilisez la touche ALT + click gauche pour zoomer sur le diagramme
+Utilisez la touche ALT + clic gauche pour zoomer/dézoomer sur le diagramme
 :::
 
 # Discussion {background-image="https://raw.githubusercontent.com/iramat/iramat-dev/master/img/iiif-pres-collection-multi.png" background-opacity=0.2 background-size="400px" background-repeat="repeat"}
@@ -415,7 +416,7 @@ Utilisez la touche ALT + click gauche pour zoomer sur le diagramme
 <br>
 <img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/app-github-3.png' style='height: 45px;vertical-align: middle;'> `https://github.com/iramat`: <br> code _open-source_, référentiels, données publiques, ... [s'inscrire](https://github.com/signup)
 <br><br>
-<img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/app-zenodo.png' style='height: 45px;vertical-align: middle;'> Zenodo `https://zenodo.org/communities/iramat` : <br> documents, édition/sélection des métadonnées,... [s'inscrire](https://zenodo.org/signup/)
+<img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/app-zenodo.png' style='height: 45px;vertical-align: middle;'> `https://zenodo.org/communities/iramat` : <br> documents, édition/sélection des métadonnées,... [s'inscrire](https://zenodo.org/signup/)
 <br><br>
 <center><small>👋 <thomas.huet@cnrs.fr></small></center>
 
