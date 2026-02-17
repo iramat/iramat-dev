@@ -109,10 +109,10 @@ Communautés du monde patrimonial et de la recherche (musées, bibliothèques, a
 Les images <img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/lod-iso-iiif.png' style='height: 55px;vertical-align: middle;'> existent à **un seul endroit**  \ 
 \
 🍃 baisse des coûts de stockage \
-🔍 image indexée par une URL (URL[^1] `->` URI[^2]) \
+🔍 image indexée par une URL (URL[^1] `->` URI[^2] -> DOI) \
 ✒️ meilleure gestion des droits de réutilisation (citations et partages) \
 🎮 meilleure expérience utilisateur (UX[^3]) \
-🏷️ sémantisation (annotations \
+🏷️ sémantisation (annotations) \
 👥 aggrégation de collections (APIs partagées)
 
 ### Fonctionnement
@@ -307,6 +307,8 @@ Enregistrement en base de données (<img src='https://raw.githubusercontent.com/
 ::: {.column width="70%"}
 
 <img src='https://raw.githubusercontent.com/iramat/chips/master/img/db_erd.png' style='width: 950px;vertical-align: middle;'>
+<br>
+<div class="captiontext">Modèle Conceptuel de Données simplifié de la BDD CHIPS</div>
 
 :::
 
@@ -402,21 +404,26 @@ click IIIFannot "https://github.com/iramat/iramat-dev/main/talks/2026-bsc/README
 
 <div class="captiontext">_Data pipeline_ vers du Machine learning</div>
 
+::: {.callout-note}
+Utilisez la touche ALT + click gauche pour zoomer sur le diagramme
+:::
+
 # Discussion {background-image="https://raw.githubusercontent.com/iramat/iramat-dev/master/img/iiif-pres-collection-multi.png" background-opacity=0.2 background-size="400px" background-repeat="repeat"}
 
-## Collaborez
+## Participez aux développements
 
-Participez aux développements informatiques de l'IRAMAT :
-
-
-- <img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/app-github-3.png' style='height: 45px;vertical-align: middle;'> (`https://github.com/iramat`): code _open-source_, référentiels, données publiques, discussions, ... Inscription ([ici](https://github.com/signup))
-- <img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/app-zenodo.png' style='height: 45px;vertical-align: middle;'> Zenodo (`https://zenodo.org/communities/iramat`): documents, édition/sélection des métadonnées,... Inscription ([ici](https://zenodo.org/signup/))
-
-<center>👋 <thomas.huet@cnrs.fr></center>
+<br>
+<img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/app-github-3.png' style='height: 45px;vertical-align: middle;'> `https://github.com/iramat`: <br> code _open-source_, référentiels, données publiques, ... [s'inscrire](https://github.com/signup)
+<br><br>
+<img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/app-zenodo.png' style='height: 45px;vertical-align: middle;'> Zenodo `https://zenodo.org/communities/iramat` : <br> documents, édition/sélection des métadonnées,... [s'inscrire](https://zenodo.org/signup/)
+<br><br>
+<center><small>👋 <thomas.huet@cnrs.fr></small></center>
 
 ::: {.callout-note}
 🧮 [WIAI](https://github.com/iramat#-wiai)  **Présentation du cadre IIIF** - [support]() | [video]() - Mardi 10 Mars 2026, 10:00 - 10:50
 :::
+
+<br><br>
 
 
 ## Aclass {data-visibility=hidden}
