@@ -15,8 +15,13 @@
 * https://iramat-apps.cnrs.fr/view/acies/seax_sample_process.html
 * https://iramat-apps.cnrs.fr/view/acies/arl-x-s-1_side-1.html
 
+### CAI-RN GT1
+
+* https://iramat-apps.cnrs.fr/view/cairn_gt1.html (collection)
+
 ### Autres
 
+* https://iramat-apps.cnrs.fr/view/petro/fl_des69_1.html
 * https://iramat-apps.cnrs.fr/view/puddled/puddled.html
 
 ### En test
