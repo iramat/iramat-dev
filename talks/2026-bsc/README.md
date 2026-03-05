@@ -80,7 +80,7 @@ style ResNum fill:#b0ffc3
 
 click BD "https://github.com/iramat/iramat-dev/main/talks/2026-bsc/README.md#db"
 click VM "https://github.com/iramat/iramat-dev/main/talks/2026-bsc/README.md#vm"
-click IIIFimg "https://github.com/iramat/iramat-dev/main/talks/2026-bsc/README.md#iiif-image"
+click IIIFimg "https://iramat-apps.cnrs.fr/iiif/2/numismatic%2F1986.416_obv.JPG/full/full/0/default.jpg"
 click IIIFpres "https://github.com/iramat/iramat-dev/main/talks/2026-bsc/README.md#iiif-presentation"
 click IIIFannot "https://github.com/iramat/iramat-dev/main/talks/2026-bsc/README.md#iiif-annotation"
 ```
