@@ -45,13 +45,21 @@ flowchart TD
       MLvalid2 ---> MLtest2[test]
       MLtest2 --> MLlearn2
     end
+    PyExtract -- creates --> MLlearn3[(learning base)]
+    subgraph ML3[Machine Learning]
+      MLlearn3 ---> MLvalid3[validation]
+      MLvalid3 ---> MLtest3[test]
+      MLtest3 --> MLlearn3
+    end
   end
     subgraph out[<b>Automatic Classification</b>]
       ResMet[archaeometallurgical facies]
       ResNum[numismatic coins]
+      ResVaria[others]
     end
   ML1 ---> ResMet
   ML2 ---> ResNum
+  ML3 ---> ResVaria
 
 style BD fill:#cccccc
 
@@ -84,10 +92,15 @@ style ML2 fill:#8794ff
 style MLlearn2 fill:#d9ddff
 style MLvalid2 fill:#d9ddff
 style MLtest2 fill:#d9ddff
+style ML3 fill:#8794ff
+style MLlearn3 fill:#d9ddff
+style MLvalid3 fill:#d9ddff
+style MLtest3 fill:#d9ddff
 
 style out fill:#42ff70
 style ResMet fill:#b0ffc3
 style ResNum fill:#b0ffc3
+style ResVaria fill:#b0ffc3
 
 click BD "https://github.com/iramat/iramat-dev/main/talks/2026-bsc/README.md#db"
 click VM "https://github.com/iramat/iramat-dev/main/talks/2026-bsc/README.md#vm"
