@@ -33,11 +33,17 @@ flowchart TD
   APIdata ---> PyExtract[<em>Data Fusion</em>]
   APIimg ---> PyExtract
   subgraph BSC[<b>BSC</b>]
-    PyExtract -- creates --> MLlearn[(learning base)]
-    subgraph ML[Machine Learning]
-      MLlearn ---> MLvalid[validation]
-      MLvalid ---> MLtest[test]
-      MLtest --> MLlearn
+    PyExtract -- creates --> MLlearn1[(learning base)]
+    subgraph ML1[Machine Learning]
+      MLlearn1 ---> MLvalid1[validation]
+      MLvalid1 ---> MLtest1[test]
+      MLtest1 --> MLlearn1
+    end
+    PyExtract -- creates --> MLlearn2[(learning base)]
+    subgraph ML2[Machine Learning]
+      MLlearn2 ---> MLvalid2[validation]
+      MLvalid2 ---> MLtest2[test]
+      MLtest2 --> MLlearn2
     end
   end
     subgraph out[<b>Automatic Classification</b>]
@@ -70,9 +76,12 @@ style APIimg fill:#f6f7d5
 style BSC fill:#4256fc
 style PyExtract fill:#8794ff
 style ML fill:#8794ff
-style MLlearn fill:#d9ddff
-style MLvalid fill:#d9ddff
-style MLtest fill:#d9ddff
+style MLlearn1 fill:#d9ddff
+style MLvalid1 fill:#d9ddff
+style MLtest1 fill:#d9ddff
+style MLlearn2 fill:#d9ddff
+style MLvalid2 fill:#d9ddff
+style MLtest2 fill:#d9ddff
 
 style out fill:#42ff70
 style ResMet fill:#b0ffc3
