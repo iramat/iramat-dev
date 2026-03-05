@@ -50,7 +50,8 @@ flowchart TD
       ResMet[archaeometallurgical facies]
       ResNum[numismatic coins]
     end
-  ML ---> out
+  ML1 ---> ResMet
+  ML2 ---> ResNum
 
 style BD fill:#cccccc
 
@@ -75,10 +76,11 @@ style APIimg fill:#f6f7d5
 
 style BSC fill:#4256fc
 style PyExtract fill:#8794ff
-style ML fill:#8794ff
+style ML1 fill:#8794ff
 style MLlearn1 fill:#d9ddff
 style MLvalid1 fill:#d9ddff
 style MLtest1 fill:#d9ddff
+style ML2 fill:#8794ff
 style MLlearn2 fill:#d9ddff
 style MLvalid2 fill:#d9ddff
 style MLtest2 fill:#d9ddff
