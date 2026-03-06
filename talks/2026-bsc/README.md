@@ -19,13 +19,15 @@ flowchart TD
         BD -- API RESTful --> APIdata[<em>labeled data</em>]
     end
     subgraph IRAMATimg[Imaging]
-        Macro{{Macro-<br>photography}} -- format --> IIIFimg([IIIF image])
+        Macro{{Macro-<br>photography}} -- format --> IIIFimg([API image])
         Opt{{Optical<br>Microscopy}} -- format --> IIIFimg
         SEM{{SEM-EDS}} -- format --> IIIFimg
         Raman{{Raman}} -- format --> IIIFimg
-        IIIFimg ---> IIIFpres([IIIF presentation])
-		IIIFpres --> IIIFannot([IIIF annotation])
-		IIIFannot -- manifests<br>annotations --> BD
+        subgraph IRAMATiiif[IIIF]
+          IIIFimg ---> IIIFpres([API presentation])
+		      IIIFpres --> IIIFannot([API annotation])
+        end
+		    IIIFannot -- manifests<br>annotations --> BD
         BD -- API RESTful --> APIimg[<em>labeled images</em>]
     end
 	end
