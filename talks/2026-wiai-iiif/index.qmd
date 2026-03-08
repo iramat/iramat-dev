@@ -370,7 +370,6 @@ Les images <img src='https://raw.githubusercontent.com/zoometh/thomashuet/master
   <iframe width="1000" height="130"
           src="https://iramat.github.io/iramat-dev/img/research-software-maturity-levels-chat-3steps.html"
           title="maturation"></iframe>
-  <div class="captiontext">xxx</div>
 </div>
 ```
 
