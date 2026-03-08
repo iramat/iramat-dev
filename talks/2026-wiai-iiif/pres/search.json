@@ -1,9 +1,135 @@
 [
   {
-    "objectID": "index.html#iiif",
-    "href": "index.html#iiif",
+    "objectID": "index.html#la-série-wiai",
+    "href": "index.html#la-série-wiai",
     "title": "Le cadre IIIF",
-    "section": "IIIF",
-    "text": "IIIF"
+    "section": "La série WIAI",
+    "text": "La série WIAI\n\n\nWebinaires dédiés aux technologies de l’information pour l’archéométrie:  GitHub , Python , R , API , IIIF , etc. \n\n\n\n\n\n\nNote\n\n\n📅 Bimestriel. Le 2e Mardi matin, sur Rendez-Vous (Renater) entre 10h00 et 10h50 (50 minutes), lien sur le GitHub et le calendrier de l’IRAMAT\n\n\n\n\n\n\n\n“What if deep zoom was standard and fast” – Tom Cramer1, 2016. crédit: IIIF Consortium\n\n\n\n\nDécouvrir – ou approfondir – une solution logicielle open-source en revenant sur l’histoire de ce logiciel, sa logique interne, … Avec des citations rigolotes"
+  },
+  {
+    "objectID": "index.html#des-images-pour-les-archéologues",
+    "href": "index.html#des-images-pour-les-archéologues",
+    "title": "Le cadre IIIF",
+    "section": "Des images pour les archéologues",
+    "text": "Des images pour les archéologues\n\n\n\n\n\nIdentification/comptage des graines (INRAP/MNHN 2023)\n\n\n\n\nApprentissage machine pour la détermination des espèces domestiquées/non domestiquées (Bonhomme et al. 2025)"
+  },
+  {
+    "objectID": "index.html#iiif-standard-dintéropérabilité-des-images",
+    "href": "index.html#iiif-standard-dintéropérabilité-des-images",
+    "title": "Le cadre IIIF",
+    "section": "IIIF: standard d’intéropérabilité des images",
+    "text": "IIIF: standard d’intéropérabilité des images\n\nDéfinitionMotivationFonctionnalitésFonctionnement\n\n\n\n\nInternational Image Interoperability Framework  \n\n\n\n\n\n\n\nNote\n\n\nDéveloppé au début des années 2010 (community lead). Iso-standard ISO 21127:2019\n\n\n\n\n\n\n\nCommunautés d’utilisateurs et de développeurs issues des musées, bibliothèques, archives, universités, etc., nécessitant partager des images haute résolution, des annotations, des pratiques de nommage, etc.\n\n≠ silo de données \n\n\n\n\n\n\nLes images  existent à un seul endroit  \n🍃 baisse des coûts de stockage\n🔍 image indexée par une URL2\n✒️ meilleure gestion des droits de réutilisation\n🎮 meilleure expérience utilisateur\n🏷️ sémantisation de régions de l’image\n👥 aggrégation de collections (APIs partagées)\n\n\n\n\n\nImage source3\n\n\n  \n\n\n\n\nmanifest4"
+  },
+  {
+    "objectID": "index.html#image-source-default",
+    "href": "index.html#image-source-default",
+    "title": "Le cadre IIIF",
+    "section": "Image source (default)",
+    "text": "Image source (default)\nhttps://iramat-apps.cnrs.fr/iiif/2/numismatic%2F1986.416_obv.JPG/full/full/0/default.jpg"
+  },
+  {
+    "objectID": "index.html#image-source-region",
+    "href": "index.html#image-source-region",
+    "title": "Le cadre IIIF",
+    "section": "Image source (region)",
+    "text": "Image source (region)\nhttps://iramat-apps.cnrs.fr/iiif/2/numismatic%2F1986.416_obv.JPG/889,806,1697,635/full/0/default.jpg"
+  },
+  {
+    "objectID": "index.html#image-source-scale",
+    "href": "index.html#image-source-scale",
+    "title": "Le cadre IIIF",
+    "section": "Image source (scale)",
+    "text": "Image source (scale)\nhttps://iramat-apps.cnrs.fr/iiif/2/numismatic%2F1986.416_obv.JPG/full/pct:7/0/default.jpg"
+  },
+  {
+    "objectID": "index.html#image-source-rotation",
+    "href": "index.html#image-source-rotation",
+    "title": "Le cadre IIIF",
+    "section": "Image source (rotation)",
+    "text": "Image source (rotation)\nhttps://iramat-apps.cnrs.fr/iiif/2/numismatic%2F1986.416_obv.JPG/full/full/180/default.jpg"
+  },
+  {
+    "objectID": "index.html#image-source-quality",
+    "href": "index.html#image-source-quality",
+    "title": "Le cadre IIIF",
+    "section": "Image source (quality)",
+    "text": "Image source (quality)\nhttps://iramat-apps.cnrs.fr/iiif/2/numismatic%2F1986.416_obv.JPG/full/full/0/gray.jpg"
+  },
+  {
+    "objectID": "index.html#image",
+    "href": "index.html#image",
+    "title": "Le cadre IIIF",
+    "section": "Image",
+    "text": "Image\nhttps://iramat-apps.cnrs.fr/view/acies/arl-x-s-1_side-1.html"
+  },
+  {
+    "objectID": "index.html#séquence-dimages",
+    "href": "index.html#séquence-dimages",
+    "title": "Le cadre IIIF",
+    "section": "Séquence d’images",
+    "text": "Séquence d’images\nhttps://iramat-apps.cnrs.fr/view/numismatic/1986.416.html"
+  },
+  {
+    "objectID": "index.html#collection-dimages",
+    "href": "index.html#collection-dimages",
+    "title": "Le cadre IIIF",
+    "section": "Collection d’images",
+    "text": "Collection d’images\nhttps://iramat-apps.cnrs.fr/view/iramat_iiif.html"
+  },
+  {
+    "objectID": "index.html#aggrégation-de-collections-12",
+    "href": "index.html#aggrégation-de-collections-12",
+    "title": "Le cadre IIIF",
+    "section": "Aggrégation de collections (1/2)",
+    "text": "Aggrégation de collections (1/2)\nhttps://iramat-apps.cnrs.fr/view/iramat_bnf_iiif.html"
+  },
+  {
+    "objectID": "index.html#aggrégation-de-collections-22",
+    "href": "index.html#aggrégation-de-collections-22",
+    "title": "Le cadre IIIF",
+    "section": "Aggrégation de collections (2/2)",
+    "text": "Aggrégation de collections (2/2)\nhttps://vikusviewer.fh-potsdam.de/muenzen/vis/"
+  },
+  {
+    "objectID": "index.html#exposition-virtuelle",
+    "href": "index.html#exposition-virtuelle",
+    "title": "Le cadre IIIF",
+    "section": "Exposition virtuelle",
+    "text": "Exposition virtuelle\nhttp://lotb.iath.virginia.edu/mirador_viewer/mirador?manifest=1&room_id=1"
+  },
+  {
+    "objectID": "index.html#procédure",
+    "href": "index.html#procédure",
+    "title": "Le cadre IIIF",
+    "section": "Procédure",
+    "text": "Procédure\nhttps://iramat-apps.cnrs.fr/iiif-loader/"
+  },
+  {
+    "objectID": "index.html#base-de-données",
+    "href": "index.html#base-de-données",
+    "title": "Le cadre IIIF",
+    "section": "Base de données",
+    "text": "Base de données\n\n\nEnregistrement des manifests en base de données () des manifests et annotations\n\n \n\nModèle Conceptuel de Données simplifié de la BDD CHIPS"
+  },
+  {
+    "objectID": "index.html#data-pipeline",
+    "href": "index.html#data-pipeline",
+    "title": "Le cadre IIIF",
+    "section": "Data pipeline",
+    "text": "Data pipeline\n\n\n\n\n\nflowchart LR\n  subgraph IRAMAT[&lt;b&gt;IRAMAT&lt;/b&gt;]\n    ICP{{ICP-MS}}\n    XRD{{XRD}}\n    XRF{{XRF}}\n    BD[(DB)]\n    analyses[archaeometry analysis]\n    analyses --&gt; IRAMATdata\n    analyses --&gt; IRAMATimg\n    subgraph VM[VM]\n    subgraph IRAMATdata[Scalar measurements]\n        XRF --&gt; BD\n        XRD --&gt; BD\n        ICP --&gt; BD\n        BD -- API RESTful --&gt; APIdata[&lt;em&gt;labeled data&lt;/em&gt;]\n    end\n    subgraph IRAMATimg[Imaging]\n        Macro{{Macro-&lt;br&gt;photography}} -- format --&gt; IIIFimg([IIIF image])\n        Opt{{Optical&lt;br&gt;Microscopy}} -- format --&gt; IIIFimg\n        SEM{{SEM-EDS}} -- format --&gt; IIIFimg\n        Raman{{Raman}} -- format --&gt; IIIFimg\n        IIIFimg ---&gt; IIIFpres([IIIF presentation])\n        IIIFpres --&gt; IIIFannot([IIIF annotation])\n        IIIFannot -- manifests&lt;br&gt;annotations --&gt; BD\n        BD -- API RESTful --&gt; APIimg[&lt;em&gt;labeled images&lt;/em&gt;]\n    end\n    end\n  end\n  APIdata ---&gt; PyExtract[&lt;em&gt;Data Fusion&lt;/em&gt;]\n  APIimg ---&gt; PyExtract\n  subgraph BSC[&lt;b&gt;BSC&lt;/b&gt;]\n    PyExtract -- creates --&gt; MLlearn[(learning base)]\n    subgraph ML[Machine Learning]\n      MLlearn ---&gt; MLvalid[validation]\n      MLvalid ---&gt; MLtest[test]\n      MLtest --&gt; MLlearn\n    end\n  end\n    subgraph out[&lt;b&gt;Automatic Classification&lt;/b&gt;]\n      ResMet[archaeometallurgical facies]\n      ResNum[numismatic coins]\n    end\n  ML ---&gt; out\n\nstyle BD fill:#cccccc\n\nstyle IRAMAT fill:#edfa05\nstyle VM fill:#f4fa82\nstyle analyses fill:#fbfcd7\nstyle IRAMATdata fill:#fbfcd7\nstyle IRAMATimg fill:#fbfcd7\nstyle XRF fill:#f6f7d5\nstyle XRD fill:#f6f7d5\nstyle ICP fill:#f6f7d5\nstyle Macro fill:#f6f7d5\nstyle Opt fill:#f6f7d5\nstyle SEM fill:#f6f7d5\nstyle Raman fill:#f6f7d5\nstyle IIIFimg fill:#f6f7d5\nstyle IIIFpres fill:#f6f7d5\nstyle IIIFannot fill:#f6f7d5\nstyle BD fill:#c9c9c9\nstyle APIdata fill:#f6f7d5\nstyle APIimg fill:#f6f7d5\n\nstyle BSC fill:#919cfa\nstyle PyExtract fill:#8794ff\nstyle ML fill:#8794ff\nstyle MLlearn fill:#d9ddff\nstyle MLvalid fill:#d9ddff\nstyle MLtest fill:#d9ddff\n\nstyle out fill:#42ff70\nstyle ResMet fill:#b0ffc3\nstyle ResNum fill:#b0ffc3\n\nclick BD \"https://github.com/iramat/iramat-dev/main/talks/2026-bsc/README.md#db\"\nclick VM \"https://github.com/iramat/iramat-dev/main/talks/2026-bsc/README.md#vm\"\nclick IIIFimg \"https://github.com/iramat/iramat-dev/main/talks/2026-bsc/README.md#iiif-image\"\nclick IIIFpres \"https://github.com/iramat/iramat-dev/main/talks/2026-bsc/README.md#iiif-presentation\"\nclick IIIFannot \"https://github.com/iramat/iramat-dev/main/talks/2026-bsc/README.md#iiif-annotation\"\n\n\n\n\n\n\n\nData pipeline vers du Machine learning\n\n\n\n\n\n\n\n\nNote\n\n\nUtilisez la touche ALT + clic gauche pour zoomer/dézoomer sur le diagramme"
+  },
+  {
+    "objectID": "index.html#récapitulatif",
+    "href": "index.html#récapitulatif",
+    "title": "Le cadre IIIF",
+    "section": "Récapitulatif",
+    "text": "Récapitulatif\n Utilisez le webservice iiif-loader pour héberger vos images sur le site de l’IRAMAT en IIIF   https://github.com/iramat:  code open-source, référentiels, données publiques, … s’inscrire   https://zenodo.org/communities/iramat :  documents, édition/sélection des métadonnées,… s’inscrire \n\n👋 thomas.huet@cnrs.fr"
+  },
+  {
+    "objectID": "index.html#footnotes",
+    "href": "index.html#footnotes",
+    "title": "Le cadre IIIF",
+    "section": "Footnotes",
+    "text": "Footnotes\n\n\nChief developer de la Stanford University Libraries, image extraite du International Image Interoperability Framework event, Museum of Modern Art, New York, 10 Mai 2016.\nUniform Resource Locator (URL) -&gt; Uniform Resource Identifiers (URI)\nhttps://iramat-apps.cnrs.fr/iiif/2/numismatic%2F1986.416_obv.JPG/full/full/0/default.jpg\nhttps://iramat-apps.cnrs.fr/iiif/mirador/cdn/numismatic/1986.416.json"
   }
 ]

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Arrow Steps Figure</title>
+  <style>
+    body {
+      margin: 24px;
+      font-family: Arial, sans-serif;
+      background: #f2f2f2;
+    }
+
+    .steps {
+      display: flex;
+      align-items: center;
+      gap: 0;
+      max-width: 1200px;
+    }
+
+    .step {
+      position: relative;
+      height: 86px;
+      flex: 1 1 0;
+      color: white;
+      font-size: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-sizing: border-box;
+      margin-right: 44px; /* room for arrow tip */
+      clip-path: polygon(
+        0 0,
+        calc(100% - 44px) 0,
+        100% 50%,
+        calc(100% - 44px) 100%,
+        0 100%
+      );
+    }
+
+    /* create the white divider between arrows */
+    .step:not(:first-child) {
+      margin-left: -24px;
+      clip-path: polygon(
+        24px 0,
+        calc(100% - 44px) 0,
+        100% 50%,
+        calc(100% - 44px) 100%,
+        24px 100%,
+        0 50%
+      );
+    }
+
+    .step:last-child {
+      margin-right: 0;
+    }
+
+    .s1 { background: #4a74bf; }
+    .s2 { background: #ed7d31; }
+    .s3 { background: #ffc000; }
+    .s4 { background: #5a8c36; }
+    .s5 { background: #7030a0; }
+  </style>
+</head>
+<body>
+  <div class="steps">
+    <div class="step s1">1</div>
+    <div class="step s2">2</div>
+    <div class="step s3">3</div>
+    <div class="step s4">4</div>
+    <div class="step s5">5</div>
+  </div>
+</body>
+</html>

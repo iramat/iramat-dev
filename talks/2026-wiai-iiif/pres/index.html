@@ -29,6 +29,72 @@
       margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
       vertical-align: middle;
     }
+    /* CSS for syntax highlighting */
+    html { -webkit-text-size-adjust: 100%; }
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #aaaaaa;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+    div.sourceCode
+      { color: #003b4f; background-color: #f1f3f5; }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span { color: #003b4f; } /* Normal */
+    code span.al { color: #ad0000; } /* Alert */
+    code span.an { color: #5e5e5e; } /* Annotation */
+    code span.at { color: #657422; } /* Attribute */
+    code span.bn { color: #ad0000; } /* BaseN */
+    code span.bu { } /* BuiltIn */
+    code span.cf { color: #003b4f; font-weight: bold; } /* ControlFlow */
+    code span.ch { color: #20794d; } /* Char */
+    code span.cn { color: #8f5902; } /* Constant */
+    code span.co { color: #5e5e5e; } /* Comment */
+    code span.cv { color: #5e5e5e; font-style: italic; } /* CommentVar */
+    code span.do { color: #5e5e5e; font-style: italic; } /* Documentation */
+    code span.dt { color: #ad0000; } /* DataType */
+    code span.dv { color: #ad0000; } /* DecVal */
+    code span.er { color: #ad0000; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #ad0000; } /* Float */
+    code span.fu { color: #4758ab; } /* Function */
+    code span.im { color: #00769e; } /* Import */
+    code span.in { color: #5e5e5e; } /* Information */
+    code span.kw { color: #003b4f; font-weight: bold; } /* Keyword */
+    code span.op { color: #5e5e5e; } /* Operator */
+    code span.ot { color: #003b4f; } /* Other */
+    code span.pp { color: #ad0000; } /* Preprocessor */
+    code span.sc { color: #5e5e5e; } /* SpecialChar */
+    code span.ss { color: #20794d; } /* SpecialString */
+    code span.st { color: #20794d; } /* String */
+    code span.va { color: #111111; } /* Variable */
+    code span.vs { color: #20794d; } /* VerbatimString */
+    code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   </style>
   <link rel="stylesheet" href="site_libs/revealjs/dist/theme/quarto-00ac2f6af1389919a18f42df5b7c0002.css">
   <link rel="stylesheet" href="https://zoometh.github.io/thomashuet/css/quarto.css">
@@ -126,6 +192,9 @@
       margin-right: 0; 
     }
   </style>
+  <script src="site_libs/quarto-diagram/mermaid.min.js"></script>
+  <script src="site_libs/quarto-diagram/mermaid-init.js"></script>
+  <link href="site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
 </head>
 <body class="quarto-light">
   <div class="reveal">
@@ -147,16 +216,401 @@ Thomas Huet
 </div>
 
 </section>
-<section id="iiif" class="slide level2">
-<h2>IIIF</h2>
-<iframe width="1200" height="500" src="https://iramat-apps.cnrs.fr/page/puddled.html" title="Puddled"></iframe>
+<section>
+<section id="introduction-générale" class="title-slide slide level1 center">
+<h1>Introduction générale</h1>
 
+</section>
+<section id="la-série-wiai" class="slide level2">
+<h2>La série WIAI</h2>
+<div class="columns">
+<div class="column" style="width:65%;">
+<p>Webinaires dédiés aux technologies de l’information pour l’archéométrie: <br> GitHub <img src="https://raw.githubusercontent.com/zoometh/thomashuet/master/img/app-github.png" style="height: 45px;vertical-align: middle;">, Python <img src="https://raw.githubusercontent.com/zoometh/thomashuet/master/img/app-prg-python-2.png" style="height: 45px;vertical-align: middle;">, R <img src="https://raw.githubusercontent.com/zoometh/thomashuet/master/img/prog-r-1.png" style="height: 45px;vertical-align: middle;">, API <img src="https://raw.githubusercontent.com/zoometh/thomashuet/master/img/web-api.jpeg" style="height: 45px;vertical-align: middle;">, IIIF <img src="https://raw.githubusercontent.com/zoometh/thomashuet/master/img/lod-iso-iiif.png" style="height: 45px;vertical-align: middle;">, etc. <br><br></p>
+<div class="callout callout-note callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Note</strong></p>
+</div>
+<div class="callout-content">
+<p>📅 Bimestriel. Le 2<sup>e</sup> Mardi matin, sur Rendez-Vous (Renater) entre 10h00 et 10h50 (50 minutes), lien sur le <a href="https://github.com/iramat#-wiai">GitHub</a> et le <a href="https://iramat.github.io/iramat-dev/admin/calendrier.html">calendrier</a> de l’IRAMAT</p>
+</div>
+</div>
+</div>
+</div><div class="column" style="width:35%;">
+<center>
+<p><img src="https://raw.githubusercontent.com/zoometh/thomashuet/master/img/lod-iso-iiif-tom-cramer-2016.png" style="width: 350px;vertical-align: middle;"></p>
+<div class="captiontext">
+<em>“What if deep zoom was standard and fast”</em> – Tom Cramer<a href="#/footnotes" class="footnote-ref" id="fnref1" role="doc-noteref" data-footnote-href="#/fn1" onclick=""><sup>1</sup></a>, 2016. crédit: IIIF Consortium
+</div>
+</center>
+</div></div>
+<aside class="notes">
+<p>Découvrir – ou approfondir – une solution logicielle open-source en revenant sur l’histoire de ce logiciel, sa logique interne, … Avec des citations rigolotes</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+<aside></aside></section></section>
+<section>
+<section id="introduction" class="title-slide slide level1 center" data-background-image="https://raw.githubusercontent.com/iramat/iramat-dev/master/img/iiif-pres-collection-multi.png" data-background-opacity="0.2" data-background-size="400px" data-background-repeat="repeat">
+<h1>Introduction</h1>
 
+</section>
+<section id="des-images-pour-les-archéologues" class="slide level2">
+<h2>Des images pour les archéologues</h2>
+<p><br><br></p>
+<div class="columns">
+<div class="column" style="width:22%;">
+<img src="https://raw.githubusercontent.com/zoometh/thomashuet/master/img/sci-archaeo-carpologist.png" style="width: 750px;vertical-align: middle;">
+<div class="captiontext">
+Identification/comptage des graines (INRAP/MNHN 2023)
+</div>
+</div><div class="column" style="width:75%;">
+<img src="https://raw.githubusercontent.com/zoometh/thomashuet/master/img/sci-archaeo-carpologist-ai-ml.png" style="width: 950px;vertical-align: middle;">
+<div class="captiontext">
+Apprentissage machine pour la détermination des espèces domestiquées/non domestiquées (Bonhomme <em>et al.</em> 2025)
+</div>
+</div></div>
+</section>
+<section id="iiif-standard-dintéropérabilité-des-images" class="slide level2">
+<h2>IIIF: standard d’intéropérabilité des images</h2>
+<div class="panel-tabset">
+<ul id="tabset-1" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-1-1">Définition</a></li><li><a href="#tabset-1-2">Motivation</a></li><li><a href="#tabset-1-3">Fonctionnalités</a></li><li><a href="#tabset-1-4">Fonctionnement</a></li></ul>
+<div class="tab-content">
+<div id="tabset-1-1">
+<center>
+<p><img src="https://raw.githubusercontent.com/zoometh/thomashuet/master/img/lod-iso-iiif.png" style="height: 150px;vertical-align: middle;"></p>
+<span class="largetext"><span style="color: #0f7ca7">International </span><span style="color: #ea2026">Image </span><span style="color: #0f7ca7">Interoperability </span><span style="color: #ea2026">Framework</span> <br> <br>
+</span></center>
+<div class="callout callout-note callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Note</strong></p>
+</div>
+<div class="callout-content">
+<p>Développé au début des années 2010 (<em>community lead</em>). Iso-standard <code>ISO 21127:2019</code></p>
+</div>
+</div>
+</div>
+</div>
+<div id="tabset-1-2">
+<div class="columns">
+<div class="column" style="width:65%;">
+Communautés d’utilisateurs et de développeurs issues des musées, bibliothèques, archives, universités, etc., nécessitant partager des images haute résolution, des annotations, des pratiques de nommage, etc.<br><br>
+<p style="text-align: center;">
+<b>≠ silo de données </b>
+</p>
+</div><div class="column" style="width:35%;">
+<p><img src="https://raw.githubusercontent.com/iramat/iramat-dev/main/img/prg-API-many-to-many.png" style="width: 300px;vertical-align: middle;"></p>
+</div></div>
+</div>
+<div id="tabset-1-3">
+<p>Les images <img src="https://raw.githubusercontent.com/zoometh/thomashuet/master/img/lod-iso-iiif.png" style="height: 55px;vertical-align: middle;"> existent à <strong>un seul endroit</strong> &nbsp;<br>
+🍃 baisse des coûts de stockage<br>
+🔍 image indexée par une URL<a href="#/footnotes" class="footnote-ref" id="fnref2" role="doc-noteref" data-footnote-href="#/fn2" onclick=""><sup>2</sup></a><br>
+✒️ meilleure gestion des droits de réutilisation<br>
+🎮 meilleure expérience utilisateur<br>
+🏷️ sémantisation de régions de l’image<br>
+👥 aggrégation de collections (APIs partagées)</p>
+</div>
+<div id="tabset-1-4">
+<div class="columns">
+<div class="column" style="width:40%;">
+<div class="captiontext">
+Image source<a href="#/footnotes" class="footnote-ref" id="fnref3" role="doc-noteref" data-footnote-href="#/fn3" onclick=""><sup>3</sup></a>
+</div>
+<div style="display: flex; justify-content: center; align-items: center; width: 100%;">
+  <img src="https://iramat-apps.cnrs.fr/iiif/2/numismatic%2F1986.416_obv.JPG/full/full/0/default.jpg" alt="source image" style="max-width: 600px; max-height: 400px; object-fit: contain;">
+</div>
+<br>
+</div><div class="column" style="width:60%;">
+<div class="captiontext">
+<em>manifest</em><a href="#/footnotes" class="footnote-ref" id="fnref4" role="doc-noteref" data-footnote-href="#/fn4" onclick=""><sup>4</sup></a>
+</div>
+<div class="iframe-figure">
+  <iframe width="800" height="400" src="https://iramat-apps.cnrs.fr/iiif/mirador/cdn/numismatic/1986.416.json" title="manifest JSON"></iframe>
+</div>
+<br>
+</div></div>
+</div>
+</div>
+</div>
+<aside></aside></section></section>
+<section>
+<section id="image-api" class="title-slide slide level1 center" data-background-image="https://raw.githubusercontent.com/iramat/iramat-dev/master/img/iiif-pres-collection-multi.png" data-background-opacity="0.2" data-background-size="400px" data-background-repeat="repeat">
+<h1>Image API</h1>
+
+</section>
+<section id="image-source-default" class="slide level2">
+<h2>Image source (default)</h2>
+<p><span class="smalltext"><a href="https://iramat-apps.cnrs.fr/iiif/2/numismatic%2F1986.416_obv.JPG/full/full/0/default.jpg"><span style="color: #b0afaf">https://iramat-apps.cnrs.fr/iiif/2/numismatic%2F1986.416_obv.JPG</span>/full/full/0/default.jpg</a></span></p>
+<div style="display: flex; justify-content: center; align-items: center; width: 100%;">
+  <img src="https://iramat-apps.cnrs.fr/iiif/2/numismatic%2F1986.416_obv.JPG/full/full/0/default.jpg" alt="source image" style="max-width: 800px; max-height: 450px; object-fit: contain;">
+</div>
+</section>
+<section id="image-source-region" class="slide level2">
+<h2>Image source (region)</h2>
+<p><span class="smalltext"><a href="https://iramat-apps.cnrs.fr/iiif/2/numismatic%2F1986.416_obv.JPG/889,806,1697,635/full/0/default.jpg"><span style="color: #b0afaf">https://iramat-apps.cnrs.fr/iiif/2/numismatic%2F1986.416_obv.JPG/</span>889,806,1697,635<span style="color: #b0afaf">/full/0/default.jpg</span></a></span></p>
+<div style="display: flex; justify-content: center; align-items: center; width: 100%;">
+  <img src="https://iramat-apps.cnrs.fr/iiif/2/numismatic%2F1986.416_obv.JPG/889,806,1697,635/full/0/default.jpg" alt="source image" style="max-width: 800px; max-height: 450px; object-fit: contain;">
+</div>
+</section>
+<section id="image-source-scale" class="slide level2">
+<h2>Image source (scale)</h2>
+<p><span class="smalltext"><a href="https://iramat-apps.cnrs.fr/iiif/2/numismatic%2F1986.416_obv.JPG/full/pct:7/0/default.jpg"><span style="color: #b0afaf">https://iramat-apps.cnrs.fr/iiif/2/numismatic%2F1986.416_obv.JPG/full/</span>pct:7<span style="color: #b0afaf">/0/default.jpg</span></a></span></p>
+<div style="display: flex; justify-content: center; align-items: center; width: 100%;">
+  <img src="https://iramat-apps.cnrs.fr/iiif/2/numismatic%2F1986.416_obv.JPG/full/pct:7/0/default.jpg" alt="source image" style="max-width: 800px; max-height: 450px; object-fit: contain;">
+</div>
+</section>
+<section id="image-source-rotation" class="slide level2">
+<h2>Image source (rotation)</h2>
+<p><span class="smalltext"><a href="https://iramat-apps.cnrs.fr/iiif/2/numismatic%2F1986.416_obv.JPG/full/full/180/default.jpg"><span style="color: #b0afaf">https://iramat-apps.cnrs.fr/iiif/2/numismatic%2F1986.416_obv.JPG/full/full/</span>180<span style="color: #b0afaf">/default.jpg</span></a></span></p>
+<div style="display: flex; justify-content: center; align-items: center; width: 100%;">
+  <img src="https://iramat-apps.cnrs.fr/iiif/2/numismatic%2F1986.416_obv.JPG/full/full/180/default.jpg" alt="source image" style="max-width: 800px; max-height: 450px; object-fit: contain;">
+</div>
+</section>
+<section id="image-source-quality" class="slide level2">
+<h2>Image source (quality)</h2>
+<p><span class="smalltext"><a href="https://iramat-apps.cnrs.fr/iiif/2/numismatic%2F1986.416_obv.JPG/full/full/0/gray.jpg"><span style="color: #b0afaf">https://iramat-apps.cnrs.fr/iiif/2/numismatic%2F1986.416_obv.JPG/full/full/0/</span>gray.jpg</a></span></p>
+<div style="display: flex; justify-content: center; align-items: center; width: 100%;">
+  <img src="https://iramat-apps.cnrs.fr/iiif/2/numismatic%2F1986.416_obv.JPG/full/full/0/gray.jpg" alt="source image" style="max-width: 800px; max-height: 450px; object-fit: contain;">
+</div>
+</section></section>
+<section>
+<section id="presentation-api" class="title-slide slide level1 center" data-background-image="https://raw.githubusercontent.com/iramat/iramat-dev/master/img/iiif-pres-collection-multi.png" data-background-opacity="0.2" data-background-size="400px" data-background-repeat="repeat">
+<h1>Presentation API</h1>
+
+</section>
+<section id="image" class="slide level2">
+<h2>Image</h2>
+<p><span class="smalltext"><a href="https://iramat-apps.cnrs.fr/view/acies/arl-x-s-1_side-1.html" class="uri">https://iramat-apps.cnrs.fr/view/acies/arl-x-s-1_side-1.html</a></span></p>
+<div class="iframe-figure">
+  <iframe width="1200" height="420" src="https://iramat-apps.cnrs.fr/view/acies/arl-x-s-1_side-1.html" title="Nomisma.org"></iframe>
+</div>
+</section>
+<section id="séquence-dimages" class="slide level2">
+<h2>Séquence d’images</h2>
+<p><span class="smalltext"><a href="https://iramat-apps.cnrs.fr/view/numismatic/1986.416.html" class="uri">https://iramat-apps.cnrs.fr/view/numismatic/1986.416.html</a></span></p>
+<div class="iframe-figure">
+  <iframe width="1000" height="500" src="https://iramat-apps.cnrs.fr/view/numismatic/1986.416.html" title="Nomisma.org"></iframe>
+</div>
+</section>
+<section id="collection-dimages" class="slide level2">
+<h2>Collection d’images</h2>
+<p><span class="smalltext"><a href="https://iramat-apps.cnrs.fr/view/iramat_iiif.html" class="uri">https://iramat-apps.cnrs.fr/view/iramat_iiif.html</a></span></p>
+<div class="iframe-figure">
+  <iframe width="1000" height="500" src="https://iramat-apps.cnrs.fr/view/iramat_iiif.html" title="Nomisma.org"></iframe>
+</div>
+</section>
+<section id="aggrégation-de-collections-12" class="slide level2">
+<h2>Aggrégation de collections (1/2)</h2>
+<p><span class="smalltext"><a href="https://iramat-apps.cnrs.fr/view/iramat_bnf_iiif.html" class="uri">https://iramat-apps.cnrs.fr/view/iramat_bnf_iiif.html</a></span></p>
+<div class="iframe-figure">
+  <iframe width="1000" height="500" src="https://iramat-apps.cnrs.fr/view/iramat_bnf_iiif.html" title="Nomisma.org"></iframe>
+</div>
+</section>
+<section id="aggrégation-de-collections-22" class="slide level2">
+<h2>Aggrégation de collections (2/2)</h2>
+<p><span class="smalltext"><a href="https://vikusviewer.fh-potsdam.de/muenzen/vis/" class="uri">https://vikusviewer.fh-potsdam.de/muenzen/vis/</a></span></p>
+<div class="iframe-figure">
+  <iframe width="1000" height="500" src="https://vikusviewer.fh-potsdam.de/muenzen/vis/" title="Nomisma.org"></iframe>
+</div>
+</section>
+<section id="exposition-virtuelle" class="slide level2">
+<h2>Exposition virtuelle</h2>
+<p><span class="smalltext"><a href="http://lotb.iath.virginia.edu/mirador_viewer/mirador?manifest=1&amp;room_id=1" class="uri">http://lotb.iath.virginia.edu/mirador_viewer/mirador?manifest=1&amp;room_id=1</a></span></p>
+<div class="iframe-figure">
+  <iframe width="1000" height="500" src="http://lotb.iath.virginia.edu/mirador_viewer/mirador?manifest=1&amp;room_id=1" title="Nomisma.org"></iframe>
+</div>
+</section></section>
+<section>
+<section id="publier-vos-images-en-iiif" class="title-slide slide level1 center" data-background-image="https://raw.githubusercontent.com/iramat/iramat-dev/master/img/iiif-pres-collection-multi.png" data-background-opacity="0.2" data-background-size="400px" data-background-repeat="repeat">
+<h1>Publier vos images en IIIF</h1>
+
+</section>
+<section id="procédure" class="slide level2">
+<h2>Procédure</h2>
+<p><span class="smalltext"><a href="https://iramat-apps.cnrs.fr/iiif-loader/" class="uri">https://iramat-apps.cnrs.fr/iiif-loader/</a></span></p>
+<div class="iframe-figure">
+  <iframe src="https://iramat-apps.cnrs.fr/iiif-loader/" style="
+        transform: scale(0.9);
+        transform-origin: 0 0;
+        width: 1000px;
+        height: 500px;
+        border: none;
+      " title="iiif-loader"></iframe>
+</div>
+</section></section>
+<section>
+<section id="développements-prévus" class="title-slide slide level1 center" data-background-image="https://raw.githubusercontent.com/iramat/iramat-dev/master/img/iiif-pres-collection-multi.png" data-background-opacity="0.2" data-background-size="400px" data-background-repeat="repeat">
+<h1>Développements prévus</h1>
+
+</section>
+<section id="base-de-données" class="slide level2">
+<h2>Base de données</h2>
+<div class="columns">
+<div class="column" style="width:30%;">
+<p>Enregistrement des <em>manifests</em> en base de données (<img src="https://raw.githubusercontent.com/iramat/iramat-dev/main/img/logo-chips-txt.png" style="width: 35px;vertical-align: middle;">) des <em>manifests</em> et annotations</p>
+</div><div class="column" style="width:70%;">
+<img src="https://raw.githubusercontent.com/iramat/chips/master/img/db_erd.png" style="width: 950px;vertical-align: middle;"> <br>
+<div class="captiontext">
+Modèle Conceptuel de Données simplifié de la BDD CHIPS
+</div>
+</div></div>
+</section>
+<section id="data-pipeline" class="slide level2">
+<h2>Data pipeline</h2>
+<div class="cell" data-reveal="true" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class=""><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart LR
+  subgraph IRAMAT[&lt;b&gt;IRAMAT&lt;/b&gt;]
+    ICP{{ICP-MS}}
+    XRD{{XRD}}
+    XRF{{XRF}}
+    BD[(DB)]
+    analyses[archaeometry analysis]
+    analyses --&gt; IRAMATdata
+    analyses --&gt; IRAMATimg
+    subgraph VM[VM]
+    subgraph IRAMATdata[Scalar measurements]
+        XRF --&gt; BD
+        XRD --&gt; BD
+        ICP --&gt; BD
+        BD -- API RESTful --&gt; APIdata[&lt;em&gt;labeled data&lt;/em&gt;]
+    end
+    subgraph IRAMATimg[Imaging]
+        Macro{{Macro-&lt;br&gt;photography}} -- format --&gt; IIIFimg([IIIF image])
+        Opt{{Optical&lt;br&gt;Microscopy}} -- format --&gt; IIIFimg
+        SEM{{SEM-EDS}} -- format --&gt; IIIFimg
+        Raman{{Raman}} -- format --&gt; IIIFimg
+        IIIFimg ---&gt; IIIFpres([IIIF presentation])
+        IIIFpres --&gt; IIIFannot([IIIF annotation])
+        IIIFannot -- manifests&lt;br&gt;annotations --&gt; BD
+        BD -- API RESTful --&gt; APIimg[&lt;em&gt;labeled images&lt;/em&gt;]
+    end
+    end
+  end
+  APIdata ---&gt; PyExtract[&lt;em&gt;Data Fusion&lt;/em&gt;]
+  APIimg ---&gt; PyExtract
+  subgraph BSC[&lt;b&gt;BSC&lt;/b&gt;]
+    PyExtract -- creates --&gt; MLlearn[(learning base)]
+    subgraph ML[Machine Learning]
+      MLlearn ---&gt; MLvalid[validation]
+      MLvalid ---&gt; MLtest[test]
+      MLtest --&gt; MLlearn
+    end
+  end
+    subgraph out[&lt;b&gt;Automatic Classification&lt;/b&gt;]
+      ResMet[archaeometallurgical facies]
+      ResNum[numismatic coins]
+    end
+  ML ---&gt; out
+
+style BD fill:#cccccc
+
+style IRAMAT fill:#edfa05
+style VM fill:#f4fa82
+style analyses fill:#fbfcd7
+style IRAMATdata fill:#fbfcd7
+style IRAMATimg fill:#fbfcd7
+style XRF fill:#f6f7d5
+style XRD fill:#f6f7d5
+style ICP fill:#f6f7d5
+style Macro fill:#f6f7d5
+style Opt fill:#f6f7d5
+style SEM fill:#f6f7d5
+style Raman fill:#f6f7d5
+style IIIFimg fill:#f6f7d5
+style IIIFpres fill:#f6f7d5
+style IIIFannot fill:#f6f7d5
+style BD fill:#c9c9c9
+style APIdata fill:#f6f7d5
+style APIimg fill:#f6f7d5
+
+style BSC fill:#919cfa
+style PyExtract fill:#8794ff
+style ML fill:#8794ff
+style MLlearn fill:#d9ddff
+style MLvalid fill:#d9ddff
+style MLtest fill:#d9ddff
+
+style out fill:#42ff70
+style ResMet fill:#b0ffc3
+style ResNum fill:#b0ffc3
+
+click BD "https://github.com/iramat/iramat-dev/main/talks/2026-bsc/README.md#db"
+click VM "https://github.com/iramat/iramat-dev/main/talks/2026-bsc/README.md#vm"
+click IIIFimg "https://github.com/iramat/iramat-dev/main/talks/2026-bsc/README.md#iiif-image"
+click IIIFpres "https://github.com/iramat/iramat-dev/main/talks/2026-bsc/README.md#iiif-presentation"
+click IIIFannot "https://github.com/iramat/iramat-dev/main/talks/2026-bsc/README.md#iiif-annotation"
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+<div class="captiontext">
+<em>Data pipeline</em> vers du Machine learning
+</div>
+<p><br></p>
+<div class="callout callout-note callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Note</strong></p>
+</div>
+<div class="callout-content">
+<p>Utilisez la touche ALT + clic gauche pour zoomer/dézoomer sur le diagramme</p>
+</div>
+</div>
+</div>
+</section></section>
+<section>
+<section id="discussion" class="title-slide slide level1 center" data-background-image="https://raw.githubusercontent.com/iramat/iramat-dev/master/img/iiif-pres-collection-multi.png" data-background-opacity="0.2" data-background-size="400px" data-background-repeat="repeat">
+<h1>Discussion</h1>
+
+</section>
+<section id="récapitulatif" class="slide level2">
+<h2>Récapitulatif</h2>
+<br> Utilisez le webservice <a href="https://iramat-apps.cnrs.fr/iiif-loader/">iiif-loader</a> pour héberger vos images sur le site de l’IRAMAT en IIIF <br><br> <img src="https://raw.githubusercontent.com/zoometh/thomashuet/master/img/app-github-3.png" style="height: 45px;vertical-align: middle;"> <code>https://github.com/iramat</code>: <br> code <em>open-source</em>, référentiels, données publiques, … <a href="https://github.com/signup">s’inscrire</a> <br><br> <img src="https://raw.githubusercontent.com/zoometh/thomashuet/master/img/app-zenodo.png" style="height: 45px;vertical-align: middle;"> <code>https://zenodo.org/communities/iramat</code> : <br> documents, édition/sélection des métadonnées,… <a href="https://zenodo.org/signup/">s’inscrire</a> <br><br>
+<center>
+<small>👋 <a href="mailto:thomas.huet@cnrs.fr" class="email">thomas.huet@cnrs.fr</a></small>
+</center>
+<p><br><br></p>
+</section>
+
+</section>
+<section id="footnotes" class="footnotes footnotes-end-of-document smaller scrollable" role="doc-endnotes"><h2>Footnotes</h2>
+
+<ol>
+<li id="fn1"><p><em>Chief developer</em> de la <em>Stanford University Libraries</em>, image extraite du <a href="https://www.youtube.com/watch?v=KVUyhcVO060&amp;t=414s"><em>International Image Interoperability Framework event</em></a>, Museum of Modern Art, New York, 10 Mai 2016.</p></li>
+<li id="fn2"><p>Uniform Resource Locator (URL) <code>-&gt;</code> Uniform Resource Identifiers (URI)</p></li>
+<li id="fn3"><p><a href="https://iramat-apps.cnrs.fr/iiif/2/numismatic%2F1986.416_obv.JPG/full/full/0/default.jpg" class="uri">https://iramat-apps.cnrs.fr/iiif/2/numismatic%2F1986.416_obv.JPG/full/full/0/default.jpg</a></p></li>
+<li id="fn4"><p><a href="https://iramat-apps.cnrs.fr/iiif/mirador/cdn/numismatic/1986.416.json" class="uri">https://iramat-apps.cnrs.fr/iiif/mirador/cdn/numismatic/1986.416.json</a></p></li>
+</ol>
 </section>
     </div>
   <div class="quarto-auto-generated-content" style="display: none;">
 <div class="footer footer-default">
-<p>Thomas Huet - <img src="https://raw.githubusercontent.com/zoometh/thomashuet/master/img/inst-cnrs-iramat.png" style="height: 17px;vertical-align: middle;"> - 7 Octobre, 2025, CEB, Orléans</p>
+<p>T. Huet - <img src="https://raw.githubusercontent.com/zoometh/thomashuet/master/img/inst-cnrs-iramat.png" style="height: 15px;vertical-align: middle;"> - 10 Mars, 2026, LAPA, Saclay</p>
 </div>
 </div></div>
 
@@ -370,6 +824,82 @@ Thomas Huet
         ]
       });
     </script>
+    
+
+    <script>
+
+      // htmlwidgets need to know to resize themselves when slides are shown/hidden.
+
+      // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
+
+      // slide changes (different for each slide format).
+
+      (function () {
+
+        // dispatch for htmlwidgets
+
+        function fireSlideEnter() {
+
+          const event = window.document.createEvent("Event");
+
+          event.initEvent("slideenter", true, true);
+
+          window.document.dispatchEvent(event);
+
+        }
+
+    
+
+        function fireSlideChanged(previousSlide, currentSlide) {
+
+          fireSlideEnter();
+
+    
+
+          // dispatch for shiny
+
+          if (window.jQuery) {
+
+            if (previousSlide) {
+
+              window.jQuery(previousSlide).trigger("hidden");
+
+            }
+
+            if (currentSlide) {
+
+              window.jQuery(currentSlide).trigger("shown");
+
+            }
+
+          }
+
+        }
+
+    
+
+        // hookup for slidy
+
+        if (window.w3c_slidy) {
+
+          window.w3c_slidy.add_observer(function (slide_num) {
+
+            // slide_num starts at position 1
+
+            fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
+
+          });
+
+        }
+
+    
+
+      })();
+
+    </script>
+
+    
+
     <script id="quarto-html-after-body" type="application/javascript">
       window.document.addEventListener("DOMContentLoaded", function (event) {
         const tabsets =  window.document.querySelectorAll(".panel-tabset-tabby")
