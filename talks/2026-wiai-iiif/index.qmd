@@ -363,20 +363,33 @@ Les images <img src='https://raw.githubusercontent.com/zoometh/thomashuet/master
 
 ::: {.panel-tabset}
 
-### Maturation
+### Maturation logicielle
 
 ```{=html}
 <div class="iframe-figure">
-  <iframe width="1220" height="130"
-          src="https://iramat.github.io/iramat-dev/img/research-software-maturity-levels-chat-3.html"
+  <iframe width="1000" height="130"
+          src="https://iramat.github.io/iramat-dev/img/research-software-maturity-levels-chat-3steps.html"
           title="maturation"></iframe>
   <div class="captiontext">xxx</div>
 </div>
 ```
 
-| 1  | 2  | 3 |
-|---|---|---|
-|prototype|self-service|intégré CMS|
+<table style='font-size:70%'>
+        <tbody>
+            <tr>
+                <td><strong>1. Prototype</strong></td>
+                <td><strong>2. Self-service</strong></td>
+                <td><strong>3. CMS</strong></td>
+            </tr>
+            <tr>
+                <td>IIIF ponctuel. Forte implication de l’ingénieur ; pas de réutilisation possible.</td>
+                <td>IIIF réutilisable avec une documentation. Tâches de base automatisées. Fonctionnalités avancées (ex : annotations) nécessitant l’intervention de l’ingénieur.</td>
+                <td>IIIF intégré à un CMS (ex : Omeka, Drupal). Autonomie des tâches CRUD. L’ingénieur assure la gestion des utilisateurs et la maintenance du système.</td>
+            </tr>
+        </tbody>
+    </table>
+    
+
 
 
 
