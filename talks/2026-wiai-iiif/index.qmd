@@ -363,6 +363,17 @@ Les images <img src='https://raw.githubusercontent.com/zoometh/thomashuet/master
 
 ::: {.panel-tabset}
 
+### Maturation
+
+```{=html}
+<div class="iframe-figure">
+  <iframe width="800" height="470"
+          src="https://iramat.github.io/iramat-dev/img/research-software-maturity-levels-chat-2.html"
+          title="maturation"></iframe>
+  <div class="captiontext">xxx</div>
+</div>
+```
+
 ### Base de données
 
 Enregistrement des _manifests_ en base de données (<img src='https://raw.githubusercontent.com/iramat/iramat-dev/main/img/logo-chips-txt.png' style='width: 35px;vertical-align: middle;'>) des _manifests_ et annotations
