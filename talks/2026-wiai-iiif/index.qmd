@@ -367,12 +367,18 @@ Les images <img src='https://raw.githubusercontent.com/zoometh/thomashuet/master
 
 ```{=html}
 <div class="iframe-figure">
-  <iframe width="800" height="470"
-          src="https://iramat.github.io/iramat-dev/img/research-software-maturity-levels-chat-2.html"
+  <iframe width="1220" height="130"
+          src="https://iramat.github.io/iramat-dev/img/research-software-maturity-levels-chat-3.html"
           title="maturation"></iframe>
   <div class="captiontext">xxx</div>
 </div>
 ```
+
+| 1  | 2  | 3 |
+|---|---|---|
+|prototype|self-service|intégré CMS|
+
+
 
 ### Base de données
 
