@@ -338,7 +338,7 @@ Les images <img src='https://raw.githubusercontent.com/zoometh/thomashuet/master
 
 # Publier vos images en IIIF {background-image="https://raw.githubusercontent.com/iramat/iramat-dev/master/img/iiif-pres-collection-multi.png" background-opacity=0.2 background-size="400px" background-repeat="repeat"}
 
-## Procédure
+## Webservice hébergé à l'IRAMAT
 
 <span class="smalltext"><https://iramat-apps.cnrs.fr/iiif-loader/></span>
 ```{=html}
@@ -359,7 +359,7 @@ Les images <img src='https://raw.githubusercontent.com/zoometh/thomashuet/master
 
 # Développements prévus {background-image="https://raw.githubusercontent.com/iramat/iramat-dev/master/img/iiif-pres-collection-multi.png" background-opacity=0.2 background-size="400px" background-repeat="repeat"}
 
-## Base de données
+## Développements
 
 ::: {.panel-tabset}
 
@@ -368,33 +368,31 @@ Les images <img src='https://raw.githubusercontent.com/zoometh/thomashuet/master
 ```{=html}
 <div class="iframe-figure">
   <iframe width="1000" height="130"
-          src="https://iramat.github.io/iramat-dev/img/research-software-maturity-levels-chat-3steps.html"
+          src="https://zoometh.github.io/thomashuet/img/research-software-maturity-levels-chat-3steps.html"
           title="maturation"></iframe>
 </div>
 ```
 
 <table style='font-size:70%'>
-        <tbody>
-            <tr>
-                <td><strong>1. Prototype</strong></td>
-                <td><strong>2. Self-service</strong></td>
-                <td><strong>3. CMS</strong></td>
-            </tr>
-            <tr>
-                <td>IIIF ponctuel. Forte implication de l’ingénieur ; pas de réutilisation possible.</td>
-                <td>IIIF réutilisable avec une documentation. Tâches de base automatisées. Fonctionnalités avancées (ex : annotations) nécessitant l’intervention de l’ingénieur.</td>
-                <td>IIIF intégré à un CMS (ex : Omeka, Drupal). Autonomie des tâches CRUD. L’ingénieur assure la gestion des utilisateurs et la maintenance du système.</td>
-            </tr>
-        </tbody>
-    </table>
-    
+    <tbody>
+        <tr>
+            <td><strong>1. Prototype</strong></td>
+            <td><strong>2. Self-service</strong></td>
+            <td><strong>3. CMS</strong></td>
+        </tr>
+        <tr>
+            <td><strong>IIIF ponctuel</strong>. L’ingénieur assure le service, pas de répétabilité possible.</td>
+            <td><strong>IIIF réutilisable</strong> avec une documentation. Tâches de base automatisées. L’ingénieur assure les fonctionnalités avancées (ex : annotations).</td>
+            <td><strong>IIIF intégré</strong> à un CMS[^45] (ex : Omeka S, Drupal). Autonomie des tâches CRUD. L’ingénieur assure la gestion des utilisateurs et la maintenance du système.</td>
+        </tr>
+    </tbody>
+</table>
 
-
-
+[^45]: _Content Management System_, système de gestion des contenus
 
 ### Base de données
 
-Enregistrement des _manifests_ en base de données (<img src='https://raw.githubusercontent.com/iramat/iramat-dev/main/img/logo-chips-txt.png' style='width: 35px;vertical-align: middle;'>) des _manifests_ et annotations
+Enregistrement des _manifests_ et annotations en base de données (<img src='https://raw.githubusercontent.com/iramat/iramat-dev/main/img/logo-chips-txt.png' style='width: 35px;vertical-align: middle;'>) 
 
 ### _Data pipeline_
 
