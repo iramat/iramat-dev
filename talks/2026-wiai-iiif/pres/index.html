@@ -318,13 +318,12 @@ Communautés d’utilisateurs et de développeurs issues des musées, bibliothè
 </div></div>
 </div>
 <div id="tabset-1-3">
-<p>Les images <img src="https://raw.githubusercontent.com/zoometh/thomashuet/master/img/lod-iso-iiif.png" style="height: 55px;vertical-align: middle;"> existent à <strong>un seul endroit</strong> &nbsp;<br>
-</p>
+<p>Les images <img src="https://raw.githubusercontent.com/zoometh/thomashuet/master/img/lod-iso-iiif.png" style="height: 55px;vertical-align: middle;"> existent à <strong>un seul endroit</strong></p>
 <div class="columns">
 <div class="column" style="width:65%;">
 <p>🍃 baisse des coûts de stockage<br>
 🔍 image indexée par une URL<a href="#/footnotes" class="footnote-ref" id="fnref2" role="doc-noteref" data-footnote-href="#/fn2" onclick=""><sup>2</sup></a><br>
-✒️ meilleure gestion des droits de réutilisation<br>
+✒️ meilleure gestion des réutilisations<br>
 🎮 meilleure expérience utilisateur<br>
 🏷️ sémantisation de régions de l’image<br>
 👥 aggrégation de collections (APIs partagées)</p>
@@ -469,16 +468,8 @@ Image source<a href="#/footnotes" class="footnote-ref" id="fnref3" role="doc-not
 </section>
 <section id="présenter-en-iiif" class="slide level2">
 <h2>Présenter en IIIF</h2>
-<p><span class="smalltext"><a href="https://iramat-apps.cnrs.fr/iiif-loader/" class="uri">https://iramat-apps.cnrs.fr/iiif-loader/</a></span></p>
-<div class="iframe-figure">
-  <iframe src="https://colab.research.google.com/drive/1WqEAez0yu4TYa5i-iNRHNIeYlv33nGPp#scrollTo=RPb_18dlpW2n" style="
-        transform: scale(0.9);
-        transform-origin: 0 0;
-        width: 1000px;
-        height: 500px;
-        border: none;
-      " title="iiif-loader"></iframe>
-</div>
+<p><span class="smalltext"><a href="https://colab.research.google.com/drive/1WqEAez0yu4TYa5i-iNRHNIeYlv33nGPp#scrollTo=RPb_18dlpW2n" class="uri">https://colab.research.google.com/drive/1WqEAez0yu4TYa5i-iNRHNIeYlv33nGPp#scrollTo=RPb_18dlpW2n</a></span></p>
+<script src="https://gist.github.com/zoometh/d377fd9f20215e9dcead9e037e0b4bf3.js"></script>
 </section></section>
 <section>
 <section id="développements-prévus" class="title-slide slide level1 center" data-background-image="https://raw.githubusercontent.com/iramat/iramat-dev/master/img/iiif-pres-collection-multi.png" data-background-opacity="0.2" data-background-size="400px" data-background-repeat="repeat">
@@ -490,6 +481,7 @@ Image source<a href="#/footnotes" class="footnote-ref" id="fnref3" role="doc-not
 <div class="iframe-figure">
   <iframe width="1000" height="130" src="https://zoometh.github.io/thomashuet/img/research-software-maturity-levels-chat-3steps.html" title="maturation"></iframe>
 </div>
+<p><br></p>
 <table style="font-size:70%">
 <tbody>
 <tr>
@@ -505,10 +497,10 @@ Image source<a href="#/footnotes" class="footnote-ref" id="fnref3" role="doc-not
 </tr>
 <tr>
 <td>
-<strong>IIIF ponctuel</strong>. L’ingénieur assure le service, pas de répétabilité possible.
+<strong>IIIF ponctuel</strong>. L’ingénieur assure le service informatique pour un projet particulier, pas d’automatisation possible.
 </td>
 <td>
-<strong>IIIF réutilisable</strong> avec une documentation. Tâches de base automatisées. L’ingénieur assure les fonctionnalités avancées (ex : annotations).
+<strong>IIIF réutilisable</strong> avec une documentation. Tâches de base automatisées. L’ingénieur assure les fonctionnalités avancées (ex : annotations, collections).
 </td>
 <td>
 <strong>IIIF intégré</strong> à un CMS<a href="#/footnotes" class="footnote-ref" id="fnref5" role="doc-noteref" data-footnote-href="#/fn5" onclick=""><sup>5</sup></a> (ex : Omeka S, Drupal). Autonomie des tâches CRUD. L’ingénieur assure la gestion des utilisateurs et la maintenance du système.
@@ -636,12 +628,10 @@ click IIIFannot "https://github.com/iramat/iramat-dev/main/talks/2026-bsc/README
 </section>
 <section id="récapitulatif" class="slide level2">
 <h2>Récapitulatif</h2>
-<br> Utilisez le webservice <a href="https://iramat-apps.cnrs.fr/iiif-loader/">iiif-loader</a> pour héberger vos images sur le site de l’IRAMAT en IIIF <br><br> <img src="https://raw.githubusercontent.com/zoometh/thomashuet/master/img/app-github-3.png" style="height: 45px;vertical-align: middle;"> <code>https://github.com/iramat</code>: <br> code <em>open-source</em>, référentiels, données publiques, … <a href="https://github.com/signup">s’inscrire</a> <br><br> <img src="https://raw.githubusercontent.com/zoometh/thomashuet/master/img/app-zenodo.png" style="height: 45px;vertical-align: middle;"> <code>https://zenodo.org/communities/iramat</code> : <br> documents, édition/sélection des métadonnées,… <a href="https://zenodo.org/signup/">s’inscrire</a> <br><br>
-<center>
-<small>👋 <a href="mailto:thomas.huet@cnrs.fr" class="email">thomas.huet@cnrs.fr</a></small>
-</center>
-<p><br><br></p>
-</section>
+<p><br> Webservice <a href="https://iramat-apps.cnrs.fr/iiif-loader/">iiif-loader</a> pour héberger vos images en <img src="https://raw.githubusercontent.com/zoometh/thomashuet/master/img/lod-iso-iiif.png" style="height: 55px;vertical-align: middle;"> sur le site de l’IRAMAT (<a href="https://iramat-apps.cnrs.fr/" class="uri">https://iramat-apps.cnrs.fr/</a>) <br><br></p>
+<hr>
+<p><br> <img src="https://raw.githubusercontent.com/zoometh/thomashuet/master/img/app-github-3.png" style="height: 45px;vertical-align: middle;"> <code>https://github.com/iramat</code><a href="#/footnotes" class="footnote-ref" id="fnref6" role="doc-noteref" data-footnote-href="#/fn6" onclick=""><sup>6</sup></a> 👉 <span class="r-md"><a href="https://github.com/signup">s’inscrire</a></span> <br><br> <img src="https://raw.githubusercontent.com/zoometh/thomashuet/master/img/app-zenodo.png" style="height: 45px;vertical-align: middle;"> <code>https://zenodo.org/communities/iramat</code><a href="#/footnotes" class="footnote-ref" id="fnref7" role="doc-noteref" data-footnote-href="#/fn7" onclick=""><sup>7</sup></a> 👉 <span class="r-md"><a href="https://zenodo.org/signup/">s’inscrire</a></span></p>
+<aside></aside></section>
 
 </section>
 <section id="footnotes" class="footnotes footnotes-end-of-document smaller scrollable" role="doc-endnotes"><h2>Footnotes</h2>
@@ -652,6 +642,8 @@ click IIIFannot "https://github.com/iramat/iramat-dev/main/talks/2026-bsc/README
 <li id="fn3"><p><a href="https://iramat-apps.cnrs.fr/iiif/2/numismatic%2F1986.416_obv.JPG/full/full/0/default.jpg" class="uri">https://iramat-apps.cnrs.fr/iiif/2/numismatic%2F1986.416_obv.JPG/full/full/0/default.jpg</a></p></li>
 <li id="fn4"><p><a href="https://iramat-apps.cnrs.fr/iiif/mirador/cdn/numismatic/1986.416.json" class="uri">https://iramat-apps.cnrs.fr/iiif/mirador/cdn/numismatic/1986.416.json</a></p></li>
 <li id="fn5"><p><em>Content Management System</em>, système de gestion des contenus</p></li>
+<li id="fn6"><p>code <em>open-source</em>, référentiels, données publiques, …</p></li>
+<li id="fn7"><p>documents, édition/sélection des métadonnées,…</p></li>
 </ol>
 </section>
     </div>

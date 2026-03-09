@@ -148,15 +148,14 @@ Communautés d'utilisateurs et de développeurs issues des musées, bibliothèqu
 
 ### Fonctionnalités
 
-Les images <img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/lod-iso-iiif.png' style='height: 55px;vertical-align: middle;'> existent à **un seul endroit**  \ 
-\
+Les images <img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/lod-iso-iiif.png' style='height: 55px;vertical-align: middle;'> existent à **un seul endroit** 
 
 :::: {.columns}
 
 ::: {.column width="65%"}
 🍃 baisse des coûts de stockage \
 🔍 image indexée par une URL[^1] \
-✒️ meilleure gestion des droits de réutilisation \
+✒️ meilleure gestion des réutilisations \
 🎮 meilleure expérience utilisateur \
 🏷️ sémantisation de régions de l'image \
 👥 aggrégation de collections (APIs partagées)
@@ -380,19 +379,9 @@ Les images <img src='https://raw.githubusercontent.com/zoometh/thomashuet/master
 ## Présenter en IIIF
 
 
-<span class="smalltext"><https://iramat-apps.cnrs.fr/iiif-loader/></span>
+<span class="smalltext"><https://colab.research.google.com/drive/1WqEAez0yu4TYa5i-iNRHNIeYlv33nGPp#scrollTo=RPb_18dlpW2n></span>
 ```{=html}
-<div class="iframe-figure">
-  <iframe src="https://colab.research.google.com/drive/1WqEAez0yu4TYa5i-iNRHNIeYlv33nGPp#scrollTo=RPb_18dlpW2n"
-  style="
-        transform: scale(0.9);
-        transform-origin: 0 0;
-        width: 1000px;
-        height: 500px;
-        border: none;
-      "
-      title="iiif-loader"></iframe>
-</div>
+<script src="https://gist.github.com/zoometh/d377fd9f20215e9dcead9e037e0b4bf3.js"></script>
 ```
 
 # Développements prévus {background-image="https://raw.githubusercontent.com/iramat/iramat-dev/master/img/iiif-pres-collection-multi.png" background-opacity=0.2 background-size="400px" background-repeat="repeat"}
@@ -407,6 +396,8 @@ Les images <img src='https://raw.githubusercontent.com/zoometh/thomashuet/master
 </div>
 ```
 
+<br>
+
 <table style='font-size:70%'>
     <tbody>
         <tr>
@@ -415,8 +406,8 @@ Les images <img src='https://raw.githubusercontent.com/zoometh/thomashuet/master
             <td><strong>3. CMS</strong></td>
         </tr>
         <tr>
-            <td><strong>IIIF ponctuel</strong>. L’ingénieur assure le service, pas de répétabilité possible.</td>
-            <td><strong>IIIF réutilisable</strong> avec une documentation. Tâches de base automatisées. L’ingénieur assure les fonctionnalités avancées (ex : annotations).</td>
+            <td><strong>IIIF ponctuel</strong>. L’ingénieur assure le service informatique pour un projet particulier, pas d'automatisation possible.</td>
+            <td><strong>IIIF réutilisable</strong> avec une documentation. Tâches de base automatisées. L’ingénieur assure les fonctionnalités avancées (ex : annotations, collections).</td>
             <td><strong>IIIF intégré</strong> à un CMS[^45] (ex : Omeka S, Drupal). Autonomie des tâches CRUD. L’ingénieur assure la gestion des utilisateurs et la maintenance du système.</td>
         </tr>
     </tbody>
@@ -524,17 +515,18 @@ Utilisez la touche ALT + clic gauche pour zoomer/dézoomer sur le diagramme
 
 ## Récapitulatif
 <br>
-Utilisez le webservice [iiif-loader](https://iramat-apps.cnrs.fr/iiif-loader/) pour héberger vos images sur le site de l'IRAMAT en IIIF
-<br><br>
-<img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/app-github-3.png' style='height: 45px;vertical-align: middle;'> `https://github.com/iramat`: <br> code _open-source_, référentiels, données publiques, ... [s'inscrire](https://github.com/signup)
-<br><br>
-<img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/app-zenodo.png' style='height: 45px;vertical-align: middle;'> `https://zenodo.org/communities/iramat` : <br> documents, édition/sélection des métadonnées,... [s'inscrire](https://zenodo.org/signup/)
-<br><br>
-<center><small>👋 <thomas.huet@cnrs.fr></small></center>
-
-
+Webservice [iiif-loader](https://iramat-apps.cnrs.fr/iiif-loader/) pour héberger vos images en <img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/lod-iso-iiif.png' style='height: 55px;vertical-align: middle;'> sur le site de l'IRAMAT (<https://iramat-apps.cnrs.fr/>)
 <br><br>
 
+<hr>
+
+<br>
+<img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/app-github-3.png' style='height: 45px;vertical-align: middle;'> `https://github.com/iramat`[^101] 👉 <span class="r-md">[s'inscrire](https://github.com/signup)</span>
+<br><br>
+<img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/app-zenodo.png' style='height: 45px;vertical-align: middle;'> `https://zenodo.org/communities/iramat`[^102] 👉 <span class="r-md">[s'inscrire](https://zenodo.org/signup/)</span>
+
+[^101]: code _open-source_, référentiels, données publiques, ...
+[^102]: documents, édition/sélection des métadonnées,...
 
 ## Aclass {data-visibility=hidden}
 
