@@ -55,7 +55,7 @@ GitHub <img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img
 <img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/lod-iso-iiif.png' style='height: 45px;vertical-align: middle;'>, etc. <br><br>
 
 ::: {.callout-note}
-📅 Bimestriel. Le 2<sup>e</sup> Mardi matin, sur Rendez-Vous (Renater) entre 10h00 et 10h50 (50 minutes), lien sur le [GitHub](https://github.com/iramat#-wiai) et le [calendrier](https://iramat.github.io/iramat-dev/admin/calendrier.html) de l'IRAMAT
+📅 Bimestriel. Le 2<sup>e</sup> Mardi matin, sur Rendez-Vous (Renater) entre 10h00 et 10h50 (50 minutes), lien sur le [GitHub](https://github.com/iramat#-wiai) et le [calendrier](https://iramat-apps.cnrs.fr/portal/#calendar) de l'IRAMAT
 :::
 
 :::
@@ -66,7 +66,7 @@ GitHub <img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img
 
 <img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/lod-iso-iiif-tom-cramer-2016.png' style='width: 450px;vertical-align: middle;'> 
 
-<div class="captiontext"> _"What if deep zoom was standard and fast"_ -- Tom Cramer[^89], 2016. crédit: IIIF Consortium</div>
+<div class="captiontext"> _"What if deep zoom was standard and fast"_ <br> &nbsp; -- Tom Cramer[^89], 2016. crédit: IIIF Consortium</div>
 
 
 </center>
@@ -142,7 +142,6 @@ Communautés d'utilisateurs et de développeurs issues des musées, bibliothèqu
 
 ::: {.column width="35%"}
 <img src='https://raw.githubusercontent.com/iramat/iramat-dev/main/img/prg-API-many-to-many.png' style='width: 300px;vertical-align: middle;'>
-
 :::
 
 ::::
@@ -151,12 +150,24 @@ Communautés d'utilisateurs et de développeurs issues des musées, bibliothèqu
 
 Les images <img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/lod-iso-iiif.png' style='height: 55px;vertical-align: middle;'> existent à **un seul endroit**  \ 
 \
+
+:::: {.columns}
+
+::: {.column width="65%"}
 🍃 baisse des coûts de stockage \
 🔍 image indexée par une URL[^1] \
 ✒️ meilleure gestion des droits de réutilisation \
 🎮 meilleure expérience utilisateur \
 🏷️ sémantisation de régions de l'image \
 👥 aggrégation de collections (APIs partagées)
+:::
+
+::: {.column width="35%"}
+<img src='https://raw.githubusercontent.com/iramat/iramat-dev/main/img/prg-API-one-to-many.png' style='width: 300px;vertical-align: middle;'>
+
+:::
+
+::::
 
 ### Fonctionnement
 
@@ -366,7 +377,23 @@ Les images <img src='https://raw.githubusercontent.com/zoometh/thomashuet/master
 </div>
 ```
 
+## Présenter en IIIF
 
+
+<span class="smalltext"><https://iramat-apps.cnrs.fr/iiif-loader/></span>
+```{=html}
+<div class="iframe-figure">
+  <iframe src="https://colab.research.google.com/drive/1WqEAez0yu4TYa5i-iNRHNIeYlv33nGPp#scrollTo=RPb_18dlpW2n"
+  style="
+        transform: scale(0.9);
+        transform-origin: 0 0;
+        width: 1000px;
+        height: 500px;
+        border: none;
+      "
+      title="iiif-loader"></iframe>
+</div>
+```
 
 # Développements prévus {background-image="https://raw.githubusercontent.com/iramat/iramat-dev/master/img/iiif-pres-collection-multi.png" background-opacity=0.2 background-size="400px" background-repeat="repeat"}
 

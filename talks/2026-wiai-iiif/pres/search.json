@@ -4,7 +4,7 @@
     "href": "index.html#la-série-wiai",
     "title": "Le cadre IIIF",
     "section": "La série WIAI",
-    "text": "La série WIAI\n\n\nWebinaires dédiés aux technologies de l’information pour l’archéométrie:  GitHub , Python , R , API , IIIF , etc. \n\n\n\n\n\n\nNote\n\n\n📅 Bimestriel. Le 2e Mardi matin, sur Rendez-Vous (Renater) entre 10h00 et 10h50 (50 minutes), lien sur le GitHub et le calendrier de l’IRAMAT\n\n\n\n\n\n\n\n“What if deep zoom was standard and fast” – Tom Cramer1, 2016. crédit: IIIF Consortium\n\n\n\n\nDécouvrir – ou approfondir – une solution logicielle open-source en revenant sur l’histoire de ce logiciel, sa logique interne, … Avec des citations rigolotes"
+    "text": "La série WIAI\n\n\nWebinaires dédiés aux technologies de l’information pour l’archéométrie:  GitHub , Python , R , API , IIIF , etc. \n\n\n\n\n\n\nNote\n\n\n📅 Bimestriel. Le 2e Mardi matin, sur Rendez-Vous (Renater) entre 10h00 et 10h50 (50 minutes), lien sur le GitHub et le calendrier de l’IRAMAT\n\n\n\n\n\n\n\n“What if deep zoom was standard and fast”    – Tom Cramer1, 2016. crédit: IIIF Consortium\n\n\n\n\nDécouvrir – ou approfondir – une solution logicielle open-source en revenant sur l’histoire de ce logiciel, sa logique interne, … Avec des citations rigolotes"
   },
   {
     "objectID": "index.html#des-images-pour-les-archéologues",
@@ -18,7 +18,7 @@
     "href": "index.html#iiif-standard-dintéropérabilité-des-images",
     "title": "Le cadre IIIF",
     "section": "IIIF: standard d’intéropérabilité des images",
-    "text": "IIIF: standard d’intéropérabilité des images\n\nDéfinitionMotivationFonctionnalitésFonctionnement\n\n\n\n\nInternational Image Interoperability Framework  \n\n\n\n\n\n\n\nNote\n\n\nDéveloppé au début des années 2010 (community lead). Iso-standard ISO 21127:2019\n\n\n\n\n\n\n\nCommunautés d’utilisateurs et de développeurs issues des musées, bibliothèques, archives, universités, etc., nécessitant partager des images haute résolution, des annotations, des pratiques de nommage, etc.\n\n≠ silo de données \n\n\n\n\n\n\nLes images  existent à un seul endroit  \n🍃 baisse des coûts de stockage\n🔍 image indexée par une URL2\n✒️ meilleure gestion des droits de réutilisation\n🎮 meilleure expérience utilisateur\n🏷️ sémantisation de régions de l’image\n👥 aggrégation de collections (APIs partagées)\n\n\n\n\n\nImage source3\n\n\n  \n\n\n\n\nmanifest4"
+    "text": "IIIF: standard d’intéropérabilité des images\n\nDéfinitionMotivationFonctionnalitésFonctionnement\n\n\n\n\nInternational Image Interoperability Framework  \n\n\n\n\n\n\n\nNote\n\n\nDéveloppé au début des années 2010 (community lead). Iso-standard ISO 21127:2019\n\n\n\n\n\n\n\nCommunautés d’utilisateurs et de développeurs issues des musées, bibliothèques, archives, universités, etc., nécessitant partager des images haute résolution, des annotations, des pratiques de nommage, etc.\n\n≠ silo de données \n\n\n\n\n\n\nLes images  existent à un seul endroit  \n\n\n\n🍃 baisse des coûts de stockage\n🔍 image indexée par une URL2\n✒️ meilleure gestion des droits de réutilisation\n🎮 meilleure expérience utilisateur\n🏷️ sémantisation de régions de l’image\n👥 aggrégation de collections (APIs partagées)\n\n\n\n\n\n\n\n\nImage source3\n\n\n  \n\n\n\n\nmanifest4"
   },
   {
     "objectID": "index.html#image-source-default",
@@ -110,6 +110,13 @@
     "title": "Le cadre IIIF",
     "section": "Webservice hébergé à l’IRAMAT",
     "text": "Webservice hébergé à l’IRAMAT\nhttps://iramat-apps.cnrs.fr/iiif-loader/"
+  },
+  {
+    "objectID": "index.html#présenter-en-iiif",
+    "href": "index.html#présenter-en-iiif",
+    "title": "Le cadre IIIF",
+    "section": "Présenter en IIIF",
+    "text": "Présenter en IIIF\nhttps://iramat-apps.cnrs.fr/iiif-loader/"
   },
   {
     "objectID": "index.html#maturation-logicielle",
