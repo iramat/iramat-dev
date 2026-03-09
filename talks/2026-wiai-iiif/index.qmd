@@ -39,13 +39,13 @@ library(dplyr)
 library(kableExtra)
 ```
 
-# Introduction générale
+# Introduction générale {background-image="https://raw.githubusercontent.com/iramat/iramat-dev/master/img/iiif-pres-collection-multi.png" background-opacity=0.2 background-size="400px" background-repeat="repeat"}
 
 
 ## La série WIAI
 
 :::: {.columns}
-::: {.column width="65%"}
+::: {.column width="55%"}
 
 Webinaires dédiés aux technologies de l'information pour l'archéométrie:  <br>
 GitHub <img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/app-github.png' style='height: 45px;vertical-align: middle;'>, Python
@@ -60,11 +60,11 @@ GitHub <img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img
 
 :::
 
-::: {.column width="35%"}
+::: {.column width="45%"}
 
 <center>
 
-<img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/lod-iso-iiif-tom-cramer-2016.png' style='width: 350px;vertical-align: middle;'> 
+<img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/lod-iso-iiif-tom-cramer-2016.png' style='width: 450px;vertical-align: middle;'> 
 
 <div class="captiontext"> _"What if deep zoom was standard and fast"_ -- Tom Cramer[^89], 2016. crédit: IIIF Consortium</div>
 
@@ -324,6 +324,7 @@ Les images <img src='https://raw.githubusercontent.com/zoometh/thomashuet/master
 </div>
 ```
 
+
 ## Exposition virtuelle
 
 <span class="smalltext"><http://lotb.iath.virginia.edu/mirador_viewer/mirador?manifest=1&room_id=1></span>
@@ -335,6 +336,16 @@ Les images <img src='https://raw.githubusercontent.com/zoometh/thomashuet/master
 </div>
 ```
 
+## En résumé
+
+<span class="smalltext"><https://iramat-apps.cnrs.fr/view/creuset.html></span>
+```{=html}
+<div class="iframe-figure">
+  <iframe width="1000" height="500"
+          src="https://iramat-apps.cnrs.fr/view/creuset.html"
+          title="Nomisma.org"></iframe>
+</div>
+```
 
 # Publier vos images en IIIF {background-image="https://raw.githubusercontent.com/iramat/iramat-dev/master/img/iiif-pres-collection-multi.png" background-opacity=0.2 background-size="400px" background-repeat="repeat"}
 
@@ -359,11 +370,7 @@ Les images <img src='https://raw.githubusercontent.com/zoometh/thomashuet/master
 
 # Développements prévus {background-image="https://raw.githubusercontent.com/iramat/iramat-dev/master/img/iiif-pres-collection-multi.png" background-opacity=0.2 background-size="400px" background-repeat="repeat"}
 
-## Développements
-
-::: {.panel-tabset}
-
-### Maturation logicielle
+## Maturation logicielle
 
 ```{=html}
 <div class="iframe-figure">
@@ -377,7 +384,7 @@ Les images <img src='https://raw.githubusercontent.com/zoometh/thomashuet/master
     <tbody>
         <tr>
             <td><strong>1. Prototype</strong></td>
-            <td><strong>2. Self-service</strong></td>
+            <td><strong>👉 2. Self-service</strong></td>
             <td><strong>3. CMS</strong></td>
         </tr>
         <tr>
@@ -390,11 +397,9 @@ Les images <img src='https://raw.githubusercontent.com/zoometh/thomashuet/master
 
 [^45]: _Content Management System_, système de gestion des contenus
 
-### Base de données
 
-Enregistrement des _manifests_ et annotations en base de données (<img src='https://raw.githubusercontent.com/iramat/iramat-dev/main/img/logo-chips-txt.png' style='width: 35px;vertical-align: middle;'>) 
 
-### _Data pipeline_
+## Flux de données
 
 
 ```{mermaid}
@@ -481,14 +486,11 @@ click IIIFpres "https://github.com/iramat/iramat-dev/main/talks/2026-bsc/README.
 click IIIFannot "https://github.com/iramat/iramat-dev/main/talks/2026-bsc/README.md#iiif-annotation"
 ```
 
-
 <div class="captiontext">_Data pipeline_ vers du Machine learning</div>
 <br>
 
 ::: {.callout-note}
 Utilisez la touche ALT + clic gauche pour zoomer/dézoomer sur le diagramme
-:::
-
 :::
 
 # Discussion {background-image="https://raw.githubusercontent.com/iramat/iramat-dev/master/img/iiif-pres-collection-multi.png" background-opacity=0.2 background-size="400px" background-repeat="repeat"}
