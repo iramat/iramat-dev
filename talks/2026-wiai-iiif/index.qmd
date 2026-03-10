@@ -209,6 +209,19 @@ Les images <img src='https://raw.githubusercontent.com/zoometh/thomashuet/master
 
 # Image API {background-image="https://raw.githubusercontent.com/iramat/iramat-dev/master/img/iiif-pres-collection-multi.png" background-opacity=0.2 background-size="400px" background-repeat="repeat"}
 
+## Technologies {data-visibility=hidden}
+
+:::: {.columns}
+
+::: {.column width="50%"}
+lod-iso-iiif-api-iapi-cantaloupe
+:::
+
+::: {.column width="50%"}
+:::
+
+::::
+
 ## Image source (default)
 
 <span class="smalltext">[<span style="color: #b0afaf">https://iramat-apps.cnrs.fr/iiif/2/numismatic%2F1986.416_obv.JPG</span>/full/full/0/default.jpg](https://iramat-apps.cnrs.fr/iiif/2/numismatic%2F1986.416_obv.JPG/full/full/0/default.jpg)</span>
@@ -400,19 +413,19 @@ Les images <img src='https://raw.githubusercontent.com/zoometh/thomashuet/master
 <table style='font-size:70%'>
     <tbody>
         <tr>
-            <td><strong>1. Prototype</strong></td>
-            <td><strong>👉 2. Self-service</strong></td>
-            <td><strong>3. CMS</strong></td>
+            <td bgcolor="#66c2a4" style="color:#ffffff"><strong>1. Prototype</strong></td>
+            <td bgcolor="#2ca25f" style="color:#ffffff"><strong>👉 2. Self-service</strong></td>
+            <td bgcolor="#006d2c" style="color:#ffffff"><strong>3. CMS</strong></td>
         </tr>
         <tr>
             <td><strong>IIIF ponctuel</strong>. L’ingénieur assure le service informatique pour un projet particulier, pas d'automatisation possible.</td>
             <td><strong>IIIF réutilisable</strong> avec une documentation. Tâches de base automatisées. L’ingénieur assure les fonctionnalités avancées (ex : annotations, collections).</td>
-            <td><strong>IIIF intégré</strong> à un CMS[^45] (ex : Omeka S, Drupal). Autonomie des tâches CRUD. L’ingénieur assure la gestion des utilisateurs et la maintenance du système.</td>
+            <td><strong>IIIF intégré</strong> à un CMS[^45]. Autonomie des tâches CRUD. L’ingénieur gère les utilisateurs et maintient le système.</td>
         </tr>
     </tbody>
 </table>
 
-[^45]: _Content Management System_, système de gestion des contenus
+[^45]: _Content Management System_, c.-à-d. système de gestion des contenus (ex : Omeka S, Drupal)
 
 
 
@@ -519,10 +532,23 @@ Webservice [iiif-loader](https://iramat-apps.cnrs.fr/iiif-loader/) pour héberge
 
 <hr>
 
+:::: {.columns}
+
+::: {.column width="80%"}
 <br>
-<img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/app-github-3.png' style='height: 45px;vertical-align: middle;'> `https://github.com/iramat`[^101] 👉 <span class="r-md">[s'inscrire](https://github.com/signup)</span>
+<img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/app-github-3.png' style='height: 45px;vertical-align: middle;'> `https://github.com/iramat`[^101]
 <br><br>
-<img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/app-zenodo.png' style='height: 45px;vertical-align: middle;'> `https://zenodo.org/communities/iramat`[^102] 👉 <span class="r-md">[s'inscrire](https://zenodo.org/signup/)</span>
+<img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/app-zenodo.png' style='height: 45px;vertical-align: middle;'> `https://zenodo.org/communities/iramat`[^102]
+:::
+
+::: {.column width="20%"}
+<br>
+<span class="r-md" style="float:right">👉  [s'inscrire](https://github.com/signup)</span>
+<br><br>
+<span class="r-md" style="float:right">👉  [s'inscrire](https://zenodo.org/signup/)</span>
+:::
+
+::::
 
 [^101]: code _open-source_, référentiels, données publiques, ...
 [^102]: documents, édition/sélection des métadonnées,...

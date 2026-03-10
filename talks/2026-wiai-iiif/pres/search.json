@@ -18,7 +18,7 @@
     "href": "index.html#iiif-standard-dintéropérabilité-des-images",
     "title": "Le cadre IIIF",
     "section": "IIIF: standard d’intéropérabilité des images",
-    "text": "IIIF: standard d’intéropérabilité des images\n\nDéfinitionMotivationFonctionnementEléments clefs\n\n\n\n\nInternational Image Interoperability Framework  \n\n\n\n\n\n\n\nNote\n\n\nDéveloppé au début des années 2010 (community lead), ISO 21127:2019.\n\n\n\n\n\n\n\nCommunautés d’utilisateurs et de développeurs issues des musées, bibliothèques, archives, universités, etc., nécessitant partager des images haute résolution, des annotations, des pratiques de nommage, etc.\n\n≠ silo de données \n\n\n\n\n\n\n\n\nLes images  existent à un seul endroit\n🍃 baisse des coûts de stockage\n🔍 image indexée par une URL2\n✒️ meilleure gestion des réutilisations\n🎮 meilleure expérience utilisateur\n🏷️ sémantisation de régions de l’image\n👥 aggrégation de collections (APIs partagées)\n\n\n\n\n\n\n\n\nImage source3\n\n\n  \n\n\n\n\nmanifest4"
+    "text": "IIIF: standard d’intéropérabilité des images\n\nDéfinitionMotivationFonctionnementEléments clefs\n\n\n\n\nInternational Image Interoperability Framework  \n\n\n\n\n\n\n\nNote\n\n\nDéveloppé au début des années 2010 (community lead), ISO 21127:2019.\n\n\n\n\n\n\n\nCommunautés d’utilisateurs et de développeurs issues des musées, bibliothèques, archives, universités, etc., nécessitant partager des images haute résolution, des annotations, des pratiques de nommage, etc.\n\n≠ silo de données \n\n\n\n\n\n\n\n\nLes images  existent à un endroit\n🍃 baisse des coûts de stockage\n🔍 image indexée par une URL2\n✒️ meilleure gestion des réutilisations\n🎮 meilleure expérience utilisateur\n🏷️ sémantisation de régions de l’image\n👥 aggrégation de collections (APIs partagées)\n\n\n\n\n\n\n\n\nImage source3\n\n\n  \n\n\n\n\nmanifest4"
   },
   {
     "objectID": "index.html#image-source-default",
@@ -123,7 +123,7 @@
     "href": "index.html#maturation-logicielle",
     "title": "Le cadre IIIF",
     "section": "Maturation logicielle",
-    "text": "Maturation logicielle\n\n  \n\n\n\n\n\n\n1. Prototype\n\n\n👉 2. Self-service\n\n\n3. CMS\n\n\n\n\nIIIF ponctuel. L’ingénieur assure le service informatique pour un projet particulier, pas d’automatisation possible.\n\n\nIIIF réutilisable avec une documentation. Tâches de base automatisées. L’ingénieur assure les fonctionnalités avancées (ex : annotations, collections).\n\n\nIIIF intégré à un CMS5 (ex : Omeka S, Drupal). Autonomie des tâches CRUD. L’ingénieur assure la gestion des utilisateurs et la maintenance du système."
+    "text": "Maturation logicielle\n\n  \n\n\n\n\n\n\n1. Prototype\n\n\n👉 2. Self-service\n\n\n3. CMS\n\n\n\n\nIIIF ponctuel. L’ingénieur assure le service informatique pour un projet particulier, pas d’automatisation possible.\n\n\nIIIF réutilisable avec une documentation. Tâches de base automatisées. L’ingénieur assure les fonctionnalités avancées (ex : annotations, collections).\n\n\nIIIF intégré à un CMS5. Autonomie des tâches CRUD. L’ingénieur gère les utilisateurs et maintient le système."
   },
   {
     "objectID": "index.html#flux-de-données",
@@ -137,13 +137,13 @@
     "href": "index.html#récapitulatif",
     "title": "Le cadre IIIF",
     "section": "Récapitulatif",
-    "text": "Récapitulatif\n Webservice iiif-loader pour héberger vos images en  sur le site de l’IRAMAT (https://iramat-apps.cnrs.fr/) \n\n  https://github.com/iramat6 👉 s’inscrire   https://zenodo.org/communities/iramat7 👉 s’inscrire"
+    "text": "Récapitulatif\n Webservice iiif-loader pour héberger vos images en  sur le site de l’IRAMAT (https://iramat-apps.cnrs.fr/) \n\n\n\n  https://github.com/iramat6   https://zenodo.org/communities/iramat7\n\n 👉 s’inscrire  👉 s’inscrire"
   },
   {
     "objectID": "index.html#footnotes",
     "href": "index.html#footnotes",
     "title": "Le cadre IIIF",
     "section": "Footnotes",
-    "text": "Footnotes\n\n\nChief developer de la Stanford University Libraries, image extraite du International Image Interoperability Framework event, Museum of Modern Art, New York, 10 Mai 2016.\nUniform Resource Locator (URL) -&gt; Uniform Resource Identifiers (URI)\nhttps://iramat-apps.cnrs.fr/iiif/2/numismatic%2F1986.416_obv.JPG/full/full/0/default.jpg\nhttps://iramat-apps.cnrs.fr/iiif/mirador/cdn/numismatic/1986.416.json\nContent Management System, système de gestion des contenus\ncode open-source, référentiels, données publiques, …\ndocuments, édition/sélection des métadonnées,…"
+    "text": "Footnotes\n\n\nChief developer de la Stanford University Libraries, image extraite du International Image Interoperability Framework event, Museum of Modern Art, New York, 10 Mai 2016.\nUniform Resource Locator (URL) -&gt; Uniform Resource Identifiers (URI)\nhttps://iramat-apps.cnrs.fr/iiif/2/numismatic%2F1986.416_obv.JPG/full/full/0/default.jpg\nhttps://iramat-apps.cnrs.fr/iiif/mirador/cdn/numismatic/1986.416.json\nContent Management System, c.-à-d. système de gestion des contenus (ex : Omeka S, Drupal)\ncode open-source, référentiels, données publiques, …\ndocuments, édition/sélection des métadonnées,…"
   }
 ]
