@@ -125,7 +125,7 @@ Découvrir -- ou approfondir -- une solution logicielle open-source en revenant 
 </center>
 
 ::: {.callout-note}
-Développé au début des années 2010 (_community lead_). Iso-standard `ISO 21127:2019`
+Développé au début des années 2010 (_community lead_), `ISO 21127:2019`.
 :::
 
 
@@ -141,18 +141,17 @@ Communautés d'utilisateurs et de développeurs issues des musées, bibliothèqu
 :::
 
 ::: {.column width="35%"}
-<img src='https://raw.githubusercontent.com/iramat/iramat-dev/main/img/prg-API-many-to-many.png' style='width: 300px;vertical-align: middle;'>
+<img src='https://raw.githubusercontent.com/zoometh/thomashuet/main/img/lod-iso-iiif-api-no.png' style='width: 300px;vertical-align: middle;'>
 :::
 
 ::::
 
-### Fonctionnalités
-
-Les images <img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/lod-iso-iiif.png' style='height: 55px;vertical-align: middle;'> existent à **un seul endroit** 
+### Fonctionnement
 
 :::: {.columns}
 
 ::: {.column width="65%"}
+Les images <img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/lod-iso-iiif.png' style='height: 55px;vertical-align: middle;'> existent à **un endroit** \
 🍃 baisse des coûts de stockage \
 🔍 image indexée par une URL[^1] \
 ✒️ meilleure gestion des réutilisations \
@@ -162,18 +161,18 @@ Les images <img src='https://raw.githubusercontent.com/zoometh/thomashuet/master
 :::
 
 ::: {.column width="35%"}
-<img src='https://raw.githubusercontent.com/iramat/iramat-dev/main/img/prg-API-one-to-many.png' style='width: 300px;vertical-align: middle;'>
+<img src='https://raw.githubusercontent.com/zoometh/thomashuet/main/img/lod-iso-iiif-api-yes.png' style='width: 300px;vertical-align: middle;'>
 
 :::
 
 ::::
 
-### Fonctionnement
+### Eléments clefs
 
 :::: {.columns}
 
 ::: {.column width="40%"}
-<div class="captiontext">Image source[^4]</div>
+<div class="captiontext"><em>Image source[^4]</em></div>
 ```{=html}
 <div style="display: flex; justify-content: center; align-items: center; width: 100%;">
   <img
