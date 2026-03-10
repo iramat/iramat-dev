@@ -391,7 +391,7 @@ lod-iso-iiif-api-iapi-cantaloupe
 ## Présenter en IIIF
 
 
-<span class="smalltext"><https://colab.research.google.com/drive/1WqEAez0yu4TYa5i-iNRHNIeYlv33nGPp#scrollTo=RPb_18dlpW2n></span>
+<span class="smalltext"><https://colab.research.google.com/drive/1WqEAez0yu4TYa5i-iNRHNIeYlv33nGPp></span>
 ```{=html}
 <script src="https://gist.github.com/zoometh/d377fd9f20215e9dcead9e037e0b4bf3.js"></script>
 ```
