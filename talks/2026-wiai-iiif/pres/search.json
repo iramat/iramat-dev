@@ -116,7 +116,7 @@
     "href": "index.html#présenter-en-iiif",
     "title": "Le cadre IIIF",
     "section": "Présenter en IIIF",
-    "text": "Présenter en IIIF\nhttps://colab.research.google.com/drive/1WqEAez0yu4TYa5i-iNRHNIeYlv33nGPp#scrollTo=RPb_18dlpW2n"
+    "text": "Présenter en IIIF\nhttps://colab.research.google.com/github/iramat/iramat-dev/blob/main/iiif/exemples/Exemple_de_pr%C3%A9sentation_IIIF.ipynb"
   },
   {
     "objectID": "index.html#maturation-logicielle",
@@ -137,13 +137,13 @@
     "href": "index.html#récapitulatif",
     "title": "Le cadre IIIF",
     "section": "Récapitulatif",
-    "text": "Récapitulatif\n Webservice iiif-loader pour héberger vos images en  sur le site de l’IRAMAT (https://iramat-apps.cnrs.fr/) \n\n\n\n  https://github.com/iramat6   https://zenodo.org/communities/iramat7\n\n 👉 s’inscrire  👉 s’inscrire"
+    "text": "Récapitulatif\nWebservice iiif-loader pour héberger vos images en  sur le site de l’IRAMAT (https://iramat-apps.cnrs.fr/) \n\nEt pour participer à la FAIRisation des données de l’IRAMAT\n\n\n https://github.com/iramat6   https://zenodo.org/communities/iramat7\n\n👉 s’inscrire  👉 s’inscrire\n\n::::\nEt contacter: 👋 thomas.huet@cnrs.fr"
   },
   {
     "objectID": "index.html#footnotes",
     "href": "index.html#footnotes",
     "title": "Le cadre IIIF",
     "section": "Footnotes",
-    "text": "Footnotes\n\n\nChief developer de la Stanford University Libraries, image extraite du International Image Interoperability Framework event, Museum of Modern Art, New York, 10 Mai 2016.\nUniform Resource Locator (URL) -&gt; Uniform Resource Identifiers (URI)\nhttps://iramat-apps.cnrs.fr/iiif/2/numismatic%2F1986.416_obv.JPG/full/full/0/default.jpg\nhttps://iramat-apps.cnrs.fr/iiif/mirador/cdn/numismatic/1986.416.json\nContent Management System, c.-à-d. système de gestion des contenus (ex : Omeka S, Drupal)\ncode open-source, référentiels, données publiques, …\ndocuments, édition/sélection des métadonnées,…"
+    "text": "Footnotes\n\n\nChief developer de la Stanford University Libraries, image extraite du International Image Interoperability Framework event, Museum of Modern Art, New York, 10 Mai 2016.\nUniform Resource Locator (URL) -&gt; Uniform Resource Identifiers (URI)\nhttps://iramat-apps.cnrs.fr/iiif/2/numismatic%2F1986.416_obv.JPG/full/full/0/default.jpg\nhttps://iramat-apps.cnrs.fr/iiif/mirador/cdn/numismatic/1986.416.json\nContent Management System, c.-à-d. système de gestion des contenus (ex : Omeka S, Drupal)\npublier du code open-source, référentiels, données publiques, …\npublier des documents de données, édition/sélection des métadonnées,…"
   }
 ]

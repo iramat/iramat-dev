@@ -391,7 +391,7 @@ lod-iso-iiif-api-iapi-cantaloupe
 ## Présenter en IIIF
 
 
-<span class="smalltext"><https://colab.research.google.com/drive/1WqEAez0yu4TYa5i-iNRHNIeYlv33nGPp></span>
+<span class="smalltext"><https://colab.research.google.com/github/iramat/iramat-dev/blob/main/iiif/exemples/Exemple_de_pr%C3%A9sentation_IIIF.ipynb></span>
 ```{=html}
 <script src="https://gist.github.com/zoometh/d377fd9f20215e9dcead9e037e0b4bf3.js"></script>
 ```
@@ -526,32 +526,36 @@ Utilisez la touche ALT + clic gauche pour zoomer/dézoomer sur le diagramme
 # Discussion {background-image="https://raw.githubusercontent.com/iramat/iramat-dev/master/img/iiif-pres-collection-multi.png" background-opacity=0.2 background-size="400px" background-repeat="repeat"}
 
 ## Récapitulatif
-<br>
+
 Webservice [iiif-loader](https://iramat-apps.cnrs.fr/iiif-loader/) pour héberger vos images en <img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/lod-iso-iiif.png' style='height: 55px;vertical-align: middle;'> sur le site de l'IRAMAT (<https://iramat-apps.cnrs.fr/>)
 <br><br>
 
 <hr>
 
+Et pour participer à la FAIRisation des données de l'IRAMAT
+
 :::: {.columns}
 
 ::: {.column width="80%"}
-<br>
 <img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/app-github-3.png' style='height: 45px;vertical-align: middle;'> `https://github.com/iramat`[^101]
-<br><br>
+<br>
 <img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/app-zenodo.png' style='height: 45px;vertical-align: middle;'> `https://zenodo.org/communities/iramat`[^102]
 :::
 
 ::: {.column width="20%"}
-<br>
 <span class="r-md" style="float:right">👉  [s'inscrire](https://github.com/signup)</span>
-<br><br>
+<br>
 <span class="r-md" style="float:right">👉  [s'inscrire](https://zenodo.org/signup/)</span>
 :::
 
 ::::
+::::
+  
+    
+Et contacter: 👋 <thomas.huet@cnrs.fr>
 
-[^101]: code _open-source_, référentiels, données publiques, ...
-[^102]: documents, édition/sélection des métadonnées,...
+[^101]: publier du code _open-source_, référentiels, données publiques, ...
+[^102]: publier des documents de données, édition/sélection des métadonnées,...
 
 ## Aclass {data-visibility=hidden}
 
