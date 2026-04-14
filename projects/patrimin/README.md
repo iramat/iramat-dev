@@ -17,3 +17,30 @@ Le fichier source `BIB 4043.xlsx` vient de:
   bth = 4043
 }
 ```
+
+### workflow
+
+Dans Pg
+
+```sql
+CREATE TABLE sites (
+    name_site text,
+    y float,
+    x float,
+    num_biblio text,
+    group_site text,
+    notes text
+);
+
+ALTER TABLE sites
+ADD COLUMN geom geometry(Point, 4326);
+
+UPDATE sites
+SET geom = ST_SetSRID(ST_MakePoint(x, y), 4326);
+
+CREATE INDEX sites_geom_gix
+ON sites
+USING GIST (geom);
+
+ALTER TABLE sites ADD PRIMARY KEY (name_site)
+```
