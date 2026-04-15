@@ -1,6 +1,15 @@
-XnView Field	XMP Field	Namespace	Example Value
-Document Title	dc:title	Dublin Core	Puerto Lucas II
-Author	dc:creator	Dublin Core	Philip Risis, Natalia Lozada Mendieta
-Description	dc:description	Dublin Core	A view of the main panel
-Copyright Notice	xmpRights:UsageTerms	XMP Rights	CC BY 4.0
-Source	dc:source	Dublin Core	https://doi.org/10.5281/zenodo.15829515
+Software Field	Metadata Standard Field	Namespace	Example Value	Image. Description
+Document Title	dc:title	Dublin Core	Puerto Lucas II	Image. Nom ou titre principal de l'image ou de l'objet représenté
+Document Identifiant	dc:identifier	Dublin Core	https://doi.org/10.5281/zenodo.15829515	Image. Identifiant unique de l'image (URL, DOI, UUID, plein texte, etc.)
+Author	dc:creator	Dublin Core	John Doe, Jane Smith	Image. Nom du créateur de l'image (photographe)
+Description	dc:description	Dublin Core	A view of the main panel	Image. Description textuelle du contenu de l'image
+Keywords	dc:subject	Dublin Core	art, painting, museum	Image. Mots-clés décrivant le contenu
+Source	dc:source	Dublin Core	https://doi.org/10.5281/zenodo.15829515	Image. Source ou référence liée à l'image ou à l'objet
+Image Rights	dc:rights	Dublin Core	CC-BY 4.0	Image. Droits d'utilisation ou licence de l'image
+References	dcterms:references	Dublin Core Terms	https://example.org/publication	Références bibliographiques ou ressources externes liées
+Collection Owner	Iptc4xmpExt:AOSource	IPTC Photo Metadata Extension	University of Example	Objet. Propriétaire de la collection dans laquelle l'objet représenté sur l'image est inclus
+Collection Location	Iptc4xmpExt:AOLocation	IPTC Photo Metadata Extension	Example City, Country	Objet. Localisation physique de la collection dans laquelle l'objet représenté sur l'image est inclus
+Object Identifier/Inventory Number	Iptc4xmpExt:AOSourceInvNo	IPTC Photo Metadata Extension	MAN 1887.42.1	Objet. Identifiant unique de l'objet archéologique (numéro d'inventaire)	
+Catalog URL	Iptc4xmpExt:AOCatalogURL	IPTC Photo Metadata Extension	https://example.com/catalog/12345	Objet. URL du catalogue en ligne de la collection dans laquelle l'objet représenté sur l'image est inclus
+Temporal Coverage	dcterms:temporal	Dublin Core Terms	Late Bronze Age	Période chronologique associée à l'objet
+
