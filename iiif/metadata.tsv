@@ -9,7 +9,7 @@ Image Rights	dc:rights	Dublin Core	CC-BY 4.0	Image. Droits d'utilisation ou lice
 References	dcterms:references	Dublin Core Terms	https://example.org/publication	Références bibliographiques ou ressources externes liées
 Collection Owner	Iptc4xmpExt:AOSource	IPTC Photo Metadata Extension	University of Example	Objet. Propriétaire de la collection dans laquelle l'objet représenté sur l'image est inclus
 Collection Location	Iptc4xmpExt:AOLocation	IPTC Photo Metadata Extension	Example City, Country	Objet. Localisation physique de la collection dans laquelle l'objet représenté sur l'image est inclus
-Object Identifier/Inventory Number	Iptc4xmpExt:AOSourceInvNo	IPTC Photo Metadata Extension	MAN 1887.42.1	Objet. Identifiant unique de l'objet archéologique (numéro d'inventaire)	
-Catalog URL	Iptc4xmpExt:AOCatalogURL	IPTC Photo Metadata Extension	https://example.com/catalog/12345	Objet. URL du catalogue en ligne de la collection dans laquelle l'objet représenté sur l'image est inclus
-Temporal Coverage	dcterms:temporal	Dublin Core Terms	Late Bronze Age	Période chronologique associée à l'objet
+Object Identifier/Inventory Number	Iptc4xmpExt:AOSourceInvNo	IPTC Photo Metadata Extension	MAN 1887.42.1	Image. Identifiant unique de l'objet archéologique (numéro d'inventaire)
+Catalog URL	Iptc4xmpExt:AOCatalogURL	IPTC Photo Metadata Extension	https://example.com/catalog/12345	Image. URL du catalogue en ligne de la collection dans laquelle l'objet représenté sur l'image est inclus
+Temporal Coverage	dcterms:temporal	Dublin Core Terms	Late Bronze Age	Image. Période chronologique associée à l'objet
 
