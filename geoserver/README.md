@@ -1,6 +1,6 @@
 # Geoserver
 
-Des exemples de projets QGIS embarquant des WFS et WMS sont disponibles
+Des exemples de projets QGIS embarquant des WFS et WMS sont téléchargeables ci-dessous (liens):
 
 
 | URL |
