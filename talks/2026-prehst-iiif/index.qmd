@@ -83,8 +83,37 @@ library(kableExtra)
 Développé au début des années 2010 (_community lead_), `ISO 21127:2019`.
 :::
 
-
 ### Motivation
+
+:::: {.columns}
+
+::: {.column width="50%"}
+<center>
+
+<img src='https://raw.githubusercontent.com/iramat/iramat-dev/master/img/iiif-traceo-deepzoom.png' style='width: 450px;vertical-align: middle;'> 
+
+<div class="captiontext">Tomasso, Sonja, et al. "From polishing to burning: deciphering a Middle Neolithic hoard from Beringen Brouwershuis (Belgium) through functional analysis." *Journal of Neolithic Archaeology* (2025): 149-167.</div>
+
+
+</center>
+:::
+
+::: {.column width="50%"}
+<center>
+
+<img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/lod-iso-iiif-tom-cramer-2016.png' style='width: 450px;vertical-align: middle;'> 
+
+<div class="captiontext"> _"What if deep zoom was standard and fast"_ <br> &nbsp; -- Tom Cramer[^89], 2016. crédit: IIIF Consortium</div>
+
+
+</center>
+:::
+
+::::
+
+[^89]: _Chief developer_ de la _Stanford University Libraries_, image extraite du [_International Image Interoperability Framework event_](https://www.youtube.com/watch?v=KVUyhcVO060&t=414s), Museum of Modern Art, New York, 10 Mai 2016.  
+
+### Acteurs
 
 
 :::: {.columns}
@@ -122,7 +151,19 @@ Les images <img src='https://raw.githubusercontent.com/zoometh/thomashuet/master
 
 ::::
 
+:::
+
+
+[^1]: Uniform Resource Locator (URL) `->` Uniform Resource Identifiers (URI)
+[^4]: <https://iramat-apps.cnrs.fr/iiif/2/numismatic%2F1986.416_obv.JPG/full/full/0/default.jpg>
+[^5]: <https://iramat-apps.cnrs.fr/iiif/mirador/cdn/numismatic/1986.416.json>
+
+# Architecture {background-image="https://raw.githubusercontent.com/iramat/iramat-dev/master/img/iiif-pres-collection-multi.png" background-opacity=0.2 background-size="400px" background-repeat="repeat"}
+
+::: {.panel-tabset}
+
 ### Eléments clefs
+
 
 :::: {.columns}
 
@@ -155,10 +196,13 @@ Les images <img src='https://raw.githubusercontent.com/zoometh/thomashuet/master
 
 ::::
 
+### API
+
+Lorem
+
 :::
 
 
-[^1]: Uniform Resource Locator (URL) `->` Uniform Resource Identifiers (URI)
 [^4]: <https://iramat-apps.cnrs.fr/iiif/2/numismatic%2F1986.416_obv.JPG/full/full/0/default.jpg>
 [^5]: <https://iramat-apps.cnrs.fr/iiif/mirador/cdn/numismatic/1986.416.json>
 
