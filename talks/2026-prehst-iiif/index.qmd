@@ -29,7 +29,7 @@ format:
     # self-contained: true
     # embed-resources: true
     # logo: https://raw.githubusercontent.com/zoometh/neonet/master/doc/img/neonet.png
-    footer: "T. Huet - <img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/inst-cnrs-iramat.png' style='height: 15px;vertical-align: middle;'> - 22 avril 2026, Laboratoire Études sur les Sciences et les Techniques, Orsay"
+    footer: "<span style='font-size:12pt'> T. Huet - <img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/inst-cnrs-iramat.png' style='height: 15px;vertical-align: middle;'> - 22 avril 2026, Laboratoire Études sur les Sciences et les Techniques, Orsay </span> "
     margin: 0
     width: 1200
 ---
@@ -201,9 +201,9 @@ Les images <img src='https://raw.githubusercontent.com/zoometh/thomashuet/master
 
 <center>
 
-<img src='https://raw.githubusercontent.com/iramat/iramat-dev/master/img/iiif-apis.png' style='width: 750px;vertical-align: middle;'> 
+<img src='https://raw.githubusercontent.com/iramat/iramat-dev/master/img/iiif-apis.png' style='width: 950px;vertical-align: middle;'> 
 
-<div class="captiontext"> _A diagram of how the core IIIF APIs work together._ <https://iiif.io/get-started/how-iiif-works/> </div>
+<div class="captiontext"> _A diagram of how the core IIIF APIs work together._, source:  <https://iiif.io/get-started/how-iiif-works/> </div>
 
 
 </center>

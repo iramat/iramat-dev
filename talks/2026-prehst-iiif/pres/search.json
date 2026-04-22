@@ -18,7 +18,7 @@
     "href": "index.html#architecture-du-iiif",
     "title": "Intérêt de l’ International Image Interoperability Framework (IIIF)",
     "section": "Architecture du IIIF",
-    "text": "Architecture du IIIF\n\nEléments clefsAPIs\n\n\n\n\n\nImage source4\n\n\n  \n\n\n\n\nmanifest5\n\n\n  \n\n\n\n\n\n\n\n\nA diagram of how the core IIIF APIs work together. https://iiif.io/get-started/how-iiif-works/"
+    "text": "Architecture du IIIF\n\nEléments clefsAPIs\n\n\n\n\n\nImage source4\n\n\n  \n\n\n\n\nmanifest5\n\n\n  \n\n\n\n\n\n\n\n\nA diagram of how the core IIIF APIs work together., source: https://iiif.io/get-started/how-iiif-works/"
   },
   {
     "objectID": "index.html#image-source-default",
