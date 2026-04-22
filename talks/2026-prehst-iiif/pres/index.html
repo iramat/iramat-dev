@@ -265,16 +265,16 @@ Apprentissage machine pour la détermination des espèces domestiquées/non dome
 <div class="columns">
 <div class="column" style="width:50%;">
 <center>
-<p><img src="https://raw.githubusercontent.com/iramat/iramat-dev/master/img/iiif-traceo-deepzoom.png" style="width: 450px;vertical-align: middle;"></p>
+<p><img src="https://raw.githubusercontent.com/iramat/iramat-dev/master/img/iiif-traceo-deepzoom-2.png" style="width: 550px;vertical-align: middle;"></p>
 <div class="captiontext">
-Tomasso, Sonja, et al.&nbsp;“From polishing to burning: deciphering a Middle Neolithic hoard from Beringen Brouwershuis (Belgium) through functional analysis.” <em>Journal of Neolithic Archaeology</em> (2025): 149-167.
+Tomasso, Sonja, et al., 2025<a href="#/footnotes" class="footnote-ref" id="fnref1" role="doc-noteref" data-footnote-href="#/fn1" onclick=""><sup>1</sup></a>
 </div>
 </center>
 </div><div class="column" style="width:50%;">
 <center>
-<p><img src="https://raw.githubusercontent.com/zoometh/thomashuet/master/img/lod-iso-iiif-tom-cramer-2016.png" style="width: 450px;vertical-align: middle;"></p>
+<p><img src="https://raw.githubusercontent.com/zoometh/thomashuet/master/img/lod-iso-iiif-tom-cramer-2016.png" style="width: 500px;vertical-align: middle;"></p>
 <div class="captiontext">
-<em>“What if deep zoom was standard and fast”</em> <br> &nbsp; – Tom Cramer<a href="#/footnotes" class="footnote-ref" id="fnref1" role="doc-noteref" data-footnote-href="#/fn1" onclick=""><sup>1</sup></a>, 2016. crédit: IIIF Consortium
+<em>“What if deep zoom was standard and fast”</em> <br> &nbsp; – Tom Cramer<a href="#/footnotes" class="footnote-ref" id="fnref2" role="doc-noteref" data-footnote-href="#/fn2" onclick=""><sup>2</sup></a>, 2016. crédit: IIIF Consortium
 </div>
 </center>
 </div></div>
@@ -295,7 +295,7 @@ Communautés d’utilisateurs et de développeurs issues des musées, bibliothè
 <div class="column" style="width:65%;">
 <p>Les images <img src="https://raw.githubusercontent.com/zoometh/thomashuet/master/img/lod-iso-iiif.png" style="height: 55px;vertical-align: middle;"> existent à <strong>un endroit</strong><br>
 🍃 baisse des coûts de stockage<br>
-🔍 image indexée par une URL<a href="#/footnotes" class="footnote-ref" id="fnref2" role="doc-noteref" data-footnote-href="#/fn2" onclick=""><sup>2</sup></a><br>
+🔍 image indexée par une URL<a href="#/footnotes" class="footnote-ref" id="fnref3" role="doc-noteref" data-footnote-href="#/fn3" onclick=""><sup>3</sup></a><br>
 ✒️ meilleure gestion des réutilisations<br>
 🎮 meilleure expérience utilisateur<br>
 🏷️ sémantisation de régions de l’image<br>
@@ -306,17 +306,17 @@ Communautés d’utilisateurs et de développeurs issues des musées, bibliothè
 </div>
 </div>
 </div>
-<aside></aside></section></section>
-<section id="architecture" class="title-slide slide level1 center" data-background-image="https://raw.githubusercontent.com/iramat/iramat-dev/master/img/iiif-pres-collection-multi.png" data-background-opacity="0.2" data-background-size="400px" data-background-repeat="repeat">
-<h1>Architecture</h1>
+<aside></aside></section>
+<section id="architecture-du-iiif" class="slide level2">
+<h2>Architecture du IIIF</h2>
 <div class="panel-tabset">
-<ul id="tabset-2" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-2-1">Eléments clefs</a></li><li><a href="#tabset-2-2">API</a></li></ul>
+<ul id="tabset-2" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-2-1">Eléments clefs</a></li><li><a href="#tabset-2-2">APIs</a></li></ul>
 <div class="tab-content">
 <div id="tabset-2-1">
 <div class="columns">
 <div class="column" style="width:40%;">
 <div class="captiontext">
-<em>Image source<a href="#/footnotes" class="footnote-ref" id="fnref3" role="doc-noteref" data-footnote-href="#/fn3" onclick=""><sup>3</sup></a></em>
+<em>Image source<a href="#/footnotes" class="footnote-ref" id="fnref4" role="doc-noteref" data-footnote-href="#/fn4" onclick=""><sup>4</sup></a></em>
 </div>
 <div style="display: flex; justify-content: center; align-items: center; width: 100%;">
   <img src="https://iramat-apps.cnrs.fr/iiif/2/numismatic%2F1986.416_obv.JPG/full/full/0/default.jpg" alt="source image" style="max-width: 600px; max-height: 400px; object-fit: contain;">
@@ -324,7 +324,7 @@ Communautés d’utilisateurs et de développeurs issues des musées, bibliothè
 <br>
 </div><div class="column" style="width:60%;">
 <div class="captiontext">
-<em>manifest</em><a href="#/footnotes" class="footnote-ref" id="fnref4" role="doc-noteref" data-footnote-href="#/fn4" onclick=""><sup>4</sup></a>
+<em>manifest</em><a href="#/footnotes" class="footnote-ref" id="fnref5" role="doc-noteref" data-footnote-href="#/fn5" onclick=""><sup>5</sup></a>
 </div>
 <div class="iframe-figure">
   <iframe width="800" height="400" src="https://iramat-apps.cnrs.fr/iiif/mirador/cdn/numismatic/1986.416.json" title="manifest JSON"></iframe>
@@ -333,12 +333,16 @@ Communautés d’utilisateurs et de développeurs issues des musées, bibliothè
 </div></div>
 </div>
 <div id="tabset-2-2">
-<p>Lorem</p>
+<center>
+<p><img src="https://raw.githubusercontent.com/iramat/iramat-dev/master/img/iiif-apis.png" style="width: 750px;vertical-align: middle;"></p>
+<div class="captiontext">
+<em>A diagram of how the core IIIF APIs work together.</em> <a href="https://iiif.io/get-started/how-iiif-works/" class="uri">https://iiif.io/get-started/how-iiif-works/</a>
+</div>
+</center>
 </div>
 </div>
 </div>
-<aside></aside></section>
-
+<aside></aside></section></section>
 <section>
 <section id="image-api" class="title-slide slide level1 center" data-background-image="https://raw.githubusercontent.com/iramat/iramat-dev/master/img/iiif-pres-collection-multi.png" data-background-opacity="0.2" data-background-size="400px" data-background-repeat="repeat">
 <h1>Image API</h1>
@@ -489,7 +493,7 @@ Communautés d’utilisateurs et de développeurs issues des musées, bibliothè
 <strong>IIIF réutilisable</strong> avec une documentation. Tâches de base automatisées. L’ingénieur assure les fonctionnalités avancées (ex : annotations, collections).
 </td>
 <td>
-<strong>IIIF intégré</strong> à un CMS<a href="#/footnotes" class="footnote-ref" id="fnref5" role="doc-noteref" data-footnote-href="#/fn5" onclick=""><sup>5</sup></a>. Autonomie des tâches CRUD. L’ingénieur gère les utilisateurs et maintient le système.
+<strong>IIIF intégré</strong> à un CMS<a href="#/footnotes" class="footnote-ref" id="fnref6" role="doc-noteref" data-footnote-href="#/fn6" onclick=""><sup>6</sup></a>. Autonomie des tâches CRUD. L’ingénieur gère les utilisateurs et maintient le système.
 </td>
 </tr>
 </tbody>
@@ -619,7 +623,7 @@ click IIIFannot "https://github.com/iramat/iramat-dev/main/talks/2026-bsc/README
 <p>Et pour participer à la FAIRisation des données de l’IRAMAT</p>
 <div class="columns">
 <div class="column" style="width:80%;">
-<p><img src="https://raw.githubusercontent.com/zoometh/thomashuet/master/img/app-github-3.png" style="height: 45px;vertical-align: middle;"> <code>https://github.com/iramat</code><a href="#/footnotes" class="footnote-ref" id="fnref6" role="doc-noteref" data-footnote-href="#/fn6" onclick=""><sup>6</sup></a> <br> <img src="https://raw.githubusercontent.com/zoometh/thomashuet/master/img/app-zenodo.png" style="height: 45px;vertical-align: middle;"> <code>https://zenodo.org/communities/iramat</code><a href="#/footnotes" class="footnote-ref" id="fnref7" role="doc-noteref" data-footnote-href="#/fn7" onclick=""><sup>7</sup></a></p>
+<p><img src="https://raw.githubusercontent.com/zoometh/thomashuet/master/img/app-github-3.png" style="height: 45px;vertical-align: middle;"> <code>https://github.com/iramat</code><a href="#/footnotes" class="footnote-ref" id="fnref7" role="doc-noteref" data-footnote-href="#/fn7" onclick=""><sup>7</sup></a> <br> <img src="https://raw.githubusercontent.com/zoometh/thomashuet/master/img/app-zenodo.png" style="height: 45px;vertical-align: middle;"> <code>https://zenodo.org/communities/iramat</code><a href="#/footnotes" class="footnote-ref" id="fnref8" role="doc-noteref" data-footnote-href="#/fn8" onclick=""><sup>8</sup></a></p>
 </div><div class="column" style="width:20%;">
 <p><span class="r-md" style="float:right">👉 <a href="https://github.com/signup">s’inscrire</a></span> <br> <span class="r-md" style="float:right">👉 <a href="https://zenodo.org/signup/">s’inscrire</a></span></p>
 </div></div>
@@ -631,13 +635,14 @@ click IIIFannot "https://github.com/iramat/iramat-dev/main/talks/2026-bsc/README
 <section id="footnotes" class="footnotes footnotes-end-of-document smaller scrollable" role="doc-endnotes"><h2>Footnotes</h2>
 
 <ol>
-<li id="fn1"><p><em>Chief developer</em> de la <em>Stanford University Libraries</em>, image extraite du <a href="https://www.youtube.com/watch?v=KVUyhcVO060&amp;t=414s"><em>International Image Interoperability Framework event</em></a>, Museum of Modern Art, New York, 10 Mai 2016.</p></li>
-<li id="fn2"><p>Uniform Resource Locator (URL) <code>-&gt;</code> Uniform Resource Identifiers (URI)</p></li>
-<li id="fn3"><p><a href="https://iramat-apps.cnrs.fr/iiif/2/numismatic%2F1986.416_obv.JPG/full/full/0/default.jpg" class="uri">https://iramat-apps.cnrs.fr/iiif/2/numismatic%2F1986.416_obv.JPG/full/full/0/default.jpg</a></p></li>
-<li id="fn4"><p><a href="https://iramat-apps.cnrs.fr/iiif/mirador/cdn/numismatic/1986.416.json" class="uri">https://iramat-apps.cnrs.fr/iiif/mirador/cdn/numismatic/1986.416.json</a></p></li>
-<li id="fn5"><p><em>Content Management System</em>, c.-à-d.&nbsp;système de gestion des contenus (ex : Omeka S, Drupal)</p></li>
-<li id="fn6"><p>publier du code <em>open-source</em>, référentiels, données publiques, …</p></li>
-<li id="fn7"><p>publier des documents de données, édition/sélection des métadonnées,…</p></li>
+<li id="fn1"><p>publier du code <em>open-source</em>, référentiels, données publiques, …</p></li>
+<li id="fn2"><p><em>Chief developer</em> de la <em>Stanford University Libraries</em>, image extraite du <a href="https://www.youtube.com/watch?v=KVUyhcVO060&amp;t=414s"><em>International Image Interoperability Framework event</em></a>, Museum of Modern Art, New York, 10 Mai 2016.</p></li>
+<li id="fn3"><p>Uniform Resource Locator (URL) <code>-&gt;</code> Uniform Resource Identifiers (URI)</p></li>
+<li id="fn4"><p><a href="https://iramat-apps.cnrs.fr/iiif/2/numismatic%2F1986.416_obv.JPG/full/full/0/default.jpg" class="uri">https://iramat-apps.cnrs.fr/iiif/2/numismatic%2F1986.416_obv.JPG/full/full/0/default.jpg</a></p></li>
+<li id="fn5"><p><a href="https://iramat-apps.cnrs.fr/iiif/mirador/cdn/numismatic/1986.416.json" class="uri">https://iramat-apps.cnrs.fr/iiif/mirador/cdn/numismatic/1986.416.json</a></p></li>
+<li id="fn6"><p><em>Content Management System</em>, c.-à-d.&nbsp;système de gestion des contenus (ex : Omeka S, Drupal)</p></li>
+<li id="fn7"><p>publier du code <em>open-source</em>, référentiels, données publiques, …</p></li>
+<li id="fn8"><p>publier des documents de données, édition/sélection des métadonnées,…</p></li>
 </ol>
 </section>
     </div>
