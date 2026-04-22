@@ -1,6 +1,6 @@
 ---
 title: "Intérêt du IIIF"
-subtitle: "<img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/lod-iso-iiif.png' style='height: 50px;vertical-align: middle;'> _International Image Interoperability Framework_"
+subtitle: "<img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/lod-iso-iiif.png' style='height: 80px;vertical-align: middle;'> _International Image Interoperability Framework_"
 author:
   - name: Thomas Huet
     affiliation: 
@@ -29,7 +29,7 @@ format:
     # self-contained: true
     # embed-resources: true
     # logo: https://raw.githubusercontent.com/zoometh/neonet/master/doc/img/neonet.png
-    footer: "<span style='font-size:12pt'> T. Huet - <img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/inst-cnrs-iramat.png' style='height: 15px;vertical-align: middle;'> - 22 avril 2026, AG PRE Humanités des Sciences et des Techniques, Laboratoire Études sur les Sciences et les Techniques, Orsay </span> "
+    footer: "<span style='font-size:12pt'> T. Huet - <img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/inst-cnrs-iramat.png' style='height: 15px;vertical-align: middle;'> - AG PRE Humanités des Sciences et des Techniques, Laboratoire Études sur les Sciences et les Techniques, Orsay, 22 avril 2026 </span> "
     margin: 0
     width: 1200
 ---
@@ -47,7 +47,7 @@ library(kableExtra)
 
 ### Imagerie technique
 
-<br><br>
+<br>
 
 :::: {.columns}
 
@@ -67,6 +67,27 @@ library(kableExtra)
 ::::
 
 ### Annotations
+
+
+:::: {.columns}
+
+::: {.column width="50%"}
+<center>
+
+<img src='https://raw.githubusercontent.com/iramat/iramat-dev/master/img/iiif-traceo-deepzoom-3.png' style='width: 300px;vertical-align: middle;'> 
+<div class="captiontext">Tomasso, Sonja, et al., 2025[^101]</div>
+
+
+
+</center>
+:::
+
+::: {.column width="50%"}
+
+Spatialisation de l'expertise des enseignants-chercheurs, i.e. sémantisation de régions de l'image.
+:::
+
+::::
 
 :::
 
@@ -207,7 +228,7 @@ Les images <img src='https://raw.githubusercontent.com/zoometh/thomashuet/master
 
 <center>
 
-<img src='https://raw.githubusercontent.com/iramat/iramat-dev/master/img/iiif-apis.png' style='width: 900px;vertical-align: middle;'> 
+<img src='https://raw.githubusercontent.com/iramat/iramat-dev/master/img/iiif-apis.png' style='width: 920px;vertical-align: middle;'> 
 
 <div class="captiontext"> _A diagram of how the core IIIF APIs work together._, source:  <https://iiif.io/get-started/how-iiif-works/> </div>
 
@@ -473,10 +494,6 @@ lod-iso-iiif-api-iapi-cantaloupe
 ::::
 
 
-
-# Développements prévus {background-image="https://raw.githubusercontent.com/iramat/iramat-dev/master/img/iiif-pres-collection-multi.png" background-opacity=0.2 background-size="400px" background-repeat="repeat"}
-
-
 ## Flux de données
 
 
@@ -546,22 +563,17 @@ style BD fill:#c9c9c9
 style APIdata fill:#f6f7d5
 style APIimg fill:#f6f7d5
 
-style BSC fill:#919cfa
-style PyExtract fill:#8794ff
-style ML fill:#8794ff
-style MLlearn fill:#d9ddff
-style MLvalid fill:#d9ddff
-style MLtest fill:#d9ddff
+style BSC fill:#ff215c
+style PyExtract fill:#ff85ba
+style ML fill:#ff85ba
+style MLlearn fill:#ffd1e0
+style MLvalid fill:#ffd1e0
+style MLtest fill:#ffd1e0
 
 style out fill:#42ff70
 style ResMet fill:#b0ffc3
 style ResNum fill:#b0ffc3
 
-click BD "https://github.com/iramat/iramat-dev/main/talks/2026-bsc/README.md#db"
-click VM "https://github.com/iramat/iramat-dev/main/talks/2026-bsc/README.md#vm"
-click IIIFimg "https://github.com/iramat/iramat-dev/main/talks/2026-bsc/README.md#iiif-image"
-click IIIFpres "https://github.com/iramat/iramat-dev/main/talks/2026-bsc/README.md#iiif-presentation"
-click IIIFannot "https://github.com/iramat/iramat-dev/main/talks/2026-bsc/README.md#iiif-annotation"
 ```
 
 <div class="captiontext">_Data pipeline_ vers du Machine learning</div>
@@ -571,65 +583,6 @@ click IIIFannot "https://github.com/iramat/iramat-dev/main/talks/2026-bsc/README
 Utilisez la touche ALT + clic gauche pour zoomer/dézoomer sur le diagramme
 :::
 
-# Discussion {background-image="https://raw.githubusercontent.com/iramat/iramat-dev/master/img/iiif-pres-collection-multi.png" background-opacity=0.2 background-size="400px" background-repeat="repeat"}
 
-## Récapitulatif
-
-Webservice [iiif-loader](https://iramat-apps.cnrs.fr/iiif-loader/) pour héberger vos images en <img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/lod-iso-iiif.png' style='height: 55px;vertical-align: middle;'> sur le site de l'IRAMAT (<https://iramat-apps.cnrs.fr/>)
-<br><br>
-
-<hr>
-
-Et pour participer à la FAIRisation des données de l'IRAMAT
-
-:::: {.columns}
-
-::: {.column width="80%"}
-<img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/app-github-3.png' style='height: 45px;vertical-align: middle;'> `https://github.com/iramat`[^101]
-<br>
-<img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/app-zenodo.png' style='height: 45px;vertical-align: middle;'> `https://zenodo.org/communities/iramat`[^102]
-:::
-
-::: {.column width="20%"}
-<span class="r-md" style="float:right">👉  [s'inscrire](https://github.com/signup)</span>
-<br>
-<span class="r-md" style="float:right">👉  [s'inscrire](https://zenodo.org/signup/)</span>
-:::
-
-::::
-::::
-  
-    
-Et contacter: 👋 <thomas.huet@cnrs.fr>
-
-[^101]: publier du code _open-source_, référentiels, données publiques, ...
-[^102]: publier des documents de données, édition/sélection des métadonnées,...
-
-## Aclass {data-visibility=hidden}
-
-Structure HTML
-
-```html
-/iiif/mirador/cdn/<collection>/<manifest>.json
-```
-
-Structure interne
-
-[^10]: par exemple: [`iramat-dev`](https://github.com/iramat/iramat-dev) pour les généralités, [`numishare`](https://github.com/iramat/numishare) pour les projets en numismatique, [`almacir`](https://github.com/iramat/almacir/tree/hugo-files) comme exemple de site web orienté projet
-
-## Demo {data-visibility=hidden}
-
-<span class="smalltext"><https://projectmirador.org/demo/></span>
-
-```{=html}
-<div class="iframe-figure">
-  <iframe width="800" height="470"
-          src="https://projectmirador.org/demo/"
-          title="projectmirador.org"></iframe>
-  <div class="captiontext">présentation IIIF (c) projectmirador.org</div>
-</div>
-```
-
-- creation de bases de références thématiques 
 
 
