@@ -201,7 +201,7 @@ Les images <img src='https://raw.githubusercontent.com/zoometh/thomashuet/master
 
 <center>
 
-<img src='https://raw.githubusercontent.com/iramat/iramat-dev/master/img/iiif-apis.png' style='width: 950px;vertical-align: middle;'> 
+<img src='https://raw.githubusercontent.com/iramat/iramat-dev/master/img/iiif-apis.png' style='width: 900px;vertical-align: middle;'> 
 
 <div class="captiontext"> _A diagram of how the core IIIF APIs work together._, source:  <https://iiif.io/get-started/how-iiif-works/> </div>
 
@@ -298,18 +298,6 @@ lod-iso-iiif-api-iapi-cantaloupe
 
 # Presentation API {background-image="https://raw.githubusercontent.com/iramat/iramat-dev/master/img/iiif-pres-collection-multi.png" background-opacity=0.2 background-size="400px" background-repeat="repeat"}
 
-## Image
-
-<span class="smalltext"><https://iramat-apps.cnrs.fr/view/acies/arl-x-s-1_side-1.html></span>
-```{=html}
-<div class="iframe-figure">
-  <iframe width="1200" height="420"
-          src="https://iramat-apps.cnrs.fr/view/acies/arl-x-s-1_side-1.html"
-          title="Nomisma.org"></iframe>
-</div>
-```
-
-
 ## Séquence d'images
 
 <span class="smalltext"><https://iramat-apps.cnrs.fr/view/numismatic/1986.416.html></span>
@@ -318,6 +306,17 @@ lod-iso-iiif-api-iapi-cantaloupe
   <iframe width="1000" height="500"
           src="https://iramat-apps.cnrs.fr/view/numismatic/1986.416.html"
           title="Nomisma.org"></iframe>
+</div>
+```
+
+## Superposition
+
+<span class="smalltext"><https://iramat-apps.cnrs.fr/view/TerriFer/89.344.003.M10xx_compare.html></span>
+```{=html}
+<div class="iframe-figure">
+  <iframe width="1000" height="500"
+          src="https://iramat-apps.cnrs.fr/view/TerriFer/89.344.003.M10xx_compare.html"
+          title="compare"></iframe>
 </div>
 ```
 
@@ -367,45 +366,31 @@ lod-iso-iiif-api-iapi-cantaloupe
 </div>
 ```
 
-## En résumé
+## En résumé ...
 
-<span class="smalltext"><https://iramat-apps.cnrs.fr/view/creuset.html></span>
+<span class="smalltext"><https://iramat-apps.cnrs.fr/view/ceramo/></span>
 ```{=html}
 <div class="iframe-figure">
   <iframe width="1000" height="500"
-          src="https://iramat-apps.cnrs.fr/view/creuset.html"
-          title="Nomisma.org"></iframe>
+          src="https://iramat-apps.cnrs.fr/view/ceramo/"
+          title="projet ceramo"></iframe>
 </div>
 ```
 
-# Publier vos images en IIIF {background-image="https://raw.githubusercontent.com/iramat/iramat-dev/master/img/iiif-pres-collection-multi.png" background-opacity=0.2 background-size="400px" background-repeat="repeat"}
 
-## Webservice hébergé à l'IRAMAT
-
-<span class="smalltext"><https://iramat-apps.cnrs.fr/iiif-loader/></span>
-```{=html}
-<div class="iframe-figure">
-  <iframe src="https://iramat-apps.cnrs.fr/iiif-loader/"
-  style="
-        transform: scale(0.9);
-        transform-origin: 0 0;
-        width: 1000px;
-        height: 500px;
-        border: none;
-      "
-      title="iiif-loader"></iframe>
-</div>
-```
 
 ## Présenter en IIIF
 
-
 <span class="smalltext"><https://colab.research.google.com/github/iramat/iramat-dev/blob/main/iiif/exemples/Exemple_de_pr%C3%A9sentation_IIIF.ipynb></span>
-```{=html}
-<script src="https://gist.github.com/zoometh/d377fd9f20215e9dcead9e037e0b4bf3.js"></script>
-```
+<center>
 
-# Développements prévus {background-image="https://raw.githubusercontent.com/iramat/iramat-dev/master/img/iiif-pres-collection-multi.png" background-opacity=0.2 background-size="400px" background-repeat="repeat"}
+<img src='https://raw.githubusercontent.com/iramat/iramat-dev/master/img/iiif-online-jupyter-nb.png' style='width: 850px;vertical-align: middle;'> 
+
+</center>
+
+
+# Le IIIF à l'IRAMAT {background-image="https://raw.githubusercontent.com/iramat/iramat-dev/master/img/iiif-pres-collection-multi.png" background-opacity=0.2 background-size="400px" background-repeat="repeat"}
+
 
 ## Maturation logicielle
 
@@ -436,6 +421,54 @@ lod-iso-iiif-api-iapi-cantaloupe
 
 [^45]: _Content Management System_, c.-à-d. système de gestion des contenus (ex : Omeka S, Drupal)
 
+
+## Webservices
+
+:::: {.columns}
+
+::: {.column width="50%"}
+
+<span class="smalltext"><https://iramat-apps.cnrs.fr/iiif-loader/></span>
+```{=html}
+<div class="iframe-figure">
+  <iframe src="https://iramat-apps.cnrs.fr/iiif-loader/"
+  style="
+        transform: scale(0.8);
+        transform-origin: 0 0;
+        width: 1000px;
+        height: 500px;
+        border: none;
+      "
+      title="iiif-loader"></iframe>
+</div>
+```
+
+:::
+
+::: {.column width="50%"}
+
+<span class="smalltext"><https://iramat-apps.cnrs.fr/iiif-compare/></span>
+```{=html}
+<div class="iframe-figure">
+  <iframe src="https://iramat-apps.cnrs.fr/iiif-compare/"
+  style="
+        transform: scale(0.8);
+        transform-origin: 0 0;
+        width: 1000px;
+        height: 600px;
+        border: none;
+      "
+      title="iiif-loader"></iframe>
+</div>
+```
+
+:::
+
+::::
+
+
+
+# Développements prévus {background-image="https://raw.githubusercontent.com/iramat/iramat-dev/master/img/iiif-pres-collection-multi.png" background-opacity=0.2 background-size="400px" background-repeat="repeat"}
 
 
 ## Flux de données

@@ -56,18 +56,18 @@
     "text": "Image source (quality)\nhttps://iramat-apps.cnrs.fr/iiif/2/numismatic%2F1986.416_obv.JPG/full/full/0/gray.jpg"
   },
   {
-    "objectID": "index.html#image",
-    "href": "index.html#image",
-    "title": "Intérêt de l’ International Image Interoperability Framework (IIIF)",
-    "section": "Image",
-    "text": "Image\nhttps://iramat-apps.cnrs.fr/view/acies/arl-x-s-1_side-1.html"
-  },
-  {
     "objectID": "index.html#séquence-dimages",
     "href": "index.html#séquence-dimages",
     "title": "Intérêt de l’ International Image Interoperability Framework (IIIF)",
     "section": "Séquence d’images",
     "text": "Séquence d’images\nhttps://iramat-apps.cnrs.fr/view/numismatic/1986.416.html"
+  },
+  {
+    "objectID": "index.html#superposition",
+    "href": "index.html#superposition",
+    "title": "Intérêt de l’ International Image Interoperability Framework (IIIF)",
+    "section": "Superposition",
+    "text": "Superposition\nhttps://iramat-apps.cnrs.fr/view/TerriFer/89.344.003.M10xx_compare.html"
   },
   {
     "objectID": "index.html#collection-dimages",
@@ -101,15 +101,8 @@
     "objectID": "index.html#en-résumé",
     "href": "index.html#en-résumé",
     "title": "Intérêt de l’ International Image Interoperability Framework (IIIF)",
-    "section": "En résumé",
-    "text": "En résumé\nhttps://iramat-apps.cnrs.fr/view/creuset.html"
-  },
-  {
-    "objectID": "index.html#webservice-hébergé-à-liramat",
-    "href": "index.html#webservice-hébergé-à-liramat",
-    "title": "Intérêt de l’ International Image Interoperability Framework (IIIF)",
-    "section": "Webservice hébergé à l’IRAMAT",
-    "text": "Webservice hébergé à l’IRAMAT\nhttps://iramat-apps.cnrs.fr/iiif-loader/"
+    "section": "En résumé …",
+    "text": "En résumé …\nhttps://iramat-apps.cnrs.fr/view/ceramo/"
   },
   {
     "objectID": "index.html#présenter-en-iiif",
@@ -124,6 +117,13 @@
     "title": "Intérêt de l’ International Image Interoperability Framework (IIIF)",
     "section": "Maturation logicielle",
     "text": "Maturation logicielle\n\n  \n\n\n\n\n\n\n1. Prototype\n\n\n👉 2. Self-service\n\n\n3. CMS\n\n\n\n\nIIIF ponctuel. L’ingénieur assure le service informatique pour un projet particulier, pas d’automatisation possible.\n\n\nIIIF réutilisable avec une documentation. Tâches de base automatisées. L’ingénieur assure les fonctionnalités avancées (ex : annotations, collections).\n\n\nIIIF intégré à un CMS6. Autonomie des tâches CRUD. L’ingénieur gère les utilisateurs et maintient le système."
+  },
+  {
+    "objectID": "index.html#webservices",
+    "href": "index.html#webservices",
+    "title": "Intérêt de l’ International Image Interoperability Framework (IIIF)",
+    "section": "Webservices",
+    "text": "Webservices\n\n\nhttps://iramat-apps.cnrs.fr/iiif-loader/\n\n  \n\n\nhttps://iramat-apps.cnrs.fr/iiif-compare/"
   },
   {
     "objectID": "index.html#flux-de-données",
