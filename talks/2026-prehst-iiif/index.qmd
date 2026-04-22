@@ -1,6 +1,6 @@
 ---
-title: "Intérêt de l' _International Image Interoperability Framework_ (IIIF)"
-subtitle: "AG PRE Humanités des Sciences et des Techniques"
+title: "Intérêt du IIIF"
+subtitle: "<img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/lod-iso-iiif.png' style='height: 50px;vertical-align: middle;'> _International Image Interoperability Framework_"
 author:
   - name: Thomas Huet
     affiliation: 
@@ -29,7 +29,7 @@ format:
     # self-contained: true
     # embed-resources: true
     # logo: https://raw.githubusercontent.com/zoometh/neonet/master/doc/img/neonet.png
-    footer: "<span style='font-size:12pt'> T. Huet - <img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/inst-cnrs-iramat.png' style='height: 15px;vertical-align: middle;'> - 22 avril 2026, Laboratoire Études sur les Sciences et les Techniques, Orsay </span> "
+    footer: "<span style='font-size:12pt'> T. Huet - <img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/inst-cnrs-iramat.png' style='height: 15px;vertical-align: middle;'> - 22 avril 2026, AG PRE Humanités des Sciences et des Techniques, Laboratoire Études sur les Sciences et les Techniques, Orsay </span> "
     margin: 0
     width: 1200
 ---
@@ -43,6 +43,10 @@ library(kableExtra)
 
 ## Des images pour les archéologues
 
+::: {.panel-tabset}
+
+### Imagerie technique
+
 <br><br>
 
 :::: {.columns}
@@ -55,14 +59,16 @@ library(kableExtra)
 
 ::: {.column width="75%"}
 
-
-
 <img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/sci-archaeo-carpologist-ai-ml.png' style='width: 950px;vertical-align: middle;'>
 <div class="captiontext">Apprentissage machine pour la détermination des espèces domestiquées/non domestiquées (Bonhomme _et al._ 2025)</div>
 
 :::
 
 ::::
+
+### Annotations
+
+:::
 
 
 ## IIIF: standard d'intéropérabilité des images
