@@ -13,7 +13,7 @@ Une fois la liste [metadata_dev.tsv](./metadata_dev.tsv) validée, les métadonn
 
 ### Identifées dans le XMP de XnView
 
-Les métadonnées cochées n'ont pas été identifiées dans le fichier d'[export XMP des métadonnées](./templates/photo/XnView_metadata_template.xmp) d'une image depuis XnView. Les autres ont un lien vers la ligne correspondante. De la forme 'Nom du champ dans le logiciel   Nom du champ standard  lien'
+Les métadonnées cochées n'ont pas été identifiées dans le fichier d'[export XMP des métadonnées](./templates/photo/XnView_metadata_template.xmp) d'une image depuis XnView. Les autres ont un lien vers la ligne correspondante. De la forme 'Nom du champ dans le logiciel   `Nom du champ standard`  lien'
 
 - [ ] Document Title  `dc:title`  https://github.com/iramat/iramat-dev/blob/2fb3fb32de2c4c4d5bfe3e034872a1e42e347ace/metadata/templates/photo/XnView_metadata_template.xmp#L34
 - [X] Document Identifiant  `dc:identifier`
