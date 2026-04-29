@@ -1,0 +1,14 @@
+Nom du champ dans le logiciel 	Nom du champ standard	Namespace	Exemples de valeurs	Description
+Document Title	dc:title	Dublin Core	Céramique 401.003	Image. Nom ou titre principal de l'image ou de l'objet représenté
+Document Identifiant	dc:identifier	Dublin Core	https://doi.org/10.5281/zenodo.15829515	Image. Identifiant unique de l'image (URL, DOI, UUID, plein texte, etc.)
+Author	dc:creator	Dublin Core	John Doe, Jane Smith	Image. Nom du créateur de l'image (photographe)
+Description	dc:description	Dublin Core	Une vue de la coupe transversale	Image. Description textuelle du contenu de l'image
+Keywords	dc:subject	Dublin Core	art, painting, museum	Image. Mots-clés décrivant le contenu
+Source	dc:source	Dublin Core	https://doi.org/10.5281/zenodo.15829515	Image. Source ou référence liée à l'image ou à l'objet
+Image Rights	dc:rights	Dublin Core	CC-BY 4.0	Image. Droits d'utilisation ou licence de l'image
+References	dcterms:references	Dublin Core Terms	https://example.org/publication	Références bibliographiques ou ressources externes liées
+Collection Owner	Iptc4xmpExt:AOSource	IPTC Photo Metadata Extension	Université Paris-Saclay	Objet. Propriétaire de la collection dans laquelle l'objet représenté sur l'image est inclus
+Collection Location	Iptc4xmpExt:AOLocation	IPTC Photo Metadata Extension	Paris, France	Objet. Localisation physique de la collection dans laquelle l'objet représenté sur l'image est inclus
+Object Identifier/Inventory Number	Iptc4xmpExt:AOSourceInvNo	IPTC Photo Metadata Extension	MAN 1887.42.1	Image. Identifiant unique de l'objet archéologique (numéro d'inventaire)
+Catalog URL	Iptc4xmpExt:AOCatalogURL	IPTC Photo Metadata Extension	https://example.com/catalog/12345	Image. URL du catalogue en ligne de la collection dans laquelle l'objet représenté sur l'image est inclus
+Temporal Coverage	dcterms:temporal	Dublin Core Terms	Late Bronze Age	Image. Période chronologique associée à l'objet
