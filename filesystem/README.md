@@ -1,9 +1,14 @@
 # Structuration des données produites à l'IRAMAT
 
+## filesystem
+> structure hiérarchique de dossiers/fichiers
+
 Exemples de schémas/structures (_filesystem_ ou fs):
 
-## fs1
+### fs1
 > Utilisée par Terrifer
+
+De la forme `site` > `objet` > `métallographie`
 
 ```
 ├───site1
