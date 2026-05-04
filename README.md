@@ -8,8 +8,8 @@ Les fonctions back-end sont hébergées dans le dépôt [iramat-test-functions](
 
 ### Imagerie
 
-- IIIF
-- RTI
+- [IIIF](https://github.com/iramat/iramat-dev/tree/main/iiif)
+- [RTI](https://github.com/iramat/iramat-dev/tree/main/rti)
 
 ## BDD
 
