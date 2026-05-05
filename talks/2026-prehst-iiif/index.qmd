@@ -29,7 +29,7 @@ format:
     # self-contained: true
     # embed-resources: true
     # logo: https://raw.githubusercontent.com/zoometh/neonet/master/doc/img/neonet.png
-    footer: "<span style='font-size:12pt'> T. Huet - <img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/inst-cnrs-iramat.png' style='height: 15px;vertical-align: middle;'> - AG PRE Humanités des Sciences et des Techniques, Laboratoire Études sur les Sciences et les Techniques, Orsay, 22 avril 2026 </span> "
+    footer: "<span style='font-size:12pt'> T. Huet - <img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/inst-cnrs-iramat.png' style='height: 15px; vertical-align: middle;'> - AG PRE Humanités des Sciences et des Techniques, Laboratoire Études sur les Sciences et les Techniques, Orsay, 22 avril 2026 </span> "
     margin: 0
     width: 1200
 ---
