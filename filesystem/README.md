@@ -6,7 +6,6 @@
 Exemples de schémas/structures (_filesystem_ ou fs):
 
 ### fs1
-> Utilisée par Terrifer
 
 De la forme `projet` > `site` > `objet` > `échantillon`
 
