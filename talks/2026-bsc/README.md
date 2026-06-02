@@ -18,7 +18,7 @@ flowchart TD
 		ICP --> BD
         BD -- API RESTful --> APIdata[<em>labeled data</em>]
     end
-    subgraph IRAMATimg[Imaging]
+    subgraph IRAMATimg[Imaging-Cartography]
         Macro{{Macro-<br>photography}} -- format --> IIIFimg([API image])
         Opt{{Optical<br>Microscopy}} -- format --> IIIFimg
         SEM{{SEM-EDS}} -- format --> IIIFimg
