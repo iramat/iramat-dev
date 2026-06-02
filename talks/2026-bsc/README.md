@@ -9,8 +9,8 @@ flowchart TD
 	XRF{{XRF}}
     BD[(DB)]
     analyses[archaeometry analysis]
-    analyses --> IRAMATdata
-    analyses --> IRAMATimg
+    analyses -- numeric --> IRAMATdata
+    analyses -- imaging --> IRAMATimg
 	subgraph VM[VM]
     subgraph IRAMATdata[Scalar measurements]
 		XRF --> BD
