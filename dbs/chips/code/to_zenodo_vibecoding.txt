@@ -1,0 +1,14 @@
+ubuntu@vm:~/iiif-data$ python3 gen_manifest_viewer.py /home/ubuntu/data/images/bego/roches/ZIV/ZIVGI/ZIVGIR10@c/P7050206.JPG
+     Manifest: https://iramat-apps.cnrs.fr/iiif/mirador/cdn/ZIVGIR10@c/p7050206.json
+     IIIF info.json: https://iramat-apps.cnrs.fr/iiif/2/bego%2Froches%2FZIV%2FZIVGI%2FZIVGIR10%40c%2FP7050206.JPG/info.json
+     Viewer URL: https://iramat-apps.cnrs.fr/bego/view/roches/ZIV/ZIVGI/ZIVGIR10@c/P7050206.html
+     Annotation Page URL: https://iramat-apps.cnrs.fr/iiif/annotation/ZIVGIR10@c/p7050206
+     IAPI: https://iramat-apps.cnrs.fr/iiif/2/bego%2Froches%2FZIV%2FZIVGI%2FZIVGIR10%40c%2FP7050206.JPG/full/full/0/default.jpg
+Next steps: create annotation in an annotation client (e.g. Annonatate, https://annonatate.fly.dev/) using this image: https://iramat-apps.cnrs.fr/iiif/2/bego%2Froches%2FZIV%2FZIVGI%2FZIVGIR10%40c%2FP7050206.JPG/full/full/0/default.jpg
+ubuntu@vm:~/iiif-data$ python3 gen_manifest_viewer.py /home/ubuntu/data/images/bego/faces/ZIV/ZIVGI/ZIVGIR10@c.gif
+     Manifest: https://iramat-apps.cnrs.fr/iiif/mirador/cdn/ZIVGI/zivgir10-c.json
+     IIIF info.json: https://iramat-apps.cnrs.fr/iiif/2/bego%2Ffaces%2FZIV%2FZIVGI%2FZIVGIR10%40c.gif/info.json
+     Viewer URL: https://iramat-apps.cnrs.fr/bego/view/faces/ZIV/ZIVGI/ZIVGIR10@c.html
+     Annotation Page URL: https://iramat-apps.cnrs.fr/iiif/annotation/ZIVGI/zivgir10-c
+     IAPI: https://iramat-apps.cnrs.fr/iiif/2/bego%2Ffaces%2FZIV%2FZIVGI%2FZIVGIR10%40c.gif/full/full/0/default.jpg
+Next steps: create annotation in an annotation client (e.g. Annonatate, https://annonatate.fly.dev/) using this image: https://iramat-apps.cnrs.fr/iiif/2/bego%2Ffaces%2FZIV%2FZIVGI%2FZIVGIR10%40c.gif/full/full/0/default.jpg
