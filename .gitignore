@@ -1,4 +1,4 @@
 credentials/
 doc/
 .Rproj.user
-^SECURITY.md
+SECURITY.md
