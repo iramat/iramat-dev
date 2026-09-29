@@ -1,4 +1,5 @@
 ## *Collection as Data*, de la reproduction à l'information
+> Thomas Huet, IRAMAT-CNRS
 
 ![](d6b2edde-c0ed-4298-9c67-e3fbfab650dd.png)
 
