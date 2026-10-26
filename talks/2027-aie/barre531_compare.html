@@ -1,0 +1,486 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>barre531_compare</title>
+    <link rel="icon" type="image/png" href="/favicon.png" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/openseadragon/4.1.0/openseadragon.min.js"></script>
+    <style>
+      html,
+      body {
+        margin: 0;
+        height: 100%;
+        font-family: Arial, sans-serif;
+        background: #000;
+        color: #fff;
+      }
+
+      #app {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+      }
+
+      #toolbar {
+        display: flex;
+        gap: 1rem;
+        align-items: center;
+        padding: 0.75rem 1rem;
+        background: rgba(18, 18, 18, 0.92);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.14);
+        flex-wrap: wrap;
+        z-index: 10;
+      }
+
+      .toolbar-spacer {
+        margin-left: auto;
+      }
+
+      .toolbar-logo {
+        height: 40px;
+        width: auto;
+        display: block;
+      }
+
+      #toolbar label {
+        font-size: 0.95rem;
+      }
+
+      #overlaySelect {
+        min-width: 260px;
+        padding: 0.45rem 0.6rem;
+        border-radius: 8px;
+        border: 1px solid #555;
+        background: #1c1c1c;
+        color: #fff;
+      }
+
+      #content {
+        display: flex;
+        flex: 1;
+        min-height: 0;
+        min-width: 0;
+      }
+
+      #sidebar {
+        width: 320px;
+        min-width: 260px;
+        max-width: 380px;
+        background: #111;
+        border-right: 1px solid rgba(255, 255, 255, 0.14);
+        overflow-y: auto;
+        padding: 1rem;
+        box-sizing: border-box;
+      }
+
+      #sidebar h2 {
+        margin: 0 0 1rem 0;
+        font-size: 1.1rem;
+      }
+
+      .meta-block {
+        margin-bottom: 1rem;
+        padding-bottom: 0.75rem;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      }
+
+      .meta-label {
+        display: block;
+        font-weight: 700;
+        color: #ddd;
+        margin-bottom: 0.35rem;
+        font-size: 0.92rem;
+      }
+
+      .meta-value {
+        color: #f3f3f3;
+        font-size: 0.95rem;
+        line-height: 1.45;
+        word-break: break-word;
+        white-space: pre-wrap;
+      }
+
+      .meta-muted {
+        color: #bbb;
+        font-size: 0.9rem;
+        line-height: 1.45;
+        word-break: break-word;
+      }
+
+      .meta-value a,
+      .meta-muted a {
+        color: #9fd3ff;
+        text-decoration: underline;
+        word-break: break-word;
+      }
+
+      #viewerWrap {
+        position: relative;
+        flex: 1;
+        min-height: 0;
+        min-width: 0;
+      }
+
+      #viewer {
+        width: 100%;
+        height: 100%;
+        position: relative;
+        background: #000;
+      }
+
+      #divider {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 50%;
+        width: 4px;
+        transform: translateX(-50%);
+        background: white;
+        cursor: ew-resize;
+        z-index: 1000;
+        box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.35);
+        touch-action: none;
+        pointer-events: auto;
+      }
+
+      .muted {
+        color: #ccc;
+        font-size: 0.9rem;
+      }
+
+      @media (max-width: 900px) {
+        #content {
+          flex-direction: column;
+        }
+
+        #sidebar {
+          width: 100%;
+          max-width: none;
+          min-width: 0;
+          border-right: none;
+          border-bottom: 1px solid rgba(255, 255, 255, 0.14);
+        }
+
+        #viewerWrap {
+          min-height: 420px;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app">
+      <div id="toolbar">
+        <strong>barre531_compare</strong>
+        <label>
+          Overlay image:
+          <select id="overlaySelect"></select>
+        </label>
+        <span class="muted">Base image: first info.json in the list</span>
+        <span class="toolbar-spacer"></span>
+        <img
+          src="https://iramat-apps.cnrs.fr/logo_full.jpg"
+          alt="IRAMAT logo"
+          class="toolbar-logo"
+        />
+      </div>
+
+      <div id="content">
+        <aside id="sidebar">
+          <h2>Metadata</h2>
+          <div id="metadataContent" class="meta-muted">
+            No metadata available.
+          </div>
+        </aside>
+
+        <div id="viewerWrap">
+          <div id="viewer"></div>
+          <div id="divider"></div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      const imageSources = [
+        "https://iramat-apps.cnrs.fr/iiif/2/_test%2FBarre531avat.ptif/info.json",
+        "https://iramat-apps.cnrs.fr/iiif/2/_test%2FBarre531apat.ptif/info.json",
+        "https://iramat-apps.cnrs.fr/iiif/2/_test%2FBarre531ober.ptif/info.json",
+        "https://iramat-apps.cnrs.fr/iiif/2/_test%2FBarre531anaimage.ptif/info.json",
+      ];
+      const sidebarMeta = {
+        source_image_path: "/home/ubuntu/data/images/_test/Barre531avat.ptif",
+        metadata: [
+          { label: { en: ["Title"] }, value: { en: ["Barre 531"] } },
+          {
+            label: { en: ["Description"] },
+            value: {
+              en: [
+                "4 images d'une même coupe de currency-bar gaulois: (1) avant attaque, (2) après attaque Nital, (3) après attaque Oberhoffer, (4) analyse d'image permettant de caractériser schématiquement les différentes zones.",
+              ],
+            },
+          },
+        ],
+        attribution: { en: ["Silvain Bauvais"] },
+        rights: "CC BY 4.0",
+      };
+
+      if (imageSources.length < 2) {
+        throw new Error("At least two info.json sources are required.");
+      }
+
+      const viewer = OpenSeadragon({
+        id: "viewer",
+        prefixUrl:
+          "https://cdnjs.cloudflare.com/ajax/libs/openseadragon/4.1.0/images/",
+        showNavigator: true,
+      });
+
+      const divider = document.getElementById("divider");
+      const overlaySelect = document.getElementById("overlaySelect");
+      const metadataContent = document.getElementById("metadataContent");
+
+      let baseImage = null;
+      let topImage = null;
+      let dragging = false;
+      let comparePercent = 0.5;
+
+      function escapeHtml(value) {
+        return String(value ?? "")
+          .replace(/&/g, "&amp;")
+          .replace(/</g, "&lt;")
+          .replace(/>/g, "&gt;")
+          .replace(/"/g, "&quot;")
+          .replace(/'/g, "&#39;");
+      }
+
+      function langMapToText(langMap) {
+        if (!langMap || typeof langMap !== "object") return "";
+        const values = [];
+        for (const key of Object.keys(langMap)) {
+          const arr = Array.isArray(langMap[key])
+            ? langMap[key]
+            : [langMap[key]];
+          for (const item of arr) {
+            if (
+              item !== null &&
+              item !== undefined &&
+              String(item).trim() !== ""
+            ) {
+              values.push(String(item));
+            }
+          }
+        }
+        return values.join(" ; ");
+      }
+
+      function renderMetadata(meta) {
+        const blocks = [];
+
+        if (Array.isArray(meta.metadata)) {
+          for (const item of meta.metadata) {
+            const label = langMapToText(item.label);
+            const value = langMapToText(item.value);
+            if (!label || !value) continue;
+
+            blocks.push(`
+        <div class="meta-block">
+          <span class="meta-label">${escapeHtml(label)}</span>
+          <div class="meta-value">${escapeHtml(value)}</div>
+        </div>
+      `);
+          }
+        }
+
+        if (meta.attribution) {
+          const value = langMapToText(meta.attribution);
+          if (value) {
+            blocks.push(`
+        <div class="meta-block">
+          <span class="meta-label">Attribution</span>
+          <div class="meta-value">${escapeHtml(value)}</div>
+        </div>
+      `);
+          }
+        }
+
+        if (meta.rights) {
+          blocks.push(`
+      <div class="meta-block">
+        <span class="meta-label">Rights</span>
+        <div class="meta-value">${escapeHtml(meta.rights)}</div>
+      </div>
+    `);
+        }
+
+        if (meta.source_image_path) {
+          blocks.push(`
+      <div class="meta-block">
+        <span class="meta-label">Source image path</span>
+        <div class="meta-muted">${escapeHtml(meta.source_image_path)}</div>
+      </div>
+    `);
+        }
+
+        blocks.push(`
+    <div class="meta-block">
+      <span class="meta-label">Informations</span>
+      <div class="meta-value">
+        <a href="https://github.com/iramat/iramat-dev/blob/main/iiif/metallo_SB/l%C3%A9gende%20couleur.png" target="_blank" rel="noopener noreferrer">
+          Légende de l'analyse d'image
+        </a>
+      </div>
+    </div>
+  `);
+
+        metadataContent.innerHTML = blocks.length
+          ? blocks.join("")
+          : '<div class="meta-muted">No metadata available.</div>';
+      }
+
+      function optionLabel(url, index) {
+        try {
+          const parsed = new URL(url);
+          const decoded = decodeURIComponent(
+            parsed.pathname.split("/iiif/2/")[1].replace(/\/info\.json$/, ""),
+          );
+          return index === 0 ? `${decoded} (base)` : decoded;
+        } catch (_err) {
+          return index === 0
+            ? `Image ${index + 1} (base)`
+            : `Image ${index + 1}`;
+        }
+      }
+
+      imageSources.forEach((url, index) => {
+        if (index === 0) return;
+        const opt = document.createElement("option");
+        opt.value = url;
+        opt.textContent = optionLabel(url, index);
+        overlaySelect.appendChild(opt);
+      });
+
+      overlaySelect.value = imageSources[1];
+
+      function clamp(value, min, max) {
+        return Math.max(min, Math.min(max, value));
+      }
+
+      function syncDividerToImage() {
+        if (!topImage) return;
+
+        const bounds = topImage.getBounds(true);
+        const clipViewportX = bounds.x + bounds.width * comparePercent;
+        const viewerPoint = viewer.viewport.viewportToViewerElementCoordinates(
+          new OpenSeadragon.Point(clipViewportX, bounds.y),
+        );
+
+        divider.style.left = `${viewerPoint.x}px`;
+      }
+
+      function updateCurtain(percent) {
+        if (!topImage) return;
+
+        comparePercent = clamp(percent, 0, 1);
+        const size = topImage.getContentSize();
+        const clipX = size.x * comparePercent;
+
+        topImage.setClip(
+          new OpenSeadragon.Rect(clipX, 0, size.x - clipX, size.y),
+        );
+
+        syncDividerToImage();
+        viewer.world.draw();
+      }
+
+      function updateFromPointer(clientX) {
+        if (!topImage) return;
+
+        const rect = viewer.element.getBoundingClientRect();
+        const viewerX = clientX - rect.left;
+        const viewportPoint =
+          viewer.viewport.viewerElementToViewportCoordinates(
+            new OpenSeadragon.Point(viewerX, rect.height / 2),
+          );
+
+        const bounds = topImage.getBounds(true);
+        const percent = (viewportPoint.x - bounds.x) / bounds.width;
+        updateCurtain(percent);
+      }
+
+      function loadOverlay(tileSource) {
+        if (!baseImage) return;
+        if (topImage) {
+          viewer.world.removeItem(topImage);
+          topImage = null;
+        }
+
+        const baseBounds = baseImage.getBounds(true);
+        viewer.addTiledImage({
+          tileSource,
+          x: baseBounds.x,
+          y: baseBounds.y,
+          width: baseBounds.width,
+          success: function (event) {
+            topImage = event.item;
+            updateCurtain(comparePercent);
+            syncDividerToImage();
+          },
+        });
+      }
+
+      renderMetadata(sidebarMeta);
+
+      viewer.addTiledImage({
+        tileSource: imageSources[0],
+        success: function (event) {
+          baseImage = event.item;
+          loadOverlay(overlaySelect.value);
+          viewer.viewport.goHome(true);
+        },
+      });
+
+      overlaySelect.addEventListener("change", function () {
+        loadOverlay(this.value);
+      });
+
+      divider.addEventListener("mousedown", function (event) {
+        dragging = true;
+        event.preventDefault();
+      });
+      window.addEventListener("mouseup", function () {
+        dragging = false;
+      });
+      window.addEventListener("mousemove", function (event) {
+        if (!dragging) return;
+        updateFromPointer(event.clientX);
+      });
+
+      divider.addEventListener(
+        "touchstart",
+        function (event) {
+          dragging = true;
+          if (event.touches[0]) updateFromPointer(event.touches[0].clientX);
+          event.preventDefault();
+        },
+        { passive: false },
+      );
+      window.addEventListener(
+        "touchmove",
+        function (event) {
+          if (!dragging || !event.touches[0]) return;
+          updateFromPointer(event.touches[0].clientX);
+          event.preventDefault();
+        },
+        { passive: false },
+      );
+      window.addEventListener("touchend", function () {
+        dragging = false;
+      });
+
+      viewer.addHandler("animation", syncDividerToImage);
+      viewer.addHandler("resize", syncDividerToImage);
+      viewer.addHandler("open", syncDividerToImage);
+    </script>
+  </body>
+</html>
