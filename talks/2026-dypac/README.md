@@ -1,7 +1,7 @@
 ## *Collection as Data*, de la reproduction à l'information
 > Thomas Huet, IRAMAT-CNRS
 
-![](d6b2edde-c0ed-4298-9c67-e3fbfab650dd.png)
+![](img/d6b2edde-c0ed-4298-9c67-e3fbfab650dd.png)
 
 La digitalisation des collections des musées, bibliothèques et archives, à l'heure de l'avènement des technologies du Web, demande de repenser le partage des informations liées aux collections, en considérant celles-ci, prioritairement, comme des ensembles de données pouvant être interrogés, reliés et réutilisés (mouvement *Collections as Data*[^1] et *datafication*). Dans l'espace européen de la recherche en histoire, histoire de l'art et archéologie, les producteurs de données sont parallèlement incités à suivre les principes de la Science ouverte et les principes FAIR — Facile à trouver, Accessible, Interopérable et Réutilisable — en privilégiant notamment des logiciels libres, des protocoles communs et des formats ouverts.
 

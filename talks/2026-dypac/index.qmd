@@ -1,0 +1,47 @@
+---
+title: "*Collection as Data*"
+subtitle: "de la reproduction à l'information"
+author:
+  - name: Thomas Huet
+    affiliation: 
+      - id: cnrs
+        name: <span style="font-size:17pt">IRAMAT-CNRS</span>
+title-slide-attributes:
+    data-background-image: "img/d6b2edde-c0ed-4298-9c67-e3fbfab650dd.png"
+    data-background-size: "120%"
+    data-background-opacity: "0.3"
+    data-notes: Lorem
+format:
+  revealjs: 
+    css: https://zoometh.github.io/thomashuet/css/quarto.css
+    controls: true
+    auto-stretch: false
+    code-fold: false
+    code-summary: "<small>Code</small>"
+    slide-number: true
+    chalkboard:
+      theme: "whiteboard"
+      color: ['rgba(255, 0, 0, 0.3)'] # red
+    scrollable: true
+    preview-links: auto
+    reference-location: document
+    footnotes-hover: true
+    # self-contained: true
+    # embed-resources: true
+    # logo: https://raw.githubusercontent.com/zoometh/neonet/master/doc/img/neonet.png
+    footer: "<small>Thomas Huet - <img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/inst-upsac-dypac.png' style='height: 20px;vertical-align: middle;'> séminaire DYPAC, vendredi 13 novembre 2026</small>"
+    margin: 0
+    width: 1200
+---
+
+```{r, echo=FALSE}
+library(dplyr)
+library(kableExtra)
+```
+
+
+# Introduction
+
+# Datafication
+
+# 
