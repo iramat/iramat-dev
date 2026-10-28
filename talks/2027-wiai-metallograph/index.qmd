@@ -43,7 +43,7 @@ library(dplyr)
 library(kableExtra)
 ```
 
-# Introduction générale {background-image="https://raw.githubusercontent.com/iramat/iramat-dev/master/img/iiif-pres-collection-multi.png" background-opacity=0.2 background-size="400px" background-repeat="repeat" data-visibility=hidden}
+# Introduction générale {background-image="https://raw.githubusercontent.com/iramat/iramat-dev/master/img/logo-metallograph-round-238x238.png" background-opacity=0.2 background-size="800px"}
 
 
 ## La série WIAI {data-visibility=hidden}
