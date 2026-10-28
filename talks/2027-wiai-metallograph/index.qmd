@@ -1,6 +1,6 @@
 ---
 title: "Le projet 'Métallograph'"
-subtitle: "**WIAI** - **W**ebinaires de l'**I**nformatique pour l'**A**rchéométrie à l'**I**RAMAT"
+subtitle: "**WIAI** - **W**ebinaires de l'**I**nformatique pour l'**A**rchéométrie à l'**I**RAMAT<br>"
 author:
   - name: Thomas Huet
     affiliation: 
@@ -43,7 +43,7 @@ library(dplyr)
 library(kableExtra)
 ```
 
-# Introduction générale {background-image="https://raw.githubusercontent.com/iramat/iramat-dev/master/img/logo-metallograph-round-238x238.png" background-opacity=0.2 background-size="800px"}
+# Introduction générale {background-image="https://raw.githubusercontent.com/iramat/iramat-dev/master/img/logo-metallograph-round-238x238.png" background-opacity=0.6 background-size="800px"}
 
 
 ## La série WIAI {data-visibility=hidden}
@@ -87,28 +87,26 @@ Découvrir -- ou approfondir -- une solution logicielle open-source en revenant 
 
 
 
-# Introduction {background-image="https://raw.githubusercontent.com/iramat/iramat-dev/master/img/iiif-pres-collection-multi.png" background-opacity=0.2 background-size="400px" background-repeat="repeat"}
+# Introduction {background-image="https://raw.githubusercontent.com/iramat/iramat-dev/master/img/logo-metallograph-round-238x238.png" background-opacity=0.6 background-size="800px"}
 
 ## Base de données image
 
-<div class="captiontext"><https://iramat-apps.cnrs.fr/view/metallograph/barre531_compare.html></div>
 ```{=html}
 <div class="iframe-figure">
-  <iframe width="1200" height="520"
+  <iframe width="1200" height="550"
           src="https://iramat-apps.cnrs.fr/view/metallograph/barre531_compare.html"
-          title="manifest JSON"></iframe>
+          title="Viewer OSD"></iframe>
 </div>
 <br>
 ```
 
-## Catalogue dynamique
+## Catalogue image
 
-<div class="captiontext"><https://iramat-apps.cnrs.fr/portal/catalogue/metallograph/facies%3A123456789.html></div>
 ```{=html}
 <div class="iframe-figure">
-  <iframe width="1200" height="520"
+  <iframe width="1200" height="550"
           src="https://iramat-apps.cnrs.fr/portal/catalogue/metallograph/facies%3A123456789.html"
-          title="manifest JSON"></iframe>
+          title="Catalogue HTML"></iframe>
 </div>
 <br>
 ```
