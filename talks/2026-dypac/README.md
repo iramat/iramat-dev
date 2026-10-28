@@ -10,3 +10,4 @@ La digitalisation des collections des musées, bibliothèques et archives, à l'
 Plus généralement, il s'agira de montrer comment le passage de la reproduction et de la visualisation numériques des collections à la *datafication* de l'information conduit également à repenser la chronologie de la publication scientifique : du *data paper* et de la publication des données aux interfaces de consultation et aux articles de recherche qui les exploitent.
 
 [^1]: https://collectionsasdata.github.io/
+

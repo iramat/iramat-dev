@@ -42,6 +42,33 @@ library(kableExtra)
 
 # Introduction
 
-# Datafication
+## "Collection(s)", une définition
 
-# 
+# Datafication: un monde de _data_
+
+## "data", une définition
+
+data facets
+
+## vers la datafication
+
+Digitalisation -> CaD
+
+# Un peu de recherche dans un monde de (data) brutes
+
+## Le _gold standard_ de la reproductibilité
+
+data + code (code-as-data) -> résultat
+
+## Une architecture pour les controller toutes
+
+RDI + IaaS + _distributed_ + _aggregated_
+
+# Les monnaies, des artefacts dignes d'être collectionnés
+
+Spécificité des monnaies (numismatique) -> ...
+
+# A CLASSER
+
+Research Software engineer
+FAIR

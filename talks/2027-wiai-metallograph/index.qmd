@@ -1,0 +1,114 @@
+---
+title: "Le projet 'Métallograph'"
+subtitle: "**WIAI** - **W**ebinaires de l'**I**nformatique pour l'**A**rchéométrie à l'**I**RAMAT"
+author:
+  - name: Thomas Huet
+    affiliation: 
+      - id: cnrs
+        name: <span style="font-size:17pt">IRAMAT-CNRS</span>
+  - name: Sylvain Bauvais
+    affiliation: 
+      - id: cnrs
+        name: <span style="font-size:17pt">IRAMAT-CNRS</span>
+title-slide-attributes:
+    data-background-image: "https://raw.githubusercontent.com/iramat/iramat-dev/master/img/ana-xrf-pymca-ex.png"
+    data-background-size: "90%"
+    data-background-opacity: "0.2"
+    data-notes: Lorem
+format:
+  revealjs: 
+    css: https://zoometh.github.io/thomashuet/css/quarto.css
+    controls: true
+    auto-stretch: false
+    code-fold: false
+    code-summary: "<small>Code</small>"
+    slide-number: true
+    chalkboard:
+      theme: "whiteboard"
+      color: ['rgba(255, 0, 0, 0.3)'] # red
+    scrollable: true
+    preview-links: auto
+    reference-location: document
+    footnotes-hover: true
+    # self-contained: true
+    # embed-resources: true
+    # logo: https://raw.githubusercontent.com/zoometh/neonet/master/doc/img/neonet.png
+    footer: "T. Huet & S. Bauvais - <img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/inst-cnrs-iramat.png' style='height: 15px;vertical-align: middle;'> - Mardi 12 Janvier, 2027, LAPA, Saclay"
+    margin: 0
+    width: 1200
+---
+
+```{r, echo=FALSE}
+library(dplyr)
+library(kableExtra)
+```
+
+# Introduction générale {background-image="https://raw.githubusercontent.com/iramat/iramat-dev/master/img/iiif-pres-collection-multi.png" background-opacity=0.2 background-size="400px" background-repeat="repeat" data-visibility=hidden}
+
+
+## La série WIAI {data-visibility=hidden}
+
+:::: {.columns}
+::: {.column width="55%"}
+
+Webinaires dédiés aux technologies de l'information pour l'archéométrie:  <br>
+GitHub <img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/app-github.png' style='height: 45px;vertical-align: middle;'>, Python
+<img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/app-prg-python-2.png' style='height: 45px;vertical-align: middle;'>, R
+<img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/prog-r-1.png' style='height: 45px;vertical-align: middle;'>, API 
+<img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/web-api.jpeg' style='height: 45px;vertical-align: middle;'>, IIIF
+<img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/lod-iso-iiif.png' style='height: 45px;vertical-align: middle;'>, etc. <br><br>
+
+::: {.callout-note}
+📅 Bimestriel. Le 2<sup>e</sup> Mardi matin, sur Rendez-Vous (Renater) entre 10h00 et 10h50 (50 minutes), lien sur le [GitHub](https://github.com/iramat#-wiai) et le [calendrier](https://iramat-apps.cnrs.fr/portal/#calendar) de l'IRAMAT
+:::
+
+:::
+
+::: {.column width="45%"}
+
+<center>
+
+<img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/lod-iso-iiif-tom-cramer-2016.png' style='width: 450px;vertical-align: middle;'> 
+
+<div class="captiontext"> _"What if deep zoom was standard and fast"_ <br> &nbsp; -- Tom Cramer[^89], 2016. crédit: IIIF Consortium</div>
+
+
+</center>
+
+[^89]: _Chief developer_ de la _Stanford University Libraries_, image extraite du [_International Image Interoperability Framework event_](https://www.youtube.com/watch?v=KVUyhcVO060&t=414s), Museum of Modern Art, New York, 10 Mai 2016.  
+
+:::
+
+:::
+
+::: {.notes}
+Découvrir -- ou approfondir -- une solution logicielle open-source en revenant sur l'histoire de ce logiciel, sa logique interne, ... Avec des citations rigolotes
+:::
+
+
+
+# Introduction {background-image="https://raw.githubusercontent.com/iramat/iramat-dev/master/img/iiif-pres-collection-multi.png" background-opacity=0.2 background-size="400px" background-repeat="repeat"}
+
+## Base de données image
+
+<div class="captiontext"><https://iramat-apps.cnrs.fr/view/metallograph/barre531_compare.html></div>
+```{=html}
+<div class="iframe-figure">
+  <iframe width="1200" height="520"
+          src="https://iramat-apps.cnrs.fr/view/metallograph/barre531_compare.html"
+          title="manifest JSON"></iframe>
+</div>
+<br>
+```
+
+## Catalogue dynamique
+
+<div class="captiontext"><https://iramat-apps.cnrs.fr/portal/catalogue/metallograph/facies%3A123456789.html></div>
+```{=html}
+<div class="iframe-figure">
+  <iframe width="1200" height="520"
+          src="https://iramat-apps.cnrs.fr/portal/catalogue/metallograph/facies%3A123456789.html"
+          title="manifest JSON"></iframe>
+</div>
+<br>
+```
