@@ -114,7 +114,7 @@ click BD "https://iramat-apps.cnrs.fr/dash/" "_blank"
 click VM "https://iramat-apps.cnrs.fr/portal/" "_blank"
 click APIdata "https://iramat-apps.cnrs.fr/api/ dataset_pdillmann17" "_blank"
 click IIIFimg "https://iramat-apps.cnrs.fr/go/barre531-iiif" "_blank"
-click IIIFpres "https://iramat-apps.cnrs.fr/view/_test/barre531_compare.html" "_blank"
-click IIIFannot "https://iramat-apps.cnrs.fr/portal/catalogue/facies%253A123456789.html" "_blank"
+click IIIFpres "https://iramat-apps.cnrs.fr/view/metallograph/barre531_compare.html" "_blank"
+click IIIFannot "https://iramat-apps.cnrs.fr/portal/catalogue/metallograph/facies:123456789.html" "_blank"
 ```
 
