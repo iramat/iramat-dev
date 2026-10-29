@@ -110,11 +110,11 @@ style ResMet fill:#b0ffc3
 style ResNum fill:#b0ffc3
 style ResVaria fill:#b0ffc3
 
-click BD "https://iramat-apps.cnrs.fr/dash/"
-click VM "https://iramat-apps.cnrs.fr/portal/"
-click APIdata "https://iramat-apps.cnrs.fr/api/dataset_pdillmann17"
-click IIIFimg "https://iramat-apps.cnrs.fr/go/barre531-iiif"
-click IIIFpres "https://iramat-apps.cnrs.fr/view/_test/barre531_compare.html"
-click IIIFannot "https://iramat-apps.cnrs.fr/portal/catalogue/facies%253A123456789.html"
+click BD "https://iramat-apps.cnrs.fr/dash/" "_blank"
+click VM "https://iramat-apps.cnrs.fr/portal/" "_blank"
+click APIdata "https://iramat-apps.cnrs.fr/api/ dataset_pdillmann17" "_blank"
+click IIIFimg "https://iramat-apps.cnrs.fr/go/barre531-iiif" "_blank"
+click IIIFpres "https://iramat-apps.cnrs.fr/view/_test/barre531_compare.html" "_blank"
+click IIIFannot "https://iramat-apps.cnrs.fr/portal/catalogue/facies%253A123456789.html" "_blank"
 ```
 
