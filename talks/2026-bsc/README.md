@@ -4,28 +4,32 @@
 ```mermaid
 flowchart TD
   subgraph IRAMAT[<b>IRAMAT</b>]
-  	ICP{{ICP-MS}}
-  	XRD{{XRD}}
-	XRF{{XRF}}
-    BD[(DB)]
+  	ICP-MS{{ICP-MS}}
+  	WD-XRF{{WD-XRF}}
+	  ICP-OES{{ICP-OES}}
+    SEM-EDS{{SEM-EDS}}
+    INAA{{INAA}}
+    BD[(CHIPS)]
     analyses[archaeometry analysis]
-    analyses -- numeric data --> IRAMATdata
-    analyses -- imaging data --> IRAMATimg
+    analyses == numeric data ==> IRAMATdata
+    analyses == imaging data ==> IRAMATimg
 	subgraph VM[VM]
     subgraph IRAMATdata[Scalar measurements]
-		XRF --> BD
-		XRD --> BD
-		ICP --> BD
-        BD -- API RESTful --> APIdata[<em>labeled data</em>]
+        ICP-OES ==> BD
+        WD-XRF ==> BD
+        SEM-EDS ==> BD
+        ICP-MS ==> BD
+        INAA ==> BD
+        BD == API RESTful ==> APIdata[<em>labeled data</em>]
     end
     subgraph IRAMATimg[Imaging-Cartography]
         Macro{{Macro-<br>photography}} -- format --> IIIFimg([API image])
-        Opt{{Optical<br>Microscopy}} -- format --> IIIFimg
+        Opt{{Optical<br>Microscopy}} == format ==> IIIFimg
         SEM{{SEM-EDS}} -- format --> IIIFimg
         Raman{{Raman}} -- format --> IIIFimg
         subgraph IRAMATiiif[IIIF]
-          IIIFimg ---> IIIFpres([API presentation])
-		      IIIFpres --> IIIFannot([API annotation])
+          IIIFimg ===> IIIFpres([API presentation])
+		      IIIFpres ===> IIIFannot([API annotation])
         end
 		    IIIFannot -- manifests<br>annotations --> BD
         BD -- API RESTful --> APIimg[<em>labeled images</em>]
@@ -70,9 +74,11 @@ style VM fill:#f4fa82
 style analyses fill:#fbfcd7
 style IRAMATdata fill:#fbfcd7
 style IRAMATimg fill:#fbfcd7
-style XRF fill:#f6f7d5
-style XRD fill:#f6f7d5
-style ICP fill:#f6f7d5
+style ICP-OES fill:#f6f7d5
+style WD-XRF fill:#f6f7d5
+style SEM-EDS fill:#f6f7d5
+style ICP-MS fill:#f6f7d5
+style INAA fill:#f6f7d5
 style Macro fill:#f6f7d5
 style Opt fill:#f6f7d5
 style SEM fill:#f6f7d5
@@ -104,37 +110,11 @@ style ResMet fill:#b0ffc3
 style ResNum fill:#b0ffc3
 style ResVaria fill:#b0ffc3
 
-click BD "https://github.com/iramat/iramat-dev/main/talks/2026-bsc/README.md#db"
-click VM "https://github.com/iramat/iramat-dev/main/talks/2026-bsc/README.md#vm"
-click IIIFimg "https://iramat-apps.cnrs.fr/iiif/2/numismatic%2F1986.416_obv.JPG/full/full/0/default.jpg"
-click IIIFpres "https://github.com/iramat/iramat-dev/main/talks/2026-bsc/README.md#iiif-presentation"
-click IIIFannot "https://github.com/iramat/iramat-dev/main/talks/2026-bsc/README.md#iiif-annotation"
+click BD "https://iramat-apps.cnrs.fr/dash/"
+click VM "https://iramat-apps.cnrs.fr/portal/"
+click APIdata "https://iramat-apps.cnrs.fr/api/dataset_pdillmann17"
+click IIIFimg "https://iramat-apps.cnrs.fr/iiif/2/metallograph%2FBarre531ober.ptif/full/2000,/0/default.jpg"
+click IIIFpres "https://iramat-apps.cnrs.fr/view/_test/barre531_compare.html"
+click IIIFannot "https://iramat-apps.cnrs.fr/portal/catalogue/facies%3A123456789.html"
 ```
 
-
-## Examples
-
-### VM
-
-Ubuntu 22.04 LTS Virtual Machine, hosted by the [Université of Paris-Saclay Mésocentre](https://mesocentre.universite-paris-saclay.fr/)
-
-### DB
-
-- [CHIPS (Chimie en PaléoSidérurgie) Database](https://iramat-apps.cnrs.fr/dash/)
-
-### IIIF
-
-#### IIIF image
-
-- [info.json example](https://iramat-apps.cnrs.fr/iiif/2/acies%2FSeax_sample_process.tif/info.json)
-- [Cantaloupe example](https://iramat-apps.cnrs.fr/iiif/2/puddled%2FR217-1-macrox5.jpg/full/full/0/default.jpg)
-
-#### IIIF presentation
-
-- [Manifest example](https://iramat-apps.cnrs.fr/iiif/mirador/cdn/puddled/manifest_puddled.json)
-- ~~[Mirador image example](https://iramat-apps.cnrs.fr/page/puddled.html)~~
-- [Mirador image example](https://iramat-apps.cnrs.fr/view/puddled/puddled.html)
-
-#### IIIF annotation
-
-- [Mirador annotation example](https://iramat-apps.cnrs.fr/view/puddled/puddled.html)
