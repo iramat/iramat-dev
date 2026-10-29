@@ -113,8 +113,8 @@ style ResVaria fill:#b0ffc3
 click BD "https://iramat-apps.cnrs.fr/dash/"
 click VM "https://iramat-apps.cnrs.fr/portal/"
 click APIdata "https://iramat-apps.cnrs.fr/api/dataset_pdillmann17"
-click IIIFimg "https://iramat-apps.cnrs.fr/iiif/2/metallograph%2FBarre531ober.ptif/full/2000,/0/default.jpg"
+click IIIFimg "https://iramat-apps.cnrs.fr/go/barre531-iiif"
 click IIIFpres "https://iramat-apps.cnrs.fr/view/_test/barre531_compare.html"
-click IIIFannot "https://iramat-apps.cnrs.fr/portal/catalogue/facies%3A123456789.html"
+click IIIFannot "https://iramat-apps.cnrs.fr/portal/catalogue/facies%253A123456789.html"
 ```
 
