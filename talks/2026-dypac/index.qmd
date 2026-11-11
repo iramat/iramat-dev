@@ -44,11 +44,92 @@ library(kableExtra)
 
 ## "Collection(s)" : une définition
 
+<br><br>
+"Ensemble d’objets de même sorte que l’on réunit volontairement dans un esprit de curiosité, ou pour leur valeur artistique, scientifique ou documentaire."&nbsp; &nbsp; &nbsp; <div class="captiontext">-- Dictionnaire de l'Académie française, 9<sup>e</sup> édition[^1], 2024</div>
+
+[^1]: <https://www.dictionnaire-academie.fr/article/A9C2933>
+
+
+## "Collection(s)" : une augmentation
+
+:::: {.columns}
+
+::: {.column width="60%"}
+<img src='https://raw.githubusercontent.com/iramat/iramat-dev/master/talks/2026-dypac/img/Library_of_Ashurbanipal.jpg' style='height: 500px;vertical-align: middle;'>
+<div class="captiontext"> Bibliothèque d'Assurbanipal (1500-539 BCE) au <em>British Museum</em>.<br> Crédit: Gary Todd</div>
+:::
+
+::: {.column width="40%"}
+<br>
+<small>
+<table style="border-collapse: collapse; width: 100%;">
+  <thead>
+    <tr>
+      <th style="border: 1px solid black;">objet</th>
+      <th style="border: 1px solid black;">stockage</th>
+      <th style="border: 1px solid black;">BCE/AD</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border: 1px solid black;">tablette de Fara</td>
+      <td style="border: 1px solid black;">150 octets</td>
+      <td style="border: 1px solid black;">2600 BCE</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid black;">papyrus d’Ani</td>
+      <td style="border: 1px solid black;">400 octets</td>
+      <td style="border: 1px solid black;">1500 BCE</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid black;">livre de 200 pages</td>
+      <td style="border: 1px solid black;">150 ko</td>
+      <td style="border: 1px solid black;">1450 AD</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid black;">disque vinyle</td>
+      <td style="border: 1px solid black;">50 Mo</td>
+      <td style="border: 1px solid black;">1950 AD</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid black;">CD</td>
+      <td style="border: 1px solid black;">800 Mo</td>
+      <td style="border: 1px solid black;">1985 AD</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid black;">Clé USB-C</td>
+      <td style="border: 1px solid black;">1 To</td>
+      <td style="border: 1px solid black;">2020 AD</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid black;">SSD professionnel</td>
+      <td style="border: 1px solid black;">120 To</td>
+      <td style="border: 1px solid black;">2025 AD</td>
+    </tr>
+  </tbody>
+</table>
+</small>
+:::
+::::
+
+
 # Datafication: un monde de _data_
 
-## "data", une définition
+## _An Ocean of data_ (en archéologie)
 
-data facets
+<center>
+
+<img src='https://raw.githubusercontent.com/iramat/iramat-dev/master/talks/2026-dypac/img/ocean-of-data.jpg' style='height: 500px;vertical-align: middle;'>
+
+</center>
+
+
+## "Data", une définition
+
+<br><br>
+"Reinterpretable representation of information in a formalized manner suitable for communication, interpretation or processing."&nbsp; &nbsp; &nbsp; <div class="captiontext">-- ISO/IEC 2382:2015 (_Information technology — Vocabulary_)[^2], 2015</div>
+
+[^2]: Représentation réinterprétable d'une information, sous une forme conventionnelle adaptée à sa communication, son interprétation ou son traitement.
 
 ## vers la datafication
 
