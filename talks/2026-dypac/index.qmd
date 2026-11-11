@@ -112,6 +112,77 @@ library(kableExtra)
 :::
 ::::
 
+## Le mouvement _collection-as-data_ (1/2)
+
+<br>
+<table>
+  <thead>
+    <tr>
+      <th scope="col"></th>
+      <th scope="col">avant</th>
+      <th scope="col">après</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">objet</th>
+      <td>artefacts physiques</td>
+      <td>data</td>
+    </tr>
+    <tr>
+      <th scope="row">paradigme</th>
+      <td>qualitatif/expertise</td>
+      <td>quantitatif/généraliste</td>
+    </tr>
+    <tr>
+      <th scope="row">méthode</th>
+      <td>hypothético-déductif</td>
+      <td>empirico-inductif</td>
+    </tr>
+    <tr>
+      <th scope="row">cible</th>
+      <td>utilisateur</td>
+      <td>machine</td>
+    </tr>
+    <tr>
+      <th scope="row">interface</th>
+      <td>UX</td>
+      <td>API</td>
+    </tr>
+  </tbody>
+</table>
+
+<style>
+  table { border-collapse: collapse; font-family: sans-serif; }
+  th, td { border: 1px solid #333; padding: 6px 14px; text-align: center; }
+  thead th { background: #f2f2f2; }
+</style>
+<br>
+<div class="captiontext"><em>collection-as-data</em> : avant / après</div>
+
+
+## Le mouvement _collection-as-data_ (2/2)
+
+<center>
+
+```{=html}
+<div class="iframe-figure"
+     style="width: 1200px; height: 500px; overflow: hidden;">
+  <iframe
+    src="https://collectionsasdata.github.io/"
+    title="collection-as-data"
+    style="
+      width: 1714px;
+      height: 786px;
+      border: none;
+      transform: scale(0.9);
+    ">
+  </iframe>
+</div>
+```
+<div class="captiontext"><https://collectionsasdata.github.io/></div>
+
+</center>
 
 # Datafication: un monde de _data_
 
@@ -119,7 +190,7 @@ library(kableExtra)
 
 <center>
 
-<img src='https://raw.githubusercontent.com/iramat/iramat-dev/master/talks/2026-dypac/img/ocean-of-data.jpg' style='height: 500px;vertical-align: middle;'>
+<img src='https://raw.githubusercontent.com/iramat/iramat-dev/master/talks/2026-dypac/img/ocean-of-data-1.jpg' style='height: 500px;vertical-align: middle;'>
 
 </center>
 
@@ -131,23 +202,113 @@ library(kableExtra)
 
 [^2]: Représentation réinterprétable d'une information, sous une forme conventionnelle adaptée à sa communication, son interprétation ou son traitement.
 
-## vers la datafication
+## La datafication du monde
 
-Digitalisation -> CaD
+<br><br>
+"The drive towards <b>datafication</b> is rooted in a belief in the capacity of data to represent social life, sometimes better or more objectively than pre-digital (human) interpretations"&nbsp; &nbsp; &nbsp; <div class="captiontext"> -- Hintz, Arne; Lina Dencik; Karin Wahl-Jorgensen, 2019[^3]</div>
+
+[^3]: La tendance à la <b>datafication</b> repose sur la conviction que les données ont la capacité de représenter la vie sociale, parfois mieux ou plus objectivement que les interprétations (humaines) pré-numériques.
 
 # Un peu de recherche dans un monde de (data) brutes
 
 ## Le _gold standard_ de la reproductibilité
 
-data + code (code-as-data) -> résultat
+<br>
+
+<table style="width: 100%; table-layout: fixed; border-collapse: collapse; font-size: 25px;">
+  <colgroup>
+    <col style="width: 35%;">
+    <col style="width: 30%;">
+    <col style="width: 35%;">
+  </colgroup>
+  <thead>
+    <tr>
+      <th>Couche sémantique (<code>texte libre</code>)</th>
+      <th>Couche logique (<code>JSON</code>)</th>
+      <th>Couche algorithmique (<code>Python</code>)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        Une hache en bronze, datée de l'âge du Bronze moyen,
+        découverte dans un contexte funéraire.
+      </td>
+      <td>
+        <pre style="font-size: 20px;"><code style="font-size: inherit;">json_data = {
+  "id": "OBJ_001",
+  "type": "hache",
+  "materiau": "bronze",
+  "periode": "Bronze moyen",
+  "contexte": "funéraire"
+}</code></pre>
+      </td>
+      <td>
+       <pre style="font-size: 20px;"><code style="font-size: inherit;" class="language-python">import json
+
+objet = json.loads(json_data)
+
+if objet["materiau"] == "bronze":
+    print(objet["id"])</code></pre>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+
+$$
+\underbrace{\text{Data}}_{\text{C. sémantique}}
+\;\times\;
+\underbrace{\text{Code-as-data}}_{\text{C. logique + C. algorithmique}}
+\;\xrightarrow{\text{FAIR}}\;
+\text{Reproductibilité}
+$$
+
 
 ## Une architecture pour les controller toutes
 
-RDI + IaaS + _distributed_ + _aggregated_
+```{=html}
+<div class="iframe-figure">
+  <iframe width="1200" height="550"
+          src="https://iramat-apps.cnrs.fr/portal/html/lod/iramat_workflow_interactive.html"
+          title="RDI Iramat"></iframe>
+</div>
+```
 
-# Les monnaies, des artefacts dignes d'être collectionnés
+## Collection numismatiques à l'IRAMAT
 
-Spécificité des monnaies (numismatique) -> ...
+```{=html}
+<div class="iframe-figure">
+  <iframe width="1200" height="550"
+          src="https://iramat-apps.cnrs.fr/numishare/almacir/"
+          title="Numishare ALMACIR"></iframe>
+</div>
+```
+
+# Chronologie des publications
+
+## Paroles d'expert: l'article de recherche
+
+<br><br>
+"_In God we trust. All others must bring data_."&nbsp; &nbsp; &nbsp; <div class="captiontext">-- W. Edwards Deming</div>
+
+[^1]: <https://www.dictionnaire-academie.fr/article/A9C2933>
+
+## Articles de données et nanopublications
+
+# Enjeux pour les collectionneurs du XXI<sup>e</sup> siècle
+
+
+## Programmation lettrée
+
+
+<a href="https://colab.research.google.com/drive/1VjwnkV_C53aSnlbnPMNpM4EXJVEUjHU6"
+   target="_blank"
+   rel="noopener noreferrer">
+  Open the interactive ALMACIR notebook
+</a>
+
+## IaaS et fédération de données (_data federation_)
 
 # A CLASSER
 

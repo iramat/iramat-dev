@@ -14,38 +14,101 @@
     "text": "“Collection(s)” : une augmentation\n\n\n\n\nBibliothèque d’Assurbanipal (1500-539 BCE) au British Museum. Crédit: Gary Todd\n\n\n \n\n\n\n\nobjet\n\n\nstockage\n\n\nBCE/AD\n\n\n\n\n\n\ntablette de Fara\n\n\n150 octets\n\n\n2600 BCE\n\n\n\n\npapyrus d’Ani\n\n\n400 octets\n\n\n1500 BCE\n\n\n\n\nlivre de 200 pages\n\n\n150 ko\n\n\n1450 AD\n\n\n\n\ndisque vinyle\n\n\n50 Mo\n\n\n1950 AD\n\n\n\n\nCD\n\n\n800 Mo\n\n\n1985 AD\n\n\n\n\nClé USB-C\n\n\n1 To\n\n\n2020 AD\n\n\n\n\nSSD professionnel\n\n\n120 To\n\n\n2025 AD"
   },
   {
+    "objectID": "index.html#le-mouvement-collection-as-data",
+    "href": "index.html#le-mouvement-collection-as-data",
+    "title": "Collection as Data",
+    "section": "Le mouvement collection-as-data",
+    "text": "Le mouvement collection-as-data"
+  },
+  {
+    "objectID": "index.html#an-ocean-of-data-en-archéologie",
+    "href": "index.html#an-ocean-of-data-en-archéologie",
+    "title": "Collection as Data",
+    "section": "An Ocean of data (en archéologie)",
+    "text": "An Ocean of data (en archéologie)"
+  },
+  {
     "objectID": "index.html#data-une-définition",
     "href": "index.html#data-une-définition",
     "title": "Collection as Data",
-    "section": "“data”, une définition",
-    "text": "“data”, une définition\ndata facets"
+    "section": "“Data”, une définition",
+    "text": "“Data”, une définition\n “Reinterpretable representation of information in a formalized manner suitable for communication, interpretation or processing.”     \n\n– ISO/IEC 2382:2015 (Information technology — Vocabulary)2, 2015"
   },
   {
-    "objectID": "index.html#vers-la-datafication",
-    "href": "index.html#vers-la-datafication",
+    "objectID": "index.html#la-datafication-du-monde",
+    "href": "index.html#la-datafication-du-monde",
     "title": "Collection as Data",
-    "section": "vers la datafication",
-    "text": "vers la datafication\nDigitalisation -&gt; CaD"
+    "section": "La datafication du monde",
+    "text": "La datafication du monde\n “The drive towards datafication is rooted in a belief in the capacity of data to represent social life, sometimes better or more objectively than pre-digital (human) interpretations”     \n\n– Hintz, Arne; Lina Dencik; Karin Wahl-Jorgensen, 20193"
   },
   {
     "objectID": "index.html#le-gold-standard-de-la-reproductibilité",
     "href": "index.html#le-gold-standard-de-la-reproductibilité",
     "title": "Collection as Data",
     "section": "Le gold standard de la reproductibilité",
-    "text": "Le gold standard de la reproductibilité\ndata + code (code-as-data) -&gt; résultat"
+    "text": "Le gold standard de la reproductibilité\n\n\n\n\n\n\n\n\n\n\nCouche sémantique (texte libre)\n\n\nCouche logique (JSON)\n\n\nCouche algorithmique (Python)\n\n\n\n\n\n\nUne hache en bronze, datée de l’âge du Bronze moyen, découverte dans un contexte funéraire.\n\n\njson_data = {\n  \"id\": \"OBJ_001\",\n  \"type\": \"hache\",\n  \"materiau\": \"bronze\",\n  \"periode\": \"Bronze moyen\",\n  \"contexte\": \"funéraire\"\n}\n\n\nimport json\n\nobjet = json.loads(json_data)\n\nif objet[\"materiau\"] == \"bronze\":\n    print(objet[\"id\"])\n\n\n\n\n\\[\n\\underbrace{\\text{Data}}_{\\text{C. sémantique}}\n\\;\\times\\;\n\\underbrace{\\text{Code-as-data}}_{\\text{C. logique + C. algorithmique}}\n\\;\\xrightarrow{\\text{FAIR}}\\;\n\\text{Reproductibilité}\n\\]"
   },
   {
     "objectID": "index.html#une-architecture-pour-les-controller-toutes",
     "href": "index.html#une-architecture-pour-les-controller-toutes",
     "title": "Collection as Data",
     "section": "Une architecture pour les controller toutes",
-    "text": "Une architecture pour les controller toutes\nRDI + IaaS + distributed + aggregated"
+    "text": "Une architecture pour les controller toutes"
+  },
+  {
+    "objectID": "index.html#la-collection-numismatique-almacir-à-liramat",
+    "href": "index.html#la-collection-numismatique-almacir-à-liramat",
+    "title": "Collection as Data",
+    "section": "La collection numismatique “Almacir” à l’IRAMAT",
+    "text": "La collection numismatique “Almacir” à l’IRAMAT"
+  },
+  {
+    "objectID": "index.html#programmation-lettrée",
+    "href": "index.html#programmation-lettrée",
+    "title": "Collection as Data",
+    "section": "Programmation lettrée",
+    "text": "Programmation lettrée\n Open the interactive ALMACIR notebook"
   },
   {
     "objectID": "index.html#footnotes",
     "href": "index.html#footnotes",
     "title": "Collection as Data",
     "section": "Footnotes",
-    "text": "Footnotes\n\n\nhttps://www.dictionnaire-academie.fr/article/A9C2933"
+    "text": "Footnotes\n\n\nhttps://www.dictionnaire-academie.fr/article/A9C2933\nReprésentation réinterprétable d’une information, sous une forme conventionnelle adaptée à sa communication, son interprétation ou son traitement.\nLa tendance à la datafication repose sur la conviction que les données ont la capacité de représenter la vie sociale, parfois mieux ou plus objectivement que les interprétations (humaines) pré-numériques."
+  },
+  {
+    "objectID": "index.html#le-mouvement-collection-as-data-12",
+    "href": "index.html#le-mouvement-collection-as-data-12",
+    "title": "Collection as Data",
+    "section": "Le mouvement collection-as-data (1/2)",
+    "text": "Le mouvement collection-as-data (1/2)\n\n\n\n\n\n\n\navant\n\n\naprès\n\n\n\n\n\n\nobjet\n\n\nartefacts physiques\n\n\ndata\n\n\n\n\nparadigme\n\n\nqualitatif/expertise\n\n\nquantitatif/généraliste\n\n\n\n\nméthode\n\n\nhypothético-déductif\n\n\nempirico-inductif\n\n\n\n\ncible\n\n\nutilisateur\n\n\nmachine\n\n\n\n\ninterface\n\n\nUX\n\n\nAPI\n\n\n\n\n\n\n\ncollection-as-data : avant / après"
+  },
+  {
+    "objectID": "index.html#le-mouvement-collection-as-data-22",
+    "href": "index.html#le-mouvement-collection-as-data-22",
+    "title": "Collection as Data",
+    "section": "Le mouvement collection-as-data (2/2)",
+    "text": "Le mouvement collection-as-data (2/2)\n\n\n  \n  \n\n\nhttps://collectionsasdata.github.io/"
+  },
+  {
+    "objectID": "index.html#nanopublications",
+    "href": "index.html#nanopublications",
+    "title": "Collection as Data",
+    "section": "Nanopublications",
+    "text": "Nanopublications"
+  },
+  {
+    "objectID": "index.html#iaas-et-fédération-de-données-data-federation",
+    "href": "index.html#iaas-et-fédération-de-données-data-federation",
+    "title": "Collection as Data",
+    "section": "IaaS et fédération de données (data federation)",
+    "text": "IaaS et fédération de données (data federation)"
+  },
+  {
+    "objectID": "index.html#collection-numismatiques-à-liramat",
+    "href": "index.html#collection-numismatiques-à-liramat",
+    "title": "Collection as Data",
+    "section": "Collection numismatiques à l’IRAMAT",
+    "text": "Collection numismatiques à l’IRAMAT"
   }
 ]

@@ -265,20 +265,133 @@ SSD professionnel
 </table>
 </small><p><small></small></p>
 </div></div>
+</section>
+<section id="le-mouvement-collection-as-data-12" class="slide level2">
+<h2>Le mouvement <em>collection-as-data</em> (1/2)</h2>
+<br>
+<table>
+<thead>
+<tr>
+<th scope="col">
+</th>
+<th scope="col">
+avant
+</th>
+<th scope="col">
+après
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th scope="row">
+objet
+</th>
+<td>
+artefacts physiques
+</td>
+<td>
+data
+</td>
+</tr>
+<tr>
+<th scope="row">
+paradigme
+</th>
+<td>
+qualitatif/expertise
+</td>
+<td>
+quantitatif/généraliste
+</td>
+</tr>
+<tr>
+<th scope="row">
+méthode
+</th>
+<td>
+hypothético-déductif
+</td>
+<td>
+empirico-inductif
+</td>
+</tr>
+<tr>
+<th scope="row">
+cible
+</th>
+<td>
+utilisateur
+</td>
+<td>
+machine
+</td>
+</tr>
+<tr>
+<th scope="row">
+interface
+</th>
+<td>
+UX
+</td>
+<td>
+API
+</td>
+</tr>
+</tbody>
+</table>
+<style>
+  table { border-collapse: collapse; font-family: sans-serif; }
+  th, td { border: 1px solid #333; padding: 6px 14px; text-align: center; }
+  thead th { background: #f2f2f2; }
+</style>
+<br>
+<div class="captiontext">
+<em>collection-as-data</em> : avant / après
+</div>
+</section>
+<section id="le-mouvement-collection-as-data-22" class="slide level2">
+<h2>Le mouvement <em>collection-as-data</em> (2/2)</h2>
+<center>
+<div class="iframe-figure" style="width: 1200px; height: 500px; overflow: hidden;">
+  <iframe src="https://collectionsasdata.github.io/" title="collection-as-data" style="
+      width: 1714px;
+      height: 786px;
+      border: none;
+      transform: scale(0.9);
+    ">
+  </iframe>
+</div>
+<div class="captiontext">
+<a href="https://collectionsasdata.github.io/" class="uri">https://collectionsasdata.github.io/</a>
+</div>
+</center>
 </section></section>
 <section>
 <section id="datafication-un-monde-de-data" class="title-slide slide level1 center">
 <h1>Datafication: un monde de <em>data</em></h1>
 
 </section>
-<section id="data-une-définition" class="slide level2">
-<h2>“data”, une définition</h2>
-<p>data facets</p>
+<section id="an-ocean-of-data-en-archéologie" class="slide level2">
+<h2><em>An Ocean of data</em> (en archéologie)</h2>
+<center>
+<p><img src="https://raw.githubusercontent.com/iramat/iramat-dev/master/talks/2026-dypac/img/ocean-of-data-1.jpg" style="height: 500px;vertical-align: middle;"></p>
+</center>
 </section>
-<section id="vers-la-datafication" class="slide level2">
-<h2>vers la datafication</h2>
-<p>Digitalisation -&gt; CaD</p>
-</section></section>
+<section id="data-une-définition" class="slide level2">
+<h2>“Data”, une définition</h2>
+<br><br> “Reinterpretable representation of information in a formalized manner suitable for communication, interpretation or processing.”&nbsp; &nbsp; &nbsp;
+<div class="captiontext">
+– ISO/IEC 2382:2015 (<em>Information technology — Vocabulary</em>)<a href="#/footnotes" class="footnote-ref" id="fnref2" role="doc-noteref" data-footnote-href="#/fn2" onclick=""><sup>2</sup></a>, 2015
+</div>
+<aside></aside></section>
+<section id="la-datafication-du-monde" class="slide level2">
+<h2>La datafication du monde</h2>
+<br><br> “The drive towards <b>datafication</b> is rooted in a belief in the capacity of data to represent social life, sometimes better or more objectively than pre-digital (human) interpretations”&nbsp; &nbsp; &nbsp;
+<div class="captiontext">
+– Hintz, Arne; Lina Dencik; Karin Wahl-Jorgensen, 2019<a href="#/footnotes" class="footnote-ref" id="fnref3" role="doc-noteref" data-footnote-href="#/fn3" onclick=""><sup>3</sup></a>
+</div>
+<aside></aside></section></section>
 <section>
 <section id="un-peu-de-recherche-dans-un-monde-de-data-brutes" class="title-slide slide level1 center">
 <h1>Un peu de recherche dans un monde de (data) brutes</h1>
@@ -286,17 +399,91 @@ SSD professionnel
 </section>
 <section id="le-gold-standard-de-la-reproductibilité" class="slide level2">
 <h2>Le <em>gold standard</em> de la reproductibilité</h2>
-<p>data + code (code-as-data) -&gt; résultat</p>
+<p><br></p>
+<table style="width: 100%; table-layout: fixed; border-collapse: collapse; font-size: 25px;">
+<colgroup>
+<col style="width: 35%;">
+<col style="width: 30%;">
+<col style="width: 35%;">
+</colgroup>
+<thead>
+<tr>
+<th>
+Couche sémantique (<code>texte libre</code>)
+</th>
+<th>
+Couche logique (<code>JSON</code>)
+</th>
+<th>
+Couche algorithmique (<code>Python</code>)
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+Une hache en bronze, datée de l’âge du Bronze moyen, découverte dans un contexte funéraire.
+</td>
+<td>
+<pre style="font-size: 20px;"><code style="font-size: inherit;">json_data = {
+  "id": "OBJ_001",
+  "type": "hache",
+  "materiau": "bronze",
+  "periode": "Bronze moyen",
+  "contexte": "funéraire"
+}</code></pre>
+</td>
+<td>
+<pre style="font-size: 20px;"><code style="font-size: inherit;" class="language-python">import json
+
+objet = json.loads(json_data)
+
+if objet["materiau"] == "bronze":
+    print(objet["id"])</code></pre>
+</td>
+</tr>
+</tbody>
+</table>
+<p><span class="math display">\[
+\underbrace{\text{Data}}_{\text{C. sémantique}}
+\;\times\;
+\underbrace{\text{Code-as-data}}_{\text{C. logique + C. algorithmique}}
+\;\xrightarrow{\text{FAIR}}\;
+\text{Reproductibilité}
+\]</span></p>
 </section>
 <section id="une-architecture-pour-les-controller-toutes" class="slide level2">
 <h2>Une architecture pour les controller toutes</h2>
-<p>RDI + IaaS + <em>distributed</em> + <em>aggregated</em></p>
-</section></section>
-<section id="les-monnaies-des-artefacts-dignes-dêtre-collectionnés" class="title-slide slide level1 center">
-<h1>Les monnaies, des artefacts dignes d’être collectionnés</h1>
-<p>Spécificité des monnaies (numismatique) -&gt; …</p>
+<div class="iframe-figure">
+  <iframe width="1200" height="550" src="https://iramat-apps.cnrs.fr/portal/html/lod/iramat_workflow_interactive.html" title="RDI Iramat"></iframe>
+</div>
 </section>
+<section id="collection-numismatiques-à-liramat" class="slide level2">
+<h2>Collection numismatiques à l’IRAMAT</h2>
+<div class="iframe-figure">
+  <iframe width="1200" height="550" src="https://iramat-apps.cnrs.fr/numishare/almacir/" title="Numishare ALMACIR"></iframe>
+</div>
+</section></section>
+<section>
+<section id="chronologie-des-publications" class="title-slide slide level1 center">
+<h1>Chronologie des publications</h1>
 
+</section>
+<section id="nanopublications" class="slide level2">
+<h2>Nanopublications</h2>
+</section></section>
+<section>
+<section id="enjeux-pour-les-collectionneurs-du-xxie-siècle" class="title-slide slide level1 center">
+<h1>Enjeux pour les collectionneurs du XXI<sup>e</sup> siècle</h1>
+
+</section>
+<section id="programmation-lettrée" class="slide level2">
+<h2>Programmation lettrée</h2>
+<p><a href="https://colab.research.google.com/drive/1VjwnkV_C53aSnlbnPMNpM4EXJVEUjHU6" target="_blank" rel="noopener noreferrer"> Open the interactive ALMACIR notebook </a></p>
+</section>
+<section id="iaas-et-fédération-de-données-data-federation" class="slide level2">
+<h2>IaaS et fédération de données (<em>data federation</em>)</h2>
+</section></section>
 <section id="a-classer" class="title-slide slide level1 center">
 <h1>A CLASSER</h1>
 <p>Research Software engineer FAIR</p>
@@ -308,6 +495,8 @@ SSD professionnel
 
 <ol>
 <li id="fn1"><p><a href="https://www.dictionnaire-academie.fr/article/A9C2933" class="uri">https://www.dictionnaire-academie.fr/article/A9C2933</a></p></li>
+<li id="fn2"><p>Représentation réinterprétable d’une information, sous une forme conventionnelle adaptée à sa communication, son interprétation ou son traitement.</p></li>
+<li id="fn3"><p>La tendance à la <b>datafication</b> repose sur la conviction que les données ont la capacité de représenter la vie sociale, parfois mieux ou plus objectivement que les interprétations (humaines) pré-numériques.</p></li>
 </ol>
 </section>
     </div>
