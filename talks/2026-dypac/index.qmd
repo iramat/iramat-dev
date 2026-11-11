@@ -42,7 +42,7 @@ library(kableExtra)
 
 # Introduction
 
-## "Collection(s)", une définition
+## "Collection(s)" : une définition
 
 # Datafication: un monde de _data_
 

@@ -1,0 +1,37 @@
+[
+  {
+    "objectID": "index.html#collections-une-définition",
+    "href": "index.html#collections-une-définition",
+    "title": "Collection as Data",
+    "section": "“Collection(s)”, une définition",
+    "text": "“Collection(s)”, une définition"
+  },
+  {
+    "objectID": "index.html#data-une-définition",
+    "href": "index.html#data-une-définition",
+    "title": "Collection as Data",
+    "section": "“data”, une définition",
+    "text": "“data”, une définition\ndata facets"
+  },
+  {
+    "objectID": "index.html#vers-la-datafication",
+    "href": "index.html#vers-la-datafication",
+    "title": "Collection as Data",
+    "section": "vers la datafication",
+    "text": "vers la datafication\nDigitalisation -&gt; CaD"
+  },
+  {
+    "objectID": "index.html#le-gold-standard-de-la-reproductibilité",
+    "href": "index.html#le-gold-standard-de-la-reproductibilité",
+    "title": "Collection as Data",
+    "section": "Le gold standard de la reproductibilité",
+    "text": "Le gold standard de la reproductibilité\ndata + code (code-as-data) -&gt; résultat"
+  },
+  {
+    "objectID": "index.html#une-architecture-pour-les-controller-toutes",
+    "href": "index.html#une-architecture-pour-les-controller-toutes",
+    "title": "Collection as Data",
+    "section": "Une architecture pour les controller toutes",
+    "text": "Une architecture pour les controller toutes\nRDI + IaaS + distributed + aggregated"
+  }
+]
