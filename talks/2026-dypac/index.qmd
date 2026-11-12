@@ -295,21 +295,17 @@ $$
 
 ## Paroles d'expert: l'article de recherche
 
-"_In God we trust. All others must bring data_."&nbsp; &nbsp; &nbsp; <div class="captiontext">-- W. Edwards Deming</div>
+"_In God we trust. All others must bring data_."&nbsp; &nbsp; &nbsp; <div class="captiontext">-- W. Edwards Deming</div><br>
 
 :::: {.columns}
 
-::: {.column width="40%"}
+::: {.column width="50%"}
 
-<center>
-
-<img src='https://raw.githubusercontent.com/iramat/iramat-dev/master/talks/2026-dypac/img/BIB 4134-dog-paper.png' style='height: 500px;vertical-align: middle;'>
-
-</center>
+<img src='https://raw.githubusercontent.com/iramat/iramat-dev/master/talks/2026-dypac/img/BIB 4134-dog-paper.png' style='height: 400px;vertical-align: middle;'>
 
 :::
 
-::: {.column width="60%"}
+::: {.column width="50%"}
 
 <center>
 
