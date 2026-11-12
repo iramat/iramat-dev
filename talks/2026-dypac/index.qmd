@@ -292,17 +292,72 @@ $$
 
 # Chronologie des publications
 
+
 ## Paroles d'expert: l'article de recherche
 
-<br><br>
 "_In God we trust. All others must bring data_."&nbsp; &nbsp; &nbsp; <div class="captiontext">-- W. Edwards Deming</div>
+
+:::: {.columns}
+
+::: {.column width="40%"}
 
 <center>
 
-<img src='Sokal_au_carre.jpg' style='height: 300px;vertical-align: middle;'>
-<div class="captiontext">... , deux des trois auteurs du canular 'Sokal au carré'. Par Mike Nayna, CC BY 3.0, https://commons.wikimedia.org/w/index.php?curid=73725731</div>
+<img src='https://raw.githubusercontent.com/iramat/iramat-dev/master/talks/2026-dypac/img/BIB 4134-dog-paper.png' style='height: 500px;vertical-align: middle;'>
 
 </center>
+
+:::
+
+::: {.column width="60%"}
+
+<center>
+
+
+```{=html}
+<div class="iframe-figure" style="width:100%; aspect-ratio:16/9;">
+  <iframe
+    src="https://commons.wikimedia.org/wiki/File:Academics_expose_corruption_in_Grievance_Studies.webm?embedplayer=true&start=9"
+    title="Academics expose corruption in Grievance Studies"
+    loading="lazy"
+    allow="autoplay; fullscreen; picture-in-picture"
+    allowfullscreen
+    style="width:100%; height:100%; border:0; display:block;">
+  </iframe>
+</div>
+```
+<div class="captiontext">James A. Lindsay, Helen Pluckrose et Peter Boghossian, les auteurs du canular 'Sokal au carré'.</div>
+
+</center>
+:::
+
+::::
+
+
+
+## Paroles d'expert: l'article de recherche {data-visibility=hidden}
+
+
+:::: {.columns}
+
+::: {.column width="60%"}
+<br>
+"_In God we trust. All others must bring data_."&nbsp; &nbsp; &nbsp; <div class="captiontext">-- W. Edwards Deming</div>
+<br>
+
+:::
+
+::: {.column width="40%"}
+
+<center>
+
+<img src='https://raw.githubusercontent.com/iramat/iramat-dev/master/talks/2026-dypac/img/Sokal_au_carre.jpg' style='height: 300px;vertical-align: middle;'>
+<div class="captiontext">James A. Lindsay et Helen Pluckrose, deux des trois auteurs du canular 'Sokal au carré'. Par Mike Nayna, CC BY 3.0, https://commons.wikimedia.org/w/index.php?curid=73725731</div>
+
+</center>
+:::
+
+::::
 
 
 
