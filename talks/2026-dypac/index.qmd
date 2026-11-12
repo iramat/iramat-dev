@@ -334,7 +334,7 @@ https://numismatics.org/resources/
 
 <center>
 
-<img src='https://raw.githubusercontent.com/iramat/iramat-dev/master/talks/2026-dypac/img/joad_huet.png' style='height: 300px;vertical-align: middle;'>
+<img src='https://raw.githubusercontent.com/iramat/iramat-dev/master/talks/2026-dypac/img/joad_huet.png' style='height: 350px;vertical-align: middle;'>
 
 </center>
 
