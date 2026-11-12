@@ -1,0 +1,323 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:y="http://www.yworks.com/xml/graphml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://www.yworks.com/xml/schema/graphml/1.1/ygraphml.xsd">
+  <key id="d0" for="node" yfiles.type="nodegraphics"/>
+  <key id="d1" for="edge" yfiles.type="edgegraphics"/>
+  <graph id="G" edgedefault="directed">
+    <node id="agile">
+      <data key="d0">
+        <y:ShapeNode>
+          <y:Geometry x="80" y="70" width="250" height="70"/>
+          <y:Fill color="#D9EAFE" transparent="false"/>
+          <y:BorderStyle color="#526579" type="line" width="1.5"/>
+          <y:NodeLabel alignment="center" fontFamily="Dialog" fontSize="19" fontStyle="bold" textColor="#203044" modelName="internal" modelPosition="c">AGILE METHODS</y:NodeLabel>
+          <y:Shape type="roundrectangle"/>
+        </y:ShapeNode>
+      </data>
+    </node>
+    <node id="authority">
+      <data key="d0">
+        <y:ShapeNode>
+          <y:Geometry x="750" y="70" width="270" height="70"/>
+          <y:Fill color="#DDF5E4" transparent="false"/>
+          <y:BorderStyle color="#526579" type="line" width="1.5"/>
+          <y:NodeLabel alignment="center" fontFamily="Dialog" fontSize="19" fontStyle="bold" textColor="#203044" modelName="internal" modelPosition="c">AUTHORITATIVE DATA</y:NodeLabel>
+          <y:Shape type="roundrectangle"/>
+        </y:ShapeNode>
+      </data>
+    </node>
+    <node id="federation">
+      <data key="d0">
+        <y:ShapeNode>
+          <y:Geometry x="750" y="400" width="270" height="70"/>
+          <y:Fill color="#E7E0FF" transparent="false"/>
+          <y:BorderStyle color="#526579" type="line" width="1.5"/>
+          <y:NodeLabel alignment="center" fontFamily="Dialog" fontSize="19" fontStyle="bold" textColor="#203044" modelName="internal" modelPosition="c">DATA FEDERATION</y:NodeLabel>
+          <y:Shape type="roundrectangle"/>
+        </y:ShapeNode>
+      </data>
+    </node>
+    <node id="iaas">
+      <data key="d0">
+        <y:ShapeNode>
+          <y:Geometry x="80" y="400" width="270" height="70"/>
+          <y:Fill color="#FFE8CC" transparent="false"/>
+          <y:BorderStyle color="#526579" type="line" width="1.5"/>
+          <y:NodeLabel alignment="center" fontFamily="Dialog" fontSize="17" fontStyle="bold" textColor="#203044" modelName="internal" modelPosition="c">INFRASTRUCTURE AS A SERVICE
+(IaaS)</y:NodeLabel>
+          <y:Shape type="roundrectangle"/>
+        </y:ShapeNode>
+      </data>
+    </node>
+    <node id="git">
+      <data key="d0">
+        <y:ShapeNode>
+          <y:Geometry x="80" y="190" width="250" height="70"/>
+          <y:Fill color="#F1F7FF" transparent="false"/>
+          <y:BorderStyle color="#526579" type="line" width="1.5"/>
+          <y:NodeLabel alignment="center" fontFamily="Dialog" fontSize="15" fontStyle="plain" textColor="#203044" modelName="internal" modelPosition="c">GitHub / GitLab
+project management</y:NodeLabel>
+          <y:Shape type="roundrectangle"/>
+        </y:ShapeNode>
+      </data>
+    </node>
+    <node id="ci">
+      <data key="d0">
+        <y:ShapeNode>
+          <y:Geometry x="80" y="290" width="250" height="70"/>
+          <y:Fill color="#F1F7FF" transparent="false"/>
+          <y:BorderStyle color="#526579" type="line" width="1.5"/>
+          <y:NodeLabel alignment="center" fontFamily="Dialog" fontSize="15" fontStyle="plain" textColor="#203044" modelName="internal" modelPosition="c">Versioned code · tests
+CI/CD · iterative releases</y:NodeLabel>
+          <y:Shape type="roundrectangle"/>
+        </y:ShapeNode>
+      </data>
+    </node>
+    <node id="source">
+      <data key="d0">
+        <y:ShapeNode>
+          <y:Geometry x="750" y="185" width="270" height="70"/>
+          <y:Fill color="#EFFBF1" transparent="false"/>
+          <y:BorderStyle color="#526579" type="line" width="1.5"/>
+          <y:NodeLabel alignment="center" fontFamily="Dialog" fontSize="15" fontStyle="plain" textColor="#203044" modelName="internal" modelPosition="c">CHIPS (source) · BASE Cu/Ag/Fe
+validated reference datasets</y:NodeLabel>
+          <y:Shape type="roundrectangle"/>
+        </y:ShapeNode>
+      </data>
+    </node>
+    <node id="govern">
+      <data key="d0">
+        <y:ShapeNode>
+          <y:Geometry x="750" y="285" width="270" height="70"/>
+          <y:Fill color="#EFFBF1" transparent="false"/>
+          <y:BorderStyle color="#526579" type="line" width="1.5"/>
+          <y:NodeLabel alignment="center" fontFamily="Dialog" fontSize="15" fontStyle="plain" textColor="#203044" modelName="internal" modelPosition="c">Stewardship · provenance
+identifiers · quality control</y:NodeLabel>
+          <y:Shape type="roundrectangle"/>
+        </y:ShapeNode>
+      </data>
+    </node>
+    <node id="api">
+      <data key="d0">
+        <y:ShapeNode>
+          <y:Geometry x="750" y="520" width="270" height="70"/>
+          <y:Fill color="#F4F0FF" transparent="false"/>
+          <y:BorderStyle color="#526579" type="line" width="1.5"/>
+          <y:NodeLabel alignment="center" fontFamily="Dialog" fontSize="15" fontStyle="plain" textColor="#203044" modelName="internal" modelPosition="c">APIs / PostgREST · standards
+FAIR metadata · shared identifiers</y:NodeLabel>
+          <y:Shape type="roundrectangle"/>
+        </y:ShapeNode>
+      </data>
+    </node>
+    <node id="services">
+      <data key="d0">
+        <y:ShapeNode>
+          <y:Geometry x="750" y="630" width="270" height="70"/>
+          <y:Fill color="#F4F0FF" transparent="false"/>
+          <y:BorderStyle color="#526579" type="line" width="1.5"/>
+          <y:NodeLabel alignment="center" fontFamily="Dialog" fontSize="15" fontStyle="plain" textColor="#203044" modelName="internal" modelPosition="c">CHIPS_D · Numishare
+ALMACIR · third-party projects</y:NodeLabel>
+          <y:Shape type="roundrectangle"/>
+        </y:ShapeNode>
+      </data>
+    </node>
+    <node id="vm">
+      <data key="d0">
+        <y:ShapeNode>
+          <y:Geometry x="80" y="520" width="270" height="70"/>
+          <y:Fill color="#FFF5E8" transparent="false"/>
+          <y:BorderStyle color="#526579" type="line" width="1.5"/>
+          <y:NodeLabel alignment="center" fontFamily="Dialog" fontSize="15" fontStyle="plain" textColor="#203044" modelName="internal" modelPosition="c">VM / compute · network
+PostgreSQL · storage · backup</y:NodeLabel>
+          <y:Shape type="roundrectangle"/>
+        </y:ShapeNode>
+      </data>
+    </node>
+    <node id="web">
+      <data key="d0">
+        <y:ShapeNode>
+          <y:Geometry x="80" y="630" width="270" height="70"/>
+          <y:Fill color="#FFF5E8" transparent="false"/>
+          <y:BorderStyle color="#526579" type="line" width="1.5"/>
+          <y:NodeLabel alignment="center" fontFamily="Dialog" fontSize="15" fontStyle="plain" textColor="#203044" modelName="internal" modelPosition="c">Web server · Solr · IIIF
+dashboards · project websites</y:NodeLabel>
+          <y:Shape type="roundrectangle"/>
+        </y:ShapeNode>
+      </data>
+    </node>
+    <node id="center">
+      <data key="d0">
+        <y:ShapeNode>
+          <y:Geometry x="410" y="300" width="275" height="150"/>
+          <y:Fill color="#EAF0F4" transparent="false"/>
+          <y:BorderStyle color="#526579" type="line" width="1.5"/>
+          <y:NodeLabel alignment="center" fontFamily="Dialog" fontSize="17" fontStyle="plain" textColor="#203044" modelName="internal" modelPosition="c">RESEARCH DATA
+INFRASTRUCTURE
+
+Reusable · interoperable
+reproducible research</y:NodeLabel>
+          <y:Shape type="roundrectangle"/>
+        </y:ShapeNode>
+      </data>
+    </node>
+    <edge id="e1" source="agile" target="git">
+      <data key="d1">
+        <y:PolyLineEdge>
+          <y:LineStyle color="#64748B" type="line" width="2.0"/>
+          <y:Arrows source="none" target="standard"/>
+          <y:EdgeLabel fontFamily="Dialog" fontSize="11" textColor="#344054" modelName="six_pos" modelPosition="tail">organises</y:EdgeLabel>
+          <y:BendStyle smoothed="false"/>
+        </y:PolyLineEdge>
+      </data>
+    </edge>
+    <edge id="e2" source="git" target="ci">
+      <data key="d1">
+        <y:PolyLineEdge>
+          <y:LineStyle color="#64748B" type="line" width="2.0"/>
+          <y:Arrows source="none" target="standard"/>
+          <y:EdgeLabel fontFamily="Dialog" fontSize="11" textColor="#344054" modelName="six_pos" modelPosition="tail">enables</y:EdgeLabel>
+          <y:BendStyle smoothed="false"/>
+        </y:PolyLineEdge>
+      </data>
+    </edge>
+    <edge id="e3" source="authority" target="source">
+      <data key="d1">
+        <y:PolyLineEdge>
+          <y:LineStyle color="#64748B" type="line" width="2.0"/>
+          <y:Arrows source="none" target="standard"/>
+          <y:EdgeLabel fontFamily="Dialog" fontSize="11" textColor="#344054" modelName="six_pos" modelPosition="tail">defines</y:EdgeLabel>
+          <y:BendStyle smoothed="false"/>
+        </y:PolyLineEdge>
+      </data>
+    </edge>
+    <edge id="e4" source="source" target="govern">
+      <data key="d1">
+        <y:PolyLineEdge>
+          <y:LineStyle color="#64748B" type="line" width="2.0"/>
+          <y:Arrows source="none" target="standard"/>
+          <y:EdgeLabel fontFamily="Dialog" fontSize="11" textColor="#344054" modelName="six_pos" modelPosition="tail">documents</y:EdgeLabel>
+          <y:BendStyle smoothed="false"/>
+        </y:PolyLineEdge>
+      </data>
+    </edge>
+    <edge id="e5" source="federation" target="api">
+      <data key="d1">
+        <y:PolyLineEdge>
+          <y:LineStyle color="#64748B" type="line" width="2.0"/>
+          <y:Arrows source="none" target="standard"/>
+          <y:EdgeLabel fontFamily="Dialog" fontSize="11" textColor="#344054" modelName="six_pos" modelPosition="tail">connects</y:EdgeLabel>
+          <y:BendStyle smoothed="false"/>
+        </y:PolyLineEdge>
+      </data>
+    </edge>
+    <edge id="e6" source="api" target="services">
+      <data key="d1">
+        <y:PolyLineEdge>
+          <y:LineStyle color="#64748B" type="line" width="2.0"/>
+          <y:Arrows source="none" target="standard"/>
+          <y:EdgeLabel fontFamily="Dialog" fontSize="11" textColor="#344054" modelName="six_pos" modelPosition="tail">exposes</y:EdgeLabel>
+          <y:BendStyle smoothed="false"/>
+        </y:PolyLineEdge>
+      </data>
+    </edge>
+    <edge id="e7" source="iaas" target="vm">
+      <data key="d1">
+        <y:PolyLineEdge>
+          <y:LineStyle color="#64748B" type="line" width="2.0"/>
+          <y:Arrows source="none" target="standard"/>
+          <y:EdgeLabel fontFamily="Dialog" fontSize="11" textColor="#344054" modelName="six_pos" modelPosition="tail">provisions</y:EdgeLabel>
+          <y:BendStyle smoothed="false"/>
+        </y:PolyLineEdge>
+      </data>
+    </edge>
+    <edge id="e8" source="vm" target="web">
+      <data key="d1">
+        <y:PolyLineEdge>
+          <y:LineStyle color="#64748B" type="line" width="2.0"/>
+          <y:Arrows source="none" target="standard"/>
+          <y:EdgeLabel fontFamily="Dialog" fontSize="11" textColor="#344054" modelName="six_pos" modelPosition="tail">hosts</y:EdgeLabel>
+          <y:BendStyle smoothed="false"/>
+        </y:PolyLineEdge>
+      </data>
+    </edge>
+    <edge id="e9" source="ci" target="center">
+      <data key="d1">
+        <y:PolyLineEdge>
+          <y:LineStyle color="#3775C8" type="dashed" width="2.0"/>
+          <y:Arrows source="none" target="standard"/>
+          <y:EdgeLabel fontFamily="Dialog" fontSize="11" textColor="#344054" modelName="six_pos" modelPosition="tail">evolves</y:EdgeLabel>
+          <y:BendStyle smoothed="false"/>
+        </y:PolyLineEdge>
+      </data>
+    </edge>
+    <edge id="e10" source="govern" target="center">
+      <data key="d1">
+        <y:PolyLineEdge>
+          <y:LineStyle color="#2C9657" type="dashed" width="2.0"/>
+          <y:Arrows source="none" target="standard"/>
+          <y:EdgeLabel fontFamily="Dialog" fontSize="11" textColor="#344054" modelName="six_pos" modelPosition="tail">establishes trust</y:EdgeLabel>
+          <y:BendStyle smoothed="false"/>
+        </y:PolyLineEdge>
+      </data>
+    </edge>
+    <edge id="e11" source="center" target="api">
+      <data key="d1">
+        <y:PolyLineEdge>
+          <y:LineStyle color="#8061C8" type="dashed" width="2.0"/>
+          <y:Arrows source="none" target="standard"/>
+          <y:EdgeLabel fontFamily="Dialog" fontSize="11" textColor="#344054" modelName="six_pos" modelPosition="tail">integrates</y:EdgeLabel>
+          <y:BendStyle smoothed="false"/>
+        </y:PolyLineEdge>
+      </data>
+    </edge>
+    <edge id="e12" source="web" target="center">
+      <data key="d1">
+        <y:PolyLineEdge>
+          <y:LineStyle color="#D18A32" type="dashed" width="2.0"/>
+          <y:Arrows source="none" target="standard"/>
+          <y:EdgeLabel fontFamily="Dialog" fontSize="11" textColor="#344054" modelName="six_pos" modelPosition="tail">runs services</y:EdgeLabel>
+          <y:BendStyle smoothed="false"/>
+        </y:PolyLineEdge>
+      </data>
+    </edge>
+    <edge id="e13" source="source" target="api">
+      <data key="d1">
+        <y:PolyLineEdge>
+          <y:LineStyle color="#2C9657" type="dashed" width="2.0"/>
+          <y:Arrows source="none" target="standard"/>
+          <y:EdgeLabel fontFamily="Dialog" fontSize="11" textColor="#344054" modelName="six_pos" modelPosition="tail">publishes trusted data</y:EdgeLabel>
+          <y:BendStyle smoothed="false"/>
+        </y:PolyLineEdge>
+      </data>
+    </edge>
+    <edge id="e14" source="ci" target="web">
+      <data key="d1">
+        <y:PolyLineEdge>
+          <y:LineStyle color="#3775C8" type="dashed" width="2.0"/>
+          <y:Arrows source="none" target="standard"/>
+          <y:EdgeLabel fontFamily="Dialog" fontSize="11" textColor="#344054" modelName="six_pos" modelPosition="tail">deploys / monitors</y:EdgeLabel>
+          <y:BendStyle smoothed="false"/>
+        </y:PolyLineEdge>
+      </data>
+    </edge>
+    <edge id="e15" source="vm" target="services">
+      <data key="d1">
+        <y:PolyLineEdge>
+          <y:LineStyle color="#D18A32" type="dashed" width="2.0"/>
+          <y:Arrows source="none" target="standard"/>
+          <y:EdgeLabel fontFamily="Dialog" fontSize="11" textColor="#344054" modelName="six_pos" modelPosition="tail">hosts federated nodes</y:EdgeLabel>
+          <y:BendStyle smoothed="false"/>
+        </y:PolyLineEdge>
+      </data>
+    </edge>
+    <edge id="e16" source="services" target="govern">
+      <data key="d1">
+        <y:PolyLineEdge>
+          <y:LineStyle color="#8061C8" type="dashed" width="2.0"/>
+          <y:Arrows source="none" target="standard"/>
+          <y:EdgeLabel fontFamily="Dialog" fontSize="11" textColor="#344054" modelName="six_pos" modelPosition="tail">traces provenance</y:EdgeLabel>
+          <y:BendStyle smoothed="false"/>
+        </y:PolyLineEdge>
+      </data>
+    </edge>
+  </graph>
+</graphml>

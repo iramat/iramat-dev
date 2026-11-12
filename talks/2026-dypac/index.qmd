@@ -1,15 +1,15 @@
 ---
 title: "*Collection as Data*"
-subtitle: "de la reproduction à l'information"
+subtitle: "**de la reproduction à l'information**"
 author:
   - name: Thomas Huet
     affiliation: 
       - id: cnrs
-        name: <span style="font-size:17pt">IRAMAT-CNRS</span>
+        name: <span style="font-size:20pt">IRAMAT-CNRS</span>
 title-slide-attributes:
     data-background-image: "img/d6b2edde-c0ed-4298-9c67-e3fbfab650dd.png"
     data-background-size: "120%"
-    data-background-opacity: "0.3"
+    data-background-opacity: "0.2"
     data-notes: Lorem
 format:
   revealjs: 
@@ -29,7 +29,7 @@ format:
     # self-contained: true
     # embed-resources: true
     # logo: https://raw.githubusercontent.com/zoometh/neonet/master/doc/img/neonet.png
-    footer: "<small>Thomas Huet - <img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/inst-upsac-dypac.png' style='height: 20px;vertical-align: middle;'> séminaire DYPAC, vendredi 13 novembre 2026</small>"
+    footer: "<small>Thomas Huet - <img src='https://raw.githubusercontent.com/zoometh/thomashuet/master/img/inst-upsac-dypac.png' style='height: 25px;vertical-align: middle;'> séminaire DYPAC, vendredi 13 novembre 2026</small>"
     margin: 0
     width: 1200
 ---
@@ -40,7 +40,7 @@ library(kableExtra)
 ```
 
 
-# Introduction
+# Introduction {background-image="img/d6b2edde-c0ed-4298-9c67-e3fbfab650dd.png" background-opacity=0.1 background-size="120%"}
 
 ## "Collection(s)" : une définition
 
@@ -49,14 +49,13 @@ library(kableExtra)
 
 [^1]: <https://www.dictionnaire-academie.fr/article/A9C2933>
 
-
 ## "Collection(s)" : une augmentation
 
 :::: {.columns}
 
 ::: {.column width="60%"}
 <img src='https://raw.githubusercontent.com/iramat/iramat-dev/master/talks/2026-dypac/img/Library_of_Ashurbanipal.jpg' style='height: 500px;vertical-align: middle;'>
-<div class="captiontext"> Bibliothèque d'Assurbanipal (1500-539 BCE) au <em>British Museum</em>.<br> By Gary Todd - https://www.flickr.com/photos/101561334@N08/36562516345/, CC0, https://commons.wikimedia.org/w/index.php?curid=91138912</div>
+<div class="captiontext"> Bibliothèque d'Assurbanipal (1500-539 BCE) au <em>British Museum</em>. Crédit: Gary Todd - CC0, https://commons.wikimedia.org/w/index.php?curid=91138912</div>
 :::
 
 ::: {.column width="40%"}
@@ -111,6 +110,15 @@ library(kableExtra)
 </small>
 :::
 ::::
+
+## Un océan de données (en archéologie)
+
+<center>
+
+<img src='https://raw.githubusercontent.com/iramat/iramat-dev/master/talks/2026-dypac/img/ocean-of-data-1.jpg' style='height: 500px;vertical-align: middle;'>
+
+</center>
+
 
 ## Le mouvement _collection-as-data_ (1/2)
 
@@ -184,16 +192,7 @@ library(kableExtra)
 
 </center>
 
-# Datafication: un monde de _data_
-
-## _An Ocean of data_ (en archéologie)
-
-<center>
-
-<img src='https://raw.githubusercontent.com/iramat/iramat-dev/master/talks/2026-dypac/img/ocean-of-data-1.jpg' style='height: 500px;vertical-align: middle;'>
-
-</center>
-
+# Datafication: un monde de _data_ {background-image="img/d6b2edde-c0ed-4298-9c67-e3fbfab650dd.png" background-opacity=0.1 background-size="120%"}
 
 ## "Data", une définition
 
@@ -202,14 +201,14 @@ library(kableExtra)
 
 [^2]: Représentation réinterprétable d'une information, sous une forme conventionnelle adaptée à sa communication, son interprétation ou son traitement.
 
-## La datafication du monde
+## Datafication du monde
 
 <br><br>
 "The drive towards <b>datafication</b> is rooted in a belief in the capacity of data to represent social life, sometimes better or more objectively than pre-digital (human) interpretations"&nbsp; &nbsp; &nbsp; <div class="captiontext"> -- Hintz, Arne; Lina Dencik; Karin Wahl-Jorgensen, 2019[^3]</div>
 
 [^3]: La tendance à la <b>datafication</b> repose sur la conviction que les données ont la capacité de représenter la vie sociale, parfois mieux ou plus objectivement que les interprétations (humaines) pré-numériques.
 
-# Un peu de recherche dans un monde de (data) brutes
+# Un peu de recherche dans un monde de (data) brutes {background-image="img/d6b2edde-c0ed-4298-9c67-e3fbfab650dd.png" background-opacity=0.1 background-size="120%"}
 
 ## Le _gold standard_ de la reproductibilité
 
@@ -275,13 +274,13 @@ $$
 </div>
 ```
 
-# Collectioner à l'Iramat
+# Collectioner à l'Iramat {background-image="img/d6b2edde-c0ed-4298-9c67-e3fbfab650dd.png" background-opacity=0.1 background-size="120%"}
 
-## Collections numismatiques à l'IRAMAT
+## Collectionner les monnaies
 
 ```{=html}
 <div class="iframe-figure">
-  <iframe width="1200" height="500"
+  <iframe width="1200" height="520"
           src="https://iramat-apps.cnrs.fr/numishare/almacir/"
           title="Numishare ALMACIR"></iframe>
 </div>
@@ -290,18 +289,38 @@ $$
 </div>
 
 
-# Chronologie des publications
+## Collectionner les faciès métallographiques
+
+```{=html}
+<div class="iframe-figure">
+  <iframe width="1200" height="520"
+          src="https://iramat-apps.cnrs.fr/view/metallograph/barre531_compare_landing.html"
+          title="Numishare ALMACIR"></iframe>
+</div>
+```
+<div class="captiontext">_currency-bar_ gaulois<a href="https://iramat-apps.cnrs.fr/view/metallograph/barre531_compare_landing.html" target="_blank">https://iramat-apps.cnrs.fr/view/metallograph/barre531_compare_landing.html</a>
+</div>
+
+
+
+
+# Chronologie des publications {background-image="img/d6b2edde-c0ed-4298-9c67-e3fbfab650dd.png" background-opacity=0.1 background-size="120%"}
 
 
 ## Paroles d'expert: l'article de recherche
 
+<center>
+
+<br>
 "_In God we trust. All others must bring data_."&nbsp; &nbsp; &nbsp; <div class="captiontext">-- W. Edwards Deming</div><br>
+
+</center>
 
 :::: {.columns}
 
 ::: {.column width="50%"}
 
-<img src='https://raw.githubusercontent.com/iramat/iramat-dev/master/talks/2026-dypac/img/BIB 4134-dog-paper.png' style='height: 400px;vertical-align: middle;'>
+<img src='https://raw.githubusercontent.com/iramat/iramat-dev/master/talks/2026-dypac/img/BIB 4134-dog-paper.png' style='height: 290px;'><div class="captiontext">Le "_dog paper_" publié par Lindsay, Pluckrose et Boghossiansous sous le pseudo d'Helen Wilson, 2018 </div>
 
 :::
 
@@ -322,38 +341,13 @@ $$
   </iframe>
 </div>
 ```
-<div class="captiontext">James A. Lindsay, Helen Pluckrose et Peter Boghossian, les auteurs du canular 'Sokal au carré'.</div>
+<div class="captiontext">James A. Lindsay, Helen Pluckrose et Peter Boghossian auteurs du canular 'Sokal au carré', 2018.</div>
 
 </center>
 :::
 
 ::::
 
-
-
-## Paroles d'expert: l'article de recherche {data-visibility=hidden}
-
-
-:::: {.columns}
-
-::: {.column width="60%"}
-<br>
-"_In God we trust. All others must bring data_."&nbsp; &nbsp; &nbsp; <div class="captiontext">-- W. Edwards Deming</div>
-<br>
-
-:::
-
-::: {.column width="40%"}
-
-<center>
-
-<img src='https://raw.githubusercontent.com/iramat/iramat-dev/master/talks/2026-dypac/img/Sokal_au_carre.jpg' style='height: 300px;vertical-align: middle;'>
-<div class="captiontext">James A. Lindsay et Helen Pluckrose, deux des trois auteurs du canular 'Sokal au carré'. Par Mike Nayna, CC BY 3.0, https://commons.wikimedia.org/w/index.php?curid=73725731</div>
-
-</center>
-:::
-
-::::
 
 
 
@@ -391,7 +385,7 @@ $$
 
 :::: {.columns}
 
-::: {.column width="55%"}
+::: {.column width="50%"}
 
 <center>
 
@@ -402,7 +396,12 @@ $$
 
 :::
 
-::: {.column width="45%"}
+::: {.column width="10%"}
+  &nbsp; &nbsp;
+:::
+
+
+::: {.column width="40%"}
 <p style="font-size: 30px;">
 **Nanopublication** :<br>
 Unité minimale d'information[^6] publiée selon un format structuré, permettant son identification, son interopérabilité et sa réutilisation. <br><br>
@@ -414,7 +413,7 @@ Unité minimale d'information[^6] publiée selon un format structuré, permettan
 
 [^6]: i.e. une seule affirmation scientifique 
 
-# Enjeux pour les collectionneurs du XXI<sup>e</sup> siècle
+# Enjeux pour les collectionneurs du 21<sup>e</sup> siècle {background-image="img/d6b2edde-c0ed-4298-9c67-e3fbfab650dd.png" background-opacity=0.1 background-size="120%"}
 
 
 ## Programmation lettrée
@@ -426,9 +425,43 @@ Unité minimale d'information[^6] publiée selon un format structuré, permettan
   Ouvrir le Jupyter NB
 </a>
 
-## IaaS et fédération de données (_data federation_)
 
-# A CLASSER
+## <small>Infrastructure de données de recherche (RDI)</small>
 
-Research Software engineer
-FAIR
+
+<table style="width: 100%; table-layout: fixed; border-collapse: collapse; font-size: 30px;">
+  <colgroup>
+    <col style="width: 30%;">
+    <col style="width: 70%;">
+  </colgroup>
+  <thead>
+    <tr>
+      <th style="text-align: left;">Notion</th>
+      <th style="text-align: left;">Définition</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Méthodes AGILE</strong></td>
+      <td>Développement itératif et incrémental, fondé sur les retours des utilisateurs.</td>
+    </tr>
+    <tr>
+      <td><strong>Fédération des données</strong></td>
+      <td>Interconnexion de sources distribuées, liées et autonomes.</td>
+    </tr>
+    <tr>
+      <td><strong>Authoritative data</strong> (Données faisant autorité)</td>
+      <td>Données accessibles issues d'une source reconnue comme référence légitime, traçable et responsable.</td>
+    </tr>
+    <tr>
+      <td><strong>IaaS</strong> (Infrastructure comme Service)</td>
+      <td>Mise à disposition à la demande de ressources informatiques virtualisées : calcul, stockage et réseau.</td>
+    </tr>
+  </tbody>
+</table>
+
+# Conclusion {background-image="img/d6b2edde-c0ed-4298-9c67-e3fbfab650dd.png" background-opacity=0.1 background-size="120%"}
+
+##
+
+ICI
