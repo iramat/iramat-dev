@@ -334,14 +334,15 @@ https://numismatics.org/resources/
 
 <center>
 
-<img src='https://raw.githubusercontent.com/iramat/iramat-dev/master/talks/2026-dypac/img/joad_huet.png' style='height: 350px;vertical-align: middle;'>
-
+<img src='https://raw.githubusercontent.com/iramat/iramat-dev/master/talks/2026-dypac/img/joad_huet.png' style='height: 280px;vertical-align: middle;'>
+<div class="captiontext">exemples de papiers de données dans le _Journal of open archaeology data_</div>
 </center>
 
 :::
 
 ::: {.column width="40%"}
-Ipsum
+**nanopublication** : unité minimale d'information publiée selon un format structuré, permettant son identification, son interopérabilité et sa réutilisation
+
 :::
 
 ::::
