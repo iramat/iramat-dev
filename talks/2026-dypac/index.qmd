@@ -298,8 +298,6 @@ https://numismatics.org/resources/
 
 ## Articles de données et nanopublications
 
-<br>
-
 <table style="width: 100%; table-layout: fixed; border-collapse: collapse; font-size: 30px; text-align: center;">
   <colgroup>
     <col style="width: 30%;">
@@ -336,7 +334,7 @@ https://numismatics.org/resources/
 
 <center>
 
-<img src='https://raw.githubusercontent.com/iramat/iramat-dev/master/talks/2026-dypac/img/joad_huet.jpg' style='height: 200px;vertical-align: middle;'>
+<img src='https://raw.githubusercontent.com/iramat/iramat-dev/master/talks/2026-dypac/img/joad_huet.png' style='height: 300px;vertical-align: middle;'>
 
 </center>
 
