@@ -275,7 +275,11 @@ $$
 </div>
 ```
 
-## Collection numismatiques à l'IRAMAT
+# Collectioner à l'Iramat
+
+## Collections numismatiques à l'IRAMAT
+
+https://numismatics.org/resources/
 
 ```{=html}
 <div class="iframe-figure">
@@ -292,17 +296,65 @@ $$
 <br><br>
 "_In God we trust. All others must bring data_."&nbsp; &nbsp; &nbsp; <div class="captiontext">-- W. Edwards Deming</div>
 
-[^1]: <https://www.dictionnaire-academie.fr/article/A9C2933>
-
 ## Articles de données et nanopublications
+
+<br>
+
+<table style="width: 100%; table-layout: fixed; border-collapse: collapse; font-size: 30px; text-align: center;">
+  <colgroup>
+    <col style="width: 30%;">
+    <col style="width: 30%;">
+    <col style="width: 35%;">
+  </colgroup>
+  <thead>
+    <tr>
+      <th scope="col" colspan="3" style="text-align: center;">
+        <b>Science</b> ouverte
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center; vertical-align: middle;">
+        <b>Données</b> ouvertes
+      </td>
+      <td style="text-align: center; vertical-align: middle;">
+        <b>Code</b> open source
+      </td>
+      <td style="text-align: center; vertical-align: middle;">
+        <b>Publication</b> open access
+      </td>
+    </tr>
+  </tbody>
+</table>
+<div class="captiontext">Piliers de la Science ouverte</div>
+<br>
+
+:::: {.columns}
+
+::: {.column width="60%"}
+
+<center>
+
+<img src='https://raw.githubusercontent.com/iramat/iramat-dev/master/talks/2026-dypac/img/joad_huet.jpg' style='height: 200px;vertical-align: middle;'>
+
+</center>
+
+:::
+
+::: {.column width="40%"}
+Ipsum
+:::
+
+::::
 
 # Enjeux pour les collectionneurs du XXI<sup>e</sup> siècle
 
 
 ## Programmation lettrée
 
-
-<a href="https://colab.research.google.com/drive/1VjwnkV_C53aSnlbnPMNpM4EXJVEUjHU6"
+<br>
+<a href="https://colab.research.google.com/drive/1VjwnkV_C53aSnlbnPMNpM4EXJVEUjHU6#scrollTo=ESimU4fjpySz"
    target="_blank"
    rel="noopener noreferrer">
   Open the interactive ALMACIR notebook
