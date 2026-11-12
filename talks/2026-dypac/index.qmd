@@ -330,22 +330,27 @@ https://numismatics.org/resources/
 
 :::: {.columns}
 
-::: {.column width="60%"}
+::: {.column width="55%"}
 
 <center>
 
-<img src='https://raw.githubusercontent.com/iramat/iramat-dev/master/talks/2026-dypac/img/joad_huet.png' style='height: 280px;vertical-align: middle;'>
-<div class="captiontext">exemples de papiers de données dans le _Journal of open archaeology data_</div>
+<img src='https://raw.githubusercontent.com/iramat/iramat-dev/master/talks/2026-dypac/img/joad_huet.png' style='height: 300px;vertical-align: middle;'>
+<div class="captiontext">Exemples de papiers de données dans le _Journal of open archaeology data_</div>
 </center>
 
 :::
 
-::: {.column width="40%"}
-**nanopublication** : unité minimale d'information publiée selon un format structuré, permettant son identification, son interopérabilité et sa réutilisation
-
+::: {.column width="45%"}
+<p style="font-size: 30px;">
+**Nanopublication** :<br>
+Unité minimale d'information[^6] publiée selon un format structuré, permettant son identification, son interopérabilité et sa réutilisation. <br><br>
+<u>Exemple</u> : définition de la période '<a href="http://n2t.net/ark:/99152/p0m64tdd5n9" target="_blank">Islamic, Early [Umayyad/Abbasid]</a>' dans le _gazetteer_ PeriodO
+</p>
 :::
 
 ::::
+
+[^6]: i.e. une seule affirmation scientifique 
 
 # Enjeux pour les collectionneurs du XXI<sup>e</sup> siècle
 
@@ -356,7 +361,7 @@ https://numismatics.org/resources/
 <a href="https://colab.research.google.com/drive/1VjwnkV_C53aSnlbnPMNpM4EXJVEUjHU6#scrollTo=ESimU4fjpySz"
    target="_blank"
    rel="noopener noreferrer">
-  Open the interactive ALMACIR notebook
+  Ouvrir le Jupyter NB
 </a>
 
 ## IaaS et fédération de données (_data federation_)
