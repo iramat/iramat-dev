@@ -56,7 +56,7 @@ library(kableExtra)
 
 ::: {.column width="60%"}
 <img src='https://raw.githubusercontent.com/iramat/iramat-dev/master/talks/2026-dypac/img/Library_of_Ashurbanipal.jpg' style='height: 500px;vertical-align: middle;'>
-<div class="captiontext"> Bibliothèque d'Assurbanipal (1500-539 BCE) au <em>British Museum</em>.<br> Crédit: Gary Todd</div>
+<div class="captiontext"> Bibliothèque d'Assurbanipal (1500-539 BCE) au <em>British Museum</em>.<br> By Gary Todd - https://www.flickr.com/photos/101561334@N08/36562516345/, CC0, https://commons.wikimedia.org/w/index.php?curid=91138912</div>
 :::
 
 ::: {.column width="40%"}
@@ -279,15 +279,16 @@ $$
 
 ## Collections numismatiques à l'IRAMAT
 
-https://numismatics.org/resources/
-
 ```{=html}
 <div class="iframe-figure">
-  <iframe width="1200" height="550"
+  <iframe width="1200" height="500"
           src="https://iramat-apps.cnrs.fr/numishare/almacir/"
           title="Numishare ALMACIR"></iframe>
 </div>
 ```
+<div class="captiontext">La collection de monnaies 'Almacir' (Al-Andalus - MAghreb. CIRculation) sur la pile logicielle <a href="https://numismatics.org/resources/" target="_blank">Numishare</a>
+</div>
+
 
 # Chronologie des publications
 
@@ -295,6 +296,15 @@ https://numismatics.org/resources/
 
 <br><br>
 "_In God we trust. All others must bring data_."&nbsp; &nbsp; &nbsp; <div class="captiontext">-- W. Edwards Deming</div>
+
+<center>
+
+<img src='Sokal_au_carre.jpg' style='height: 300px;vertical-align: middle;'>
+<div class="captiontext">... , deux des trois auteurs du canular 'Sokal au carré'. Par Mike Nayna, CC BY 3.0, https://commons.wikimedia.org/w/index.php?curid=73725731</div>
+
+</center>
+
+
 
 ## Articles de données et nanopublications
 
@@ -336,6 +346,7 @@ https://numismatics.org/resources/
 
 <img src='https://raw.githubusercontent.com/iramat/iramat-dev/master/talks/2026-dypac/img/joad_huet.png' style='height: 300px;vertical-align: middle;'>
 <div class="captiontext">Exemples de papiers de données dans le _Journal of open archaeology data_</div>
+
 </center>
 
 :::
