@@ -204,7 +204,7 @@ library(kableExtra)
 ## Datafication du monde
 
 <br><br>
-"The drive towards <b>datafication</b> is rooted in a belief in the capacity of data to represent social life, sometimes better or more objectively than pre-digital (human) interpretations"&nbsp; &nbsp; &nbsp; <div class="captiontext"> -- Hintz, Arne; Lina Dencik; Karin Wahl-Jorgensen, 2019[^3]</div>
+"The drive towards <b>datafication</b> is rooted in a belief in the capacity of data to represent social life, sometimes better or more objectively than pre-digital (human) interpretations"&nbsp; &nbsp; &nbsp; <div class="captiontext"> -- Arne, Dencik, Wahl-Jorgensen, 2019[^3]</div>
 
 [^3]: La tendance à la <b>datafication</b> repose sur la conviction que les données ont la capacité de représenter la vie sociale, parfois mieux ou plus objectivement que les interprétations (humaines) pré-numériques.
 
@@ -462,6 +462,33 @@ Unité minimale d'information[^6] publiée selon un format structuré, permettan
 
 # Conclusion {background-image="img/d6b2edde-c0ed-4298-9c67-e3fbfab650dd.png" background-opacity=0.1 background-size="120%"}
 
-##
+## Vers un CMS (Omeka S) ?
 
-ICI
+
+```{=html}
+<div class="iframe-figure">
+  <iframe width="1000" height="150"
+          src="https://zoometh.github.io/thomashuet/img/research-software-maturity-levels-chat-3steps.html"
+          title="maturation"></iframe>
+</div>
+```
+
+<br>
+
+<table style='font-size:70%'>
+    <tbody>
+        <tr>
+            <td bgcolor="#66c2a4" style="color:#ffffff"><strong>1. Prototype</strong></td>
+            <td bgcolor="#2ca25f" style="color:#ffffff"><strong>👉 2. Self-service</strong></td>
+            <td bgcolor="#006d2c" style="color:#ffffff"><strong>3. CMS</strong></td>
+        </tr>
+        <tr>
+            <td><strong>Service ponctuel</strong>. L’ingénieur assure le service informatique pour un projet particulier, pas d'automatisation possible.</td>
+            <td><strong>Service réutilisable</strong> avec une documentation. Tâches de base automatisées. L’ingénieur assure les fonctionnalités avancées (ex : annotations, collections).</td>
+            <td><strong>Service intégré</strong> à un CMS[^45]. Autonomie des tâches CRUD. L’ingénieur gère les utilisateurs et maintient le système.</td>
+        </tr>
+    </tbody>
+</table>
+
+[^45]: _Content Management System_, c.-à-d. système de gestion des contenus (ex : Omeka S, Drupal)
+
