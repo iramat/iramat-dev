@@ -166,5 +166,12 @@
     "title": "Introduction",
     "section": "Binder",
     "text": "Binder\n\nhttps://mybinder.org/\n\nBasé sur JupyterHub et Kubernetes, souvent utilisé pour des projets académiques ou collaboratifs. Conçu pour reproduire des environnements de recherche. Intégration native avec GitHub."
+  },
+  {
+    "objectID": "index.html#un-océan-de-données",
+    "href": "index.html#un-océan-de-données",
+    "title": "Collection as Data",
+    "section": "Un océan de données",
+    "text": "Un océan de données"
   }
 ]

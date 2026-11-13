@@ -111,13 +111,23 @@ library(kableExtra)
 :::
 ::::
 
-## Un océan de données (en archéologie)
+## Un océan de données
 
-<center>
+:::: {.columns}
 
+::: {.column width="40%"}
+<img src='https://raw.githubusercontent.com/iramat/iramat-dev/master/talks/2026-dypac/img/bibliotheque-de-Babel.jpg' style='height: 500px;vertical-align: middle;'>
+:::
+
+::: {.column width="10%"}
+&nbsp; &nbsp;
+:::
+
+::: {.column width="40%"}
 <img src='https://raw.githubusercontent.com/iramat/iramat-dev/master/talks/2026-dypac/img/ocean-of-data-1.jpg' style='height: 500px;vertical-align: middle;'>
+:::
 
-</center>
+::::
 
 
 ## Le mouvement _collection-as-data_ (1/2)
