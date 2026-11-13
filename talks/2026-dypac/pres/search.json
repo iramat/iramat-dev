@@ -46,7 +46,7 @@
     "href": "index.html#datafication-du-monde",
     "title": "Collection as Data",
     "section": "Datafication du monde",
-    "text": "Datafication du monde\n “The drive towards datafication is rooted in a belief in the capacity of data to represent social life, sometimes better or more objectively than pre-digital (human) interpretations”     \n\n– Hintz, Arne; Lina Dencik; Karin Wahl-Jorgensen, 20193"
+    "text": "Datafication du monde\n “The drive towards datafication is rooted in a belief in the capacity of data to represent social life, sometimes better or more objectively than pre-digital (human) interpretations”     \n\n– Arne, Dencik, Wahl-Jorgensen, 20193"
   },
   {
     "objectID": "index.html#le-gold-standard-de-la-reproductibilité",
@@ -105,18 +105,18 @@
     "text": "Infrastructure de données de recherche (RDI)\n\n\n\n\n\n\n\n\nNotion\n\n\nDéfinition\n\n\n\n\n\n\nMéthodes AGILE\n\n\nDéveloppement itératif et incrémental, fondé sur les retours des utilisateurs.\n\n\n\n\nFédération des données\n\n\nInterconnexion de sources distribuées, liées et autonomes.\n\n\n\n\nAuthoritative data (Données faisant autorité)\n\n\nDonnées accessibles issues d’une source reconnue comme référence légitime, traçable et responsable.\n\n\n\n\nIaaS (Infrastructure comme Service)\n\n\nMise à disposition à la demande de ressources informatiques virtualisées : calcul, stockage et réseau."
   },
   {
-    "objectID": "index.html#section",
-    "href": "index.html#section",
+    "objectID": "index.html#vers-un-cms-omeka-s",
+    "href": "index.html#vers-un-cms-omeka-s",
     "title": "Collection as Data",
-    "section": "",
-    "text": "ICI"
+    "section": "Vers un CMS (Omeka S) ?",
+    "text": "Vers un CMS (Omeka S) ?\n\n  \n\n\n\n\n\n\n1. Prototype\n\n\n👉 2. Self-service\n\n\n3. CMS\n\n\n\n\nService ponctuel. L’ingénieur assure le service informatique pour un projet particulier, pas d’automatisation possible.\n\n\nService réutilisable avec une documentation. Tâches de base automatisées. L’ingénieur assure les fonctionnalités avancées (ex : annotations, collections).\n\n\nService intégré à un CMS5. Autonomie des tâches CRUD. L’ingénieur gère les utilisateurs et maintient le système."
   },
   {
     "objectID": "index.html#footnotes",
     "href": "index.html#footnotes",
     "title": "Collection as Data",
     "section": "Footnotes",
-    "text": "Footnotes\n\n\nhttps://www.dictionnaire-academie.fr/article/A9C2933\nReprésentation réinterprétable d’une information, sous une forme conventionnelle adaptée à sa communication, son interprétation ou son traitement.\nLa tendance à la datafication repose sur la conviction que les données ont la capacité de représenter la vie sociale, parfois mieux ou plus objectivement que les interprétations (humaines) pré-numériques.\ni.e. une seule affirmation scientifique"
+    "text": "Footnotes\n\n\nhttps://www.dictionnaire-academie.fr/article/A9C2933\nReprésentation réinterprétable d’une information, sous une forme conventionnelle adaptée à sa communication, son interprétation ou son traitement.\nLa tendance à la datafication repose sur la conviction que les données ont la capacité de représenter la vie sociale, parfois mieux ou plus objectivement que les interprétations (humaines) pré-numériques.\ni.e. une seule affirmation scientifique\nContent Management System, c.-à-d. système de gestion des contenus (ex : Omeka S, Drupal)"
   },
   {
     "objectID": "Exemple_de_présentation_JupyterNB.html",
