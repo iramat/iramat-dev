@@ -14,11 +14,11 @@
     "text": "“Collection(s)” : une augmentation\n\n\n\n\nBibliothèque d’Assurbanipal (1500-539 BCE) au British Museum. Crédit: Gary Todd - CC0, https://commons.wikimedia.org/w/index.php?curid=91138912\n\n\n \n\n\n\n\nobjet\n\n\nstockage\n\n\nBCE/AD\n\n\n\n\n\n\ntablette de Fara\n\n\n150 octets\n\n\n2600 BCE\n\n\n\n\npapyrus d’Ani\n\n\n400 octets\n\n\n1500 BCE\n\n\n\n\nlivre de 200 pages\n\n\n150 ko\n\n\n1450 AD\n\n\n\n\ndisque vinyle\n\n\n50 Mo\n\n\n1950 AD\n\n\n\n\nCD\n\n\n800 Mo\n\n\n1985 AD\n\n\n\n\nClé USB-C\n\n\n1 To\n\n\n2020 AD\n\n\n\n\nSSD professionnel\n\n\n120 To\n\n\n2025 AD"
   },
   {
-    "objectID": "index.html#un-océan-de-données-en-archéologie",
-    "href": "index.html#un-océan-de-données-en-archéologie",
+    "objectID": "index.html#un-océan-de-données",
+    "href": "index.html#un-océan-de-données",
     "title": "Collection as Data",
-    "section": "Un océan de données (en archéologie)",
-    "text": "Un océan de données (en archéologie)"
+    "section": "Un océan de données",
+    "text": "Un océan de données"
   },
   {
     "objectID": "index.html#le-mouvement-collection-as-data-12",
@@ -166,12 +166,5 @@
     "title": "Introduction",
     "section": "Binder",
     "text": "Binder\n\nhttps://mybinder.org/\n\nBasé sur JupyterHub et Kubernetes, souvent utilisé pour des projets académiques ou collaboratifs. Conçu pour reproduire des environnements de recherche. Intégration native avec GitHub."
-  },
-  {
-    "objectID": "index.html#un-océan-de-données",
-    "href": "index.html#un-océan-de-données",
-    "title": "Collection as Data",
-    "section": "Un océan de données",
-    "text": "Un océan de données"
   }
 ]
