@@ -49,14 +49,42 @@ Other files:
 
 ## Installation
 
-Python 3.12 is required. From a terminal, in this folder:
+Python 3.12 is required. Install **all** dependencies at once from
+`requirements.txt`, in a virtual environment, from a terminal opened in this
+folder.
+
+macOS / Linux:
 
 ```bash
 python3.12 -m venv venv
 ./venv/bin/python3 -m pip install -r requirements.txt
 ```
 
-(On Windows, use `venv\Scripts\python.exe` instead of `./venv/bin/python3`.)
+Windows (PowerShell):
+
+```powershell
+py -3.12 -m venv venv
+.\venv\Scripts\python.exe -m pip install -r requirements.txt
+```
+
+Then select this `venv` as the interpreter / kernel of the notebook (in VS Code
+or PyCharm), or start JupyterLab from it (see below).
+
+**Do not install packages one by one with `pip install <import name>`**: some
+import names differ from the PyPI package names. In particular:
+
+| `import ...` in the notebook | package to install |
+|---|---|
+| `import ot` | `POT` (not `ot`, which does not exist on PyPI) |
+| `import dash_leaflet` | `dash-leaflet` |
+| `import sklearn` | `scikit-learn` |
+| `import imblearn` | `imbalanced-learn` |
+| `import kerastuner` / `keras_tuner` | `keras-tuner` |
+
+Installing from `requirements.txt` takes care of all of them. If a
+`ModuleNotFoundError` still appears, the notebook is probably running on another
+Python than the `venv` (check the kernel selected in the notebook), and
+`pip install` was executed in a different environment.
 
 ## Running the notebook
 
@@ -74,6 +102,8 @@ run the Setup cell, then the other cells in order (or `Run All`).
 ```bash
 ./venv/bin/python3 -m jupyter lab
 ```
+
+(On Windows: `.\\venv\\Scripts\\python.exe -m jupyter lab`.)
 
 Steps must be run in order (each step reads the files written by the previous
 ones). Run the Setup cell first.
